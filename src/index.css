@@ -1,0 +1,100 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-sans: "DM Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --med-canvas: #f8fafc;
+  --med-surface: #ffffff;
+  --med-surface-subtle: #f1f5f9;
+  --med-border: rgba(15, 23, 42, 0.08);
+  --med-accent: #007aff;
+}
+
+.dark {
+  --med-canvas: #0b0f17;
+  --med-surface: #131926;
+  --med-surface-subtle: #182030;
+  --med-border: rgba(255, 255, 255, 0.08);
+  --med-accent: #007aff;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: var(--med-canvas);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  .dark body {
+    letter-spacing: 0.008em;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* KaTeX clinical & epidemiological formulas: prevent overflow on narrow viewports */
+.clinical-markdown .katex {
+  font-size: 1.03em;
+  color: inherit;
+}
+
+.clinical-markdown .katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.5rem 0.25rem;
+  margin: 0.65rem 0;
+  max-width: 100%;
+}
+
+.clinical-markdown .katex-display > .katex {
+  white-space: nowrap;
+}
+
+/* Custom subtle scrollbars for NotebookLM-style floating studio panels */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.24);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.45);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.2);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.36);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

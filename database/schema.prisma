@@ -1,0 +1,226 @@
+// =============================================================================
+// MedR1 — Prisma Schema (PostgreSQL / Supabase)
+// =============================================================================
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum ExamType {
+  ACESSO_DIRETO
+  R_MAIS
+  REVALIDA
+}
+
+enum DifficultyLevel {
+  FACIL
+  MEDIO
+  DIFICIL
+}
+
+enum AlternativeLetter {
+  A
+  B
+  C
+  D
+  E
+}
+
+enum SessionMode {
+  ESTUDO
+  SIMULADO
+}
+
+model MedicalArea {
+  id        Int            @id @default(autoincrement())
+  slug      String         @unique
+  name      String         @unique
+  shortName String         @map("short_name")
+  sortOrder Int            @default(0) @map("sort_order")
+  topics    MedicalTopic[]
+  questions Question[]
+
+  @@map("medical_areas")
+}
+
+model MedicalTopic {
+  id        Int              @id @default(autoincrement())
+  areaId    Int              @map("area_id")
+  slug      String           @unique
+  name      String
+  area      MedicalArea      @relation(fields: [areaId], references: [id])
+  subtopics MedicalSubtopic[]
+  questions Question[]
+
+  @@unique([areaId, name])
+  @@index([areaId])
+  @@map("medical_topics")
+}
+
+model MedicalSubtopic {
+  id        Int          @id @default(autoincrement())
+  topicId   Int          @map("topic_id")
+  slug      String       @unique
+  name      String
+  topic     MedicalTopic @relation(fields: [topicId], references: [id])
+  questions Question[]
+
+  @@unique([topicId, name])
+  @@index([topicId])
+  @@map("medical_subtopics")
+}
+
+model Institution {
+  id        Int        @id @default(autoincrement())
+  acronym   String     @unique
+  fullName  String     @map("full_name")
+  banca     String
+  stateUf   String     @map("state_uf") @db.Char(2)
+  region    String
+  questions Question[]
+
+  @@index([region, stateUf])
+  @@index([banca])
+  @@map("institutions")
+}
+
+model Question {
+  id                String            @id @default(uuid()) @db.Uuid
+  code              String            @unique
+  areaId            Int               @map("area_id")
+  topicId           Int               @map("topic_id")
+  subtopicId        Int               @map("subtopic_id")
+  institutionId     Int               @map("institution_id")
+  examYear          Int               @map("exam_year")
+  examType          ExamType          @default(ACESSO_DIRETO) @map("exam_type")
+  stem              String
+  labTableJson      Json?             @map("lab_table_json")
+  clinicalImageUrl  String?           @map("clinical_image_url")
+  clinicalImageMeta Json?             @map("clinical_image_meta")
+  officialAnswer    AlternativeLetter @map("official_answer")
+  isAnnulled        Boolean           @default(false) @map("is_annulled")
+  isOutdated        Boolean           @default(false) @map("is_outdated")
+  totalAttempts     Int               @default(0) @map("total_attempts")
+  correctAttempts   Int               @default(0) @map("correct_attempts")
+  generalCommentary String            @map("general_commentary")
+  clinicalPearl     String            @map("clinical_pearl")
+  referencesJson    Json              @default("[]") @map("references_json")
+  createdAt         DateTime          @default(now()) @map("created_at")
+  updatedAt         DateTime          @updatedAt @map("updated_at")
+
+  area         MedicalArea           @relation(fields: [areaId], references: [id])
+  topic        MedicalTopic          @relation(fields: [topicId], references: [id])
+  subtopic     MedicalSubtopic       @relation(fields: [subtopicId], references: [id])
+  institution  Institution           @relation(fields: [institutionId], references: [id])
+  alternatives QuestionAlternative[]
+  answers      UserAnswer[]
+  bookmarks    UserQuestionBookmark[]
+
+  @@index([areaId, topicId, subtopicId])
+  @@index([institutionId, examYear(sort: Desc), examType])
+  @@index([isAnnulled, isOutdated])
+  @@map("questions")
+}
+
+model QuestionAlternative {
+  id             String            @id @default(uuid()) @db.Uuid
+  questionId     String            @map("question_id") @db.Uuid
+  letter         AlternativeLetter
+  content        String
+  explanation    String
+  selectionCount Int               @default(0) @map("selection_count")
+  question       Question          @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  @@unique([questionId, letter])
+  @@index([questionId, letter])
+  @@map("question_alternatives")
+}
+
+model UserProfile {
+  id                String                 @id @db.Uuid
+  realName          String                 @map("real_name")
+  pseudonym         String                 @unique
+  usePseudonym      Boolean                @default(false) @map("use_pseudonym")
+  targetSpecialty   String?                @map("target_specialty")
+  targetInstitution String?                @map("target_institution")
+  avatarInitials    String                 @map("avatar_initials") @db.VarChar(3)
+  createdAt         DateTime               @default(now()) @map("created_at")
+  updatedAt         DateTime               @updatedAt @map("updated_at")
+
+  answers      UserAnswer[]
+  simulados    Simulado[]
+  bookmarks    UserQuestionBookmark[]
+  livePresence LiveStudyPresence?
+
+  @@map("user_profiles")
+}
+
+model Simulado {
+  id              String       @id @default(uuid()) @db.Uuid
+  userId          String       @map("user_id") @db.Uuid
+  title           String
+  durationSeconds Int          @map("duration_seconds")
+  elapsedSeconds  Int          @default(0) @map("elapsed_seconds")
+  totalQuestions  Int          @map("total_questions")
+  correctCount    Int          @default(0) @map("correct_count")
+  completedAt     DateTime?    @map("completed_at")
+  createdAt       DateTime     @default(now()) @map("created_at")
+
+  user    UserProfile  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  answers UserAnswer[]
+
+  @@index([userId, createdAt(sort: Desc)])
+  @@map("simulados")
+}
+
+model UserAnswer {
+  id             String            @id @default(uuid()) @db.Uuid
+  userId         String            @map("user_id") @db.Uuid
+  questionId     String            @map("question_id") @db.Uuid
+  simuladoId     String?           @map("simulado_id") @db.Uuid
+  selectedLetter AlternativeLetter @map("selected_letter")
+  isCorrect      Boolean           @map("is_correct")
+  mode           SessionMode       @default(ESTUDO)
+  timeSpentSec   Int               @default(0) @map("time_spent_sec")
+  answeredAt     DateTime          @default(now()) @map("answered_at")
+
+  user     UserProfile @relation(fields: [userId], references: [id], onDelete: Cascade)
+  question Question    @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  simulado Simulado?   @relation(fields: [simuladoId], references: [id], onDelete: SetNull)
+
+  @@index([userId, questionId, answeredAt(sort: Desc)])
+  @@index([userId, answeredAt(sort: Desc)])
+  @@index([questionId, selectedLetter])
+  @@map("user_answers")
+}
+
+model UserQuestionBookmark {
+  userId       String      @map("user_id") @db.Uuid
+  questionId   String      @map("question_id") @db.Uuid
+  personalNote String?     @map("personal_note")
+  createdAt    DateTime    @default(now()) @map("created_at")
+
+  user     UserProfile @relation(fields: [userId], references: [id], onDelete: Cascade)
+  question Question    @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  @@id([userId, questionId])
+  @@map("user_question_bookmarks")
+}
+
+model LiveStudyPresence {
+  userId          String      @id @map("user_id") @db.Uuid
+  isOnline        Boolean     @default(true) @map("is_online")
+  lastHeartbeatAt DateTime    @default(now()) @map("last_heartbeat_at")
+  questionsToday  Int         @default(0) @map("questions_today")
+  correctToday    Int         @default(0) @map("correct_today")
+  currentStreak   Int         @default(0) @map("current_streak")
+
+  user UserProfile @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("live_study_presence")
+}

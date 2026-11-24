@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MedR1 — Banco de Questões para Residência Médica</title>
+    <meta
+      name="description"
+      content="Plataforma brasileira de alta performance para preparação em Residência Médica (ENARE, USP, UNICAMP, UNIFESP, SUS-SP, Revalida) com filtros hierárquicos, estatísticas por alternativa, comparativo de mediana e ranking ao vivo."
+    />
+    <meta property="og:title" content="MedR1 — Banco de Questões para Residência Médica" />
+    <meta
+      property="og:description"
+      content="Prepare-se para ENARE, USP, UNICAMP, UNIFESP, SUS-SP e Revalida com inteligência estatística, comparativo de mediana da comunidade e modo simulado."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (function () {
+        try {
+          var mode = localStorage.getItem('medr1_theme_mode_v2');
+          if (!mode) {
+            var legacy = localStorage.getItem('medr1_theme_v1');
+            mode = legacy === 'dark' || legacy === 'light' ? legacy : 'system';
+          }
+          var isDark = false;
+          if (mode === 'dark') {
+            isDark = true;
+          } else if (mode === 'schedule') {
+            var schedRaw = localStorage.getItem('medr1_theme_schedule_v1');
+            var sched = schedRaw ? JSON.parse(schedRaw) : { darkStartHour: 18, lightStartHour: 6 };
+            var h = new Date().getHours();
+            var ds = typeof sched.darkStartHour === 'number' ? sched.darkStartHour : 18;
+            var ls = typeof sched.lightStartHour === 'number' ? sched.lightStartHour : 6;
+            isDark = ds > ls ? h >= ds || h < ls : h >= ds && h < ls;
+          } else if (mode === 'system') {
+            isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          }
+          if (isDark) document.documentElement.classList.add('dark');
+          else document.documentElement.classList.remove('dark');
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-[#EDF2FA] text-slate-900 antialiased dark:bg-[#13161B] dark:text-[#E8EDF5]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
