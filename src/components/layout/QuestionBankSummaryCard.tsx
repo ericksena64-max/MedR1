@@ -2,6 +2,7 @@ import React, { useMemo, useState } from 'react';
 import { Database, ChevronDown } from 'lucide-react';
 import type { GrandeAreaId, MedicalQuestion } from '../../types/medical';
 import { GRANDES_AREAS } from '../../data/taxonomy';
+import { getUnloadedOfficialCatalogEntries } from '../../lib/questionBankStore';
 import { cn } from '../../lib/utils';
 
 interface QuestionBankSummaryCardProps {
@@ -40,7 +41,8 @@ export function QuestionBankSummaryCard({
   const [expandedAreas, setExpandedAreas] = useState(false);
 
   const stats = useMemo(() => {
-    const total = questions.length;
+    const unloadedEntries = getUnloadedOfficialCatalogEntries();
+    let total = questions.length;
     let answered = 0;
     let activeCount = 0;
     const boards = new Set<string>();
@@ -58,6 +60,16 @@ export function QuestionBankSummaryCard({
       if (q.instituicao) boards.add(q.instituicao);
       if (q.grandeAreaId in areaCounts) {
         areaCounts[q.grandeAreaId] += 1;
+      }
+    }
+
+    // Include unloaded lazy exam chunks from the lightweight catalog manifest
+    for (const entry of unloadedEntries) {
+      total += entry.questionCount;
+      activeCount += entry.activeCount;
+      boards.add(entry.instituicao);
+      for (const areaId of Object.keys(entry.areaCounts) as GrandeAreaId[]) {
+        areaCounts[areaId] += entry.areaCounts[areaId];
       }
     }
 

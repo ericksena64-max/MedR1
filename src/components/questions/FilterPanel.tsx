@@ -14,7 +14,10 @@ import type {
   StudentFilterStatus,
   StudyMode,
 } from '../../types/medical';
-import { getAllBankQuestions } from '../../lib/questionBankStore';
+import {
+  getAllBankQuestions,
+  getOfficialExamCatalog,
+} from '../../lib/questionBankStore';
 import { GRANDES_AREAS, REGIOES_BRASIL } from '../../data/taxonomy';
 import { Select } from '../ui/Select';
 import { Switch } from '../ui/Switch';
@@ -100,42 +103,44 @@ export function FilterPanel({
     return unique.map((s) => ({ value: s, label: s }));
   }, [bankQuestions, filters.grandeAreaId, filters.tema]);
 
-  const bancaOptions = useMemo(
-    () =>
-      Array.from(new Set(bankQuestions.map((q) => q.banca)))
-        .sort((a, b) => a.localeCompare(b, 'pt-BR'))
-        .map((v) => ({ value: v, label: v })),
-    [bankQuestions]
-  );
+  const catalogEntries = getOfficialExamCatalog();
 
-  const instituicaoOptions = useMemo(
-    () =>
-      Array.from(new Set(bankQuestions.map((q) => q.instituicao)))
-        .sort((a, b) => a.localeCompare(b, 'pt-BR'))
-        .map((v) => ({ value: v, label: v })),
-    [bankQuestions]
-  );
+  const bancaOptions = useMemo(() => {
+    const values = new Set(bankQuestions.map((q) => q.banca));
+    for (const entry of catalogEntries) values.add(entry.banca);
+    return Array.from(values)
+      .sort((a, b) => a.localeCompare(b, 'pt-BR'))
+      .map((v) => ({ value: v, label: v }));
+  }, [bankQuestions, catalogEntries]);
 
-  const anoOptions = useMemo(
-    () =>
-      Array.from(new Set(bankQuestions.map((q) => q.ano)))
-        .sort((a, b) => b - a)
-        .map((v) => ({ value: String(v), label: String(v) })),
-    [bankQuestions]
-  );
+  const instituicaoOptions = useMemo(() => {
+    const values = new Set(bankQuestions.map((q) => q.instituicao));
+    for (const entry of catalogEntries) values.add(entry.instituicao);
+    return Array.from(values)
+      .sort((a, b) => a.localeCompare(b, 'pt-BR'))
+      .map((v) => ({ value: v, label: v }));
+  }, [bankQuestions, catalogEntries]);
 
-  const examSuggestions = useMemo(
-    () =>
-      Array.from(
-        new Set(bankQuestions.map((q) => `${q.instituicao} ${q.ano}`))
-      ).sort((a, b) => {
-        const yearA = Number(a.split(' ').pop() ?? 0);
-        const yearB = Number(b.split(' ').pop() ?? 0);
-        if (yearB !== yearA) return yearB - yearA;
-        return a.localeCompare(b);
-      }),
-    [bankQuestions]
-  );
+  const anoOptions = useMemo(() => {
+    const values = new Set(bankQuestions.map((q) => q.ano));
+    for (const entry of catalogEntries) values.add(entry.ano);
+    return Array.from(values)
+      .sort((a, b) => b - a)
+      .map((v) => ({ value: String(v), label: String(v) }));
+  }, [bankQuestions, catalogEntries]);
+
+  const examSuggestions = useMemo(() => {
+    const values = new Set(bankQuestions.map((q) => `${q.instituicao} ${q.ano}`));
+    for (const entry of catalogEntries) {
+      values.add(`${entry.instituicao} ${entry.ano}`);
+    }
+    return Array.from(values).sort((a, b) => {
+      const yearA = Number(a.split(' ').pop() ?? 0);
+      const yearB = Number(b.split(' ').pop() ?? 0);
+      if (yearB !== yearA) return yearB - yearA;
+      return a.localeCompare(b);
+    });
+  }, [bankQuestions, catalogEntries]);
 
   const activeFilterCount = useMemo(
     () => countActiveQuestionFilters(filters),

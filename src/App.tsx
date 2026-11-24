@@ -3,8 +3,8 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useEffect, useMemo, useRef, useState, useCallback } from 'react';
-import { AlertTriangle, ArrowLeft, RotateCcw, SearchX, X } from 'lucide-react';
+import React, { Suspense, lazy, useEffect, useMemo, useRef, useState, useCallback } from 'react';
+import { AlertTriangle, ArrowLeft, Loader2, RotateCcw, SearchX, X } from 'lucide-react';
 import type {
   ActiveTab,
   AlternativeLetter,
@@ -19,31 +19,80 @@ import {
 } from './hooks/useMedR1Store';
 import { Sidebar } from './components/layout/Sidebar';
 import { TopBar } from './components/layout/TopBar';
-import { CommandPaletteModal } from './components/layout/CommandPaletteModal';
 import { MobileBottomNav } from './components/layout/MobileBottomNav';
 import type { CommandPaletteAction } from './lib/commandPalette';
 import {
   FilterPanel,
   countActiveQuestionFilters,
 } from './components/questions/FilterPanel';
-import { QuestionCard } from './components/questions/QuestionCard';
 import { SimuladoBar } from './components/questions/SimuladoBar';
 import {
   BatchFinishModal,
   buildBatchFinishSummary,
   type BatchFinishSummary,
 } from './components/questions/BatchFinishModal';
-import { PerformanceDashboard } from './components/analytics/PerformanceDashboard';
 import { HomeUnifiedView } from './components/analytics/HomeUnifiedView';
 import { RoutineConfigModal } from './components/analytics/RoutineConfigModal';
-import { LiveRankingPage } from './components/ranking/LiveRankingPage';
-import { ErrorNotebookView } from './components/notebook/ErrorNotebookView';
-import { FlashcardsView } from './components/flashcards/FlashcardsView';
-import { QuestionImporterView } from './components/importer/QuestionImporterView';
 import { Button } from './components/ui/Button';
 import { shouldConfirmLeaveSimulado } from './lib/navigationState';
 import { buildNavigationUrl, parseNavigationUrl } from './lib/navigationUrl';
 import { cn } from './lib/utils';
+
+// Lazy-loaded heavy views & modals so the initial bundle stays fast
+const QuestionCard = lazy(() =>
+  import('./components/questions/QuestionCard').then((m) => ({
+    default: m.QuestionCard,
+  }))
+);
+const PerformanceDashboard = lazy(() =>
+  import('./components/analytics/PerformanceDashboard').then((m) => ({
+    default: m.PerformanceDashboard,
+  }))
+);
+const LiveRankingPage = lazy(() =>
+  import('./components/ranking/LiveRankingPage').then((m) => ({
+    default: m.LiveRankingPage,
+  }))
+);
+const ErrorNotebookView = lazy(() =>
+  import('./components/notebook/ErrorNotebookView').then((m) => ({
+    default: m.ErrorNotebookView,
+  }))
+);
+const FlashcardsView = lazy(() =>
+  import('./components/flashcards/FlashcardsView').then((m) => ({
+    default: m.FlashcardsView,
+  }))
+);
+const QuestionImporterView = lazy(() =>
+  import('./components/importer/QuestionImporterView').then((m) => ({
+    default: m.QuestionImporterView,
+  }))
+);
+const CommandPaletteModal = lazy(() =>
+  import('./components/layout/CommandPaletteModal').then((m) => ({
+    default: m.CommandPaletteModal,
+  }))
+);
+
+function ViewLoadingFallback({ label = 'Carregando módulo...' }: { label?: string }) {
+  return (
+    <div
+      role="status"
+      aria-live="polite"
+      className="flex min-h-[280px] flex-col items-center justify-center gap-3 rounded-2xl border border-black/5 bg-white/80 p-10 text-center dark:border-white/[0.08] dark:bg-white/[0.03]"
+    >
+      <Loader2
+        size={22}
+        strokeWidth={1.5}
+        className="animate-spin text-[#007AFF] dark:text-sky-400"
+      />
+      <p className="text-xs font-medium text-[#86868B] dark:text-slate-400">
+        {label}
+      </p>
+    </div>
+  );
+}
 
 export default function App() {
   const initialRoute = useMemo(() => {
@@ -122,11 +171,52 @@ export default function App() {
   const questionStartedAtRef = useRef<number>(Date.now());
   const simuladoQuestionTimesRef = useRef<Record<string, number>>({});
   const lastTrackedQuestionIdRef = useRef<string | null>(null);
+  const pendingQuestionIdRef = useRef<string | null>(null);
 
   const filteredQuestions = useMemo(
     () => store.filterQuestions(filters),
     [store.filterQuestions, filters]
   );
+
+  // On-demand lazy loading of official exam chunks based on active tab & filters
+  useEffect(() => {
+    if (activeTab === 'questoes') {
+      void store.ensureExamsLoadedForFilters(filters);
+    } else if (
+      activeTab === 'desempenho' ||
+      activeTab === 'importar' ||
+      activeTab === 'caderno_erros'
+    ) {
+      void store.ensureAllOfficialExamsLoaded();
+    }
+  }, [
+    activeTab,
+    filters.instituicao,
+    filters.banca,
+    filters.regiao,
+    filters.ano,
+    filters.examSearch,
+    store.ensureExamsLoadedForFilters,
+    store.ensureAllOfficialExamsLoaded,
+  ]);
+
+  // Load full catalog when user opens Command Palette for global search
+  useEffect(() => {
+    if (commandPaletteOpen) {
+      void store.ensureAllOfficialExamsLoaded();
+    }
+  }, [commandPaletteOpen, store.ensureAllOfficialExamsLoaded]);
+
+  // Jump to a requested question ID once its lazy exam chunk finishes loading
+  useEffect(() => {
+    const pendingId = pendingQuestionIdRef.current;
+    if (!pendingId) return;
+    const idx = filteredQuestions.findIndex((q) => q.id === pendingId);
+    if (idx >= 0) {
+      setCurrentIndex(idx);
+      pendingQuestionIdRef.current = null;
+    }
+  }, [filteredQuestions]);
 
   // Track real elapsed time per question (Study & Simulado)
   const currentQuestionId = filteredQuestions[currentIndex]?.id ?? null;
@@ -388,7 +478,14 @@ export default function App() {
     setFilters(nextFilters);
     const list = store.filterQuestions(nextFilters);
     const idx = list.findIndex((q) => q.id === questionId);
-    setCurrentIndex(idx >= 0 ? idx : 0);
+    if (idx >= 0) {
+      pendingQuestionIdRef.current = null;
+      setCurrentIndex(idx);
+    } else {
+      pendingQuestionIdRef.current = questionId;
+      setCurrentIndex(0);
+      void store.ensureExamLoadedForQuestionId(questionId);
+    }
     setReturnToNotebook(activeTab === 'caderno_erros');
     setActiveTab('questoes');
   };
@@ -898,6 +995,16 @@ export default function App() {
                             <span className="font-mono tabular-nums">
                               {currentIndex + 1}/{filteredQuestions.length}
                             </span>
+                            {store.catalogLoading && (
+                              <span
+                                role="status"
+                                aria-live="polite"
+                                className="inline-flex items-center gap-1 rounded-full bg-[#007AFF]/10 px-2 py-0.5 text-[11px] font-medium text-[#007AFF] dark:bg-sky-500/15 dark:text-sky-300"
+                              >
+                                <Loader2 size={11} strokeWidth={2} className="animate-spin" />
+                                Carregando provas...
+                              </span>
+                            )}
                           </div>
                           <div className="inline-flex flex-wrap items-center gap-3 font-mono tabular-nums">
                             <span>
@@ -982,7 +1089,8 @@ export default function App() {
                         );
                       })()}
 
-                      <QuestionCard
+                      <Suspense fallback={<ViewLoadingFallback label="Carregando questão..." />}>
+                        <QuestionCard
                         seamless
                         question={activeQuestion}
                         index={currentIndex}
@@ -1076,8 +1184,11 @@ export default function App() {
                           store.generateAiCommentaryForQuestion
                         }
                       />
+                      </Suspense>
                     </>
                   )
+                ) : store.catalogLoading ? (
+                  <ViewLoadingFallback label="Carregando prova selecionada..." />
                 ) : (
                   <section className="rounded-2xl border border-slate-200/75 bg-[#F6F8FC] p-12 text-center dark:border-white/[0.08] dark:bg-white/[0.03] space-y-3">
                     <SearchX className="mx-auto h-8 w-8 text-slate-400" />
@@ -1139,107 +1250,117 @@ export default function App() {
 
               {/* TAB 2: DESEMPENHO & MEDIANA */}
               {activeTab === 'desempenho' && (
-                <PerformanceDashboard
-                  studentId={store.profile.id}
-                  analytics={store.analytics}
-                  questions={store.allQuestions}
-                  answers={store.answers}
-                  flashcards={store.flashcards}
-                  darkMode={store.darkMode}
-                  targetBoard={store.targetBoard}
-                  bankVersion={store.bankVersion}
-                  onFilterQuestionsByTopic={handleFilterQuestionsFromPareto}
-                  onFilterFlashcardsByTopic={handleFilterFlashcardsFromPareto}
-                  onLaunchGapRadarSimulado={handleLaunchGapRadarSimulado}
-                  onCreateFlashcardFromQuestion={(q) =>
-                    store.createFlashcardFromQuestion(q, 'caderno_erros')
-                  }
-                  onOpenQuestion={handleOpenQuestionFromNotebook}
-                  onGoToFlashcards={() => navigateToTab('flashcards')}
-                  onGoToErrorNotebook={() => navigateToTab('caderno_erros')}
-                  onGoToQuestionBank={() => navigateToTab('questoes', { mode: 'estudo' })}
-                  onStartQuickSimulado={() => navigateToTab('questoes', { mode: 'simulado' })}
-                  onPracticeArea={handleSelectGrandeAreaFromBank}
-                  simuladoHistory={store.simuladoHistory}
-                  cutoffTarget={store.cutoffTarget}
-                  onAddSimulado={store.addSimuladoRecord}
-                  onDeleteSimulado={store.deleteSimuladoRecord}
-                  onUpdateCutoffTarget={store.updateCutoffTarget}
-                  onRestoreExampleSimulados={store.restoreExampleSimulados}
-                />
+                <Suspense fallback={<ViewLoadingFallback label="Carregando painel de desempenho..." />}>
+                  <PerformanceDashboard
+                    studentId={store.profile.id}
+                    analytics={store.analytics}
+                    questions={store.allQuestions}
+                    answers={store.answers}
+                    flashcards={store.flashcards}
+                    darkMode={store.darkMode}
+                    targetBoard={store.targetBoard}
+                    bankVersion={store.bankVersion}
+                    onFilterQuestionsByTopic={handleFilterQuestionsFromPareto}
+                    onFilterFlashcardsByTopic={handleFilterFlashcardsFromPareto}
+                    onLaunchGapRadarSimulado={handleLaunchGapRadarSimulado}
+                    onCreateFlashcardFromQuestion={(q) =>
+                      store.createFlashcardFromQuestion(q, 'caderno_erros')
+                    }
+                    onOpenQuestion={handleOpenQuestionFromNotebook}
+                    onGoToFlashcards={() => navigateToTab('flashcards')}
+                    onGoToErrorNotebook={() => navigateToTab('caderno_erros')}
+                    onGoToQuestionBank={() => navigateToTab('questoes', { mode: 'estudo' })}
+                    onStartQuickSimulado={() => navigateToTab('questoes', { mode: 'simulado' })}
+                    onPracticeArea={handleSelectGrandeAreaFromBank}
+                    simuladoHistory={store.simuladoHistory}
+                    cutoffTarget={store.cutoffTarget}
+                    onAddSimulado={store.addSimuladoRecord}
+                    onDeleteSimulado={store.deleteSimuladoRecord}
+                    onUpdateCutoffTarget={store.updateCutoffTarget}
+                    onRestoreExampleSimulados={store.restoreExampleSimulados}
+                  />
+                </Suspense>
               )}
 
               {/* TAB 3: RANKING AO VIVO DEDICADO */}
               {activeTab === 'ranking' && (
-                <LiveRankingPage
-                  allEntries={store.liveRanking.all}
-                  currentUser={store.liveRanking.currentUser}
-                  onlineTotal={store.liveRanking.onlineTotal}
-                  profile={store.profile}
-                  onUpdateProfile={store.updateProfile}
-                  onGeneratePseudonym={store.generateRandomPseudonym}
-                  rankingPulseOn={rankingPulseOn}
-                  onToggleRankingPulse={handleToggleRankingPulse}
-                />
+                <Suspense fallback={<ViewLoadingFallback label="Carregando ranking ao vivo..." />}>
+                  <LiveRankingPage
+                    allEntries={store.liveRanking.all}
+                    currentUser={store.liveRanking.currentUser}
+                    onlineTotal={store.liveRanking.onlineTotal}
+                    profile={store.profile}
+                    onUpdateProfile={store.updateProfile}
+                    onGeneratePseudonym={store.generateRandomPseudonym}
+                    rankingPulseOn={rankingPulseOn}
+                    onToggleRankingPulse={handleToggleRankingPulse}
+                  />
+                </Suspense>
               )}
 
               {/* TAB 4: CADERNO DE ERROS */}
               {activeTab === 'caderno_erros' && (
-                <ErrorNotebookView
-                  questions={store.errorNotebookQuestions}
-                  answers={store.answers}
-                  bookmarks={store.bookmarks}
-                  flashcardQuestionIds={store.flashcardQuestionIds}
-                  autoCreateFlashcardsOnError={store.autoCreateFlashcardsOnError}
-                  onToggleAutoCreate={store.setAutoCreateFlashcardsOnError}
-                  onGenerateFlashcards={store.generateFlashcardsFromErrors}
-                  onCreateSingleFlashcard={(q) =>
-                    store.createFlashcardFromQuestion(q, 'caderno_erros')
-                  }
-                  onToggleBookmark={store.toggleBookmark}
-                  onOpenQuestion={handleOpenQuestionFromNotebook}
-                  onLaunchErrorReview={handleLaunchErrorReview}
-                  onGoToFlashcards={() => setActiveTab('flashcards')}
-                />
+                <Suspense fallback={<ViewLoadingFallback label="Carregando caderno de erros..." />}>
+                  <ErrorNotebookView
+                    questions={store.errorNotebookQuestions}
+                    answers={store.answers}
+                    bookmarks={store.bookmarks}
+                    flashcardQuestionIds={store.flashcardQuestionIds}
+                    autoCreateFlashcardsOnError={store.autoCreateFlashcardsOnError}
+                    onToggleAutoCreate={store.setAutoCreateFlashcardsOnError}
+                    onGenerateFlashcards={store.generateFlashcardsFromErrors}
+                    onCreateSingleFlashcard={(q) =>
+                      store.createFlashcardFromQuestion(q, 'caderno_erros')
+                    }
+                    onToggleBookmark={store.toggleBookmark}
+                    onOpenQuestion={handleOpenQuestionFromNotebook}
+                    onLaunchErrorReview={handleLaunchErrorReview}
+                    onGoToFlashcards={() => setActiveTab('flashcards')}
+                  />
+                </Suspense>
               )}
 
               {/* TAB 5: FLASHCARDS (FSRS) */}
               {activeTab === 'flashcards' && (
-                <FlashcardsView
-                  flashcards={store.flashcards}
-                  reviewsTodayStats={store.reviewsTodayStats}
-                  retentionMode={store.retentionMode}
-                  onChangeRetentionMode={store.setRetentionMode}
-                  targetBoard={store.targetBoard}
-                  onChangeTargetBoard={store.setTargetBoard}
-                  userAccuracyByTopic={store.userAccuracyByTopic}
-                  communityMedianByTopic={store.communityMedianByTopic}
-                  onReviewCard={store.reviewFlashcard}
-                  onCreateCustomCard={store.createCustomFlashcard}
-                  onDeleteCard={store.deleteFlashcard}
-                  onOpenOriginalQuestion={handleOpenQuestionFromNotebook}
-                  onGoToQuestions={() => navigateToTab('questoes', { mode: 'estudo' })}
-                  enableFuzz={store.fsrsEnableFuzz}
-                  onToggleEnableFuzz={() => store.setFsrsEnableFuzz((f) => !f)}
-                  canUndoReview={store.canUndoFlashcardReview}
-                  onUndoReview={store.undoLastFlashcardReview}
-                  reviewLogCount={store.fsrsReviewLogCount}
-                  externalFilter={flashcardExternalFilter}
-                  onConsumeExternalFilter={() => setFlashcardExternalFilter(null)}
-                />
+                <Suspense fallback={<ViewLoadingFallback label="Carregando flashcards FSRS..." />}>
+                  <FlashcardsView
+                    flashcards={store.flashcards}
+                    reviewsTodayStats={store.reviewsTodayStats}
+                    retentionMode={store.retentionMode}
+                    onChangeRetentionMode={store.setRetentionMode}
+                    targetBoard={store.targetBoard}
+                    onChangeTargetBoard={store.setTargetBoard}
+                    userAccuracyByTopic={store.userAccuracyByTopic}
+                    communityMedianByTopic={store.communityMedianByTopic}
+                    onReviewCard={store.reviewFlashcard}
+                    onCreateCustomCard={store.createCustomFlashcard}
+                    onDeleteCard={store.deleteFlashcard}
+                    onOpenOriginalQuestion={handleOpenQuestionFromNotebook}
+                    onGoToQuestions={() => navigateToTab('questoes', { mode: 'estudo' })}
+                    enableFuzz={store.fsrsEnableFuzz}
+                    onToggleEnableFuzz={() => store.setFsrsEnableFuzz((f) => !f)}
+                    canUndoReview={store.canUndoFlashcardReview}
+                    onUndoReview={store.undoLastFlashcardReview}
+                    reviewLogCount={store.fsrsReviewLogCount}
+                    externalFilter={flashcardExternalFilter}
+                    onConsumeExternalFilter={() => setFlashcardExternalFilter(null)}
+                  />
+                </Suspense>
               )}
 
               {/* TAB 6: IMPORTADOR IA DE PROVAS (UEPA 6 ANOS + ESCALA COMERCIAL) */}
               {activeTab === 'importar' && (
-                <QuestionImporterView
-                  allQuestions={store.allQuestions}
-                  importedQuestions={store.importedQuestions}
-                  onSaveImportedQuestions={store.importQuestions}
-                  onDeleteBatch={store.deleteImportedBatch}
-                  onClearAllImported={store.clearImportedQuestions}
-                  onOpenExamInBank={handleOpenImportedExamInBank}
-                  onGoToPerformance={() => setActiveTab('desempenho')}
-                />
+                <Suspense fallback={<ViewLoadingFallback label="Carregando importador de provas..." />}>
+                  <QuestionImporterView
+                    allQuestions={store.allQuestions}
+                    importedQuestions={store.importedQuestions}
+                    onSaveImportedQuestions={store.importQuestions}
+                    onDeleteBatch={store.deleteImportedBatch}
+                    onClearAllImported={store.clearImportedQuestions}
+                    onOpenExamInBank={handleOpenImportedExamInBank}
+                    onGoToPerformance={() => setActiveTab('desempenho')}
+                  />
+                </Suspense>
               )}
             </div>
           )}
@@ -1262,12 +1383,16 @@ export default function App() {
         onClose={() => setRoutineModalOpen(false)}
         flashcards={store.flashcards}
       />
-      <CommandPaletteModal
-        open={commandPaletteOpen}
-        onClose={() => setCommandPaletteOpen(false)}
-        questions={store.allQuestions}
-        onExecuteAction={handleCommandPaletteAction}
-      />
+      {commandPaletteOpen && (
+        <Suspense fallback={null}>
+          <CommandPaletteModal
+            open={commandPaletteOpen}
+            onClose={() => setCommandPaletteOpen(false)}
+            questions={store.allQuestions}
+            onExecuteAction={handleCommandPaletteAction}
+          />
+        </Suspense>
+      )}
       {!focusMode && (
         <MobileBottomNav
           activeTab={activeTab}

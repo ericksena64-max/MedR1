@@ -19,8 +19,8 @@ export default defineConfig(() => {
           if (error) {
             return;
           }
-          const distDir = path.resolve(__dirname, 'dist');
-          const srcAssets = path.resolve(__dirname, 'src/assets');
+          const distDir = path.resolve(import.meta.dirname, 'dist');
+          const srcAssets = path.resolve(import.meta.dirname, 'src/assets');
           const distAssets = path.resolve(distDir, 'src/assets');
           if (fs.existsSync(distDir) && fs.existsSync(srcAssets)) {
             fs.cpSync(srcAssets, distAssets, {recursive: true, force: true});
@@ -28,9 +28,31 @@ export default defineConfig(() => {
         },
       },
     ],
+    build: {
+      rolldownOptions: {
+        output: {
+          codeSplitting: {
+            groups: [
+              {
+                name: 'vendor-react',
+                test: /node_modules\/(react|react-dom|scheduler)\//,
+              },
+              {
+                name: 'vendor-charts',
+                test: /node_modules\/(recharts|d3-[^/]+|victory-vendor)\//,
+              },
+              {
+                name: 'vendor-motion',
+                test: /node_modules\/(motion|framer-motion)\//,
+              },
+            ],
+          },
+        },
+      },
+    },
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, '.'),
+        '@': path.resolve(import.meta.dirname, '.'),
       },
     },
     server: {

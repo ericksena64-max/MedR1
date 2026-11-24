@@ -42,12 +42,17 @@ import {
   resolveCardRetention,
 } from '../lib/srs';
 import {
+  areAllOfficialExamsLoaded,
   clearAllImportedQuestionsFromDB,
   deleteImportedBatchFromDB,
   deleteImportedQuestionFromDB,
+  getLoadedOfficialExamIds,
+  getMatchingOfficialExamIds,
   getOfficialCatalogCache,
+  getOfficialExamIdsForQuestionIds,
   loadImportedQuestionsFromDB,
   loadOfficialCatalogQuestions,
+  loadOfficialExams,
   saveImportedQuestionsToDB,
   setImportedQuestionsCache,
   setOfficialCatalogCache,
@@ -577,28 +582,90 @@ export function useMedR1Store(options?: { liveRankingEnabled?: boolean }) {
 
   const [livePeers, setLivePeers] = useState<LiveRankingUser[]>(INITIAL_LIVE_PEERS);
 
-  // High-capacity IndexedDB imported/AI-commented questions + verified official catalog (UEPA 2025 100q)
+  // High-capacity IndexedDB imported/AI-commented questions + lazy-loaded official exam catalog
   const [importedQuestions, setImportedQuestions] = useState<MedicalQuestion[]>([]);
   const [officialCatalogQuestions, setOfficialCatalogQuestions] = useState<MedicalQuestion[]>(
     () => getOfficialCatalogCache()
   );
+  const [loadedOfficialExamIds, setLoadedOfficialExamIds] = useState<string[]>(
+    () => getLoadedOfficialExamIds()
+  );
+  const [catalogLoadingCount, setCatalogLoadingCount] = useState(0);
   const [bankVersion, setBankVersion] = useState(0);
+
+  const syncOfficialCatalogState = useCallback((loadedCatalog: MedicalQuestion[]) => {
+    setOfficialCatalogCache(loadedCatalog);
+    setOfficialCatalogQuestions([...loadedCatalog]);
+    setLoadedOfficialExamIds(getLoadedOfficialExamIds());
+    setBankVersion((v) => v + 1);
+  }, []);
+
+  const ensureOfficialExamsLoaded = useCallback(
+    async (examIds: string[]) => {
+      const pending = examIds.filter((id) => !getLoadedOfficialExamIds().includes(id));
+      if (pending.length === 0) return;
+      setCatalogLoadingCount((c) => c + 1);
+      try {
+        const loadedCatalog = await loadOfficialExams(pending);
+        syncOfficialCatalogState(loadedCatalog);
+      } finally {
+        setCatalogLoadingCount((c) => Math.max(0, c - 1));
+      }
+    },
+    [syncOfficialCatalogState]
+  );
+
+  const ensureExamsLoadedForFilters = useCallback(
+    async (activeFilters: Partial<QuestionFilters>) => {
+      const matchingIds = getMatchingOfficialExamIds(activeFilters);
+      await ensureOfficialExamsLoaded(matchingIds);
+    },
+    [ensureOfficialExamsLoaded]
+  );
+
+  const ensureAllOfficialExamsLoaded = useCallback(async () => {
+    if (areAllOfficialExamsLoaded()) return;
+    setCatalogLoadingCount((c) => c + 1);
+    try {
+      const loadedCatalog = await loadOfficialCatalogQuestions();
+      syncOfficialCatalogState(loadedCatalog);
+    } finally {
+      setCatalogLoadingCount((c) => Math.max(0, c - 1));
+    }
+  }, [syncOfficialCatalogState]);
+
+  const ensureExamLoadedForQuestionId = useCallback(
+    async (questionId: string) => {
+      const ids = getOfficialExamIdsForQuestionIds([questionId]);
+      await ensureOfficialExamsLoaded(ids);
+    },
+    [ensureOfficialExamsLoaded]
+  );
 
   useEffect(() => {
     let active = true;
-    Promise.all([loadImportedQuestionsFromDB(), loadOfficialCatalogQuestions()]).then(
-      ([loadedImported, loadedCatalog]) => {
-        if (!active) return;
-        setImportedQuestionsCache(loadedImported);
-        setOfficialCatalogCache(loadedCatalog);
-        setImportedQuestions(loadedImported);
-        setOfficialCatalogQuestions(loadedCatalog);
-        setBankVersion((v) => v + 1);
-      }
-    );
+    const referencedIds = getOfficialExamIdsForQuestionIds([
+      ...Object.keys(answers),
+      ...bookmarks,
+    ]);
+
+    loadImportedQuestionsFromDB().then((loadedImported) => {
+      if (!active) return;
+      setImportedQuestionsCache(loadedImported);
+      setImportedQuestions(loadedImported);
+      setBankVersion((v) => v + 1);
+    });
+
+    // Hydrate only official exam chunks already referenced by saved answers/bookmarks
+    if (referencedIds.length > 0) {
+      ensureOfficialExamsLoaded(referencedIds);
+    }
+
     return () => {
       active = false;
     };
+    // Run once on mount to hydrate IndexedDB + any previously answered/bookmarked exams
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const allQuestions = useMemo(() => {
@@ -1582,6 +1649,12 @@ export function useMedR1Store(options?: { liveRankingEnabled?: boolean }) {
     allQuestions,
     importedQuestions,
     officialCatalogQuestions,
+    loadedOfficialExamIds,
+    allOfficialExamsLoaded: areAllOfficialExamsLoaded(),
+    catalogLoading: catalogLoadingCount > 0,
+    ensureExamsLoadedForFilters,
+    ensureAllOfficialExamsLoaded,
+    ensureExamLoadedForQuestionId,
     bankVersion,
     importQuestions,
     generateAiCommentaryForQuestion,

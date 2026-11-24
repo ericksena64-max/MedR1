@@ -4,11 +4,13 @@ import type {
   GrandeAreaId,
   MedicalQuestion,
   QuestionAlternative,
+  QuestionFilters,
 } from '../types/medical';
 import { MEDICAL_QUESTIONS } from '../data/questions';
-import { UEPA_2024_QUESTIONS } from '../data/uepa2024Questions';
-import { UEPA_2025_QUESTIONS } from '../data/uepa2025Questions';
-import { UEPA_2026_QUESTIONS } from '../data/uepa2026Questions';
+import {
+  OFFICIAL_EXAM_CATALOG,
+  type ExamCatalogEntry,
+} from '../data/examCatalog';
 import { GRANDES_AREAS } from '../data/taxonomy';
 
 const DB_NAME = 'medr1_question_bank_db';
@@ -16,17 +18,46 @@ const DB_VERSION = 1;
 const STORE_NAME = 'imported_questions';
 
 /**
- * Synchronous in-memory caches so Pareto 80/20, FSRS Dynamic Retention,
- * Heatmap, and Filters immediately include both the official curated exam
- * catalog (UEPA 2026 + UEPA 2025 + UEPA 2024 — 300 official questions) and
- * any IndexedDB imported/AI-commented questions.
+ * In-memory caches for IndexedDB imports and lazy-loaded official exam chunks.
+ * Official exams are dynamically imported on demand via `OFFICIAL_EXAM_CATALOG`
+ * so the initial bundle stays lean even as the bank scales past 1,000+ questions.
  */
 let importedQuestionsCache: MedicalQuestion[] = [];
-let officialCatalogCache: MedicalQuestion[] = [
-  ...UEPA_2026_QUESTIONS,
-  ...UEPA_2025_QUESTIONS,
-  ...UEPA_2024_QUESTIONS,
-];
+let officialCatalogCache: MedicalQuestion[] = [];
+const loadedExamQuestions = new Map<string, MedicalQuestion[]>();
+const loadingExamPromises = new Map<string, Promise<MedicalQuestion[]>>();
+
+function rebuildOfficialCatalogCache(): MedicalQuestion[] {
+  const ordered: MedicalQuestion[] = [];
+  for (const entry of OFFICIAL_EXAM_CATALOG) {
+    const chunk = loadedExamQuestions.get(entry.id);
+    if (chunk && chunk.length > 0) {
+      ordered.push(...chunk);
+    }
+  }
+  officialCatalogCache = ordered;
+  return officialCatalogCache;
+}
+
+export function getOfficialExamCatalog(): readonly ExamCatalogEntry[] {
+  return OFFICIAL_EXAM_CATALOG;
+}
+
+export function getLoadedOfficialExamIds(): string[] {
+  return Array.from(loadedExamQuestions.keys());
+}
+
+export function isOfficialExamLoaded(examId: string): boolean {
+  return loadedExamQuestions.has(examId);
+}
+
+export function areAllOfficialExamsLoaded(): boolean {
+  return OFFICIAL_EXAM_CATALOG.every((entry) => loadedExamQuestions.has(entry.id));
+}
+
+export function getUnloadedOfficialCatalogEntries(): ExamCatalogEntry[] {
+  return OFFICIAL_EXAM_CATALOG.filter((entry) => !loadedExamQuestions.has(entry.id));
+}
 
 export function getImportedQuestionsCache(): MedicalQuestion[] {
   return importedQuestionsCache;
@@ -44,8 +75,161 @@ export function setOfficialCatalogCache(items: MedicalQuestion[]): void {
   officialCatalogCache = items;
 }
 
-export async function loadOfficialCatalogQuestions(): Promise<MedicalQuestion[]> {
+function normalizeExamToken(value: string): string {
+  return value
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .trim();
+}
+
+/**
+ * Returns whether an official exam manifest entry can contain questions matching
+ * the exam-level constraints in `filters` (instituicao, banca, regiao, ano, examSearch).
+ */
+export function matchesExamCatalogFilters(
+  entry: ExamCatalogEntry,
+  filters: Partial<QuestionFilters>
+): boolean {
+  if (filters.instituicao && entry.instituicao !== filters.instituicao) {
+    return false;
+  }
+  if (filters.banca && entry.banca !== filters.banca) {
+    return false;
+  }
+  if (filters.regiao && entry.regiao !== filters.regiao) {
+    return false;
+  }
+  if (filters.ano && String(entry.ano) !== String(filters.ano)) {
+    return false;
+  }
+  if (filters.examSearch && filters.examSearch.trim().length > 0) {
+    const tokens = normalizeExamToken(filters.examSearch)
+      .split(/[\s/-]+/)
+      .filter((token) => token.length > 0 && !/^(?:0\d+|\d{1,3})$/.test(token));
+
+    if (tokens.length > 0) {
+      const shortYear = String(entry.ano).slice(-2);
+      const instCompact = normalizeExamToken(entry.instituicao).replace(/[^a-z0-9]/g, '');
+      const haystack = normalizeExamToken(
+        [
+          entry.instituicao,
+          entry.instituicao.replace(/-/g, ' '),
+          String(entry.ano),
+          entry.banca,
+          entry.tipoProva,
+          entry.estado,
+          entry.regiao,
+          entry.label,
+          entry.id,
+          `q ${instCompact}${shortYear}`,
+        ].join(' ')
+      );
+      if (!tokens.every((token) => haystack.includes(token))) {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+
+/**
+ * Returns the catalog exam IDs that match the given question filters.
+ */
+export function getMatchingOfficialExamIds(
+  filters: Partial<QuestionFilters>
+): string[] {
+  return OFFICIAL_EXAM_CATALOG.filter((entry) =>
+    matchesExamCatalogFilters(entry, filters)
+  ).map((entry) => entry.id);
+}
+
+/**
+ * Resolves which catalog exam IDs own any of the given question IDs
+ * (used to lazily hydrate only exams referenced by saved answers/bookmarks).
+ */
+export function getOfficialExamIdsForQuestionIds(
+  questionIds: Iterable<string>
+): string[] {
+  const matched = new Set<string>();
+  for (const qid of questionIds) {
+    for (const entry of OFFICIAL_EXAM_CATALOG) {
+      if (qid.startsWith(entry.idPrefix)) {
+        matched.add(entry.id);
+        break;
+      }
+    }
+  }
+  return Array.from(matched);
+}
+
+/**
+ * Dynamically loads a single official exam chunk on demand (deduplicated & cached).
+ */
+export async function loadOfficialExam(examId: string): Promise<MedicalQuestion[]> {
+  const cached = loadedExamQuestions.get(examId);
+  if (cached) return cached;
+
+  const inflight = loadingExamPromises.get(examId);
+  if (inflight) return inflight;
+
+  const entry = OFFICIAL_EXAM_CATALOG.find((e) => e.id === examId);
+  if (!entry) return [];
+
+  const promise = entry
+    .loader()
+    .then((questions) => {
+      loadedExamQuestions.set(examId, questions);
+      rebuildOfficialCatalogCache();
+      return questions;
+    })
+    .finally(() => {
+      loadingExamPromises.delete(examId);
+    });
+
+  loadingExamPromises.set(examId, promise);
+  return promise;
+}
+
+/**
+ * Loads a specific list of official exam IDs in parallel and returns the updated
+ * official catalog cache.
+ */
+export async function loadOfficialExams(examIds: string[]): Promise<MedicalQuestion[]> {
+  const uniqueIds = Array.from(new Set(examIds)).filter(
+    (id) => !loadedExamQuestions.has(id)
+  );
+  if (uniqueIds.length > 0) {
+    await Promise.all(uniqueIds.map((id) => loadOfficialExam(id)));
+  }
   return officialCatalogCache;
+}
+
+/**
+ * Loads only the official exam chunks that can match the active question filters.
+ */
+export async function loadOfficialExamsMatchingFilters(
+  filters: Partial<QuestionFilters>
+): Promise<MedicalQuestion[]> {
+  const matchingIds = getMatchingOfficialExamIds(filters);
+  return loadOfficialExams(matchingIds);
+}
+
+/**
+ * Loads all remaining official exam chunks in parallel (used by Analytics/Pareto,
+ * Importer totals, Command Palette, and full-bank operations).
+ */
+export async function loadOfficialCatalogQuestions(): Promise<MedicalQuestion[]> {
+  return loadOfficialExams(OFFICIAL_EXAM_CATALOG.map((entry) => entry.id));
+}
+
+/**
+ * Resets in-memory official catalog caches (for unit tests).
+ */
+export function resetOfficialCatalogCacheForTests(): void {
+  loadedExamQuestions.clear();
+  loadingExamPromises.clear();
+  officialCatalogCache = [];
 }
 
 export function getAllBankQuestions(): MedicalQuestion[] {
