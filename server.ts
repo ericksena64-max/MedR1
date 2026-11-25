@@ -1108,27 +1108,30 @@ ${MEDR1_MARKDOWN_FORMAT_GUIDE}`;
   }
 
   function estimateTopicTimePercentiles(
-    topicLabel: string,
     liveTimesSec: number[]
   ): { p50: number; p75: number } {
-    if (liveTimesSec.length >= 2) {
-      const sorted = [...liveTimesSec].sort((a, b) => a - b);
-      return {
-        p50: computeContinuousPercentile(sorted, 0.5),
-        p75: computeContinuousPercentile(sorted, 0.75),
-      };
+    if (liveTimesSec.length === 0) {
+      return { p50: 0, p75: 0 };
     }
-    let hash = 0;
-    for (let i = 0; i < topicLabel.length; i += 1) {
-      hash = (hash * 31 + topicLabel.charCodeAt(i)) >>> 0;
-    }
-    const baseP50 = 46 + (hash % 34); // 46s–79s realistic R1 median pacing
-    const p50 =
-      liveTimesSec.length === 1
-        ? Number(((baseP50 * 0.65 + liveTimesSec[0] * 0.35)).toFixed(1))
-        : baseP50;
-    const p75 = Number((p50 * (1.28 + ((hash % 12) / 100))).toFixed(1));
-    return { p50, p75 };
+    const sorted = [...liveTimesSec].sort((a, b) => a - b);
+    return {
+      p50: computeContinuousPercentile(sorted, 0.5),
+      p75: computeContinuousPercentile(sorted, 0.75),
+    };
+  }
+
+  function computeGapImpactScoreServer(
+    totalAttempts: number,
+    accuracyPct: number,
+    communityMedianPct: number
+  ): number {
+    if (totalAttempts <= 0) return 0;
+    const errorRate = Math.max(0, Math.min(1, (100 - accuracyPct) / 100));
+    const medianDeficit = Math.max(0, communityMedianPct - accuracyPct) / 100;
+    const volumeConfidence = Math.min(1, Math.log2(totalAttempts + 1) / Math.log2(21));
+    return Number(
+      ((errorRate * 70 + medianDeficit * 30) * (0.45 + 0.55 * volumeConfidence)).toFixed(2)
+    );
   }
 
   app.post('/api/analytics/gap-radar', (req: Request, res: Response) => {
@@ -1183,11 +1186,12 @@ ${MEDR1_MARKDOWN_FORMAT_GUIDE}`;
                 .filter((n): n is number => typeof n === 'number' && Number.isFinite(n) && n > 0 && n <= 3600)
                 .slice(0, 200)
             : [];
-          const { p50, p75 } = estimateTopicTimePercentiles(topic, liveTimesSec);
+          const { p50, p75 } = estimateTopicTimePercentiles(liveTimesSec);
           const errorCount = Math.max(0, totalAttempts - correctAttempts);
-          // Matches ORDER BY in GAP_RADAR_MV_SQL: high volume * error rate (weighted slightly toward lower accuracy)
-          const gapImpactScore = Number(
-            (totalAttempts * ((100 - accuracyPct) / 100)).toFixed(2)
+          const gapImpactScore = computeGapImpactScoreServer(
+            totalAttempts,
+            accuracyPct,
+            communityMedianPct
           );
           const lastAttemptAt =
             typeof row.lastAttemptAt === 'string' && row.lastAttemptAt.length <= 40

@@ -69,11 +69,24 @@ export function normalCDF(z: number): number {
   return z > 0 ? 1 - prob : prob;
 }
 
+function computeWilsonCi95(acertos: number, total: number): [number, number] {
+  if (total <= 0) return [0, 0];
+  const z = 1.959963984540054;
+  const z2 = z * z;
+  const p = acertos / total;
+  const denom = 1 + z2 / total;
+  const center = p + z2 / (2 * total);
+  const rad = z * Math.sqrt((p * (1 - p)) / total + z2 / (4 * total * total));
+  const low = Math.max(0, (100 * (center - rad)) / denom);
+  const high = Math.min(100, (100 * (center + rad)) / denom);
+  return [Number(low.toFixed(2)), Number(high.toFixed(2))];
+}
+
 export function calcularEstimativaResidencia(
   desempenho: DesempenhoArea[],
   config: ConfiguracaoProva
 ): ResultadoEstimativa {
-  const Z_95 = 1.96;
+  const Z_95 = 1.959963984540054;
   const minQ = config.minimoQuestoesPorArea ?? 10;
   const sigmaCorte = Math.max(0, config.notaCorteDesvioPadrao ?? 0);
   const usarLaplace = Boolean(config.usarSuavizacaoLaplace);
@@ -91,16 +104,28 @@ export function calcularEstimativaResidencia(
     const totalValido = Math.max(0, item.total);
     const acertosValidos = Math.max(0, Math.min(totalValido, item.acertos));
 
-    // Evita divisão por zero ou SE=0 em cold start quando Laplace está ativado
+    // Evita divisão por zero ou colapso de SE=0 nos extremos (0% ou 100%)
     let p = 0;
     let varBinomial = 0;
+    let ic95: [number, number] = [0, 0];
+
     if (usarLaplace) {
       const nEff = totalValido + 2;
       p = (acertosValidos + 1) / nEff;
       varBinomial = (p * (1 - p)) / nEff;
-    } else {
-      p = totalValido > 0 ? acertosValidos / totalValido : 0;
-      varBinomial = totalValido > 0 ? (p * (1 - p)) / totalValido : 0;
+      ic95 = computeWilsonCi95(acertosValidos + 1, nEff);
+    } else if (totalValido > 0) {
+      p = acertosValidos / totalValido;
+      ic95 = computeWilsonCi95(acertosValidos, totalValido);
+      if (acertosValidos === 0 || acertosValidos === totalValido) {
+        // Agresti-Coull variance avoids false zero-uncertainty at 0% or 100%
+        const z2 = Z_95 * Z_95;
+        const nAdj = totalValido + z2;
+        const pAdj = (acertosValidos + z2 / 2) / nAdj;
+        varBinomial = (pAdj * (1 - pAdj)) / nAdj;
+      } else {
+        varBinomial = (p * (1 - p)) / totalValido;
+      }
     }
 
     const seArea = 100 * Math.sqrt(varBinomial);
@@ -108,11 +133,15 @@ export function calcularEstimativaResidencia(
     notaEstimada += peso * (p * 100);
     varDominio += peso * peso * (seArea * seArea);
 
-    // Variância amostral da prova oficial para essa área
+    // Variância amostral da prova oficial para essa área (usando p regularizado nos extremos)
     const questoesAreaNaProva = peso * Math.max(1, config.totalQuestoesProva);
+    const pVarProva =
+      totalValido > 0 && (p === 0 || p === 1)
+        ? (acertosValidos + 1) / (totalValido + 2)
+        : p;
     const varAmostralProvaArea =
       questoesAreaNaProva > 0
-        ? (10000 * p * (1 - p)) / questoesAreaNaProva
+        ? (10000 * pVarProva * (1 - pVarProva)) / questoesAreaNaProva
         : 0;
     varProva += peso * peso * varAmostralProvaArea;
 
@@ -123,10 +152,7 @@ export function calcularEstimativaResidencia(
       peso,
       percentual: Number((p * 100).toFixed(2)),
       se: Number(seArea.toFixed(2)),
-      ic95: [
-        Number(Math.max(0, p * 100 - Z_95 * seArea).toFixed(2)),
-        Number(Math.min(100, p * 100 + Z_95 * seArea).toFixed(2)),
-      ] as [number, number],
+      ic95,
       abaixoDoMinimo: totalValido < minQ,
     };
   });
@@ -166,10 +192,11 @@ export function calcularEstimativaResidencia(
 
 /**
  * Identifica o gargalo prioritário (menor percentual com maior margem de ganho)
- * e simula quanto a nota geral e a probabilidade de aprovação sobem ao elevar aquela área em +ganhoPct.
+ * e simula analiticamente quanto a nota geral e a probabilidade de aprovação sobem
+ * ao elevar aquela área em +ganhoPct (sem distorção de arredondamento nem dupla suavização).
  */
 export function identificarGargaloPrioritario(
-  desempenho: DesempenhoArea[],
+  _desempenho: DesempenhoArea[],
   config: ConfiguracaoProva,
   resultadoBase: ResultadoEstimativa,
   ganhoPct: number = 5
@@ -187,26 +214,40 @@ export function identificarGargaloPrioritario(
     Math.min(100, gargalo.percentual + ganhoEfetivo).toFixed(2)
   );
 
-  // Recalcula o estimador completo elevando a taxa da área gargalo em +ganhoEfetivo
-  const desempenhoSimulado: DesempenhoArea[] = desempenho.map((item) => {
-    if (item.area !== gargalo.area) return item;
-    const baseTotal = Math.max(item.total, config.minimoQuestoesPorArea ?? 10);
-    const novosAcertos = Math.min(
-      baseTotal,
-      Math.round((percentualSimulado / 100) * baseTotal)
-    );
-    return {
-      ...item,
-      acertos: novosAcertos,
-      total: baseTotal,
-    };
-  });
+  // Recalcula analiticamente nota, variância de domínio e variância da prova com o novo p da área gargalo
+  const sigmaCorte = Math.max(0, config.notaCorteDesvioPadrao ?? 0);
+  const totalQProva = Math.max(1, config.totalQuestoesProva);
+  const minQ = config.minimoQuestoesPorArea ?? 10;
 
-  const simRes = calcularEstimativaResidencia(desempenhoSimulado, config);
+  let novaNota = 0;
+  let novaVarDominio = 0;
+  let novaVarProva = 0;
+
+  for (const area of resultadoBase.detalhePorArea) {
+    const pPct = area.area === gargalo.area ? percentualSimulado : area.percentual;
+    const p = Math.max(0, Math.min(1, pPct / 100));
+    const nBase = Math.max(area.total, minQ);
+    const varBin = area.area === gargalo.area ? (p * (1 - p)) / nBase : (area.se / 100) ** 2;
+    const seArea = 100 * Math.sqrt(varBin);
+
+    novaNota += area.peso * pPct;
+    novaVarDominio += area.peso * area.peso * seArea * seArea;
+
+    const qArea = area.peso * totalQProva;
+    const varProvaArea = qArea > 0 ? (10000 * p * (1 - p)) / qArea : 0;
+    novaVarProva += area.peso * area.peso * varProvaArea;
+  }
+
+  const novoSigma = Math.sqrt(novaVarDominio + novaVarProva + sigmaCorte * sigmaCorte);
+  const novaProb =
+    novoSigma > 1e-6
+      ? Number((normalCDF((novaNota - config.notaCorteMedia) / novoSigma) * 100).toFixed(1))
+      : novaNota >= config.notaCorteMedia
+      ? 100
+      : 0;
+
   const ganhoNotaGeral = Number((gargalo.peso * ganhoEfetivo).toFixed(2));
-  const novaNotaEstimada = Number(
-    Math.min(100, resultadoBase.notaEstimada + ganhoNotaGeral).toFixed(2)
-  );
+  const novaNotaEstimada = Number(Math.min(100, novaNota).toFixed(2));
 
   return {
     area: gargalo.area,
@@ -216,11 +257,9 @@ export function identificarGargaloPrioritario(
     peso: gargalo.peso,
     ganhoNotaGeral,
     novaNotaEstimada,
-    novaProbabilidadeAprovacao: simRes.probabilidadeAprovacao,
+    novaProbabilidadeAprovacao: novaProb,
     ganhoProbabilidadePp: Number(
-      (simRes.probabilidadeAprovacao - resultadoBase.probabilidadeAprovacao).toFixed(
-        1
-      )
+      (novaProb - resultadoBase.probabilidadeAprovacao).toFixed(1)
     ),
   };
 }
@@ -228,80 +267,101 @@ export function identificarGargaloPrioritario(
 export const ESTIMATOR_STORAGE_KEY = 'medr1_residencia_estimator_v1';
 export const ESTIMATOR_UPDATED_EVENT = 'medr1-estimator-config-updated';
 
-export function readPersistedEstimatorConfig(
+interface StoredEstimatorShape {
+  captureMode?: 'direto' | 'edicoes';
+  notaCorteMedia?: number;
+  notaCorteDesvioPadrao?: number;
+  totalQuestoesProva?: number;
+  minimoQuestoesPorArea?: number;
+  usarLaplace?: boolean;
+  annualCutoffs?: Array<{ year?: number; score?: number }>;
+}
+
+/**
+ * Single source of truth for parsing persisted estimator configuration JSON.
+ */
+export function parseEstimatorConfigJson(
+  rawJson: string | null,
   fallbackCutoffMean: number = 78
 ): ConfiguracaoProva {
-  try {
-    const raw = window.localStorage.getItem(ESTIMATOR_STORAGE_KEY);
-    if (raw) {
-      const parsed = JSON.parse(raw) as {
-        captureMode?: 'direto' | 'edicoes';
-        notaCorteMedia?: number;
-        notaCorteDesvioPadrao?: number;
-        totalQuestoesProva?: number;
-        minimoQuestoesPorArea?: number;
-        usarLaplace?: boolean;
-        annualCutoffs?: Array<{ score: number }>;
-      };
-
-      let notaCorteMedia =
-        typeof parsed.notaCorteMedia === 'number' &&
-        Number.isFinite(parsed.notaCorteMedia)
-          ? parsed.notaCorteMedia
-          : fallbackCutoffMean;
-      let notaCorteDesvioPadrao =
-        typeof parsed.notaCorteDesvioPadrao === 'number' &&
-        Number.isFinite(parsed.notaCorteDesvioPadrao)
-          ? parsed.notaCorteDesvioPadrao
-          : 2.0;
-
-      if (
-        parsed.captureMode === 'edicoes' &&
-        Array.isArray(parsed.annualCutoffs) &&
-        parsed.annualCutoffs.length > 0
-      ) {
-        const scores = parsed.annualCutoffs
-          .map((e) => e.score)
-          .filter((s) => typeof s === 'number' && Number.isFinite(s));
-        if (scores.length > 0) {
-          const mean = scores.reduce((a, b) => a + b, 0) / scores.length;
-          notaCorteMedia = Number(mean.toFixed(2));
-          if (scores.length > 1) {
-            const variance =
-              scores.reduce((a, s) => a + (s - mean) ** 2, 0) /
-              (scores.length - 1);
-            notaCorteDesvioPadrao = Number(Math.sqrt(variance).toFixed(2));
-          } else {
-            notaCorteDesvioPadrao = 0;
-          }
-        }
-      }
-
-      return {
-        totalQuestoesProva:
-          typeof parsed.totalQuestoesProva === 'number' &&
-          Number.isFinite(parsed.totalQuestoesProva)
-            ? parsed.totalQuestoesProva
-            : 100,
-        notaCorteMedia,
-        notaCorteDesvioPadrao,
-        minimoQuestoesPorArea:
-          typeof parsed.minimoQuestoesPorArea === 'number' &&
-          Number.isFinite(parsed.minimoQuestoesPorArea)
-            ? parsed.minimoQuestoesPorArea
-            : 10,
-        usarSuavizacaoLaplace: Boolean(parsed.usarLaplace),
-      };
-    }
-  } catch {
-    // ignore storage read errors
-  }
-  return {
+  const fallback: ConfiguracaoProva = {
     totalQuestoesProva: 100,
     notaCorteMedia: fallbackCutoffMean,
     notaCorteDesvioPadrao: 2.0,
     minimoQuestoesPorArea: 10,
     usarSuavizacaoLaplace: false,
   };
+
+  if (!rawJson) return fallback;
+
+  try {
+    const parsed = JSON.parse(rawJson) as StoredEstimatorShape;
+    if (!parsed || typeof parsed !== 'object') return fallback;
+
+    let notaCorteMedia =
+      typeof parsed.notaCorteMedia === 'number' &&
+      Number.isFinite(parsed.notaCorteMedia)
+        ? parsed.notaCorteMedia
+        : fallbackCutoffMean;
+    let notaCorteDesvioPadrao =
+      typeof parsed.notaCorteDesvioPadrao === 'number' &&
+      Number.isFinite(parsed.notaCorteDesvioPadrao)
+        ? Math.max(0, parsed.notaCorteDesvioPadrao)
+        : 2.0;
+
+    if (
+      parsed.captureMode === 'edicoes' &&
+      Array.isArray(parsed.annualCutoffs) &&
+      parsed.annualCutoffs.length > 0
+    ) {
+      const scores = parsed.annualCutoffs
+        .map((e) => Number(e?.score))
+        .filter((s) => Number.isFinite(s) && s >= 0 && s <= 100);
+      if (scores.length > 0) {
+        const mean = scores.reduce((a, b) => a + b, 0) / scores.length;
+        notaCorteMedia = Number(mean.toFixed(1));
+        if (scores.length > 1) {
+          const variance =
+            scores.reduce((a, s) => a + (s - mean) ** 2, 0) / (scores.length - 1);
+          notaCorteDesvioPadrao = Number(Math.sqrt(variance).toFixed(2));
+        } else {
+          // Single edition: keep conservative 2.0 pp SD to avoid false zero-variance certainty
+          notaCorteDesvioPadrao = 2.0;
+        }
+      }
+    }
+
+    return {
+      totalQuestoesProva:
+        typeof parsed.totalQuestoesProva === 'number' &&
+        Number.isFinite(parsed.totalQuestoesProva) &&
+        parsed.totalQuestoesProva > 0
+          ? Math.round(parsed.totalQuestoesProva)
+          : 100,
+      notaCorteMedia,
+      notaCorteDesvioPadrao,
+      minimoQuestoesPorArea:
+        typeof parsed.minimoQuestoesPorArea === 'number' &&
+        Number.isFinite(parsed.minimoQuestoesPorArea)
+          ? Math.max(1, Math.round(parsed.minimoQuestoesPorArea))
+          : 10,
+      usarSuavizacaoLaplace: Boolean(parsed.usarLaplace),
+    };
+  } catch {
+    return fallback;
+  }
+}
+
+export function readPersistedEstimatorConfig(
+  fallbackCutoffMean: number = 78
+): ConfiguracaoProva {
+  try {
+    return parseEstimatorConfigJson(
+      window.localStorage.getItem(ESTIMATOR_STORAGE_KEY),
+      fallbackCutoffMean
+    );
+  } catch {
+    return parseEstimatorConfigJson(null, fallbackCutoffMean);
+  }
 }
 

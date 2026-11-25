@@ -346,14 +346,14 @@ export function computePsychometricApproval(
     pHat = k / n;
     stage1PointEstimate = 100 * pHat;
     const seBin = Math.sqrt((pHat * (1 - pHat)) / n);
-    stage1Se = 100 * seBin;
+    const waldSe = 100 * seBin;
 
     // Wald 95% CI
-    const waldLow = clamp100(stage1PointEstimate - Z_95 * stage1Se);
-    const waldHigh = clamp100(stage1PointEstimate + Z_95 * stage1Se);
+    const waldLow = clamp100(stage1PointEstimate - Z_95 * waldSe);
+    const waldHigh = clamp100(stage1PointEstimate + Z_95 * waldSe);
     waldCi = [waldLow, waldHigh];
 
-    // Wilson 95% CI (more accurate for small n or p > 0.85)
+    // Wilson 95% CI (more accurate for small n or extreme p near 0/1)
     const z2 = Z_95 * Z_95;
     const denom = 1 + z2 / n;
     const center = pHat + z2 / (2 * n);
@@ -361,6 +361,11 @@ export function computePsychometricApproval(
     const wilsonLow = clamp100((100 * (center - rad)) / denom);
     const wilsonHigh = clamp100((100 * (center + rad)) / denom);
     wilsonCi = [wilsonLow, wilsonHigh];
+
+    // Keep Stage 1 SE consistent with Wilson when Wilson is active (avoids SE=0 at k=0 or k=n)
+    const wilsonEffectiveSe = (100 * rad) / (denom * Z_95);
+    stage1Se =
+      input.stage1Model === 'binomial_wald' ? waldSe : wilsonEffectiveSe;
 
     activeStage1Ci =
       input.stage1Model === 'binomial_wald' ? waldCi : wilsonCi;
@@ -383,9 +388,17 @@ export function computePsychometricApproval(
 
   if (ols && ols.valid) {
     finalMeanY = ols.predictedY0;
-    // Combine OLS prediction SE (already incorporates residual + leverage)
-    finalSigmaY = ols.predictionSe;
-    finalInterval95 = [ols.piLow, ols.piHigh];
+    // Propagate Stage 1 measurement error (errors-in-variables) and small-df Student-t tail inflation
+    const tTailScale = ols.tCritical95 > 0 ? ols.tCritical95 / Z_95 : 1;
+    const propagatedStage1Se = Math.abs(ols.beta1) * stage1Se;
+    const combinedPredSe = Math.sqrt(
+      ols.predictionSe * ols.predictionSe + propagatedStage1Se * propagatedStage1Se
+    );
+    finalSigmaY = combinedPredSe * tTailScale;
+    finalInterval95 = [
+      clamp100(finalMeanY - Z_95 * finalSigmaY),
+      clamp100(finalMeanY + Z_95 * finalSigmaY),
+    ];
     finalIntervalLabel = 'IP 95% (MQO)';
   }
 

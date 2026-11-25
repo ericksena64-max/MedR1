@@ -73,30 +73,40 @@ function computeLocalPercentile(sortedAsc: number[], p: number): number {
 }
 
 function estimateLocalTimePercentiles(
-  topicLabel: string,
   liveTimesSec: number[]
 ): { p50: number; p75: number } {
-  if (liveTimesSec.length >= 2) {
-    const sorted = [...liveTimesSec].sort((a, b) => a - b);
-    return {
-      p50: computeLocalPercentile(sorted, 0.5),
-      p75: computeLocalPercentile(sorted, 0.75),
-    };
+  if (liveTimesSec.length === 0) {
+    return { p50: 0, p75: 0 };
   }
-  let hash = 0;
-  for (let i = 0; i < topicLabel.length; i += 1) {
-    hash = (hash * 31 + topicLabel.charCodeAt(i)) >>> 0;
-  }
-  const baseP50 = 46 + (hash % 34);
-  const p50 =
-    liveTimesSec.length === 1
-      ? Number((baseP50 * 0.65 + liveTimesSec[0] * 0.35).toFixed(1))
-      : baseP50;
-  const p75 = Number((p50 * (1.28 + (hash % 12) / 100)).toFixed(1));
-  return { p50, p75 };
+  const sorted = [...liveTimesSec].sort((a, b) => a - b);
+  return {
+    p50: computeLocalPercentile(sorted, 0.5),
+    p75: computeLocalPercentile(sorted, 0.75),
+  };
+}
+
+/**
+ * Computes a bounded (0–100) clinical gap severity score combining error rate,
+ * deficit below community median, and logarithmic sample-size confidence.
+ * Prevents high-volume mastered topics (e.g., 80% accuracy on 40q) from outranking
+ * genuinely weak topics (e.g., 30% accuracy on 10q).
+ */
+export function computeGapImpactScore(
+  totalAttempts: number,
+  accuracyPct: number,
+  communityMedianPct: number
+): number {
+  if (totalAttempts <= 0) return 0;
+  const errorRate = Math.max(0, Math.min(1, (100 - accuracyPct) / 100));
+  const medianDeficit = Math.max(0, communityMedianPct - accuracyPct) / 100;
+  const volumeConfidence = Math.min(1, Math.log2(totalAttempts + 1) / Math.log2(21));
+  return Number(
+    ((errorRate * 70 + medianDeficit * 30) * (0.45 + 0.55 * volumeConfidence)).toFixed(2)
+  );
 }
 
 function formatSecondsCompact(seconds: number): string {
+  if (!Number.isFinite(seconds) || seconds <= 0) return '—';
   const rounded = Math.round(seconds);
   if (rounded < 60) return `${rounded}s`;
   const mins = Math.floor(rounded / 60);
@@ -167,8 +177,9 @@ function GapRadarTooltip({
             Tempo P50 / P75
           </span>
           <span className="text-slate-600 dark:text-slate-300">
-            {formatSecondsCompact(item.p50TimeSeconds)} ·{' '}
-            {formatSecondsCompact(item.p75TimeSeconds)}
+            {item.p50TimeSeconds > 0
+              ? `${formatSecondsCompact(item.p50TimeSeconds)} · ${formatSecondsCompact(item.p75TimeSeconds)}`
+              : 'Sem medição'}
           </span>
         </div>
       </div>
@@ -220,10 +231,12 @@ export function GapRadarCard({
 
     const localProjected: GapRadarTopicRow[] = stats
       .map((s) => {
-        const { p50, p75 } = estimateLocalTimePercentiles(s.topic, s.liveTimesSec);
+        const { p50, p75 } = estimateLocalTimePercentiles(s.liveTimesSec);
         const errorCount = Math.max(0, s.totalAttempts - s.correctAttempts);
-        const gapImpactScore = Number(
-          (s.totalAttempts * ((100 - s.accuracyPct) / 100)).toFixed(2)
+        const gapImpactScore = computeGapImpactScore(
+          s.totalAttempts,
+          s.accuracyPct,
+          s.communityMedianPct
         );
         return {
           specialty: s.specialty,
@@ -494,8 +507,9 @@ export function GapRadarCard({
                         </span>
                         <span className="inline-flex items-center gap-1 font-mono text-[11px]">
                           <Clock className="h-3 w-3 text-slate-400" />
-                          P50 {formatSecondsCompact(item.p50TimeSeconds)} / P75{' '}
-                          {formatSecondsCompact(item.p75TimeSeconds)}
+                          {item.p50TimeSeconds > 0
+                            ? `P50 ${formatSecondsCompact(item.p50TimeSeconds)} / P75 ${formatSecondsCompact(item.p75TimeSeconds)}`
+                            : 'Tempo: sem medição'}
                         </span>
                       </div>
                     </div>

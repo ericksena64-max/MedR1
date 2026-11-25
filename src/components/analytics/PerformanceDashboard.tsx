@@ -121,6 +121,8 @@ interface PerformanceDashboardProps {
   onUpdateCutoffTarget: (patch: Partial<CutoffTargetConfig>) => void;
   onRestoreExampleSimulados: () => void;
   bankVersion?: number;
+  includeDemoBaseline?: boolean;
+  onToggleDemoBaseline?: (next: boolean) => void;
 }
 
 type Granularity = 'geral' | 'areas' | 'temas';
@@ -153,6 +155,8 @@ export function PerformanceDashboard({
   onUpdateCutoffTarget,
   onRestoreExampleSimulados,
   bankVersion = 0,
+  includeDemoBaseline = false,
+  onToggleDemoBaseline,
 }: PerformanceDashboardProps) {
   const [granularity, setGranularity] = useState<Granularity>('areas');
   const [selectedAreaFilter, setSelectedAreaFilter] = useState<string>('all');
@@ -360,6 +364,38 @@ export function PerformanceDashboard({
             ))}
           </div>
 
+          {onToggleDemoBaseline && (
+            <div
+              className="inline-flex items-center gap-1 rounded-lg bg-[#E5E5EA]/70 p-1 dark:bg-[#0B0F17]"
+              title="Alterna entre apenas suas questões reais respondidas ou dados de demonstração"
+            >
+              <button
+                type="button"
+                onClick={() => onToggleDemoBaseline(false)}
+                className={cn(
+                  'rounded-md px-2.5 py-1 text-xs font-medium transition-colors cursor-pointer whitespace-nowrap',
+                  !includeDemoBaseline
+                    ? 'bg-white text-[#1D1D1F] shadow-xs dark:bg-[#182030] dark:text-white'
+                    : 'text-[#86868B] hover:text-[#1D1D1F] dark:text-slate-400 dark:hover:text-slate-200'
+                )}
+              >
+                Dados Reais
+              </button>
+              <button
+                type="button"
+                onClick={() => onToggleDemoBaseline(true)}
+                className={cn(
+                  'rounded-md px-2.5 py-1 text-xs font-medium transition-colors cursor-pointer whitespace-nowrap',
+                  includeDemoBaseline
+                    ? 'bg-white text-[#1D1D1F] shadow-xs dark:bg-[#182030] dark:text-white'
+                    : 'text-[#86868B] hover:text-[#1D1D1F] dark:text-slate-400 dark:hover:text-slate-200'
+                )}
+              >
+                Modo Demo
+              </button>
+            </div>
+          )}
+
           <button
             type="button"
             onClick={() => handleOpenCalibrationModal('estimador')}
@@ -471,6 +507,7 @@ export function PerformanceDashboard({
             questions={questions}
             answers={answers}
             darkMode={darkMode}
+            includeDemoBaseline={includeDemoBaseline}
             onFilterQuestionsByTopic={onFilterQuestionsByTopic}
             onFilterFlashcardsByTopic={onFilterFlashcardsByTopic}
           />
@@ -716,6 +753,16 @@ export function PerformanceDashboard({
           </div>
 
           <div className="h-[320px] w-full">
+            {evolutionData.length === 0 ? (
+              <div className="flex h-full flex-col items-center justify-center rounded-xl border border-dashed border-slate-200/80 bg-[#F5F5F7]/60 px-6 text-center dark:border-white/10 dark:bg-white/[0.02]">
+                <p className="text-sm font-semibold text-[#1D1D1F] dark:text-slate-200">
+                  Sem histórico real registrado ainda
+                </p>
+                <p className="mt-1 max-w-xs text-xs text-[#86868B] dark:text-slate-400">
+                  Responda questões no Banco de Questões para construir sua curva real semana a semana (ou ative o Modo Demo acima para explorar).
+                </p>
+              </div>
+            ) : (
             <ResponsiveContainer width="100%" height="100%">
               <LineChart
                 data={evolutionData}
@@ -729,7 +776,7 @@ export function PerformanceDashboard({
                   tickLine={false}
                 />
                 <YAxis
-                  domain={[40, 95]}
+                  domain={[0, 100]}
                   unit="%"
                   tick={{ fill: axisTickColor, fontSize: 11 }}
                   axisLine={false}
@@ -771,6 +818,7 @@ export function PerformanceDashboard({
                 />
               </LineChart>
             </ResponsiveContainer>
+            )}
           </div>
         </section>
       </div>

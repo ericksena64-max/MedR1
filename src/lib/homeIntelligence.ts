@@ -3,6 +3,7 @@ import type { CutoffTargetConfig, GrandeAreaId, SimuladoRecord } from '../types/
 import {
   calcularEstimativaResidencia,
   identificarGargaloPrioritario,
+  parseEstimatorConfigJson,
   type AreaMedica,
   type ConfiguracaoProva,
   type DesempenhoArea,
@@ -69,82 +70,11 @@ export interface HomeIntelligenceSummary {
   cutoffProjection: CutoffProjectionResult;
 }
 
-interface StoredEstimatorShape {
-  captureMode?: 'direto' | 'edicoes';
-  notaCorteMedia?: number;
-  notaCorteDesvioPadrao?: number;
-  totalQuestoesProva?: number;
-  minimoQuestoesPorArea?: number;
-  usarLaplace?: boolean;
-  annualCutoffs?: Array<{ year?: number; score?: number }>;
-}
-
 export function readPersistedEstimatorConfig(
   rawJson: string | null,
   fallbackCutoff: number
 ): ConfiguracaoProva {
-  const fallback: ConfiguracaoProva = {
-    totalQuestoesProva: 100,
-    notaCorteMedia: fallbackCutoff,
-    notaCorteDesvioPadrao: 2.0,
-    minimoQuestoesPorArea: 10,
-    usarSuavizacaoLaplace: false,
-  };
-
-  if (!rawJson) return fallback;
-
-  try {
-    const parsed = JSON.parse(rawJson) as StoredEstimatorShape;
-    if (!parsed || typeof parsed !== 'object') return fallback;
-
-    let notaCorteMedia =
-      typeof parsed.notaCorteMedia === 'number' && Number.isFinite(parsed.notaCorteMedia)
-        ? parsed.notaCorteMedia
-        : fallbackCutoff;
-    let notaCorteDesvioPadrao =
-      typeof parsed.notaCorteDesvioPadrao === 'number' &&
-      Number.isFinite(parsed.notaCorteDesvioPadrao)
-        ? Math.max(0, parsed.notaCorteDesvioPadrao)
-        : 2.0;
-
-    if (
-      parsed.captureMode === 'edicoes' &&
-      Array.isArray(parsed.annualCutoffs) &&
-      parsed.annualCutoffs.length > 0
-    ) {
-      const scores = parsed.annualCutoffs
-        .map((c) => Number(c?.score))
-        .filter((s) => Number.isFinite(s) && s >= 0 && s <= 100);
-      if (scores.length > 0) {
-        const mean = scores.reduce((acc, s) => acc + s, 0) / scores.length;
-        const variance =
-          scores.length > 1
-            ? scores.reduce((acc, s) => acc + (s - mean) ** 2, 0) / (scores.length - 1)
-            : 4;
-        notaCorteMedia = Number(mean.toFixed(1));
-        notaCorteDesvioPadrao = Number(Math.sqrt(variance).toFixed(2));
-      }
-    }
-
-    return {
-      totalQuestoesProva:
-        typeof parsed.totalQuestoesProva === 'number' &&
-        Number.isFinite(parsed.totalQuestoesProva) &&
-        parsed.totalQuestoesProva > 0
-          ? Math.round(parsed.totalQuestoesProva)
-          : 100,
-      notaCorteMedia,
-      notaCorteDesvioPadrao,
-      minimoQuestoesPorArea:
-        typeof parsed.minimoQuestoesPorArea === 'number' &&
-        Number.isFinite(parsed.minimoQuestoesPorArea)
-          ? Math.max(1, Math.round(parsed.minimoQuestoesPorArea))
-          : 10,
-      usarSuavizacaoLaplace: Boolean(parsed.usarLaplace),
-    };
-  } catch {
-    return fallback;
-  }
+  return parseEstimatorConfigJson(rawJson, fallbackCutoff);
 }
 
 export function buildHomeIntelligenceSummary({

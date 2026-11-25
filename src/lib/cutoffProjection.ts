@@ -179,8 +179,8 @@ export function computeCutoffProjection(
   const windowSpan =
     recentWindow[recentWindow.length - 1].weeks - recentWindow[0].weeks;
 
-  if (recentWindow.length >= 5 && windowSpan >= 0.5) {
-    // Ordinary Least Squares (OLS) simple linear regression over recentWindow
+  if (recentWindow.length >= 3 && windowSpan >= 0.5) {
+    // Ordinary Least Squares (OLS) simple linear regression over recentWindow (3+ simulados)
     paceMethod = 'linear_regression';
     const n = recentWindow.length;
     const meanX = recentWindow.reduce((acc, p) => acc + p.weeks, 0) / n;
@@ -210,22 +210,35 @@ export function computeCutoffProjection(
     weeklyPace = Number(slope.toFixed(2));
   }
 
-  // Diminishing returns flag when approaching high accuracy plateau (75%+)
+  // Scale-normalized thresholds so both bruta_100 (0-100) and tri_outra (0-1000) work consistently
+  const scaleFactor = target.scaleType === 'tri_outra' ? 10 : 1;
+  const highPlateauScore = 75 * scaleFactor;
+  const highPlateauTarget = 80 * scaleFactor;
+  const largeGapThreshold = 7 * scaleFactor;
+  const lowPaceLargeGap = 0.8 * scaleFactor;
+  const lowPaceSmallGap = 0.6 * scaleFactor;
+  const minPositivePace = 0.05 * scaleFactor;
+
+  // Diminishing returns flag when approaching high accuracy plateau (75%+ or 750+)
   const diminishingReturnsWarning =
-    target.scaleType === 'bruta_100' &&
-    (currentScore >= 75 || operationalTarget >= 80);
+    currentScore >= highPlateauScore || operationalTarget >= highPlateauTarget;
 
   // Estimate weeks as a planning band (never false precision)
   let rawWeeksEstimate: number | null = null;
   let weekBandLow: number | null = null;
   let weekBandHigh: number | null = null;
 
-  if (!targetReached && weeklyPace !== null && weeklyPace > 0.05 && distanceToOperational > 0) {
+  if (
+    !targetReached &&
+    weeklyPace !== null &&
+    weeklyPace > minPositivePace &&
+    distanceToOperational > 0
+  ) {
     rawWeeksEstimate = Number((distanceToOperational / weeklyPace).toFixed(1));
     const lowRaw = Math.max(1, Math.round(rawWeeksEstimate * 0.875));
     // Apply wider upper margin for diminishing returns near high plateaus or small samples
     let upperMultiplier = 1.5;
-    if (diminishingReturnsWarning && currentScore >= 75) {
+    if (diminishingReturnsWarning && currentScore >= highPlateauScore) {
       upperMultiplier = 1.65;
     } else if (count < 4) {
       upperMultiplier = 1.6;
@@ -262,21 +275,23 @@ export function computeCutoffProjection(
       'Sustente revisões espaçadas (FSRS) para evitar perda de retenção até a data da prova.',
       'Simule condições reais de tempo e fadiga para estabilizar o piso acima do corte histórico.',
     ];
-  } else if (distanceToOperational >= 7 && weeklyPace < 0.8) {
+  } else if (distanceToOperational >= largeGapThreshold && weeklyPace < lowPaceLargeGap) {
     regime = 'large_gap_low_pace';
     diagnosisTitle = 'Distância relevante com ritmo ainda baixo';
     diagnosisSummary =
-      'Quando Δ é grande e a inclinação semanal está abaixo de +0,8 pp/semana, repetir o mesmo formato de estudo costuma desperdiçar semanas.';
+      target.scaleType === 'tri_outra'
+        ? 'Quando Δ é grande (≥ 70 pts) e a inclinação semanal está abaixo de +8 pts/semana, repetir o mesmo formato de estudo costuma desperdiçar semanas.'
+        : 'Quando Δ é grande e a inclinação semanal está abaixo de +0,8 pp/semana, repetir o mesmo formato de estudo costuma desperdiçar semanas.';
     recommendedActions = [
       'Priorize diagnóstico das maiores lacunas no Radar de Lacunas e nos temas de maior peso (Pareto 80/20).',
       'Eleve a cadência semanal de questões resolvidas com correção ativa antes do próximo simulado.',
       'Reavalie se a base teórica dos 3 temas de pior acurácia precisa de revisão dirigida.',
     ];
-  } else if (distanceToOperational < 7 && weeklyPace < 0.6) {
+  } else if (distanceToOperational < largeGapThreshold && weeklyPace < lowPaceSmallGap) {
     regime = 'small_gap_stagnant';
     diagnosisTitle = 'Distância curta, mas o ritmo estagnou no platô';
     diagnosisSummary =
-      'Perto da nota de corte (retornos decrescentes), ganhar cada ponto percentual exige precisão cirúrgica — não apenas mais volume genérico.';
+      'Perto da nota de corte (retornos decrescentes), ganhar cada ponto exige precisão cirúrgica — não apenas mais volume genérico.';
     recommendedActions = [
       'Audite o Caderno de Erros separando desconhecimento real de distração e erro de leitura de enunciado.',
       'Faça revisão sistemática dos erros recorrentes e ataque subtemas específicos de menor incidência da sua banca.',
@@ -290,7 +305,7 @@ export function computeCutoffProjection(
     recommendedActions = [
       'Mantenha o ciclo atual de questões + revisão de erros e recalibre o ritmo a cada novo simulado.',
       diminishingReturnsWarning
-        ? 'Atenção aos retornos decrescentes acima de 75%: a partir daqui, o Caderno de Erros rende mais que estudo passivo.'
+        ? 'Atenção aos retornos decrescentes no platô alto: a partir daqui, o Caderno de Erros rende mais que estudo passivo.'
         : 'Continue priorizando os temas de maior incidência da banca alvo para acelerar o ganho de base.',
     ];
   }

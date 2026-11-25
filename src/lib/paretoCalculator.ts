@@ -2,7 +2,7 @@ import type { ExamBoard, MedicalQuestion } from '../types/medical';
 import { getAllBankQuestions } from './questionBankStore';
 import type { BoardIncidenceRule, IncidenceTier } from './examWeights';
 
-export const PARETO_MIN_QUESTIONS = 10;
+export const PARETO_MIN_QUESTIONS = 30;
 export const PARETO_HIGH_CUTOFF_PCT = 80;
 export const PARETO_MEDIUM_CUTOFF_PCT = 95;
 

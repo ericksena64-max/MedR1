@@ -33,6 +33,7 @@ interface WeakTopicsEvolutionChartProps {
   questions: MedicalQuestion[];
   answers: Record<string, UserAnswerRecord>;
   darkMode: boolean;
+  includeDemoBaseline?: boolean;
   onFilterQuestionsByTopic: (payload: {
     topicLabel: string;
     matchedTema?: string;
@@ -223,6 +224,7 @@ export function WeakTopicsEvolutionChart({
   questions,
   answers,
   darkMode,
+  includeDemoBaseline = false,
   onFilterQuestionsByTopic,
   onFilterFlashcardsByTopic,
 }: WeakTopicsEvolutionChartProps) {
@@ -343,18 +345,11 @@ export function WeakTopicsEvolutionChart({
 
       let runningLiveAnswered = 0;
       let runningLiveCorrect = 0;
-      let firstDayVal = startBaselinePct;
+      let firstDayVal = includeDemoBaseline ? startBaselinePct : row.studentPct;
+      let hasFirstRealVal = false;
       let lastDayVal = row.studentPct;
 
       for (let d = 0; d < DAYS; d += 1) {
-        const t = d / (DAYS - 1);
-        const smoothCurve = startBaselinePct + (anchorEndPct - startBaselinePct) * (0.25 * t + 0.75 * t * t);
-        const waveA = Math.sin((d + (seed % 11)) * 0.48) * 2.4;
-        const waveB = Math.cos((d * 0.85) + (seed % 7)) * 1.4;
-        // Fade wave smoothly to 0 on the final day so the endpoint matches actual accuracy cleanly
-        const waveDamp = 1 - Math.pow(t, 3);
-        const baselineDayPct = smoothCurve + (waveA + waveB) * waveDamp;
-
         const dKey = dayKeys[d];
         const liveStat = topicLiveMap?.get(dKey);
         if (liveStat) {
@@ -362,6 +357,33 @@ export function WeakTopicsEvolutionChart({
           runningLiveCorrect += liveStat.correct;
           points[d][`${key}__liveCount`] = liveStat.answered;
         }
+
+        if (!includeDemoBaseline) {
+          // Real mode: plot strictly measured cumulative accuracy — never synthesize sine-wave history
+          const preWindowAnswered = Math.max(0, row.answered - totalLiveAnswered);
+          const preWindowCorrect = Math.max(0, row.correct - totalLiveCorrect);
+          const cumAnswered = preWindowAnswered + runningLiveAnswered;
+          const cumCorrect = preWindowCorrect + runningLiveCorrect;
+
+          if (cumAnswered > 0 && (runningLiveAnswered > 0 || preWindowAnswered > 0)) {
+            const pct = Number(((cumCorrect / cumAnswered) * 100).toFixed(1));
+            points[d][key] = pct;
+            if (!hasFirstRealVal) {
+              firstDayVal = pct;
+              hasFirstRealVal = true;
+            }
+            lastDayVal = pct;
+          }
+          continue;
+        }
+
+        const t = d / (DAYS - 1);
+        const smoothCurve = startBaselinePct + (anchorEndPct - startBaselinePct) * (0.25 * t + 0.75 * t * t);
+        const waveA = Math.sin((d + (seed % 11)) * 0.48) * 2.4;
+        const waveB = Math.cos((d * 0.85) + (seed % 7)) * 1.4;
+        // Fade wave smoothly to 0 on the final day so the endpoint matches actual accuracy cleanly
+        const waveDamp = 1 - Math.pow(t, 3);
+        const baselineDayPct = smoothCurve + (waveA + waveB) * waveDamp;
 
         let finalDayPct: number;
         if (runningLiveAnswered > 0) {
@@ -407,7 +429,7 @@ export function WeakTopicsEvolutionChart({
     });
 
     return { seriesList: computedSeries, dailyPoints: points };
-  }, [topicRows, questions, answers]);
+  }, [topicRows, questions, answers, includeDemoBaseline]);
 
   const visiblePoints = useMemo(() => {
     if (windowDays === 30) return dailyPoints;
