@@ -52,6 +52,11 @@ import {
   buildHomeIntelligenceSummary,
   readPersistedEstimatorConfig,
 } from '../../lib/homeIntelligence';
+import { DiagnosticGateCard } from './DiagnosticGateCard';
+import type {
+  DiagnosticBoardOption,
+  DiagnosticExamState,
+} from '../../lib/diagnosticExam';
 import {
   ESTIMATOR_STORAGE_KEY,
   ESTIMATOR_UPDATED_EVENT,
@@ -123,6 +128,11 @@ interface PerformanceDashboardProps {
   bankVersion?: number;
   includeDemoBaseline?: boolean;
   onToggleDemoBaseline?: (next: boolean) => void;
+  diagnosticUnlocked?: boolean;
+  diagnosticState?: DiagnosticExamState;
+  diagnosticAnsweredCount?: number;
+  diagnosticLoading?: boolean;
+  onStartDiagnostic?: (boards: DiagnosticBoardOption[]) => void;
 }
 
 type Granularity = 'geral' | 'areas' | 'temas';
@@ -157,6 +167,11 @@ export function PerformanceDashboard({
   bankVersion = 0,
   includeDemoBaseline = false,
   onToggleDemoBaseline,
+  diagnosticUnlocked = true,
+  diagnosticState,
+  diagnosticAnsweredCount = 0,
+  diagnosticLoading = false,
+  onStartDiagnostic,
 }: PerformanceDashboardProps) {
   const [granularity, setGranularity] = useState<Granularity>('areas');
   const [selectedAreaFilter, setSelectedAreaFilter] = useState<string>('all');
@@ -324,6 +339,21 @@ export function PerformanceDashboard({
       : analytics.monthlyEvolution;
 
   const p75Gap = Number((analytics.overallStudentPct - analytics.overallP75Pct).toFixed(1));
+
+  if (!diagnosticUnlocked && diagnosticState && onStartDiagnostic) {
+    return (
+      <div className="space-y-4">
+        <DiagnosticGateCard
+          diagnosticState={diagnosticState}
+          questions={questions}
+          answeredDraftCount={diagnosticAnsweredCount}
+          loading={diagnosticLoading}
+          onStartDiagnostic={onStartDiagnostic}
+          context="desempenho"
+        />
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-4">

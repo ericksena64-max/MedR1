@@ -81,9 +81,8 @@ export function computeCutoffProjection(
     Math.min(scaleCap, historicalCutoff + safetyMargin).toFixed(1)
   );
 
-  // Filter simulados matching the selected scale or fallback to all if none match
-  const matchingScale = simulados.filter((s) => s.scaleType === target.scaleType);
-  const pool = matchingScale.length > 0 ? matchingScale : simulados;
+  // Filter simulados matching the selected scale strictly (never mix bruta_100 and tri_outra scales)
+  const pool = simulados.filter((s) => s.scaleType === target.scaleType);
 
   const ordered = [...pool].sort(
     (a, b) => parseLocalDateMs(a.date) - parseLocalDateMs(b.date)

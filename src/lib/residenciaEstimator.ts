@@ -214,27 +214,66 @@ export function identificarGargaloPrioritario(
     Math.min(100, gargalo.percentual + ganhoEfetivo).toFixed(2)
   );
 
+  if (ganhoEfetivo <= 0) {
+    return {
+      area: gargalo.area,
+      percentualAtual: gargalo.percentual,
+      percentualSimulado: gargalo.percentual,
+      ganhoAplicadoPct: 0,
+      peso: gargalo.peso,
+      ganhoNotaGeral: 0,
+      novaNotaEstimada: resultadoBase.notaEstimada,
+      novaProbabilidadeAprovacao: resultadoBase.probabilidadeAprovacao,
+      ganhoProbabilidadePp: 0,
+    };
+  }
+
   // Recalcula analiticamente nota, variância de domínio e variância da prova com o novo p da área gargalo
+  const Z_95 = 1.959963984540054;
   const sigmaCorte = Math.max(0, config.notaCorteDesvioPadrao ?? 0);
   const totalQProva = Math.max(1, config.totalQuestoesProva);
   const minQ = config.minimoQuestoesPorArea ?? 10;
+  const usarLaplace = Boolean(config.usarSuavizacaoLaplace);
 
   let novaNota = 0;
   let novaVarDominio = 0;
   let novaVarProva = 0;
 
   for (const area of resultadoBase.detalhePorArea) {
-    const pPct = area.area === gargalo.area ? percentualSimulado : area.percentual;
+    const isBottleneck = area.area === gargalo.area;
+    const pPct = isBottleneck ? percentualSimulado : area.percentual;
     const p = Math.max(0, Math.min(1, pPct / 100));
-    const nBase = Math.max(area.total, minQ);
-    const varBin = area.area === gargalo.area ? (p * (1 - p)) / nBase : (area.se / 100) ** 2;
+
+    let varBin = (area.se / 100) ** 2;
+    let pVarProva = p;
+
+    if (isBottleneck) {
+      const nBase = area.total > 0 ? area.total : minQ;
+      if (usarLaplace) {
+        const nEff = nBase + 2;
+        varBin = (p * (1 - p)) / nEff;
+      } else if (p === 0 || p === 1) {
+        const z2 = Z_95 * Z_95;
+        const nAdj = nBase + z2;
+        const pAdj = (p * nBase + z2 / 2) / nAdj;
+        varBin = (pAdj * (1 - pAdj)) / nAdj;
+        pVarProva = (p * nBase + 1) / (nBase + 2);
+      } else {
+        varBin = (p * (1 - p)) / nBase;
+      }
+    } else if (area.total > 0 && (p === 0 || p === 1)) {
+      pVarProva = (area.acertos + 1) / (area.total + 2);
+    } else if (area.total === 0 && !usarLaplace) {
+      pVarProva = 0;
+    }
+
     const seArea = 100 * Math.sqrt(varBin);
 
     novaNota += area.peso * pPct;
     novaVarDominio += area.peso * area.peso * seArea * seArea;
 
     const qArea = area.peso * totalQProva;
-    const varProvaArea = qArea > 0 ? (10000 * p * (1 - p)) / qArea : 0;
+    const varProvaArea = qArea > 0 ? (10000 * pVarProva * (1 - pVarProva)) / qArea : 0;
     novaVarProva += area.peso * area.peso * varProvaArea;
   }
 

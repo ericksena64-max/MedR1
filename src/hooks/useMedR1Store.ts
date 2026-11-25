@@ -56,6 +56,16 @@ import {
   buildPeriodRanking,
   countUserAnswersByPeriod,
 } from '../lib/rankingPeriods';
+import {
+  DEFAULT_DIAGNOSTIC_STATE,
+  STORAGE_KEY_DIAGNOSTIC_STATE,
+  evaluateDiagnosticCompletion,
+  hasCompletedDiagnostic,
+  normalizeDiagnosticBoards,
+  selectDiagnosticQuestions,
+  type DiagnosticBoardOption,
+  type DiagnosticExamState,
+} from '../lib/diagnosticExam';
 import { generateClientUuid } from '../lib/syncOutbox';
 import { useSyncEngine } from './useSyncEngine';
 import type { SyncOutboxEvent } from '../types/sync';
@@ -64,6 +74,7 @@ import {
   clearAllImportedQuestionsFromDB,
   deleteImportedBatchFromDB,
   deleteImportedQuestionFromDB,
+  getAllBankQuestions,
   getLoadedOfficialExamIds,
   getMatchingOfficialExamIds,
   getOfficialCatalogCache,
@@ -548,6 +559,17 @@ export function useMedR1Store(options?: {
   const [includeDemoBaseline, setIncludeDemoBaseline] = useState<boolean>(() =>
     safeReadStorage<boolean>(STORAGE_KEY_DEMO_BASELINE, false)
   );
+
+  const [diagnosticState, setDiagnosticState] = useState<DiagnosticExamState>(() =>
+    safeReadStorage<DiagnosticExamState>(
+      STORAGE_KEY_DIAGNOSTIC_STATE,
+      DEFAULT_DIAGNOSTIC_STATE
+    )
+  );
+
+  useEffect(() => {
+    safeWriteStorage(STORAGE_KEY_DIAGNOSTIC_STATE, diagnosticState);
+  }, [diagnosticState, safeWriteStorage]);
 
   useEffect(() => {
     safeWriteStorage(STORAGE_KEY_DEMO_BASELINE, includeDemoBaseline);
@@ -1984,8 +2006,93 @@ export function useMedR1Store(options?: {
     setPendingAchievementQueue((prev) => prev.slice(1));
   }, []);
 
+  const diagnosticUnlocked = useMemo(
+    () => hasCompletedDiagnostic(diagnosticState, answers, allQuestions),
+    [diagnosticState, answers, allQuestions]
+  );
+
+  const startDiagnosticExam = useCallback(
+    async (
+      boardOrBoards: DiagnosticBoardOption | DiagnosticBoardOption[]
+    ): Promise<MedicalQuestion[]> => {
+      await ensureAllOfficialExamsLoaded();
+      const pool = getAllBankQuestions();
+      const boards = normalizeDiagnosticBoards(boardOrBoards);
+      const primaryBoard = boards[0];
+      const selection = selectDiagnosticQuestions(pool, boards);
+
+      setDiagnosticState({
+        status: 'in_progress',
+        selectedBoard: primaryBoard,
+        selectedBoards: boards,
+        questionIds: selection.questionIds,
+        startedAt: new Date().toISOString(),
+      });
+
+      const mappedBoard: ExamBoard =
+        primaryBoard === 'UEPA' || primaryBoard === 'ENARE'
+          ? primaryBoard
+          : 'GERAL';
+      setTargetBoard(mappedBoard);
+      if (primaryBoard !== 'GERAL') {
+        setProfile((prev) => ({ ...prev, targetInstitution: primaryBoard }));
+      }
+
+      return selection.questions;
+    },
+    [ensureAllOfficialExamsLoaded]
+  );
+
+  const completeDiagnosticExam = useCallback(
+    (
+      diagnosticQuestions: MedicalQuestion[],
+      drafts: Record<string, AlternativeLetter>,
+      timesSec: Record<string, number>
+    ) => {
+      const batch = diagnosticQuestions
+        .filter((q) => Boolean(drafts[q.id]))
+        .map((q) => ({
+          question: q,
+          selectedLetter: drafts[q.id],
+          timeSpentSec: Math.max(3, Math.min(900, timesSec[q.id] ?? 60)),
+        }));
+
+      if (batch.length > 0) {
+        recordBatchAnswers(batch);
+      }
+
+      const evaluation = evaluateDiagnosticCompletion(diagnosticQuestions, drafts);
+      const now = new Date();
+      const todayIso = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(
+        2,
+        '0'
+      )}-${String(now.getDate()).padStart(2, '0')}`;
+
+      addSimuladoRecord({
+        title: `Simulado Diagnóstico Inicial — ${diagnosticState.selectedBoard} (${evaluation.validTotal}q)`,
+        date: todayIso,
+        validCorrect: evaluation.validCorrect,
+        validTotal: Math.max(1, evaluation.validTotal),
+        scaleType: 'bruta_100',
+        estimatedScore: evaluation.scorePct,
+        source: 'app_simulado',
+      });
+
+      setIncludeDemoBaseline(false);
+      setDiagnosticState((prev) => ({
+        ...prev,
+        status: 'completed',
+        questionIds: diagnosticQuestions.map((q) => q.id),
+        completedAt: now.toISOString(),
+        scorePct: evaluation.scorePct,
+      }));
+    },
+    [addSimuladoRecord, diagnosticState.selectedBoard, recordBatchAnswers]
+  );
+
   const resetProgress = useCallback(() => {
     setAnswers({});
+    setDiagnosticState(DEFAULT_DIAGNOSTIC_STATE);
   }, []);
 
   return {
@@ -2066,5 +2173,9 @@ export function useMedR1Store(options?: {
     pendingSyncCount: syncEngine.pendingCount,
     lastSyncedAt: syncEngine.lastSyncedAt,
     flushSyncNow: syncEngine.flushNow,
+    diagnosticState,
+    diagnosticUnlocked,
+    startDiagnosticExam,
+    completeDiagnosticExam,
   };
 }

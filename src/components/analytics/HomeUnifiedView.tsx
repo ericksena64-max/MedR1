@@ -34,6 +34,11 @@ import { TARGET_EXAM_CUTOFF_PRESETS } from '../../lib/examWeights';
 import { getLocalDateKey } from '../../hooks/useMedR1Store';
 import { GRANDES_AREAS } from '../../data/taxonomy';
 import { HomeGamificationStrip } from '../gamification/HomeGamificationStrip';
+import { DiagnosticGateCard } from './DiagnosticGateCard';
+import type {
+  DiagnosticBoardOption,
+  DiagnosticExamState,
+} from '../../lib/diagnosticExam';
 import type { GamificationSummary } from '../../hooks/useMedR1Store';
 import type { GamificationMission } from '../../lib/gamificationChallenges';
 import { cn } from '../../lib/utils';
@@ -71,6 +76,11 @@ interface HomeUnifiedViewProps {
   gamification?: GamificationSummary;
   onExecuteMission?: (mission: GamificationMission) => void;
   onOpenGamificationHub?: () => void;
+  diagnosticUnlocked?: boolean;
+  diagnosticState?: DiagnosticExamState;
+  diagnosticAnsweredCount?: number;
+  diagnosticLoading?: boolean;
+  onStartDiagnostic?: (boards: DiagnosticBoardOption[]) => void;
 }
 
 export function HomeUnifiedView({
@@ -99,6 +109,11 @@ export function HomeUnifiedView({
   gamification,
   onExecuteMission,
   onOpenGamificationHub,
+  diagnosticUnlocked = true,
+  diagnosticState,
+  diagnosticAnsweredCount = 0,
+  diagnosticLoading = false,
+  onStartDiagnostic,
 }: HomeUnifiedViewProps) {
   const [primaryTargetExam, setPrimaryTargetExam] = useState<TargetExamPreset>(() => {
     try {
@@ -279,7 +294,17 @@ export function HomeUnifiedView({
         onGoToPerformance={onGoToPerformance}
       />
 
-      {/* BLOCO INFERIOR (2 colunas): Resumo Executivo à esquerda + 5 Grandes Áreas à direita */}
+      {/* BLOCO INFERIOR: Gate Diagnóstico (50q) ou Resumo Executivo + 5 Grandes Áreas */}
+      {!diagnosticUnlocked && diagnosticState && onStartDiagnostic ? (
+        <DiagnosticGateCard
+          diagnosticState={diagnosticState}
+          questions={questions}
+          answeredDraftCount={diagnosticAnsweredCount}
+          loading={diagnosticLoading}
+          onStartDiagnostic={onStartDiagnostic}
+          context="home"
+        />
+      ) : (
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-4">
         {/* Esquerda: Resumo Executivo de Aprovação (3 KPIs + CTA Gargalo Prioritário) */}
         <div className="lg:col-span-5 rounded-xl border border-slate-200/80 bg-white p-5 dark:border-white/[0.08] dark:bg-[#131926] flex flex-col justify-between gap-4">
@@ -463,6 +488,7 @@ export function HomeUnifiedView({
           </div>
         </div>
       </section>
+      )}
 
       {/* BLOCO EXPLORADOR: Navegue pelas Cadeiras Médicas */}
       <SpecialtyExplorerCard

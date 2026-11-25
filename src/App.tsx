@@ -9,9 +9,14 @@ import type {
   ActiveTab,
   AlternativeLetter,
   GrandeAreaId,
+  MedicalQuestion,
   QuestionFilters,
   StudyMode,
 } from './types/medical';
+import {
+  canFinishDiagnostic,
+  type DiagnosticBoardOption,
+} from './lib/diagnosticExam';
 import {
   DEFAULT_FILTERS,
   createSingleSubmissionGuard,
@@ -167,6 +172,13 @@ export default function App() {
     null
   );
   const [customSimuladoTopics, setCustomSimuladoTopics] = useState<string[]>([]);
+  const [diagnosticQuestions, setDiagnosticQuestions] = useState<
+    MedicalQuestion[] | null
+  >(null);
+  const [diagnosticIncompleteError, setDiagnosticIncompleteError] = useState<
+    string | null
+  >(null);
+  const [diagnosticLoading, setDiagnosticLoading] = useState(false);
 
   const simuladoSubmitGuardRef = useRef(createSingleSubmissionGuard());
   const studyFinishGuardRef = useRef(createSingleSubmissionGuard());
@@ -178,8 +190,11 @@ export default function App() {
   const pendingQuestionIdRef = useRef<string | null>(null);
 
   const filteredQuestions = useMemo(
-    () => store.filterQuestions(filters),
-    [store.filterQuestions, filters]
+    () =>
+      diagnosticQuestions && mode === 'simulado'
+        ? diagnosticQuestions
+        : store.filterQuestions(filters),
+    [diagnosticQuestions, mode, store.filterQuestions, filters]
   );
 
   // On-demand lazy loading of official exam chunks based on active tab & filters
@@ -252,8 +267,6 @@ export default function App() {
 
   const finishSimulado = useCallback(() => {
     if (simuladoFinished || !simuladoSubmitGuardRef.current.tryAcquire()) return;
-    setSimuladoFinished(true);
-    setSimuladoPaused(true);
 
     // Flush elapsed time for the currently visible question
     const activeId = lastTrackedQuestionIdRef.current;
@@ -262,6 +275,45 @@ export default function App() {
       simuladoQuestionTimesRef.current[activeId] =
         (simuladoQuestionTimesRef.current[activeId] ?? 0) + elapsedSec;
     }
+
+    // Hard gate for mandatory 50-question diagnostic simulado
+    if (diagnosticQuestions) {
+      const check = canFinishDiagnostic(
+        diagnosticQuestions.map((q) => q.id),
+        simuladoDrafts
+      );
+      if (!check.canFinish) {
+        simuladoSubmitGuardRef.current.reset();
+        setDiagnosticIncompleteError(
+          `Responda todas as 50 questões do diagnóstico para liberar os gráficos. Faltam ${check.remainingCount} questão(ões).`
+        );
+        if (check.firstUnansweredIndex >= 0) {
+          setCurrentIndex(check.firstUnansweredIndex);
+        }
+        return;
+      }
+
+      setSimuladoFinished(true);
+      setSimuladoPaused(true);
+      setDiagnosticIncompleteError(null);
+      store.completeDiagnosticExam(
+        diagnosticQuestions,
+        simuladoDrafts,
+        simuladoQuestionTimesRef.current
+      );
+      setDiagnosticQuestions(null);
+      setBatchFinishSummary(
+        buildBatchFinishSummary(
+          diagnosticQuestions.length,
+          diagnosticQuestions.length,
+          'simulado'
+        )
+      );
+      return;
+    }
+
+    setSimuladoFinished(true);
+    setSimuladoPaused(true);
 
     const batch = filteredQuestions
       .filter((q) => Boolean(simuladoDrafts[q.id]))
@@ -320,7 +372,48 @@ export default function App() {
     setBatchFinishSummary(
       buildBatchFinishSummary(batch.length, filteredQuestions.length, 'simulado')
     );
-  }, [filteredQuestions, simuladoDrafts, simuladoFinished, store, customSimuladoTitle]);
+  }, [
+    diagnosticQuestions,
+    filteredQuestions,
+    simuladoDrafts,
+    simuladoFinished,
+    store,
+    customSimuladoTitle,
+  ]);
+
+  const handleStartDiagnostic = useCallback(
+    async (boards: DiagnosticBoardOption[]) => {
+      if (diagnosticLoading) return;
+      setDiagnosticLoading(true);
+      try {
+        const qs = await store.startDiagnosticExam(boards);
+        if (qs.length === 0) return;
+        const label =
+          boards.length === 1
+            ? boards[0]
+            : `${boards[0]} +${boards.length - 1}`;
+        simuladoSubmitGuardRef.current.reset();
+        simuladoQuestionTimesRef.current = {};
+        questionStartedAtRef.current = Date.now();
+        setDiagnosticQuestions(qs);
+        setDiagnosticIncompleteError(null);
+        setMode('simulado');
+        setSimuladoActive(true);
+        setSimuladoFinished(false);
+        setSimuladoPaused(false);
+        setSimuladoDrafts({});
+        setFlaggedIds([]);
+        setCustomSimuladoTitle(`Diagnóstico Inicial · ${label}`);
+        setCustomSimuladoTopics([]);
+        setCurrentIndex(0);
+        setSimuladoSecondsLeft(qs.length * 180);
+        setActiveTab('questoes');
+      } finally {
+        setDiagnosticLoading(false);
+      }
+    },
+    [diagnosticLoading, store]
+  );
 
   const handleFinishStudyBatch = useCallback(() => {
     if (
@@ -440,6 +533,8 @@ export default function App() {
       setFlaggedIds([]);
       setCustomSimuladoTitle(null);
       setCustomSimuladoTopics([]);
+      setDiagnosticQuestions(null);
+      setDiagnosticIncompleteError(null);
       setFilters((prev) =>
         prev.temas && prev.temas.length > 0 ? { ...prev, temas: [] } : prev
       );
@@ -457,6 +552,8 @@ export default function App() {
     setFlaggedIds([]);
     setCustomSimuladoTitle(null);
     setCustomSimuladoTopics([]);
+    setDiagnosticQuestions(null);
+    setDiagnosticIncompleteError(null);
     setFilters((prev) =>
       prev.temas && prev.temas.length > 0 ? { ...prev, temas: [] } : prev
     );
@@ -1119,6 +1216,26 @@ export default function App() {
                         );
                       })()}
 
+                      {diagnosticIncompleteError && (
+                        <div
+                          role="alert"
+                          className="mb-3 flex items-center justify-between gap-3 rounded-xl bg-[#FF3B30]/10 px-4 py-3 text-xs font-medium text-[#D70015] dark:bg-red-500/15 dark:text-red-300"
+                        >
+                          <div className="flex items-center gap-2">
+                            <AlertTriangle size={16} strokeWidth={1.5} className="shrink-0" />
+                            <span>{diagnosticIncompleteError}</span>
+                          </div>
+                          <button
+                            type="button"
+                            onClick={() => setDiagnosticIncompleteError(null)}
+                            className="rounded p-1 hover:bg-black/5 dark:hover:bg-white/10"
+                            aria-label="Fechar aviso"
+                          >
+                            <X size={14} strokeWidth={1.5} />
+                          </button>
+                        </div>
+                      )}
+
                       <Suspense fallback={<ViewLoadingFallback label="Carregando questão..." />}>
                         <QuestionCard
                         seamless
@@ -1145,12 +1262,13 @@ export default function App() {
                           );
                           store.recordAnswer(activeQuestion, letter, 'estudo', elapsedSec);
                         }}
-                        onSelectSimuladoDraft={(letter) =>
+                        onSelectSimuladoDraft={(letter) => {
+                          setDiagnosticIncompleteError(null);
                           setSimuladoDrafts((prev) => ({
                             ...prev,
                             [activeQuestion.id]: letter,
-                          }))
-                        }
+                          }));
+                        }}
                         onPrev={() =>
                           setCurrentIndex((i) => Math.max(0, i - 1))
                         }
@@ -1278,6 +1396,13 @@ export default function App() {
                   gamification={store.gamification}
                   onExecuteMission={handleExecuteMission}
                   onOpenGamificationHub={() => setGamificationHubOpen(true)}
+                  diagnosticUnlocked={store.diagnosticUnlocked}
+                  diagnosticState={store.diagnosticState}
+                  diagnosticAnsweredCount={
+                    diagnosticQuestions ? Object.keys(simuladoDrafts).length : 0
+                  }
+                  diagnosticLoading={diagnosticLoading}
+                  onStartDiagnostic={handleStartDiagnostic}
                 />
               )}
 
@@ -1295,6 +1420,13 @@ export default function App() {
                     bankVersion={store.bankVersion}
                     includeDemoBaseline={store.includeDemoBaseline}
                     onToggleDemoBaseline={store.setIncludeDemoBaseline}
+                    diagnosticUnlocked={store.diagnosticUnlocked}
+                    diagnosticState={store.diagnosticState}
+                    diagnosticAnsweredCount={
+                      diagnosticQuestions ? Object.keys(simuladoDrafts).length : 0
+                    }
+                    diagnosticLoading={diagnosticLoading}
+                    onStartDiagnostic={handleStartDiagnostic}
                     onFilterQuestionsByTopic={handleFilterQuestionsFromPareto}
                     onFilterFlashcardsByTopic={handleFilterFlashcardsFromPareto}
                     onLaunchGapRadarSimulado={handleLaunchGapRadarSimulado}

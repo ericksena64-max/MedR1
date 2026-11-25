@@ -299,6 +299,7 @@ export function computePsychometricApproval(
   // Stage 1: Estimate student's score and SE
   let pHat: number | null = null;
   let stage1PointEstimate = 0;
+  let wilsonCenterPct = 0;
   let stage1Se = 0;
   let waldCi: [number, number] | null = null;
   let wilsonCi: [number, number] | null = null;
@@ -360,6 +361,7 @@ export function computePsychometricApproval(
     const rad = Z_95 * Math.sqrt((pHat * (1 - pHat)) / n + z2 / (4 * n * n));
     const wilsonLow = clamp100((100 * (center - rad)) / denom);
     const wilsonHigh = clamp100((100 * (center + rad)) / denom);
+    wilsonCenterPct = clamp100((100 * center) / denom);
     wilsonCi = [wilsonLow, wilsonHigh];
 
     // Keep Stage 1 SE consistent with Wilson when Wilson is active (avoids SE=0 at k=0 or k=n)
@@ -376,7 +378,10 @@ export function computePsychometricApproval(
     ? computeOlsCalibration(input.calibrationPairs, stage1PointEstimate)
     : null;
 
-  let finalMeanY = stage1PointEstimate;
+  let finalMeanY =
+    input.stage1Model === 'binomial_wilson' && pHat !== null
+      ? wilsonCenterPct
+      : stage1PointEstimate;
   let finalSigmaY = stage1Se;
   let finalInterval95: [number, number] = activeStage1Ci;
   let finalIntervalLabel: PsychometricResult['finalIntervalLabel'] =
