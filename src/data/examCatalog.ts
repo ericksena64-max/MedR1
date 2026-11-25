@@ -110,6 +110,28 @@ export const OFFICIAL_EXAM_CATALOG: ExamCatalogEntry[] = [
     loader: () =>
       import('./uepa2023Questions').then((m) => m.UEPA_2023_QUESTIONS),
   },
+  {
+    id: 'uepa-2022',
+    label: 'UEPA 2022',
+    idPrefix: 'q-uepa-2022-',
+    instituicao: 'UEPA',
+    banca: 'UEPA',
+    estado: 'PA',
+    regiao: 'Norte',
+    ano: 2022,
+    tipoProva: 'Acesso Direto',
+    questionCount: 100,
+    activeCount: 96,
+    areaCounts: {
+      clinica_medica: 20,
+      cirurgia_geral: 20,
+      ginecologia_obstetricia: 20,
+      pediatria: 20,
+      medicina_preventiva: 20,
+    },
+    loader: () =>
+      import('./uepa2022Questions').then((m) => m.UEPA_2022_QUESTIONS),
+  },
   // [MEDR1_AUTO_CATALOG_START]
   // [MEDR1_AUTO_CATALOG_END]
 ];
