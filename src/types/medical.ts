@@ -144,6 +144,8 @@ export interface UserProfile {
   avatarInitials: string;
 }
 
+export type RankingPeriod = 'daily' | 'weekly' | 'monthly';
+
 export interface LiveRankingUser {
   id: string;
   realName: string;
@@ -153,6 +155,10 @@ export interface LiveRankingUser {
   avatarInitials: string;
   questionsToday: number;
   correctToday: number;
+  questionsWeek?: number;
+  correctWeek?: number;
+  questionsMonth?: number;
+  correctMonth?: number;
   streak: number;
   currentArea: string;
   isOnline: boolean;

@@ -51,6 +51,14 @@ import {
   type GamificationAchievement,
   type GamificationMission,
 } from '../lib/gamificationChallenges';
+import type { StorageAdapter } from '../lib/storageAdapter';
+import {
+  buildPeriodRanking,
+  countUserAnswersByPeriod,
+} from '../lib/rankingPeriods';
+import { generateClientUuid } from '../lib/syncOutbox';
+import { useSyncEngine } from './useSyncEngine';
+import type { SyncOutboxEvent } from '../types/sync';
 import {
   areAllOfficialExamsLoaded,
   clearAllImportedQuestionsFromDB,
@@ -331,7 +339,18 @@ function getBrowserPrefersDark(): boolean {
   return window.matchMedia('(prefers-color-scheme: dark)').matches;
 }
 
-export function useMedR1Store(options?: { liveRankingEnabled?: boolean }) {
+const FSRS_STATE_TO_NUM: Record<string, number> = {
+  New: 0,
+  Learning: 1,
+  Review: 2,
+  Relearning: 3,
+};
+
+export function useMedR1Store(options?: {
+  liveRankingEnabled?: boolean;
+  storageAdapter?: StorageAdapter;
+}) {
+  const syncEngine = useSyncEngine({ adapter: options?.storageAdapter });
   const liveRankingEnabled = options?.liveRankingEnabled ?? false;
   const [storageQuotaExceeded, setStorageQuotaExceeded] = useState(false);
 
@@ -585,8 +604,28 @@ export function useMedR1Store(options?: { liveRankingEnabled?: boolean }) {
         estimatedScore,
       };
       setSimuladoHistory((prev) => [...prev, newRecord]);
+      const nowIso = new Date().toISOString();
+      void syncEngine.enqueueEvents([
+        {
+          eventId: generateClientUuid(),
+          type: 'MOCK_EXAM_UPSERT',
+          payload: {
+            id: generateClientUuid(),
+            title: newRecord.title,
+            institution: null,
+            totalQuestions: newRecord.validTotal,
+            correctCount: newRecord.validCorrect,
+            scorePercentage: newRecord.accuracyPct,
+            durationMs: 0,
+            status: 'completed',
+            startedAt: newRecord.date || nowIso,
+            completedAt: nowIso,
+            clientUpdatedAt: nowIso,
+          },
+        },
+      ]);
     },
-    []
+    [syncEngine]
   );
 
   const deleteSimuladoRecord = useCallback((id: string) => {
@@ -954,11 +993,26 @@ export function useMedR1Store(options?: { liveRankingEnabled?: boolean }) {
         ...prev,
         [question.id]: record,
       }));
+      void syncEngine.enqueueEvents([
+        {
+          eventId: generateClientUuid(),
+          type: 'ATTEMPT_CREATE',
+          payload: {
+            id: generateClientUuid(),
+            questionId: question.id,
+            selectedOption: selectedLetter,
+            isCorrect,
+            timeSpentMs: Math.max(0, Math.round(timeSpentSec * 1000)),
+            answeredAt: record.answeredAt,
+            clientUpdatedAt: record.answeredAt,
+          },
+        },
+      ]);
       if (!isCorrect && autoCreateFlashcardsOnError) {
         createFlashcardFromQuestion(question, 'caderno_erros');
       }
     },
-    [autoCreateFlashcardsOnError, createFlashcardFromQuestion]
+    [autoCreateFlashcardsOnError, createFlashcardFromQuestion, syncEngine]
   );
 
   const recordBatchAnswers = useCallback(
@@ -969,20 +1023,39 @@ export function useMedR1Store(options?: { liveRankingEnabled?: boolean }) {
         timeSpentSec: number;
       }>
     ) => {
+      const answeredAt = new Date().toISOString();
+      const batchEvents: SyncOutboxEvent[] = [];
       setAnswers((prev) => {
         const next = { ...prev };
         for (const item of items) {
+          const isCorrect = item.selectedLetter === item.question.gabaritoOficial;
           next[item.question.id] = {
             questionId: item.question.id,
             selectedLetter: item.selectedLetter,
-            isCorrect: item.selectedLetter === item.question.gabaritoOficial,
-            answeredAt: new Date().toISOString(),
+            isCorrect,
+            answeredAt,
             mode: 'simulado',
             timeSpentSec: item.timeSpentSec,
           };
+          batchEvents.push({
+            eventId: generateClientUuid(),
+            type: 'ATTEMPT_CREATE',
+            payload: {
+              id: generateClientUuid(),
+              questionId: item.question.id,
+              selectedOption: item.selectedLetter,
+              isCorrect,
+              timeSpentMs: Math.max(0, Math.round(item.timeSpentSec * 1000)),
+              answeredAt,
+              clientUpdatedAt: answeredAt,
+            },
+          });
         }
         return next;
       });
+      if (batchEvents.length > 0) {
+        void syncEngine.enqueueEvents(batchEvents);
+      }
       if (autoCreateFlashcardsOnError) {
         const missedQuestions = items
           .filter((item) => item.selectedLetter !== item.question.gabaritoOficial)
@@ -1320,6 +1393,46 @@ export function useMedR1Store(options?: { liveRankingEnabled?: boolean }) {
 
       setFsrsReviewLogs((prev) => [...prev.slice(-4999), logEntry]);
 
+      const stateNum = FSRS_STATE_TO_NUM[outcome.state] ?? 0;
+      if (targetCard.questionId) {
+        void syncEngine.enqueueEvents([
+          {
+            eventId: generateClientUuid(),
+            type: 'FSRS_STATE_UPSERT',
+            payload: {
+              questionId: targetCard.questionId,
+              stability: outcome.stability,
+              difficulty: outcome.difficulty,
+              elapsedDays: outcome.elapsed_days,
+              scheduledDays: outcome.scheduled_days,
+              reps: outcome.reps,
+              lapses: outcome.lapses,
+              state: stateNum,
+              due: outcome.dueAt,
+              lastReview: nowIso,
+              clientUpdatedAt: nowIso,
+            },
+          },
+          {
+            eventId: generateClientUuid(),
+            type: 'FSRS_LOG_CREATE',
+            payload: {
+              id: generateClientUuid(),
+              questionId: targetCard.questionId,
+              rating,
+              state: stateNum,
+              due: outcome.dueAt,
+              stability: outcome.stability,
+              difficulty: outcome.difficulty,
+              elapsedDays: outcome.elapsed_days,
+              lastElapsedDays: targetCard.elapsed_days ?? 0,
+              scheduledDays: outcome.scheduled_days,
+              reviewedAt: nowIso,
+            },
+          },
+        ]);
+      }
+
       setReviewsTodayStats((prev) => {
         const base =
           prev.date === today ? prev : { date: today, total: 0, passed: 0 };
@@ -1397,17 +1510,56 @@ export function useMedR1Store(options?: { liveRankingEnabled?: boolean }) {
     setFlashcards((prev) => prev.filter((fc) => fc.id !== cardId));
   }, []);
 
-  const toggleBookmark = useCallback((questionId: string) => {
-    setBookmarks((prev) =>
-      prev.includes(questionId)
-        ? prev.filter((id) => id !== questionId)
-        : [...prev, questionId]
-    );
-  }, []);
+  const toggleBookmark = useCallback(
+    (questionId: string) => {
+      let nextDeleted = false;
+      setBookmarks((prev) => {
+        const exists = prev.includes(questionId);
+        nextDeleted = exists;
+        return exists
+          ? prev.filter((id) => id !== questionId)
+          : [...prev, questionId];
+      });
+      void syncEngine.enqueueEvents([
+        {
+          eventId: generateClientUuid(),
+          type: 'BOOKMARK_UPSERT',
+          payload: {
+            questionId,
+            isDeleted: nextDeleted,
+            clientUpdatedAt: new Date().toISOString(),
+          },
+        },
+      ]);
+    },
+    [syncEngine]
+  );
 
-  const updateProfile = useCallback((patch: Partial<UserProfile>) => {
-    setProfile((prev) => ({ ...prev, ...patch }));
-  }, []);
+  const updateProfile = useCallback(
+    (patch: Partial<UserProfile>) => {
+      setProfile((prev) => {
+        const next = { ...prev, ...patch };
+        void syncEngine.enqueueEvents([
+          {
+            eventId: generateClientUuid(),
+            type: 'PROFILE_UPSERT',
+            payload: {
+              id: syncEngine.studentId,
+              fullName: next.realName,
+              targetSpecialty: next.targetSpecialty,
+              targetInstitutions: next.targetInstitution
+                ? [next.targetInstitution]
+                : [],
+              dailyGoal: dailyGoalTarget,
+              clientUpdatedAt: new Date().toISOString(),
+            },
+          },
+        ]);
+        return next;
+      });
+    },
+    [dailyGoalTarget, syncEngine]
+  );
 
   const generateRandomPseudonym = useCallback(() => {
     const candidates = MEDICAL_CODENAMES.filter((c) => c !== profile.pseudonym);
@@ -1534,15 +1686,14 @@ export function useMedR1Store(options?: { liveRankingEnabled?: boolean }) {
 
   // Analytics block hoisted above reviewFlashcard for live dynamic FSRS calibration
 
-  // Live Ranking computed with weighted score and guaranteed visibility of current user
+  // Rankings Diário ao Vivo, Semanal e Mensal (apenas quem respondeu >= 1 questão no período)
   const liveRanking = useMemo(() => {
     const sessionAnswers = Object.values(answers).sort(
       (a, b) => new Date(b.answeredAt).getTime() - new Date(a.answeredAt).getTime()
     );
-    const sessionCount = sessionAnswers.length;
-    const sessionCorrect = sessionAnswers.filter((a) => a.isCorrect).length;
+    const periodCounts = countUserAnswersByPeriod(answers);
 
-    let streak = 3;
+    let streak = 0;
     if (sessionAnswers.length > 0) {
       let currentRun = 0;
       for (const item of sessionAnswers) {
@@ -1552,8 +1703,6 @@ export function useMedR1Store(options?: { liveRankingEnabled?: boolean }) {
       streak = currentRun;
     }
 
-    // Current user starts at 26 questions today (20 correct -> ~#11) so they see
-    // the "outside Top 10 divider" initially and can climb into Top 10 live!
     const currentUserEntry: LiveRankingUser = {
       id: profile.id,
       realName: profile.realName,
@@ -1561,8 +1710,12 @@ export function useMedR1Store(options?: { liveRankingEnabled?: boolean }) {
       usePseudonym: profile.usePseudonym,
       targetInstitution: profile.targetInstitution,
       avatarInitials: profile.avatarInitials,
-      questionsToday: 26 + sessionCount,
-      correctToday: 20 + sessionCorrect,
+      questionsToday: periodCounts.today,
+      correctToday: periodCounts.correctToday,
+      questionsWeek: periodCounts.week,
+      correctWeek: periodCounts.correctWeek,
+      questionsMonth: periodCounts.month,
+      correctMonth: periodCounts.correctMonth,
       streak,
       currentArea: profile.targetSpecialty,
       isOnline: true,
@@ -1570,41 +1723,45 @@ export function useMedR1Store(options?: { liveRankingEnabled?: boolean }) {
       lastActiveSecondsAgo: 1,
     };
 
-    const combined = [...livePeers, currentUserEntry].map((u) => {
-      const accuracyPct =
-        u.questionsToday > 0
-          ? Number(((u.correctToday / u.questionsToday) * 100).toFixed(1))
-          : 0;
-      const weightedScore = computeWeightedScore(
-        u.questionsToday,
-        u.correctToday,
-        u.streak
-      );
-      return {
-        ...u,
-        displayName: u.usePseudonym ? u.pseudonym : u.realName,
-        accuracyPct,
-        weightedScore,
-      };
-    });
+    const allParticipants = [...livePeers, currentUserEntry];
+    const dailyRanked = buildPeriodRanking(allParticipants, 'daily');
+    const weeklyRanked = buildPeriodRanking(allParticipants, 'weekly');
+    const monthlyRanked = buildPeriodRanking(allParticipants, 'monthly');
 
-    combined.sort((a, b) => {
-      if (b.weightedScore !== a.weightedScore) return b.weightedScore - a.weightedScore;
-      return b.accuracyPct - a.accuracyPct;
-    });
+    const fallbackCurrentUser = {
+      ...currentUserEntry,
+      rank: dailyRanked.length + 1,
+      displayName: currentUserEntry.usePseudonym
+        ? currentUserEntry.pseudonym
+        : currentUserEntry.realName,
+      questionsInPeriod: periodCounts.today,
+      correctInPeriod: periodCounts.correctToday,
+      accuracyPct: 0,
+      weightedScore: 0,
+    };
 
-    const ranked = combined.map((entry, index) => ({
-      ...entry,
-      rank: index + 1,
-    }));
-
-    const currentUserRanked = ranked.find((r) => r.isCurrentUser)!;
+    const currentUserDaily =
+      dailyRanked.find((r) => r.isCurrentUser) ?? fallbackCurrentUser;
 
     return {
-      all: ranked,
-      top10: ranked.slice(0, 10),
-      currentUser: currentUserRanked,
-      onlineTotal: 142 + ranked.length,
+      all: dailyRanked,
+      top10: dailyRanked.slice(0, 10),
+      currentUser: currentUserDaily,
+      onlineTotal: 142 + dailyRanked.length,
+      byPeriod: {
+        daily: {
+          all: dailyRanked,
+          currentUser: dailyRanked.find((r) => r.isCurrentUser) ?? null,
+        },
+        weekly: {
+          all: weeklyRanked,
+          currentUser: weeklyRanked.find((r) => r.isCurrentUser) ?? null,
+        },
+        monthly: {
+          all: monthlyRanked,
+          currentUser: monthlyRanked.find((r) => r.isCurrentUser) ?? null,
+        },
+      },
     };
   }, [answers, livePeers, profile]);
 
@@ -1905,5 +2062,9 @@ export function useMedR1Store(options?: { liveRankingEnabled?: boolean }) {
     restoreExampleSimulados,
     storageQuotaExceeded,
     dismissStorageQuotaWarning: () => setStorageQuotaExceeded(false),
+    syncStatus: syncEngine.syncStatus,
+    pendingSyncCount: syncEngine.pendingCount,
+    lastSyncedAt: syncEngine.lastSyncedAt,
+    flushSyncNow: syncEngine.flushNow,
   };
 }

@@ -1,22 +1,22 @@
 # `src/components/flashcards` — Revisão FSRS-6 no Estilo Anki
 
 ## Overview
-Módulo de revisão espaçada do MedR1 baseado em FSRS-6 (`src/lib/srs.ts`), focado em revisão direta de alta cadência sem rolagem vertical e sem poluição de metadados durante o estudo ativo.
+Módulo de revisão espaçada do MedR1 baseado em FSRS-6 (`src/lib/srs.ts`), focado em revisão direta de alta cadência sem rolagem vertical e sem poluição de metadados durante o estudo ativo, além de configuração de pesos de incidência por banca.
 
 ## Interface
-- **Tela de Revisão (`FlashcardsView.tsx`)**: `FlashcardsView` — gerencia a fila diária de cards vencidos, exibição minimalista Frente + Resposta, controles de avaliação FSRS (1–4) com previsão de intervalo e atalhos de teclado.
-- **Modal de Pesos de Banca (`ExamWeightsModal.tsx`)**: `ExamWeightsModal` — permite consultar, ajustar e recalcular por Pareto os pesos de incidência de temas por banca (`UEPA`, `ENARE`), influenciando a retenção dinâmica do FSRS.
+- **Tela de Revisão (`FlashcardsView.tsx`)**: `FlashcardsView` — gerencia a fila diária de cards vencidos (com modo `revisao` e visão `baralho`), exibição minimalista Frente + Resposta, controles de avaliação FSRS (1–4) com previsão de intervalo/data, desfazer última revisão (`Z`), criação de card customizado e filtro externo vindo de ações de Pareto/ROI.
+- **Modal de Pesos de Banca (`ExamWeightsModal.tsx`)**: `ExamWeightsModal` — modal para consultar, ajustar tiers (`alta`, `media`, `baixa`), adicionar/remover tópicos customizados e recalcular por Pareto os pesos de incidência de temas por banca (`UEPA`, `ENARE`, `GERAL`), influenciando a retenção dinâmica do FSRS.
 
 ## Invariants
 - **Card puro (somente Frente e Resposta)**: Durante a sessão de revisão em `FlashcardsView`, o card exibe apenas o texto da Frente e, após revelar, o texto da Resposta com os botões `1–4` logo abaixo — sem exibir origem/banca, tema/área/subtema, rótulo `"FRENTE"` ou link para a questão original dentro do card.
 - **Zero rolagem na sessão**: Métricas superiores, filtros e barras auxiliares permanecem recolhidos ou compactados durante a revisão para que Frente + Resposta + botões `1–4` caibam integralmente na viewport sem exigir scroll nem movimento de cursor.
 - **Tipografia auto-adaptativa**: `FlashcardsView` delega o cálculo de tamanho de fonte e entrelinha a `getAdaptiveFlashcardTypography` (`src/lib/flashcardShortcuts.ts`) com base no comprimento do texto, preservando legibilidade sem estourar o card.
-- **Atalhos de teclado determinísticos**: Resolvidos por `resolveFlashcardShortcut` (`Space`/`Enter` para revelar a resposta; `1`, `2`, `3`, `4` para avaliar `Errei`, `Difícil`, `Bom`, `Fácil`), ignorando eventos originados em campos editáveis (`isEditableElement`).
-- **Fuso horário local**: A elegibilidade de cards vencidos hoje respeita a data local do dispositivo.
+- **Atalhos de teclado determinísticos**: Resolvidos por `resolveFlashcardShortcut` (`Space`/`Enter` para revelar a resposta; `1`, `2`, `3`, `4` para avaliar `Errei`, `Difícil`, `Bom`, `Fácil`; `Z` para desfazer quando disponível), ignorando eventos originados em campos editáveis (`isEditableElement`) ou quando qualquer modal (`showCreateForm`, `weightsModalOpen`, `document.body.dataset.medr1ModalOpen === 'true'` ou `[role="dialog"][aria-modal="true"]`) está aberto.
+- **Fuso horário local**: A elegibilidade de cards vencidos hoje (`isCardDueToday`) respeita a data local do dispositivo.
 
 ## Side Effects
-- **Listeners globais de teclado**: `FlashcardsView` registra e limpa listener de `keydown` para atalhos de revelação e avaliação FSRS.
-- **Persistência indireta**: Avaliações FSRS são gravadas via callback no store principal (`useMedR1Store`); alterações em `ExamWeightsModal` persistem pesos customizados em `localStorage` por meio de `src/lib/examWeights.ts`.
+- **Listeners globais e timers**: `FlashcardsView` registra e limpa listener de `keydown` para atalhos de revelação/avaliação/desfazer e usa `window.setTimeout` (`130ms`) com limpeza no unmount para feedback visual ao avaliar; `ExamWeightsModal` registra listener de `keydown` (`Escape` para fechar) e `window.setTimeout` para feedback transitório.
+- **Persistência indireta**: Avaliações FSRS são gravadas via callbacks do store principal (`onReviewCard`, `onUndoReview`, `onCreateCustomCard`, `onDeleteCard`); alterações em `ExamWeightsModal` persistem pesos customizados em `localStorage` por meio de `src/lib/examWeights.ts`.
 
 ## Verification
 - Run: `npm test`

@@ -1323,6 +1323,7 @@ export default function App() {
                   <LiveRankingPage
                     allEntries={store.liveRanking.all}
                     currentUser={store.liveRanking.currentUser}
+                    byPeriod={store.liveRanking.byPeriod}
                     onlineTotal={store.liveRanking.onlineTotal}
                     profile={store.profile}
                     onUpdateProfile={store.updateProfile}

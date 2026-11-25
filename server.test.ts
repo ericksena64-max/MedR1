@@ -169,4 +169,26 @@ describe('server.ts — segurança, validação, rate limit e prompt injection',
 
     expect(res.status).toBe(502);
   });
+
+  it('retorna /api/health com fallback local seguro quando DATABASE_URL não está configurada', async () => {
+    const prevDbUrl = process.env.DATABASE_URL;
+    delete process.env.DATABASE_URL;
+    try {
+      const srv = await startTestServer();
+      closers.push(srv.close);
+
+      const res = await fetch(`${srv.baseUrl}/api/health`);
+      expect(res.status).toBe(200);
+      const json = (await res.json()) as {
+        ok: boolean;
+        database: { configured: boolean; ok: boolean; mode: string };
+      };
+      expect(json.ok).toBe(true);
+      expect(json.database.configured).toBe(false);
+      expect(json.database.ok).toBe(false);
+      expect(json.database.mode).toBe('local-fallback');
+    } finally {
+      if (prevDbUrl !== undefined) process.env.DATABASE_URL = prevDbUrl;
+    }
+  });
 });

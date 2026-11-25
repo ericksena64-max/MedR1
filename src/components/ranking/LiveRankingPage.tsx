@@ -7,15 +7,22 @@ import {
   Users,
   Info,
 } from 'lucide-react';
-import type { UserProfile } from '../../types/medical';
+import type { RankingPeriod, UserProfile } from '../../types/medical';
+import type { PeriodRankedEntry } from '../../lib/rankingPeriods';
 import type { RankedEntry } from './LiveRankingWidget';
 import { Switch } from '../ui/Switch';
 import { Button } from '../ui/Button';
 import { cn } from '../../lib/utils';
 
+type PeriodBucket = {
+  all: PeriodRankedEntry[];
+  currentUser: PeriodRankedEntry | null;
+};
+
 interface LiveRankingPageProps {
   allEntries: RankedEntry[];
   currentUser: RankedEntry;
+  byPeriod?: Record<RankingPeriod, PeriodBucket>;
   onlineTotal: number;
   profile: UserProfile;
   onUpdateProfile: (patch: Partial<UserProfile>) => void;
@@ -24,9 +31,31 @@ interface LiveRankingPageProps {
   onToggleRankingPulse?: (next?: boolean) => void;
 }
 
+const PERIOD_OPTIONS: Array<{ id: RankingPeriod; label: string; subtitle: string; colLabel: string }> = [
+  {
+    id: 'daily',
+    label: 'Diário Ao Vivo',
+    subtitle: 'Mais questões respondidas hoje em ordem decrescente (mín. 1 questão, certa ou errada)',
+    colLabel: 'Questões Hoje',
+  },
+  {
+    id: 'weekly',
+    label: 'Semanal',
+    subtitle: 'Número de questões na semana e taxa de acertos (mín. 1 questão, certa ou errada)',
+    colLabel: 'Questões (7d)',
+  },
+  {
+    id: 'monthly',
+    label: 'Mensal',
+    subtitle: 'Todas as questões feitas no mês em ordem decrescente, independentemente da taxa de acerto',
+    colLabel: 'Questões no Mês',
+  },
+];
+
 export function LiveRankingPage({
   allEntries,
   currentUser,
+  byPeriod,
   onlineTotal,
   profile,
   onUpdateProfile,
@@ -34,6 +63,7 @@ export function LiveRankingPage({
   rankingPulseOn = true,
   onToggleRankingPulse,
 }: LiveRankingPageProps) {
+  const [period, setPeriod] = useState<RankingPeriod>('daily');
   const [realNameInput, setRealNameInput] = useState(profile.realName);
   const [pseudonymInput, setPseudonymInput] = useState(profile.pseudonym);
   const [targetInstInput, setTargetInstInput] = useState(profile.targetInstitution);
@@ -70,8 +100,15 @@ export function LiveRankingPage({
     setPseudonymInput(profile.pseudonym);
   }, [profile.pseudonym]);
 
-  const top10 = allEntries.slice(0, 10);
-  const rest = allEntries.slice(10);
+  const activePeriodMeta =
+    PERIOD_OPTIONS.find((opt) => opt.id === period) ?? PERIOD_OPTIONS[0];
+
+  const activeEntries: Array<PeriodRankedEntry | (RankedEntry & { questionsInPeriod?: number })> =
+    byPeriod ? byPeriod[period].all : allEntries;
+  const currentUserInPeriod = byPeriod ? byPeriod[period].currentUser : currentUser;
+
+  const top10 = activeEntries.slice(0, 10);
+  const rest = activeEntries.slice(10);
 
   return (
     <div className="grid grid-cols-1 xl:grid-cols-12 gap-6 items-start">
@@ -94,18 +131,45 @@ export function LiveRankingPage({
                 />
               </span>
               <h2 className="font-display text-base font-bold text-slate-900 dark:text-white">
-                Ranking Ao Vivo — Online Agora
+                Ranking — {activePeriodMeta.label}
               </h2>
             </div>
             <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">
-              Pontuação ponderada combinando volume diário, taxa de acertos e sequência (anti-chute)
+              {activePeriodMeta.subtitle}
             </p>
           </div>
 
           <div className="flex flex-wrap items-center gap-3">
+            <div
+              role="tablist"
+              aria-label="Período do ranking"
+              className="inline-flex rounded-lg bg-[#E5E5EA]/70 p-1 dark:bg-slate-800"
+            >
+              {PERIOD_OPTIONS.map((opt) => {
+                const selected = period === opt.id;
+                return (
+                  <button
+                    key={opt.id}
+                    type="button"
+                    role="tab"
+                    aria-selected={selected}
+                    onClick={() => setPeriod(opt.id)}
+                    className={cn(
+                      'rounded-md px-2.5 py-1 text-xs font-medium transition-all',
+                      selected
+                        ? 'bg-white text-[#1D1D1F] shadow-sm dark:bg-slate-700 dark:text-white'
+                        : 'text-[#86868B] hover:text-[#1D1D1F] dark:text-slate-400 dark:hover:text-slate-200'
+                    )}
+                  >
+                    {opt.label}
+                  </button>
+                );
+              })}
+            </div>
+
             <div className="flex items-center gap-2 text-xs font-medium text-slate-600 dark:text-slate-300 tabular-nums">
               <Users className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
-              <span>{onlineTotal} estudantes ativos na sessão</span>
+              <span>{onlineTotal} estudantes ativos</span>
             </div>
 
             {onToggleRankingPulse && (
@@ -145,6 +209,13 @@ export function LiveRankingPage({
           </div>
         </div>
 
+        {currentUserInPeriod === null && (
+          <div className="border-b border-amber-200/80 bg-amber-50/70 px-5 py-3 text-xs text-amber-900 dark:border-amber-900/50 dark:bg-amber-950/30 dark:text-amber-200">
+            Você ainda não respondeu nenhuma questão neste período. Responda pelo menos{' '}
+            <strong>1 questão</strong> (certa ou errada) para aparecer no ranking.
+          </div>
+        )}
+
         <div className="overflow-x-auto">
           <table className="w-full text-left text-sm">
             <thead className="border-b border-slate-200 bg-slate-50 text-xs font-semibold text-slate-600 dark:border-slate-800 dark:bg-slate-950/60 dark:text-slate-400">
@@ -152,9 +223,13 @@ export function LiveRankingPage({
                 <th className="px-5 py-3 w-14">#</th>
                 <th className="px-4 py-3">Estudante</th>
                 <th className="px-4 py-3 hidden sm:table-cell">Foco / Alvo</th>
-                <th className="px-4 py-3 text-right">Questões Hoje</th>
-                <th className="px-4 py-3 text-right">Acerto (%)</th>
-                <th className="px-5 py-3 text-right">Pontuação</th>
+                <th className="px-4 py-3 text-right">{activePeriodMeta.colLabel}</th>
+                {period !== 'monthly' && (
+                  <th className="px-4 py-3 text-right">Acerto (%)</th>
+                )}
+                <th className="px-5 py-3 text-right">
+                  {period === 'monthly' ? 'Volume' : 'Pontuação'}
+                </th>
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
@@ -209,16 +284,22 @@ export function LiveRankingPage({
                     </p>
                   </td>
                   <td className="px-4 py-3 text-right font-mono tabular-nums text-slate-700 dark:text-slate-300">
-                    {entry.questionsToday}
+                    {entry.questionsInPeriod ?? entry.questionsToday}
                   </td>
-                  <td className="px-4 py-3 text-right font-mono tabular-nums font-medium text-emerald-700 dark:text-emerald-400">
-                    {entry.accuracyPct.toFixed(1)}%
-                  </td>
+                  {period !== 'monthly' && (
+                    <td className="px-4 py-3 text-right font-mono tabular-nums font-medium text-emerald-700 dark:text-emerald-400">
+                      {entry.accuracyPct.toFixed(1)}%
+                    </td>
+                  )}
                   <td className="px-5 py-3 text-right">
                     <span className="font-mono font-bold tabular-nums text-slate-900 dark:text-white">
-                      {entry.weightedScore}
+                      {period === 'monthly'
+                        ? entry.questionsInPeriod ?? entry.questionsToday
+                        : entry.weightedScore}
                     </span>
-                    <span className="ml-1 text-xs text-slate-400">pts</span>
+                    <span className="ml-1 text-xs text-slate-400">
+                      {period === 'monthly' ? 'q' : 'pts'}
+                    </span>
                   </td>
                 </tr>
               ))}
@@ -262,14 +343,20 @@ export function LiveRankingPage({
                         </p>
                       </td>
                       <td className="px-4 py-3 text-right font-mono tabular-nums text-slate-700 dark:text-slate-300">
-                        {entry.questionsToday}q
+                        {entry.questionsInPeriod ?? entry.questionsToday}q
                       </td>
-                      <td className="px-4 py-3 text-right font-mono tabular-nums text-emerald-700 dark:text-emerald-400">
-                        {entry.accuracyPct.toFixed(1)}%
-                      </td>
+                      {period !== 'monthly' && (
+                        <td className="px-4 py-3 text-right font-mono tabular-nums text-emerald-700 dark:text-emerald-400">
+                          {entry.accuracyPct.toFixed(1)}%
+                        </td>
+                      )}
                       <td className="px-5 py-3 text-right font-mono font-bold tabular-nums text-slate-900 dark:text-white">
-                        {entry.weightedScore}{' '}
-                        <span className="text-xs font-normal text-slate-400">pts</span>
+                        {period === 'monthly'
+                          ? entry.questionsInPeriod ?? entry.questionsToday
+                          : entry.weightedScore}{' '}
+                        <span className="text-xs font-normal text-slate-400">
+                          {period === 'monthly' ? 'q' : 'pts'}
+                        </span>
                       </td>
                     </tr>
                   ))}
