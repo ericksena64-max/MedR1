@@ -1,11 +1,13 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   createSingleSubmissionGuard,
+  diffNewlyUnlockedAchievements,
   getLocalDateKey,
   matchesStudentStatusFilter,
   safeReadStorage,
   writeStorageSafely,
 } from './useMedR1Store';
+import type { GamificationAchievement } from '../lib/gamificationChallenges';
 import type { UserAnswerRecord } from '../types/medical';
 
 function createMemoryStorage() {
@@ -148,6 +150,54 @@ describe('useMedR1Store — integridade de dados, filtros, simulado e fuso horá
     it('mantém a data local às 23:59 e só vira às 00:00 local', () => {
       expect(getLocalDateKey(new Date(2026, 10, 23, 23, 59, 59))).toBe('2026-11-23');
       expect(getLocalDateKey(new Date(2026, 10, 24, 0, 0, 0))).toBe('2026-11-24');
+    });
+  });
+
+  describe('diffNewlyUnlockedAchievements — deduplicação de toasts de conquista', () => {
+    const sampleBadges: GamificationAchievement[] = [
+      {
+        id: 'primeiro_plantao',
+        title: 'Primeiro Plantão',
+        description: 'Primeira questão',
+        pillar: 'conquista',
+        iconName: 'stethoscope',
+        unlocked: true,
+        progressLabel: '1/1',
+        progressPct: 100,
+      },
+      {
+        id: 'ritmo_25',
+        title: 'Ritmo de Ambulatório',
+        description: '25 questões',
+        pillar: 'aprendizado',
+        iconName: 'target',
+        unlocked: true,
+        progressLabel: '25/25',
+        progressPct: 100,
+      },
+      {
+        id: 'centuriao_100',
+        title: 'Centurião R1',
+        description: '100 questões',
+        pillar: 'conquista',
+        iconName: 'rocket',
+        unlocked: false,
+        progressLabel: '25/100',
+        progressPct: 25,
+      },
+    ];
+
+    it('retorna apenas conquistas desbloqueadas que ainda não foram vistas', () => {
+      const newly = diffNewlyUnlockedAchievements(sampleBadges, ['primeiro_plantao']);
+      expect(newly.map((b) => b.id)).toEqual(['ritmo_25']);
+    });
+
+    it('não repete conquistas já vistas nem inclui bloqueadas', () => {
+      const newly = diffNewlyUnlockedAchievements(sampleBadges, [
+        'primeiro_plantao',
+        'ritmo_25',
+      ]);
+      expect(newly).toEqual([]);
     });
   });
 });

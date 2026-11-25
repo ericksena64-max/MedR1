@@ -33,6 +33,9 @@ import {
 import { TARGET_EXAM_CUTOFF_PRESETS } from '../../lib/examWeights';
 import { getLocalDateKey } from '../../hooks/useMedR1Store';
 import { GRANDES_AREAS } from '../../data/taxonomy';
+import { HomeGamificationStrip } from '../gamification/HomeGamificationStrip';
+import type { GamificationSummary } from '../../hooks/useMedR1Store';
+import type { GamificationMission } from '../../lib/gamificationChallenges';
 import { cn } from '../../lib/utils';
 
 type CalibrationTab = 'estimador' | 'bussola' | 'psicometrico';
@@ -65,6 +68,9 @@ interface HomeUnifiedViewProps {
   onDeleteSimulado: (id: string) => void;
   onUpdateCutoffTarget: (patch: Partial<CutoffTargetConfig>) => void;
   onRestoreExampleSimulados: () => void;
+  gamification?: GamificationSummary;
+  onExecuteMission?: (mission: GamificationMission) => void;
+  onOpenGamificationHub?: () => void;
 }
 
 export function HomeUnifiedView({
@@ -90,6 +96,9 @@ export function HomeUnifiedView({
   onDeleteSimulado,
   onUpdateCutoffTarget,
   onRestoreExampleSimulados,
+  gamification,
+  onExecuteMission,
+  onOpenGamificationHub,
 }: HomeUnifiedViewProps) {
   const [primaryTargetExam, setPrimaryTargetExam] = useState<TargetExamPreset>(() => {
     try {
@@ -242,6 +251,18 @@ export function HomeUnifiedView({
 
   return (
     <div className="space-y-4">
+      {/* BLOCO JORNADA & MISSÕES: Gamificação clínica diária */}
+      {gamification && onExecuteMission && onOpenGamificationHub && (
+        <HomeGamificationStrip
+          core={gamification.core}
+          missions={gamification.missions}
+          unlockedCount={gamification.unlockedCount}
+          totalAchievements={gamification.totalAchievements}
+          onExecuteMission={onExecuteMission}
+          onOpenHub={onOpenGamificationHub}
+        />
+      )}
+
       {/* BLOCO SUPERIOR: Grade Semanal Dinâmica (Dom a Sáb) */}
       <WeeklyStudyScheduleCard
         flashcards={flashcards}

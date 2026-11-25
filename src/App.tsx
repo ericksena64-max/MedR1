@@ -33,6 +33,9 @@ import {
 } from './components/questions/BatchFinishModal';
 import { HomeUnifiedView } from './components/analytics/HomeUnifiedView';
 import { RoutineConfigModal } from './components/analytics/RoutineConfigModal';
+import { AchievementToast } from './components/gamification/AchievementToast';
+import { GamificationHubModal } from './components/gamification/GamificationHubModal';
+import type { GamificationMission } from './lib/gamificationChallenges';
 import { Button } from './components/ui/Button';
 import { shouldConfirmLeaveSimulado } from './lib/navigationState';
 import { buildNavigationUrl, parseNavigationUrl } from './lib/navigationUrl';
@@ -107,6 +110,7 @@ export default function App() {
   const [activeTab, setActiveTab] = useState<ActiveTab>(initialRoute.tab);
   const [returnToNotebook, setReturnToNotebook] = useState(false);
   const [routineModalOpen, setRoutineModalOpen] = useState(false);
+  const [gamificationHubOpen, setGamificationHubOpen] = useState(false);
   const [commandPaletteOpen, setCommandPaletteOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
@@ -742,6 +746,30 @@ export default function App() {
     ]
   );
 
+  const handleExecuteMission = useCallback(
+    (mission: GamificationMission) => {
+      switch (mission.actionType) {
+        case 'open_weak_area':
+          handleSelectGrandeAreaFromBank(mission.targetAreaId ?? 'clinica_medica');
+          break;
+        case 'open_flashcards':
+          navigateToTab('flashcards');
+          break;
+        case 'start_simulado':
+          navigateToTab('questoes', { mode: 'simulado' });
+          break;
+        case 'open_error_notebook':
+          navigateToTab('caderno_erros');
+          break;
+        case 'open_questions':
+        default:
+          navigateToTab('questoes', { mode: 'estudo' });
+          break;
+      }
+    },
+    [handleSelectGrandeAreaFromBank, navigateToTab]
+  );
+
   return (
     <div className="min-h-screen lg:h-screen lg:overflow-hidden flex flex-col bg-[#F8FAFC] text-slate-900 transition-colors duration-200 dark:bg-[#0B0F17] dark:text-[#E8EDF5]">
       {/* Compact 48px Studio Top Bar (Medcel-style primary nav + drawer trigger) */}
@@ -769,6 +797,8 @@ export default function App() {
         focusMode={focusMode}
         onToggleFocusMode={() => setFocusMode((f) => !f)}
         onOpenMobileMenu={() => setMobileMenuOpen(true)}
+        gamificationCore={store.gamification.core}
+        onOpenGamificationHub={() => setGamificationHubOpen(true)}
       />
 
       {/* Full-Width Workspace + Unified Slide-Over Navigation Drawer */}
@@ -1245,6 +1275,9 @@ export default function App() {
                   onDeleteSimulado={store.deleteSimuladoRecord}
                   onUpdateCutoffTarget={store.updateCutoffTarget}
                   onRestoreExampleSimulados={store.restoreExampleSimulados}
+                  gamification={store.gamification}
+                  onExecuteMission={handleExecuteMission}
+                  onOpenGamificationHub={() => setGamificationHubOpen(true)}
                 />
               )}
 
@@ -1260,6 +1293,8 @@ export default function App() {
                     darkMode={store.darkMode}
                     targetBoard={store.targetBoard}
                     bankVersion={store.bankVersion}
+                    includeDemoBaseline={store.includeDemoBaseline}
+                    onToggleDemoBaseline={store.setIncludeDemoBaseline}
                     onFilterQuestionsByTopic={handleFilterQuestionsFromPareto}
                     onFilterFlashcardsByTopic={handleFilterFlashcardsFromPareto}
                     onLaunchGapRadarSimulado={handleLaunchGapRadarSimulado}
@@ -1382,6 +1417,20 @@ export default function App() {
         open={routineModalOpen}
         onClose={() => setRoutineModalOpen(false)}
         flashcards={store.flashcards}
+      />
+      <GamificationHubModal
+        open={gamificationHubOpen}
+        onClose={() => setGamificationHubOpen(false)}
+        core={store.gamification.core}
+        missions={store.gamification.missions}
+        achievements={store.gamification.achievements}
+        onExecuteMission={handleExecuteMission}
+      />
+      <AchievementToast
+        achievement={store.pendingAchievement}
+        suppressed={simuladoActive && !simuladoFinished}
+        onDismiss={store.dismissPendingAchievement}
+        onOpenHub={() => setGamificationHubOpen(true)}
       />
       {commandPaletteOpen && (
         <Suspense fallback={null}>

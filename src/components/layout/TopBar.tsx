@@ -15,6 +15,7 @@ import {
   SlidersHorizontal,
   Filter,
   Search,
+  Trophy,
 } from 'lucide-react';
 import type {
   ActiveTab,
@@ -23,6 +24,7 @@ import type {
   ThemeMode,
   ThemeScheduleConfig,
 } from '../../types/medical';
+import type { GamificationCoreState } from '../../lib/gamificationEngine';
 import {
   clampDailyGoalTarget,
   resolveTopBarContext,
@@ -54,6 +56,8 @@ interface TopBarProps {
   focusMode: boolean;
   onToggleFocusMode: () => void;
   onOpenMobileMenu: () => void;
+  gamificationCore?: GamificationCoreState;
+  onOpenGamificationHub?: () => void;
 }
 
 const PRIMARY_NAV_ITEMS: ReadonlyArray<{ id: PrimaryNavId; label: string }> = [
@@ -96,6 +100,8 @@ export function TopBar({
   focusMode,
   onToggleFocusMode,
   onOpenMobileMenu,
+  gamificationCore,
+  onOpenGamificationHub,
 }: TopBarProps) {
   const crumb = resolveTopBarContext(activeTab, mode, simuladoActive);
   const [themeMenuOpen, setThemeMenuOpen] = useState(false);
@@ -316,8 +322,25 @@ export function TopBar({
         </div>
       </div>
 
-      {/* Right: Quick Search (Cmd+K) + Filters + Editable Goal Pill + Routine + Focus + Theme */}
+      {/* Right: Quick Search (Cmd+K) + Gamification Pill + Filters + Editable Goal Pill + Routine + Focus + Theme */}
       <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
+        {gamificationCore && onOpenGamificationHub && !focusMode && (
+          <button
+            type="button"
+            onClick={onOpenGamificationHub}
+            title={`Jornada R1: ${gamificationCore.rankLabel} (Nível ${gamificationCore.level}) · ${gamificationCore.totalXp} XP`}
+            aria-label={`Abrir jornada de gamificação: Nível ${gamificationCore.level}, ${gamificationCore.totalXp} XP`}
+            className="hidden sm:inline-flex h-8 items-center gap-1.5 rounded-lg border border-black/5 bg-white px-2.5 text-xs font-medium text-[#1D1D1F] hover:bg-[#F5F5F7] dark:border-white/[0.08] dark:bg-[#131926] dark:text-slate-100 dark:hover:bg-[#182030] transition-colors cursor-pointer whitespace-nowrap tabular-nums"
+          >
+            <Trophy size={14} strokeWidth={1.5} className="text-[#007AFF] dark:text-sky-400" />
+            <span>Nv. {gamificationCore.level}</span>
+            <span className="text-[#86868B] dark:text-slate-400">·</span>
+            <span className="text-[#86868B] dark:text-slate-300">
+              {gamificationCore.totalXp.toLocaleString('pt-BR')} XP
+            </span>
+          </button>
+        )}
+
         {onOpenCommandPalette && !focusMode && (
           <button
             type="button"

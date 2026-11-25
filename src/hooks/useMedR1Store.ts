@@ -42,6 +42,16 @@ import {
   resolveCardRetention,
 } from '../lib/srs';
 import {
+  computeGamificationCore,
+  type GamificationCoreState,
+} from '../lib/gamificationEngine';
+import {
+  computeGamificationAchievements,
+  computeGamificationMissions,
+  type GamificationAchievement,
+  type GamificationMission,
+} from '../lib/gamificationChallenges';
+import {
   areAllOfficialExamsLoaded,
   clearAllImportedQuestionsFromDB,
   deleteImportedBatchFromDB,
@@ -76,6 +86,24 @@ const STORAGE_KEY_DAILY_GOAL_TARGET = 'medr1_daily_goal_target_v1';
 const STORAGE_KEY_DAILY_GOAL_HISTORY = 'medr1_daily_goal_history_v1';
 const STORAGE_KEY_SIMULADO_HISTORY = 'medr1_simulado_history_v1';
 const STORAGE_KEY_CUTOFF_TARGET = 'medr1_cutoff_target_v1';
+const STORAGE_KEY_DEMO_BASELINE = 'medr1_include_demo_baseline_v1';
+const STORAGE_KEY_SEEN_ACHIEVEMENTS = 'medr1_gamification_seen_badges_v1';
+
+export interface GamificationSummary {
+  core: GamificationCoreState;
+  missions: GamificationMission[];
+  achievements: GamificationAchievement[];
+  unlockedCount: number;
+  totalAchievements: number;
+}
+
+export function diffNewlyUnlockedAchievements(
+  achievements: GamificationAchievement[],
+  seenIds: string[]
+): GamificationAchievement[] {
+  const seenSet = new Set(seenIds);
+  return achievements.filter((badge) => badge.unlocked && !seenSet.has(badge.id));
+}
 
 const DEFAULT_DAILY_GOAL_TARGET = 20;
 
@@ -498,11 +526,16 @@ export function useMedR1Store(options?: { liveRankingEnabled?: boolean }) {
     setDailyGoalTargetState(clamped);
   }, []);
 
+  const [includeDemoBaseline, setIncludeDemoBaseline] = useState<boolean>(() =>
+    safeReadStorage<boolean>(STORAGE_KEY_DEMO_BASELINE, false)
+  );
+
+  useEffect(() => {
+    safeWriteStorage(STORAGE_KEY_DEMO_BASELINE, includeDemoBaseline);
+  }, [includeDemoBaseline, safeWriteStorage]);
+
   const [simuladoHistory, setSimuladoHistory] = useState<SimuladoRecord[]>(() =>
-    safeReadStorage<SimuladoRecord[]>(
-      STORAGE_KEY_SIMULADO_HISTORY,
-      buildInitialSimuladoSeed()
-    )
+    safeReadStorage<SimuladoRecord[]>(STORAGE_KEY_SIMULADO_HISTORY, [])
   );
 
   const [cutoffTarget, setCutoffTarget] = useState<CutoffTargetConfig>(() =>
@@ -985,7 +1018,7 @@ export function useMedR1Store(options?: { liveRankingEnabled?: boolean }) {
     []
   );
 
-  // Dynamically blended performance analytics (historical baseline + live session answers across all questions)
+  // Performance analytics: 100% real user answers by default, or optionally blended with demo baseline
   const analytics = useMemo(() => {
     const answerList = Object.values(answers);
     const questionMap = new Map(allQuestions.map((q) => [q.id, q]));
@@ -1000,11 +1033,14 @@ export function useMedR1Store(options?: { liveRankingEnabled?: boolean }) {
           if (ans.isCorrect) extraCorrect += 1;
         }
       }
-      const totalAnswered = area.baseAnswered + extraAnswered;
-      const totalCorrect = area.baseCorrect + extraCorrect;
+      const baseAnswered = includeDemoBaseline ? area.baseAnswered : 0;
+      const baseCorrect = includeDemoBaseline ? area.baseCorrect : 0;
+      const totalAnswered = baseAnswered + extraAnswered;
+      const totalCorrect = baseCorrect + extraCorrect;
       const studentPct =
         totalAnswered > 0 ? Number(((totalCorrect / totalAnswered) * 100).toFixed(1)) : 0;
-      const delta = Number((studentPct - area.communityMedianPct).toFixed(1));
+      const delta =
+        totalAnswered > 0 ? Number((studentPct - area.communityMedianPct).toFixed(1)) : 0;
       return {
         id: area.grandeAreaId,
         grandeAreaId: area.grandeAreaId,
@@ -1033,11 +1069,14 @@ export function useMedR1Store(options?: { liveRankingEnabled?: boolean }) {
           if (ans.isCorrect) extraCorrect += 1;
         }
       }
-      const totalAnswered = topic.baseAnswered + extraAnswered;
-      const totalCorrect = topic.baseCorrect + extraCorrect;
+      const baseAnswered = includeDemoBaseline ? topic.baseAnswered : 0;
+      const baseCorrect = includeDemoBaseline ? topic.baseCorrect : 0;
+      const totalAnswered = baseAnswered + extraAnswered;
+      const totalCorrect = baseCorrect + extraCorrect;
       const studentPct =
         totalAnswered > 0 ? Number(((totalCorrect / totalAnswered) * 100).toFixed(1)) : 0;
-      const delta = Number((studentPct - topic.communityMedianPct).toFixed(1));
+      const delta =
+        totalAnswered > 0 ? Number((studentPct - topic.communityMedianPct).toFixed(1)) : 0;
       return {
         id: `${topic.grandeAreaId}-${topic.tema}`,
         grandeAreaId: topic.grandeAreaId,
@@ -1052,7 +1091,7 @@ export function useMedR1Store(options?: { liveRankingEnabled?: boolean }) {
         delta,
         status: computePerformanceStatus(delta),
       };
-    });
+    }).filter((row) => includeDemoBaseline || row.answered > 0);
 
     // Include newly imported topics whenever the student answers at least 1 question on them
     const dynamicTopics = new Map<
@@ -1106,19 +1145,84 @@ export function useMedR1Store(options?: { liveRankingEnabled?: boolean }) {
       totalAnswered > 0 ? Number(((totalCorrect / totalAnswered) * 100).toFixed(1)) : 0;
     const overallMedianPct = 65.8;
     const overallP75Pct = 77.2;
-    const overallDelta = Number((overallStudentPct - overallMedianPct).toFixed(1));
+    const overallDelta =
+      totalAnswered > 0 ? Number((overallStudentPct - overallMedianPct).toFixed(1)) : 0;
 
-    const weeklyEvolution = TEMPORAL_EVOLUTION_WEEKLY.map((pt, i, arr) =>
-      i === arr.length - 1
-        ? { ...pt, alunoPct: overallStudentPct, questoes: 34 + answerList.length }
-        : pt
-    );
+    let weeklyEvolution = TEMPORAL_EVOLUTION_WEEKLY;
+    let monthlyEvolution = TEMPORAL_EVOLUTION_MONTHLY;
 
-    const monthlyEvolution = TEMPORAL_EVOLUTION_MONTHLY.map((pt, i, arr) =>
-      i === arr.length - 1
-        ? { ...pt, alunoPct: overallStudentPct, questoes: totalAnswered }
-        : pt
-    );
+    if (includeDemoBaseline) {
+      weeklyEvolution = TEMPORAL_EVOLUTION_WEEKLY.map((pt, i, arr) =>
+        i === arr.length - 1
+          ? { ...pt, alunoPct: overallStudentPct, questoes: 34 + answerList.length }
+          : pt
+      );
+      monthlyEvolution = TEMPORAL_EVOLUTION_MONTHLY.map((pt, i, arr) =>
+        i === arr.length - 1
+          ? { ...pt, alunoPct: overallStudentPct, questoes: totalAnswered }
+          : pt
+      );
+    } else {
+      // Build real period-by-period evolution strictly from timestamped answers
+      const weekBuckets = new Map<string, { label: string; sortKey: number; answered: number; correct: number }>();
+      const monthBuckets = new Map<string, { label: string; sortKey: number; answered: number; correct: number }>();
+      const monthNames = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
+
+      for (const ans of answerList) {
+        if (!ans.answeredAt) continue;
+        const dt = new Date(ans.answeredAt);
+        if (Number.isNaN(dt.getTime())) continue;
+
+        // Start of local week (Monday)
+        const dayOfWeek = (dt.getDay() + 6) % 7;
+        const monday = new Date(dt.getFullYear(), dt.getMonth(), dt.getDate() - dayOfWeek);
+        const wKey = getLocalDateKey(monday);
+        const wLabel = `${String(monday.getDate()).padStart(2, '0')}/${String(monday.getMonth() + 1).padStart(2, '0')}`;
+        const wb = weekBuckets.get(wKey) ?? {
+          label: wLabel,
+          sortKey: monday.getTime(),
+          answered: 0,
+          correct: 0,
+        };
+        wb.answered += 1;
+        if (ans.isCorrect) wb.correct += 1;
+        weekBuckets.set(wKey, wb);
+
+        // Local month bucket
+        const mKey = `${dt.getFullYear()}-${String(dt.getMonth() + 1).padStart(2, '0')}`;
+        const mb = monthBuckets.get(mKey) ?? {
+          label: `${monthNames[dt.getMonth()]}/${String(dt.getFullYear()).slice(-2)}`,
+          sortKey: new Date(dt.getFullYear(), dt.getMonth(), 1).getTime(),
+          answered: 0,
+          correct: 0,
+        };
+        mb.answered += 1;
+        if (ans.isCorrect) mb.correct += 1;
+        monthBuckets.set(mKey, mb);
+      }
+
+      weeklyEvolution = Array.from(weekBuckets.values())
+        .sort((a, b) => a.sortKey - b.sortKey)
+        .slice(-8)
+        .map((b) => ({
+          period: b.label,
+          alunoPct: Number(((b.correct / b.answered) * 100).toFixed(1)),
+          medianaPct: overallMedianPct,
+          p75Pct: overallP75Pct,
+          questoes: b.answered,
+        }));
+
+      monthlyEvolution = Array.from(monthBuckets.values())
+        .sort((a, b) => a.sortKey - b.sortKey)
+        .slice(-6)
+        .map((b) => ({
+          period: b.label,
+          alunoPct: Number(((b.correct / b.answered) * 100).toFixed(1)),
+          medianaPct: overallMedianPct,
+          p75Pct: overallP75Pct,
+          questoes: b.answered,
+        }));
+    }
 
     return {
       totalAnswered,
@@ -1133,7 +1237,7 @@ export function useMedR1Store(options?: { liveRankingEnabled?: boolean }) {
       weeklyEvolution,
       monthlyEvolution,
     };
-  }, [answers, allQuestions]);
+  }, [answers, allQuestions, includeDemoBaseline]);
 
   // Topic & area accuracy/median lookup maps for Dynamic FSRS Retention calibration
   const { userAccuracyByTopic, communityMedianByTopic } = useMemo(() => {
@@ -1596,6 +1700,133 @@ export function useMedR1Store(options?: { liveRankingEnabled?: boolean }) {
     };
   }, [todayQuestionCounts, dailyGoalTarget, todayDateKey, goalCompletedDays]);
 
+  const [seenAchievementIds, setSeenAchievementIds] = useState<string[]>(() =>
+    safeReadStorage<string[]>(STORAGE_KEY_SEEN_ACHIEVEMENTS, [])
+  );
+  const [pendingAchievementQueue, setPendingAchievementQueue] = useState<
+    GamificationAchievement[]
+  >([]);
+
+  useEffect(() => {
+    safeWriteStorage(STORAGE_KEY_SEEN_ACHIEVEMENTS, seenAchievementIds);
+  }, [seenAchievementIds, safeWriteStorage]);
+
+  const gamification: GamificationSummary = useMemo(() => {
+    const completedGoalDaysCount = Object.values(goalCompletedDays).filter(Boolean).length;
+    const core = computeGamificationCore({
+      answers,
+      questions: allQuestions,
+      fsrsReviewCount: fsrsReviewLogs.length,
+      completedGoalDaysCount,
+      simulados: simuladoHistory,
+      dailyGoal,
+    });
+
+    // Identify weakest area by real mastery (prefer areas with answers, fallback to lowest answered)
+    const sortedAreas = [...core.areaMastery].sort((a, b) => {
+      if (a.answered > 0 && b.answered > 0) {
+        if (a.accuracyPct !== b.accuracyPct) return a.accuracyPct - b.accuracyPct;
+        return a.answered - b.answered;
+      }
+      if (a.answered === 0 && b.answered === 0) return 0;
+      return a.answered === 0 ? -1 : 1;
+    });
+    const weakestAreaId = sortedAreas[0]?.grandeAreaId ?? 'clinica_medica';
+
+    // Compute weekly real activity window (last 7 local calendar days)
+    const now = new Date();
+    const weekStart = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 6).getTime();
+    const questionById = new Map(allQuestions.map((q) => [q.id, q]));
+
+    let answeredThisWeekCount = 0;
+    let weakAreaAnsweredToday = 0;
+    let totalCorrect = 0;
+    const answerList = Object.values(answers);
+
+    for (const ans of answerList) {
+      if (ans.isCorrect) totalCorrect += 1;
+      if (!ans.answeredAt) continue;
+      const dt = new Date(ans.answeredAt);
+      if (Number.isNaN(dt.getTime())) continue;
+      if (dt.getTime() >= weekStart) {
+        answeredThisWeekCount += 1;
+      }
+      if (getLocalDateKey(dt) === todayDateKey) {
+        const q = questionById.get(ans.questionId);
+        if (q && q.grandeAreaId === weakestAreaId) {
+          weakAreaAnsweredToday += 1;
+        }
+      }
+    }
+
+    const simuladosThisWeekCount = simuladoHistory.filter((s) => {
+      const parsed = Date.parse(s.date);
+      return Number.isFinite(parsed) && parsed >= weekStart;
+    }).length;
+
+    const reviewsTodayCount =
+      reviewsTodayStats.date === todayDateKey ? reviewsTodayStats.total : 0;
+
+    const missions = computeGamificationMissions({
+      core,
+      dailyGoal,
+      reviewsTodayCount,
+      dueFlashcardsCount,
+      answeredThisWeekCount,
+      simuladosThisWeekCount,
+      weakAreaAnsweredToday,
+      weakestAreaId,
+    });
+
+    const achievements = computeGamificationAchievements({
+      core,
+      totalAnswered: answerList.length,
+      totalCorrect,
+      fsrsReviewCount: fsrsReviewLogs.length,
+      simuladoCount: simuladoHistory.length,
+      errorNotebookReviewedCount: 0,
+    });
+
+    const unlockedCount = achievements.filter((b) => b.unlocked).length;
+
+    return {
+      core,
+      missions,
+      achievements,
+      unlockedCount,
+      totalAchievements: achievements.length,
+    };
+  }, [
+    answers,
+    allQuestions,
+    fsrsReviewLogs.length,
+    goalCompletedDays,
+    simuladoHistory,
+    dailyGoal,
+    todayDateKey,
+    reviewsTodayStats,
+    dueFlashcardsCount,
+  ]);
+
+  useEffect(() => {
+    const newlyUnlocked = diffNewlyUnlockedAchievements(
+      gamification.achievements,
+      seenAchievementIds
+    );
+    if (newlyUnlocked.length === 0) return;
+
+    setSeenAchievementIds((prev) => {
+      const merged = new Set(prev);
+      for (const b of newlyUnlocked) merged.add(b.id);
+      return Array.from(merged);
+    });
+    setPendingAchievementQueue((prev) => [...prev, ...newlyUnlocked]);
+  }, [gamification.achievements, seenAchievementIds]);
+
+  const dismissPendingAchievement = useCallback(() => {
+    setPendingAchievementQueue((prev) => prev.slice(1));
+  }, []);
+
   const resetProgress = useCallback(() => {
     setAnswers({});
   }, []);
@@ -1643,6 +1874,11 @@ export function useMedR1Store(options?: { liveRankingEnabled?: boolean }) {
     deleteFlashcard,
     filterQuestions,
     analytics,
+    includeDemoBaseline,
+    setIncludeDemoBaseline,
+    gamification,
+    pendingAchievement: pendingAchievementQueue[0] ?? null,
+    dismissPendingAchievement,
     liveRanking,
     errorNotebookQuestions,
     resetProgress,
