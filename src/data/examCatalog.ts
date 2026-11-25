@@ -110,4 +110,6 @@ export const OFFICIAL_EXAM_CATALOG: ExamCatalogEntry[] = [
     loader: () =>
       import('./uepa2023Questions').then((m) => m.UEPA_2023_QUESTIONS),
   },
+  // [MEDR1_AUTO_CATALOG_START]
+  // [MEDR1_AUTO_CATALOG_END]
 ];

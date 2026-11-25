@@ -7,3 +7,6 @@ server.mjs
 *.log
 .env*
 !.env.example
+
+# MedR1 Batch Pipeline
+tmp/

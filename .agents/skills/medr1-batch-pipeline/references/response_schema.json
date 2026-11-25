@@ -1,0 +1,66 @@
+{
+  "type": "OBJECT",
+  "required": [
+    "numeroOriginal",
+    "grandeAreaId",
+    "tema",
+    "subtema",
+    "tags",
+    "concordaComGabarito",
+    "precisaRevisaoHumana",
+    "comentarioGeral",
+    "explicacoesPorAlternativa",
+    "referencias"
+  ],
+  "properties": {
+    "numeroOriginal": { "type": "INTEGER" },
+    "grandeAreaId": {
+      "type": "STRING",
+      "enum": [
+        "clinica_medica",
+        "cirurgia_geral",
+        "pediatria",
+        "ginecologia_obstetricia",
+        "medicina_preventiva"
+      ]
+    },
+    "tema": { "type": "STRING" },
+    "subtema": { "type": "STRING" },
+    "tags": {
+      "type": "ARRAY",
+      "items": { "type": "STRING" }
+    },
+    "concordaComGabarito": {
+      "type": "BOOLEAN",
+      "description": "False se o gabarito oficial divergir da diretriz médica atual ou parecer incorreto."
+    },
+    "motivoDivergencia": {
+      "type": "STRING",
+      "nullable": true
+    },
+    "precisaRevisaoHumana": {
+      "type": "BOOLEAN",
+      "description": "True se houver imagem ambígua, divergência de gabarito, questão anulada ou baixa confiança."
+    },
+    "comentarioGeral": {
+      "type": "STRING",
+      "description": "Síntese clínica direta (máx. 3 frases) explicando o raciocínio-chave."
+    },
+    "explicacoesPorAlternativa": {
+      "type": "OBJECT",
+      "properties": {
+        "A": { "type": "STRING" },
+        "B": { "type": "STRING" },
+        "C": { "type": "STRING" },
+        "D": { "type": "STRING" },
+        "E": { "type": "STRING", "nullable": true }
+      },
+      "required": ["A", "B", "C", "D"]
+    },
+    "referencias": {
+      "type": "ARRAY",
+      "items": { "type": "STRING" },
+      "description": "Apenas diretrizes reais e verificáveis (ex: Ministério da Saúde, SBC, FEBRASGO, SBP, ATLS)."
+    }
+  }
+}

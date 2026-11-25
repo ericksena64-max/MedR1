@@ -1,0 +1,306 @@
+{
+  "versao": "1.0.0",
+  "descricao": "Taxonomia canônica do MedR1 no padrão Pareto 80/20 para provas de Residência Médica.",
+  "grandesAreas": {
+    "clinica_medica": {
+      "nome": "Clínica Médica",
+      "temas": {
+        "Cardiologia": [
+          "Hipertensão Arterial Sistêmica e Crise Hipertensiva",
+          "Síndrome Coronariana Aguda e IAM",
+          "Insuficiência Cardíaca Aguda e Crônica",
+          "Arritmias, Fibrilação Atrial e ACLS",
+          "Valvopatias e Endocardite Infecciosa",
+          "Dislipidemia, Risco Cardiovascular e Prevenção",
+          "Doenças do Pericárdio e Miocardiopatias"
+        ],
+        "Endocrinologia": [
+          "Diabetes Mellitus: Diagnóstico e Tratamento",
+          "Complicações Agudas do Diabetes (CAD e EHH)",
+          "Doenças da Tireoide (Hipo, Hiper e Nódulos)",
+          "Doenças da Adrenal (Cushing, Addison, Feocromocitoma)",
+          "Obesidade e Síndrome Metabólica",
+          "Osteoporose e Distúrbios do Cálcio",
+          "Doenças da Hipófise"
+        ],
+        "Pneumologia": [
+          "Pneumonia Adquirida na Comunidade e Nosocomial",
+          "Tuberculose Pulmonar e Extrapulmonar",
+          "Asma no Adulto",
+          "DPOC e Exacerbações",
+          "Tromboembolismo Pulmonar (TEP)",
+          "Derrame Pleural e Pneumotórax",
+          "Doenças Intersticiais e Neoplasia de Pulmão"
+        ],
+        "Infectologia": [
+          "HIV/AIDS e Infecções Oportunistas",
+          "Arboviroses (Dengue, Zika, Chikungunya, Febre Amarela)",
+          "ISTs e Sífilis no Adulto",
+          "Sepse e Choque Séptico",
+          "Meningites e Encefalites",
+          "Endemias Brasileiras (Malária, Leishmaniose, Chagas, Leptospirose)",
+          "Hepatites Virais",
+          "Antimicrobianos e Infecções de Pele/Partes Moles"
+        ],
+        "Nefrologia": [
+          "Lesão Renal Aguda (LRA)",
+          "Doença Renal Crônica (DRC)",
+          "Glomerulopatias (Nefrítica e Nefrótica)",
+          "Distúrbios Hidroeletrolíticos (Sódio e Potássio)",
+          "Distúrbios Ácido-Base",
+          "Infecção do Trato Urinário e Nefrolitíase"
+        ],
+        "Gastroenterologia e Hepatologia": [
+          "DRGE, Dispepsia e Doença Ulcerosa Péptica",
+          "Hemorragia Digestiva Alta e Baixa",
+          "Cirrose Hepática e Complicações (Ascite, PBE, Encefalopatia)",
+          "Doença Inflamatória Intestinal e Doença Celíaca",
+          "Diarreias Agudas e Crônicas",
+          "Pancreatite Aguda e Crônica"
+        ],
+        "Neurologia": [
+          "AVC Isquêmico e Hemorrágico",
+          "Cefaleias Primárias e Secundárias",
+          "Epilepsia e Estado de Mal Epiléptico",
+          "Demências e Delirium",
+          "Fraqueza Muscular, Guillain-Barré e Miastenia Gravis",
+          "Doença de Parkinson e Distúrbios do Movimento"
+        ],
+        "Hematologia": [
+          "Anemias Carenciais (Ferropriva e Megaloblástica)",
+          "Anemias Hemolíticas e Doença Falciforme",
+          "Leucemias, Linfomas e Mieloma Múltiplo",
+          "Distúrbios da Hemostasia e Plaquetopenias",
+          "Hemoterapia e Reações Transfusionais"
+        ],
+        "Reumatologia": [
+          "Artrite Reumatoide",
+          "Lúpus Eritematoso Sistêmico e SAAF",
+          "Espondiloartrites",
+          "Vasculites Sistêmicas",
+          "Artrites Microcristalinas (Gota) e Artrite Séptica",
+          "Osteoartrite e Fibromialgia"
+        ],
+        "Psiquiatria": [
+          "Transtornos Depressivos e Transtorno Bipolar",
+          "Transtornos de Ansiedade e TOC",
+          "Esquizofrenia e Transtornos Psicóticos",
+          "Dependência Química e Síndromes de Abstinência",
+          "Emergências Psiquiátricas e Risco de Suicídio"
+        ],
+        "Dermatologia": [
+          "Hanseníase",
+          "Câncer de Pele (Melanoma e Não Melanoma)",
+          "Farmacodermias Graves (SSJ, NET, DRESS)",
+          "Dermatoses Infecciosas e Inflamatórias"
+        ],
+        "Emergências e Terapia Intensiva": [
+          "Intoxicações Exógenas e Acidentes por Animais Peçonhentos",
+          "Insuficiência Respiratória, Ventilação Mecânica e SARA",
+          "Choque e Drogas Vasoativas",
+          "Cuidados Paliativos e Morte Encefálica"
+        ]
+      }
+    },
+    "cirurgia_geral": {
+      "nome": "Cirurgia Geral",
+      "temas": {
+        "Trauma e ATLS": [
+          "Atendimento Inicial (XABCDE) e Via Aérea Definitiva",
+          "Choque Hemorrágico e Reposição Volêmica",
+          "Trauma Torácico",
+          "Trauma Abdominal e Pélvico",
+          "Traumatismo Cranioencefálico e Raquimedular",
+          "Queimaduras e Trauma Elétrico"
+        ],
+        "Abdome Agudo": [
+          "Abdome Agudo Inflamatório (Apendicite e Diverticulite)",
+          "Abdome Agudo Obstrutivo",
+          "Abdome Agudo Perfurativo",
+          "Abdome Agudo Vascular (Isquemia Mesentérica)",
+          "Abdome Agudo Hemorrágico"
+        ],
+        "Vias Biliares, Fígado e Pâncreas": [
+          "Colelitíase e Colecistite Aguda",
+          "Coledocolitíase, Colangite e Mirizzi",
+          "Pancreatite Aguda e Complicações Cirúrgicas",
+          "Neoplasias Hepatobiliopancreáticas e Lesões Focais Hepáticas"
+        ],
+        "Parede Abdominal e Hérnias": [
+          "Hérnia Inguinal e Femoral (Classificação e Técnicas)",
+          "Hérnias Umbilical, Epigástrica e Incisional",
+          "Complicações de Hérnias (Encarceramento e Estrangulamento)"
+        ],
+        "Cirurgia Digestiva e Oncologia": [
+          "Câncer Colorretal e Pólipos",
+          "Câncer Gástrico e de Esôfago",
+          "Doenças Orificiais (Hemorroidas, Fissura, Fístula, Abscesso)",
+          "Doença do Refluxo, Acalasia e Cirurgia Bariátrica"
+        ],
+        "Perioperatório e Complicações Cirúrgicas": [
+          "Avaliação Pré-Operatória e Risco Cirúrgico",
+          "Resposta Metabólica ao Trauma e Nutrição Cirúrgica",
+          "Complicações Pós-Operatórias e Infecção de Sítio Cirúrgico",
+          "Cicatrização, Drenos e Fios Cirúrgicos"
+        ],
+        "Especialidades Cirúrgicas": [
+          "Urologia (Litíase, HPB, CA de Próstata, Torção Testicular)",
+          "Cirurgia Vascular (DAOP, Oclusão Arterial Aguda, TVP, Aneurisma de Aorta)",
+          "Cirurgia Pediátrica (Estenose Pilórica, Invaginação, Hérnias)",
+          "Ortopedia de Urgência (Fraturas Expostas e Síndrome Compartimental)",
+          "Otorrinolaringologia e Cabeça/Pescoço em Urgência"
+        ]
+      }
+    },
+    "pediatria": {
+      "nome": "Pediatria",
+      "temas": {
+        "Neonatologia": [
+          "Reanimação Neonatal (SBP)",
+          "Icterícia Neonatal",
+          "Sepse Neonatal Precoce e Tardia",
+          "Desconforto Respiratório do Recém-Nascido",
+          "Infecções Congênitas (STORCH e Sífilis Congênita)",
+          "Triagem Neonatal, Alojamento Conjunto e Distúrbios Metabólicos"
+        ],
+        "Puericultura, Crescimento e Desenvolvimento": [
+          "Aleitamento Materno e Alimentação Complementar",
+          "Avaliação do Crescimento e Curvas da OMS",
+          "Desenvolvimento Neuropsicomotor e Autismo (TEA)",
+          "Puberdade Normal, Precoce e Atraso Puberal",
+          "Desnutrição Grave, Obesidade e Carências Vitamínicas"
+        ],
+        "Imunizações": [
+          "Calendário Nacional de Vacinação (PNI)",
+          "Vacinas Especiais e Indicações do CRIE",
+          "Eventos Adversos Pós-Vacinação e Contraindicações"
+        ],
+        "Doenças Respiratórias Pediátricas": [
+          "IVAS (OMA, Sinusite, Faringoamigdalite, Laringite, Epiglotite)",
+          "Bronquiolite Viral Aguda",
+          "Pneumonia Adquirida na Comunidade na Infância",
+          "Asma e Lactente Sibilante",
+          "Aspiração de Corpo Estranho e Fibrose Cística"
+        ],
+        "Infectologia Pediátrica": [
+          "Doenças Exantemáticas (Sarampo, Rubéola, Escarlatina, Varicela, etc.)",
+          "Doença Diarreica Aguda e Planos de Reidratação (A, B, C)",
+          "Infecção do Trato Urinário na Infância",
+          "Meningites e Sepse em Pediatria",
+          "Tuberculose na Infância"
+        ],
+        "Emergências e Subespecialidades Pediátricas": [
+          "Reanimação Pediátrica (PALS) e Choque na Criança",
+          "Crise Convulsiva Febril e Epilepsia na Infância",
+          "Nefrologia Pediátrica (GNPE, Síndrome Nefrótica, SHU)",
+          "Cardiopatias Congênitas, Febre Reumática e Doença de Kawasaki",
+          "Hematologia Pediátrica (Anemia Ferropriva, PTI, Leucemia)",
+          "Maus-Tratos, Violência Infantil e Prevenção de Acidentes"
+        ]
+      }
+    },
+    "ginecologia_obstetricia": {
+      "nome": "Ginecologia e Obstetrícia",
+      "temas": {
+        "Assistência Pré-Natal e Fisiologia Obstétrica": [
+          "Diagnóstico de Gravidez e Modificações Fisiológicas",
+          "Rotina Pré-Natal, Exames e Suplementação",
+          "Infecções na Gestação e Transmissão Vertical (HIV, Sífilis, Toxoplasmose)",
+          "Avaliação da Vitalidade Fetal e Ultrassonografia Obstétrica"
+        ],
+        "Parto, Puerpério e Hemorragias Obstétricas": [
+          "Mecanismo de Parto, Assistência e Partograma",
+          "Indução, Distocias e Parto Operatório (Fórcipe/Vácuo/Cesárea)",
+          "Hemorragias da Primeira Metade (Abortamento, Ectópica, Mola)",
+          "Hemorragias da Segunda Metade (Placenta Prévia, DPP, Rotura Uterina)",
+          "Hemorragia Pós-Parto e Infecção Puerperal"
+        ],
+        "Intercorrências Clínicas na Gestação": [
+          "Síndromes Hipertensivas (Pré-Eclâmpsia, Eclâmpsia, HELLP)",
+          "Diabetes Mellitus Gestacional",
+          "Trabalho de Parto Prematuro e Rotura Prematura de Membranas (RPMO)",
+          "Doença Hemolítica Perinatal (Aloimunização Rh)",
+          "Gestação Gemelar e Restrição de Crescimento Fetal"
+        ],
+        "Ginecologia Endócrina e Planejamento Familiar": [
+          "Fisiologia do Ciclo Menstrual e Amenorreias",
+          "Síndrome dos Ovários Policísticos (SOP)",
+          "Sangramento Uterino Anormal (PALM-COEIN) e Miomatose",
+          "Climatério e Terapia Hormonal",
+          "Anticoncepção e Critérios de Elegibilidade da OMS",
+          "Infertilidade Conjugal"
+        ],
+        "Oncologia Ginecológica e Mastologia": [
+          "Rastreamento e Câncer de Colo Uterino (INCA/MS)",
+          "Rastreamento, Diagnóstico e Câncer de Mama",
+          "Doenças Benignas da Mama (BI-RADS, Mastite, Fluxo Papilar)",
+          "Hiperplasia e Câncer de Endométrio",
+          "Massas Anexiais e Câncer de Ovário"
+        ],
+        "Ginecologia Infecciosa e Uroginecologia": [
+          "Vulvovaginites e Corrimento Vaginal",
+          "Doença Inflamatória Pélvica (DIP) e Úlceras Genitais",
+          "Endometriose, Adenomiose e Dor Pélvica Crônica",
+          "Incontinência Urinária e Prolapso de Órgãos Pélvicos",
+          "Atendimento à Violência Sexual e Aborto Legal"
+        ]
+      }
+    },
+    "medicina_preventiva": {
+      "nome": "Medicina Preventiva e Social",
+      "temas": {
+        "SUS, Políticas Públicas e Gestão": [
+          "História, Princípios e Diretrizes do SUS (Leis 8.080 e 8.142)",
+          "Financiamento, Pactos e Redes de Atenção à Saúde (RAS)",
+          "Atenção Primária à Saúde, PNAB e Estratégia Saúde da Família",
+          "Controle Social e Sistemas de Informação em Saúde (SIM, SINASC, SINAN)"
+        ],
+        "Epidemiologia e Bioestatística": [
+          "Indicadores de Saúde (Mortalidade, Letalidade, Incidência, Prevalência)",
+          "Desenhos de Estudos Epidemiológicos (Coorte, Caso-Controle, ECR, Transversal)",
+          "Testes Diagnósticos (Sensibilidade, Especificidade, VPP, VPN, Curva ROC)",
+          "Medidas de Associação e Impacto (RR, OR, RAR, NNT)",
+          "Viés, Confundimento, Validade e Medicina Baseada em Evidências"
+        ],
+        "Vigilância em Saúde": [
+          "Vigilância Epidemiológica e Doenças de Notificação Compulsória",
+          "Investigação de Surtos, Epidemias e Endemias",
+          "Declaração de Óbito (DO) e Atestados"
+        ],
+        "Medicina de Família e Comunidade": [
+          "Método Clínico Centrado na Pessoa e Comunicação Clínica",
+          "Ferramentas de Abordagem Familiar e Comunitária (Genograma, Ecomapa)",
+          "Níveis de Prevenção, Prevenção Quaternária e Rastreamento Populacional",
+          "Cuidado Longitudinal, Acesso Avançado e Territorialização"
+        ],
+        "Saúde do Trabalhador e Ética Médica": [
+          "Saúde do Trabalhador, Doenças Ocupacionais, CAT e Schilling",
+          "Código de Ética Médica, Sigilo e Bioética",
+          "Documentos Médicos e Responsabilidade Profissional"
+        ]
+      }
+    }
+  },
+  "tags": [
+    "diagnostico",
+    "conduta-terapeutica",
+    "conduta-inicial",
+    "exame-complementar",
+    "fisiopatologia",
+    "rastreamento-prevencao",
+    "farmacologia",
+    "emergencia",
+    "atencao-primaria",
+    "diretriz-ms",
+    "imagem-clinica",
+    "ecg",
+    "radiografia",
+    "tomografia-ressonancia",
+    "partograma",
+    "tabela-ou-grafico",
+    "calculo-epidemiologico",
+    "doenca-regional-norte",
+    "pareto-alta-incidencia",
+    "pegadinha-classica"
+  ]
+}
