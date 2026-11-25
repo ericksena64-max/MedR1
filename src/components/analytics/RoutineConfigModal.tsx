@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { ChevronLeft, ChevronRight, Plus, X } from 'lucide-react';
+import { CalendarDays, ChevronLeft, ChevronRight, Plus, X } from 'lucide-react';
 import type { Flashcard } from '../../types/medical';
 import {
   buildWeeklySchedule,
@@ -137,6 +137,22 @@ export function RoutineConfigModal({
     applyTargetExams(next);
   };
 
+  const setExamDate = (exam: TargetExamPreset, dateIso: string) => {
+    updateAndPersist((prev) => {
+      const nextDates = { ...(prev.examDates ?? {}) };
+      if (dateIso.trim()) {
+        nextDates[exam] = dateIso.trim();
+      } else {
+        delete nextDates[exam];
+      }
+      return { ...prev, examDates: nextDates };
+    });
+  };
+
+  const setSimuladoWeekday = (day: WeekdayIndex | null) => {
+    updateAndPersist((prev) => ({ ...prev, simuladoWeekday: day }));
+  };
+
   const preview = useMemo(
     () =>
       buildWeeklySchedule({
@@ -159,7 +175,7 @@ export function RoutineConfigModal({
         if (e.target === e.currentTarget) onClose();
       }}
     >
-      <div className="w-full max-w-lg rounded-xl border border-slate-200/80 bg-white p-5 shadow-2xl dark:border-white/[0.08] dark:bg-[#131926] space-y-5">
+      <div className="max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl border border-black/5 bg-white p-5 shadow-2xl dark:border-white/[0.08] dark:bg-[#131926] space-y-5">
         <div className="flex items-start justify-between gap-3 border-b border-slate-200/70 pb-3 dark:border-white/[0.08]">
           <div>
             <h3 className="text-sm font-semibold text-slate-900 dark:text-white">
@@ -241,6 +257,54 @@ export function RoutineConfigModal({
                 )}
               </div>
             ))}
+          </div>
+
+          {/* Exam Date Pickers (per selected exam) */}
+          <div className="space-y-1.5 pt-1">
+            <p className="inline-flex items-center gap-1.5 text-[11px] font-medium text-[#86868B] dark:text-slate-400">
+              <CalendarDays size={13} strokeWidth={1.5} />
+              <span>Data de cada prova (ativa periodização automática até o Dia D)</span>
+            </p>
+            <div className="space-y-1.5">
+              {selectedExams.map((exam) => {
+                const entry = preview.calendarSummary.entries.find((e) => e.exam === exam);
+                return (
+                  <div
+                    key={`date-${exam}`}
+                    className="flex items-center justify-between gap-2 rounded-lg border border-black/5 bg-[#F5F5F7]/70 px-2.5 py-1.5 dark:border-white/[0.07] dark:bg-[#0B0F17]/70"
+                  >
+                    <div className="flex items-center gap-2 min-w-0">
+                      <span className="text-xs font-semibold text-[#1D1D1F] dark:text-white">
+                        {exam}
+                      </span>
+                      {entry && (
+                        <span
+                          className={cn(
+                            'text-[10px] font-medium tabular-nums truncate',
+                            entry.isPast
+                              ? 'text-[#86868B] line-through'
+                              : 'text-[#007AFF] dark:text-sky-400'
+                          )}
+                        >
+                          {entry.isPast
+                            ? 'Já realizada'
+                            : entry.isToday
+                            ? 'Hoje!'
+                            : `em ${entry.daysRemaining}d`}
+                        </span>
+                      )}
+                    </div>
+                    <input
+                      type="date"
+                      value={config.examDates?.[exam] ?? ''}
+                      onChange={(e) => setExamDate(exam, e.target.value)}
+                      aria-label={`Data da prova ${exam}`}
+                      className="rounded-lg border border-[#D1D1D6] bg-white px-2 py-1 text-xs tabular-nums text-[#1D1D1F] focus:outline-none focus:border-[#007AFF] focus:ring-3 focus:ring-[#007AFF]/20 dark:border-white/15 dark:bg-[#182030] dark:text-white transition"
+                    />
+                  </div>
+                );
+              })}
+            </div>
           </div>
 
           {/* Available Exams to Add */}
@@ -356,6 +420,79 @@ export function RoutineConfigModal({
             </button>
           </div>
         </div>
+
+        {/* Simulado Day Selector */}
+        <div className="space-y-2">
+          <p className="text-xs font-medium text-slate-600 dark:text-slate-300">
+            Dia preferido para Simulado / Prova na Íntegra
+          </p>
+          <div className="flex flex-wrap gap-1.5">
+            {WEEKDAY_LABELS.map((day) => {
+              const selected = config.simuladoWeekday === day.index;
+              return (
+                <button
+                  key={`sim-${day.index}`}
+                  type="button"
+                  onClick={() => setSimuladoWeekday(day.index)}
+                  aria-pressed={selected}
+                  className={cn(
+                    'rounded-lg border px-2.5 py-1 text-xs font-medium transition-colors cursor-pointer',
+                    selected
+                      ? 'border-[#007AFF] bg-[#007AFF]/10 text-[#007AFF] dark:border-sky-400 dark:bg-sky-500/15 dark:text-sky-300'
+                      : 'border-slate-200 bg-white text-slate-600 hover:text-slate-900 dark:border-white/10 dark:bg-[#0B0F17] dark:text-slate-400'
+                  )}
+                >
+                  {day.short}
+                </button>
+              );
+            })}
+            <button
+              type="button"
+              onClick={() => setSimuladoWeekday(null)}
+              aria-pressed={config.simuladoWeekday === null}
+              className={cn(
+                'rounded-lg border px-2.5 py-1 text-xs font-medium transition-colors cursor-pointer',
+                config.simuladoWeekday === null
+                  ? 'border-[#007AFF] bg-[#007AFF]/10 text-[#007AFF] dark:border-sky-400 dark:bg-sky-500/15 dark:text-sky-300'
+                  : 'border-slate-200 bg-white text-slate-600 hover:text-slate-900 dark:border-white/10 dark:bg-[#0B0F17] dark:text-slate-400'
+              )}
+            >
+              Nenhum
+            </button>
+          </div>
+        </div>
+
+        {/* Pareto Feasibility Preview until Exam Date */}
+        {preview.feasibility.status !== 'sem_data' && (
+          <div
+            className={cn(
+              'rounded-xl border p-3 text-xs space-y-1.5',
+              preview.feasibility.status === 'critico'
+                ? 'border-[#FF3B30]/20 bg-[#FF3B30]/10 text-[#D70015] dark:border-red-500/30 dark:bg-red-500/10 dark:text-red-300'
+                : preview.feasibility.status === 'apertado'
+                ? 'border-amber-200 bg-amber-50/80 text-amber-800 dark:border-amber-500/30 dark:bg-amber-500/10 dark:text-amber-300'
+                : 'border-emerald-200 bg-emerald-50/70 text-emerald-800 dark:border-emerald-500/30 dark:bg-emerald-500/10 dark:text-emerald-300'
+            )}
+          >
+            <div className="flex items-center justify-between gap-2 font-semibold tabular-nums">
+              <span>{preview.calendarSummary.activePhase.label}</span>
+              <span>Cobertura Pareto: {preview.feasibility.coveragePct}%</span>
+            </div>
+            <p className="text-[11px] opacity-90 leading-snug">
+              {preview.feasibility.summaryMessage}
+            </p>
+            {preview.feasibility.recommendedHoursPerDay &&
+              preview.feasibility.recommendedHoursPerDay > config.hoursPerDay && (
+                <button
+                  type="button"
+                  onClick={() => setHours(preview.feasibility.recommendedHoursPerDay!)}
+                  className="mt-1 inline-flex items-center rounded-md bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-[#1D1D1F] shadow-xs hover:bg-white transition cursor-pointer tabular-nums"
+                >
+                  Ajustar para {preview.feasibility.recommendedHoursPerDay}h/dia
+                </button>
+              )}
+          </div>
+        )}
 
         <div className="flex items-center justify-between gap-3 border-t border-slate-200/70 pt-3 dark:border-white/[0.08]">
           <span className="font-mono text-xs tabular-nums text-slate-500 dark:text-slate-400 truncate">

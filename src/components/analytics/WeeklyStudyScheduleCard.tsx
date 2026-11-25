@@ -7,6 +7,8 @@ import {
   ArrowRight,
   Layers,
   BarChart3,
+  CalendarDays,
+  Timer,
 } from 'lucide-react';
 import type { Flashcard, GrandeAreaId, MedicalQuestion } from '../../types/medical';
 import type { HomeBottleneck } from '../../lib/homeIntelligence';
@@ -20,6 +22,7 @@ import {
   type WeeklyScheduleConfig,
   type WeeklyTopicInput,
 } from '../../lib/weeklySchedule';
+import { buildExamWeeksRoadmap } from '../../lib/examRoadmap';
 import { RoutineConfigModal } from './RoutineConfigModal';
 import { cn } from '../../lib/utils';
 
@@ -90,6 +93,7 @@ export function WeeklyStudyScheduleCard({
     }
   });
   const [weekOffset, setWeekOffset] = useState(0);
+  const [showRoadmap, setShowRoadmap] = useState(false);
   const [internalConfigOpen, setInternalConfigOpen] = useState(false);
 
   const isExternallyControlled = typeof routineModalOpen === 'boolean';
@@ -132,7 +136,18 @@ export function WeeklyStudyScheduleCard({
     [config, flashcards, weekOffset, topicRows, answeredTodayByTopic, questions]
   );
 
+  const roadmapWeeks = useMemo(
+    () =>
+      buildExamWeeksRoadmap({
+        targetExams: schedule.targetExams,
+        examDates: config.examDates,
+        maxWeeks: 24,
+      }),
+    [schedule.targetExams, config.examDates]
+  );
+
   const todayCardsCount = schedule.todayPlan?.flashcardsCount ?? 0;
+  const nextExam = schedule.calendarSummary.nextExam;
 
   return (
     <section
@@ -169,18 +184,107 @@ export function WeeklyStudyScheduleCard({
           <span className="hidden md:inline font-mono text-[11px] tabular-nums text-slate-600 dark:text-slate-300">
             · {schedule.totalWeeklyHours}h · {schedule.totalWeeklyQuestions}q · {schedule.totalWeeklyFlashcards} cards
           </span>
+          {nextExam && (
+            <span className="inline-flex items-center gap-1 rounded-md bg-white/90 px-2 py-0.5 text-[11px] font-semibold text-[#1D1D1F] border border-black/5 tabular-nums dark:bg-[#0B0F17]/80 dark:text-slate-100 dark:border-white/10">
+              <CalendarDays size={12} strokeWidth={1.5} className="text-[#007AFF] dark:text-sky-400" />
+              <span>
+                {nextExam.exam} em {nextExam.daysRemaining}d · {schedule.weekPhase.shortLabel}
+              </span>
+            </span>
+          )}
+          {schedule.feasibility.status === 'critico' && (
+            <button
+              type="button"
+              onClick={() => setConfigOpen(true)}
+              className="inline-flex items-center rounded-md bg-[#FF3B30]/10 px-2 py-0.5 text-[11px] font-semibold text-[#D70015] hover:bg-[#FF3B30]/15 transition cursor-pointer tabular-nums"
+            >
+              Cobertura {schedule.feasibility.coveragePct}%
+            </button>
+          )}
         </div>
 
-        <button
-          type="button"
-          onClick={() => setConfigOpen(true)}
-          aria-expanded={configOpen}
-          className="inline-flex items-center gap-1 rounded-md border border-[#007AFF]/25 bg-white/80 px-2.5 py-1 text-[11px] font-medium text-[#007AFF] hover:bg-white dark:border-sky-400/25 dark:bg-[#0B0F17]/60 dark:text-sky-300 dark:hover:bg-[#0B0F17] transition-colors cursor-pointer"
-        >
-          <SlidersHorizontal size={12} strokeWidth={1.5} />
-          <span>Editar rota</span>
-        </button>
+        <div className="flex items-center gap-1.5">
+          <button
+            type="button"
+            onClick={() => setShowRoadmap((v) => !v)}
+            aria-expanded={showRoadmap}
+            className={cn(
+              'inline-flex items-center gap-1 rounded-md border px-2.5 py-1 text-[11px] font-medium transition-colors cursor-pointer',
+              showRoadmap
+                ? 'border-[#007AFF] bg-[#007AFF] text-white'
+                : 'border-[#007AFF]/25 bg-white/80 text-[#007AFF] hover:bg-white dark:border-sky-400/25 dark:bg-[#0B0F17]/60 dark:text-sky-300 dark:hover:bg-[#0B0F17]'
+            )}
+          >
+            <CalendarDays size={12} strokeWidth={1.5} />
+            <span>Mapa até a Prova</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setConfigOpen(true)}
+            aria-expanded={configOpen}
+            className="inline-flex items-center gap-1 rounded-md border border-[#007AFF]/25 bg-white/80 px-2.5 py-1 text-[11px] font-medium text-[#007AFF] hover:bg-white dark:border-sky-400/25 dark:bg-[#0B0F17]/60 dark:text-sky-300 dark:hover:bg-[#0B0F17] transition-colors cursor-pointer"
+          >
+            <SlidersHorizontal size={12} strokeWidth={1.5} />
+            <span>Editar rota</span>
+          </button>
+        </div>
       </div>
+
+      {/* Collapsible Interactive Timeline: Mapa de Semanas até a Prova */}
+      {showRoadmap && (
+        <div className="border-b border-black/5 bg-[#F5F5F7]/70 px-4 py-3 sm:px-5 dark:border-white/[0.06] dark:bg-[#0F141F] space-y-2">
+          <div className="flex flex-wrap items-center justify-between gap-2 text-xs">
+            <span className="font-semibold text-[#1D1D1F] dark:text-white">
+              Linha do Tempo · {schedule.weekPhase.label}
+            </span>
+            <span className="text-[11px] text-[#86868B] dark:text-slate-400">
+              {nextExam
+                ? `Clique em qualquer semana para inspecionar a rota até ${nextExam.exam}`
+                : 'Defina a data da prova em "Editar rota" para ativar a contagem regressiva'}
+            </span>
+          </div>
+
+          <div className="flex items-center gap-1.5 overflow-x-auto pb-1">
+            {roadmapWeeks.map((item) => {
+              const isSelected = item.weekOffset === weekOffset;
+              const hasExam = item.examEvents.length > 0;
+              return (
+                <button
+                  key={item.weekOffset}
+                  type="button"
+                  onClick={() => setWeekOffset(item.weekOffset)}
+                  className={cn(
+                    'flex shrink-0 flex-col items-start rounded-xl border px-3 py-2 text-left transition cursor-pointer tabular-nums min-w-[98px]',
+                    isSelected
+                      ? 'border-[#007AFF] bg-[#007AFF] text-white shadow-xs'
+                      : hasExam
+                      ? 'border-[#FF3B30]/35 bg-[#FF3B30]/10 text-[#D70015] dark:border-red-400/35 dark:bg-red-500/15 dark:text-red-300'
+                      : 'border-black/5 bg-white text-[#1D1D1F] hover:border-[#007AFF]/40 dark:border-white/10 dark:bg-[#161E2E] dark:text-slate-200'
+                  )}
+                >
+                  <div className="flex w-full items-center justify-between gap-1 text-[10px] font-semibold">
+                    <span>Sem {item.weekNumber}</span>
+                    <span className={cn(isSelected ? 'text-white/85' : 'text-[#86868B] dark:text-slate-400')}>
+                      {item.label}
+                    </span>
+                  </div>
+                  <span
+                    className={cn(
+                      'mt-0.5 text-[10px] font-medium truncate max-w-full',
+                      isSelected ? 'text-white/95' : 'text-[#86868B] dark:text-slate-400'
+                    )}
+                  >
+                    {hasExam
+                      ? `Dia D · ${item.examEvents.join(', ')}`
+                      : item.phase.shortLabel}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      )}
 
       <div className="p-4 sm:p-5 space-y-4">
         {/* Cabeçalho Hero: Título + Ações Primárias */}
@@ -325,7 +429,28 @@ export function WeeklyStudyScheduleCard({
                 )}
               </div>
 
-              {day.isActive ? (
+              {day.isExamDay ? (
+                <div className="flex flex-1 flex-col items-center justify-center rounded-lg border border-[#007AFF]/30 bg-[#007AFF]/10 py-6 text-center px-2">
+                  <span className="text-xs font-semibold text-[#007AFF] dark:text-sky-300">
+                    Dia da Prova
+                  </span>
+                  <span className="mt-1 text-[11px] font-medium text-[#1D1D1F] dark:text-white">
+                    {day.examDayLabels?.join(' · ')}
+                  </span>
+                  <span className="mt-1 text-[10px] text-[#86868B] dark:text-slate-400">
+                    Confie no seu preparo!
+                  </span>
+                </div>
+              ) : day.isExamEve ? (
+                <div className="flex flex-1 flex-col items-center justify-center rounded-lg border border-dashed border-emerald-300/70 bg-emerald-50/40 py-6 text-center px-2 dark:border-emerald-500/30 dark:bg-emerald-500/10">
+                  <span className="text-xs font-semibold text-emerald-700 dark:text-emerald-300">
+                    Véspera da Prova
+                  </span>
+                  <span className="mt-1 text-[10px] text-[#86868B] dark:text-slate-400">
+                    Revisão leve de pérolas & descanso
+                  </span>
+                </div>
+              ) : day.isActive ? (
                 <div className="flex flex-1 flex-col gap-1.5">
                   {/* Compact Flashcards Block */}
                   <button
@@ -347,12 +472,15 @@ export function WeeklyStudyScheduleCard({
                   {day.topicBlocks.length > 0 ? (
                     day.topicBlocks.map((block) => {
                       const statusMeta = STATUS_META[block.status];
+                      const isSimuladoBlock = block.blockKind === 'simulado';
                       return (
                         <button
                           key={block.id}
                           type="button"
                           onClick={() => {
-                            if (onPracticeTopic) {
+                            if (isSimuladoBlock) {
+                              onGoToQuestionBank();
+                            } else if (onPracticeTopic) {
                               onPracticeTopic({
                                 topicLabel: block.subtema ?? block.topic,
                                 matchedTema: block.topic,
@@ -364,18 +492,32 @@ export function WeeklyStudyScheduleCard({
                             }
                           }}
                           title={`Treinar ${block.subtema ? `${block.topic} · ${block.subtema}` : block.topic} (${block.estimatedQuestions} questões · ~${block.estimatedMinutes} min)`}
-                          className="group w-full rounded-lg border border-slate-200/75 bg-white px-2.5 py-2 text-left hover:border-[#007AFF]/45 hover:bg-[#007AFF]/[0.03] dark:border-white/[0.08] dark:bg-[#161E2E] dark:hover:border-sky-400/45 transition-colors cursor-pointer space-y-1"
+                          className={cn(
+                            'group w-full rounded-lg border px-2.5 py-2 text-left transition-colors cursor-pointer space-y-1',
+                            isSimuladoBlock
+                              ? 'border-[#007AFF]/35 bg-[#007AFF]/[0.06] hover:bg-[#007AFF]/10 dark:border-sky-400/35 dark:bg-sky-500/10'
+                              : 'border-slate-200/75 bg-white hover:border-[#007AFF]/45 hover:bg-[#007AFF]/[0.03] dark:border-white/[0.08] dark:bg-[#161E2E] dark:hover:border-sky-400/45'
+                          )}
                         >
                           <div className="flex items-center justify-between gap-1 text-[10px]">
-                            <span className="text-slate-500 dark:text-slate-400 truncate">
-                              {block.subtema ? block.topic : block.shortArea}
+                            <span className="inline-flex items-center gap-1 text-slate-500 dark:text-slate-400 truncate">
+                              {isSimuladoBlock && (
+                                <Timer size={11} strokeWidth={1.5} className="text-[#007AFF] dark:text-sky-400 shrink-0" />
+                              )}
+                              <span className="truncate">
+                                {isSimuladoBlock
+                                  ? 'Simulado'
+                                  : block.subtema
+                                  ? block.topic
+                                  : block.shortArea}
+                              </span>
                             </span>
                             <span className="font-mono font-semibold tabular-nums text-slate-700 dark:text-slate-200 shrink-0">
                               {block.estimatedQuestions}q
                             </span>
                           </div>
                           <p className="text-[11px] font-semibold leading-snug text-slate-900 group-hover:text-[#007AFF] dark:text-slate-100 dark:group-hover:text-sky-300 line-clamp-2">
-                            {block.subtema ?? block.topic}
+                            {isSimuladoBlock ? block.topic : block.subtema ?? block.topic}
                           </p>
                           {block.reasonTag && (
                             <span className="inline-block max-w-full truncate rounded bg-[#007AFF]/[0.08] px-1.5 py-0.5 text-[9px] font-medium text-[#007AFF] dark:bg-sky-500/15 dark:text-sky-300">

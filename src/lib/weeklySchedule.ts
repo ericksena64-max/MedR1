@@ -8,11 +8,25 @@ import {
   type TargetExamBoard,
 } from './examWeights';
 import { GRANDES_AREAS } from '../data/taxonomy';
+import {
+  computeExamCalendarSummary,
+  computeUrgencyAdjustedExamWeights,
+  parseIsoDateLocal,
+  type ExamCalendarSummary,
+  type ExamDateMap,
+  type StudyPhaseMeta,
+} from './examCalendar';
+import {
+  computeParetoFeasibility,
+  type ParetoFeasibilityReport,
+} from './examRoadmap';
 
 export type StudyPaceMode = 'prova' | 'estudo';
 export type WeekdayIndex = 0 | 1 | 2 | 3 | 4 | 5 | 6;
 export type TargetExamPreset = TargetExamBoard;
 export type TopicBlockStatus = 'nao_iniciado' | 'em_progresso' | 'finalizado';
+
+export type TopicBlockKind = 'estudo' | 'simulado' | 'revisao_leve';
 
 export interface WeeklyScheduleConfig {
   activeDays: WeekdayIndex[];
@@ -20,6 +34,8 @@ export interface WeeklyScheduleConfig {
   paceMode: StudyPaceMode;
   targetExam?: TargetExamPreset;
   targetExams?: TargetExamPreset[];
+  examDates?: ExamDateMap;
+  simuladoWeekday?: WeekdayIndex | null;
 }
 
 export interface DailyQuestionQuota {
@@ -47,6 +63,7 @@ export interface WeeklyTopicBlock {
   answeredToday: number;
   status: TopicBlockStatus;
   reasonTag: string;
+  blockKind?: TopicBlockKind;
 }
 
 export interface WeeklyDayPlan {
@@ -65,6 +82,9 @@ export interface WeeklyDayPlan {
   netQuestionMinutes: number;
   estimatedQuestions: number;
   topicBlocks: WeeklyTopicBlock[];
+  isExamDay?: boolean;
+  examDayLabels?: TargetExamPreset[];
+  isExamEve?: boolean;
 }
 
 export type IncidenceSource = 'bank' | 'mixed' | 'fallback';
@@ -82,6 +102,9 @@ export interface WeeklyScheduleResult {
   totalWeeklyQuestions: number;
   totalWeeklyFlashcards: number;
   todayPlan: WeeklyDayPlan | null;
+  calendarSummary: ExamCalendarSummary;
+  weekPhase: StudyPhaseMeta;
+  feasibility: ParetoFeasibilityReport;
 }
 
 export const WEEKLY_SCHEDULE_STORAGE_KEY = 'medr1_weekly_schedule_v1';
@@ -147,6 +170,8 @@ export const DEFAULT_WEEKLY_SCHEDULE_CONFIG: WeeklyScheduleConfig = {
   paceMode: 'estudo',
   targetExam: 'UEPA',
   targetExams: ['UEPA'],
+  examDates: {},
+  simuladoWeekday: 6,
 };
 
 function toLocalDateKey(date: Date): string {
@@ -221,7 +246,8 @@ function scoreTopicForExams(
   topic: WeeklyTopicInput,
   exams: TargetExamPreset[],
   examWeights: Record<TargetExamPreset, number>,
-  bankProfiles: Map<TargetExamPreset, BankBoardIncidenceProfile>
+  bankProfiles: Map<TargetExamPreset, BankBoardIncidenceProfile>,
+  phaseId: StudyPhaseMeta['id'] = 'sem_data'
 ): ScoredTopicCandidate {
   let weightedIncidence = 0;
   const paretoHits: TargetExamPreset[] = [];
@@ -250,7 +276,21 @@ function scoreTopicForExams(
     ((clampedPct / 100) * safeAnswered + LAPLACE_ALPHA * LAPLACE_PRIOR) /
     (safeAnswered + LAPLACE_ALPHA);
 
-  const score = compositeIncidence * (1 - smoothedAccuracy);
+  let phaseMultiplier = 1.0;
+  const errorDeficit = 1 - smoothedAccuracy;
+  if (phaseId === 'base') {
+    // Base phase rewards uncovered Pareto topics
+    phaseMultiplier = safeAnswered === 0 ? 1.15 : 1.0;
+  } else if (phaseId === 'aprofundamento') {
+    // Deepening phase amplifies real accuracy gaps
+    phaseMultiplier = 1 + errorDeficit * 0.6;
+  } else if (phaseId === 'reta_final') {
+    // Final sprint focuses strictly on Pareto core & weak topics (<70%)
+    const isWeak = safeAnswered >= 3 && clampedPct < 70;
+    phaseMultiplier = (paretoHits.length > 0 ? 1.3 : 0.65) * (isWeak ? 1.35 : 1.0);
+  }
+
+  const score = compositeIncidence * errorDeficit * phaseMultiplier;
 
   let reasonTag: string;
   if (paretoHits.length >= 2) {
@@ -301,12 +341,36 @@ export function loadWeeklyScheduleConfig(rawJson: string | null): WeeklySchedule
       targetExam: parsed.targetExam,
     });
 
+    const validExamSet = new Set<string>(TARGET_EXAM_PRESETS);
+    const examDates: ExamDateMap = {};
+    if (parsed.examDates && typeof parsed.examDates === 'object') {
+      for (const [k, v] of Object.entries(parsed.examDates)) {
+        if (validExamSet.has(k) && typeof v === 'string' && parseIsoDateLocal(v)) {
+          examDates[k as TargetExamPreset] = v.trim();
+        }
+      }
+    }
+
+    let simuladoWeekday: WeekdayIndex | null = DEFAULT_WEEKLY_SCHEDULE_CONFIG.simuladoWeekday ?? 6;
+    if (parsed.simuladoWeekday === null) {
+      simuladoWeekday = null;
+    } else if (
+      typeof parsed.simuladoWeekday === 'number' &&
+      Number.isInteger(parsed.simuladoWeekday) &&
+      parsed.simuladoWeekday >= 0 &&
+      parsed.simuladoWeekday <= 6
+    ) {
+      simuladoWeekday = parsed.simuladoWeekday as WeekdayIndex;
+    }
+
     return {
       activeDays,
       hoursPerDay,
       paceMode,
       targetExam: targetExams[0],
       targetExams,
+      examDates,
+      simuladoWeekday,
     };
   } catch {
     return { ...DEFAULT_WEEKLY_SCHEDULE_CONFIG };
@@ -355,7 +419,51 @@ export function buildWeeklySchedule({
   const targetExams = normalizeTargetExams(config);
   const targetExam = targetExams[0];
   const targetExamsLabel = targetExams.join(' + ');
-  const examWeights = computeExamPriorityWeights(targetExams);
+  const today = new Date(
+    referenceDate.getFullYear(),
+    referenceDate.getMonth(),
+    referenceDate.getDate()
+  );
+  const todayKey = toLocalDateKey(today);
+
+  // Sunday of the target week
+  const sunday = new Date(today);
+  sunday.setDate(today.getDate() - today.getDay() + weekOffset * 7);
+
+  // Exam calendar, countdown, active phase for the displayed week, and urgency-adjusted weights
+  const calendarSummary = computeExamCalendarSummary(targetExams, config.examDates, today);
+  const weekRefDate = weekOffset === 0 ? today : sunday;
+  const weekCalendarSummary = computeExamCalendarSummary(
+    targetExams,
+    config.examDates,
+    weekRefDate
+  );
+  const weekPhase = weekCalendarSummary.activePhase;
+  const hasUpcomingExamDates = calendarSummary.nextExam !== null;
+
+  const examWeights = hasUpcomingExamDates
+    ? computeUrgencyAdjustedExamWeights(targetExams, config.examDates, weekRefDate)
+    : computeExamPriorityWeights(targetExams);
+
+  // Index exam dates and their eves by YYYY-MM-DD for quick day tagging
+  const examLabelsByDate = new Map<string, TargetExamPreset[]>();
+  const examEveDateSet = new Set<string>();
+  if (config.examDates) {
+    for (const exam of targetExams) {
+      const iso = config.examDates[exam];
+      if (!iso) continue;
+      const parsed = parseIsoDateLocal(iso);
+      if (!parsed) continue;
+      const key = toLocalDateKey(parsed);
+      const list = examLabelsByDate.get(key) ?? [];
+      list.push(exam);
+      examLabelsByDate.set(key, list);
+
+      const eve = new Date(parsed);
+      eve.setDate(parsed.getDate() - 1);
+      examEveDateSet.add(toLocalDateKey(eve));
+    }
+  }
 
   // Build bank-driven incidence profile for each target exam (fallback only if board lacks questions)
   const bankProfiles = new Map<TargetExamPreset, BankBoardIncidenceProfile>();
@@ -376,17 +484,6 @@ export function buildWeeklySchedule({
       : boardsUsingBank === 0
       ? 'fallback'
       : 'mixed';
-
-  const today = new Date(
-    referenceDate.getFullYear(),
-    referenceDate.getMonth(),
-    referenceDate.getDate()
-  );
-  const todayKey = toLocalDateKey(today);
-
-  // Sunday of the target week
-  const sunday = new Date(today);
-  sunday.setDate(today.getDate() - today.getDay() + weekOffset * 7);
 
   // Count flashcards by local date key; overdue cards fold into today
   const flashcardsByDate = new Map<string, number>();
@@ -432,7 +529,9 @@ export function buildWeeklySchedule({
   }
 
   const rankedCandidates = candidatePool
-    .map((topic) => scoreTopicForExams(topic, targetExams, examWeights, bankProfiles))
+    .map((topic) =>
+      scoreTopicForExams(topic, targetExams, examWeights, bankProfiles, weekPhase.id)
+    )
     .sort((a, b) => b.score - a.score);
 
   // Normalize answeredTodayByTopic keys for resilient matching
@@ -493,7 +592,26 @@ export function buildWeeklySchedule({
   const days: WeeklyDayPlan[] = [];
   const usedInWeekIndices = new Set<number>();
   let prevActiveDayTopicKeys = new Set<string>();
-  let weekCursor = 0;
+  const activeDayCount = Math.max(1, config.activeDays.length);
+  let weekCursor =
+    rankedCandidates.length > 0 && weekOffset !== 0
+      ? Math.abs(weekOffset * blocksPerActiveDay * activeDayCount) %
+        rankedCandidates.length
+      : 0;
+
+  const weekHasExamDay = Array.from({ length: 7 }).some((_, i) => {
+    const dCheck = new Date(sunday);
+    dCheck.setDate(sunday.getDate() + i);
+    return examLabelsByDate.has(toLocalDateKey(dCheck));
+  });
+
+  const shouldScheduleSimuladoThisWeek =
+    hasUpcomingExamDates &&
+    !weekHasExamDay &&
+    config.simuladoWeekday !== null &&
+    config.simuladoWeekday !== undefined &&
+    weekPhase.simuladoCadence !== 'nenhum' &&
+    (weekPhase.simuladoCadence === 'semanal' || Math.abs(weekOffset) % 2 === 0);
 
   for (let i = 0; i < 7; i++) {
     const d = new Date(sunday);
@@ -502,16 +620,53 @@ export function buildWeeklySchedule({
     const dateKey = toLocalDateKey(d);
     const diffDays = Math.round((d.getTime() - today.getTime()) / 86_400_000);
     const isToday = diffDays === 0;
+    const examDayLabels = examLabelsByDate.get(dateKey);
+    const isExamDay = Boolean(examDayLabels && examDayLabels.length > 0);
+    const isExamEve = !isExamDay && examEveDateSet.has(dateKey);
     const isActive = activeSet.has(weekday);
     const flashcardsCount = flashcardsByDate.get(dateKey) ?? 0;
-    const hours = isActive ? config.hoursPerDay : 0;
 
-    const quota = isActive
-      ? calculateDailyQuestionQuota(hours, flashcardsCount, config.paceMode)
-      : { flashcardMinutes: 0, netQuestionMinutes: 0, estimatedQuestions: 0 };
+    // Taper in exam week (loadMultiplier = 0.6), rest on exam eve & exam day
+    const effectiveHours =
+      !isActive || isExamDay || isExamEve
+        ? 0
+        : Number((config.hoursPerDay * weekPhase.loadMultiplier).toFixed(2));
+    const hours = isActive ? effectiveHours : 0;
+
+    const quota =
+      isActive && effectiveHours > 0
+        ? calculateDailyQuestionQuota(effectiveHours, flashcardsCount, config.paceMode)
+        : { flashcardMinutes: 0, netQuestionMinutes: 0, estimatedQuestions: 0 };
+
+    const isSimuladoDay =
+      shouldScheduleSimuladoThisWeek &&
+      isActive &&
+      !isExamDay &&
+      !isExamEve &&
+      weekday === config.simuladoWeekday;
 
     const topicBlocks: WeeklyTopicBlock[] = [];
-    if (isActive && quota.estimatedQuestions > 0 && rankedCandidates.length > 0) {
+    if (isSimuladoDay && quota.estimatedQuestions > 0) {
+      const simuladoExamLabel =
+        weekCalendarSummary.nextExam?.exam ?? targetExam;
+      const simuladoQ = Math.min(100, Math.max(20, quota.estimatedQuestions));
+      topicBlocks.push({
+        id: `${dateKey}-simulado-${simuladoExamLabel}`,
+        topic:
+          weekPhase.id === 'reta_final'
+            ? `Prova na Íntegra · ${simuladoExamLabel}`
+            : `Simulado Cronometrado · ${simuladoExamLabel}`,
+        subtema: 'Treino completo de tempo, resistência e calibração de corte',
+        grandeAreaId: 'clinica_medica',
+        shortArea: 'Simulado',
+        estimatedQuestions: simuladoQ,
+        estimatedMinutes: Math.round(simuladoQ * PACE_MINUTES_PER_QUESTION.prova),
+        answeredToday: 0,
+        status: 'nao_iniciado',
+        reasonTag: weekPhase.shortLabel,
+        blockKind: 'simulado',
+      });
+    } else if (isActive && quota.estimatedQuestions > 0 && rankedCandidates.length > 0) {
       const countForDay = Math.min(
         blocksPerActiveDay,
         rankedCandidates.length,
@@ -643,6 +798,7 @@ export function buildWeeklySchedule({
           answeredToday,
           status,
           reasonTag: picked.reasonTag,
+          blockKind: weekPhase.id === 'semana_prova' ? 'revisao_leve' : 'estudo',
         });
       }
 
@@ -665,6 +821,9 @@ export function buildWeeklySchedule({
       netQuestionMinutes: quota.netQuestionMinutes,
       estimatedQuestions: quota.estimatedQuestions,
       topicBlocks,
+      isExamDay,
+      examDayLabels,
+      isExamEve,
     });
   }
 
@@ -684,13 +843,27 @@ export function buildWeeklySchedule({
       ? `${sunday.getDate()} de ${startMonthFull} - ${saturday.getDate()} de ${endMonthFull} de ${saturday.getFullYear()}`
       : `${sunday.getDate()} de ${startMonthFull} de ${sunday.getFullYear()} - ${saturday.getDate()} de ${endMonthFull} de ${saturday.getFullYear()}`;
 
-  const totalWeeklyHours = days.reduce((acc, day) => acc + day.hours, 0);
+  const totalWeeklyHours = Number(
+    days.reduce((acc, day) => acc + day.hours, 0).toFixed(1)
+  );
   const totalWeeklyQuestions = days.reduce((acc, day) => acc + day.estimatedQuestions, 0);
   const totalWeeklyFlashcards = days.reduce(
     (acc, day) => acc + (day.isActive ? day.flashcardsCount : 0),
     0
   );
   const todayPlan = days.find((d) => d.isToday) ?? null;
+
+  const baseDailyQuota = calculateDailyQuestionQuota(
+    config.hoursPerDay,
+    0,
+    config.paceMode
+  ).estimatedQuestions;
+  const feasibility = computeParetoFeasibility({
+    weeksUntilExam: calendarSummary.nextExam?.weeksRemaining ?? null,
+    activeDaysPerWeek: config.activeDays.length,
+    hoursPerDay: config.hoursPerDay,
+    estimatedQuestionsPerActiveDay: baseDailyQuota,
+  });
 
   return {
     weekLabel,
@@ -705,5 +878,8 @@ export function buildWeeklySchedule({
     totalWeeklyQuestions,
     totalWeeklyFlashcards,
     todayPlan,
+    calendarSummary,
+    weekPhase,
+    feasibility,
   };
 }

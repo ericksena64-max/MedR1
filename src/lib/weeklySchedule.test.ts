@@ -531,4 +531,105 @@ describe('weeklySchedule — motor da grade semanal calibrada', () => {
     expect(result.days[1].topicBlocks[0].topic).toBe('Infectologia');
     expect(result.days[1].topicBlocks[0].subtema).toBe('Dengue: Classificação de Risco');
   });
+
+  describe('periodização dinâmica até a data da prova', () => {
+    it('rotaciona os tópicos entre weekOffset=0 e weekOffset=1 sem repetir semana idêntica', () => {
+      const refDate = new Date(2026, 9, 5, 10, 0, 0); // 05/10/2026
+      const topics: WeeklyTopicInput[] = [
+        { grandeAreaId: 'clinica_medica', label: 'Cardiologia', shortArea: 'Clínica', studentPct: 60, answered: 10 },
+        { grandeAreaId: 'cirurgia_geral', label: 'Trauma', shortArea: 'Cirurgia', studentPct: 60, answered: 10 },
+        { grandeAreaId: 'ginecologia_obstetricia', label: 'Pré-Natal', shortArea: 'GO', studentPct: 60, answered: 10 },
+        { grandeAreaId: 'pediatria', label: 'Neonatologia', shortArea: 'Pediatria', studentPct: 60, answered: 10 },
+        { grandeAreaId: 'medicina_preventiva', label: 'Epidemiologia', shortArea: 'Preventiva', studentPct: 60, answered: 10 },
+        { grandeAreaId: 'clinica_medica', label: 'Nefrologia', shortArea: 'Clínica', studentPct: 60, answered: 10 },
+      ];
+      const cfg = {
+        activeDays: [1, 2] as Array<0 | 1 | 2 | 3 | 4 | 5 | 6>,
+        hoursPerDay: 2, // 1 bloco/dia
+        paceMode: 'estudo' as const,
+        targetExams: ['UEPA' as const],
+        examDates: { UEPA: '2026-11-29' },
+      };
+
+      const w0 = buildWeeklySchedule({ config: cfg, flashcards: [], weekOffset: 0, referenceDate: refDate, topicRows: topics });
+      const w1 = buildWeeklySchedule({ config: cfg, flashcards: [], weekOffset: 1, referenceDate: refDate, topicRows: topics });
+
+      const seq0 = w0.days.filter((d) => d.isActive).flatMap((d) => d.topicBlocks.map((b) => b.topic));
+      const seq1 = w1.days.filter((d) => d.isActive).flatMap((d) => d.topicBlocks.map((b) => b.topic));
+      expect(seq0).not.toEqual(seq1);
+    });
+
+    it('aplica taper na semana da prova, marca isExamDay/isExamEve e desativa simulado pesado', () => {
+      // Quarta 11/11/2026, prova no Sábado 14/11/2026 (3 dias)
+      const refDate = new Date(2026, 10, 11, 10, 0, 0);
+      const normalWeek = buildWeeklySchedule({
+        config: {
+          activeDays: [1, 2, 3, 4, 5, 6],
+          hoursPerDay: 4,
+          paceMode: 'estudo',
+          targetExams: ['UEPA'],
+        },
+        flashcards: [],
+        weekOffset: 0,
+        referenceDate: refDate,
+      });
+
+      const examWeek = buildWeeklySchedule({
+        config: {
+          activeDays: [1, 2, 3, 4, 5, 6],
+          hoursPerDay: 4,
+          paceMode: 'estudo',
+          targetExams: ['UEPA'],
+          examDates: { UEPA: '2026-11-14' },
+          simuladoWeekday: 6,
+        },
+        flashcards: [],
+        weekOffset: 0,
+        referenceDate: refDate,
+      });
+
+      expect(examWeek.weekPhase.id).toBe('semana_prova');
+      expect(examWeek.days[6].isExamDay).toBe(true);
+      expect(examWeek.days[6].examDayLabels).toEqual(['UEPA']);
+      expect(examWeek.days[5].isExamEve).toBe(true);
+      expect(examWeek.days[5].estimatedQuestions).toBe(0);
+      expect(examWeek.days[3].estimatedQuestions).toBeLessThan(normalWeek.days[3].estimatedQuestions);
+      expect(examWeek.days.flatMap((d) => d.topicBlocks).some((b) => b.blockKind === 'simulado')).toBe(false);
+    });
+
+    it('insere bloco de simulado no simuladoWeekday durante fase de aprofundamento', () => {
+      const refDate = new Date(2026, 9, 5, 10, 0, 0); // 05/10/2026 -> prova em 29/11/2026 (55d = aprofundamento)
+      const res = buildWeeklySchedule({
+        config: {
+          activeDays: [1, 3, 6],
+          hoursPerDay: 3,
+          paceMode: 'estudo',
+          targetExams: ['UEPA'],
+          examDates: { UEPA: '2026-11-29' },
+          simuladoWeekday: 6,
+        },
+        flashcards: [],
+        weekOffset: 0,
+        referenceDate: refDate,
+      });
+
+      expect(res.weekPhase.id).toBe('aprofundamento');
+      expect(res.days[6].topicBlocks.some((b) => b.blockKind === 'simulado')).toBe(true);
+    });
+
+    it('preserva examDates válidos e descarta strings inválidas em loadWeeklyScheduleConfig', () => {
+      const loaded = loadWeeklyScheduleConfig(
+        JSON.stringify({
+          activeDays: [1, 2, 3],
+          hoursPerDay: 3,
+          paceMode: 'estudo',
+          targetExams: ['UEPA', 'ENARE'],
+          examDates: { UEPA: '2026-11-15', ENARE: 'data-invalida' },
+          simuladoWeekday: 0,
+        })
+      );
+      expect(loaded.examDates).toEqual({ UEPA: '2026-11-15' });
+      expect(loaded.simuladoWeekday).toBe(0);
+    });
+  });
 });
