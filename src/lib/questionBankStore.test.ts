@@ -33,9 +33,13 @@ describe('questionBankStore — code-splitting e carregamento sob demanda de pro
       'uepa-2024',
       'uepa-2023',
       'uepa-2022',
+      'usp-rp-2023',
+      'usp-sp-2023',
+      'sus-sp-2023',
+      'unifesp-2023',
     ]);
-    expect(catalog.reduce((acc, e) => acc + e.questionCount, 0)).toBe(500);
-    expect(getUnloadedOfficialCatalogEntries()).toHaveLength(5);
+    expect(catalog.reduce((acc, e) => acc + e.questionCount, 0)).toBe(920);
+    expect(getUnloadedOfficialCatalogEntries()).toHaveLength(9);
   });
 
   it('seleciona apenas as provas compatíveis com os filtros ativos', () => {
@@ -44,8 +48,14 @@ describe('questionBankStore — code-splitting e carregamento sob demanda de pro
     expect(getMatchingOfficialExamIds({ examSearch: 'Q-UEPA24-0010' })).toEqual(['uepa-2024']);
     expect(getMatchingOfficialExamIds({ examSearch: 'UEPA 2023' })).toEqual(['uepa-2023']);
     expect(getMatchingOfficialExamIds({ examSearch: 'UEPA 2022' })).toEqual(['uepa-2022']);
-    expect(getMatchingOfficialExamIds({ instituicao: 'USP-SP' })).toEqual([]);
-    expect(getMatchingOfficialExamIds({ regiao: 'Sudeste' })).toEqual([]);
+    expect(getMatchingOfficialExamIds({ instituicao: 'USP-SP' })).toEqual(['usp-sp-2023']);
+    expect(getMatchingOfficialExamIds({ instituicao: 'ENARE' })).toEqual([]);
+    expect(getMatchingOfficialExamIds({ regiao: 'Sudeste' })).toEqual([
+      'usp-rp-2023',
+      'usp-sp-2023',
+      'sus-sp-2023',
+      'unifesp-2023',
+    ]);
     expect(getMatchingOfficialExamIds({ regiao: 'Norte' })).toEqual([
       'uepa-2026',
       'uepa-2025',
@@ -59,6 +69,10 @@ describe('questionBankStore — code-splitting e carregamento sob demanda de pro
       'uepa-2024',
       'uepa-2023',
       'uepa-2022',
+      'usp-rp-2023',
+      'usp-sp-2023',
+      'sus-sp-2023',
+      'unifesp-2023',
     ]);
   });
 
@@ -66,9 +80,10 @@ describe('questionBankStore — code-splitting e carregamento sob demanda de pro
     const ids = getOfficialExamIdsForQuestionIds([
       'q-uepa-2025-042',
       'q-uepa-2025-099',
+      'q-usp-sp-2023-012',
       'q-usp-2025-cardio-01',
     ]);
-    expect(ids).toEqual(['uepa-2025']);
+    expect(ids).toEqual(['uepa-2025', 'usp-sp-2023']);
   });
 
   it('carrega sob demanda apenas a prova filtrada sem baixar as demais', async () => {
@@ -87,13 +102,17 @@ describe('questionBankStore — code-splitting e carregamento sob demanda de pro
       'uepa-2024',
       'uepa-2023',
       'uepa-2022',
+      'usp-rp-2023',
+      'usp-sp-2023',
+      'sus-sp-2023',
+      'unifesp-2023',
     ]);
     expect(getAllBankQuestions().length).toBeGreaterThan(100);
   });
 
   it('não baixa nenhum chunk oficial quando o filtro aponta para outra banca', async () => {
     const loaded = await loadOfficialExamsMatchingFilters({
-      instituicao: 'USP-SP',
+      instituicao: 'ENARE',
     });
     expect(loaded).toEqual([]);
     expect(getLoadedOfficialExamIds()).toEqual([]);
@@ -105,16 +124,20 @@ describe('questionBankStore — code-splitting e carregamento sob demanda de pro
     expect(getLoadedOfficialExamIds()).toEqual(['uepa-2024']);
 
     const allCatalog = await loadOfficialCatalogQuestions();
-    expect(allCatalog).toHaveLength(500);
+    expect(allCatalog).toHaveLength(920);
     expect(areAllOfficialExamsLoaded()).toBe(true);
     expect(getUnloadedOfficialCatalogEntries()).toEqual([]);
 
-    // Ordem preservada: 2026 -> 2025 -> 2024 -> 2023 -> 2022
+    // Ordem preservada: UEPA 2026..2022 + USP-RP 2023 + USP-SP 2023 + SUS-SP 2023 + UNIFESP 2023
     expect(allCatalog[0].ano).toBe(2026);
     expect(allCatalog[100].ano).toBe(2025);
     expect(allCatalog[200].ano).toBe(2024);
     expect(allCatalog[300].ano).toBe(2023);
     expect(allCatalog[400].ano).toBe(2022);
+    expect(allCatalog[500].instituicao).toBe('USP-RP');
+    expect(allCatalog[600].instituicao).toBe('USP-SP');
+    expect(allCatalog[720].instituicao).toBe('SUS-SP');
+    expect(allCatalog[820].instituicao).toBe('UNIFESP');
 
     // Garante que os metadados do manifesto batem exatamente com os arquivos das provas
     for (const entry of getOfficialExamCatalog()) {
