@@ -265,5 +265,27 @@ export const OFFICIAL_EXAM_CATALOG: ExamCatalogEntry[] = [
     loader: () =>
       import('./enare2024Questions').then((m) => m.ENARE_2024_QUESTIONS),
   },
+  {
+    id: 'ieppa-2026',
+    label: 'IEPPA 2026',
+    idPrefix: 'q-ieppa-2026-',
+    instituicao: 'IEPPA',
+    banca: 'IEPPA',
+    estado: 'PA',
+    regiao: 'Norte',
+    ano: 2026,
+    tipoProva: 'Acesso Direto',
+    questionCount: 49,
+    activeCount: 49,
+    areaCounts: {
+      clinica_medica: 12,
+      cirurgia_geral: 8,
+      ginecologia_obstetricia: 10,
+      pediatria: 9,
+      medicina_preventiva: 10,
+    },
+    loader: () =>
+      import('./ieppa2026Questions').then((m) => m.IEPPA_2026_QUESTIONS),
+  },
   // [MEDR1_AUTO_CATALOG_END]
 ];

@@ -293,8 +293,14 @@ describe('ARENA_BOARD_GROUPS & computeArenaBoardMetrics', () => {
     expect(summary.totalQuestions).toBe(expandedBank.length);
     expect(summary.totalInstitutions).toBe(9);
     expect(summary.primaryBoardsCount).toBe(4);
-    expect(summary.dynamicBoardsCount).toBe(2);
-    expect(summary.totalBoards).toBe(6);
+    expect(summary.dynamicBoardsCount).toBe(3); // PSU-MG, UNICAMP, and IEPPA from catalog
+    expect(summary.totalBoards).toBe(7);
+
+    const ieppa = metrics.find((m) => m.label === 'IEPPA')!;
+    expect(ieppa).toBeDefined();
+    expect(ieppa.isPrimary).toBe(false);
+    expect(ieppa.totalQuestions).toBe(49);
+    expect(ieppa.subtitle).toBe('2026 • 1 edição • PA');
   });
 });
 

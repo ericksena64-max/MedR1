@@ -2991,6 +2991,814 @@
   "model": "gemini-3.7-flash",
   "confidence": "alta"
  },
+ "q-ieppa-2026-001": {
+  "grandeAreaId": "clinica_medica",
+  "tema": "Reumatologia",
+  "temaSlug": "cm-reumato",
+  "subtema": "Lúpus Eritematoso Sistêmico",
+  "subtemaSlug": "cm-reumato-lupus-eritematoso-sistemico",
+  "tags": [
+   "les",
+   "autoanticorpos",
+   "anti-dsdna",
+   "complemento",
+   "nefrite-lupica"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-002": {
+  "grandeAreaId": "clinica_medica",
+  "tema": "Pneumologia",
+  "temaSlug": "cm-pneumo",
+  "subtema": "Tromboembolismo Pulmonar e TVP",
+  "subtemaSlug": "cm-pneumo-tromboembolismo-pulmonar-e-tvp",
+  "tags": [
+   "tep",
+   "escore-de-wells",
+   "angiotomografia",
+   "trombolise",
+   "alteplase"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-003": {
+  "grandeAreaId": "clinica_medica",
+  "tema": "Cardiologia",
+  "temaSlug": "cm-cardio",
+  "subtema": "Valvopatias",
+  "subtemaSlug": "cm-cardio-valvopatias",
+  "tags": [
+   "estenose-aortica",
+   "sopro-sistolico",
+   "pulso-parvus-et-tardus",
+   "semiologia-cardiaca"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-004": {
+  "grandeAreaId": "clinica_medica",
+  "tema": "Pneumologia",
+  "temaSlug": "cm-pneumo",
+  "subtema": "Asma no Adulto",
+  "subtemaSlug": "cm-pneumo-asma-no-adulto",
+  "tags": [
+   "asma",
+   "gina",
+   "corticoide-inalatorio",
+   "formoterol",
+   "controle-clinico"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-006": {
+  "grandeAreaId": "clinica_medica",
+  "tema": "Neurologia",
+  "temaSlug": "cm-neuro",
+  "subtema": "AVC Isquêmico e AIT",
+  "subtemaSlug": "cm-neuro-avc-isquemico-e-ait",
+  "tags": [
+   "avc-isquemico",
+   "trombolise",
+   "alteplase",
+   "janela-terapeutica",
+   "nihss"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-007": {
+  "grandeAreaId": "clinica_medica",
+  "tema": "Hematologia",
+  "temaSlug": "cm-hemato",
+  "subtema": "Hemoterapia e Reações Transfusionais",
+  "subtemaSlug": "cm-hemato-hemoterapia-e-reacoes-transfusionais",
+  "tags": [
+   "trali",
+   "taco",
+   "reacao-transfusional",
+   "hemoterapia",
+   "anvisa"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-008": {
+  "grandeAreaId": "clinica_medica",
+  "tema": "Nefrologia",
+  "temaSlug": "cm-nefro",
+  "subtema": "Doença Renal Crônica e Terapia Substitutiva",
+  "subtemaSlug": "cm-nefro-doenca-renal-cronica-e-terapia-substitutiva",
+  "tags": [
+   "drc",
+   "ieca",
+   "bra",
+   "nefroprotecao",
+   "proteinuria",
+   "kdigo"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-009": {
+  "grandeAreaId": "clinica_medica",
+  "tema": "Nefrologia",
+  "temaSlug": "cm-nefro",
+  "subtema": "Doença Renal Crônica e Terapia Substitutiva",
+  "subtemaSlug": "cm-nefro-doenca-renal-cronica-e-terapia-substitutiva",
+  "tags": [
+   "drc",
+   "anemia-da-drc",
+   "reposicao-de-ferro",
+   "eritropoetina",
+   "kdigo"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-010": {
+  "grandeAreaId": "clinica_medica",
+  "tema": "Cardiologia",
+  "temaSlug": "cm-cardio",
+  "subtema": "Insuficiência Cardíaca",
+  "subtemaSlug": "cm-cardio-insuficiencia-cardiaca",
+  "tags": [
+   "icfer",
+   "isglt2",
+   "terapia-quadrupla",
+   "dapagliflozina",
+   "sacubitril-valsartana"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-011": {
+  "grandeAreaId": "cirurgia_geral",
+  "tema": "Cirurgia Vascular",
+  "temaSlug": "cg-vascular",
+  "subtema": "Aneurisma e Dissecação de Aorta",
+  "subtemaSlug": "cg-vascular-aneurisma-e-dissecacao-de-aorta",
+  "tags": [
+   "aneurisma-de-aorta-abdominal",
+   "evar",
+   "indicacao-cirurgica",
+   "cirurgia-vascular"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-012": {
+  "grandeAreaId": "cirurgia_geral",
+  "tema": "Abdome Agudo",
+  "temaSlug": "cg-abdome",
+  "subtema": "Abdome Agudo Obstrutivo",
+  "subtemaSlug": "cg-abdome-abdome-agudo-obstrutivo",
+  "tags": [
+   "obstrucao-intestinal",
+   "bridas",
+   "estrangulamento",
+   "ileo-biliar",
+   "pneumobilia"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-013": {
+  "grandeAreaId": "cirurgia_geral",
+  "tema": "Perioperatório, Cicatrização e Anestesiologia",
+  "temaSlug": "cg-periop",
+  "subtema": "Complicações Pós-Operatórias e Infecção de Sítio Cirúrgico",
+  "subtemaSlug": "cg-periop-complicacoes-pos-operatorias-e-infeccao-de-sitio-cirurgico",
+  "tags": [
+   "tireoidectomia",
+   "hipocalcemia",
+   "hipoparatireoidismo",
+   "sinal-de-chvostek"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-014": {
+  "grandeAreaId": "cirurgia_geral",
+  "tema": "Trauma e ATLS",
+  "temaSlug": "cg-trauma",
+  "subtema": "Queimaduras e Lesão Inalatória",
+  "subtemaSlug": "cg-trauma-queimaduras-e-lesao-inalatoria",
+  "tags": [
+   "queimaduras",
+   "formula-de-parkland",
+   "reposicao-volemica",
+   "diurese",
+   "mioglobinuria"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-015": {
+  "grandeAreaId": "cirurgia_geral",
+  "tema": "Vias Biliares, Fígado e Pâncreas Cirúrgico",
+  "temaSlug": "cg-biliar",
+  "subtema": "Lesões Iatrogênicas de Via Biliar e Cistos",
+  "subtemaSlug": "cg-biliar-lesoes-iatrogenicas-de-via-biliar-e-cistos",
+  "tags": [
+   "colecistectomia-laparoscopica",
+   "trigono-de-calot",
+   "visao-critica-de-seguranca",
+   "strasberg"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-016": {
+  "grandeAreaId": "cirurgia_geral",
+  "tema": "Hérnias e Parede Abdominal",
+  "temaSlug": "cg-hernias",
+  "subtema": "Hérnia Inguinal e Femoral",
+  "subtemaSlug": "cg-hernias-hernia-inguinal-e-femoral",
+  "tags": [
+   "hernia-inguinal",
+   "triangulo-de-hesselbach",
+   "nyhus",
+   "hernia-femoral"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-017": {
+  "grandeAreaId": "cirurgia_geral",
+  "tema": "Perioperatório, Cicatrização e Anestesiologia",
+  "temaSlug": "cg-periop",
+  "subtema": "Cicatrização de Feridas e Cirurgia Plástica Básica",
+  "subtemaSlug": "cg-periop-cicatrizacao-de-feridas-e-cirurgia-plastica-basica",
+  "tags": [
+   "cicatrizacao",
+   "colageno",
+   "fase-inflamatoria",
+   "fase-proliferativa"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-018": {
+  "grandeAreaId": "clinica_medica",
+  "tema": "Medicina Intensiva e Toxicologia",
+  "temaSlug": "cm-uti",
+  "subtema": "Choque e Monitorização Hemodinâmica",
+  "subtemaSlug": "cm-uti-choque-e-monitorizacao-hemodinamica",
+  "tags": [
+   "choque",
+   "monitorizacao-hemodinamica",
+   "choque-neurogenico",
+   "choque-septico"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-019": {
+  "grandeAreaId": "cirurgia_geral",
+  "tema": "Vias Biliares, Fígado e Pâncreas Cirúrgico",
+  "temaSlug": "cg-biliar",
+  "subtema": "Lesões Iatrogênicas de Via Biliar e Cistos",
+  "subtemaSlug": "cg-biliar-lesoes-iatrogenicas-de-via-biliar-e-cistos",
+  "tags": [
+   "colecistectomia-laparoscopica",
+   "trigono-de-calot",
+   "visao-critica-de-seguranca",
+   "lesao-biliar"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-020": {
+  "grandeAreaId": "clinica_medica",
+  "tema": "Hematologia",
+  "temaSlug": "cm-hemato",
+  "subtema": "Hemoterapia e Reações Transfusionais",
+  "subtemaSlug": "cm-hemato-hemoterapia-e-reacoes-transfusionais",
+  "tags": [
+   "taco",
+   "trali",
+   "anvisa",
+   "bnp",
+   "sobrecarga-circulatoria"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-021": {
+  "grandeAreaId": "pediatria",
+  "tema": "Gastroenterologia e Nefrologia Pediátrica",
+  "temaSlug": "ped-gastro-nefro-ped",
+  "subtema": "Síndrome Nefrítica e Nefrótica Pediátrica",
+  "subtemaSlug": "ped-gastro-nefro-ped-sindrome-nefritica-e-nefrotica-pediatrica",
+  "tags": [
+   "sindrome-nefrotica",
+   "lesao-minima",
+   "prednisona",
+   "pediatria"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-022": {
+  "grandeAreaId": "pediatria",
+  "tema": "Emergências Pediátricas e Proteção Infantil",
+  "temaSlug": "ped-emerg-ped",
+  "subtema": "Convulsão Febril e Emergências Neurológicas",
+  "subtemaSlug": "ped-emerg-ped-convulsao-febril-e-emergencias-neurologicas",
+  "tags": [
+   "crise-febril-simples",
+   "pediatria",
+   "otite-media-aguda",
+   "puncao-lombar"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-023": {
+  "grandeAreaId": "pediatria",
+  "tema": "Neonatologia",
+  "temaSlug": "ped-neo",
+  "subtema": "Icterícia Neonatal",
+  "subtemaSlug": "ped-neo-ictericia-neonatal",
+  "tags": [
+   "ictericia-neonatal",
+   "incompatibilidade-abo",
+   "coombs-direto",
+   "doenca-hemolitica"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-024": {
+  "grandeAreaId": "pediatria",
+  "tema": "Neonatologia",
+  "temaSlug": "ped-neo",
+  "subtema": "Reanimação Neonatal",
+  "subtemaSlug": "ped-neo-reanimacao-neonatal",
+  "tags": [
+   "reanimacao-neonatal",
+   "sbp",
+   "liquido-meconial",
+   "vpp",
+   "massagem-cardiaca"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-025": {
+  "grandeAreaId": "pediatria",
+  "tema": "Pneumologia Pediátrica",
+  "temaSlug": "ped-pneumo-ped",
+  "subtema": "Bronquiolite Viral Aguda e Coqueluche",
+  "subtemaSlug": "ped-pneumo-ped-bronquiolite-viral-aguda-e-coqueluche",
+  "tags": [
+   "bronquiolite-viral-aguda",
+   "oxigenoterapia",
+   "suporte-clinico",
+   "sbp"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-026": {
+  "grandeAreaId": "pediatria",
+  "tema": "Pneumologia Pediátrica",
+  "temaSlug": "ped-pneumo-ped",
+  "subtema": "Infecções de Vias Aéreas Superiores",
+  "subtemaSlug": "ped-pneumo-ped-infeccoes-de-vias-aereas-superiores",
+  "tags": [
+   "laringotraqueobronquite",
+   "crupe-viral",
+   "dexametasona",
+   "adrenalina-inalatoria"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-027": {
+  "grandeAreaId": "pediatria",
+  "tema": "Cardiologia, Hematologia e Oncologia Pediátrica",
+  "temaSlug": "ped-cardio-hemato-ped",
+  "subtema": "Doença de Kawasaki e Vasculite por IgA",
+  "subtemaSlug": "ped-cardio-hemato-ped-doenca-de-kawasaki-e-vasculite-por-iga",
+  "tags": [
+   "doenca-de-kawasaki",
+   "imunoglobulina",
+   "aneurisma-coronariano",
+   "ecocardiograma"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-028": {
+  "grandeAreaId": "clinica_medica",
+  "tema": "Endocrinologia e Metabologia",
+  "temaSlug": "cm-endocrino",
+  "subtema": "Complicações Agudas do Diabetes",
+  "subtemaSlug": "cm-endocrino-complicacoes-agudas-do-diabetes",
+  "tags": [
+   "cetoacidose-diabetica",
+   "expansao-volemica",
+   "insulina-regular",
+   "reposicao-de-potassio"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-029": {
+  "grandeAreaId": "pediatria",
+  "tema": "Infectologia Pediátrica e Exantemáticas",
+  "temaSlug": "ped-infecto-ped",
+  "subtema": "Doenças Exantemáticas",
+  "subtemaSlug": "ped-infecto-ped-doencas-exantematicas",
+  "tags": [
+   "exantema-subito",
+   "roseola-infantil",
+   "hhv-6",
+   "doencas-exantematicas"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-030": {
+  "grandeAreaId": "pediatria",
+  "tema": "Puericultura, Crescimento e Nutrição",
+  "temaSlug": "ped-puericultura",
+  "subtema": "Avaliação do Crescimento e Baixa Estatura",
+  "subtemaSlug": "ped-puericultura-avaliacao-do-crescimento-e-baixa-estatura",
+  "tags": [
+   "baixa-estatura",
+   "retardo-constitucional",
+   "idade-ossea",
+   "puericultura"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-031": {
+  "grandeAreaId": "ginecologia_obstetricia",
+  "tema": "Oncologia Ginecológica e Mastologia",
+  "temaSlug": "go-onco-go",
+  "subtema": "Câncer de Endométrio",
+  "subtemaSlug": "go-onco-go-cancer-de-endometrio",
+  "tags": [
+   "cancer-de-endometrio",
+   "sangramento-pos-menopausa",
+   "histeroscopia",
+   "espessamento-endometrial"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-032": {
+  "grandeAreaId": "ginecologia_obstetricia",
+  "tema": "Oncologia Ginecológica e Mastologia",
+  "temaSlug": "go-onco-go",
+  "subtema": "Rastreamento e Câncer de Mama",
+  "subtemaSlug": "go-onco-go-rastreamento-e-cancer-de-mama",
+  "tags": [
+   "bi-rads-4",
+   "microcalcificacoes-pleomorficas",
+   "estereotaxia",
+   "cdis",
+   "mamografia"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-033": {
+  "grandeAreaId": "ginecologia_obstetricia",
+  "tema": "Síndromes Hipertensivas e Metabólicas na Gestação",
+  "temaSlug": "go-shg",
+  "subtema": "Pré-Eclâmpsia, Eclâmpsia e Síndrome HELLP",
+  "subtemaSlug": "go-shg-pre-eclampsia-eclampsia-e-sindrome-hellp",
+  "tags": [
+   "pre-eclampsia-grave",
+   "sulfato-de-magnesio",
+   "hidralazina",
+   "nifedipina"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-034": {
+  "grandeAreaId": "ginecologia_obstetricia",
+  "tema": "Pré-Natal e Fisiologia Obstétrica",
+  "temaSlug": "go-prenatal",
+  "subtema": "Avaliação da Vitalidade Fetal",
+  "subtemaSlug": "go-prenatal-avaliacao-da-vitalidade-fetal",
+  "tags": [
+   "cardiotocografia",
+   "dip-ii",
+   "desaceleracao-tardia",
+   "insuficiencia-uteroplacentaria"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-035": {
+  "grandeAreaId": "ginecologia_obstetricia",
+  "tema": "Sangramentos da Gestação",
+  "temaSlug": "go-sangramento",
+  "subtema": "Doença Hemolítica Perinatal",
+  "subtemaSlug": "go-sangramento-doenca-hemolitica-perinatal",
+  "tags": [
+   "isoimunizacao-rh",
+   "coombs-indireto",
+   "doppler-acm",
+   "anemia-fetal"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-036": {
+  "grandeAreaId": "ginecologia_obstetricia",
+  "tema": "Ginecologia Geral e Uroginecologia",
+  "temaSlug": "go-gineco-geral",
+  "subtema": "Úlceras Genitais e ISTs em Ginecologia",
+  "subtemaSlug": "go-gineco-geral-ulceras-genitais-e-ists-em-ginecologia",
+  "tags": [
+   "herpes-genital",
+   "ulceras-genitais",
+   "aciclovir",
+   "ist",
+   "pcdt"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-037": {
+  "grandeAreaId": "ginecologia_obstetricia",
+  "tema": "Parto, Prematuridade e Puerpério",
+  "temaSlug": "go-parto",
+  "subtema": "Trabalho de Parto Prematuro",
+  "subtemaSlug": "go-parto-trabalho-de-parto-prematuro",
+  "tags": [
+   "trabalho-de-parto-prematuro",
+   "tocolise",
+   "nifedipina",
+   "indometacina",
+   "atosibano"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-038": {
+  "grandeAreaId": "ginecologia_obstetricia",
+  "tema": "Síndromes Hipertensivas e Metabólicas na Gestação",
+  "temaSlug": "go-shg",
+  "subtema": "Diabetes Mellitus Gestacional e Prévio",
+  "subtemaSlug": "go-shg-diabetes-mellitus-gestacional-e-previo",
+  "tags": [
+   "polidramnio",
+   "diabetes-gestacional",
+   "macrossomia",
+   "malformacoes-fetais"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-039": {
+  "grandeAreaId": "ginecologia_obstetricia",
+  "tema": "Ginecologia Geral e Uroginecologia",
+  "temaSlug": "go-gineco-geral",
+  "subtema": "Endometriose e Adenomiose",
+  "subtemaSlug": "go-gineco-geral-endometriose-e-adenomiose",
+  "tags": [
+   "endometriose-profunda",
+   "infertilidade",
+   "videolaparoscopia",
+   "fertilizacao-in-vitro"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-040": {
+  "grandeAreaId": "ginecologia_obstetricia",
+  "tema": "Parto, Prematuridade e Puerpério",
+  "temaSlug": "go-parto",
+  "subtema": "Rotura Prematura de Membranas Ovulares",
+  "subtemaSlug": "go-parto-rotura-prematura-de-membranas-ovulares",
+  "tags": [
+   "rpmo",
+   "rotura-prematura-de-membranas",
+   "corticoide-antenatal",
+   "antibioticoterapia-de-latencia"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-041": {
+  "grandeAreaId": "medicina_preventiva",
+  "tema": "SUS, Políticas Públicas e Gestão em Saúde",
+  "temaSlug": "mp-sus",
+  "subtema": "Atenção Primária à Saúde e ESF",
+  "subtemaSlug": "mp-sus-atencao-primaria-a-saude-e-esf",
+  "tags": [
+   "e-multi",
+   "apoio-matricial",
+   "pts",
+   "esf",
+   "atencao-primaria"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-042": {
+  "grandeAreaId": "medicina_preventiva",
+  "tema": "Ética Médica, Bioética e Medicina Legal",
+  "temaSlug": "mp-etica",
+  "subtema": "Princípios da Bioética e Terminalidade",
+  "subtemaSlug": "mp-etica-principios-da-bioetica-e-terminalidade",
+  "tags": [
+   "bioetica",
+   "autonomia",
+   "recusa-terapeutica",
+   "nao-maleficencia",
+   "codigo-de-etica-medica"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-043": {
+  "grandeAreaId": "medicina_preventiva",
+  "tema": "Vigilância em Saúde",
+  "temaSlug": "mp-vigilancia",
+  "subtema": "Vigilância Epidemiológica e Notificação Compulsória",
+  "subtemaSlug": "mp-vigilancia-vigilancia-epidemiologica-e-notificacao-compulsoria",
+  "tags": [
+   "notificacao-compulsoria",
+   "sinan",
+   "botulismo",
+   "hanseniase",
+   "paralisia-flacida-aguda"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-044": {
+  "grandeAreaId": "medicina_preventiva",
+  "tema": "SUS, Políticas Públicas e Gestão em Saúde",
+  "temaSlug": "mp-sus",
+  "subtema": "Redes de Atenção à Saúde e Regulação",
+  "subtemaSlug": "mp-sus-redes-de-atencao-a-saude-e-regulacao",
+  "tags": [
+   "raps",
+   "caps-ad-iii",
+   "consultorio-na-rua",
+   "reforma-psiquiatrica",
+   "saude-mental"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-045": {
+  "grandeAreaId": "medicina_preventiva",
+  "tema": "SUS, Políticas Públicas e Gestão em Saúde",
+  "temaSlug": "mp-sus",
+  "subtema": "Atenção Primária à Saúde e ESF",
+  "subtemaSlug": "mp-sus-atencao-primaria-a-saude-e-esf",
+  "tags": [
+   "trabalho-em-equipe",
+   "peduzzi",
+   "equipe-agrupamento",
+   "equipe-integracao"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-046": {
+  "grandeAreaId": "medicina_preventiva",
+  "tema": "SUS, Políticas Públicas e Gestão em Saúde",
+  "temaSlug": "mp-sus",
+  "subtema": "Redes de Atenção à Saúde e Regulação",
+  "subtemaSlug": "mp-sus-redes-de-atencao-a-saude-e-regulacao",
+  "tags": [
+   "seguranca-do-paciente",
+   "pnsp",
+   "rdc-36",
+   "cultura-justa",
+   "higienizacao-das-maos"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-047": {
+  "grandeAreaId": "medicina_preventiva",
+  "tema": "SUS, Políticas Públicas e Gestão em Saúde",
+  "temaSlug": "mp-sus",
+  "subtema": "Atenção Primária à Saúde e ESF",
+  "subtemaSlug": "mp-sus-atencao-primaria-a-saude-e-esf",
+  "tags": [
+   "pnab-2017",
+   "atribuicoes-comuns",
+   "esf",
+   "territorio",
+   "educacao-em-saude"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-048": {
+  "grandeAreaId": "medicina_preventiva",
+  "tema": "Medicina de Família e Comunidade",
+  "temaSlug": "mp-mfc",
+  "subtema": "Prevenção Quaternária e Rastreamento Populacional",
+  "subtemaSlug": "mp-mfc-prevencao-quaternaria-e-rastreamento-populacional",
+  "tags": [
+   "rastreamento",
+   "sobrediagnostico",
+   "wilson-e-jungner",
+   "cancer-de-tireoide",
+   "prevencao-quaternaria"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-049": {
+  "grandeAreaId": "medicina_preventiva",
+  "tema": "Vigilância em Saúde",
+  "temaSlug": "mp-vigilancia",
+  "subtema": "Vigilância Sanitária, Ambiental e Saúde Planetária",
+  "subtemaSlug": "mp-vigilancia-vigilancia-sanitaria-ambiental-e-saude-planetaria",
+  "tags": [
+   "vigiagua",
+   "vigilancia-ambiental",
+   "surto-hidrico",
+   "notificacao-de-surto"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
+ "q-ieppa-2026-050": {
+  "grandeAreaId": "medicina_preventiva",
+  "tema": "Vigilância em Saúde",
+  "temaSlug": "mp-vigilancia",
+  "subtema": "Vigilância Epidemiológica e Notificação Compulsória",
+  "subtemaSlug": "mp-vigilancia-vigilancia-epidemiologica-e-notificacao-compulsoria",
+  "tags": [
+   "sindrome-gripal",
+   "srag",
+   "sivep-gripe",
+   "e-sus-notifica",
+   "covid-19"
+  ],
+  "needsTaxonomyReview": false,
+  "model": "manual-taxonomy-v1",
+  "confidence": "alta"
+ },
  "q-sus-sp-2023-001": {
   "grandeAreaId": "cirurgia_geral",
   "tema": "Cirurgia do Aparelho Digestivo e Coloproctologia",

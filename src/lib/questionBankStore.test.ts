@@ -39,19 +39,24 @@ describe('questionBankStore — code-splitting e carregamento sob demanda de pro
       'unifesp-2023',
       'enamed-2025',
       'enare-2024',
+      'ieppa-2026',
     ]);
-    expect(catalog.reduce((acc, e) => acc + e.questionCount, 0)).toBe(1107);
-    expect(getUnloadedOfficialCatalogEntries()).toHaveLength(11);
+    expect(catalog.reduce((acc, e) => acc + e.questionCount, 0)).toBe(1156);
+    expect(getUnloadedOfficialCatalogEntries()).toHaveLength(12);
   });
 
   it('seleciona apenas as provas compatíveis com os filtros ativos', () => {
-    expect(getMatchingOfficialExamIds({ ano: '2026' })).toEqual(['uepa-2026']);
+    expect(getMatchingOfficialExamIds({ ano: '2026' })).toEqual([
+      'uepa-2026',
+      'ieppa-2026',
+    ]);
     expect(getMatchingOfficialExamIds({ examSearch: 'UEPA 2025' })).toEqual(['uepa-2025']);
     expect(getMatchingOfficialExamIds({ examSearch: 'Q-UEPA24-0010' })).toEqual(['uepa-2024']);
     expect(getMatchingOfficialExamIds({ examSearch: 'UEPA 2023' })).toEqual(['uepa-2023']);
     expect(getMatchingOfficialExamIds({ examSearch: 'UEPA 2022' })).toEqual(['uepa-2022']);
     expect(getMatchingOfficialExamIds({ instituicao: 'USP-SP' })).toEqual(['usp-sp-2023']);
     expect(getMatchingOfficialExamIds({ instituicao: 'ENARE' })).toEqual(['enare-2024']);
+    expect(getMatchingOfficialExamIds({ instituicao: 'IEPPA' })).toEqual(['ieppa-2026']);
     expect(getMatchingOfficialExamIds({ instituicao: 'AMRIGS' })).toEqual([]);
     expect(getMatchingOfficialExamIds({ regiao: 'Sudeste' })).toEqual([
       'usp-rp-2023',
@@ -65,6 +70,7 @@ describe('questionBankStore — code-splitting e carregamento sob demanda de pro
       'uepa-2024',
       'uepa-2023',
       'uepa-2022',
+      'ieppa-2026',
     ]);
     expect(getMatchingOfficialExamIds({})).toEqual([
       'uepa-2026',
@@ -78,6 +84,7 @@ describe('questionBankStore — code-splitting e carregamento sob demanda de pro
       'unifesp-2023',
       'enamed-2025',
       'enare-2024',
+      'ieppa-2026',
     ]);
   });
 
@@ -113,6 +120,7 @@ describe('questionBankStore — code-splitting e carregamento sob demanda de pro
       'unifesp-2023',
       'enamed-2025',
       'enare-2024',
+      'ieppa-2026',
     ]);
     expect(getAllBankQuestions().length).toBeGreaterThan(100);
   });
@@ -131,7 +139,7 @@ describe('questionBankStore — code-splitting e carregamento sob demanda de pro
     expect(getLoadedOfficialExamIds()).toEqual(['uepa-2024']);
 
     const allCatalog = await loadOfficialCatalogQuestions();
-    expect(allCatalog).toHaveLength(1107);
+    expect(allCatalog).toHaveLength(1156);
     expect(areAllOfficialExamsLoaded()).toBe(true);
     expect(getUnloadedOfficialCatalogEntries()).toEqual([]);
 
