@@ -84,4 +84,30 @@ describe('Fase 3 — StorageAdapter e sync_outbox Local-First', () => {
     expect(await adapter.getPendingCount()).toBe(1);
     expect((await listOutboxEvents()).map((e) => e.eventId)).toEqual(['evt-2']);
   });
+
+  it('HybridPostgresSyncAdapter envia Authorization Bearer quando getAuthToken é configurado', async () => {
+    const fetchAuth = vi.fn().mockResolvedValue(
+      new Response(
+        JSON.stringify({
+          mode: 'postgres',
+          acknowledgedEventIds: ['evt-auth-1'],
+          serverTimestamp: '2026-11-25T13:10:00.000Z',
+        }),
+        { status: 200, headers: { 'content-type': 'application/json' } }
+      )
+    );
+    const adapter = new HybridPostgresSyncAdapter({
+      fetchImpl: fetchAuth,
+      getAuthToken: () => 'jwt.mock.token',
+    });
+
+    await adapter.enqueue([buildAttemptEvent('evt-auth-1')]);
+    const res = await adapter.flush(STUDENT_ID);
+    expect(res.status).toBe('synced');
+
+    const [, init] = fetchAuth.mock.calls[0] as [string, RequestInit];
+    expect((init.headers as Record<string, string>).authorization).toBe(
+      'Bearer jwt.mock.token'
+    );
+  });
 });

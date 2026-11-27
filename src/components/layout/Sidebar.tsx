@@ -12,15 +12,7 @@ import {
   UploadCloud,
   Timer,
 } from 'lucide-react';
-import type {
-  ActiveTab,
-  CutoffTargetConfig,
-  DailyGoalProgress,
-  GrandeAreaId,
-  MedicalQuestion,
-  UserProfile,
-} from '../../types/medical';
-import type { PerformanceRow } from '../analytics/PerformanceDashboard';
+import type { ActiveTab, UserProfile } from '../../types/medical';
 import { cn } from '../../lib/utils';
 
 interface SidebarProps {
@@ -33,23 +25,10 @@ interface SidebarProps {
   dueFlashcardsCount: number;
   onlineTotal: number;
   currentUserRank: number;
-  collapsed?: boolean;
-  onToggleCollapse?: () => void;
-  rankingPulseOn?: boolean;
-  onToggleRankingPulse?: (next?: boolean) => void;
   mobileOpen: boolean;
   onCloseMobile: () => void;
   sidebarFilters?: React.ReactNode;
-  activeFilterCount?: number;
   importedQuestionsCount?: number;
-  dailyGoal?: DailyGoalProgress;
-  onUpdateDailyGoalTarget?: (nextTarget: number) => void;
-  allQuestions?: MedicalQuestion[];
-  answeredIds?: Record<string, unknown>;
-  filteredQuestionsCount?: number;
-  onSelectGrandeAreaFromBank?: (areaId: GrandeAreaId) => void;
-  areaRows?: PerformanceRow[];
-  cutoffTarget?: CutoffTargetConfig;
 }
 
 export function Sidebar({

@@ -10,7 +10,11 @@
     "preview": "vite preview",
     "clean": "rm -rf dist server.mjs",
     "lint": "tsc --noEmit",
-    "test": "vitest run"
+    "test": "vitest run",
+    "db:seed:questions": "tsx scripts/seed_questions_postgres.ts",
+    "db:seed:questions:dry": "tsx scripts/seed_questions_postgres.ts --dry-run",
+    "assets:webp": "node scripts/optimize_exam_images.mjs",
+    "assets:webp:dry": "node scripts/optimize_exam_images.mjs --dry-run"
   },
   "dependencies": {
     "@google/genai": "^3.6.1",

@@ -15,6 +15,7 @@ import { StratifiedApprovalCard } from './StratifiedApprovalCard';
 import { CutoffProjectionCard } from './CutoffProjectionCard';
 import { ApprovalProbabilityCard } from './ApprovalProbabilityCard';
 import {
+  applyTargetExamPresetToEstimatorConfig,
   buildHomeIntelligenceSummary,
   readPersistedEstimatorConfig,
 } from '../../lib/homeIntelligence';
@@ -236,11 +237,8 @@ export function HomeUnifiedView({
   );
 
   const effectiveEstimatorConfig = useMemo<ConfiguracaoProva>(
-    () => ({
-      ...estimatorConfig,
-      notaCorte: primaryExamPreset.defaultCutoff,
-      totalQuestoes: primaryExamPreset.totalQuestions,
-    }),
+    () =>
+      applyTargetExamPresetToEstimatorConfig(estimatorConfig, primaryExamPreset),
     [estimatorConfig, primaryExamPreset]
   );
 
@@ -307,14 +305,14 @@ export function HomeUnifiedView({
       ) : (
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-4">
         {/* Esquerda: Resumo Executivo de Aprovação (3 KPIs + CTA Gargalo Prioritário) */}
-        <div className="lg:col-span-5 rounded-xl border border-slate-200/80 bg-white p-5 dark:border-white/[0.08] dark:bg-[#131926] flex flex-col justify-between gap-4">
-          <div className="flex items-center justify-between gap-2 border-b border-slate-200/70 pb-3 dark:border-white/[0.07]">
+        <div className="lg:col-span-5 rounded-2xl border border-black/5 bg-white p-5 shadow-[0_2px_10px_rgba(0,0,0,0.03)] dark:border-white/[0.08] dark:bg-[#131926] dark:shadow-none flex flex-col justify-between gap-4">
+          <div className="flex items-center justify-between gap-2 border-b border-black/5 pb-3 dark:border-white/[0.07]">
             <div>
-              <h2 className="text-sm font-semibold text-slate-900 dark:text-white">
-                Resumo de Aprovação
+              <h2 className="text-sm font-semibold text-[#1D1D1F] dark:text-white">
+                Prontidão para a Prova
               </h2>
-              <p className="text-xs text-slate-500 dark:text-slate-400 tabular-nums">
-                {effectiveCutoffTarget.institution} · Corte {summary.cutoffScore.toFixed(1)}% ({summary.totalExamQuestions}q)
+              <p className="text-xs text-[#86868B] dark:text-slate-400 tabular-nums">
+                {effectiveCutoffTarget.institution} · Corte {summary.cutoffScore.toFixed(1)}% ({summary.totalExamQuestions}q) · Janela 90d
               </p>
             </div>
             <button
@@ -323,7 +321,7 @@ export function HomeUnifiedView({
                 setCalibrationTab('estimador');
                 setCalibrationOpen(true);
               }}
-              className="inline-flex items-center gap-1 rounded-lg border border-slate-200/80 bg-slate-50 px-2.5 py-1 text-[11px] font-medium text-slate-700 hover:bg-slate-100 dark:border-white/[0.08] dark:bg-[#182030] dark:text-slate-200 dark:hover:bg-white/[0.08] transition-colors cursor-pointer"
+              className="inline-flex items-center gap-1 rounded-lg border border-black/5 bg-[#F5F5F7] px-2.5 py-1 text-[11px] font-medium text-[#1D1D1F] hover:bg-[#EBEBF0] dark:border-white/[0.08] dark:bg-[#182030] dark:text-slate-200 dark:hover:bg-white/[0.08] transition-colors cursor-pointer"
             >
               <SlidersHorizontal size={13} strokeWidth={1.5} />
               <span>Calibrar</span>
@@ -332,28 +330,28 @@ export function HomeUnifiedView({
 
           {/* 3 Compact Executive KPIs */}
           <div className="grid grid-cols-3 gap-2.5">
-            <div className="rounded-xl border border-slate-200/70 bg-slate-50/70 p-3 dark:border-white/[0.07] dark:bg-[#0B0F17]/70">
-              <p className="text-[11px] text-slate-500 dark:text-slate-400">Nota Projetada</p>
-              <p className="mt-1 font-mono text-xl font-semibold tabular-nums text-slate-900 dark:text-white">
+            <div className="rounded-xl border border-black/5 bg-[#F5F5F7]/70 p-3 dark:border-white/[0.07] dark:bg-[#0B0F17]/70">
+              <p className="text-[11px] text-[#86868B] dark:text-slate-400">Nota Projetada</p>
+              <p className="mt-1 font-mono text-xl font-semibold tabular-nums text-[#1D1D1F] dark:text-white">
                 {summary.projectedScore.toFixed(1)}%
               </p>
-              <p className="mt-0.5 font-mono text-[10px] tabular-nums text-slate-500 dark:text-slate-400">
-                IC {summary.ci95[0].toFixed(0)}–{summary.ci95[1].toFixed(0)}%
+              <p className="mt-0.5 font-mono text-[10px] tabular-nums text-[#86868B] dark:text-slate-400">
+                Faixa {summary.predictionInterval95[0].toFixed(0)}–{summary.predictionInterval95[1].toFixed(0)}%
               </p>
             </div>
 
-            <div className="rounded-xl border border-slate-200/70 bg-slate-50/70 p-3 dark:border-white/[0.07] dark:bg-[#0B0F17]/70">
-              <p className="text-[11px] text-slate-500 dark:text-slate-400">Aprovação</p>
+            <div className="rounded-xl border border-black/5 bg-[#F5F5F7]/70 p-3 dark:border-white/[0.07] dark:bg-[#0B0F17]/70">
+              <p className="text-[11px] text-[#86868B] dark:text-slate-400">Chance de Corte</p>
               <p className={cn('mt-1 font-mono text-xl font-semibold tabular-nums', approvalTone)}>
                 {summary.approvalProbabilityPct.toFixed(1)}%
               </p>
-              <p className="mt-0.5 font-mono text-[10px] tabular-nums text-slate-500 dark:text-slate-400">
-                ±{summary.cutoffSd.toFixed(1)} DP
+              <p className="mt-0.5 font-mono text-[10px] tabular-nums text-[#86868B] dark:text-slate-400">
+                Simulados 1,5×
               </p>
             </div>
 
-            <div className="rounded-xl border border-slate-200/70 bg-slate-50/70 p-3 dark:border-white/[0.07] dark:bg-[#0B0F17]/70">
-              <p className="text-[11px] text-slate-500 dark:text-slate-400">vs. Corte</p>
+            <div className="rounded-xl border border-black/5 bg-[#F5F5F7]/70 p-3 dark:border-white/[0.07] dark:bg-[#0B0F17]/70">
+              <p className="text-[11px] text-[#86868B] dark:text-slate-400">vs. Corte</p>
               <p
                 className={cn(
                   'mt-1 font-mono text-xl font-semibold tabular-nums',
@@ -364,7 +362,7 @@ export function HomeUnifiedView({
               >
                 {formattedDelta}
               </p>
-              <p className="mt-0.5 font-mono text-[10px] tabular-nums text-slate-500 dark:text-slate-400">
+              <p className="mt-0.5 font-mono text-[10px] tabular-nums text-[#86868B] dark:text-slate-400">
                 Meta {summary.operationalTarget.toFixed(1)}%
               </p>
             </div>
@@ -372,15 +370,15 @@ export function HomeUnifiedView({
 
           {/* Priority Bottleneck CTA */}
           {summary.bottleneck && (
-            <div className="flex items-center justify-between gap-3 rounded-xl border border-slate-200/70 bg-slate-50/70 px-3.5 py-3 dark:border-white/[0.07] dark:bg-[#0B0F17]/70">
+            <div className="flex items-center justify-between gap-3 rounded-xl border border-black/5 bg-[#F5F5F7]/70 px-3.5 py-3 dark:border-white/[0.07] dark:bg-[#0B0F17]/70">
               <div className="min-w-0">
                 <div className="inline-flex items-center gap-1.5 text-[11px] font-medium text-[#D70015] dark:text-red-400">
                   <AlertTriangle size={13} strokeWidth={1.5} />
                   <span>Gargalo Prioritário</span>
                 </div>
-                <p className="mt-0.5 text-sm font-semibold text-slate-900 dark:text-white truncate">
+                <p className="mt-0.5 text-sm font-semibold text-[#1D1D1F] dark:text-white truncate">
                   {summary.bottleneck.label}{' '}
-                  <span className="font-mono text-xs font-normal tabular-nums text-slate-500 dark:text-slate-400">
+                  <span className="font-mono text-xs font-normal tabular-nums text-[#86868B] dark:text-slate-400">
                     ({summary.bottleneck.accuracyPct.toFixed(1)}%)
                   </span>
                 </p>
@@ -388,7 +386,7 @@ export function HomeUnifiedView({
               <button
                 type="button"
                 onClick={() => onPracticeArea(summary.bottleneck!.grandeAreaId)}
-                className="inline-flex shrink-0 items-center gap-1.5 rounded-lg bg-[#007AFF] px-3 py-2 text-xs font-medium text-white shadow-xs hover:bg-[#0066D6] transition-colors cursor-pointer"
+                className="inline-flex shrink-0 items-center gap-1.5 rounded-lg bg-[#007AFF] px-3 py-2 text-xs font-medium text-white shadow-sm hover:bg-[#0066D6] transition-colors cursor-pointer"
               >
                 <span>Treinar {summary.bottleneck.shortLabel}</span>
                 <ArrowRight size={14} strokeWidth={1.5} />
@@ -398,14 +396,14 @@ export function HomeUnifiedView({
         </div>
 
         {/* Direita: Tabela Compacta das 5 Grandes Áreas */}
-        <div className="lg:col-span-7 rounded-xl border border-slate-200/80 bg-white p-5 dark:border-white/[0.08] dark:bg-[#131926]">
-          <div className="flex items-center justify-between gap-2 border-b border-slate-200/70 pb-3 dark:border-white/[0.07]">
+        <div className="lg:col-span-7 rounded-2xl border border-black/5 bg-white p-5 shadow-[0_2px_10px_rgba(0,0,0,0.03)] dark:border-white/[0.08] dark:bg-[#131926] dark:shadow-none">
+          <div className="flex items-center justify-between gap-2 border-b border-black/5 pb-3 dark:border-white/[0.07]">
             <div>
-              <h2 className="text-sm font-semibold text-slate-900 dark:text-white">
+              <h2 className="text-sm font-semibold text-[#1D1D1F] dark:text-white">
                 As 5 Grandes Áreas
               </h2>
-              <p className="text-xs text-slate-500 dark:text-slate-400">
-                Estimador estratificado (Cochran) com IC 95% e prática direta
+              <p className="text-xs text-[#86868B] dark:text-slate-400">
+                Desempenho recente por área (90d · simulados com maior peso) e prática direta
               </p>
             </div>
             <button

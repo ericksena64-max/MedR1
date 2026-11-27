@@ -155,7 +155,7 @@ describe('weeklySchedule — motor da grade semanal calibrada', () => {
     expect(result.days[3].relativeLabel).toBe('Em 2 dias');
   });
 
-  it('distribui 1–3 blocos de assunto apenas em dias ativos, somando exatamente a meta diária', () => {
+  it('distribui obrigatoriamente as 5 grandes áreas em cada dia ativo, somando exatamente a meta diária', () => {
     const refDate = new Date(2026, 10, 23, 10, 0, 0);
     const config: WeeklyScheduleConfig = {
       activeDays: [1, 2, 4],
@@ -183,13 +183,19 @@ describe('weeklySchedule — motor da grade semanal calibrada', () => {
     expect(result.days[0].topicBlocks).toEqual([]);
     expect(result.days[3].topicBlocks).toEqual([]);
 
-    // Dias ativos: 1 a 3 blocos cuja soma de questões = estimatedQuestions do dia
+    // Dias ativos: todas as 5 grandes áreas presentes, soma de questões = estimatedQuestions do dia
     for (const idx of [1, 2, 4]) {
       const day = result.days[idx];
-      expect(day.topicBlocks.length).toBeGreaterThanOrEqual(1);
-      expect(day.topicBlocks.length).toBeLessThanOrEqual(3);
+      expect(day.topicBlocks).toHaveLength(5);
+      expect(new Set(day.topicBlocks.map((b) => b.grandeAreaId)).size).toBe(5);
       const sumQ = day.topicBlocks.reduce((acc, b) => acc + b.estimatedQuestions, 0);
       expect(sumQ).toBe(day.estimatedQuestions);
+      for (const block of day.topicBlocks) {
+        expect(block.grandeAreaName).toBeTruthy();
+        expect(block.subtemas && block.subtemas.length).toBeGreaterThanOrEqual(1);
+        const subSum = (block.subtemas ?? []).reduce((acc, s) => acc + s.estimatedQuestions, 0);
+        expect(subSum).toBe(block.estimatedQuestions);
+      }
     }
   });
 
@@ -363,8 +369,13 @@ describe('weeklySchedule — motor da grade semanal calibrada', () => {
 
     for (const idx of [1, 2]) {
       const areas = result.days[idx].topicBlocks.map((b) => b.grandeAreaId);
-      expect(areas).toHaveLength(3);
-      expect(new Set(areas).size).toBe(3);
+      expect(areas).toHaveLength(4);
+      expect(new Set(areas).size).toBe(4);
+      // Clínica Médica tem 3 temas disponíveis e >= 8q/dia -> divide em 2 subtemas no mesmo card
+      const cmBlock = result.days[idx].topicBlocks.find((b) => b.grandeAreaId === 'clinica_medica');
+      expect(cmBlock?.subtemas).toHaveLength(2);
+      const subSum = (cmBlock?.subtemas ?? []).reduce((acc, s) => acc + s.estimatedQuestions, 0);
+      expect(subSum).toBe(cmBlock?.estimatedQuestions);
     }
   });
 
@@ -449,18 +460,21 @@ describe('weeklySchedule — motor da grade semanal calibrada', () => {
     expect(result.days[1].topicBlocks[0].reasonTag).toContain('UEPA + UFRGS');
   });
 
-  it('evita repetir o mesmo assunto em dias ativos consecutivos', () => {
+  it('evita repetir o mesmo assunto em dias ativos consecutivos quando cada grande área possui múltiplos temas', () => {
     const refDate = new Date(2026, 10, 23, 10, 0, 0);
     const topics: WeeklyTopicInput[] = [
       { grandeAreaId: 'clinica_medica', label: 'Cardiologia', shortArea: 'Clínica', studentPct: 50, answered: 20 },
+      { grandeAreaId: 'clinica_medica', label: 'Nefrologia', shortArea: 'Clínica', studentPct: 55, answered: 20 },
       { grandeAreaId: 'cirurgia_geral', label: 'Trauma e ATLS', shortArea: 'Cirurgia', studentPct: 55, answered: 20 },
+      { grandeAreaId: 'cirurgia_geral', label: 'Hérnias', shortArea: 'Cirurgia', studentPct: 60, answered: 20 },
       { grandeAreaId: 'pediatria', label: 'Neonatologia', shortArea: 'Pediatria', studentPct: 60, answered: 20 },
+      { grandeAreaId: 'pediatria', label: 'Imunizações', shortArea: 'Pediatria', studentPct: 62, answered: 20 },
     ];
 
     const result = buildWeeklySchedule({
       config: {
         activeDays: [1, 2, 3, 4], // Seg, Ter, Qua, Qui
-        hoursPerDay: 2, // 1 bloco por dia -> pool de 3 temas deve rotacionar sem repetir em dias consecutivos
+        hoursPerDay: 1, // 20q -> ~6-7q por área (1 tema/área por dia) -> rotaciona sem repetir em dias consecutivos
         paceMode: 'estudo',
         targetExams: ['UEPA'],
       },

@@ -1,0 +1,3880 @@
+{
+  "version": "1.0.0",
+  "schema": "medr1_taxonomy_v1",
+  "description": "Vocabulário fechado de Grande Área, Tema e Subtema para o banco de 30 mil questões do MedR1 (Acesso Direto R1).",
+  "rules": {
+    "grandeAreaFixed": [
+      "Clínica Médica",
+      "Cirurgia Geral",
+      "Ginecologia e Obstetrícia",
+      "Pediatria",
+      "Medicina Preventiva"
+    ],
+    "requireExactSubtemaMatch": true,
+    "fallbackPolicy": "Se uma questão não se encaixar em nenhum subtema existente, atribuir o subtema mais próximo e marcar needs_taxonomy_review=true para curadoria.",
+    "tagFormat": "lowercase-kebab-case"
+  },
+  "stats": {
+    "totalGrandeAreas": 5,
+    "totalTemas": 44,
+    "totalSubtemas": 260,
+    "totalAliases": 985,
+    "breakdown": {
+      "Clínica Médica": {
+        "temas": 13,
+        "subtemas": 116
+      },
+      "Cirurgia Geral": {
+        "temas": 9,
+        "subtemas": 41
+      },
+      "Ginecologia e Obstetrícia": {
+        "temas": 8,
+        "subtemas": 43
+      },
+      "Pediatria": {
+        "temas": 8,
+        "subtemas": 35
+      },
+      "Medicina Preventiva": {
+        "temas": 6,
+        "subtemas": 25
+      }
+    }
+  },
+  "grandeAreas": [
+    {
+      "slug": "cm",
+      "label": "Clínica Médica",
+      "temas": [
+        {
+          "slug": "cm-cardio",
+          "label": "Cardiologia",
+          "subtemas": [
+            {
+              "slug": "cm-cardio-hipertensao-arterial-sistemica",
+              "label": "Hipertensão Arterial Sistêmica",
+              "aliases": [
+                "crise hipertensiva",
+                "emergencia hipertensiva",
+                "has",
+                "hipertensao"
+              ]
+            },
+            {
+              "slug": "cm-cardio-sindrome-coronariana-aguda-com-supra-de-st",
+              "label": "Síndrome Coronariana Aguda com Supra de ST",
+              "aliases": [
+                "iam com supra",
+                "iamcsst",
+                "sca com supra"
+              ]
+            },
+            {
+              "slug": "cm-cardio-sindrome-coronariana-aguda-sem-supra-de-st",
+              "label": "Síndrome Coronariana Aguda sem Supra de ST",
+              "aliases": [
+                "angina instavel",
+                "iamssst",
+                "sca sem supra"
+              ]
+            },
+            {
+              "slug": "cm-cardio-doenca-arterial-coronariana-cronica",
+              "label": "Doença Arterial Coronariana Crônica",
+              "aliases": [
+                "angina estavel",
+                "dac cronica",
+                "sindrome coronariana cronica"
+              ]
+            },
+            {
+              "slug": "cm-cardio-insuficiencia-cardiaca",
+              "label": "Insuficiência Cardíaca",
+              "aliases": [
+                "ic",
+                "ic descompensada",
+                "icc",
+                "icfep",
+                "icfer"
+              ]
+            },
+            {
+              "slug": "cm-cardio-fibrilacao-atrial-e-taquiarritmias",
+              "label": "Fibrilação Atrial e Taquiarritmias",
+              "aliases": [
+                "fa",
+                "flutter atrial",
+                "taquicardia ventricular",
+                "tpsv"
+              ]
+            },
+            {
+              "slug": "cm-cardio-bradiarritmias-e-bloqueios-atrioventriculares",
+              "label": "Bradiarritmias e Bloqueios Atrioventriculares",
+              "aliases": [
+                "bav",
+                "bloqueio de ramo",
+                "bradicardia"
+              ]
+            },
+            {
+              "slug": "cm-cardio-valvopatias",
+              "label": "Valvopatias",
+              "aliases": [
+                "estenose aortica",
+                "estenose mitral",
+                "insuficiencia aortica",
+                "insuficiencia mitral"
+              ]
+            },
+            {
+              "slug": "cm-cardio-endocardite-infecciosa",
+              "label": "Endocardite Infecciosa",
+              "aliases": [
+                "criterios de duke",
+                "endocardite"
+              ]
+            },
+            {
+              "slug": "cm-cardio-pericardite-e-tamponamento-cardiaco",
+              "label": "Pericardite e Tamponamento Cardíaco",
+              "aliases": [
+                "derrame pericardico",
+                "pericardite aguda",
+                "pericardite constritiva"
+              ]
+            },
+            {
+              "slug": "cm-cardio-febre-reumatica",
+              "label": "Febre Reumática",
+              "aliases": [
+                "cardite reumatica",
+                "criterios de jones"
+              ]
+            },
+            {
+              "slug": "cm-cardio-parada-cardiorrespiratoria-e-acls",
+              "label": "Parada Cardiorrespiratória e ACLS",
+              "aliases": [
+                "pcr",
+                "rcp",
+                "suporte avancado de vida"
+              ]
+            },
+            {
+              "slug": "cm-cardio-sincope-e-morte-subita",
+              "label": "Síncope e Morte Súbita",
+              "aliases": [
+                "canalopatias",
+                "sincope vasovagal",
+                "sindrome de brugada"
+              ]
+            },
+            {
+              "slug": "cm-cardio-dislipidemia-e-prevencao-cardiovascular",
+              "label": "Dislipidemia e Prevenção Cardiovascular",
+              "aliases": [
+                "colesterol",
+                "estatinas",
+                "risco cardiovascular"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "cm-pneumo",
+          "label": "Pneumologia",
+          "subtemas": [
+            {
+              "slug": "cm-pneumo-asma-no-adulto",
+              "label": "Asma no Adulto",
+              "aliases": [
+                "asma bronquica",
+                "crise asmatica",
+                "gina"
+              ]
+            },
+            {
+              "slug": "cm-pneumo-doenca-pulmonar-obstrutiva-cronica",
+              "label": "Doença Pulmonar Obstrutiva Crônica",
+              "aliases": [
+                "bronquite cronica",
+                "dpoc",
+                "enfisema",
+                "gold"
+              ]
+            },
+            {
+              "slug": "cm-pneumo-pneumonia-adquirida-na-comunidade-e-hospitalar",
+              "label": "Pneumonia Adquirida na Comunidade e Hospitalar",
+              "aliases": [
+                "pac",
+                "pah",
+                "pav",
+                "pneumonia"
+              ]
+            },
+            {
+              "slug": "cm-pneumo-derrame-pleural",
+              "label": "Derrame Pleural",
+              "aliases": [
+                "criterios de light",
+                "empiema",
+                "toracocentese"
+              ]
+            },
+            {
+              "slug": "cm-pneumo-tromboembolismo-pulmonar-e-tvp",
+              "label": "Tromboembolismo Pulmonar e TVP",
+              "aliases": [
+                "tep",
+                "tev",
+                "trombose venosa profunda",
+                "tvp"
+              ]
+            },
+            {
+              "slug": "cm-pneumo-doencas-pulmonares-intersticiais",
+              "label": "Doenças Pulmonares Intersticiais",
+              "aliases": [
+                "fibrose pulmonar",
+                "pneumoconiose",
+                "sarcoidose"
+              ]
+            },
+            {
+              "slug": "cm-pneumo-cancer-de-pulmao-e-nodulo-pulmonar",
+              "label": "Câncer de Pulmão e Nódulo Pulmonar",
+              "aliases": [
+                "neoplasia pulmonar",
+                "nodulo pulmonar solitario"
+              ]
+            },
+            {
+              "slug": "cm-pneumo-hipertensao-pulmonar-e-cor-pulmonale",
+              "label": "Hipertensão Pulmonar e Cor Pulmonale",
+              "aliases": [
+                "hap",
+                "hipertensao arterial pulmonar"
+              ]
+            },
+            {
+              "slug": "cm-pneumo-insuficiencia-respiratoria-e-ventilacao-mecanica",
+              "label": "Insuficiência Respiratória e Ventilação Mecânica",
+              "aliases": [
+                "iot",
+                "sdra",
+                "ventilacao mecanica",
+                "vni"
+              ]
+            },
+            {
+              "slug": "cm-pneumo-bronquiectasias-e-abscesso-pulmonar",
+              "label": "Bronquiectasias e Abscesso Pulmonar",
+              "aliases": [
+                "abscesso pulmonar",
+                "hemoptise"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "cm-nefro",
+          "label": "Nefrologia",
+          "subtemas": [
+            {
+              "slug": "cm-nefro-injuria-renal-aguda",
+              "label": "Injúria Renal Aguda",
+              "aliases": [
+                "insuficiencia renal aguda",
+                "ira",
+                "kdigo",
+                "necrose tubular aguda"
+              ]
+            },
+            {
+              "slug": "cm-nefro-doenca-renal-cronica-e-terapia-substitutiva",
+              "label": "Doença Renal Crônica e Terapia Substitutiva",
+              "aliases": [
+                "dialise peritoneal",
+                "drc",
+                "hemodialise",
+                "transplante renal"
+              ]
+            },
+            {
+              "slug": "cm-nefro-sindrome-nefrotica",
+              "label": "Síndrome Nefrótica",
+              "aliases": [
+                "gesf",
+                "lesao minima",
+                "nefropatia membranosa"
+              ]
+            },
+            {
+              "slug": "cm-nefro-sindrome-nefritica-e-glomerulonefrites",
+              "label": "Síndrome Nefrítica e Glomerulonefrites",
+              "aliases": [
+                "glomerulopatia",
+                "gnpe",
+                "gnrp",
+                "nefropatia por iga"
+              ]
+            },
+            {
+              "slug": "cm-nefro-disturbios-do-sodio",
+              "label": "Distúrbios do Sódio",
+              "aliases": [
+                "diabetes insipidus",
+                "hipernatremia",
+                "hiponatremia",
+                "siadh"
+              ]
+            },
+            {
+              "slug": "cm-nefro-disturbios-do-potassio",
+              "label": "Distúrbios do Potássio",
+              "aliases": [
+                "hipercalemia",
+                "hipocalemia"
+              ]
+            },
+            {
+              "slug": "cm-nefro-disturbios-acido-basicos",
+              "label": "Distúrbios Ácido-Básicos",
+              "aliases": [
+                "acidose metabolica",
+                "acidose respiratoria",
+                "alcalose metabolica",
+                "gasometria"
+              ]
+            },
+            {
+              "slug": "cm-nefro-infeccao-do-trato-urinario-no-adulto",
+              "label": "Infecção do Trato Urinário no Adulto",
+              "aliases": [
+                "cistite",
+                "itu",
+                "pielonefrite"
+              ]
+            },
+            {
+              "slug": "cm-nefro-nefrolitiase",
+              "label": "Nefrolitíase",
+              "aliases": [
+                "calculo renal",
+                "colica nefritica",
+                "urolitiase"
+              ]
+            },
+            {
+              "slug": "cm-nefro-doencas-tubulointersticiais-e-renais-poliquisticas",
+              "label": "Doenças Tubulointersticiais e Renais Poliquísticas",
+              "aliases": [
+                "acidose tubular renal",
+                "drpad",
+                "nefrite intersticial",
+                "nia"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "cm-endocrino",
+          "label": "Endocrinologia e Metabologia",
+          "subtemas": [
+            {
+              "slug": "cm-endocrino-diabetes-mellitus-diagnostico-e-tratamento",
+              "label": "Diabetes Mellitus - Diagnóstico e Tratamento",
+              "aliases": [
+                "antidiabeticos",
+                "dm1",
+                "dm2",
+                "insulina"
+              ]
+            },
+            {
+              "slug": "cm-endocrino-complicacoes-agudas-do-diabetes",
+              "label": "Complicações Agudas do Diabetes",
+              "aliases": [
+                "cad",
+                "cetoacidose diabetica",
+                "ehh",
+                "estado hiperosmolar",
+                "hipoglicemia"
+              ]
+            },
+            {
+              "slug": "cm-endocrino-complicacoes-cronicas-do-diabetes",
+              "label": "Complicações Crônicas do Diabetes",
+              "aliases": [
+                "nefropatia diabetica",
+                "neuropatia diabetica",
+                "pe diabetico",
+                "retinopatia diabetica"
+              ]
+            },
+            {
+              "slug": "cm-endocrino-hipotireoidismo",
+              "label": "Hipotireoidismo",
+              "aliases": [
+                "coma mixedematoso",
+                "levotiroxina",
+                "tireoidite de hashimoto"
+              ]
+            },
+            {
+              "slug": "cm-endocrino-hipertireoidismo-e-tireoidites",
+              "label": "Hipertireoidismo e Tireoidites",
+              "aliases": [
+                "doenca de graves",
+                "tempestade tireoidiana",
+                "tireoidite subaguda"
+              ]
+            },
+            {
+              "slug": "cm-endocrino-nodulos-e-cancer-de-tireoide",
+              "label": "Nódulos e Câncer de Tireoide",
+              "aliases": [
+                "bethesda",
+                "carcinoma papilifero",
+                "tirads"
+              ]
+            },
+            {
+              "slug": "cm-endocrino-doencas-da-adrenal",
+              "label": "Doenças da Adrenal",
+              "aliases": [
+                "doenca de addison",
+                "feocromocitoma",
+                "hiperaldosteronismo",
+                "insuficiencia adrenal",
+                "sindrome de cushing"
+              ]
+            },
+            {
+              "slug": "cm-endocrino-disturbios-do-calcio-e-paratireoide",
+              "label": "Distúrbios do Cálcio e Paratireoide",
+              "aliases": [
+                "hipercalcemia",
+                "hiperparatireoidismo",
+                "hipocalcemia",
+                "hipoparatireoidismo"
+              ]
+            },
+            {
+              "slug": "cm-endocrino-doencas-da-hipofise",
+              "label": "Doenças da Hipófise",
+              "aliases": [
+                "acromegalia",
+                "hipopituitarismo",
+                "prolactinoma"
+              ]
+            },
+            {
+              "slug": "cm-endocrino-obesidade-e-sindrome-metabolica",
+              "label": "Obesidade e Síndrome Metabólica",
+              "aliases": [
+                "sindrome metabolica",
+                "tratamento farmacologico da obesidade"
+              ]
+            },
+            {
+              "slug": "cm-endocrino-osteoporose-e-doencas-osteometabolicas",
+              "label": "Osteoporose e Doenças Osteometabólicas",
+              "aliases": [
+                "doenca de paget",
+                "fratura por fragilidade",
+                "osteopenia"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "cm-gastro",
+          "label": "Gastroenterologia e Hepatologia",
+          "subtemas": [
+            {
+              "slug": "cm-gastro-drge-e-doencas-do-esofago",
+              "label": "DRGE e Doenças do Esôfago",
+              "aliases": [
+                "esofagite",
+                "esofago de barrett",
+                "refluxo gastroesofagico"
+              ]
+            },
+            {
+              "slug": "cm-gastro-doenca-ulcerosa-peptica-e-h-pylori",
+              "label": "Doença Ulcerosa Péptica e H. pylori",
+              "aliases": [
+                "dispepsia",
+                "dup",
+                "ulcera duodenal",
+                "ulcera gastrica"
+              ]
+            },
+            {
+              "slug": "cm-gastro-hemorragia-digestiva-alta",
+              "label": "Hemorragia Digestiva Alta",
+              "aliases": [
+                "forrest",
+                "hda",
+                "varizes esofagicas"
+              ]
+            },
+            {
+              "slug": "cm-gastro-hemorragia-digestiva-baixa",
+              "label": "Hemorragia Digestiva Baixa",
+              "aliases": [
+                "angiodisplasia",
+                "doenca diverticular",
+                "hdb"
+              ]
+            },
+            {
+              "slug": "cm-gastro-doenca-inflamatoria-intestinal",
+              "label": "Doença Inflamatória Intestinal",
+              "aliases": [
+                "dii",
+                "doenca de crohn",
+                "retocolite ulcerativa"
+              ]
+            },
+            {
+              "slug": "cm-gastro-sindrome-disabsortiva-e-doenca-celiaca",
+              "label": "Síndrome Disabsortiva e Doença Celíaca",
+              "aliases": [
+                "diarreia cronica",
+                "doenca celiaca",
+                "sindrome do intestino irritavel"
+              ]
+            },
+            {
+              "slug": "cm-gastro-pancreatite-aguda-e-cronica",
+              "label": "Pancreatite Aguda e Crônica",
+              "aliases": [
+                "criterios de ranson",
+                "pancreatite aguda",
+                "pancreatite cronica"
+              ]
+            },
+            {
+              "slug": "cm-gastro-hepatites-virais",
+              "label": "Hepatites Virais",
+              "aliases": [
+                "hepatite a",
+                "hepatite b",
+                "hepatite c",
+                "hepatite d"
+              ]
+            },
+            {
+              "slug": "cm-gastro-cirrose-hepatica-e-hipertensao-portal",
+              "label": "Cirrose Hepática e Hipertensão Portal",
+              "aliases": [
+                "child-pugh",
+                "cirrose",
+                "hepatite autoimune",
+                "meld"
+              ]
+            },
+            {
+              "slug": "cm-gastro-complicacoes-da-cirrose",
+              "label": "Complicações da Cirrose",
+              "aliases": [
+                "ascite",
+                "encefalopatia hepatica",
+                "pbe",
+                "peritonite bacteriana espontanea",
+                "sindrome hepatorrenal"
+              ]
+            },
+            {
+              "slug": "cm-gastro-doenca-hepatica-esteatotica-e-alcoolica",
+              "label": "Doença Hepática Esteatótica e Alcoólica",
+              "aliases": [
+                "dhgna",
+                "esteatose hepatica",
+                "hepatite alcoolica",
+                "masld"
+              ]
+            },
+            {
+              "slug": "cm-gastro-hepatocarcinoma-e-nodulos-hepaticos",
+              "label": "Hepatocarcinoma e Nódulos Hepáticos",
+              "aliases": [
+                "adenoma hepatico",
+                "chc",
+                "hemangioma",
+                "hiperplasia nodular focal"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "cm-infecto",
+          "label": "Infectologia",
+          "subtemas": [
+            {
+              "slug": "cm-infecto-hiv-aids-e-infeccoes-oportunistas",
+              "label": "HIV/AIDS e Infecções Oportunistas",
+              "aliases": [
+                "criptococose",
+                "neurotoxoplasmose",
+                "pep",
+                "pneumocistose",
+                "prep",
+                "tarv"
+              ]
+            },
+            {
+              "slug": "cm-infecto-tuberculose-pulmonar-e-extrapulmonar",
+              "label": "Tuberculose Pulmonar e Extrapulmonar",
+              "aliases": [
+                "esquema ripe",
+                "il tb",
+                "meningite tuberculosa",
+                "tb"
+              ]
+            },
+            {
+              "slug": "cm-infecto-arboviroses",
+              "label": "Arboviroses",
+              "aliases": [
+                "chikungunya",
+                "dengue",
+                "febre amarela",
+                "zika"
+              ]
+            },
+            {
+              "slug": "cm-infecto-malaria-e-doencas-endemicas",
+              "label": "Malária e Doenças Endêmicas",
+              "aliases": [
+                "doenca de chagas",
+                "esquistossomose",
+                "leishmaniose tegumentar",
+                "leishmaniose visceral",
+                "malaria"
+              ]
+            },
+            {
+              "slug": "cm-infecto-leptospirose-e-rickettsioses",
+              "label": "Leptospirose e Rickettsioses",
+              "aliases": [
+                "febre maculosa",
+                "leptospirose",
+                "sindrome de weil"
+              ]
+            },
+            {
+              "slug": "cm-infecto-meningites-e-encefalites-no-adulto",
+              "label": "Meningites e Encefalites no Adulto",
+              "aliases": [
+                "encefalite herpetica",
+                "liquor",
+                "meningite bacteriana",
+                "meningite viral"
+              ]
+            },
+            {
+              "slug": "cm-infecto-sepse-e-choque-septico",
+              "label": "Sepse e Choque Séptico",
+              "aliases": [
+                "qsofa",
+                "sepse",
+                "sofa",
+                "surviving sepsis"
+              ]
+            },
+            {
+              "slug": "cm-infecto-ists-e-sifilis-no-adulto",
+              "label": "ISTs e Sífilis no Adulto",
+              "aliases": [
+                "cancro mole",
+                "clamidia",
+                "gonorreia",
+                "linfogranuloma",
+                "sifilis"
+              ]
+            },
+            {
+              "slug": "cm-infecto-infeccoes-de-pele-e-partes-moles",
+              "label": "Infecções de Pele e Partes Moles",
+              "aliases": [
+                "celulite",
+                "erisipela",
+                "fasciite necrosante",
+                "osteomielite"
+              ]
+            },
+            {
+              "slug": "cm-infecto-micoses-sistemicas-endemicas",
+              "label": "Micoses Sistêmicas Endêmicas",
+              "aliases": [
+                "aspergilose",
+                "esporotricose",
+                "histoplasmose",
+                "paracoccidioidomicose"
+              ]
+            },
+            {
+              "slug": "cm-infecto-acidentes-por-animais-peconhentos",
+              "label": "Acidentes por Animais Peçonhentos",
+              "aliases": [
+                "botropico",
+                "crotalico",
+                "escorpionismo",
+                "loxoscelismo",
+                "ofidismo"
+              ]
+            },
+            {
+              "slug": "cm-infecto-antimicrobianos-e-infeccoes-relacionadas-a-assistencia",
+              "label": "Antimicrobianos e Infecções Relacionadas à Assistência",
+              "aliases": [
+                "antibioticoterapia",
+                "bacterias multirresistentes",
+                "clostridioides difficile",
+                "iras"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "cm-hemato",
+          "label": "Hematologia",
+          "subtemas": [
+            {
+              "slug": "cm-hemato-anemias-carenciais",
+              "label": "Anemias Carenciais",
+              "aliases": [
+                "acido folico",
+                "anemia ferropriva",
+                "anemia megaloblastica",
+                "deficiencia de b12"
+              ]
+            },
+            {
+              "slug": "cm-hemato-anemias-hemoliticas-e-doenca-falciforme",
+              "label": "Anemias Hemolíticas e Doença Falciforme",
+              "aliases": [
+                "ahai",
+                "anemia falciforme",
+                "esferocitose",
+                "g6pd",
+                "talassemia"
+              ]
+            },
+            {
+              "slug": "cm-hemato-anemia-de-doenca-cronica-e-sideroblastica",
+              "label": "Anemia de Doença Crônica e Sideroblástica",
+              "aliases": [
+                "anemia da inflamacao",
+                "aplasia medular",
+                "sindrome mielodisplasica"
+              ]
+            },
+            {
+              "slug": "cm-hemato-disturbios-da-hemostasia-primaria",
+              "label": "Distúrbios da Hemostasia Primária",
+              "aliases": [
+                "doenca de von willebrand",
+                "plaquetopenia",
+                "pti",
+                "ptt",
+                "shu"
+              ]
+            },
+            {
+              "slug": "cm-hemato-disturbios-da-coagulacao-e-anticoagulacao",
+              "label": "Distúrbios da Coagulação e Anticoagulação",
+              "aliases": [
+                "civd",
+                "doacs",
+                "hemofilia",
+                "heparina",
+                "hit",
+                "varfarina"
+              ]
+            },
+            {
+              "slug": "cm-hemato-leucemias-agudas-e-cronicas",
+              "label": "Leucemias Agudas e Crônicas",
+              "aliases": [
+                "lla",
+                "llc",
+                "lma",
+                "lmc"
+              ]
+            },
+            {
+              "slug": "cm-hemato-linfomas-de-hodgkin-e-nao-hodgkin",
+              "label": "Linfomas de Hodgkin e Não-Hodgkin",
+              "aliases": [
+                "linfoma de hodgkin",
+                "linfoma nao-hodgkin",
+                "linfonodomegalia"
+              ]
+            },
+            {
+              "slug": "cm-hemato-mieloma-multiplo-e-gamopatias",
+              "label": "Mieloma Múltiplo e Gamopatias",
+              "aliases": [
+                "amiloidose",
+                "macroglobulinemia",
+                "mieloma multiplo"
+              ]
+            },
+            {
+              "slug": "cm-hemato-hemoterapia-e-reacoes-transfusionais",
+              "label": "Hemoterapia e Reações Transfusionais",
+              "aliases": [
+                "indicacao de hemocomponentes",
+                "reacao hemolitica",
+                "taco",
+                "trali"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "cm-reumato",
+          "label": "Reumatologia",
+          "subtemas": [
+            {
+              "slug": "cm-reumato-artrite-reumatoide",
+              "label": "Artrite Reumatoide",
+              "aliases": [
+                "anti-ccp",
+                "ar",
+                "dmards",
+                "fator reumatoide"
+              ]
+            },
+            {
+              "slug": "cm-reumato-lupus-eritematoso-sistemico",
+              "label": "Lúpus Eritematoso Sistêmico",
+              "aliases": [
+                "anti-dsdna",
+                "fan",
+                "les",
+                "nefrite lupica"
+              ]
+            },
+            {
+              "slug": "cm-reumato-espondiloartrites",
+              "label": "Espondiloartrites",
+              "aliases": [
+                "artrite psoriasica",
+                "artrite reativa",
+                "espondilite anquilosante"
+              ]
+            },
+            {
+              "slug": "cm-reumato-vasculites-sistemicas",
+              "label": "Vasculites Sistêmicas",
+              "aliases": [
+                "anca",
+                "arterite de celulas gigantes",
+                "granulomatose",
+                "poliarterite nodosa",
+                "takayasu"
+              ]
+            },
+            {
+              "slug": "cm-reumato-esclerose-sistemica-e-miopatias-inflamatorias",
+              "label": "Esclerose Sistêmica e Miopatias Inflamatórias",
+              "aliases": [
+                "dermatomiosite",
+                "esclerodermia",
+                "polimiosite"
+              ]
+            },
+            {
+              "slug": "cm-reumato-gota-e-artropatias-por-cristais",
+              "label": "Gota e Artropatias por Cristais",
+              "aliases": [
+                "gota",
+                "hiperuricemia",
+                "pseudogota"
+              ]
+            },
+            {
+              "slug": "cm-reumato-artrite-septica-e-osteoartrite",
+              "label": "Artrite Séptica e Osteoartrite",
+              "aliases": [
+                "artrite septica",
+                "artrose",
+                "osteoartrose"
+              ]
+            },
+            {
+              "slug": "cm-reumato-sindrome-antifosfolipide-e-sjogren",
+              "label": "Síndrome Antifosfolípide e Sjögren",
+              "aliases": [
+                "saf",
+                "sindrome de sjogren"
+              ]
+            },
+            {
+              "slug": "cm-reumato-fibromialgia-e-dor-cronica",
+              "label": "Fibromialgia e Dor Crônica",
+              "aliases": [
+                "fibromialgia",
+                "lombalgia mecanica"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "cm-neuro",
+          "label": "Neurologia",
+          "subtemas": [
+            {
+              "slug": "cm-neuro-avc-isquemico-e-ait",
+              "label": "AVC Isquêmico e AIT",
+              "aliases": [
+                "ait",
+                "avci",
+                "trombectomia",
+                "trombolise cerebral"
+              ]
+            },
+            {
+              "slug": "cm-neuro-avc-hemorragico-e-hemorragia-subaracnoide",
+              "label": "AVC Hemorrágico e Hemorragia Subaracnoide",
+              "aliases": [
+                "aneurisma cerebral",
+                "avch",
+                "escala de fisher",
+                "hsa"
+              ]
+            },
+            {
+              "slug": "cm-neuro-cefaleias-primarias-e-secundarias",
+              "label": "Cefaleias Primárias e Secundárias",
+              "aliases": [
+                "cefaleia em salvas",
+                "cefaleia tensional",
+                "enxaqueca",
+                "migranea"
+              ]
+            },
+            {
+              "slug": "cm-neuro-epilepsias-e-estado-de-mal-epileptico",
+              "label": "Epilepsias e Estado de Mal Epiléptico",
+              "aliases": [
+                "anticonvulsivantes",
+                "crise convulsiva",
+                "eme"
+              ]
+            },
+            {
+              "slug": "cm-neuro-demencias-e-delirium",
+              "label": "Demências e Delirium",
+              "aliases": [
+                "alzheimer",
+                "corpos de lewy",
+                "delirium",
+                "demencia vascular"
+              ]
+            },
+            {
+              "slug": "cm-neuro-doenca-de-parkinson-e-transtornos-do-movimento",
+              "label": "Doença de Parkinson e Transtornos do Movimento",
+              "aliases": [
+                "coreia",
+                "parkinsonismo",
+                "tremor essencial"
+              ]
+            },
+            {
+              "slug": "cm-neuro-doencas-desmielinizantes",
+              "label": "Doenças Desmielinizantes",
+              "aliases": [
+                "esclerose multipla",
+                "neuromielite optica"
+              ]
+            },
+            {
+              "slug": "cm-neuro-polineuropatias-e-sindrome-de-guillain-barre",
+              "label": "Polineuropatias e Síndrome de Guillain-Barré",
+              "aliases": [
+                "guillain-barre",
+                "neuropatia periferica",
+                "polineuropatia"
+              ]
+            },
+            {
+              "slug": "cm-neuro-miastenia-gravis-e-doencas-da-juncao-neuromuscular",
+              "label": "Miastenia Gravis e Doenças da Junção Neuromuscular",
+              "aliases": [
+                "botulismo",
+                "crise miastenica",
+                "ela",
+                "miastenia gravis"
+              ]
+            },
+            {
+              "slug": "cm-neuro-coma-hipertensao-intracraniana-e-morte-encefalica",
+              "label": "Coma, Hipertensão Intracraniana e Morte Encefálica",
+              "aliases": [
+                "glasgow",
+                "hic",
+                "protocolo de morte encefalica"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "cm-psiq",
+          "label": "Psiquiatria",
+          "subtemas": [
+            {
+              "slug": "cm-psiq-transtornos-depressivos",
+              "label": "Transtornos Depressivos",
+              "aliases": [
+                "antidepressivos",
+                "depressao maior",
+                "distimia"
+              ]
+            },
+            {
+              "slug": "cm-psiq-transtorno-afetivo-bipolar",
+              "label": "Transtorno Afetivo Bipolar",
+              "aliases": [
+                "hipomania",
+                "litio",
+                "mania",
+                "tab"
+              ]
+            },
+            {
+              "slug": "cm-psiq-transtornos-de-ansiedade-toc-e-tept",
+              "label": "Transtornos de Ansiedade, TOC e TEPT",
+              "aliases": [
+                "fobias",
+                "tag",
+                "tept",
+                "toc",
+                "transtorno do panico"
+              ]
+            },
+            {
+              "slug": "cm-psiq-esquizofrenia-e-transtornos-psicoticos",
+              "label": "Esquizofrenia e Transtornos Psicóticos",
+              "aliases": [
+                "antipsicoticos",
+                "psicose",
+                "sindrome neuroleptica maligna"
+              ]
+            },
+            {
+              "slug": "cm-psiq-transtornos-por-uso-de-substancias-e-abstinencia",
+              "label": "Transtornos por Uso de Substâncias e Abstinência",
+              "aliases": [
+                "alcoolismo",
+                "cocaina",
+                "delirium tremens",
+                "opioides",
+                "tabagismo",
+                "wernicke-korsakoff"
+              ]
+            },
+            {
+              "slug": "cm-psiq-emergencias-psiquiatricas-e-risco-de-suicidio",
+              "label": "Emergências Psiquiátricas e Risco de Suicídio",
+              "aliases": [
+                "agitacao psicomotora",
+                "intoxicacao por litio",
+                "suicidio"
+              ]
+            },
+            {
+              "slug": "cm-psiq-transtornos-alimentares-e-de-personalidade",
+              "label": "Transtornos Alimentares e de Personalidade",
+              "aliases": [
+                "anorexia",
+                "borderline",
+                "bulimia"
+              ]
+            },
+            {
+              "slug": "cm-psiq-psicofarmacologia-clinica",
+              "label": "Psicofarmacologia Clínica",
+              "aliases": [
+                "benzodiazepinicos",
+                "estabilizadores de humor",
+                "isrs",
+                "sindrome serotoninergica"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "cm-dermato",
+          "label": "Dermatologia",
+          "subtemas": [
+            {
+              "slug": "cm-dermato-hanseniase",
+              "label": "Hanseníase",
+              "aliases": [
+                "hanseniase multibacilar",
+                "hanseniase paucibacilar",
+                "pqt",
+                "reacoes hansenicas"
+              ]
+            },
+            {
+              "slug": "cm-dermato-cancer-de-pele",
+              "label": "Câncer de Pele",
+              "aliases": [
+                "carcinoma basocelular",
+                "carcinoma espinocelular",
+                "melanoma"
+              ]
+            },
+            {
+              "slug": "cm-dermato-farmacodermias-graves",
+              "label": "Farmacodermias Graves",
+              "aliases": [
+                "dress",
+                "net",
+                "ssj",
+                "stevens-johnson"
+              ]
+            },
+            {
+              "slug": "cm-dermato-dermatoses-eczematosas-e-psoriase",
+              "label": "Dermatoses Eczematosas e Psoríase",
+              "aliases": [
+                "dermatite atopica",
+                "dermatite de contato",
+                "psoriase",
+                "urticaria"
+              ]
+            },
+            {
+              "slug": "cm-dermato-doencas-bolhosas-autoimunes",
+              "label": "Doenças Bolhosas Autoimunes",
+              "aliases": [
+                "penfigo vulgar",
+                "penfigoide bolhoso"
+              ]
+            },
+            {
+              "slug": "cm-dermato-micoses-superficiais-e-infestacoes-cutaneas",
+              "label": "Micoses Superficiais e Infestações Cutâneas",
+              "aliases": [
+                "escabiose",
+                "herpes zoster",
+                "pediculose",
+                "tinhas"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "cm-uti",
+          "label": "Medicina Intensiva e Toxicologia",
+          "subtemas": [
+            {
+              "slug": "cm-uti-choque-e-monitorizacao-hemodinamica",
+              "label": "Choque e Monitorização Hemodinâmica",
+              "aliases": [
+                "choque cardiogenico",
+                "choque distributivo",
+                "drogas vasoativas"
+              ]
+            },
+            {
+              "slug": "cm-uti-intoxicacoes-exogenas-e-sindromes-toxicologicas",
+              "label": "Intoxicações Exógenas e Síndromes Toxicológicas",
+              "aliases": [
+                "antidotos",
+                "benzodiazepinico",
+                "organofosforados",
+                "paracetamol",
+                "triciclicos"
+              ]
+            },
+            {
+              "slug": "cm-uti-cuidados-paliativos",
+              "label": "Cuidados Paliativos",
+              "aliases": [
+                "controle de dor",
+                "diretivas antecipadas",
+                "sedacao paliativa"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "cm-geriatria",
+          "label": "Geriatria e Oncologia Clínica",
+          "subtemas": [
+            {
+              "slug": "cm-geriatria-sindromes-geriatricas-e-avaliacao-geriatrica-ampla",
+              "label": "Síndromes Geriátricas e Avaliação Geriátrica Ampla",
+              "aliases": [
+                "fragilidade",
+                "polifarmacia",
+                "quedas no idoso",
+                "sarcopenia"
+              ]
+            },
+            {
+              "slug": "cm-geriatria-emergencias-oncologicas",
+              "label": "Emergências Oncológicas",
+              "aliases": [
+                "compressao medular",
+                "neutropenia febril",
+                "sindrome da veia cava superior",
+                "sindrome de lise tumoral"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "cg",
+      "label": "Cirurgia Geral",
+      "temas": [
+        {
+          "slug": "cg-trauma",
+          "label": "Trauma e ATLS",
+          "subtemas": [
+            {
+              "slug": "cg-trauma-atendimento-inicial-ao-politraumatizado",
+              "label": "Atendimento Inicial ao Politraumatizado",
+              "aliases": [
+                "abcde",
+                "choque hemorragico",
+                "transfusao macica",
+                "via aerea definitiva"
+              ]
+            },
+            {
+              "slug": "cg-trauma-trauma-toracico",
+              "label": "Trauma Torácico",
+              "aliases": [
+                "hemotorax macico",
+                "pneumotorax hipertensivo",
+                "tamponamento traumatico",
+                "torax instavel"
+              ]
+            },
+            {
+              "slug": "cg-trauma-trauma-abdominal-e-pelvico",
+              "label": "Trauma Abdominal e Pélvico",
+              "aliases": [
+                "fast",
+                "fratura de pelve",
+                "trauma esplenico",
+                "trauma hepatico"
+              ]
+            },
+            {
+              "slug": "cg-trauma-trauma-cranioencefalico-e-raquimedular",
+              "label": "Trauma Cranioencefálico e Raquimedular",
+              "aliases": [
+                "choque neurogenico",
+                "hematoma epidural",
+                "hematoma subdural",
+                "tce"
+              ]
+            },
+            {
+              "slug": "cg-trauma-queimaduras-e-lesao-inalatoria",
+              "label": "Queimaduras e Lesão Inalatória",
+              "aliases": [
+                "formula de parkland",
+                "queimadura eletrica",
+                "superficie corporal queimada"
+              ]
+            },
+            {
+              "slug": "cg-trauma-trauma-cervical-vascular-e-de-extremidades",
+              "label": "Trauma Cervical, Vascular e de Extremidades",
+              "aliases": [
+                "controle de danos",
+                "sindrome compartimental",
+                "zonas cervicais"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "cg-abdome",
+          "label": "Abdome Agudo",
+          "subtemas": [
+            {
+              "slug": "cg-abdome-apendicite-aguda",
+              "label": "Apendicite Aguda",
+              "aliases": [
+                "apendicectomia",
+                "escore de alvarado",
+                "sinal de blumberg"
+              ]
+            },
+            {
+              "slug": "cg-abdome-diverticulite-aguda",
+              "label": "Diverticulite Aguda",
+              "aliases": [
+                "doenca diverticular complicada",
+                "hinchey"
+              ]
+            },
+            {
+              "slug": "cg-abdome-abdome-agudo-obstrutivo",
+              "label": "Abdome Agudo Obstrutivo",
+              "aliases": [
+                "bridas",
+                "obstrucao intestinal",
+                "sindrome de ogilvie",
+                "volvo de sigmoide"
+              ]
+            },
+            {
+              "slug": "cg-abdome-abdome-agudo-perfurativo",
+              "label": "Abdome Agudo Perfurativo",
+              "aliases": [
+                "pneumoperitonio",
+                "ulcera perfurada"
+              ]
+            },
+            {
+              "slug": "cg-abdome-abdome-agudo-vascular",
+              "label": "Abdome Agudo Vascular",
+              "aliases": [
+                "isquemia mesenterica aguda",
+                "isquemia mesenterica cronica"
+              ]
+            },
+            {
+              "slug": "cg-abdome-abdome-agudo-hemorragico",
+              "label": "Abdome Agudo Hemorrágico",
+              "aliases": [
+                "hemoperitonio",
+                "rotura de aneurisma"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "cg-biliar",
+          "label": "Vias Biliares, Fígado e Pâncreas Cirúrgico",
+          "subtemas": [
+            {
+              "slug": "cg-biliar-colelitiase-e-colecistite-aguda",
+              "label": "Colelitíase e Colecistite Aguda",
+              "aliases": [
+                "colecistectomia",
+                "criterios de tokyo",
+                "sindrome de mirizzi"
+              ]
+            },
+            {
+              "slug": "cg-biliar-coledocolitiase-e-colangite-aguda",
+              "label": "Coledocolitíase e Colangite Aguda",
+              "aliases": [
+                "cpre",
+                "pentade de reynolds",
+                "triade de charcot"
+              ]
+            },
+            {
+              "slug": "cg-biliar-neoplasias-periampulares-e-de-pancreas",
+              "label": "Neoplasias Periampulares e de Pâncreas",
+              "aliases": [
+                "cancer de pancreas",
+                "colangiocarcinoma",
+                "duodenopancreatectomia"
+              ]
+            },
+            {
+              "slug": "cg-biliar-lesoes-iatrogenicas-de-via-biliar-e-cistos",
+              "label": "Lesões Iatrogênicas de Via Biliar e Cistos",
+              "aliases": [
+                "cisto de coledoco",
+                "strasberg"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "cg-hernias",
+          "label": "Hérnias e Parede Abdominal",
+          "subtemas": [
+            {
+              "slug": "cg-hernias-hernia-inguinal-e-femoral",
+              "label": "Hérnia Inguinal e Femoral",
+              "aliases": [
+                "hernia crural",
+                "hernia direta",
+                "hernia indireta",
+                "lichtenstein",
+                "nyhus"
+              ]
+            },
+            {
+              "slug": "cg-hernias-hernias-umbilical-epigastrica-e-incisional",
+              "label": "Hérnias Umbilical, Epigástrica e Incisional",
+              "aliases": [
+                "eventracao",
+                "evisceracao",
+                "hernia ventral"
+              ]
+            },
+            {
+              "slug": "cg-hernias-complicacoes-de-hernias",
+              "label": "Complicações de Hérnias",
+              "aliases": [
+                "hernia de richter",
+                "hernia encarcerada",
+                "hernia estrangulada"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "cg-cad",
+          "label": "Cirurgia do Aparelho Digestivo e Coloproctologia",
+          "subtemas": [
+            {
+              "slug": "cg-cad-neoplasia-de-esofago-e-disturbios-motores",
+              "label": "Neoplasia de Esôfago e Distúrbios Motores",
+              "aliases": [
+                "acalasia",
+                "cancer de esofago",
+                "diverticulo de zenker"
+              ]
+            },
+            {
+              "slug": "cg-cad-cancer-gastrico-e-cirurgia-bariatrica",
+              "label": "Câncer Gástrico e Cirurgia Bariátrica",
+              "aliases": [
+                "borrmann",
+                "bypass gastrico",
+                "dumping",
+                "lauren",
+                "sleeve"
+              ]
+            },
+            {
+              "slug": "cg-cad-cancer-colorretal-e-polipos",
+              "label": "Câncer Colorretal e Pólipos",
+              "aliases": [
+                "estadiamento ccr",
+                "polipose",
+                "rastreamento colorretal",
+                "sindrome de lynch"
+              ]
+            },
+            {
+              "slug": "cg-cad-doencas-orificiais",
+              "label": "Doenças Orificiais",
+              "aliases": [
+                "abscesso perianal",
+                "cisto pilonidal",
+                "fissura anal",
+                "fistula perianal",
+                "hemorroidas"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "cg-periop",
+          "label": "Perioperatório, Cicatrização e Anestesiologia",
+          "subtemas": [
+            {
+              "slug": "cg-periop-avaliacao-pre-operatoria-e-risco-cirurgico",
+              "label": "Avaliação Pré-Operatória e Risco Cirúrgico",
+              "aliases": [
+                "asa",
+                "goldman",
+                "jejum pre-operatorio",
+                "suspensao de medicamentos"
+              ]
+            },
+            {
+              "slug": "cg-periop-resposta-endocrino-metabolica-ao-trauma",
+              "label": "Resposta Endócrino-Metabólica ao Trauma",
+              "aliases": [
+                "acerto",
+                "nutricao perioperatoria",
+                "protocolo eras",
+                "remit"
+              ]
+            },
+            {
+              "slug": "cg-periop-complicacoes-pos-operatorias-e-infeccao-de-sitio-cirurgico",
+              "label": "Complicações Pós-Operatórias e Infecção de Sítio Cirúrgico",
+              "aliases": [
+                "atelectasia",
+                "deiscencia",
+                "febre pos-operatoria",
+                "isc"
+              ]
+            },
+            {
+              "slug": "cg-periop-cicatrizacao-de-feridas-e-cirurgia-plastica-basica",
+              "label": "Cicatrização de Feridas e Cirurgia Plástica Básica",
+              "aliases": [
+                "enxertos",
+                "fases da cicatrizacao",
+                "queloide",
+                "retalhos"
+              ]
+            },
+            {
+              "slug": "cg-periop-anestesiologia-basica-e-anestesicos-locais",
+              "label": "Anestesiologia Básica e Anestésicos Locais",
+              "aliases": [
+                "bupivacaina",
+                "hipertermia maligna",
+                "lidocaina",
+                "raquianestesia"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "cg-vascular",
+          "label": "Cirurgia Vascular",
+          "subtemas": [
+            {
+              "slug": "cg-vascular-doenca-arterial-obstrutiva-periferica",
+              "label": "Doença Arterial Obstrutiva Periférica",
+              "aliases": [
+                "claudicacao intermitente",
+                "daop",
+                "itb"
+              ]
+            },
+            {
+              "slug": "cg-vascular-oclusao-arterial-aguda",
+              "label": "Oclusão Arterial Aguda",
+              "aliases": [
+                "embolectomia",
+                "oaa",
+                "rutherford"
+              ]
+            },
+            {
+              "slug": "cg-vascular-aneurisma-e-dissecacao-de-aorta",
+              "label": "Aneurisma e Dissecação de Aorta",
+              "aliases": [
+                "aaa",
+                "debakey",
+                "disseccao aortica",
+                "stanford"
+              ]
+            },
+            {
+              "slug": "cg-vascular-insuficiencia-venosa-cronica-e-ulceras",
+              "label": "Insuficiência Venosa Crônica e Úlceras",
+              "aliases": [
+                "ceap",
+                "ulcera venosa",
+                "varizes"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "cg-uro",
+          "label": "Urologia",
+          "subtemas": [
+            {
+              "slug": "cg-uro-hiperplasia-prostatica-benigna-e-cancer-de-prostata",
+              "label": "Hiperplasia Prostática Benigna e Câncer de Próstata",
+              "aliases": [
+                "gleason",
+                "hpb",
+                "psa",
+                "retencao urinaria aguda"
+              ]
+            },
+            {
+              "slug": "cg-uro-neoplasias-de-rim-bexiga-e-testiculo",
+              "label": "Neoplasias de Rim, Bexiga e Testículo",
+              "aliases": [
+                "cancer de bexiga",
+                "carcinoma renal",
+                "hematuria",
+                "seminoma"
+              ]
+            },
+            {
+              "slug": "cg-uro-escroto-agudo-e-torcao-testicular",
+              "label": "Escroto Agudo e Torção Testicular",
+              "aliases": [
+                "orquiepididimite",
+                "priapismo",
+                "torcao de testiculo"
+              ]
+            },
+            {
+              "slug": "cg-uro-trauma-urologico-e-litiase-cirurgica",
+              "label": "Trauma Urológico e Litíase Cirúrgica",
+              "aliases": [
+                "duplo j",
+                "litotripsia",
+                "trauma de uretra",
+                "trauma renal"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "cg-espec",
+          "label": "Cirurgia Pediátrica e Especialidades Cirúrgicas",
+          "subtemas": [
+            {
+              "slug": "cg-espec-emergencias-cirurgicas-pediatricas",
+              "label": "Emergências Cirúrgicas Pediátricas",
+              "aliases": [
+                "criptoquidia",
+                "diverticulo de meckel",
+                "estenose hipertrofica de piloro",
+                "invaginacao intestinal"
+              ]
+            },
+            {
+              "slug": "cg-espec-malformacoes-congenitas-cirurgicas",
+              "label": "Malformações Congênitas Cirúrgicas",
+              "aliases": [
+                "atresia de esofago",
+                "gastrosquise",
+                "hernia diafragmatica congenita",
+                "megacolon congenito",
+                "onfalocele"
+              ]
+            },
+            {
+              "slug": "cg-espec-ortopedia-e-traumatologia-basica",
+              "label": "Ortopedia e Traumatologia Básica",
+              "aliases": [
+                "ddq",
+                "epifisiolise",
+                "fratura exposta",
+                "gustilo-anderson",
+                "luxacoes",
+                "osteomielite"
+              ]
+            },
+            {
+              "slug": "cg-espec-otorrinolaringologia-e-cabeca-e-pescoco",
+              "label": "Otorrinolaringologia e Cabeça e Pescoço",
+              "aliases": [
+                "epistaxe",
+                "nodulo cervical",
+                "paralisia facial",
+                "traqueostomia",
+                "vertigem"
+              ]
+            },
+            {
+              "slug": "cg-espec-oftalmologia-basica",
+              "label": "Oftalmologia Básica",
+              "aliases": [
+                "conjuntivite",
+                "glaucoma agudo",
+                "olho vermelho",
+                "trauma ocular",
+                "uveite"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "go",
+      "label": "Ginecologia e Obstetrícia",
+      "temas": [
+        {
+          "slug": "go-prenatal",
+          "label": "Pré-Natal e Fisiologia Obstétrica",
+          "subtemas": [
+            {
+              "slug": "go-prenatal-diagnostico-de-gravidez-e-modificacoes-fisiologicas",
+              "label": "Diagnóstico de Gravidez e Modificações Fisiológicas",
+              "aliases": [
+                "adaptacoes maternas",
+                "idade gestacional",
+                "sinais de presuncao"
+              ]
+            },
+            {
+              "slug": "go-prenatal-assistencia-pre-natal-de-baixo-risco",
+              "label": "Assistência Pré-Natal de Baixo Risco",
+              "aliases": [
+                "acido folico",
+                "consultas",
+                "exames pre-natal",
+                "sulfato ferroso"
+              ]
+            },
+            {
+              "slug": "go-prenatal-imunizacao-na-gestacao",
+              "label": "Imunização na Gestação",
+              "aliases": [
+                "dtpa",
+                "hepatite b",
+                "influenza",
+                "vacinas na gravidez"
+              ]
+            },
+            {
+              "slug": "go-prenatal-avaliacao-da-vitalidade-fetal",
+              "label": "Avaliação da Vitalidade Fetal",
+              "aliases": [
+                "cardiotocografia",
+                "dopplervelocimetria",
+                "oligodramnia",
+                "perfil biofisico fetal"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "go-shg",
+          "label": "Síndromes Hipertensivas e Metabólicas na Gestação",
+          "subtemas": [
+            {
+              "slug": "go-shg-pre-eclampsia-eclampsia-e-sindrome-hellp",
+              "label": "Pré-Eclâmpsia, Eclâmpsia e Síndrome HELLP",
+              "aliases": [
+                "aas profilatico",
+                "eclampsia",
+                "hellp",
+                "pre-eclampsia",
+                "sulfato de magnesio"
+              ]
+            },
+            {
+              "slug": "go-shg-hipertensao-cronica-e-gestacional",
+              "label": "Hipertensão Crônica e Gestacional",
+              "aliases": [
+                "hidralazina",
+                "hipertensao na gravidez",
+                "metildopa",
+                "nifedipino"
+              ]
+            },
+            {
+              "slug": "go-shg-diabetes-mellitus-gestacional-e-previo",
+              "label": "Diabetes Mellitus Gestacional e Prévio",
+              "aliases": [
+                "dmg",
+                "macrossomia",
+                "overt diabetes",
+                "totg"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "go-sangramento",
+          "label": "Sangramentos da Gestação",
+          "subtemas": [
+            {
+              "slug": "go-sangramento-abortamento-e-incompetencia-istmocervical",
+              "label": "Abortamento e Incompetência Istmocervical",
+              "aliases": [
+                "aborto infectado",
+                "aborto retido",
+                "ameaca de aborto",
+                "cerclagem"
+              ]
+            },
+            {
+              "slug": "go-sangramento-gestacao-ectopica",
+              "label": "Gestação Ectópica",
+              "aliases": [
+                "ectopica rota",
+                "metotrexato",
+                "salpingectomia"
+              ]
+            },
+            {
+              "slug": "go-sangramento-doenca-trofoblastica-gestacional",
+              "label": "Doença Trofoblástica Gestacional",
+              "aliases": [
+                "mola hidatiforme",
+                "neoplasia trofoblastica"
+              ]
+            },
+            {
+              "slug": "go-sangramento-descolamento-prematuro-de-placenta",
+              "label": "Descolamento Prematuro de Placenta",
+              "aliases": [
+                "dpp",
+                "hipertonia uterina",
+                "utero de couvelaire"
+              ]
+            },
+            {
+              "slug": "go-sangramento-placenta-previa-acretismo-e-vasa-previa",
+              "label": "Placenta Prévia, Acretismo e Vasa Prévia",
+              "aliases": [
+                "acretismo placentario",
+                "placenta previa",
+                "rotura de vasa previa"
+              ]
+            },
+            {
+              "slug": "go-sangramento-rotura-uterina",
+              "label": "Rotura Uterina",
+              "aliases": [
+                "rotura uterina",
+                "sinal de bandl-frommel"
+              ]
+            },
+            {
+              "slug": "go-sangramento-doenca-hemolitica-perinatal",
+              "label": "Doença Hemolítica Perinatal",
+              "aliases": [
+                "aloimunizacao rh",
+                "coombs indireto",
+                "imunoglobulina anti-d"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "go-parto",
+          "label": "Parto, Prematuridade e Puerpério",
+          "subtemas": [
+            {
+              "slug": "go-parto-mecanismo-e-assistencia-ao-trabalho-de-parto",
+              "label": "Mecanismo e Assistência ao Trabalho de Parto",
+              "aliases": [
+                "bacia obstetrica",
+                "estatica fetal",
+                "periodos clinicos do parto"
+              ]
+            },
+            {
+              "slug": "go-parto-partograma-e-distocias",
+              "label": "Partograma e Distocias",
+              "aliases": [
+                "distocia de ombro",
+                "fase ativa prolongada",
+                "forceps",
+                "parada secundaria da dilatacao",
+                "vacuo"
+              ]
+            },
+            {
+              "slug": "go-parto-trabalho-de-parto-prematuro",
+              "label": "Trabalho de Parto Prematuro",
+              "aliases": [
+                "corticoide antenatal",
+                "neuroprotecao fetal",
+                "tocolise",
+                "tpp"
+              ]
+            },
+            {
+              "slug": "go-parto-rotura-prematura-de-membranas-ovulares",
+              "label": "Rotura Prematura de Membranas Ovulares",
+              "aliases": [
+                "amniorrexe prematura",
+                "corioamnionite",
+                "rpmo"
+              ]
+            },
+            {
+              "slug": "go-parto-inducao-do-parto-e-gestacao-pos-termo",
+              "label": "Indução do Parto e Gestação Pós-Termo",
+              "aliases": [
+                "indice de bishop",
+                "misoprostol",
+                "ocitocina",
+                "pos-datismo"
+              ]
+            },
+            {
+              "slug": "go-parto-hemorragia-pos-parto",
+              "label": "Hemorragia Pós-Parto",
+              "aliases": [
+                "4 ts",
+                "acido tranexamico",
+                "atonia uterina",
+                "balao de bakri",
+                "hpp"
+              ]
+            },
+            {
+              "slug": "go-parto-infeccao-puerperal-e-mastite",
+              "label": "Infecção Puerperal e Mastite",
+              "aliases": [
+                "abscesso mamario",
+                "endometrite puerperal",
+                "mastite lactacional"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "go-intercorrencias",
+          "label": "Intercorrências Clínicas e Infecciosas na Gestação",
+          "subtemas": [
+            {
+              "slug": "go-intercorrencias-infeccoes-congenitas-na-gestacao",
+              "label": "Infecções Congênitas na Gestação",
+              "aliases": [
+                "estreptococo grupo b",
+                "hiv na gestacao",
+                "sifilis na gestacao",
+                "toxoplasmose na gestacao"
+              ]
+            },
+            {
+              "slug": "go-intercorrencias-gestacao-gemelar-e-restricao-de-crescimento-fetal",
+              "label": "Gestação Gemelar e Restrição de Crescimento Fetal",
+              "aliases": [
+                "ciur",
+                "gemelaridade",
+                "rcf",
+                "stff"
+              ]
+            },
+            {
+              "slug": "go-intercorrencias-itu-tromboembolismo-e-intercorrencias-clinicas",
+              "label": "ITU, Tromboembolismo e Intercorrências Clínicas",
+              "aliases": [
+                "bacteriuria assintomatica",
+                "colestase gestacional",
+                "hiperemese gravidica",
+                "pielonefrite na gestacao"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "go-gineco-endocrino",
+          "label": "Ginecologia Endócrina e Reprodutiva",
+          "subtemas": [
+            {
+              "slug": "go-gineco-endocrino-fisiologia-do-ciclo-menstrual-e-amenorreias",
+              "label": "Fisiologia do Ciclo Menstrual e Amenorreias",
+              "aliases": [
+                "amenorreia primaria",
+                "amenorreia secundaria",
+                "asherman",
+                "sheehan",
+                "teste da progesterona"
+              ]
+            },
+            {
+              "slug": "go-gineco-endocrino-sindrome-dos-ovarios-policisticos",
+              "label": "Síndrome dos Ovários Policísticos",
+              "aliases": [
+                "criterios de rotterdam",
+                "hiperandrogenismo",
+                "sop"
+              ]
+            },
+            {
+              "slug": "go-gineco-endocrino-sangramento-uterino-anormal",
+              "label": "Sangramento Uterino Anormal",
+              "aliases": [
+                "hiperplasia endometrial",
+                "palm-coein",
+                "sua"
+              ]
+            },
+            {
+              "slug": "go-gineco-endocrino-climaterio-e-terapia-hormonal",
+              "label": "Climatério e Terapia Hormonal",
+              "aliases": [
+                "fogachos",
+                "menopausa",
+                "terapia de reposicao hormonal"
+              ]
+            },
+            {
+              "slug": "go-gineco-endocrino-planejamento-familiar-e-anticoncepcao",
+              "label": "Planejamento Familiar e Anticoncepção",
+              "aliases": [
+                "aco",
+                "contracepcao de emergencia",
+                "criterios de elegibilidade oms",
+                "diu",
+                "implante"
+              ]
+            },
+            {
+              "slug": "go-gineco-endocrino-infertilidade-conjugal",
+              "label": "Infertilidade Conjugal",
+              "aliases": [
+                "fator masculino",
+                "fator ovulatorio",
+                "fator tubario",
+                "histerossalpingografia"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "go-gineco-geral",
+          "label": "Ginecologia Geral e Uroginecologia",
+          "subtemas": [
+            {
+              "slug": "go-gineco-geral-endometriose-e-adenomiose",
+              "label": "Endometriose e Adenomiose",
+              "aliases": [
+                "adenomiose",
+                "dismenorreia",
+                "endometriose"
+              ]
+            },
+            {
+              "slug": "go-gineco-geral-miomatose-uterina-e-polipos",
+              "label": "Miomatose Uterina e Pólipos",
+              "aliases": [
+                "leiomioma",
+                "mioma",
+                "polipo endometrial"
+              ]
+            },
+            {
+              "slug": "go-gineco-geral-vulvovaginites-e-corrimentos-genitais",
+              "label": "Vulvovaginites e Corrimentos Genitais",
+              "aliases": [
+                "candidiase",
+                "cervicite",
+                "tricomoniase",
+                "vaginose bacteriana"
+              ]
+            },
+            {
+              "slug": "go-gineco-geral-ulceras-genitais-e-ists-em-ginecologia",
+              "label": "Úlceras Genitais e ISTs em Ginecologia",
+              "aliases": [
+                "cancroide",
+                "donovanose",
+                "herpes genital",
+                "hpv",
+                "sifilis"
+              ]
+            },
+            {
+              "slug": "go-gineco-geral-doenca-inflamatoria-pelvica",
+              "label": "Doença Inflamatória Pélvica",
+              "aliases": [
+                "abscesso tubo-ovariano",
+                "dip",
+                "fitz-hugh-curtis"
+              ]
+            },
+            {
+              "slug": "go-gineco-geral-incontinencia-urinaria-e-prolapsos-genitais",
+              "label": "Incontinência Urinária e Prolapsos Genitais",
+              "aliases": [
+                "bexiga hiperativa",
+                "incontinencia urinaria de esforco",
+                "pop-q"
+              ]
+            },
+            {
+              "slug": "go-gineco-geral-violencia-sexual-e-aborto-previsto-em-lei",
+              "label": "Violência Sexual e Aborto Previsto em Lei",
+              "aliases": [
+                "aborto legal",
+                "profilaxia violencia sexual"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "go-onco-go",
+          "label": "Oncologia Ginecológica e Mastologia",
+          "subtemas": [
+            {
+              "slug": "go-onco-go-rastreamento-e-lesoes-precursoras-do-colo-uterino",
+              "label": "Rastreamento e Lesões Precursoras do Colo Uterino",
+              "aliases": [
+                "asc-us",
+                "colposcopia",
+                "hsil",
+                "nic",
+                "papanicolau",
+                "teste hpv"
+              ]
+            },
+            {
+              "slug": "go-onco-go-cancer-de-colo-uterino",
+              "label": "Câncer de Colo Uterino",
+              "aliases": [
+                "figo colo",
+                "wertheim-meigs"
+              ]
+            },
+            {
+              "slug": "go-onco-go-cancer-de-endometrio",
+              "label": "Câncer de Endométrio",
+              "aliases": [
+                "adenocarcinoma de endometrio",
+                "sangramento pos-menopausa"
+              ]
+            },
+            {
+              "slug": "go-onco-go-cancer-de-ovario-e-massas-anexiais",
+              "label": "Câncer de Ovário e Massas Anexiais",
+              "aliases": [
+                "ca-125",
+                "cisto ovariano",
+                "teratoma",
+                "torcao anexial"
+              ]
+            },
+            {
+              "slug": "go-onco-go-doencas-benignas-da-mama",
+              "label": "Doenças Benignas da Mama",
+              "aliases": [
+                "cisto mamario",
+                "fibroadenoma",
+                "fluxo papilar",
+                "mastalgia"
+              ]
+            },
+            {
+              "slug": "go-onco-go-rastreamento-e-cancer-de-mama",
+              "label": "Rastreamento e Câncer de Mama",
+              "aliases": [
+                "bi-rads",
+                "carcinoma ductal",
+                "mamografia",
+                "subtipos moleculares"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "ped",
+      "label": "Pediatria",
+      "temas": [
+        {
+          "slug": "ped-neo",
+          "label": "Neonatologia",
+          "subtemas": [
+            {
+              "slug": "ped-neo-reanimacao-neonatal",
+              "label": "Reanimação Neonatal",
+              "aliases": [
+                "apgar",
+                "clampeamento de cordao",
+                "golden minute",
+                "sbp reanimacao",
+                "vpp"
+              ]
+            },
+            {
+              "slug": "ped-neo-ictericia-neonatal",
+              "label": "Icterícia Neonatal",
+              "aliases": [
+                "atresia de vias biliares",
+                "fototerapia",
+                "hiperbilirrubinemia",
+                "kernicterus",
+                "zonas de kramer"
+              ]
+            },
+            {
+              "slug": "ped-neo-desconforto-respiratorio-neonatal",
+              "label": "Desconforto Respiratório Neonatal",
+              "aliases": [
+                "doenca da membrana hialina",
+                "hipertensao pulmonar persistente",
+                "sdr",
+                "sindrome de aspiracao meconial",
+                "ttrn"
+              ]
+            },
+            {
+              "slug": "ped-neo-sepse-neonatal-e-infeccoes-congenitas-no-rn",
+              "label": "Sepse Neonatal e Infecções Congênitas no RN",
+              "aliases": [
+                "cmv congenito",
+                "sepse neonatal precoce",
+                "sepse neonatal tardia",
+                "sifilis congenita",
+                "toxoplasmose congenita"
+              ]
+            },
+            {
+              "slug": "ped-neo-triagens-neonatais",
+              "label": "Triagens Neonatais",
+              "aliases": [
+                "teste da orelhinha",
+                "teste do coracaozinho",
+                "teste do olhinho",
+                "teste do pezinho"
+              ]
+            },
+            {
+              "slug": "ped-neo-disturbios-metabolicos-e-enterocolite-necrosante",
+              "label": "Distúrbios Metabólicos e Enterocolite Necrosante",
+              "aliases": [
+                "ecn",
+                "enterocolite necrosante",
+                "hemorragia peri-intraventricular",
+                "hipoglicemia neonatal"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "ped-puericultura",
+          "label": "Puericultura, Crescimento e Nutrição",
+          "subtemas": [
+            {
+              "slug": "ped-puericultura-aleitamento-materno-e-formulas-infantis",
+              "label": "Aleitamento Materno e Fórmulas Infantis",
+              "aliases": [
+                "amamentacao",
+                "contraindicacoes ao aleitamento",
+                "pega correta"
+              ]
+            },
+            {
+              "slug": "ped-puericultura-alimentacao-complementar-e-carencias-nutricionais",
+              "label": "Alimentação Complementar e Carências Nutricionais",
+              "aliases": [
+                "hipovitaminose a",
+                "introducao alimentar",
+                "profilaxia de ferro",
+                "raquitismo"
+              ]
+            },
+            {
+              "slug": "ped-puericultura-avaliacao-do-crescimento-e-baixa-estatura",
+              "label": "Avaliação do Crescimento e Baixa Estatura",
+              "aliases": [
+                "baixa estatura",
+                "curvas oms",
+                "velocidade de crescimento",
+                "z-score"
+              ]
+            },
+            {
+              "slug": "ped-puericultura-desenvolvimento-neuropsicomotor-e-autismo",
+              "label": "Desenvolvimento Neuropsicomotor e Autismo",
+              "aliases": [
+                "dnpm",
+                "m-chat",
+                "marcos do desenvolvimento",
+                "tdah",
+                "tea"
+              ]
+            },
+            {
+              "slug": "ped-puericultura-puberdade-normal-precoce-e-atrasada",
+              "label": "Puberdade Normal, Precoce e Atrasada",
+              "aliases": [
+                "puberdade precoce central",
+                "puberdade precoce periferica",
+                "tanner"
+              ]
+            },
+            {
+              "slug": "ped-puericultura-obesidade-infantil-e-desnutricao-grave",
+              "label": "Obesidade Infantil e Desnutrição Grave",
+              "aliases": [
+                "kwashiorkor",
+                "marasmo",
+                "obesidade pediatrica",
+                "sindrome de realimentacao"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "ped-vacinas",
+          "label": "Imunizações",
+          "subtemas": [
+            {
+              "slug": "ped-vacinas-calendario-nacional-de-vacinacao-pni",
+              "label": "Calendário Nacional de Vacinação - PNI",
+              "aliases": [
+                "bcg",
+                "hpv",
+                "meningo c",
+                "pentavalente",
+                "pneumo 10",
+                "rotavirus",
+                "triplice viral"
+              ]
+            },
+            {
+              "slug": "ped-vacinas-vacinas-especiais-crie-e-eventos-adversos",
+              "label": "Vacinas Especiais - CRIE e Eventos Adversos",
+              "aliases": [
+                "atraso vacinal",
+                "crie",
+                "esavi",
+                "vacinas em imunossuprimidos"
+              ]
+            },
+            {
+              "slug": "ped-vacinas-profilaxia-pos-exposicao",
+              "label": "Profilaxia Pós-Exposição",
+              "aliases": [
+                "imunoglobulina varicela",
+                "profilaxia antirrabica",
+                "profilaxia antitetanica"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "ped-infecto-ped",
+          "label": "Infectologia Pediátrica e Exantemáticas",
+          "subtemas": [
+            {
+              "slug": "ped-infecto-ped-doencas-exantematicas",
+              "label": "Doenças Exantemáticas",
+              "aliases": [
+                "eritema infeccioso",
+                "escarlatina",
+                "exantema subito",
+                "mao-pe-boca",
+                "rubeola",
+                "sarampo",
+                "varicela"
+              ]
+            },
+            {
+              "slug": "ped-infecto-ped-meningites-e-sepse-em-pediatria",
+              "label": "Meningites e Sepse em Pediatria",
+              "aliases": [
+                "febre sem sinais localizatorios",
+                "fssl",
+                "meningite pediatrica",
+                "meningococcemia"
+              ]
+            },
+            {
+              "slug": "ped-infecto-ped-parasitoses-intestinais",
+              "label": "Parasitoses Intestinais",
+              "aliases": [
+                "ancilostomiase",
+                "ascaridiase",
+                "estrongiloidiase",
+                "giardiase",
+                "oxiuriase",
+                "tenias"
+              ]
+            },
+            {
+              "slug": "ped-infecto-ped-tuberculose-e-arboviroses-na-infancia",
+              "label": "Tuberculose e Arboviroses na Infância",
+              "aliases": [
+                "dengue na crianca",
+                "escore de pontuacao tb",
+                "hiv pediatrico"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "ped-pneumo-ped",
+          "label": "Pneumologia Pediátrica",
+          "subtemas": [
+            {
+              "slug": "ped-pneumo-ped-infeccoes-de-vias-aereas-superiores",
+              "label": "Infecções de Vias Aéreas Superiores",
+              "aliases": [
+                "crupe",
+                "epiglotite",
+                "faringoamigdalite",
+                "laringite",
+                "otite media aguda",
+                "sinusite"
+              ]
+            },
+            {
+              "slug": "ped-pneumo-ped-bronquiolite-viral-aguda-e-coqueluche",
+              "label": "Bronquiolite Viral Aguda e Coqueluche",
+              "aliases": [
+                "bva",
+                "coqueluche",
+                "sindrome coqueluchoide",
+                "vsr"
+              ]
+            },
+            {
+              "slug": "ped-pneumo-ped-pneumonia-adquirida-na-comunidade-em-pediatria",
+              "label": "Pneumonia Adquirida na Comunidade em Pediatria",
+              "aliases": [
+                "derrame parapneumonico",
+                "pac pediatrica",
+                "pneumonia afebril do lactente"
+              ]
+            },
+            {
+              "slug": "ped-pneumo-ped-asma-na-infancia-e-fibrose-cistica",
+              "label": "Asma na Infância e Fibrose Cística",
+              "aliases": [
+                "asma pediatrica",
+                "fibrose cistica",
+                "lactente sibilante"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "ped-gastro-nefro-ped",
+          "label": "Gastroenterologia e Nefrologia Pediátrica",
+          "subtemas": [
+            {
+              "slug": "ped-gastro-nefro-ped-diarreia-aguda-e-desidratacao",
+              "label": "Diarreia Aguda e Desidratação",
+              "aliases": [
+                "disenteria",
+                "planos a b c",
+                "tro",
+                "zinco"
+              ]
+            },
+            {
+              "slug": "ped-gastro-nefro-ped-diarreia-cronica-aplv-e-doenca-celiaca",
+              "label": "Diarreia Crônica, APLV e Doença Celíaca",
+              "aliases": [
+                "alergia a proteina do leite de vaca",
+                "aplv",
+                "intolerancia a lactose"
+              ]
+            },
+            {
+              "slug": "ped-gastro-nefro-ped-drge-e-constipacao-na-infancia",
+              "label": "DRGE e Constipação na Infância",
+              "aliases": [
+                "constipacao funcional",
+                "encoprese",
+                "refluxo fisiologico"
+              ]
+            },
+            {
+              "slug": "ped-gastro-nefro-ped-itu-e-malformacoes-urinarias-em-pediatria",
+              "label": "ITU e Malformações Urinárias em Pediatria",
+              "aliases": [
+                "itu pediatrica",
+                "refluxo vesicoureteral",
+                "rvu"
+              ]
+            },
+            {
+              "slug": "ped-gastro-nefro-ped-sindrome-nefritica-e-nefrotica-pediatrica",
+              "label": "Síndrome Nefrítica e Nefrótica Pediátrica",
+              "aliases": [
+                "gnpe pediatrica",
+                "shu pediatrica",
+                "sindrome nefrotica por lesoes minimas"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "ped-cardio-hemato-ped",
+          "label": "Cardiologia, Hematologia e Oncologia Pediátrica",
+          "subtemas": [
+            {
+              "slug": "ped-cardio-hemato-ped-cardiopatias-congenitas",
+              "label": "Cardiopatias Congênitas",
+              "aliases": [
+                "cia",
+                "civ",
+                "coarctacao de aorta",
+                "pca",
+                "tetralogia de fallot",
+                "tga"
+              ]
+            },
+            {
+              "slug": "ped-cardio-hemato-ped-doenca-de-kawasaki-e-vasculite-por-iga",
+              "label": "Doença de Kawasaki e Vasculite por IgA",
+              "aliases": [
+                "aij",
+                "henoch-schonlein",
+                "kawasaki",
+                "purpura de henoch-schonlein"
+              ]
+            },
+            {
+              "slug": "ped-cardio-hemato-ped-anemias-e-doenca-falciforme-na-infancia",
+              "label": "Anemias e Doença Falciforme na Infância",
+              "aliases": [
+                "anemia ferropriva pediatrica",
+                "crise aplasica",
+                "pti pediatrica",
+                "sequestro esplenico"
+              ]
+            },
+            {
+              "slug": "ped-cardio-hemato-ped-neoplasias-pediatricas",
+              "label": "Neoplasias Pediátricas",
+              "aliases": [
+                "lla pediatrica",
+                "neuroblastoma",
+                "retinoblastoma",
+                "tumor de wilms"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "ped-emerg-ped",
+          "label": "Emergências Pediátricas e Proteção Infantil",
+          "subtemas": [
+            {
+              "slug": "ped-emerg-ped-suporte-avancado-de-vida-em-pediatria-pals",
+              "label": "Suporte Avançado de Vida em Pediatria - PALS",
+              "aliases": [
+                "choque pediatrico",
+                "obstrucao de via aerea por corpo estranho",
+                "pals",
+                "pcr pediatrica"
+              ]
+            },
+            {
+              "slug": "ped-emerg-ped-convulsao-febril-e-emergencias-neurologicas",
+              "label": "Convulsão Febril e Emergências Neurológicas",
+              "aliases": [
+                "cetoacidose pediatrica",
+                "convulsao febril",
+                "estado de mal epileptico pediatrico"
+              ]
+            },
+            {
+              "slug": "ped-emerg-ped-acidentes-intoxicacoes-e-maus-tratos-na-infancia",
+              "label": "Acidentes, Intoxicações e Maus-Tratos na Infância",
+              "aliases": [
+                "afogamento",
+                "intoxicacao em criancas",
+                "sindrome do bebe sacudido",
+                "violencia infantil"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "mp",
+      "label": "Medicina Preventiva",
+      "temas": [
+        {
+          "slug": "mp-sus",
+          "label": "SUS, Políticas Públicas e Gestão em Saúde",
+          "subtemas": [
+            {
+              "slug": "mp-sus-historia-principios-e-leis-organicas-do-sus",
+              "label": "História, Princípios e Leis Orgânicas do SUS",
+              "aliases": [
+                "equidade",
+                "integralidade",
+                "lei 8080",
+                "lei 8142",
+                "reforma sanitaria",
+                "universalidade"
+              ]
+            },
+            {
+              "slug": "mp-sus-financiamento-e-pactos-do-sus",
+              "label": "Financiamento e Pactos do SUS",
+              "aliases": [
+                "blocos de financiamento",
+                "ec 29",
+                "lc 141",
+                "pnab",
+                "previne brasil"
+              ]
+            },
+            {
+              "slug": "mp-sus-atencao-primaria-a-saude-e-esf",
+              "label": "Atenção Primária à Saúde e ESF",
+              "aliases": [
+                "aps",
+                "atributos da aps",
+                "equipe multiprofissional",
+                "esf",
+                "starfield"
+              ]
+            },
+            {
+              "slug": "mp-sus-redes-de-atencao-a-saude-e-regulacao",
+              "label": "Redes de Atenção à Saúde e Regulação",
+              "aliases": [
+                "raps",
+                "ras",
+                "rede cegonha",
+                "referencia e contrarreferencia",
+                "sisreg"
+              ]
+            },
+            {
+              "slug": "mp-sus-controle-social-e-participacao-popular",
+              "label": "Controle Social e Participação Popular",
+              "aliases": [
+                "conferencias de saude",
+                "conselhos de saude",
+                "paridade"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "mp-epidemio",
+          "label": "Epidemiologia e Bioestatística",
+          "subtemas": [
+            {
+              "slug": "mp-epidemio-indicadores-de-saude-e-transicao-epidemiologica",
+              "label": "Indicadores de Saúde e Transição Epidemiológica",
+              "aliases": [
+                "curva de nelson moraes",
+                "daly",
+                "mortalidade infantil",
+                "mortalidade materna",
+                "swaroop-uemura"
+              ]
+            },
+            {
+              "slug": "mp-epidemio-medidas-de-frequencia",
+              "label": "Medidas de Frequência",
+              "aliases": [
+                "densidade de incidencia",
+                "incidencia",
+                "letalidade",
+                "prevalencia",
+                "taxa de ataque"
+              ]
+            },
+            {
+              "slug": "mp-epidemio-estudos-epidemiologicos",
+              "label": "Estudos Epidemiológicos",
+              "aliases": [
+                "caso-controle",
+                "coorte",
+                "ecologico",
+                "ensaio clinico randomizado",
+                "revisao sistematica",
+                "transversal"
+              ]
+            },
+            {
+              "slug": "mp-epidemio-medidas-de-associacao-e-impacto",
+              "label": "Medidas de Associação e Impacto",
+              "aliases": [
+                "nnt",
+                "odds ratio",
+                "rar",
+                "razoes de prevalencia",
+                "risco relativo",
+                "rrr"
+              ]
+            },
+            {
+              "slug": "mp-epidemio-testes-diagnosticos-e-tabela-2x2",
+              "label": "Testes Diagnósticos e Tabela 2x2",
+              "aliases": [
+                "curva roc",
+                "especificidade",
+                "razao de verossimilhanca",
+                "sensibilidade",
+                "tabela-2x2",
+                "vpn",
+                "vpp"
+              ]
+            },
+            {
+              "slug": "mp-epidemio-vieses-confundimento-e-bioestatistica",
+              "label": "Vieses, Confundimento e Bioestatística",
+              "aliases": [
+                "erro tipo 1 e 2",
+                "fator de confusao",
+                "intervalo de confianca",
+                "valor-p",
+                "vies de afericao",
+                "vies de selecao"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "mp-vigilancia",
+          "label": "Vigilância em Saúde",
+          "subtemas": [
+            {
+              "slug": "mp-vigilancia-vigilancia-epidemiologica-e-notificacao-compulsoria",
+              "label": "Vigilância Epidemiológica e Notificação Compulsória",
+              "aliases": [
+                "lista de notificacao",
+                "notificacao imediata",
+                "notificacao semanal",
+                "sinan"
+              ]
+            },
+            {
+              "slug": "mp-vigilancia-investigacao-de-surtos-e-epidemias",
+              "label": "Investigação de Surtos e Epidemias",
+              "aliases": [
+                "curva epidemica",
+                "diagrama de controle",
+                "endemia",
+                "numero basico de reproducao",
+                "pandemia"
+              ]
+            },
+            {
+              "slug": "mp-vigilancia-sistemas-de-informacao-em-saude",
+              "label": "Sistemas de Informação em Saúde",
+              "aliases": [
+                "e-sus",
+                "sih",
+                "sim",
+                "sinan",
+                "sinasc",
+                "sisab"
+              ]
+            },
+            {
+              "slug": "mp-vigilancia-declaracao-de-obito",
+              "label": "Declaração de Óbito",
+              "aliases": [
+                "causa basica de obito",
+                "iml",
+                "preenchimento da do",
+                "svo"
+              ]
+            },
+            {
+              "slug": "mp-vigilancia-vigilancia-sanitaria-ambiental-e-saude-planetaria",
+              "label": "Vigilância Sanitária, Ambiental e Saúde Planetária",
+              "aliases": [
+                "anvisa",
+                "saude unica",
+                "vigilancia ambiental"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "mp-mfc",
+          "label": "Medicina de Família e Comunidade",
+          "subtemas": [
+            {
+              "slug": "mp-mfc-ferramentas-de-abordagem-familiar-e-comunitaria",
+              "label": "Ferramentas de Abordagem Familiar e Comunitária",
+              "aliases": [
+                "apgar familiar",
+                "ciclo de vida familiar",
+                "ecomapa",
+                "genograma",
+                "practice"
+              ]
+            },
+            {
+              "slug": "mp-mfc-metodo-clinico-centrado-na-pessoa-e-comunicacao",
+              "label": "Método Clínico Centrado na Pessoa e Comunicação",
+              "aliases": [
+                "entrevista motivacional",
+                "mccp",
+                "protocolo spikes",
+                "registro soap"
+              ]
+            },
+            {
+              "slug": "mp-mfc-prevencao-quaternaria-e-rastreamento-populacional",
+              "label": "Prevenção Quaternária e Rastreamento Populacional",
+              "aliases": [
+                "criterios de wilson e jungner",
+                "leavell e clark",
+                "niveis de prevencao",
+                "sobrediagnostico"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "mp-trabalho",
+          "label": "Saúde do Trabalhador",
+          "subtemas": [
+            {
+              "slug": "mp-trabalho-doencas-relacionadas-ao-trabalho",
+              "label": "Doenças Relacionadas ao Trabalho",
+              "aliases": [
+                "asbestose",
+                "burnout",
+                "dort",
+                "ler",
+                "pair",
+                "saturnismo",
+                "silicose"
+              ]
+            },
+            {
+              "slug": "mp-trabalho-acidentes-de-trabalho-cat-e-schilling",
+              "label": "Acidentes de Trabalho, CAT e Schilling",
+              "aliases": [
+                "acidente biologico",
+                "cat",
+                "cerest",
+                "classificacao de schilling",
+                "pericia"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "mp-etica",
+          "label": "Ética Médica, Bioética e Medicina Legal",
+          "subtemas": [
+            {
+              "slug": "mp-etica-codigo-de-etica-medica-e-sigilo-profissional",
+              "label": "Código de Ética Médica e Sigilo Profissional",
+              "aliases": [
+                "cem",
+                "publicidade medica",
+                "quebra de sigilo",
+                "sigilo medico"
+              ]
+            },
+            {
+              "slug": "mp-etica-principios-da-bioetica-e-terminalidade",
+              "label": "Princípios da Bioética e Terminalidade",
+              "aliases": [
+                "autonomia",
+                "beneficencia",
+                "distanasia",
+                "justica",
+                "nao maleficencia",
+                "ortotanasia"
+              ]
+            },
+            {
+              "slug": "mp-etica-documentos-medicos-e-responsabilidade-profissional",
+              "label": "Documentos Médicos e Responsabilidade Profissional",
+              "aliases": [
+                "atestado medico",
+                "impericia",
+                "imprudencia",
+                "negligencia",
+                "prontuario",
+                "tcle"
+              ]
+            },
+            {
+              "slug": "mp-etica-medicina-legal-basica",
+              "label": "Medicina Legal Básica",
+              "aliases": [
+                "lesao corporal",
+                "sexologia forense",
+                "tanatologia",
+                "traumatologia forense"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "aliasIndex": {
+    "crise hipertensiva": "cm-cardio-hipertensao-arterial-sistemica",
+    "emergencia hipertensiva": "cm-cardio-hipertensao-arterial-sistemica",
+    "has": "cm-cardio-hipertensao-arterial-sistemica",
+    "hipertensao": "cm-cardio-hipertensao-arterial-sistemica",
+    "iam com supra": "cm-cardio-sindrome-coronariana-aguda-com-supra-de-st",
+    "iamcsst": "cm-cardio-sindrome-coronariana-aguda-com-supra-de-st",
+    "sca com supra": "cm-cardio-sindrome-coronariana-aguda-com-supra-de-st",
+    "angina instavel": "cm-cardio-sindrome-coronariana-aguda-sem-supra-de-st",
+    "iamssst": "cm-cardio-sindrome-coronariana-aguda-sem-supra-de-st",
+    "sca sem supra": "cm-cardio-sindrome-coronariana-aguda-sem-supra-de-st",
+    "angina estavel": "cm-cardio-doenca-arterial-coronariana-cronica",
+    "dac cronica": "cm-cardio-doenca-arterial-coronariana-cronica",
+    "sindrome coronariana cronica": "cm-cardio-doenca-arterial-coronariana-cronica",
+    "ic": "cm-cardio-insuficiencia-cardiaca",
+    "ic descompensada": "cm-cardio-insuficiencia-cardiaca",
+    "icc": "cm-cardio-insuficiencia-cardiaca",
+    "icfep": "cm-cardio-insuficiencia-cardiaca",
+    "icfer": "cm-cardio-insuficiencia-cardiaca",
+    "fa": "cm-cardio-fibrilacao-atrial-e-taquiarritmias",
+    "flutter atrial": "cm-cardio-fibrilacao-atrial-e-taquiarritmias",
+    "taquicardia ventricular": "cm-cardio-fibrilacao-atrial-e-taquiarritmias",
+    "tpsv": "cm-cardio-fibrilacao-atrial-e-taquiarritmias",
+    "bav": "cm-cardio-bradiarritmias-e-bloqueios-atrioventriculares",
+    "bloqueio de ramo": "cm-cardio-bradiarritmias-e-bloqueios-atrioventriculares",
+    "bradicardia": "cm-cardio-bradiarritmias-e-bloqueios-atrioventriculares",
+    "estenose aortica": "cm-cardio-valvopatias",
+    "estenose mitral": "cm-cardio-valvopatias",
+    "insuficiencia aortica": "cm-cardio-valvopatias",
+    "insuficiencia mitral": "cm-cardio-valvopatias",
+    "criterios de duke": "cm-cardio-endocardite-infecciosa",
+    "endocardite": "cm-cardio-endocardite-infecciosa",
+    "derrame pericardico": "cm-cardio-pericardite-e-tamponamento-cardiaco",
+    "pericardite aguda": "cm-cardio-pericardite-e-tamponamento-cardiaco",
+    "pericardite constritiva": "cm-cardio-pericardite-e-tamponamento-cardiaco",
+    "cardite reumatica": "cm-cardio-febre-reumatica",
+    "criterios de jones": "cm-cardio-febre-reumatica",
+    "pcr": "cm-cardio-parada-cardiorrespiratoria-e-acls",
+    "rcp": "cm-cardio-parada-cardiorrespiratoria-e-acls",
+    "suporte avancado de vida": "cm-cardio-parada-cardiorrespiratoria-e-acls",
+    "canalopatias": "cm-cardio-sincope-e-morte-subita",
+    "sincope vasovagal": "cm-cardio-sincope-e-morte-subita",
+    "sindrome de brugada": "cm-cardio-sincope-e-morte-subita",
+    "colesterol": "cm-cardio-dislipidemia-e-prevencao-cardiovascular",
+    "estatinas": "cm-cardio-dislipidemia-e-prevencao-cardiovascular",
+    "risco cardiovascular": "cm-cardio-dislipidemia-e-prevencao-cardiovascular",
+    "asma bronquica": "cm-pneumo-asma-no-adulto",
+    "crise asmatica": "cm-pneumo-asma-no-adulto",
+    "gina": "cm-pneumo-asma-no-adulto",
+    "bronquite cronica": "cm-pneumo-doenca-pulmonar-obstrutiva-cronica",
+    "dpoc": "cm-pneumo-doenca-pulmonar-obstrutiva-cronica",
+    "enfisema": "cm-pneumo-doenca-pulmonar-obstrutiva-cronica",
+    "gold": "cm-pneumo-doenca-pulmonar-obstrutiva-cronica",
+    "pac": "cm-pneumo-pneumonia-adquirida-na-comunidade-e-hospitalar",
+    "pah": "cm-pneumo-pneumonia-adquirida-na-comunidade-e-hospitalar",
+    "pav": "cm-pneumo-pneumonia-adquirida-na-comunidade-e-hospitalar",
+    "pneumonia": "cm-pneumo-pneumonia-adquirida-na-comunidade-e-hospitalar",
+    "criterios de light": "cm-pneumo-derrame-pleural",
+    "empiema": "cm-pneumo-derrame-pleural",
+    "toracocentese": "cm-pneumo-derrame-pleural",
+    "tep": "cm-pneumo-tromboembolismo-pulmonar-e-tvp",
+    "tev": "cm-pneumo-tromboembolismo-pulmonar-e-tvp",
+    "trombose venosa profunda": "cm-pneumo-tromboembolismo-pulmonar-e-tvp",
+    "tvp": "cm-pneumo-tromboembolismo-pulmonar-e-tvp",
+    "fibrose pulmonar": "cm-pneumo-doencas-pulmonares-intersticiais",
+    "pneumoconiose": "cm-pneumo-doencas-pulmonares-intersticiais",
+    "sarcoidose": "cm-pneumo-doencas-pulmonares-intersticiais",
+    "neoplasia pulmonar": "cm-pneumo-cancer-de-pulmao-e-nodulo-pulmonar",
+    "nodulo pulmonar solitario": "cm-pneumo-cancer-de-pulmao-e-nodulo-pulmonar",
+    "hap": "cm-pneumo-hipertensao-pulmonar-e-cor-pulmonale",
+    "hipertensao arterial pulmonar": "cm-pneumo-hipertensao-pulmonar-e-cor-pulmonale",
+    "iot": "cm-pneumo-insuficiencia-respiratoria-e-ventilacao-mecanica",
+    "sdra": "cm-pneumo-insuficiencia-respiratoria-e-ventilacao-mecanica",
+    "ventilacao mecanica": "cm-pneumo-insuficiencia-respiratoria-e-ventilacao-mecanica",
+    "vni": "cm-pneumo-insuficiencia-respiratoria-e-ventilacao-mecanica",
+    "abscesso pulmonar": "cm-pneumo-bronquiectasias-e-abscesso-pulmonar",
+    "hemoptise": "cm-pneumo-bronquiectasias-e-abscesso-pulmonar",
+    "insuficiencia renal aguda": "cm-nefro-injuria-renal-aguda",
+    "ira": "cm-nefro-injuria-renal-aguda",
+    "kdigo": "cm-nefro-injuria-renal-aguda",
+    "necrose tubular aguda": "cm-nefro-injuria-renal-aguda",
+    "dialise peritoneal": "cm-nefro-doenca-renal-cronica-e-terapia-substitutiva",
+    "drc": "cm-nefro-doenca-renal-cronica-e-terapia-substitutiva",
+    "hemodialise": "cm-nefro-doenca-renal-cronica-e-terapia-substitutiva",
+    "transplante renal": "cm-nefro-doenca-renal-cronica-e-terapia-substitutiva",
+    "gesf": "cm-nefro-sindrome-nefrotica",
+    "lesao minima": "cm-nefro-sindrome-nefrotica",
+    "nefropatia membranosa": "cm-nefro-sindrome-nefrotica",
+    "glomerulopatia": "cm-nefro-sindrome-nefritica-e-glomerulonefrites",
+    "gnpe": "cm-nefro-sindrome-nefritica-e-glomerulonefrites",
+    "gnrp": "cm-nefro-sindrome-nefritica-e-glomerulonefrites",
+    "nefropatia por iga": "cm-nefro-sindrome-nefritica-e-glomerulonefrites",
+    "diabetes insipidus": "cm-nefro-disturbios-do-sodio",
+    "hipernatremia": "cm-nefro-disturbios-do-sodio",
+    "hiponatremia": "cm-nefro-disturbios-do-sodio",
+    "siadh": "cm-nefro-disturbios-do-sodio",
+    "hipercalemia": "cm-nefro-disturbios-do-potassio",
+    "hipocalemia": "cm-nefro-disturbios-do-potassio",
+    "acidose metabolica": "cm-nefro-disturbios-acido-basicos",
+    "acidose respiratoria": "cm-nefro-disturbios-acido-basicos",
+    "alcalose metabolica": "cm-nefro-disturbios-acido-basicos",
+    "gasometria": "cm-nefro-disturbios-acido-basicos",
+    "cistite": "cm-nefro-infeccao-do-trato-urinario-no-adulto",
+    "itu": "cm-nefro-infeccao-do-trato-urinario-no-adulto",
+    "pielonefrite": "cm-nefro-infeccao-do-trato-urinario-no-adulto",
+    "calculo renal": "cm-nefro-nefrolitiase",
+    "colica nefritica": "cm-nefro-nefrolitiase",
+    "urolitiase": "cm-nefro-nefrolitiase",
+    "acidose tubular renal": "cm-nefro-doencas-tubulointersticiais-e-renais-poliquisticas",
+    "drpad": "cm-nefro-doencas-tubulointersticiais-e-renais-poliquisticas",
+    "nefrite intersticial": "cm-nefro-doencas-tubulointersticiais-e-renais-poliquisticas",
+    "nia": "cm-nefro-doencas-tubulointersticiais-e-renais-poliquisticas",
+    "antidiabeticos": "cm-endocrino-diabetes-mellitus-diagnostico-e-tratamento",
+    "dm1": "cm-endocrino-diabetes-mellitus-diagnostico-e-tratamento",
+    "dm2": "cm-endocrino-diabetes-mellitus-diagnostico-e-tratamento",
+    "insulina": "cm-endocrino-diabetes-mellitus-diagnostico-e-tratamento",
+    "cad": "cm-endocrino-complicacoes-agudas-do-diabetes",
+    "cetoacidose diabetica": "cm-endocrino-complicacoes-agudas-do-diabetes",
+    "ehh": "cm-endocrino-complicacoes-agudas-do-diabetes",
+    "estado hiperosmolar": "cm-endocrino-complicacoes-agudas-do-diabetes",
+    "hipoglicemia": "cm-endocrino-complicacoes-agudas-do-diabetes",
+    "nefropatia diabetica": "cm-endocrino-complicacoes-cronicas-do-diabetes",
+    "neuropatia diabetica": "cm-endocrino-complicacoes-cronicas-do-diabetes",
+    "pe diabetico": "cm-endocrino-complicacoes-cronicas-do-diabetes",
+    "retinopatia diabetica": "cm-endocrino-complicacoes-cronicas-do-diabetes",
+    "coma mixedematoso": "cm-endocrino-hipotireoidismo",
+    "levotiroxina": "cm-endocrino-hipotireoidismo",
+    "tireoidite de hashimoto": "cm-endocrino-hipotireoidismo",
+    "doenca de graves": "cm-endocrino-hipertireoidismo-e-tireoidites",
+    "tempestade tireoidiana": "cm-endocrino-hipertireoidismo-e-tireoidites",
+    "tireoidite subaguda": "cm-endocrino-hipertireoidismo-e-tireoidites",
+    "bethesda": "cm-endocrino-nodulos-e-cancer-de-tireoide",
+    "carcinoma papilifero": "cm-endocrino-nodulos-e-cancer-de-tireoide",
+    "tirads": "cm-endocrino-nodulos-e-cancer-de-tireoide",
+    "doenca de addison": "cm-endocrino-doencas-da-adrenal",
+    "feocromocitoma": "cm-endocrino-doencas-da-adrenal",
+    "hiperaldosteronismo": "cm-endocrino-doencas-da-adrenal",
+    "insuficiencia adrenal": "cm-endocrino-doencas-da-adrenal",
+    "sindrome de cushing": "cm-endocrino-doencas-da-adrenal",
+    "hipercalcemia": "cm-endocrino-disturbios-do-calcio-e-paratireoide",
+    "hiperparatireoidismo": "cm-endocrino-disturbios-do-calcio-e-paratireoide",
+    "hipocalcemia": "cm-endocrino-disturbios-do-calcio-e-paratireoide",
+    "hipoparatireoidismo": "cm-endocrino-disturbios-do-calcio-e-paratireoide",
+    "acromegalia": "cm-endocrino-doencas-da-hipofise",
+    "hipopituitarismo": "cm-endocrino-doencas-da-hipofise",
+    "prolactinoma": "cm-endocrino-doencas-da-hipofise",
+    "sindrome metabolica": "cm-endocrino-obesidade-e-sindrome-metabolica",
+    "tratamento farmacologico da obesidade": "cm-endocrino-obesidade-e-sindrome-metabolica",
+    "doenca de paget": "cm-endocrino-osteoporose-e-doencas-osteometabolicas",
+    "fratura por fragilidade": "cm-endocrino-osteoporose-e-doencas-osteometabolicas",
+    "osteopenia": "cm-endocrino-osteoporose-e-doencas-osteometabolicas",
+    "esofagite": "cm-gastro-drge-e-doencas-do-esofago",
+    "esofago de barrett": "cm-gastro-drge-e-doencas-do-esofago",
+    "refluxo gastroesofagico": "cm-gastro-drge-e-doencas-do-esofago",
+    "dispepsia": "cm-gastro-doenca-ulcerosa-peptica-e-h-pylori",
+    "dup": "cm-gastro-doenca-ulcerosa-peptica-e-h-pylori",
+    "ulcera duodenal": "cm-gastro-doenca-ulcerosa-peptica-e-h-pylori",
+    "ulcera gastrica": "cm-gastro-doenca-ulcerosa-peptica-e-h-pylori",
+    "forrest": "cm-gastro-hemorragia-digestiva-alta",
+    "hda": "cm-gastro-hemorragia-digestiva-alta",
+    "varizes esofagicas": "cm-gastro-hemorragia-digestiva-alta",
+    "angiodisplasia": "cm-gastro-hemorragia-digestiva-baixa",
+    "doenca diverticular": "cm-gastro-hemorragia-digestiva-baixa",
+    "hdb": "cm-gastro-hemorragia-digestiva-baixa",
+    "dii": "cm-gastro-doenca-inflamatoria-intestinal",
+    "doenca de crohn": "cm-gastro-doenca-inflamatoria-intestinal",
+    "retocolite ulcerativa": "cm-gastro-doenca-inflamatoria-intestinal",
+    "diarreia cronica": "cm-gastro-sindrome-disabsortiva-e-doenca-celiaca",
+    "doenca celiaca": "cm-gastro-sindrome-disabsortiva-e-doenca-celiaca",
+    "sindrome do intestino irritavel": "cm-gastro-sindrome-disabsortiva-e-doenca-celiaca",
+    "criterios de ranson": "cm-gastro-pancreatite-aguda-e-cronica",
+    "pancreatite aguda": "cm-gastro-pancreatite-aguda-e-cronica",
+    "pancreatite cronica": "cm-gastro-pancreatite-aguda-e-cronica",
+    "hepatite a": "cm-gastro-hepatites-virais",
+    "hepatite b": "cm-gastro-hepatites-virais",
+    "hepatite c": "cm-gastro-hepatites-virais",
+    "hepatite d": "cm-gastro-hepatites-virais",
+    "child-pugh": "cm-gastro-cirrose-hepatica-e-hipertensao-portal",
+    "cirrose": "cm-gastro-cirrose-hepatica-e-hipertensao-portal",
+    "hepatite autoimune": "cm-gastro-cirrose-hepatica-e-hipertensao-portal",
+    "meld": "cm-gastro-cirrose-hepatica-e-hipertensao-portal",
+    "ascite": "cm-gastro-complicacoes-da-cirrose",
+    "encefalopatia hepatica": "cm-gastro-complicacoes-da-cirrose",
+    "pbe": "cm-gastro-complicacoes-da-cirrose",
+    "peritonite bacteriana espontanea": "cm-gastro-complicacoes-da-cirrose",
+    "sindrome hepatorrenal": "cm-gastro-complicacoes-da-cirrose",
+    "dhgna": "cm-gastro-doenca-hepatica-esteatotica-e-alcoolica",
+    "esteatose hepatica": "cm-gastro-doenca-hepatica-esteatotica-e-alcoolica",
+    "hepatite alcoolica": "cm-gastro-doenca-hepatica-esteatotica-e-alcoolica",
+    "masld": "cm-gastro-doenca-hepatica-esteatotica-e-alcoolica",
+    "adenoma hepatico": "cm-gastro-hepatocarcinoma-e-nodulos-hepaticos",
+    "chc": "cm-gastro-hepatocarcinoma-e-nodulos-hepaticos",
+    "hemangioma": "cm-gastro-hepatocarcinoma-e-nodulos-hepaticos",
+    "hiperplasia nodular focal": "cm-gastro-hepatocarcinoma-e-nodulos-hepaticos",
+    "criptococose": "cm-infecto-hiv-aids-e-infeccoes-oportunistas",
+    "neurotoxoplasmose": "cm-infecto-hiv-aids-e-infeccoes-oportunistas",
+    "pep": "cm-infecto-hiv-aids-e-infeccoes-oportunistas",
+    "pneumocistose": "cm-infecto-hiv-aids-e-infeccoes-oportunistas",
+    "prep": "cm-infecto-hiv-aids-e-infeccoes-oportunistas",
+    "tarv": "cm-infecto-hiv-aids-e-infeccoes-oportunistas",
+    "esquema ripe": "cm-infecto-tuberculose-pulmonar-e-extrapulmonar",
+    "il tb": "cm-infecto-tuberculose-pulmonar-e-extrapulmonar",
+    "meningite tuberculosa": "cm-infecto-tuberculose-pulmonar-e-extrapulmonar",
+    "tb": "cm-infecto-tuberculose-pulmonar-e-extrapulmonar",
+    "chikungunya": "cm-infecto-arboviroses",
+    "dengue": "cm-infecto-arboviroses",
+    "febre amarela": "cm-infecto-arboviroses",
+    "zika": "cm-infecto-arboviroses",
+    "doenca de chagas": "cm-infecto-malaria-e-doencas-endemicas",
+    "esquistossomose": "cm-infecto-malaria-e-doencas-endemicas",
+    "leishmaniose tegumentar": "cm-infecto-malaria-e-doencas-endemicas",
+    "leishmaniose visceral": "cm-infecto-malaria-e-doencas-endemicas",
+    "malaria": "cm-infecto-malaria-e-doencas-endemicas",
+    "febre maculosa": "cm-infecto-leptospirose-e-rickettsioses",
+    "leptospirose": "cm-infecto-leptospirose-e-rickettsioses",
+    "sindrome de weil": "cm-infecto-leptospirose-e-rickettsioses",
+    "encefalite herpetica": "cm-infecto-meningites-e-encefalites-no-adulto",
+    "liquor": "cm-infecto-meningites-e-encefalites-no-adulto",
+    "meningite bacteriana": "cm-infecto-meningites-e-encefalites-no-adulto",
+    "meningite viral": "cm-infecto-meningites-e-encefalites-no-adulto",
+    "qsofa": "cm-infecto-sepse-e-choque-septico",
+    "sepse": "cm-infecto-sepse-e-choque-septico",
+    "sofa": "cm-infecto-sepse-e-choque-septico",
+    "surviving sepsis": "cm-infecto-sepse-e-choque-septico",
+    "cancro mole": "cm-infecto-ists-e-sifilis-no-adulto",
+    "clamidia": "cm-infecto-ists-e-sifilis-no-adulto",
+    "gonorreia": "cm-infecto-ists-e-sifilis-no-adulto",
+    "linfogranuloma": "cm-infecto-ists-e-sifilis-no-adulto",
+    "sifilis": "cm-infecto-ists-e-sifilis-no-adulto",
+    "celulite": "cm-infecto-infeccoes-de-pele-e-partes-moles",
+    "erisipela": "cm-infecto-infeccoes-de-pele-e-partes-moles",
+    "fasciite necrosante": "cm-infecto-infeccoes-de-pele-e-partes-moles",
+    "osteomielite": "cm-infecto-infeccoes-de-pele-e-partes-moles",
+    "aspergilose": "cm-infecto-micoses-sistemicas-endemicas",
+    "esporotricose": "cm-infecto-micoses-sistemicas-endemicas",
+    "histoplasmose": "cm-infecto-micoses-sistemicas-endemicas",
+    "paracoccidioidomicose": "cm-infecto-micoses-sistemicas-endemicas",
+    "botropico": "cm-infecto-acidentes-por-animais-peconhentos",
+    "crotalico": "cm-infecto-acidentes-por-animais-peconhentos",
+    "escorpionismo": "cm-infecto-acidentes-por-animais-peconhentos",
+    "loxoscelismo": "cm-infecto-acidentes-por-animais-peconhentos",
+    "ofidismo": "cm-infecto-acidentes-por-animais-peconhentos",
+    "antibioticoterapia": "cm-infecto-antimicrobianos-e-infeccoes-relacionadas-a-assistencia",
+    "bacterias multirresistentes": "cm-infecto-antimicrobianos-e-infeccoes-relacionadas-a-assistencia",
+    "clostridioides difficile": "cm-infecto-antimicrobianos-e-infeccoes-relacionadas-a-assistencia",
+    "iras": "cm-infecto-antimicrobianos-e-infeccoes-relacionadas-a-assistencia",
+    "acido folico": "cm-hemato-anemias-carenciais",
+    "anemia ferropriva": "cm-hemato-anemias-carenciais",
+    "anemia megaloblastica": "cm-hemato-anemias-carenciais",
+    "deficiencia de b12": "cm-hemato-anemias-carenciais",
+    "ahai": "cm-hemato-anemias-hemoliticas-e-doenca-falciforme",
+    "anemia falciforme": "cm-hemato-anemias-hemoliticas-e-doenca-falciforme",
+    "esferocitose": "cm-hemato-anemias-hemoliticas-e-doenca-falciforme",
+    "g6pd": "cm-hemato-anemias-hemoliticas-e-doenca-falciforme",
+    "talassemia": "cm-hemato-anemias-hemoliticas-e-doenca-falciforme",
+    "anemia da inflamacao": "cm-hemato-anemia-de-doenca-cronica-e-sideroblastica",
+    "aplasia medular": "cm-hemato-anemia-de-doenca-cronica-e-sideroblastica",
+    "sindrome mielodisplasica": "cm-hemato-anemia-de-doenca-cronica-e-sideroblastica",
+    "doenca de von willebrand": "cm-hemato-disturbios-da-hemostasia-primaria",
+    "plaquetopenia": "cm-hemato-disturbios-da-hemostasia-primaria",
+    "pti": "cm-hemato-disturbios-da-hemostasia-primaria",
+    "ptt": "cm-hemato-disturbios-da-hemostasia-primaria",
+    "shu": "cm-hemato-disturbios-da-hemostasia-primaria",
+    "civd": "cm-hemato-disturbios-da-coagulacao-e-anticoagulacao",
+    "doacs": "cm-hemato-disturbios-da-coagulacao-e-anticoagulacao",
+    "hemofilia": "cm-hemato-disturbios-da-coagulacao-e-anticoagulacao",
+    "heparina": "cm-hemato-disturbios-da-coagulacao-e-anticoagulacao",
+    "hit": "cm-hemato-disturbios-da-coagulacao-e-anticoagulacao",
+    "varfarina": "cm-hemato-disturbios-da-coagulacao-e-anticoagulacao",
+    "lla": "cm-hemato-leucemias-agudas-e-cronicas",
+    "llc": "cm-hemato-leucemias-agudas-e-cronicas",
+    "lma": "cm-hemato-leucemias-agudas-e-cronicas",
+    "lmc": "cm-hemato-leucemias-agudas-e-cronicas",
+    "linfoma de hodgkin": "cm-hemato-linfomas-de-hodgkin-e-nao-hodgkin",
+    "linfoma nao-hodgkin": "cm-hemato-linfomas-de-hodgkin-e-nao-hodgkin",
+    "linfonodomegalia": "cm-hemato-linfomas-de-hodgkin-e-nao-hodgkin",
+    "amiloidose": "cm-hemato-mieloma-multiplo-e-gamopatias",
+    "macroglobulinemia": "cm-hemato-mieloma-multiplo-e-gamopatias",
+    "mieloma multiplo": "cm-hemato-mieloma-multiplo-e-gamopatias",
+    "indicacao de hemocomponentes": "cm-hemato-hemoterapia-e-reacoes-transfusionais",
+    "reacao hemolitica": "cm-hemato-hemoterapia-e-reacoes-transfusionais",
+    "taco": "cm-hemato-hemoterapia-e-reacoes-transfusionais",
+    "trali": "cm-hemato-hemoterapia-e-reacoes-transfusionais",
+    "anti-ccp": "cm-reumato-artrite-reumatoide",
+    "ar": "cm-reumato-artrite-reumatoide",
+    "dmards": "cm-reumato-artrite-reumatoide",
+    "fator reumatoide": "cm-reumato-artrite-reumatoide",
+    "anti-dsdna": "cm-reumato-lupus-eritematoso-sistemico",
+    "fan": "cm-reumato-lupus-eritematoso-sistemico",
+    "les": "cm-reumato-lupus-eritematoso-sistemico",
+    "nefrite lupica": "cm-reumato-lupus-eritematoso-sistemico",
+    "artrite psoriasica": "cm-reumato-espondiloartrites",
+    "artrite reativa": "cm-reumato-espondiloartrites",
+    "espondilite anquilosante": "cm-reumato-espondiloartrites",
+    "anca": "cm-reumato-vasculites-sistemicas",
+    "arterite de celulas gigantes": "cm-reumato-vasculites-sistemicas",
+    "granulomatose": "cm-reumato-vasculites-sistemicas",
+    "poliarterite nodosa": "cm-reumato-vasculites-sistemicas",
+    "takayasu": "cm-reumato-vasculites-sistemicas",
+    "dermatomiosite": "cm-reumato-esclerose-sistemica-e-miopatias-inflamatorias",
+    "esclerodermia": "cm-reumato-esclerose-sistemica-e-miopatias-inflamatorias",
+    "polimiosite": "cm-reumato-esclerose-sistemica-e-miopatias-inflamatorias",
+    "gota": "cm-reumato-gota-e-artropatias-por-cristais",
+    "hiperuricemia": "cm-reumato-gota-e-artropatias-por-cristais",
+    "pseudogota": "cm-reumato-gota-e-artropatias-por-cristais",
+    "artrite septica": "cm-reumato-artrite-septica-e-osteoartrite",
+    "artrose": "cm-reumato-artrite-septica-e-osteoartrite",
+    "osteoartrose": "cm-reumato-artrite-septica-e-osteoartrite",
+    "saf": "cm-reumato-sindrome-antifosfolipide-e-sjogren",
+    "sindrome de sjogren": "cm-reumato-sindrome-antifosfolipide-e-sjogren",
+    "fibromialgia": "cm-reumato-fibromialgia-e-dor-cronica",
+    "lombalgia mecanica": "cm-reumato-fibromialgia-e-dor-cronica",
+    "ait": "cm-neuro-avc-isquemico-e-ait",
+    "avci": "cm-neuro-avc-isquemico-e-ait",
+    "trombectomia": "cm-neuro-avc-isquemico-e-ait",
+    "trombolise cerebral": "cm-neuro-avc-isquemico-e-ait",
+    "aneurisma cerebral": "cm-neuro-avc-hemorragico-e-hemorragia-subaracnoide",
+    "avch": "cm-neuro-avc-hemorragico-e-hemorragia-subaracnoide",
+    "escala de fisher": "cm-neuro-avc-hemorragico-e-hemorragia-subaracnoide",
+    "hsa": "cm-neuro-avc-hemorragico-e-hemorragia-subaracnoide",
+    "cefaleia em salvas": "cm-neuro-cefaleias-primarias-e-secundarias",
+    "cefaleia tensional": "cm-neuro-cefaleias-primarias-e-secundarias",
+    "enxaqueca": "cm-neuro-cefaleias-primarias-e-secundarias",
+    "migranea": "cm-neuro-cefaleias-primarias-e-secundarias",
+    "anticonvulsivantes": "cm-neuro-epilepsias-e-estado-de-mal-epileptico",
+    "crise convulsiva": "cm-neuro-epilepsias-e-estado-de-mal-epileptico",
+    "eme": "cm-neuro-epilepsias-e-estado-de-mal-epileptico",
+    "alzheimer": "cm-neuro-demencias-e-delirium",
+    "corpos de lewy": "cm-neuro-demencias-e-delirium",
+    "delirium": "cm-neuro-demencias-e-delirium",
+    "demencia vascular": "cm-neuro-demencias-e-delirium",
+    "coreia": "cm-neuro-doenca-de-parkinson-e-transtornos-do-movimento",
+    "parkinsonismo": "cm-neuro-doenca-de-parkinson-e-transtornos-do-movimento",
+    "tremor essencial": "cm-neuro-doenca-de-parkinson-e-transtornos-do-movimento",
+    "esclerose multipla": "cm-neuro-doencas-desmielinizantes",
+    "neuromielite optica": "cm-neuro-doencas-desmielinizantes",
+    "guillain-barre": "cm-neuro-polineuropatias-e-sindrome-de-guillain-barre",
+    "neuropatia periferica": "cm-neuro-polineuropatias-e-sindrome-de-guillain-barre",
+    "polineuropatia": "cm-neuro-polineuropatias-e-sindrome-de-guillain-barre",
+    "botulismo": "cm-neuro-miastenia-gravis-e-doencas-da-juncao-neuromuscular",
+    "crise miastenica": "cm-neuro-miastenia-gravis-e-doencas-da-juncao-neuromuscular",
+    "ela": "cm-neuro-miastenia-gravis-e-doencas-da-juncao-neuromuscular",
+    "miastenia gravis": "cm-neuro-miastenia-gravis-e-doencas-da-juncao-neuromuscular",
+    "glasgow": "cm-neuro-coma-hipertensao-intracraniana-e-morte-encefalica",
+    "hic": "cm-neuro-coma-hipertensao-intracraniana-e-morte-encefalica",
+    "protocolo de morte encefalica": "cm-neuro-coma-hipertensao-intracraniana-e-morte-encefalica",
+    "antidepressivos": "cm-psiq-transtornos-depressivos",
+    "depressao maior": "cm-psiq-transtornos-depressivos",
+    "distimia": "cm-psiq-transtornos-depressivos",
+    "hipomania": "cm-psiq-transtorno-afetivo-bipolar",
+    "litio": "cm-psiq-transtorno-afetivo-bipolar",
+    "mania": "cm-psiq-transtorno-afetivo-bipolar",
+    "tab": "cm-psiq-transtorno-afetivo-bipolar",
+    "fobias": "cm-psiq-transtornos-de-ansiedade-toc-e-tept",
+    "tag": "cm-psiq-transtornos-de-ansiedade-toc-e-tept",
+    "tept": "cm-psiq-transtornos-de-ansiedade-toc-e-tept",
+    "toc": "cm-psiq-transtornos-de-ansiedade-toc-e-tept",
+    "transtorno do panico": "cm-psiq-transtornos-de-ansiedade-toc-e-tept",
+    "antipsicoticos": "cm-psiq-esquizofrenia-e-transtornos-psicoticos",
+    "psicose": "cm-psiq-esquizofrenia-e-transtornos-psicoticos",
+    "sindrome neuroleptica maligna": "cm-psiq-esquizofrenia-e-transtornos-psicoticos",
+    "alcoolismo": "cm-psiq-transtornos-por-uso-de-substancias-e-abstinencia",
+    "cocaina": "cm-psiq-transtornos-por-uso-de-substancias-e-abstinencia",
+    "delirium tremens": "cm-psiq-transtornos-por-uso-de-substancias-e-abstinencia",
+    "opioides": "cm-psiq-transtornos-por-uso-de-substancias-e-abstinencia",
+    "tabagismo": "cm-psiq-transtornos-por-uso-de-substancias-e-abstinencia",
+    "wernicke-korsakoff": "cm-psiq-transtornos-por-uso-de-substancias-e-abstinencia",
+    "agitacao psicomotora": "cm-psiq-emergencias-psiquiatricas-e-risco-de-suicidio",
+    "intoxicacao por litio": "cm-psiq-emergencias-psiquiatricas-e-risco-de-suicidio",
+    "suicidio": "cm-psiq-emergencias-psiquiatricas-e-risco-de-suicidio",
+    "anorexia": "cm-psiq-transtornos-alimentares-e-de-personalidade",
+    "borderline": "cm-psiq-transtornos-alimentares-e-de-personalidade",
+    "bulimia": "cm-psiq-transtornos-alimentares-e-de-personalidade",
+    "benzodiazepinicos": "cm-psiq-psicofarmacologia-clinica",
+    "estabilizadores de humor": "cm-psiq-psicofarmacologia-clinica",
+    "isrs": "cm-psiq-psicofarmacologia-clinica",
+    "sindrome serotoninergica": "cm-psiq-psicofarmacologia-clinica",
+    "hanseniase multibacilar": "cm-dermato-hanseniase",
+    "hanseniase paucibacilar": "cm-dermato-hanseniase",
+    "pqt": "cm-dermato-hanseniase",
+    "reacoes hansenicas": "cm-dermato-hanseniase",
+    "carcinoma basocelular": "cm-dermato-cancer-de-pele",
+    "carcinoma espinocelular": "cm-dermato-cancer-de-pele",
+    "melanoma": "cm-dermato-cancer-de-pele",
+    "dress": "cm-dermato-farmacodermias-graves",
+    "net": "cm-dermato-farmacodermias-graves",
+    "ssj": "cm-dermato-farmacodermias-graves",
+    "stevens-johnson": "cm-dermato-farmacodermias-graves",
+    "dermatite atopica": "cm-dermato-dermatoses-eczematosas-e-psoriase",
+    "dermatite de contato": "cm-dermato-dermatoses-eczematosas-e-psoriase",
+    "psoriase": "cm-dermato-dermatoses-eczematosas-e-psoriase",
+    "urticaria": "cm-dermato-dermatoses-eczematosas-e-psoriase",
+    "penfigo vulgar": "cm-dermato-doencas-bolhosas-autoimunes",
+    "penfigoide bolhoso": "cm-dermato-doencas-bolhosas-autoimunes",
+    "escabiose": "cm-dermato-micoses-superficiais-e-infestacoes-cutaneas",
+    "herpes zoster": "cm-dermato-micoses-superficiais-e-infestacoes-cutaneas",
+    "pediculose": "cm-dermato-micoses-superficiais-e-infestacoes-cutaneas",
+    "tinhas": "cm-dermato-micoses-superficiais-e-infestacoes-cutaneas",
+    "choque cardiogenico": "cm-uti-choque-e-monitorizacao-hemodinamica",
+    "choque distributivo": "cm-uti-choque-e-monitorizacao-hemodinamica",
+    "drogas vasoativas": "cm-uti-choque-e-monitorizacao-hemodinamica",
+    "antidotos": "cm-uti-intoxicacoes-exogenas-e-sindromes-toxicologicas",
+    "benzodiazepinico": "cm-uti-intoxicacoes-exogenas-e-sindromes-toxicologicas",
+    "organofosforados": "cm-uti-intoxicacoes-exogenas-e-sindromes-toxicologicas",
+    "paracetamol": "cm-uti-intoxicacoes-exogenas-e-sindromes-toxicologicas",
+    "triciclicos": "cm-uti-intoxicacoes-exogenas-e-sindromes-toxicologicas",
+    "controle de dor": "cm-uti-cuidados-paliativos",
+    "diretivas antecipadas": "cm-uti-cuidados-paliativos",
+    "sedacao paliativa": "cm-uti-cuidados-paliativos",
+    "fragilidade": "cm-geriatria-sindromes-geriatricas-e-avaliacao-geriatrica-ampla",
+    "polifarmacia": "cm-geriatria-sindromes-geriatricas-e-avaliacao-geriatrica-ampla",
+    "quedas no idoso": "cm-geriatria-sindromes-geriatricas-e-avaliacao-geriatrica-ampla",
+    "sarcopenia": "cm-geriatria-sindromes-geriatricas-e-avaliacao-geriatrica-ampla",
+    "compressao medular": "cm-geriatria-emergencias-oncologicas",
+    "neutropenia febril": "cm-geriatria-emergencias-oncologicas",
+    "sindrome da veia cava superior": "cm-geriatria-emergencias-oncologicas",
+    "sindrome de lise tumoral": "cm-geriatria-emergencias-oncologicas",
+    "abcde": "cg-trauma-atendimento-inicial-ao-politraumatizado",
+    "choque hemorragico": "cg-trauma-atendimento-inicial-ao-politraumatizado",
+    "transfusao macica": "cg-trauma-atendimento-inicial-ao-politraumatizado",
+    "via aerea definitiva": "cg-trauma-atendimento-inicial-ao-politraumatizado",
+    "hemotorax macico": "cg-trauma-trauma-toracico",
+    "pneumotorax hipertensivo": "cg-trauma-trauma-toracico",
+    "tamponamento traumatico": "cg-trauma-trauma-toracico",
+    "torax instavel": "cg-trauma-trauma-toracico",
+    "fast": "cg-trauma-trauma-abdominal-e-pelvico",
+    "fratura de pelve": "cg-trauma-trauma-abdominal-e-pelvico",
+    "trauma esplenico": "cg-trauma-trauma-abdominal-e-pelvico",
+    "trauma hepatico": "cg-trauma-trauma-abdominal-e-pelvico",
+    "choque neurogenico": "cg-trauma-trauma-cranioencefalico-e-raquimedular",
+    "hematoma epidural": "cg-trauma-trauma-cranioencefalico-e-raquimedular",
+    "hematoma subdural": "cg-trauma-trauma-cranioencefalico-e-raquimedular",
+    "tce": "cg-trauma-trauma-cranioencefalico-e-raquimedular",
+    "formula de parkland": "cg-trauma-queimaduras-e-lesao-inalatoria",
+    "queimadura eletrica": "cg-trauma-queimaduras-e-lesao-inalatoria",
+    "superficie corporal queimada": "cg-trauma-queimaduras-e-lesao-inalatoria",
+    "controle de danos": "cg-trauma-trauma-cervical-vascular-e-de-extremidades",
+    "sindrome compartimental": "cg-trauma-trauma-cervical-vascular-e-de-extremidades",
+    "zonas cervicais": "cg-trauma-trauma-cervical-vascular-e-de-extremidades",
+    "apendicectomia": "cg-abdome-apendicite-aguda",
+    "escore de alvarado": "cg-abdome-apendicite-aguda",
+    "sinal de blumberg": "cg-abdome-apendicite-aguda",
+    "doenca diverticular complicada": "cg-abdome-diverticulite-aguda",
+    "hinchey": "cg-abdome-diverticulite-aguda",
+    "bridas": "cg-abdome-abdome-agudo-obstrutivo",
+    "obstrucao intestinal": "cg-abdome-abdome-agudo-obstrutivo",
+    "sindrome de ogilvie": "cg-abdome-abdome-agudo-obstrutivo",
+    "volvo de sigmoide": "cg-abdome-abdome-agudo-obstrutivo",
+    "pneumoperitonio": "cg-abdome-abdome-agudo-perfurativo",
+    "ulcera perfurada": "cg-abdome-abdome-agudo-perfurativo",
+    "isquemia mesenterica aguda": "cg-abdome-abdome-agudo-vascular",
+    "isquemia mesenterica cronica": "cg-abdome-abdome-agudo-vascular",
+    "hemoperitonio": "cg-abdome-abdome-agudo-hemorragico",
+    "rotura de aneurisma": "cg-abdome-abdome-agudo-hemorragico",
+    "colecistectomia": "cg-biliar-colelitiase-e-colecistite-aguda",
+    "criterios de tokyo": "cg-biliar-colelitiase-e-colecistite-aguda",
+    "sindrome de mirizzi": "cg-biliar-colelitiase-e-colecistite-aguda",
+    "cpre": "cg-biliar-coledocolitiase-e-colangite-aguda",
+    "pentade de reynolds": "cg-biliar-coledocolitiase-e-colangite-aguda",
+    "triade de charcot": "cg-biliar-coledocolitiase-e-colangite-aguda",
+    "cancer de pancreas": "cg-biliar-neoplasias-periampulares-e-de-pancreas",
+    "colangiocarcinoma": "cg-biliar-neoplasias-periampulares-e-de-pancreas",
+    "duodenopancreatectomia": "cg-biliar-neoplasias-periampulares-e-de-pancreas",
+    "cisto de coledoco": "cg-biliar-lesoes-iatrogenicas-de-via-biliar-e-cistos",
+    "strasberg": "cg-biliar-lesoes-iatrogenicas-de-via-biliar-e-cistos",
+    "hernia crural": "cg-hernias-hernia-inguinal-e-femoral",
+    "hernia direta": "cg-hernias-hernia-inguinal-e-femoral",
+    "hernia indireta": "cg-hernias-hernia-inguinal-e-femoral",
+    "lichtenstein": "cg-hernias-hernia-inguinal-e-femoral",
+    "nyhus": "cg-hernias-hernia-inguinal-e-femoral",
+    "eventracao": "cg-hernias-hernias-umbilical-epigastrica-e-incisional",
+    "evisceracao": "cg-hernias-hernias-umbilical-epigastrica-e-incisional",
+    "hernia ventral": "cg-hernias-hernias-umbilical-epigastrica-e-incisional",
+    "hernia de richter": "cg-hernias-complicacoes-de-hernias",
+    "hernia encarcerada": "cg-hernias-complicacoes-de-hernias",
+    "hernia estrangulada": "cg-hernias-complicacoes-de-hernias",
+    "acalasia": "cg-cad-neoplasia-de-esofago-e-disturbios-motores",
+    "cancer de esofago": "cg-cad-neoplasia-de-esofago-e-disturbios-motores",
+    "diverticulo de zenker": "cg-cad-neoplasia-de-esofago-e-disturbios-motores",
+    "borrmann": "cg-cad-cancer-gastrico-e-cirurgia-bariatrica",
+    "bypass gastrico": "cg-cad-cancer-gastrico-e-cirurgia-bariatrica",
+    "dumping": "cg-cad-cancer-gastrico-e-cirurgia-bariatrica",
+    "lauren": "cg-cad-cancer-gastrico-e-cirurgia-bariatrica",
+    "sleeve": "cg-cad-cancer-gastrico-e-cirurgia-bariatrica",
+    "estadiamento ccr": "cg-cad-cancer-colorretal-e-polipos",
+    "polipose": "cg-cad-cancer-colorretal-e-polipos",
+    "rastreamento colorretal": "cg-cad-cancer-colorretal-e-polipos",
+    "sindrome de lynch": "cg-cad-cancer-colorretal-e-polipos",
+    "abscesso perianal": "cg-cad-doencas-orificiais",
+    "cisto pilonidal": "cg-cad-doencas-orificiais",
+    "fissura anal": "cg-cad-doencas-orificiais",
+    "fistula perianal": "cg-cad-doencas-orificiais",
+    "hemorroidas": "cg-cad-doencas-orificiais",
+    "asa": "cg-periop-avaliacao-pre-operatoria-e-risco-cirurgico",
+    "goldman": "cg-periop-avaliacao-pre-operatoria-e-risco-cirurgico",
+    "jejum pre-operatorio": "cg-periop-avaliacao-pre-operatoria-e-risco-cirurgico",
+    "suspensao de medicamentos": "cg-periop-avaliacao-pre-operatoria-e-risco-cirurgico",
+    "acerto": "cg-periop-resposta-endocrino-metabolica-ao-trauma",
+    "nutricao perioperatoria": "cg-periop-resposta-endocrino-metabolica-ao-trauma",
+    "protocolo eras": "cg-periop-resposta-endocrino-metabolica-ao-trauma",
+    "remit": "cg-periop-resposta-endocrino-metabolica-ao-trauma",
+    "atelectasia": "cg-periop-complicacoes-pos-operatorias-e-infeccao-de-sitio-cirurgico",
+    "deiscencia": "cg-periop-complicacoes-pos-operatorias-e-infeccao-de-sitio-cirurgico",
+    "febre pos-operatoria": "cg-periop-complicacoes-pos-operatorias-e-infeccao-de-sitio-cirurgico",
+    "isc": "cg-periop-complicacoes-pos-operatorias-e-infeccao-de-sitio-cirurgico",
+    "enxertos": "cg-periop-cicatrizacao-de-feridas-e-cirurgia-plastica-basica",
+    "fases da cicatrizacao": "cg-periop-cicatrizacao-de-feridas-e-cirurgia-plastica-basica",
+    "queloide": "cg-periop-cicatrizacao-de-feridas-e-cirurgia-plastica-basica",
+    "retalhos": "cg-periop-cicatrizacao-de-feridas-e-cirurgia-plastica-basica",
+    "bupivacaina": "cg-periop-anestesiologia-basica-e-anestesicos-locais",
+    "hipertermia maligna": "cg-periop-anestesiologia-basica-e-anestesicos-locais",
+    "lidocaina": "cg-periop-anestesiologia-basica-e-anestesicos-locais",
+    "raquianestesia": "cg-periop-anestesiologia-basica-e-anestesicos-locais",
+    "claudicacao intermitente": "cg-vascular-doenca-arterial-obstrutiva-periferica",
+    "daop": "cg-vascular-doenca-arterial-obstrutiva-periferica",
+    "itb": "cg-vascular-doenca-arterial-obstrutiva-periferica",
+    "embolectomia": "cg-vascular-oclusao-arterial-aguda",
+    "oaa": "cg-vascular-oclusao-arterial-aguda",
+    "rutherford": "cg-vascular-oclusao-arterial-aguda",
+    "aaa": "cg-vascular-aneurisma-e-dissecacao-de-aorta",
+    "debakey": "cg-vascular-aneurisma-e-dissecacao-de-aorta",
+    "disseccao aortica": "cg-vascular-aneurisma-e-dissecacao-de-aorta",
+    "stanford": "cg-vascular-aneurisma-e-dissecacao-de-aorta",
+    "ceap": "cg-vascular-insuficiencia-venosa-cronica-e-ulceras",
+    "ulcera venosa": "cg-vascular-insuficiencia-venosa-cronica-e-ulceras",
+    "varizes": "cg-vascular-insuficiencia-venosa-cronica-e-ulceras",
+    "gleason": "cg-uro-hiperplasia-prostatica-benigna-e-cancer-de-prostata",
+    "hpb": "cg-uro-hiperplasia-prostatica-benigna-e-cancer-de-prostata",
+    "psa": "cg-uro-hiperplasia-prostatica-benigna-e-cancer-de-prostata",
+    "retencao urinaria aguda": "cg-uro-hiperplasia-prostatica-benigna-e-cancer-de-prostata",
+    "cancer de bexiga": "cg-uro-neoplasias-de-rim-bexiga-e-testiculo",
+    "carcinoma renal": "cg-uro-neoplasias-de-rim-bexiga-e-testiculo",
+    "hematuria": "cg-uro-neoplasias-de-rim-bexiga-e-testiculo",
+    "seminoma": "cg-uro-neoplasias-de-rim-bexiga-e-testiculo",
+    "orquiepididimite": "cg-uro-escroto-agudo-e-torcao-testicular",
+    "priapismo": "cg-uro-escroto-agudo-e-torcao-testicular",
+    "torcao de testiculo": "cg-uro-escroto-agudo-e-torcao-testicular",
+    "duplo j": "cg-uro-trauma-urologico-e-litiase-cirurgica",
+    "litotripsia": "cg-uro-trauma-urologico-e-litiase-cirurgica",
+    "trauma de uretra": "cg-uro-trauma-urologico-e-litiase-cirurgica",
+    "trauma renal": "cg-uro-trauma-urologico-e-litiase-cirurgica",
+    "criptoquidia": "cg-espec-emergencias-cirurgicas-pediatricas",
+    "diverticulo de meckel": "cg-espec-emergencias-cirurgicas-pediatricas",
+    "estenose hipertrofica de piloro": "cg-espec-emergencias-cirurgicas-pediatricas",
+    "invaginacao intestinal": "cg-espec-emergencias-cirurgicas-pediatricas",
+    "atresia de esofago": "cg-espec-malformacoes-congenitas-cirurgicas",
+    "gastrosquise": "cg-espec-malformacoes-congenitas-cirurgicas",
+    "hernia diafragmatica congenita": "cg-espec-malformacoes-congenitas-cirurgicas",
+    "megacolon congenito": "cg-espec-malformacoes-congenitas-cirurgicas",
+    "onfalocele": "cg-espec-malformacoes-congenitas-cirurgicas",
+    "ddq": "cg-espec-ortopedia-e-traumatologia-basica",
+    "epifisiolise": "cg-espec-ortopedia-e-traumatologia-basica",
+    "fratura exposta": "cg-espec-ortopedia-e-traumatologia-basica",
+    "gustilo-anderson": "cg-espec-ortopedia-e-traumatologia-basica",
+    "luxacoes": "cg-espec-ortopedia-e-traumatologia-basica",
+    "epistaxe": "cg-espec-otorrinolaringologia-e-cabeca-e-pescoco",
+    "nodulo cervical": "cg-espec-otorrinolaringologia-e-cabeca-e-pescoco",
+    "paralisia facial": "cg-espec-otorrinolaringologia-e-cabeca-e-pescoco",
+    "traqueostomia": "cg-espec-otorrinolaringologia-e-cabeca-e-pescoco",
+    "vertigem": "cg-espec-otorrinolaringologia-e-cabeca-e-pescoco",
+    "conjuntivite": "cg-espec-oftalmologia-basica",
+    "glaucoma agudo": "cg-espec-oftalmologia-basica",
+    "olho vermelho": "cg-espec-oftalmologia-basica",
+    "trauma ocular": "cg-espec-oftalmologia-basica",
+    "uveite": "cg-espec-oftalmologia-basica",
+    "adaptacoes maternas": "go-prenatal-diagnostico-de-gravidez-e-modificacoes-fisiologicas",
+    "idade gestacional": "go-prenatal-diagnostico-de-gravidez-e-modificacoes-fisiologicas",
+    "sinais de presuncao": "go-prenatal-diagnostico-de-gravidez-e-modificacoes-fisiologicas",
+    "consultas": "go-prenatal-assistencia-pre-natal-de-baixo-risco",
+    "exames pre-natal": "go-prenatal-assistencia-pre-natal-de-baixo-risco",
+    "sulfato ferroso": "go-prenatal-assistencia-pre-natal-de-baixo-risco",
+    "dtpa": "go-prenatal-imunizacao-na-gestacao",
+    "influenza": "go-prenatal-imunizacao-na-gestacao",
+    "vacinas na gravidez": "go-prenatal-imunizacao-na-gestacao",
+    "cardiotocografia": "go-prenatal-avaliacao-da-vitalidade-fetal",
+    "dopplervelocimetria": "go-prenatal-avaliacao-da-vitalidade-fetal",
+    "oligodramnia": "go-prenatal-avaliacao-da-vitalidade-fetal",
+    "perfil biofisico fetal": "go-prenatal-avaliacao-da-vitalidade-fetal",
+    "aas profilatico": "go-shg-pre-eclampsia-eclampsia-e-sindrome-hellp",
+    "eclampsia": "go-shg-pre-eclampsia-eclampsia-e-sindrome-hellp",
+    "hellp": "go-shg-pre-eclampsia-eclampsia-e-sindrome-hellp",
+    "pre-eclampsia": "go-shg-pre-eclampsia-eclampsia-e-sindrome-hellp",
+    "sulfato de magnesio": "go-shg-pre-eclampsia-eclampsia-e-sindrome-hellp",
+    "hidralazina": "go-shg-hipertensao-cronica-e-gestacional",
+    "hipertensao na gravidez": "go-shg-hipertensao-cronica-e-gestacional",
+    "metildopa": "go-shg-hipertensao-cronica-e-gestacional",
+    "nifedipino": "go-shg-hipertensao-cronica-e-gestacional",
+    "dmg": "go-shg-diabetes-mellitus-gestacional-e-previo",
+    "macrossomia": "go-shg-diabetes-mellitus-gestacional-e-previo",
+    "overt diabetes": "go-shg-diabetes-mellitus-gestacional-e-previo",
+    "totg": "go-shg-diabetes-mellitus-gestacional-e-previo",
+    "aborto infectado": "go-sangramento-abortamento-e-incompetencia-istmocervical",
+    "aborto retido": "go-sangramento-abortamento-e-incompetencia-istmocervical",
+    "ameaca de aborto": "go-sangramento-abortamento-e-incompetencia-istmocervical",
+    "cerclagem": "go-sangramento-abortamento-e-incompetencia-istmocervical",
+    "ectopica rota": "go-sangramento-gestacao-ectopica",
+    "metotrexato": "go-sangramento-gestacao-ectopica",
+    "salpingectomia": "go-sangramento-gestacao-ectopica",
+    "mola hidatiforme": "go-sangramento-doenca-trofoblastica-gestacional",
+    "neoplasia trofoblastica": "go-sangramento-doenca-trofoblastica-gestacional",
+    "dpp": "go-sangramento-descolamento-prematuro-de-placenta",
+    "hipertonia uterina": "go-sangramento-descolamento-prematuro-de-placenta",
+    "utero de couvelaire": "go-sangramento-descolamento-prematuro-de-placenta",
+    "acretismo placentario": "go-sangramento-placenta-previa-acretismo-e-vasa-previa",
+    "placenta previa": "go-sangramento-placenta-previa-acretismo-e-vasa-previa",
+    "rotura de vasa previa": "go-sangramento-placenta-previa-acretismo-e-vasa-previa",
+    "rotura uterina": "go-sangramento-rotura-uterina",
+    "sinal de bandl-frommel": "go-sangramento-rotura-uterina",
+    "aloimunizacao rh": "go-sangramento-doenca-hemolitica-perinatal",
+    "coombs indireto": "go-sangramento-doenca-hemolitica-perinatal",
+    "imunoglobulina anti-d": "go-sangramento-doenca-hemolitica-perinatal",
+    "bacia obstetrica": "go-parto-mecanismo-e-assistencia-ao-trabalho-de-parto",
+    "estatica fetal": "go-parto-mecanismo-e-assistencia-ao-trabalho-de-parto",
+    "periodos clinicos do parto": "go-parto-mecanismo-e-assistencia-ao-trabalho-de-parto",
+    "distocia de ombro": "go-parto-partograma-e-distocias",
+    "fase ativa prolongada": "go-parto-partograma-e-distocias",
+    "forceps": "go-parto-partograma-e-distocias",
+    "parada secundaria da dilatacao": "go-parto-partograma-e-distocias",
+    "vacuo": "go-parto-partograma-e-distocias",
+    "corticoide antenatal": "go-parto-trabalho-de-parto-prematuro",
+    "neuroprotecao fetal": "go-parto-trabalho-de-parto-prematuro",
+    "tocolise": "go-parto-trabalho-de-parto-prematuro",
+    "tpp": "go-parto-trabalho-de-parto-prematuro",
+    "amniorrexe prematura": "go-parto-rotura-prematura-de-membranas-ovulares",
+    "corioamnionite": "go-parto-rotura-prematura-de-membranas-ovulares",
+    "rpmo": "go-parto-rotura-prematura-de-membranas-ovulares",
+    "indice de bishop": "go-parto-inducao-do-parto-e-gestacao-pos-termo",
+    "misoprostol": "go-parto-inducao-do-parto-e-gestacao-pos-termo",
+    "ocitocina": "go-parto-inducao-do-parto-e-gestacao-pos-termo",
+    "pos-datismo": "go-parto-inducao-do-parto-e-gestacao-pos-termo",
+    "4 ts": "go-parto-hemorragia-pos-parto",
+    "acido tranexamico": "go-parto-hemorragia-pos-parto",
+    "atonia uterina": "go-parto-hemorragia-pos-parto",
+    "balao de bakri": "go-parto-hemorragia-pos-parto",
+    "hpp": "go-parto-hemorragia-pos-parto",
+    "abscesso mamario": "go-parto-infeccao-puerperal-e-mastite",
+    "endometrite puerperal": "go-parto-infeccao-puerperal-e-mastite",
+    "mastite lactacional": "go-parto-infeccao-puerperal-e-mastite",
+    "estreptococo grupo b": "go-intercorrencias-infeccoes-congenitas-na-gestacao",
+    "hiv na gestacao": "go-intercorrencias-infeccoes-congenitas-na-gestacao",
+    "sifilis na gestacao": "go-intercorrencias-infeccoes-congenitas-na-gestacao",
+    "toxoplasmose na gestacao": "go-intercorrencias-infeccoes-congenitas-na-gestacao",
+    "ciur": "go-intercorrencias-gestacao-gemelar-e-restricao-de-crescimento-fetal",
+    "gemelaridade": "go-intercorrencias-gestacao-gemelar-e-restricao-de-crescimento-fetal",
+    "rcf": "go-intercorrencias-gestacao-gemelar-e-restricao-de-crescimento-fetal",
+    "stff": "go-intercorrencias-gestacao-gemelar-e-restricao-de-crescimento-fetal",
+    "bacteriuria assintomatica": "go-intercorrencias-itu-tromboembolismo-e-intercorrencias-clinicas",
+    "colestase gestacional": "go-intercorrencias-itu-tromboembolismo-e-intercorrencias-clinicas",
+    "hiperemese gravidica": "go-intercorrencias-itu-tromboembolismo-e-intercorrencias-clinicas",
+    "pielonefrite na gestacao": "go-intercorrencias-itu-tromboembolismo-e-intercorrencias-clinicas",
+    "amenorreia primaria": "go-gineco-endocrino-fisiologia-do-ciclo-menstrual-e-amenorreias",
+    "amenorreia secundaria": "go-gineco-endocrino-fisiologia-do-ciclo-menstrual-e-amenorreias",
+    "asherman": "go-gineco-endocrino-fisiologia-do-ciclo-menstrual-e-amenorreias",
+    "sheehan": "go-gineco-endocrino-fisiologia-do-ciclo-menstrual-e-amenorreias",
+    "teste da progesterona": "go-gineco-endocrino-fisiologia-do-ciclo-menstrual-e-amenorreias",
+    "criterios de rotterdam": "go-gineco-endocrino-sindrome-dos-ovarios-policisticos",
+    "hiperandrogenismo": "go-gineco-endocrino-sindrome-dos-ovarios-policisticos",
+    "sop": "go-gineco-endocrino-sindrome-dos-ovarios-policisticos",
+    "hiperplasia endometrial": "go-gineco-endocrino-sangramento-uterino-anormal",
+    "palm-coein": "go-gineco-endocrino-sangramento-uterino-anormal",
+    "sua": "go-gineco-endocrino-sangramento-uterino-anormal",
+    "fogachos": "go-gineco-endocrino-climaterio-e-terapia-hormonal",
+    "menopausa": "go-gineco-endocrino-climaterio-e-terapia-hormonal",
+    "terapia de reposicao hormonal": "go-gineco-endocrino-climaterio-e-terapia-hormonal",
+    "aco": "go-gineco-endocrino-planejamento-familiar-e-anticoncepcao",
+    "contracepcao de emergencia": "go-gineco-endocrino-planejamento-familiar-e-anticoncepcao",
+    "criterios de elegibilidade oms": "go-gineco-endocrino-planejamento-familiar-e-anticoncepcao",
+    "diu": "go-gineco-endocrino-planejamento-familiar-e-anticoncepcao",
+    "implante": "go-gineco-endocrino-planejamento-familiar-e-anticoncepcao",
+    "fator masculino": "go-gineco-endocrino-infertilidade-conjugal",
+    "fator ovulatorio": "go-gineco-endocrino-infertilidade-conjugal",
+    "fator tubario": "go-gineco-endocrino-infertilidade-conjugal",
+    "histerossalpingografia": "go-gineco-endocrino-infertilidade-conjugal",
+    "adenomiose": "go-gineco-geral-endometriose-e-adenomiose",
+    "dismenorreia": "go-gineco-geral-endometriose-e-adenomiose",
+    "endometriose": "go-gineco-geral-endometriose-e-adenomiose",
+    "leiomioma": "go-gineco-geral-miomatose-uterina-e-polipos",
+    "mioma": "go-gineco-geral-miomatose-uterina-e-polipos",
+    "polipo endometrial": "go-gineco-geral-miomatose-uterina-e-polipos",
+    "candidiase": "go-gineco-geral-vulvovaginites-e-corrimentos-genitais",
+    "cervicite": "go-gineco-geral-vulvovaginites-e-corrimentos-genitais",
+    "tricomoniase": "go-gineco-geral-vulvovaginites-e-corrimentos-genitais",
+    "vaginose bacteriana": "go-gineco-geral-vulvovaginites-e-corrimentos-genitais",
+    "cancroide": "go-gineco-geral-ulceras-genitais-e-ists-em-ginecologia",
+    "donovanose": "go-gineco-geral-ulceras-genitais-e-ists-em-ginecologia",
+    "herpes genital": "go-gineco-geral-ulceras-genitais-e-ists-em-ginecologia",
+    "hpv": "go-gineco-geral-ulceras-genitais-e-ists-em-ginecologia",
+    "abscesso tubo-ovariano": "go-gineco-geral-doenca-inflamatoria-pelvica",
+    "dip": "go-gineco-geral-doenca-inflamatoria-pelvica",
+    "fitz-hugh-curtis": "go-gineco-geral-doenca-inflamatoria-pelvica",
+    "bexiga hiperativa": "go-gineco-geral-incontinencia-urinaria-e-prolapsos-genitais",
+    "incontinencia urinaria de esforco": "go-gineco-geral-incontinencia-urinaria-e-prolapsos-genitais",
+    "pop-q": "go-gineco-geral-incontinencia-urinaria-e-prolapsos-genitais",
+    "aborto legal": "go-gineco-geral-violencia-sexual-e-aborto-previsto-em-lei",
+    "profilaxia violencia sexual": "go-gineco-geral-violencia-sexual-e-aborto-previsto-em-lei",
+    "asc-us": "go-onco-go-rastreamento-e-lesoes-precursoras-do-colo-uterino",
+    "colposcopia": "go-onco-go-rastreamento-e-lesoes-precursoras-do-colo-uterino",
+    "hsil": "go-onco-go-rastreamento-e-lesoes-precursoras-do-colo-uterino",
+    "nic": "go-onco-go-rastreamento-e-lesoes-precursoras-do-colo-uterino",
+    "papanicolau": "go-onco-go-rastreamento-e-lesoes-precursoras-do-colo-uterino",
+    "teste hpv": "go-onco-go-rastreamento-e-lesoes-precursoras-do-colo-uterino",
+    "figo colo": "go-onco-go-cancer-de-colo-uterino",
+    "wertheim-meigs": "go-onco-go-cancer-de-colo-uterino",
+    "adenocarcinoma de endometrio": "go-onco-go-cancer-de-endometrio",
+    "sangramento pos-menopausa": "go-onco-go-cancer-de-endometrio",
+    "ca-125": "go-onco-go-cancer-de-ovario-e-massas-anexiais",
+    "cisto ovariano": "go-onco-go-cancer-de-ovario-e-massas-anexiais",
+    "teratoma": "go-onco-go-cancer-de-ovario-e-massas-anexiais",
+    "torcao anexial": "go-onco-go-cancer-de-ovario-e-massas-anexiais",
+    "cisto mamario": "go-onco-go-doencas-benignas-da-mama",
+    "fibroadenoma": "go-onco-go-doencas-benignas-da-mama",
+    "fluxo papilar": "go-onco-go-doencas-benignas-da-mama",
+    "mastalgia": "go-onco-go-doencas-benignas-da-mama",
+    "bi-rads": "go-onco-go-rastreamento-e-cancer-de-mama",
+    "carcinoma ductal": "go-onco-go-rastreamento-e-cancer-de-mama",
+    "mamografia": "go-onco-go-rastreamento-e-cancer-de-mama",
+    "subtipos moleculares": "go-onco-go-rastreamento-e-cancer-de-mama",
+    "apgar": "ped-neo-reanimacao-neonatal",
+    "clampeamento de cordao": "ped-neo-reanimacao-neonatal",
+    "golden minute": "ped-neo-reanimacao-neonatal",
+    "sbp reanimacao": "ped-neo-reanimacao-neonatal",
+    "vpp": "ped-neo-reanimacao-neonatal",
+    "atresia de vias biliares": "ped-neo-ictericia-neonatal",
+    "fototerapia": "ped-neo-ictericia-neonatal",
+    "hiperbilirrubinemia": "ped-neo-ictericia-neonatal",
+    "kernicterus": "ped-neo-ictericia-neonatal",
+    "zonas de kramer": "ped-neo-ictericia-neonatal",
+    "doenca da membrana hialina": "ped-neo-desconforto-respiratorio-neonatal",
+    "hipertensao pulmonar persistente": "ped-neo-desconforto-respiratorio-neonatal",
+    "sdr": "ped-neo-desconforto-respiratorio-neonatal",
+    "sindrome de aspiracao meconial": "ped-neo-desconforto-respiratorio-neonatal",
+    "ttrn": "ped-neo-desconforto-respiratorio-neonatal",
+    "cmv congenito": "ped-neo-sepse-neonatal-e-infeccoes-congenitas-no-rn",
+    "sepse neonatal precoce": "ped-neo-sepse-neonatal-e-infeccoes-congenitas-no-rn",
+    "sepse neonatal tardia": "ped-neo-sepse-neonatal-e-infeccoes-congenitas-no-rn",
+    "sifilis congenita": "ped-neo-sepse-neonatal-e-infeccoes-congenitas-no-rn",
+    "toxoplasmose congenita": "ped-neo-sepse-neonatal-e-infeccoes-congenitas-no-rn",
+    "teste da orelhinha": "ped-neo-triagens-neonatais",
+    "teste do coracaozinho": "ped-neo-triagens-neonatais",
+    "teste do olhinho": "ped-neo-triagens-neonatais",
+    "teste do pezinho": "ped-neo-triagens-neonatais",
+    "ecn": "ped-neo-disturbios-metabolicos-e-enterocolite-necrosante",
+    "enterocolite necrosante": "ped-neo-disturbios-metabolicos-e-enterocolite-necrosante",
+    "hemorragia peri-intraventricular": "ped-neo-disturbios-metabolicos-e-enterocolite-necrosante",
+    "hipoglicemia neonatal": "ped-neo-disturbios-metabolicos-e-enterocolite-necrosante",
+    "amamentacao": "ped-puericultura-aleitamento-materno-e-formulas-infantis",
+    "contraindicacoes ao aleitamento": "ped-puericultura-aleitamento-materno-e-formulas-infantis",
+    "pega correta": "ped-puericultura-aleitamento-materno-e-formulas-infantis",
+    "hipovitaminose a": "ped-puericultura-alimentacao-complementar-e-carencias-nutricionais",
+    "introducao alimentar": "ped-puericultura-alimentacao-complementar-e-carencias-nutricionais",
+    "profilaxia de ferro": "ped-puericultura-alimentacao-complementar-e-carencias-nutricionais",
+    "raquitismo": "ped-puericultura-alimentacao-complementar-e-carencias-nutricionais",
+    "baixa estatura": "ped-puericultura-avaliacao-do-crescimento-e-baixa-estatura",
+    "curvas oms": "ped-puericultura-avaliacao-do-crescimento-e-baixa-estatura",
+    "velocidade de crescimento": "ped-puericultura-avaliacao-do-crescimento-e-baixa-estatura",
+    "z-score": "ped-puericultura-avaliacao-do-crescimento-e-baixa-estatura",
+    "dnpm": "ped-puericultura-desenvolvimento-neuropsicomotor-e-autismo",
+    "m-chat": "ped-puericultura-desenvolvimento-neuropsicomotor-e-autismo",
+    "marcos do desenvolvimento": "ped-puericultura-desenvolvimento-neuropsicomotor-e-autismo",
+    "tdah": "ped-puericultura-desenvolvimento-neuropsicomotor-e-autismo",
+    "tea": "ped-puericultura-desenvolvimento-neuropsicomotor-e-autismo",
+    "puberdade precoce central": "ped-puericultura-puberdade-normal-precoce-e-atrasada",
+    "puberdade precoce periferica": "ped-puericultura-puberdade-normal-precoce-e-atrasada",
+    "tanner": "ped-puericultura-puberdade-normal-precoce-e-atrasada",
+    "kwashiorkor": "ped-puericultura-obesidade-infantil-e-desnutricao-grave",
+    "marasmo": "ped-puericultura-obesidade-infantil-e-desnutricao-grave",
+    "obesidade pediatrica": "ped-puericultura-obesidade-infantil-e-desnutricao-grave",
+    "sindrome de realimentacao": "ped-puericultura-obesidade-infantil-e-desnutricao-grave",
+    "bcg": "ped-vacinas-calendario-nacional-de-vacinacao-pni",
+    "meningo c": "ped-vacinas-calendario-nacional-de-vacinacao-pni",
+    "pentavalente": "ped-vacinas-calendario-nacional-de-vacinacao-pni",
+    "pneumo 10": "ped-vacinas-calendario-nacional-de-vacinacao-pni",
+    "rotavirus": "ped-vacinas-calendario-nacional-de-vacinacao-pni",
+    "triplice viral": "ped-vacinas-calendario-nacional-de-vacinacao-pni",
+    "atraso vacinal": "ped-vacinas-vacinas-especiais-crie-e-eventos-adversos",
+    "crie": "ped-vacinas-vacinas-especiais-crie-e-eventos-adversos",
+    "esavi": "ped-vacinas-vacinas-especiais-crie-e-eventos-adversos",
+    "vacinas em imunossuprimidos": "ped-vacinas-vacinas-especiais-crie-e-eventos-adversos",
+    "imunoglobulina varicela": "ped-vacinas-profilaxia-pos-exposicao",
+    "profilaxia antirrabica": "ped-vacinas-profilaxia-pos-exposicao",
+    "profilaxia antitetanica": "ped-vacinas-profilaxia-pos-exposicao",
+    "eritema infeccioso": "ped-infecto-ped-doencas-exantematicas",
+    "escarlatina": "ped-infecto-ped-doencas-exantematicas",
+    "exantema subito": "ped-infecto-ped-doencas-exantematicas",
+    "mao-pe-boca": "ped-infecto-ped-doencas-exantematicas",
+    "rubeola": "ped-infecto-ped-doencas-exantematicas",
+    "sarampo": "ped-infecto-ped-doencas-exantematicas",
+    "varicela": "ped-infecto-ped-doencas-exantematicas",
+    "febre sem sinais localizatorios": "ped-infecto-ped-meningites-e-sepse-em-pediatria",
+    "fssl": "ped-infecto-ped-meningites-e-sepse-em-pediatria",
+    "meningite pediatrica": "ped-infecto-ped-meningites-e-sepse-em-pediatria",
+    "meningococcemia": "ped-infecto-ped-meningites-e-sepse-em-pediatria",
+    "ancilostomiase": "ped-infecto-ped-parasitoses-intestinais",
+    "ascaridiase": "ped-infecto-ped-parasitoses-intestinais",
+    "estrongiloidiase": "ped-infecto-ped-parasitoses-intestinais",
+    "giardiase": "ped-infecto-ped-parasitoses-intestinais",
+    "oxiuriase": "ped-infecto-ped-parasitoses-intestinais",
+    "tenias": "ped-infecto-ped-parasitoses-intestinais",
+    "dengue na crianca": "ped-infecto-ped-tuberculose-e-arboviroses-na-infancia",
+    "escore de pontuacao tb": "ped-infecto-ped-tuberculose-e-arboviroses-na-infancia",
+    "hiv pediatrico": "ped-infecto-ped-tuberculose-e-arboviroses-na-infancia",
+    "crupe": "ped-pneumo-ped-infeccoes-de-vias-aereas-superiores",
+    "epiglotite": "ped-pneumo-ped-infeccoes-de-vias-aereas-superiores",
+    "faringoamigdalite": "ped-pneumo-ped-infeccoes-de-vias-aereas-superiores",
+    "laringite": "ped-pneumo-ped-infeccoes-de-vias-aereas-superiores",
+    "otite media aguda": "ped-pneumo-ped-infeccoes-de-vias-aereas-superiores",
+    "sinusite": "ped-pneumo-ped-infeccoes-de-vias-aereas-superiores",
+    "bva": "ped-pneumo-ped-bronquiolite-viral-aguda-e-coqueluche",
+    "coqueluche": "ped-pneumo-ped-bronquiolite-viral-aguda-e-coqueluche",
+    "sindrome coqueluchoide": "ped-pneumo-ped-bronquiolite-viral-aguda-e-coqueluche",
+    "vsr": "ped-pneumo-ped-bronquiolite-viral-aguda-e-coqueluche",
+    "derrame parapneumonico": "ped-pneumo-ped-pneumonia-adquirida-na-comunidade-em-pediatria",
+    "pac pediatrica": "ped-pneumo-ped-pneumonia-adquirida-na-comunidade-em-pediatria",
+    "pneumonia afebril do lactente": "ped-pneumo-ped-pneumonia-adquirida-na-comunidade-em-pediatria",
+    "asma pediatrica": "ped-pneumo-ped-asma-na-infancia-e-fibrose-cistica",
+    "fibrose cistica": "ped-pneumo-ped-asma-na-infancia-e-fibrose-cistica",
+    "lactente sibilante": "ped-pneumo-ped-asma-na-infancia-e-fibrose-cistica",
+    "disenteria": "ped-gastro-nefro-ped-diarreia-aguda-e-desidratacao",
+    "planos a b c": "ped-gastro-nefro-ped-diarreia-aguda-e-desidratacao",
+    "tro": "ped-gastro-nefro-ped-diarreia-aguda-e-desidratacao",
+    "zinco": "ped-gastro-nefro-ped-diarreia-aguda-e-desidratacao",
+    "alergia a proteina do leite de vaca": "ped-gastro-nefro-ped-diarreia-cronica-aplv-e-doenca-celiaca",
+    "aplv": "ped-gastro-nefro-ped-diarreia-cronica-aplv-e-doenca-celiaca",
+    "intolerancia a lactose": "ped-gastro-nefro-ped-diarreia-cronica-aplv-e-doenca-celiaca",
+    "constipacao funcional": "ped-gastro-nefro-ped-drge-e-constipacao-na-infancia",
+    "encoprese": "ped-gastro-nefro-ped-drge-e-constipacao-na-infancia",
+    "refluxo fisiologico": "ped-gastro-nefro-ped-drge-e-constipacao-na-infancia",
+    "itu pediatrica": "ped-gastro-nefro-ped-itu-e-malformacoes-urinarias-em-pediatria",
+    "refluxo vesicoureteral": "ped-gastro-nefro-ped-itu-e-malformacoes-urinarias-em-pediatria",
+    "rvu": "ped-gastro-nefro-ped-itu-e-malformacoes-urinarias-em-pediatria",
+    "gnpe pediatrica": "ped-gastro-nefro-ped-sindrome-nefritica-e-nefrotica-pediatrica",
+    "shu pediatrica": "ped-gastro-nefro-ped-sindrome-nefritica-e-nefrotica-pediatrica",
+    "sindrome nefrotica por lesoes minimas": "ped-gastro-nefro-ped-sindrome-nefritica-e-nefrotica-pediatrica",
+    "cia": "ped-cardio-hemato-ped-cardiopatias-congenitas",
+    "civ": "ped-cardio-hemato-ped-cardiopatias-congenitas",
+    "coarctacao de aorta": "ped-cardio-hemato-ped-cardiopatias-congenitas",
+    "pca": "ped-cardio-hemato-ped-cardiopatias-congenitas",
+    "tetralogia de fallot": "ped-cardio-hemato-ped-cardiopatias-congenitas",
+    "tga": "ped-cardio-hemato-ped-cardiopatias-congenitas",
+    "aij": "ped-cardio-hemato-ped-doenca-de-kawasaki-e-vasculite-por-iga",
+    "henoch-schonlein": "ped-cardio-hemato-ped-doenca-de-kawasaki-e-vasculite-por-iga",
+    "kawasaki": "ped-cardio-hemato-ped-doenca-de-kawasaki-e-vasculite-por-iga",
+    "purpura de henoch-schonlein": "ped-cardio-hemato-ped-doenca-de-kawasaki-e-vasculite-por-iga",
+    "anemia ferropriva pediatrica": "ped-cardio-hemato-ped-anemias-e-doenca-falciforme-na-infancia",
+    "crise aplasica": "ped-cardio-hemato-ped-anemias-e-doenca-falciforme-na-infancia",
+    "pti pediatrica": "ped-cardio-hemato-ped-anemias-e-doenca-falciforme-na-infancia",
+    "sequestro esplenico": "ped-cardio-hemato-ped-anemias-e-doenca-falciforme-na-infancia",
+    "lla pediatrica": "ped-cardio-hemato-ped-neoplasias-pediatricas",
+    "neuroblastoma": "ped-cardio-hemato-ped-neoplasias-pediatricas",
+    "retinoblastoma": "ped-cardio-hemato-ped-neoplasias-pediatricas",
+    "tumor de wilms": "ped-cardio-hemato-ped-neoplasias-pediatricas",
+    "choque pediatrico": "ped-emerg-ped-suporte-avancado-de-vida-em-pediatria-pals",
+    "obstrucao de via aerea por corpo estranho": "ped-emerg-ped-suporte-avancado-de-vida-em-pediatria-pals",
+    "pals": "ped-emerg-ped-suporte-avancado-de-vida-em-pediatria-pals",
+    "pcr pediatrica": "ped-emerg-ped-suporte-avancado-de-vida-em-pediatria-pals",
+    "cetoacidose pediatrica": "ped-emerg-ped-convulsao-febril-e-emergencias-neurologicas",
+    "convulsao febril": "ped-emerg-ped-convulsao-febril-e-emergencias-neurologicas",
+    "estado de mal epileptico pediatrico": "ped-emerg-ped-convulsao-febril-e-emergencias-neurologicas",
+    "afogamento": "ped-emerg-ped-acidentes-intoxicacoes-e-maus-tratos-na-infancia",
+    "intoxicacao em criancas": "ped-emerg-ped-acidentes-intoxicacoes-e-maus-tratos-na-infancia",
+    "sindrome do bebe sacudido": "ped-emerg-ped-acidentes-intoxicacoes-e-maus-tratos-na-infancia",
+    "violencia infantil": "ped-emerg-ped-acidentes-intoxicacoes-e-maus-tratos-na-infancia",
+    "equidade": "mp-sus-historia-principios-e-leis-organicas-do-sus",
+    "integralidade": "mp-sus-historia-principios-e-leis-organicas-do-sus",
+    "lei 8080": "mp-sus-historia-principios-e-leis-organicas-do-sus",
+    "lei 8142": "mp-sus-historia-principios-e-leis-organicas-do-sus",
+    "reforma sanitaria": "mp-sus-historia-principios-e-leis-organicas-do-sus",
+    "universalidade": "mp-sus-historia-principios-e-leis-organicas-do-sus",
+    "blocos de financiamento": "mp-sus-financiamento-e-pactos-do-sus",
+    "ec 29": "mp-sus-financiamento-e-pactos-do-sus",
+    "lc 141": "mp-sus-financiamento-e-pactos-do-sus",
+    "pnab": "mp-sus-financiamento-e-pactos-do-sus",
+    "previne brasil": "mp-sus-financiamento-e-pactos-do-sus",
+    "aps": "mp-sus-atencao-primaria-a-saude-e-esf",
+    "atributos da aps": "mp-sus-atencao-primaria-a-saude-e-esf",
+    "equipe multiprofissional": "mp-sus-atencao-primaria-a-saude-e-esf",
+    "esf": "mp-sus-atencao-primaria-a-saude-e-esf",
+    "starfield": "mp-sus-atencao-primaria-a-saude-e-esf",
+    "raps": "mp-sus-redes-de-atencao-a-saude-e-regulacao",
+    "ras": "mp-sus-redes-de-atencao-a-saude-e-regulacao",
+    "rede cegonha": "mp-sus-redes-de-atencao-a-saude-e-regulacao",
+    "referencia e contrarreferencia": "mp-sus-redes-de-atencao-a-saude-e-regulacao",
+    "sisreg": "mp-sus-redes-de-atencao-a-saude-e-regulacao",
+    "conferencias de saude": "mp-sus-controle-social-e-participacao-popular",
+    "conselhos de saude": "mp-sus-controle-social-e-participacao-popular",
+    "paridade": "mp-sus-controle-social-e-participacao-popular",
+    "curva de nelson moraes": "mp-epidemio-indicadores-de-saude-e-transicao-epidemiologica",
+    "daly": "mp-epidemio-indicadores-de-saude-e-transicao-epidemiologica",
+    "mortalidade infantil": "mp-epidemio-indicadores-de-saude-e-transicao-epidemiologica",
+    "mortalidade materna": "mp-epidemio-indicadores-de-saude-e-transicao-epidemiologica",
+    "swaroop-uemura": "mp-epidemio-indicadores-de-saude-e-transicao-epidemiologica",
+    "densidade de incidencia": "mp-epidemio-medidas-de-frequencia",
+    "incidencia": "mp-epidemio-medidas-de-frequencia",
+    "letalidade": "mp-epidemio-medidas-de-frequencia",
+    "prevalencia": "mp-epidemio-medidas-de-frequencia",
+    "taxa de ataque": "mp-epidemio-medidas-de-frequencia",
+    "caso-controle": "mp-epidemio-estudos-epidemiologicos",
+    "coorte": "mp-epidemio-estudos-epidemiologicos",
+    "ecologico": "mp-epidemio-estudos-epidemiologicos",
+    "ensaio clinico randomizado": "mp-epidemio-estudos-epidemiologicos",
+    "revisao sistematica": "mp-epidemio-estudos-epidemiologicos",
+    "transversal": "mp-epidemio-estudos-epidemiologicos",
+    "nnt": "mp-epidemio-medidas-de-associacao-e-impacto",
+    "odds ratio": "mp-epidemio-medidas-de-associacao-e-impacto",
+    "rar": "mp-epidemio-medidas-de-associacao-e-impacto",
+    "razoes de prevalencia": "mp-epidemio-medidas-de-associacao-e-impacto",
+    "risco relativo": "mp-epidemio-medidas-de-associacao-e-impacto",
+    "rrr": "mp-epidemio-medidas-de-associacao-e-impacto",
+    "curva roc": "mp-epidemio-testes-diagnosticos-e-tabela-2x2",
+    "especificidade": "mp-epidemio-testes-diagnosticos-e-tabela-2x2",
+    "razao de verossimilhanca": "mp-epidemio-testes-diagnosticos-e-tabela-2x2",
+    "sensibilidade": "mp-epidemio-testes-diagnosticos-e-tabela-2x2",
+    "tabela-2x2": "mp-epidemio-testes-diagnosticos-e-tabela-2x2",
+    "vpn": "mp-epidemio-testes-diagnosticos-e-tabela-2x2",
+    "erro tipo 1 e 2": "mp-epidemio-vieses-confundimento-e-bioestatistica",
+    "fator de confusao": "mp-epidemio-vieses-confundimento-e-bioestatistica",
+    "intervalo de confianca": "mp-epidemio-vieses-confundimento-e-bioestatistica",
+    "valor-p": "mp-epidemio-vieses-confundimento-e-bioestatistica",
+    "vies de afericao": "mp-epidemio-vieses-confundimento-e-bioestatistica",
+    "vies de selecao": "mp-epidemio-vieses-confundimento-e-bioestatistica",
+    "lista de notificacao": "mp-vigilancia-vigilancia-epidemiologica-e-notificacao-compulsoria",
+    "notificacao imediata": "mp-vigilancia-vigilancia-epidemiologica-e-notificacao-compulsoria",
+    "notificacao semanal": "mp-vigilancia-vigilancia-epidemiologica-e-notificacao-compulsoria",
+    "sinan": "mp-vigilancia-vigilancia-epidemiologica-e-notificacao-compulsoria",
+    "curva epidemica": "mp-vigilancia-investigacao-de-surtos-e-epidemias",
+    "diagrama de controle": "mp-vigilancia-investigacao-de-surtos-e-epidemias",
+    "endemia": "mp-vigilancia-investigacao-de-surtos-e-epidemias",
+    "numero basico de reproducao": "mp-vigilancia-investigacao-de-surtos-e-epidemias",
+    "pandemia": "mp-vigilancia-investigacao-de-surtos-e-epidemias",
+    "e-sus": "mp-vigilancia-sistemas-de-informacao-em-saude",
+    "sih": "mp-vigilancia-sistemas-de-informacao-em-saude",
+    "sim": "mp-vigilancia-sistemas-de-informacao-em-saude",
+    "sinasc": "mp-vigilancia-sistemas-de-informacao-em-saude",
+    "sisab": "mp-vigilancia-sistemas-de-informacao-em-saude",
+    "causa basica de obito": "mp-vigilancia-declaracao-de-obito",
+    "iml": "mp-vigilancia-declaracao-de-obito",
+    "preenchimento da do": "mp-vigilancia-declaracao-de-obito",
+    "svo": "mp-vigilancia-declaracao-de-obito",
+    "anvisa": "mp-vigilancia-vigilancia-sanitaria-ambiental-e-saude-planetaria",
+    "saude unica": "mp-vigilancia-vigilancia-sanitaria-ambiental-e-saude-planetaria",
+    "vigilancia ambiental": "mp-vigilancia-vigilancia-sanitaria-ambiental-e-saude-planetaria",
+    "apgar familiar": "mp-mfc-ferramentas-de-abordagem-familiar-e-comunitaria",
+    "ciclo de vida familiar": "mp-mfc-ferramentas-de-abordagem-familiar-e-comunitaria",
+    "ecomapa": "mp-mfc-ferramentas-de-abordagem-familiar-e-comunitaria",
+    "genograma": "mp-mfc-ferramentas-de-abordagem-familiar-e-comunitaria",
+    "practice": "mp-mfc-ferramentas-de-abordagem-familiar-e-comunitaria",
+    "entrevista motivacional": "mp-mfc-metodo-clinico-centrado-na-pessoa-e-comunicacao",
+    "mccp": "mp-mfc-metodo-clinico-centrado-na-pessoa-e-comunicacao",
+    "protocolo spikes": "mp-mfc-metodo-clinico-centrado-na-pessoa-e-comunicacao",
+    "registro soap": "mp-mfc-metodo-clinico-centrado-na-pessoa-e-comunicacao",
+    "criterios de wilson e jungner": "mp-mfc-prevencao-quaternaria-e-rastreamento-populacional",
+    "leavell e clark": "mp-mfc-prevencao-quaternaria-e-rastreamento-populacional",
+    "niveis de prevencao": "mp-mfc-prevencao-quaternaria-e-rastreamento-populacional",
+    "sobrediagnostico": "mp-mfc-prevencao-quaternaria-e-rastreamento-populacional",
+    "asbestose": "mp-trabalho-doencas-relacionadas-ao-trabalho",
+    "burnout": "mp-trabalho-doencas-relacionadas-ao-trabalho",
+    "dort": "mp-trabalho-doencas-relacionadas-ao-trabalho",
+    "ler": "mp-trabalho-doencas-relacionadas-ao-trabalho",
+    "pair": "mp-trabalho-doencas-relacionadas-ao-trabalho",
+    "saturnismo": "mp-trabalho-doencas-relacionadas-ao-trabalho",
+    "silicose": "mp-trabalho-doencas-relacionadas-ao-trabalho",
+    "acidente biologico": "mp-trabalho-acidentes-de-trabalho-cat-e-schilling",
+    "cat": "mp-trabalho-acidentes-de-trabalho-cat-e-schilling",
+    "cerest": "mp-trabalho-acidentes-de-trabalho-cat-e-schilling",
+    "classificacao de schilling": "mp-trabalho-acidentes-de-trabalho-cat-e-schilling",
+    "pericia": "mp-trabalho-acidentes-de-trabalho-cat-e-schilling",
+    "cem": "mp-etica-codigo-de-etica-medica-e-sigilo-profissional",
+    "publicidade medica": "mp-etica-codigo-de-etica-medica-e-sigilo-profissional",
+    "quebra de sigilo": "mp-etica-codigo-de-etica-medica-e-sigilo-profissional",
+    "sigilo medico": "mp-etica-codigo-de-etica-medica-e-sigilo-profissional",
+    "autonomia": "mp-etica-principios-da-bioetica-e-terminalidade",
+    "beneficencia": "mp-etica-principios-da-bioetica-e-terminalidade",
+    "distanasia": "mp-etica-principios-da-bioetica-e-terminalidade",
+    "justica": "mp-etica-principios-da-bioetica-e-terminalidade",
+    "nao maleficencia": "mp-etica-principios-da-bioetica-e-terminalidade",
+    "ortotanasia": "mp-etica-principios-da-bioetica-e-terminalidade",
+    "atestado medico": "mp-etica-documentos-medicos-e-responsabilidade-profissional",
+    "impericia": "mp-etica-documentos-medicos-e-responsabilidade-profissional",
+    "imprudencia": "mp-etica-documentos-medicos-e-responsabilidade-profissional",
+    "negligencia": "mp-etica-documentos-medicos-e-responsabilidade-profissional",
+    "prontuario": "mp-etica-documentos-medicos-e-responsabilidade-profissional",
+    "tcle": "mp-etica-documentos-medicos-e-responsabilidade-profissional",
+    "lesao corporal": "mp-etica-medicina-legal-basica",
+    "sexologia forense": "mp-etica-medicina-legal-basica",
+    "tanatologia": "mp-etica-medicina-legal-basica",
+    "traumatologia forense": "mp-etica-medicina-legal-basica"
+  }
+}

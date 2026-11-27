@@ -35,6 +35,7 @@ import type {
   MedicalQuestion,
   PerformanceStatus,
   SimuladoRecord,
+  StudentFilterStatus,
   TemporalPoint,
   UserAnswerRecord,
 } from '../../types/medical';
@@ -44,6 +45,7 @@ import { KnowledgeGapHeatmap } from './KnowledgeGapHeatmap';
 import { DailyKnowledgeGapCard } from './DailyKnowledgeGapCard';
 import { WeakTopicsEvolutionChart } from './WeakTopicsEvolutionChart';
 import { GapRadarCard } from './GapRadarCard';
+import { TaxonomyAnalyticsCard } from './TaxonomyAnalyticsCard';
 import { CutoffProjectionCard } from './CutoffProjectionCard';
 import { ApprovalProbabilityCard } from './ApprovalProbabilityCard';
 import { StratifiedApprovalCard } from './StratifiedApprovalCard';
@@ -102,7 +104,11 @@ interface PerformanceDashboardProps {
   onFilterQuestionsByTopic: (payload: {
     topicLabel: string;
     matchedTema?: string;
+    matchedSubtema?: string;
     grandeAreaId?: GrandeAreaId;
+    instituicao?: string;
+    ano?: string;
+    status?: StudentFilterStatus;
   }) => void;
   onFilterFlashcardsByTopic: (payload: {
     topicLabel: string;
@@ -183,7 +189,7 @@ export function PerformanceDashboard({
   const [calibrationOpen, setCalibrationOpen] = useState(false);
   const [calibrationTab, setCalibrationTab] = useState<CalibrationModalTab>('estimador');
   const [activeSection, setActiveSection] = useState<
-    'visao_geral' | 'pareto' | 'mapa_calor' | 'radar'
+    'visao_geral' | 'taxonomia' | 'pareto' | 'mapa_calor' | 'radar'
   >('visao_geral');
 
   const defaultCutoff =
@@ -351,6 +357,11 @@ export function PerformanceDashboard({
           onStartDiagnostic={onStartDiagnostic}
           context="desempenho"
         />
+        <TaxonomyAnalyticsCard
+          questions={questions}
+          answers={answers}
+          onPracticeTaxonomy={onFilterQuestionsByTopic}
+        />
       </div>
     );
   }
@@ -373,6 +384,7 @@ export function PerformanceDashboard({
             {(
               [
                 { id: 'visao_geral', label: 'Visão Geral' },
+                { id: 'taxonomia', label: 'Taxonomia v1' },
                 { id: 'pareto', label: 'Pareto 80/20' },
                 { id: 'mapa_calor', label: 'Mapa de Calor' },
                 { id: 'radar', label: 'Radar de Lacunas' },
@@ -853,6 +865,15 @@ export function PerformanceDashboard({
         </section>
       </div>
         </>
+      )}
+
+      {/* Taxonomy v1 Incidence & Drill-Down Analytics */}
+      {activeSection === 'taxonomia' && (
+        <TaxonomyAnalyticsCard
+          questions={questions}
+          answers={answers}
+          onPracticeTaxonomy={onFilterQuestionsByTopic}
+        />
       )}
 
       {/* Combined Pareto (80/20) Chart + Top 3 ROI Topics */}

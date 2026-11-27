@@ -12,7 +12,11 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
     "tema": "Cardiologia",
-    "subtema": "Arritmias Supraventriculares",
+    "subtema": "Fibrilação Atrial e Taquiarritmias",
+    "temaSlug": "cm-cardio",
+    "subtemaSlug": "cm-cardio-fibrilacao-atrial-e-taquiarritmias",
+    "tags": ["flutter-atrial","cardioversao-eletrica","taquiarritmias"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -59,7 +63,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "AHA ACLS Guidelines"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2282
   },
   {
@@ -69,7 +73,11 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
     "tema": "Cardiologia",
-    "subtema": "Semiologia Cardiovascular e Valvopatias",
+    "subtema": "Valvopatias",
+    "temaSlug": "cm-cardio",
+    "subtemaSlug": "cm-cardio-valvopatias",
+    "tags": ["estenose-aortica","sopro-sistolico","valvopatias"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -115,7 +123,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Diretriz Brasileira de Valvopatias - SBC"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2282
   },
   {
@@ -124,8 +132,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 3,
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
-    "tema": "Endocrinologia",
-    "subtema": "Hipotireoidismo e Doença de Graves",
+    "tema": "Endocrinologia e Metabologia",
+    "subtema": "Hipotireoidismo",
+    "temaSlug": "cm-endocrino",
+    "subtemaSlug": "cm-endocrino-hipotireoidismo",
+    "tags": ["hipotireoidismo-subclinico","tsh","seguimento"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -171,7 +183,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Diretrizes Brasileiras para o Tratamento do Hipotireoidismo"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2282
   },
   {
@@ -180,8 +192,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 4,
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
-    "tema": "Gastroenterologia",
-    "subtema": "Doença do Refluxo Gastroesofágico",
+    "tema": "Gastroenterologia e Hepatologia",
+    "subtema": "DRGE e Doenças do Esôfago",
+    "temaSlug": "cm-gastro",
+    "subtemaSlug": "cm-gastro-drge-e-doencas-do-esofago",
+    "tags": ["esofago-de-barrett","drge","vigilancia-endoscopica"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -227,7 +243,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "ACG Clinical Guideline: Diagnosis and Management of Barrett’s Esophagus"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2282
   },
   {
@@ -236,8 +252,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 5,
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
-    "tema": "Endocrinologia",
-    "subtema": "Hipertensão Arterial Secundária",
+    "tema": "Endocrinologia e Metabologia",
+    "subtema": "Doenças da Adrenal",
+    "temaSlug": "cm-endocrino",
+    "subtemaSlug": "cm-endocrino-doencas-da-adrenal",
+    "tags": ["hiperaldosteronismo-primario","hipertensao-secundaria","hipocalemia"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -283,7 +303,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Diretrizes Brasileiras de Hipertensão Arterial - 2020"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2283
   },
   {
@@ -292,8 +312,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 6,
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
-    "tema": "Gastroenterologia",
-    "subtema": "Colangite Esclerosante Primária e Retocolite Ulcerativa",
+    "tema": "Gastroenterologia e Hepatologia",
+    "subtema": "Doença Inflamatória Intestinal",
+    "temaSlug": "cm-gastro",
+    "subtemaSlug": "cm-gastro-doenca-inflamatoria-intestinal",
+    "tags": ["colangite-esclerosante-primaria","retocolite-ulcerativa","dii"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -339,7 +363,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Harrison's Principles of Internal Medicine"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2283
   },
   {
@@ -349,7 +373,11 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
     "tema": "Hematologia",
-    "subtema": "Leucemia Linfocítica Crônica",
+    "subtema": "Leucemias Agudas e Crônicas",
+    "temaSlug": "cm-hemato",
+    "subtemaSlug": "cm-hemato-leucemias-agudas-e-cronicas",
+    "tags": ["llc","leucemia-linfocitica-cronica","imunofenotipagem"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -395,7 +423,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Protocolos de Hematologia - Leucemia Linfocítica Crônica"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2283
   },
   {
@@ -404,8 +432,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 8,
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
-    "tema": "Medicina Intensiva",
+    "tema": "Infectologia",
     "subtema": "Sepse e Choque Séptico",
+    "temaSlug": "cm-infecto",
+    "subtemaSlug": "cm-infecto-sepse-e-choque-septico",
+    "tags": ["sepse","choque-septico","expansao-volemica","surviving-sepsis"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -451,7 +483,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2283
   },
   {
@@ -461,7 +493,11 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
     "tema": "Dermatologia",
-    "subtema": "Carcinoma Basocelular",
+    "subtema": "Câncer de Pele",
+    "temaSlug": "cm-dermato",
+    "subtemaSlug": "cm-dermato-cancer-de-pele",
+    "tags": ["carcinoma-basocelular","cancer-de-pele","exerese"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -507,7 +543,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Diretrizes da Sociedade Brasileira de Dermatologia"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2283
   },
   {
@@ -517,7 +553,11 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
     "tema": "Reumatologia",
-    "subtema": "Esclerose Sistêmica",
+    "subtema": "Esclerose Sistêmica e Miopatias Inflamatórias",
+    "temaSlug": "cm-reumato",
+    "subtemaSlug": "cm-reumato-esclerose-sistemica-e-miopatias-inflamatorias",
+    "tags": ["esclerose-sistemica","fenomeno-de-raynaud","dismotilidade-esofagica"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -564,7 +604,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Consenso Brasileiro de Esclerose Sistêmica"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2284
   },
   {
@@ -575,6 +615,10 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "grandeArea": "Clínica Médica",
     "tema": "Hematologia",
     "subtema": "Distúrbios da Hemostasia Primária",
+    "temaSlug": "cm-hemato",
+    "subtemaSlug": "cm-hemato-disturbios-da-hemostasia-primaria",
+    "tags": ["disfuncao-plaquetaria","uremia","hemostasia-primaria"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -621,7 +665,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "KDIGO Clinical Practice Guideline for Acute Kidney Injury"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2284
   },
   {
@@ -631,7 +675,11 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
     "tema": "Cardiologia",
-    "subtema": "Hipertensão Arterial Resistente",
+    "subtema": "Hipertensão Arterial Sistêmica",
+    "temaSlug": "cm-cardio",
+    "subtemaSlug": "cm-cardio-hipertensao-arterial-sistemica",
+    "tags": ["hipertensao-resistente","espironolactona","has"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -678,7 +726,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Estudo PATHWAY-2"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2284
   },
   {
@@ -688,7 +736,11 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "grandeAreaId": "cirurgia_geral",
     "grandeArea": "Cirurgia Geral",
     "tema": "Trauma e ATLS",
-    "subtema": "Pneumotórax Hipertensivo",
+    "subtema": "Trauma Torácico",
+    "temaSlug": "cg-trauma",
+    "subtemaSlug": "cg-trauma-trauma-toracico",
+    "tags": ["pneumotorax-hipertensivo","ultrassonografia-beira-leito","codigo-de-barras"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -735,7 +787,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "POCUS Guidelines"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2284
   },
   {
@@ -745,7 +797,11 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
     "tema": "Pneumologia",
-    "subtema": "DPOC — Escalonamento Terapêutico",
+    "subtema": "Doença Pulmonar Obstrutiva Crônica",
+    "temaSlug": "cm-pneumo",
+    "subtemaSlug": "cm-pneumo-doenca-pulmonar-obstrutiva-cronica",
+    "tags": ["dpoc","gold","terapia-tripla","exacerbacoes"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -791,7 +847,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Global Initiative for Chronic Obstructive Lung Disease (GOLD) 2022"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2285
   },
   {
@@ -800,8 +856,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 15,
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
-    "tema": "Medicina Intensiva",
+    "tema": "Infectologia",
     "subtema": "Sepse e Choque Séptico",
+    "temaSlug": "cm-infecto",
+    "subtemaSlug": "cm-infecto-sepse-e-choque-septico",
+    "tags": ["sepse","choque-septico","culturas","antibioticoterapia"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -847,7 +907,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Surviving Sepsis Campaign 2021"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2285
   },
   {
@@ -857,7 +917,11 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
     "tema": "Reumatologia",
-    "subtema": "Polimialgia Reumática",
+    "subtema": "Vasculites Sistêmicas",
+    "temaSlug": "cm-reumato",
+    "subtemaSlug": "cm-reumato-vasculites-sistemicas",
+    "tags": ["arterite-de-celulas-gigantes","polimialgia-reumatica","pet-ct","vasculite"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -904,7 +968,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "EULAR/ACR recommendations for PMR"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2285
   },
   {
@@ -914,7 +978,11 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
     "tema": "Nefrologia",
-    "subtema": "Lesão Renal Aguda",
+    "subtema": "Injúria Renal Aguda",
+    "temaSlug": "cm-nefro",
+    "subtemaSlug": "cm-nefro-injuria-renal-aguda",
+    "tags": ["injuria-renal-aguda","hemodialise","covid-19","oliguria"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -960,17 +1028,21 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "KDIGO Clinical Practice Guideline for Acute Kidney Injury"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2286
   },
   {
     "id": "q-unifesp-2023-018",
     "code": "Q-UNIFESP23-0018",
     "numeroOriginal": 18,
-    "grandeAreaId": "pediatria",
-    "grandeArea": "Pediatria",
-    "tema": "Infectologia Pediátrica",
-    "subtema": "Esporotricose",
+    "grandeAreaId": "clinica_medica",
+    "grandeArea": "Clínica Médica",
+    "tema": "Infectologia",
+    "subtema": "Micoses Sistêmicas Endêmicas",
+    "temaSlug": "cm-infecto",
+    "subtemaSlug": "cm-infecto-micoses-sistemicas-endemicas",
+    "tags": ["esporotricose","arranhadura-de-gato","linfangite-nodular"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -1017,7 +1089,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "SBP - Documento Científico de Esporotricose"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2286
   },
   {
@@ -1026,8 +1098,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 19,
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
-    "tema": "Medicina Intensiva",
+    "tema": "Infectologia",
     "subtema": "Sepse e Choque Séptico",
+    "temaSlug": "cm-infecto",
+    "subtemaSlug": "cm-infecto-sepse-e-choque-septico",
+    "tags": ["sepse","escore-sofa","disfuncao-organica","criterios-diagnosticos"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -1073,7 +1149,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "The Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3)"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2286
   },
   {
@@ -1082,8 +1158,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 20,
     "grandeAreaId": "ginecologia_obstetricia",
     "grandeArea": "Ginecologia e Obstetrícia",
-    "tema": "Obstetrícia / Urgências",
-    "subtema": "Tromboembolismo Pulmonar na Gestação",
+    "tema": "Intercorrências Clínicas e Infecciosas na Gestação",
+    "subtema": "ITU, Tromboembolismo e Intercorrências Clínicas",
+    "temaSlug": "go-intercorrencias",
+    "subtemaSlug": "go-intercorrencias-itu-tromboembolismo-e-intercorrencias-clinicas",
+    "tags": ["tep-na-gestacao","enoxaparina","angiotomografia"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -1130,7 +1210,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "ESC Guidelines for the management of acute pulmonary embolism"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2286
   },
   {
@@ -1139,8 +1219,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 21,
     "grandeAreaId": "medicina_preventiva",
     "grandeArea": "Medicina Preventiva",
-    "tema": "Epidemiologia",
-    "subtema": "Delineamento de Estudos Epidemiológicos, Viés e Erro Aleatório",
+    "tema": "Epidemiologia e Bioestatística",
+    "subtema": "Vieses, Confundimento e Bioestatística",
+    "temaSlug": "mp-epidemio",
+    "subtemaSlug": "mp-epidemio-vieses-confundimento-e-bioestatistica",
+    "tags": ["vies-de-selecao","vies-de-informacao","estudo-transversal"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -1186,7 +1270,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Gordis, L. Epidemiologia. 5ª Edição."
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2287
   },
   {
@@ -1195,8 +1279,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 22,
     "grandeAreaId": "medicina_preventiva",
     "grandeArea": "Medicina Preventiva",
-    "tema": "Saúde Coletiva e Ética Médica",
-    "subtema": "Saúde Mental do Médico",
+    "tema": "Saúde do Trabalhador",
+    "subtema": "Doenças Relacionadas ao Trabalho",
+    "temaSlug": "mp-trabalho",
+    "subtemaSlug": "mp-trabalho-doencas-relacionadas-ao-trabalho",
+    "tags": ["saude-mental-do-medico","burnout","ideacao-suicida"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -1243,7 +1331,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Estudos sobre Burnout na Medicina (ex: Shanafelt et al.)"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2287
   },
   {
@@ -1252,8 +1340,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 23,
     "grandeAreaId": "medicina_preventiva",
     "grandeArea": "Medicina Preventiva",
-    "tema": "Políticas de Saúde / SUS",
-    "subtema": "Lei Orgânica da Saúde (Lei 8.080/1990) — Dever do Estado e Corresponsabilidade",
+    "tema": "SUS, Políticas Públicas e Gestão em Saúde",
+    "subtema": "Financiamento e Pactos do SUS",
+    "temaSlug": "mp-sus",
+    "subtemaSlug": "mp-sus-financiamento-e-pactos-do-sus",
+    "tags": ["financiamento-do-sus","emenda-constitucional-95","orcamento-saude"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -1300,7 +1392,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Lei Complementar 141/2012"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2287,
     "hasPdfFigure": true,
     "clinicalImage": {
@@ -1316,8 +1408,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 24,
     "grandeAreaId": "medicina_preventiva",
     "grandeArea": "Medicina Preventiva",
-    "tema": "Políticas de Saúde / SUS",
-    "subtema": "Lei Orgânica da Saúde (Lei 8.080/1990) e Saneamento Básico",
+    "tema": "SUS, Políticas Públicas e Gestão em Saúde",
+    "subtema": "Redes de Atenção à Saúde e Regulação",
+    "temaSlug": "mp-sus",
+    "subtemaSlug": "mp-sus-redes-de-atencao-a-saude-e-regulacao",
+    "tags": ["regiao-de-saude","ras","urgencia-e-emergencia"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -1363,7 +1459,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Decreto Federal nº 7.508/2011"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2288
   },
   {
@@ -1372,8 +1468,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 25,
     "grandeAreaId": "medicina_preventiva",
     "grandeArea": "Medicina Preventiva",
-    "tema": "Políticas de Saúde / SUS",
-    "subtema": "Atenção Básica para Populações Específicas (eCR e eSFR)",
+    "tema": "SUS, Políticas Públicas e Gestão em Saúde",
+    "subtema": "Redes de Atenção à Saúde e Regulação",
+    "temaSlug": "mp-sus",
+    "subtemaSlug": "mp-sus-redes-de-atencao-a-saude-e-regulacao",
+    "tags": ["saude-indigena","pnaspi","sasisus"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -1419,7 +1519,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Política Nacional de Atenção à Saúde dos Povos Indígenas (PNASPI), 2002"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2288
   },
   {
@@ -1428,8 +1528,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 26,
     "grandeAreaId": "medicina_preventiva",
     "grandeArea": "Medicina Preventiva",
-    "tema": "Atenção Primária à Saúde",
-    "subtema": "Apoio Matricial e Saúde Mental na APS",
+    "tema": "SUS, Políticas Públicas e Gestão em Saúde",
+    "subtema": "Atenção Primária à Saúde e ESF",
+    "temaSlug": "mp-sus",
+    "subtemaSlug": "mp-sus-atencao-primaria-a-saude-e-esf",
+    "tags": ["projeto-terapeutico-singular","populacao-em-situacao-de-rua","aps"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -1475,7 +1579,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Caderno de Atenção Básica nº 39 (HumanizaSUS)"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2289
   },
   {
@@ -1484,8 +1588,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 27,
     "grandeAreaId": "medicina_preventiva",
     "grandeArea": "Medicina Preventiva",
-    "tema": "Políticas de Saúde / SUS",
-    "subtema": "Lei Orgânica da Saúde (Lei 8.080/1990) — Dever do Estado e Corresponsabilidade",
+    "tema": "SUS, Políticas Públicas e Gestão em Saúde",
+    "subtema": "História, Princípios e Leis Orgânicas do SUS",
+    "temaSlug": "mp-sus",
+    "subtemaSlug": "mp-sus-historia-principios-e-leis-organicas-do-sus",
+    "tags": ["pnsipn","saude-da-populacao-negra","equidade"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -1531,7 +1639,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Política Nacional de Saúde Integral da População Negra (PNSIPN)"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2289
   },
   {
@@ -1540,8 +1648,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 28,
     "grandeAreaId": "medicina_preventiva",
     "grandeArea": "Medicina Preventiva",
-    "tema": "Saúde Coletiva e Ética Médica",
-    "subtema": "Declaração de Óbito (Preenchimento da Parte I e Parte II)",
+    "tema": "Ética Médica, Bioética e Medicina Legal",
+    "subtema": "Documentos Médicos e Responsabilidade Profissional",
+    "temaSlug": "mp-etica",
+    "subtemaSlug": "mp-etica-documentos-medicos-e-responsabilidade-profissional",
+    "tags": ["notificacao-de-receita","receituario-controlado","documentos-medicos"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -1587,7 +1699,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Portaria SVS/MS nº 344/1998"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2289
   },
   {
@@ -1596,8 +1708,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 29,
     "grandeAreaId": "medicina_preventiva",
     "grandeArea": "Medicina Preventiva",
-    "tema": "Epidemiologia",
-    "subtema": "Delineamento de Estudos Epidemiológicos, Viés e Erro Aleatório",
+    "tema": "Epidemiologia e Bioestatística",
+    "subtema": "Vieses, Confundimento e Bioestatística",
+    "temaSlug": "mp-epidemio",
+    "subtemaSlug": "mp-epidemio-vieses-confundimento-e-bioestatistica",
+    "tags": ["bioestatistica","correlacao-de-pearson","questao-anulada"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -1643,7 +1759,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Pagano, M. Princípios de Bioestatística."
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2290
   },
   {
@@ -1652,8 +1768,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 30,
     "grandeAreaId": "medicina_preventiva",
     "grandeArea": "Medicina Preventiva",
-    "tema": "Atenção Primária à Saúde (APS)",
-    "subtema": "Saúde do Adolescente, ISTs e Rastreamento do Câncer de Colo Uterino",
+    "tema": "SUS, Políticas Públicas e Gestão em Saúde",
+    "subtema": "Atenção Primária à Saúde e ESF",
+    "temaSlug": "mp-sus",
+    "subtemaSlug": "mp-sus-atencao-primaria-a-saude-e-esf",
+    "tags": ["ists-na-aps","atencao-basica","manejo-sindromico"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -1699,7 +1819,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Protocolo Clínico e Diretrizes Terapêuticas (PCDT) para Atenção Integral às Pessoas com IST, 2020"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2290
   },
   {
@@ -1708,8 +1828,13 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 31,
     "grandeAreaId": "medicina_preventiva",
     "grandeArea": "Medicina Preventiva",
-    "tema": "Epidemiologia",
-    "subtema": "Delineamento de Estudos Epidemiológicos, Viés e Erro Aleatório",
+    "tema": "Epidemiologia e Bioestatística",
+    "subtema": "Estudos Epidemiológicos",
+    "temaSlug": "mp-epidemio",
+    "subtemaSlug": "mp-epidemio-estudos-epidemiologicos",
+    "tags": ["ensaio-clinico-randomizado","etica-em-pesquisa","questao-anulada"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
+    "needsTaxonomyReview": true,
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -1756,7 +1881,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Resolução CNS 466/2012"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2290
   },
   {
@@ -1766,7 +1891,11 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "grandeAreaId": "medicina_preventiva",
     "grandeArea": "Medicina Preventiva",
     "tema": "Saúde do Trabalhador",
-    "subtema": "Acidente de Trabalho, PAIR e CAT",
+    "subtema": "Acidentes de Trabalho, CAT e Schilling",
+    "temaSlug": "mp-trabalho",
+    "subtemaSlug": "mp-trabalho-acidentes-de-trabalho-cat-e-schilling",
+    "tags": ["acidente-de-trabalho","cat","cipa","trauma-ocular"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -1813,7 +1942,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "NR-5 (CIPA)"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2290
   },
   {
@@ -1822,8 +1951,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 33,
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
-    "tema": "Endocrinologia",
-    "subtema": "Diabetes Mellitus Tipo 2 — Farmacoterapia (GLP-1 e iSGLT2)",
+    "tema": "Endocrinologia e Metabologia",
+    "subtema": "Diabetes Mellitus - Diagnóstico e Tratamento",
+    "temaSlug": "cm-endocrino",
+    "subtemaSlug": "cm-endocrino-diabetes-mellitus-diagnostico-e-tratamento",
+    "tags": ["metas-glicemicas","sbd","fragilidade","hba1c"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -1869,7 +2002,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Diretrizes da Sociedade Brasileira de Diabetes (SBD) 2023"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2291
   },
   {
@@ -1878,8 +2011,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 34,
     "grandeAreaId": "medicina_preventiva",
     "grandeArea": "Medicina Preventiva",
-    "tema": "Atenção Primária à Saúde (APS)",
-    "subtema": "NASF-AB / Apoio Matricial",
+    "tema": "SUS, Políticas Públicas e Gestão em Saúde",
+    "subtema": "Atenção Primária à Saúde e ESF",
+    "temaSlug": "mp-sus",
+    "subtemaSlug": "mp-sus-atencao-primaria-a-saude-e-esf",
+    "tags": ["apoio-matricial","trabalho-em-equipe","aps"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -1925,7 +2062,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Caderno de Atenção Básica nº 39"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2291
   },
   {
@@ -1934,8 +2071,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 35,
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
-    "tema": "Endocrinologia",
-    "subtema": "Diabetes Mellitus Tipo 2 — Farmacoterapia (GLP-1 e iSGLT2)",
+    "tema": "Endocrinologia e Metabologia",
+    "subtema": "Diabetes Mellitus - Diagnóstico e Tratamento",
+    "temaSlug": "cm-endocrino",
+    "subtemaSlug": "cm-endocrino-diabetes-mellitus-diagnostico-e-tratamento",
+    "tags": ["prevencao-dm2","mudanca-de-estilo-de-vida","diabetes-mellitus"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -1981,7 +2122,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Diretrizes da Sociedade Brasileira de Diabetes (SBD) 2023"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2291
   },
   {
@@ -1991,7 +2132,11 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "grandeAreaId": "medicina_preventiva",
     "grandeArea": "Medicina Preventiva",
     "tema": "Vigilância em Saúde",
-    "subtema": "Vigilância Sanitária e Classificação dos Riscos à Saúde",
+    "subtema": "Vigilância Sanitária, Ambiental e Saúde Planetária",
+    "temaSlug": "mp-vigilancia",
+    "subtemaSlug": "mp-vigilancia-vigilancia-sanitaria-ambiental-e-saude-planetaria",
+    "tags": ["vigilancia-ambiental","contaminacao-quimica","saude-ambiental"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -2037,7 +2182,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Instrução Normativa de Vigilância em Saúde Ambiental"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2291
   },
   {
@@ -2046,8 +2191,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 37,
     "grandeAreaId": "medicina_preventiva",
     "grandeArea": "Medicina Preventiva",
-    "tema": "Epidemiologia",
-    "subtema": "Cálculo de Valor Preditivo Positivo (Tabela 2x2)",
+    "tema": "Epidemiologia e Bioestatística",
+    "subtema": "Testes Diagnósticos e Tabela 2x2",
+    "temaSlug": "mp-epidemio",
+    "subtemaSlug": "mp-epidemio-testes-diagnosticos-e-tabela-2x2",
+    "tags": ["sensibilidade","especificidade","falso-negativo","covid-19"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -2093,7 +2242,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Gordis, L. Epidemiologia. 5ª Edição."
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2292
   },
   {
@@ -2102,8 +2251,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 38,
     "grandeAreaId": "medicina_preventiva",
     "grandeArea": "Medicina Preventiva",
-    "tema": "Epidemiologia",
-    "subtema": "Delineamento de Estudos Epidemiológicos, Viés e Erro Aleatório",
+    "tema": "Epidemiologia e Bioestatística",
+    "subtema": "Vieses, Confundimento e Bioestatística",
+    "temaSlug": "mp-epidemio",
+    "subtemaSlug": "mp-epidemio-vieses-confundimento-e-bioestatistica",
+    "tags": ["intervalo-de-confianca","bioestatistica","questao-anulada"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -2143,17 +2296,21 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Pagano, M. Princípios de Bioestatística."
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2292
   },
   {
     "id": "q-unifesp-2023-039",
     "code": "Q-UNIFESP23-0039",
     "numeroOriginal": 39,
-    "grandeAreaId": "clinica_medica",
-    "grandeArea": "Clínica Médica",
-    "tema": "Infectologia",
-    "subtema": "Meningite Bacteriana e Análise do LCR",
+    "grandeAreaId": "cirurgia_geral",
+    "grandeArea": "Cirurgia Geral",
+    "tema": "Cirurgia Pediátrica e Especialidades Cirúrgicas",
+    "subtema": "Oftalmologia Básica",
+    "temaSlug": "cg-espec",
+    "subtemaSlug": "cg-espec-oftalmologia-basica",
+    "tags": ["celulite-orbitaria","tomografia-de-orbitas","oftalmologia"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -2199,17 +2356,21 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Harrison's Principles of Internal Medicine, 21st Ed."
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2292
   },
   {
     "id": "q-unifesp-2023-040",
     "code": "Q-UNIFESP23-0040",
     "numeroOriginal": 40,
-    "grandeAreaId": "clinica_medica",
-    "grandeArea": "Clínica Médica",
-    "tema": "Cardiologia",
-    "subtema": "Semiologia Cardiovascular e Valvopatias",
+    "grandeAreaId": "cirurgia_geral",
+    "grandeArea": "Cirurgia Geral",
+    "tema": "Cirurgia Pediátrica e Especialidades Cirúrgicas",
+    "subtema": "Oftalmologia Básica",
+    "temaSlug": "cg-espec",
+    "subtemaSlug": "cg-espec-oftalmologia-basica",
+    "tags": ["glaucoma-de-angulo-fechado","camara-anterior-rasa","oftalmologia"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -2255,7 +2416,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Kanski's Clinical Ophthalmology, 9th Ed."
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2292
   },
   {
@@ -2264,8 +2425,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 41,
     "grandeAreaId": "ginecologia_obstetricia",
     "grandeArea": "Ginecologia e Obstetrícia",
-    "tema": "Ginecologia / Sangramento Uterino Anormal",
-    "subtema": "Adenomiose",
+    "tema": "Ginecologia Geral e Uroginecologia",
+    "subtema": "Endometriose e Adenomiose",
+    "temaSlug": "go-gineco-geral",
+    "subtemaSlug": "go-gineco-geral-endometriose-e-adenomiose",
+    "tags": ["adenomiose","dismenorreia","histerectomia"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -2311,7 +2476,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "FEBRASGO — Manual de Ginecologia"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2293
   },
   {
@@ -2320,8 +2485,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 42,
     "grandeAreaId": "ginecologia_obstetricia",
     "grandeArea": "Ginecologia e Obstetrícia",
-    "tema": "Ginecologia / Infecções Genitais",
-    "subtema": "Vulvovaginite na Infância",
+    "tema": "Ginecologia Geral e Uroginecologia",
+    "subtema": "Vulvovaginites e Corrimentos Genitais",
+    "temaSlug": "go-gineco-geral",
+    "subtemaSlug": "go-gineco-geral-vulvovaginites-e-corrimentos-genitais",
+    "tags": ["vulvovaginite-na-infancia","higiene-genital","corrimento-fisiologico"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -2367,7 +2536,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Tratado de Ginecologia FEBRASGO"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2293
   },
   {
@@ -2376,8 +2545,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 43,
     "grandeAreaId": "ginecologia_obstetricia",
     "grandeArea": "Ginecologia e Obstetrícia",
-    "tema": "Ginecologia / Oncologia Ginecológica",
+    "tema": "Oncologia Ginecológica e Mastologia",
     "subtema": "Câncer de Colo Uterino",
+    "temaSlug": "go-onco-go",
+    "subtemaSlug": "go-onco-go-cancer-de-colo-uterino",
+    "tags": ["cancer-de-colo-uterino","quimiorradioterapia","hidronefrose"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -2424,7 +2597,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "FIGO Staging for Carcinoma of the Cervix Uteri 2018"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2293
   },
   {
@@ -2433,8 +2606,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 44,
     "grandeAreaId": "ginecologia_obstetricia",
     "grandeArea": "Ginecologia e Obstetrícia",
-    "tema": "Oncologia Ginecológica",
-    "subtema": "Sangramento Pós-Menopausa e Câncer de Endométrio",
+    "tema": "Oncologia Ginecológica e Mastologia",
+    "subtema": "Câncer de Endométrio",
+    "temaSlug": "go-onco-go",
+    "subtemaSlug": "go-onco-go-cancer-de-endometrio",
+    "tags": ["sangramento-pos-menopausa","cureta-de-novak","cancer-de-endometrio"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -2480,7 +2657,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "FEBRASGO — Manual de Ginecologia Oncológica"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2293
   },
   {
@@ -2489,8 +2666,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 45,
     "grandeAreaId": "ginecologia_obstetricia",
     "grandeArea": "Ginecologia e Obstetrícia",
-    "tema": "Oncologia Ginecológica",
+    "tema": "Oncologia Ginecológica e Mastologia",
     "subtema": "Câncer de Endométrio",
+    "temaSlug": "go-onco-go",
+    "subtemaSlug": "go-onco-go-cancer-de-endometrio",
+    "tags": ["cancer-de-endometrio","estadiamento","tratamento-cirurgico"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -2537,7 +2718,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Diretrizes Oncológicas da Sociedade Brasileira de Oncologia Clínica"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2294
   },
   {
@@ -2546,8 +2727,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 46,
     "grandeAreaId": "ginecologia_obstetricia",
     "grandeArea": "Ginecologia e Obstetrícia",
-    "tema": "Mastologia",
-    "subtema": "Classificação BI-RADS e Terapia de Reposição Hormonal",
+    "tema": "Oncologia Ginecológica e Mastologia",
+    "subtema": "Rastreamento e Câncer de Mama",
+    "temaSlug": "go-onco-go",
+    "subtemaSlug": "go-onco-go-rastreamento-e-cancer-de-mama",
+    "tags": ["bi-rads-0","ampliacao-mamografica","microcalcificacoes"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -2593,7 +2778,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Colégio Brasileiro de Radiologia — BI-RADS 5ª Edição"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2294
   },
   {
@@ -2602,8 +2787,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 47,
     "grandeAreaId": "ginecologia_obstetricia",
     "grandeArea": "Ginecologia e Obstetrícia",
-    "tema": "Uroginecologia",
-    "subtema": "Incontinência Urinária de Esforço",
+    "tema": "Ginecologia Geral e Uroginecologia",
+    "subtema": "Incontinência Urinária e Prolapsos Genitais",
+    "temaSlug": "go-gineco-geral",
+    "subtemaSlug": "go-gineco-geral-incontinencia-urinaria-e-prolapsos-genitais",
+    "tags": ["incontinencia-urinaria-de-esforco","fisioterapia-pelvica","puerperio"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -2649,7 +2838,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Manual de Uroginecologia FEBRASGO"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2294
   },
   {
@@ -2658,8 +2847,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 48,
     "grandeAreaId": "ginecologia_obstetricia",
     "grandeArea": "Ginecologia e Obstetrícia",
-    "tema": "Ginecologia Endócrina / Climatério",
-    "subtema": "Terapia Hormonal da Menopausa (THM) — Contraindicações (Lúpus Eritematoso Sistêmico)",
+    "tema": "Ginecologia Endócrina e Reprodutiva",
+    "subtema": "Climatério e Terapia Hormonal",
+    "temaSlug": "go-gineco-endocrino",
+    "subtemaSlug": "go-gineco-endocrino-climaterio-e-terapia-hormonal",
+    "tags": ["climaterio","cancer-de-mama","terapia-hormonal","questao-anulada"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -2705,7 +2898,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Consenso Brasileiro de Terapêutica Hormonal da Menopausa — Sobrac/FEBRASGO"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2294
   },
   {
@@ -2714,8 +2907,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 49,
     "grandeAreaId": "ginecologia_obstetricia",
     "grandeArea": "Ginecologia e Obstetrícia",
-    "tema": "Obstetrícia / Urgências",
-    "subtema": "Sangramento da Segunda Metade — Placenta Prévia",
+    "tema": "Sangramentos da Gestação",
+    "subtema": "Placenta Prévia, Acretismo e Vasa Prévia",
+    "temaSlug": "go-sangramento",
+    "subtemaSlug": "go-sangramento-placenta-previa-acretismo-e-vasa-previa",
+    "tags": ["placenta-previa","acretismo-placentario","corticoterapia"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -2762,7 +2959,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "FIGO consensus guidelines on placenta accreta spectrum disorders"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2294
   },
   {
@@ -2771,8 +2968,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 50,
     "grandeAreaId": "ginecologia_obstetricia",
     "grandeArea": "Ginecologia e Obstetrícia",
-    "tema": "Ginecologia Endócrina",
-    "subtema": "Síndrome dos Ovários Policísticos (SOP) e Hirsutismo",
+    "tema": "Ginecologia Endócrina e Reprodutiva",
+    "subtema": "Síndrome dos Ovários Policísticos",
+    "temaSlug": "go-gineco-endocrino",
+    "subtemaSlug": "go-gineco-endocrino-sindrome-dos-ovarios-policisticos",
+    "tags": ["hirsutismo-idiopatico","ferriman-gallwey","diagnostico-diferencial-sop"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -2818,7 +3019,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "FEBRASGO — Manual de Ginecologia Endócrina"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2295
   },
   {
@@ -2827,8 +3028,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 51,
     "grandeAreaId": "ginecologia_obstetricia",
     "grandeArea": "Ginecologia e Obstetrícia",
-    "tema": "Obstetrícia / Pré-Natal",
-    "subtema": "Assistência Pré-Natal",
+    "tema": "Síndromes Hipertensivas e Metabólicas na Gestação",
+    "subtema": "Pré-Eclâmpsia, Eclâmpsia e Síndrome HELLP",
+    "temaSlug": "go-shg",
+    "subtemaSlug": "go-shg-pre-eclampsia-eclampsia-e-sindrome-hellp",
+    "tags": ["aas-profilatico","progesterona","pre-natal-alto-risco"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -2875,7 +3080,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "ACOG Practice Bulletin No. 222: Gestational Hypertension and Preeclampsia"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2295
   },
   {
@@ -2884,8 +3089,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 52,
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
-    "tema": "Hematologia",
-    "subtema": "Trombofilias e Trombose Venosa Profunda (TVP)",
+    "tema": "Reumatologia",
+    "subtema": "Síndrome Antifosfolípide e Sjögren",
+    "temaSlug": "cm-reumato",
+    "subtemaSlug": "cm-reumato-sindrome-antifosfolipide-e-sjogren",
+    "tags": ["saaf","perda-fetal","antibeta2-glicoproteina","trombofilia"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -2931,7 +3140,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Critérios de Sapporo revisados (Sydney) para SAAF"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2295
   },
   {
@@ -2941,7 +3150,11 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
     "tema": "Neurologia",
-    "subtema": "Acidente Vascular Cerebral Isquêmico e Trombólise",
+    "subtema": "AVC Isquêmico e AIT",
+    "temaSlug": "cm-neuro",
+    "subtemaSlug": "cm-neuro-avc-isquemico-e-ait",
+    "tags": ["avc-isquemico","trombolise-cerebral","contraindicacao","varfarina"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -2987,7 +3200,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Diretrizes da AHA/ASA para o Manejo Precoce do AVC Isquêmico"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2295
   },
   {
@@ -2996,8 +3209,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 54,
     "grandeAreaId": "ginecologia_obstetricia",
     "grandeArea": "Ginecologia e Obstetrícia",
-    "tema": "Obstetrícia / Intercorrências Clínicas",
-    "subtema": "Pielonefrite Aguda na Gestação",
+    "tema": "Intercorrências Clínicas e Infecciosas na Gestação",
+    "subtema": "ITU, Tromboembolismo e Intercorrências Clínicas",
+    "temaSlug": "go-intercorrencias",
+    "subtemaSlug": "go-intercorrencias-itu-tromboembolismo-e-intercorrencias-clinicas",
+    "tags": ["pielonefrite-na-gestacao","itu-na-gestacao","recidiva"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -3043,7 +3260,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Manual de Gestação de Alto Risco — Ministério da Saúde"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2295
   },
   {
@@ -3052,8 +3269,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 55,
     "grandeAreaId": "ginecologia_obstetricia",
     "grandeArea": "Ginecologia e Obstetrícia",
-    "tema": "Obstetrícia",
-    "subtema": "Adaptações Fisiológicas da Gestação",
+    "tema": "Oncologia Ginecológica e Mastologia",
+    "subtema": "Câncer de Ovário e Massas Anexiais",
+    "temaSlug": "go-onco-go",
+    "subtemaSlug": "go-onco-go-cancer-de-ovario-e-massas-anexiais",
+    "tags": ["cisto-ovariano","gestacao","corpo-luteo","conduta-expectante"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -3099,7 +3320,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "FEBRASGO — Manual de Obstetrícia"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2296
   },
   {
@@ -3108,8 +3329,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 56,
     "grandeAreaId": "ginecologia_obstetricia",
     "grandeArea": "Ginecologia e Obstetrícia",
-    "tema": "Obstetrícia",
-    "subtema": "Diabetes na Gestação — Overt Diabetes vs. Diabetes Gestacional",
+    "tema": "Síndromes Hipertensivas e Metabólicas na Gestação",
+    "subtema": "Diabetes Mellitus Gestacional e Prévio",
+    "temaSlug": "go-shg",
+    "subtemaSlug": "go-shg-diabetes-mellitus-gestacional-e-previo",
+    "tags": ["diabetes-gestacional","glicemia-de-jejum","rastreamento"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -3156,17 +3381,21 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Manual de Gestação de Alto Risco — Ministério da Saúde"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2296
   },
   {
     "id": "q-unifesp-2023-057",
     "code": "Q-UNIFESP23-0057",
     "numeroOriginal": 57,
-    "grandeAreaId": "ginecologia_obstetricia",
-    "grandeArea": "Ginecologia e Obstetrícia",
-    "tema": "Obstetrícia / Urgências",
-    "subtema": "Apendicite Aguda na Gestação",
+    "grandeAreaId": "cirurgia_geral",
+    "grandeArea": "Cirurgia Geral",
+    "tema": "Abdome Agudo",
+    "subtema": "Apendicite Aguda",
+    "temaSlug": "cg-abdome",
+    "subtemaSlug": "cg-abdome-apendicite-aguda",
+    "tags": ["apendicite-na-gestacao","laparoscopia","abdome-agudo"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -3212,7 +3441,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "SAGES Guideline for the use of laparoscopy during pregnancy"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2296
   },
   {
@@ -3221,8 +3450,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 58,
     "grandeAreaId": "pediatria",
     "grandeArea": "Pediatria",
-    "tema": "Puericultura / Desenvolvimento Infantil",
-    "subtema": "Marcos do Desenvolvimento Neuropsicomotor",
+    "tema": "Puericultura, Crescimento e Nutrição",
+    "subtema": "Desenvolvimento Neuropsicomotor e Autismo",
+    "temaSlug": "ped-puericultura",
+    "subtemaSlug": "ped-puericultura-desenvolvimento-neuropsicomotor-e-autismo",
+    "tags": ["atraso-de-fala","dnpm","avaliacao-audiologica","exposicao-a-telas"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -3268,7 +3501,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Tratado de Pediatria SBP"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2296
   },
   {
@@ -3277,8 +3510,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 59,
     "grandeAreaId": "ginecologia_obstetricia",
     "grandeArea": "Ginecologia e Obstetrícia",
-    "tema": "Obstetrícia / Urgências",
-    "subtema": "Rotura Prematura de Membranas Ovulares (RPMO)",
+    "tema": "Parto, Prematuridade e Puerpério",
+    "subtema": "Rotura Prematura de Membranas Ovulares",
+    "temaSlug": "go-parto",
+    "subtemaSlug": "go-parto-rotura-prematura-de-membranas-ovulares",
+    "tags": ["rpmo","apresentacao-pelvica","sulfato-de-magnesio","cesariana"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -3325,7 +3562,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "ACOG Practice Bulletin No. 217: Prelabor Rupture of Membranes"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2297
   },
   {
@@ -3334,8 +3571,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 60,
     "grandeAreaId": "ginecologia_obstetricia",
     "grandeArea": "Ginecologia e Obstetrícia",
-    "tema": "Ginecologia / Patologia do Trato Genital Inferior",
-    "subtema": "Rastreamento do Câncer de Colo Uterino — Conduta frente a ASC-H",
+    "tema": "Oncologia Ginecológica e Mastologia",
+    "subtema": "Rastreamento e Lesões Precursoras do Colo Uterino",
+    "temaSlug": "go-onco-go",
+    "subtemaSlug": "go-onco-go-rastreamento-e-lesoes-precursoras-do-colo-uterino",
+    "tags": ["asc-h","gestacao","colposcopia","biopsia-cervical"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -3381,7 +3622,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Diretrizes Brasileiras para o Câncer do Colo do Útero — INCA"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2297
   },
   {
@@ -3390,8 +3631,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 61,
     "grandeAreaId": "pediatria",
     "grandeArea": "Pediatria",
-    "tema": "Puericultura / Nutrição",
-    "subtema": "Avaliação Nutricional (Antropometria)",
+    "tema": "Puericultura, Crescimento e Nutrição",
+    "subtema": "Avaliação do Crescimento e Baixa Estatura",
+    "temaSlug": "ped-puericultura",
+    "subtemaSlug": "ped-puericultura-avaliacao-do-crescimento-e-baixa-estatura",
+    "tags": ["antropometria","curvas-oms","magreza","z-score"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -3438,7 +3683,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Ministério da Saúde — Caderneta de Saúde da Criança"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2297
   },
   {
@@ -3447,8 +3692,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 62,
     "grandeAreaId": "pediatria",
     "grandeArea": "Pediatria",
-    "tema": "Hematologia Pediátrica",
-    "subtema": "Púrpura Trombocitopênica Imune (PTI) na Infância — Conduta",
+    "tema": "Cardiologia, Hematologia e Oncologia Pediátrica",
+    "subtema": "Anemias e Doença Falciforme na Infância",
+    "temaSlug": "ped-cardio-hemato-ped",
+    "subtemaSlug": "ped-cardio-hemato-ped-anemias-e-doenca-falciforme-na-infancia",
+    "tags": ["pti-pediatrica","plaquetopenia","fisiopatologia"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -3495,7 +3744,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Protocolo Brasileiro de PTI"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2297
   },
   {
@@ -3504,8 +3753,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 63,
     "grandeAreaId": "pediatria",
     "grandeArea": "Pediatria",
-    "tema": "Hematologia Pediátrica",
-    "subtema": "Leucemia Linfoide Aguda (LLA) — Quadro Clínico e Laboratorial",
+    "tema": "Cardiologia, Hematologia e Oncologia Pediátrica",
+    "subtema": "Neoplasias Pediátricas",
+    "temaSlug": "ped-cardio-hemato-ped",
+    "subtemaSlug": "ped-cardio-hemato-ped-neoplasias-pediatricas",
+    "tags": ["lla-pediatrica","leucemia-aguda","reticulocitos","dor-ossea"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -3552,7 +3805,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Diretrizes da Sociedade Brasileira de Oncologia Pediátrica"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2298
   },
   {
@@ -3561,8 +3814,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 64,
     "grandeAreaId": "pediatria",
     "grandeArea": "Pediatria",
-    "tema": "Nefrologia Pediátrica",
-    "subtema": "Doença Renal Crônica na Infância — Distúrbio do Crescimento",
+    "tema": "Gastroenterologia e Nefrologia Pediátrica",
+    "subtema": "ITU e Malformações Urinárias em Pediatria",
+    "temaSlug": "ped-gastro-nefro-ped",
+    "subtemaSlug": "ped-gastro-nefro-ped-itu-e-malformacoes-urinarias-em-pediatria",
+    "tags": ["doenca-renal-cronica-pediatrica","falha-de-crescimento","aporte-calorico-proteico"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -3609,7 +3866,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "SBP — Tratado de Pediatria"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2298
   },
   {
@@ -3618,8 +3875,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 65,
     "grandeAreaId": "pediatria",
     "grandeArea": "Pediatria",
-    "tema": "Alergia e Imunologia Pediátrica / Emergência Pediátrica",
-    "subtema": "Anafilaxia na Infância (Alergia ao Látex)",
+    "tema": "Emergências Pediátricas e Proteção Infantil",
+    "subtema": "Suporte Avançado de Vida em Pediatria - PALS",
+    "temaSlug": "ped-emerg-ped",
+    "subtemaSlug": "ped-emerg-ped-suporte-avancado-de-vida-em-pediatria-pals",
+    "tags": ["anafilaxia-intraoperatoria","alergia-ao-latex","mielomeningocele"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -3666,7 +3927,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Nelson Textbook of Pediatrics"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2298
   },
   {
@@ -3675,8 +3936,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 66,
     "grandeAreaId": "pediatria",
     "grandeArea": "Pediatria",
-    "tema": "Puericultura / Ética Médica",
-    "subtema": "Maus-tratos na Infância (Síndrome do Bebê Sacudido)",
+    "tema": "Emergências Pediátricas e Proteção Infantil",
+    "subtema": "Acidentes, Intoxicações e Maus-Tratos na Infância",
+    "temaSlug": "ped-emerg-ped",
+    "subtemaSlug": "ped-emerg-ped-acidentes-intoxicacoes-e-maus-tratos-na-infancia",
+    "tags": ["sindrome-do-bebe-sacudido","maus-tratos","violencia-infantil"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -3723,7 +3988,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Nelson Textbook of Pediatrics"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2298
   },
   {
@@ -3732,8 +3997,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 67,
     "grandeAreaId": "pediatria",
     "grandeArea": "Pediatria",
-    "tema": "Puericultura / Aleitamento Materno",
-    "subtema": "NBCAL — Norma Brasileira de Comercialização de Alimentos para Lactentes",
+    "tema": "Puericultura, Crescimento e Nutrição",
+    "subtema": "Aleitamento Materno e Fórmulas Infantis",
+    "temaSlug": "ped-puericultura",
+    "subtemaSlug": "ped-puericultura-aleitamento-materno-e-formulas-infantis",
+    "tags": ["nbcal","aleitamento-materno","legislacao"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -3780,7 +4049,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Ministério da Saúde — NBCAL"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2299
   },
   {
@@ -3790,7 +4059,11 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "grandeAreaId": "pediatria",
     "grandeArea": "Pediatria",
     "tema": "Neonatologia",
-    "subtema": "Hemorragia Peri-Intraventricular (HPIV) no Prematuro",
+    "subtema": "Distúrbios Metabólicos e Enterocolite Necrosante",
+    "temaSlug": "ped-neo",
+    "subtemaSlug": "ped-neo-disturbios-metabolicos-e-enterocolite-necrosante",
+    "tags": ["hemorragia-peri-intraventricular","usg-transfontanelar","prematuro"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -3837,7 +4110,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Nelson Textbook of Pediatrics"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2299
   },
   {
@@ -3847,7 +4120,11 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "grandeAreaId": "pediatria",
     "grandeArea": "Pediatria",
     "tema": "Pneumologia Pediátrica",
-    "subtema": "Crise Asmática Moderada/Grave na Infância — Conduta na Emergência",
+    "subtema": "Asma na Infância e Fibrose Cística",
+    "temaSlug": "ped-pneumo-ped",
+    "subtemaSlug": "ped-pneumo-ped-asma-na-infancia-e-fibrose-cistica",
+    "tags": ["asma-pediatrica","gina","corticoide-inalatorio","manutencao"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -3894,7 +4171,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "SBP — Diretrizes de Asma"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2299
   },
   {
@@ -3904,7 +4181,11 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "grandeAreaId": "pediatria",
     "grandeArea": "Pediatria",
     "tema": "Neonatologia",
-    "subtema": "Sífilis Congenita — Manifestações Clínicas e Diagnóstico",
+    "subtema": "Sepse Neonatal e Infecções Congênitas no RN",
+    "temaSlug": "ped-neo",
+    "subtemaSlug": "ped-neo-sepse-neonatal-e-infeccoes-congenitas-no-rn",
+    "tags": ["sifilis-congenita","deficiencia-auditiva","manifestacoes-tardias"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -3951,7 +4232,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "SBP — Sífilis Congênita"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2299
   },
   {
@@ -3961,7 +4242,11 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "grandeAreaId": "pediatria",
     "grandeArea": "Pediatria",
     "tema": "Neonatologia",
-    "subtema": "Triagem Neonatal Biológica (Teste do Pezinho Ampliado)",
+    "subtema": "Triagens Neonatais",
+    "temaSlug": "ped-neo",
+    "subtemaSlug": "ped-neo-triagens-neonatais",
+    "tags": ["teste-do-pezinho-ampliado","lei-14154","imunodeficiencias-primarias"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -4008,7 +4293,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "SBP — Triagem Neonatal"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2299
   },
   {
@@ -4017,8 +4302,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 72,
     "grandeAreaId": "pediatria",
     "grandeArea": "Pediatria",
-    "tema": "Infectopediatria",
-    "subtema": "Meningite Meningocócica — Quimioprofilaxia de Contatos",
+    "tema": "Infectologia Pediátrica e Exantemáticas",
+    "subtema": "Meningites e Sepse em Pediatria",
+    "temaSlug": "ped-infecto-ped",
+    "subtemaSlug": "ped-infecto-ped-meningites-e-sepse-em-pediatria",
+    "tags": ["meningite-meningococica","quimioprofilaxia","rifampicina"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -4065,7 +4354,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "SBP — Meningites Bacterianas"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2300
   },
   {
@@ -4075,7 +4364,11 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "grandeAreaId": "pediatria",
     "grandeArea": "Pediatria",
     "tema": "Neonatologia",
-    "subtema": "Icterícia Neonatal — Doença Hemolítica por Incompatibilidade ABO",
+    "subtema": "Icterícia Neonatal",
+    "temaSlug": "ped-neo",
+    "subtemaSlug": "ped-neo-ictericia-neonatal",
+    "tags": ["incompatibilidade-abo","ictericia-neonatal","esferocitos"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -4122,7 +4415,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Nelson Textbook of Pediatrics"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2300
   },
   {
@@ -4131,8 +4424,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 74,
     "grandeAreaId": "pediatria",
     "grandeArea": "Pediatria",
-    "tema": "Nefrologia Pediátrica",
-    "subtema": "Síndrome Nefrótica na Infância (Lesão Mínima) — Complicações (PBE)",
+    "tema": "Gastroenterologia e Nefrologia Pediátrica",
+    "subtema": "Síndrome Nefrítica e Nefrótica Pediátrica",
+    "temaSlug": "ped-gastro-nefro-ped",
+    "subtemaSlug": "ped-gastro-nefro-ped-sindrome-nefritica-e-nefrotica-pediatrica",
+    "tags": ["sindrome-nefrotica","pbe","streptococcus-pneumoniae"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -4179,7 +4476,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Nelson Textbook of Pediatrics"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2300
   },
   {
@@ -4188,8 +4485,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 75,
     "grandeAreaId": "pediatria",
     "grandeArea": "Pediatria",
-    "tema": "Reumatologia Pediátrica",
-    "subtema": "Artrite Idiopática Juvenil (AIJ) — Forma Relacionada à Entesite",
+    "tema": "Cardiologia, Hematologia e Oncologia Pediátrica",
+    "subtema": "Doença de Kawasaki e Vasculite por IgA",
+    "temaSlug": "ped-cardio-hemato-ped",
+    "subtemaSlug": "ped-cardio-hemato-ped-doenca-de-kawasaki-e-vasculite-por-iga",
+    "tags": ["aij","artrite-idiopatica-juvenil","entesite"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -4236,7 +4537,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Nelson Textbook of Pediatrics"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2300
   },
   {
@@ -4245,8 +4546,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 76,
     "grandeAreaId": "pediatria",
     "grandeArea": "Pediatria",
-    "tema": "Gastroenterologia Pediátrica",
-    "subtema": "Doença Diarreica Aguda, Disenteria e Plano B de Reidratação",
+    "tema": "Gastroenterologia e Nefrologia Pediátrica",
+    "subtema": "Diarreia Aguda e Desidratação",
+    "temaSlug": "ped-gastro-nefro-ped",
+    "subtemaSlug": "ped-gastro-nefro-ped-diarreia-aguda-e-desidratacao",
+    "tags": ["diarreia-aguda","disenteria","tro","desidratacao"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -4293,7 +4598,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "SBP — Diarreia Aguda"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2301
   },
   {
@@ -4303,7 +4608,11 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "grandeAreaId": "pediatria",
     "grandeArea": "Pediatria",
     "tema": "Pneumologia Pediátrica",
-    "subtema": "Pneumonia Complicada com Derrame Pleural em Pediatria",
+    "subtema": "Pneumonia Adquirida na Comunidade em Pediatria",
+    "temaSlug": "ped-pneumo-ped",
+    "subtemaSlug": "ped-pneumo-ped-pneumonia-adquirida-na-comunidade-em-pediatria",
+    "tags": ["derrame-parapneumonico","drenagem-toracica","pac-pediatrica"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -4350,7 +4659,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Nelson Textbook of Pediatrics"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2301
   },
   {
@@ -4359,8 +4668,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 78,
     "grandeAreaId": "pediatria",
     "grandeArea": "Pediatria",
-    "tema": "Hematologia Pediátrica",
-    "subtema": "Doença Falciforme — Crise Vaso-Oclusiva (Dactilite) e Diagnóstico",
+    "tema": "Cardiologia, Hematologia e Oncologia Pediátrica",
+    "subtema": "Anemias e Doença Falciforme na Infância",
+    "temaSlug": "ped-cardio-hemato-ped",
+    "subtemaSlug": "ped-cardio-hemato-ped-anemias-e-doenca-falciforme-na-infancia",
+    "tags": ["doenca-falciforme","osteomielite","salmonella","staphylococcus-aureus"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -4407,7 +4720,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Nelson Textbook of Pediatrics"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2301
   },
   {
@@ -4416,8 +4729,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 79,
     "grandeAreaId": "cirurgia_geral",
     "grandeArea": "Cirurgia Geral",
-    "tema": "Ortopedia / Trauma",
-    "subtema": "Fratura de Colo de Fêmur no Idoso",
+    "tema": "Cirurgia Pediátrica e Especialidades Cirúrgicas",
+    "subtema": "Ortopedia e Traumatologia Básica",
+    "temaSlug": "cg-espec",
+    "subtemaSlug": "cg-espec-ortopedia-e-traumatologia-basica",
+    "tags": ["fratura-de-colo-de-femur","ortopedia","idoso"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -4464,7 +4781,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Rockwood and Green's Fractures in Adults"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2301
   },
   {
@@ -4474,7 +4791,11 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "grandeAreaId": "cirurgia_geral",
     "grandeArea": "Cirurgia Geral",
     "tema": "Urologia",
-    "subtema": "Hematúria — Investigação e Diagnóstico Diferencial",
+    "subtema": "Neoplasias de Rim, Bexiga e Testículo",
+    "temaSlug": "cg-uro",
+    "subtemaSlug": "cg-uro-neoplasias-de-rim-bexiga-e-testiculo",
+    "tags": ["hematuria","urologia","questao-anulada"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -4520,7 +4841,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Diretrizes da Sociedade Brasileira de Urologia"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2302
   },
   {
@@ -4529,8 +4850,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 81,
     "grandeAreaId": "cirurgia_geral",
     "grandeArea": "Cirurgia Geral",
-    "tema": "Oncologia Cirúrgica",
-    "subtema": "Osteossarcoma",
+    "tema": "Cirurgia Pediátrica e Especialidades Cirúrgicas",
+    "subtema": "Ortopedia e Traumatologia Básica",
+    "temaSlug": "cg-espec",
+    "subtemaSlug": "cg-espec-ortopedia-e-traumatologia-basica",
+    "tags": ["osteossarcoma","tumor-osseo","fosfatase-alcalina","ortopedia"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -4577,7 +4902,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Nelson Textbook of Pediatrics"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2302
   },
   {
@@ -4586,8 +4911,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 82,
     "grandeAreaId": "cirurgia_geral",
     "grandeArea": "Cirurgia Geral",
-    "tema": "Cirurgia do Aparelho Digestivo",
-    "subtema": "Síndrome de mau esvaziamento gástrico e neoplasia de região antro pilórica",
+    "tema": "Cirurgia do Aparelho Digestivo e Coloproctologia",
+    "subtema": "Câncer Gástrico e Cirurgia Bariátrica",
+    "temaSlug": "cg-cad",
+    "subtemaSlug": "cg-cad-cancer-gastrico-e-cirurgia-bariatrica",
+    "tags": ["cancer-gastrico","obstrucao-piloro","mau-esvaziamento-gastrico"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -4634,17 +4963,21 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Harrison's Principles of Internal Medicine"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2302
   },
   {
     "id": "q-unifesp-2023-083",
     "code": "Q-UNIFESP23-0083",
     "numeroOriginal": 83,
-    "grandeAreaId": "cirurgia_geral",
-    "grandeArea": "Cirurgia Geral",
-    "tema": "Cirurgia Vascular",
-    "subtema": "Trombose Venosa Profunda (TVP) — Diagnóstico e Tratamento",
+    "grandeAreaId": "clinica_medica",
+    "grandeArea": "Clínica Médica",
+    "tema": "Pneumologia",
+    "subtema": "Tromboembolismo Pulmonar e TVP",
+    "temaSlug": "cm-pneumo",
+    "subtemaSlug": "cm-pneumo-tromboembolismo-pulmonar-e-tvp",
+    "tags": ["tvp","ultrassonografia-doppler","compressibilidade-venosa"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -4691,7 +5024,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "SBACV — Trombose Venosa Profunda"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2302
   },
   {
@@ -4701,7 +5034,11 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "grandeAreaId": "cirurgia_geral",
     "grandeArea": "Cirurgia Geral",
     "tema": "Cirurgia Vascular",
-    "subtema": "Aneurisma de Aorta Abdominal (AAA) Assintomático — Critérios de Intervenção",
+    "subtema": "Aneurisma e Dissecação de Aorta",
+    "temaSlug": "cg-vascular",
+    "subtemaSlug": "cg-vascular-aneurisma-e-dissecacao-de-aorta",
+    "tags": ["aneurisma-de-aorta-abdominal","aaa","acompanhamento"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -4748,7 +5085,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "SVS Clinical Practice Guidelines"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2302
   },
   {
@@ -4758,7 +5095,11 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "grandeAreaId": "cirurgia_geral",
     "grandeArea": "Cirurgia Geral",
     "tema": "Hérnias e Parede Abdominal",
-    "subtema": "Técnicas Cirúrgicas de Herniorrafia Inguinal",
+    "subtema": "Hérnia Inguinal e Femoral",
+    "temaSlug": "cg-hernias",
+    "subtemaSlug": "cg-hernias-hernia-inguinal-e-femoral",
+    "tags": ["hernia-inguinal","mulher","videolaparoscopia"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -4805,17 +5146,21 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Sabiston Textbook of Surgery"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2303
   },
   {
     "id": "q-unifesp-2023-086",
     "code": "Q-UNIFESP23-0086",
     "numeroOriginal": 86,
-    "grandeAreaId": "cirurgia_geral",
-    "grandeArea": "Cirurgia Geral",
-    "tema": "Oncologia Cirúrgica",
-    "subtema": "Melanoma — Biópsia de Linfonodo Sentinela",
+    "grandeAreaId": "clinica_medica",
+    "grandeArea": "Clínica Médica",
+    "tema": "Dermatologia",
+    "subtema": "Câncer de Pele",
+    "temaSlug": "cm-dermato",
+    "subtemaSlug": "cm-dermato-cancer-de-pele",
+    "tags": ["melanoma","linfonodo-sentinela","breslow"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -4862,17 +5207,21 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Diretrizes da Sociedade Brasileira de Dermatologia"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2303
   },
   {
     "id": "q-unifesp-2023-087",
     "code": "Q-UNIFESP23-0087",
     "numeroOriginal": 87,
-    "grandeAreaId": "pediatria",
-    "grandeArea": "Pediatria",
-    "tema": "Gastroenterologia Pediátrica / Cirurgia Pediátrica",
-    "subtema": "Divertículo de Meckel",
+    "grandeAreaId": "cirurgia_geral",
+    "grandeArea": "Cirurgia Geral",
+    "tema": "Cirurgia Pediátrica e Especialidades Cirúrgicas",
+    "subtema": "Emergências Cirúrgicas Pediátricas",
+    "temaSlug": "cg-espec",
+    "subtemaSlug": "cg-espec-emergencias-cirurgicas-pediatricas",
+    "tags": ["diverticulo-de-meckel","cintilografia-tc99","enterorragia"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -4919,7 +5268,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Sabiston Textbook of Surgery"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2303
   },
   {
@@ -4928,8 +5277,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 88,
     "grandeAreaId": "cirurgia_geral",
     "grandeArea": "Cirurgia Geral",
-    "tema": "Cirurgia Plástica",
-    "subtema": "Reconstrução de Extremidades — Retalhos",
+    "tema": "Perioperatório, Cicatrização e Anestesiologia",
+    "subtema": "Cicatrização de Feridas e Cirurgia Plástica Básica",
+    "temaSlug": "cg-periop",
+    "subtemaSlug": "cg-periop-cicatrizacao-de-feridas-e-cirurgia-plastica-basica",
+    "tags": ["retalhos","reconstrucao-digital","cirurgia-plastica"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -4976,7 +5329,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Tratado de Cirurgia Plástica — SBCP"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2303
   },
   {
@@ -4985,8 +5338,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 89,
     "grandeAreaId": "cirurgia_geral",
     "grandeArea": "Cirurgia Geral",
-    "tema": "Trauma (ATLS) / Queimaduras",
-    "subtema": "Queimaduras de Pálpebra — Conduta",
+    "tema": "Trauma e ATLS",
+    "subtema": "Queimaduras e Lesão Inalatória",
+    "temaSlug": "cg-trauma",
+    "subtemaSlug": "cg-trauma-queimaduras-e-lesao-inalatoria",
+    "tags": ["queimadura-palpebral","enxerto-de-pele-total","queimaduras"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -5033,17 +5390,21 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Tratado de Cirurgia Plástica — SBCP"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2303
   },
   {
     "id": "q-unifesp-2023-090",
     "code": "Q-UNIFESP23-0090",
     "numeroOriginal": 90,
-    "grandeAreaId": "pediatria",
-    "grandeArea": "Pediatria",
-    "tema": "Gastroenterologia Pediátrica / Cirurgia Pediátrica",
-    "subtema": "Fístula Perianal no Lactente",
+    "grandeAreaId": "cirurgia_geral",
+    "grandeArea": "Cirurgia Geral",
+    "tema": "Cirurgia do Aparelho Digestivo e Coloproctologia",
+    "subtema": "Doenças Orificiais",
+    "temaSlug": "cg-cad",
+    "subtemaSlug": "cg-cad-doencas-orificiais",
+    "tags": ["fistula-perianal","lactente","doencas-orificiais"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -5090,7 +5451,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Holcomb and Ashcraft's Pediatric Surgery"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2304
   },
   {
@@ -5099,8 +5460,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 91,
     "grandeAreaId": "cirurgia_geral",
     "grandeArea": "Cirurgia Geral",
-    "tema": "Cirurgia Torácica",
-    "subtema": "Estenose Traqueal Pós-Intubação",
+    "tema": "Cirurgia Pediátrica e Especialidades Cirúrgicas",
+    "subtema": "Otorrinolaringologia e Cabeça e Pescoço",
+    "temaSlug": "cg-espec",
+    "subtemaSlug": "cg-espec-otorrinolaringologia-e-cabeca-e-pescoco",
+    "tags": ["estenose-traqueal","pos-intubacao","broncoscopia"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -5147,7 +5512,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Fishman's Pulmonary Diseases and Disorders"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2304
   },
   {
@@ -5156,8 +5521,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 92,
     "grandeAreaId": "cirurgia_geral",
     "grandeArea": "Cirurgia Geral",
-    "tema": "Trauma",
-    "subtema": "Trauma Torácico — Lesão de Árvore Traqueobrônquica",
+    "tema": "Trauma e ATLS",
+    "subtema": "Trauma Torácico",
+    "temaSlug": "cg-trauma",
+    "subtemaSlug": "cg-trauma-trauma-toracico",
+    "tags": ["lesao-de-bronquio","pneumomediastino","trauma-toracico"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -5204,7 +5573,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Sabiston Textbook of Surgery"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2304
   },
   {
@@ -5213,8 +5582,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 93,
     "grandeAreaId": "cirurgia_geral",
     "grandeArea": "Cirurgia Geral",
-    "tema": "Anestesiologia / Complicações Perioperatórias",
-    "subtema": "Raquianestesia — Farmacologia e Técnica",
+    "tema": "Perioperatório, Cicatrização e Anestesiologia",
+    "subtema": "Anestesiologia Básica e Anestésicos Locais",
+    "temaSlug": "cg-periop",
+    "subtemaSlug": "cg-periop-anestesiologia-basica-e-anestesicos-locais",
+    "tags": ["raquianestesia","bupivacaina-isobarica","anestesiologia"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -5261,17 +5634,21 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Diretrizes da Sociedade Brasileira de Anestesiologia (SBA)"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2304
   },
   {
     "id": "q-unifesp-2023-094",
     "code": "Q-UNIFESP23-0094",
     "numeroOriginal": 94,
-    "grandeAreaId": "pediatria",
-    "grandeArea": "Pediatria",
-    "tema": "Gastroenterologia Pediátrica / Cirurgia Pediátrica",
-    "subtema": "Intussuscepção Intestinal",
+    "grandeAreaId": "cirurgia_geral",
+    "grandeArea": "Cirurgia Geral",
+    "tema": "Cirurgia Pediátrica e Especialidades Cirúrgicas",
+    "subtema": "Emergências Cirúrgicas Pediátricas",
+    "temaSlug": "cg-espec",
+    "subtemaSlug": "cg-espec-emergencias-cirurgicas-pediatricas",
+    "tags": ["invaginacao-intestinal","intussuscepcao","emergencia-pediatrica"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -5318,7 +5695,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Holcomb and Ashcraft's Pediatric Surgery"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2305
   },
   {
@@ -5327,8 +5704,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 95,
     "grandeAreaId": "cirurgia_geral",
     "grandeArea": "Cirurgia Geral",
-    "tema": "Cirurgia Torácica",
-    "subtema": "Pneumotórax Espontâneo — Conduta na Fístula Aérea Persistente",
+    "tema": "Trauma e ATLS",
+    "subtema": "Trauma Torácico",
+    "temaSlug": "cg-trauma",
+    "subtemaSlug": "cg-trauma-trauma-toracico",
+    "tags": ["pneumotorax-espontaneo","fistula-aerea-persistente","drenagem-toracica"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -5375,7 +5756,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "British Thoracic Society (BTS) Guidelines for Pleural Disease"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2305
   },
   {
@@ -5384,8 +5765,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 96,
     "grandeAreaId": "cirurgia_geral",
     "grandeArea": "Cirurgia Geral",
-    "tema": "Cirurgia de Cabeça e Pescoço",
-    "subtema": "Bócio Mergulhante (Intratorácico)",
+    "tema": "Cirurgia Pediátrica e Especialidades Cirúrgicas",
+    "subtema": "Otorrinolaringologia e Cabeça e Pescoço",
+    "temaSlug": "cg-espec",
+    "subtemaSlug": "cg-espec-otorrinolaringologia-e-cabeca-e-pescoco",
+    "tags": ["bocio-intratoracico","mediastino-superior","desvio-traqueal"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -5432,7 +5817,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Harrison's Principles of Internal Medicine"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2305
   },
   {
@@ -5441,8 +5826,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 97,
     "grandeAreaId": "cirurgia_geral",
     "grandeArea": "Cirurgia Geral",
-    "tema": "Trauma",
-    "subtema": "Traumatismo Cranioencefálico (TCE) — Lesão Axonal Difusa",
+    "tema": "Trauma e ATLS",
+    "subtema": "Trauma Cranioencefálico e Raquimedular",
+    "temaSlug": "cg-trauma",
+    "subtemaSlug": "cg-trauma-trauma-cranioencefalico-e-raquimedular",
+    "tags": ["lesao-axonal-difusa","tce","trauma-cranioencefalico"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -5489,7 +5878,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Greenberg's Handbook of Neurosurgery"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2305
   },
   {
@@ -5498,8 +5887,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 98,
     "grandeAreaId": "cirurgia_geral",
     "grandeArea": "Cirurgia Geral",
-    "tema": "Cirurgia Torácica",
-    "subtema": "Pós-Operatório de Pneumonectomia",
+    "tema": "Trauma e ATLS",
+    "subtema": "Trauma Torácico",
+    "temaSlug": "cg-trauma",
+    "subtemaSlug": "cg-trauma-trauma-toracico",
+    "tags": ["pos-operatorio-pneumonectomia","nivel-hidroaereo","cirurgia-toracica"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -5546,17 +5939,21 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Shields' General Thoracic Surgery"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2305
   },
   {
     "id": "q-unifesp-2023-099",
     "code": "Q-UNIFESP23-0099",
     "numeroOriginal": 99,
-    "grandeAreaId": "pediatria",
-    "grandeArea": "Pediatria",
-    "tema": "Endocrinologia Pediátrica",
-    "subtema": "Hiperplasia Adrenal Congênita",
+    "grandeAreaId": "cirurgia_geral",
+    "grandeArea": "Cirurgia Geral",
+    "tema": "Cirurgia Pediátrica e Especialidades Cirúrgicas",
+    "subtema": "Emergências Cirúrgicas Pediátricas",
+    "temaSlug": "cg-espec",
+    "subtemaSlug": "cg-espec-emergencias-cirurgicas-pediatricas",
+    "tags": ["criptorquidia","hiperplasia-adrenal-congenita","ultrassonografia-pelvica"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -5603,7 +6000,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "Diretrizes da Sociedade Brasileira de Pediatria (SBP)"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2306
   },
   {
@@ -5612,8 +6009,12 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 100,
     "grandeAreaId": "pediatria",
     "grandeArea": "Pediatria",
-    "tema": "Neurologia Pediátrica",
-    "subtema": "Hidrocefalia no Lactente",
+    "tema": "Emergências Pediátricas e Proteção Infantil",
+    "subtema": "Convulsão Febril e Emergências Neurológicas",
+    "temaSlug": "ped-emerg-ped",
+    "subtemaSlug": "ped-emerg-ped-convulsao-febril-e-emergencias-neurologicas",
+    "tags": ["hidrocefalia","usg-transfontanelar","lactente","sol-poente"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "UNIFESP",
     "instituicao": "UNIFESP",
     "estado": "SP",
@@ -5660,7 +6061,7 @@ export const UNIFESP_2023_QUESTIONS: MedicalQuestion[] = [
       "SBP — Tratado de Pediatria"
     ],
     "sourceBatch": "r1-2023-pack:unifesp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 2306
   }
 ];

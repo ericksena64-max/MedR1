@@ -11,8 +11,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 1,
     "grandeAreaId": "cirurgia_geral",
     "grandeArea": "Cirurgia Geral",
-    "tema": "Coloproctologia",
-    "subtema": "Fissura Anal Crônica",
+    "tema": "Cirurgia do Aparelho Digestivo e Coloproctologia",
+    "subtema": "Doenças Orificiais",
+    "temaSlug": "cg-cad",
+    "subtemaSlug": "cg-cad-doencas-orificiais",
+    "tags": ["fissura-anal-cronica","diltiazem-topico","hipertonia-esfincteriana","doencas-orificiais"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -65,7 +69,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Sabiston Textbook of Surgery"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1626
   },
   {
@@ -74,8 +78,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 2,
     "grandeAreaId": "cirurgia_geral",
     "grandeArea": "Cirurgia Geral",
-    "tema": "Coloproctologia / Oncologia Cirúrgica",
-    "subtema": "Rastreamento e Seguimento de Pólipos Colorretais",
+    "tema": "Cirurgia do Aparelho Digestivo e Coloproctologia",
+    "subtema": "Câncer Colorretal e Pólipos",
+    "temaSlug": "cg-cad",
+    "subtemaSlug": "cg-cad-cancer-colorretal-e-polipos",
+    "tags": ["polipos-colorretais","adenoma-com-displasia-de-alto-grau","colonoscopia-de-vigilancia","rastreamento-de-cancer-colorretal"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -128,7 +136,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Diretrizes da Sociedade Brasileira de Coloproctologia"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1626
   },
   {
@@ -137,8 +145,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 3,
     "grandeAreaId": "cirurgia_geral",
     "grandeArea": "Cirurgia Geral",
-    "tema": "Parede Abdominal e Hérnias",
-    "subtema": "Classificação de Nyhus das Hérnias Inguinocrurais",
+    "tema": "Hérnias e Parede Abdominal",
+    "subtema": "Hérnia Inguinal e Femoral",
+    "temaSlug": "cg-hernias",
+    "subtemaSlug": "cg-hernias-hernia-inguinal-e-femoral",
+    "tags": ["hernia-inguinal","hernia-femoral","indicacao-cirurgica","parede-abdominal"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -191,7 +203,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Sabiston Textbook of Surgery"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1626
   },
   {
@@ -200,8 +212,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 4,
     "grandeAreaId": "cirurgia_geral",
     "grandeArea": "Cirurgia Geral",
-    "tema": "Vias Biliares",
-    "subtema": "Colelitíase Assintomática — Indicações Cirúrgicas",
+    "tema": "Vias Biliares, Fígado e Pâncreas Cirúrgico",
+    "subtema": "Colelitíase e Colecistite Aguda",
+    "temaSlug": "cg-biliar",
+    "subtemaSlug": "cg-biliar-colelitiase-e-colecistite-aguda",
+    "tags": ["colelitiase-assintomatica","microcalculos-biliares","colecistectomia","risco-de-pancreatite-aguda"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -254,7 +270,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Diretrizes da Sociedade Brasileira de Cirurgia Digestiva (CBCD)"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1627
   },
   {
@@ -263,8 +279,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 5,
     "grandeAreaId": "cirurgia_geral",
     "grandeArea": "Cirurgia Geral",
-    "tema": "Coloproctologia / Oncologia Cirúrgica",
-    "subtema": "Câncer de Reto — Diagnóstico e Estadiamento",
+    "tema": "Cirurgia do Aparelho Digestivo e Coloproctologia",
+    "subtema": "Câncer Colorretal e Pólipos",
+    "temaSlug": "cg-cad",
+    "subtemaSlug": "cg-cad-cancer-colorretal-e-polipos",
+    "tags": ["cancer-de-reto","sangramento-retal","retossigmoidoscopia","estadiamento-tumoral"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -317,7 +337,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Diretrizes da Sociedade Brasileira de Coloproctologia"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1627
   },
   {
@@ -326,8 +346,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 6,
     "grandeAreaId": "cirurgia_geral",
     "grandeArea": "Cirurgia Geral",
-    "tema": "Pré e Pós-Operatório",
-    "subtema": "Complicações Pós-Operatórias — Insuficiência Renal Aguda",
+    "tema": "Perioperatório, Cicatrização e Anestesiologia",
+    "subtema": "Complicações Pós-Operatórias e Infecção de Sítio Cirúrgico",
+    "temaSlug": "cg-periop",
+    "subtemaSlug": "cg-periop-complicacoes-pos-operatorias-e-infeccao-de-sitio-cirurgico",
+    "tags": ["pos-operatorio","oliguria","reposicao-volemica","hipotensao"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -380,7 +404,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Sabiston Textbook of Surgery"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1627
   },
   {
@@ -389,8 +413,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 7,
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
-    "tema": "Medicina Intensiva",
+    "tema": "Infectologia",
     "subtema": "Sepse e Choque Séptico",
+    "temaSlug": "cm-infecto",
+    "subtemaSlug": "cm-infecto-sepse-e-choque-septico",
+    "tags": ["sepse","choque-septico","qsofa","gravidade-clinica"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -443,7 +471,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Surviving Sepsis Campaign 2021"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1628
   },
   {
@@ -452,8 +480,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 8,
     "grandeAreaId": "cirurgia_geral",
     "grandeArea": "Cirurgia Geral",
-    "tema": "Cicatrização de Feridas",
-    "subtema": "Fases da Cicatrização e Cuidados Pós-Operatórios",
+    "tema": "Perioperatório, Cicatrização e Anestesiologia",
+    "subtema": "Cicatrização de Feridas e Cirurgia Plástica Básica",
+    "temaSlug": "cg-periop",
+    "subtemaSlug": "cg-periop-cicatrizacao-de-feridas-e-cirurgia-plastica-basica",
+    "tags": ["cicatrizacao","radioterapia","isquemia-tecidual","reconstrucao-mamaria"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -506,7 +538,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Schwartz's Principles of Surgery"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1628
   },
   {
@@ -515,8 +547,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 9,
     "grandeAreaId": "cirurgia_geral",
     "grandeArea": "Cirurgia Geral",
-    "tema": "Trauma (ATLS) / Queimaduras",
-    "subtema": "Grande Queimado — Ressuscitação Volêmica e Monitorização do Débito Urinário",
+    "tema": "Trauma e ATLS",
+    "subtema": "Queimaduras e Lesão Inalatória",
+    "temaSlug": "cg-trauma",
+    "subtemaSlug": "cg-trauma-queimaduras-e-lesao-inalatoria",
+    "tags": ["grande-queimado","regra-dos-noves","reposicao-volemica","parkland","intubacao-orotraqueal"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -569,7 +605,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Manual de Queimaduras do Ministério da Saúde"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1628,
     "hasPdfFigure": true,
     "clinicalImage": {
@@ -586,7 +622,11 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "grandeAreaId": "cirurgia_geral",
     "grandeArea": "Cirurgia Geral",
     "tema": "Trauma e ATLS",
-    "subtema": "Trauma Raquimedular",
+    "subtema": "Trauma Cranioencefálico e Raquimedular",
+    "temaSlug": "cg-trauma",
+    "subtemaSlug": "cg-trauma-trauma-cranioencefalico-e-raquimedular",
+    "tags": ["trauma-raquimedular","trm","avaliacao-neurologica","atls"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -639,7 +679,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "PHTLS 9ª Edição"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1629
   },
   {
@@ -648,8 +688,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 11,
     "grandeAreaId": "cirurgia_geral",
     "grandeArea": "Cirurgia Geral",
-    "tema": "Vias Biliares",
-    "subtema": "Colangite Aguda (Tríade de Charcot e Conduta Inicial — Tokyo Guidelines)",
+    "tema": "Vias Biliares, Fígado e Pâncreas Cirúrgico",
+    "subtema": "Coledocolitíase e Colangite Aguda",
+    "temaSlug": "cg-biliar",
+    "subtemaSlug": "cg-biliar-coledocolitiase-e-colangite-aguda",
+    "tags": ["colangite-aguda","triade-de-charcot","ictericia","febre"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -702,7 +746,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Sabiston Textbook of Surgery"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1630
   },
   {
@@ -711,8 +755,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 12,
     "grandeAreaId": "cirurgia_geral",
     "grandeArea": "Cirurgia Geral",
-    "tema": "Vias Biliares",
-    "subtema": "Colangite Aguda (Tríade de Charcot e Conduta Inicial — Tokyo Guidelines)",
+    "tema": "Vias Biliares, Fígado e Pâncreas Cirúrgico",
+    "subtema": "Coledocolitíase e Colangite Aguda",
+    "temaSlug": "cg-biliar",
+    "subtemaSlug": "cg-biliar-coledocolitiase-e-colangite-aguda",
+    "tags": ["colangite-aguda","pentade-de-reynolds","choque-septico","ictericia"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -765,7 +813,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Sabiston Textbook of Surgery"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1630
   },
   {
@@ -775,7 +823,11 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "grandeAreaId": "cirurgia_geral",
     "grandeArea": "Cirurgia Geral",
     "tema": "Abdome Agudo",
-    "subtema": "Apendicite Aguda — Sinais Semiológicos",
+    "subtema": "Apendicite Aguda",
+    "temaSlug": "cg-abdome",
+    "subtemaSlug": "cg-abdome-apendicite-aguda",
+    "tags": ["apendicite-aguda","abdome-agudo","tomografia-computadorizada","diagnostico-diferencial"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -828,7 +880,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Diretrizes da Sociedade Brasileira de Cirurgia Geral"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1630
   },
   {
@@ -837,8 +889,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 14,
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
-    "tema": "Gastroenterologia / Hepatologia",
-    "subtema": "Hemorragia Digestiva Alta por Úlcera Péptica",
+    "tema": "Gastroenterologia e Hepatologia",
+    "subtema": "Hemorragia Digestiva Alta",
+    "temaSlug": "cm-gastro",
+    "subtemaSlug": "cm-gastro-hemorragia-digestiva-alta",
+    "tags": ["hemorragia-digestiva-alta","classificacao-de-forrest","ulcera-peptica","endoscopia"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -890,7 +946,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Consenso de Hemorragia Digestiva Alta da Sociedade Brasileira de Endoscopia Digestiva (SOBED)"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1631
   },
   {
@@ -899,8 +955,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 15,
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
-    "tema": "Gastroenterologia / Hepatologia",
-    "subtema": "Hemorragia Digestiva Alta e Baixa",
+    "tema": "Gastroenterologia e Hepatologia",
+    "subtema": "Hemorragia Digestiva Alta",
+    "temaSlug": "cm-gastro",
+    "subtemaSlug": "cm-gastro-hemorragia-digestiva-alta",
+    "tags": ["hemorragia-digestiva-alta","hemorragia-digestiva-baixa","melena","enterorragia"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -952,17 +1012,21 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Harrison's Principles of Internal Medicine"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1631
   },
   {
     "id": "q-sus-sp-2023-016",
     "code": "Q-SUSSP23-0016",
     "numeroOriginal": 16,
-    "grandeAreaId": "cirurgia_geral",
-    "grandeArea": "Cirurgia Geral",
-    "tema": "Abdome Agudo",
-    "subtema": "Pancreatite Aguda Grave — Conduta Inicial",
+    "grandeAreaId": "clinica_medica",
+    "grandeArea": "Clínica Médica",
+    "tema": "Gastroenterologia e Hepatologia",
+    "subtema": "Pancreatite Aguda e Crônica",
+    "temaSlug": "cm-gastro",
+    "subtemaSlug": "cm-gastro-pancreatite-aguda-e-cronica",
+    "tags": ["pancreatite-aguda","criterios-de-gravidade","necrose-pancreatica","tomografia-computadorizada"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -1015,7 +1079,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Diretrizes da Associação Brasileira de Pancreatologia"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1631
   },
   {
@@ -1025,7 +1089,11 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "grandeAreaId": "cirurgia_geral",
     "grandeArea": "Cirurgia Geral",
     "tema": "Abdome Agudo",
-    "subtema": "Abdome Agudo Obstrutivo — Volvo de Sigmoide",
+    "subtema": "Abdome Agudo Obstrutivo",
+    "temaSlug": "cg-abdome",
+    "subtemaSlug": "cg-abdome-abdome-agudo-obstrutivo",
+    "tags": ["abdome-agudo-obstrutivo","obstrucao-intestinal","etiologia","diagnostico"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -1078,7 +1146,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Schwartz's Principles of Surgery"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1631
   },
   {
@@ -1087,8 +1155,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 18,
     "grandeAreaId": "cirurgia_geral",
     "grandeArea": "Cirurgia Geral",
-    "tema": "Trauma",
-    "subtema": "Trauma Cervical Penetrante",
+    "tema": "Trauma e ATLS",
+    "subtema": "Trauma Cervical, Vascular e de Extremidades",
+    "temaSlug": "cg-trauma",
+    "subtemaSlug": "cg-trauma-trauma-cervical-vascular-e-de-extremidades",
+    "tags": ["trauma-cervical","ferimento-penetrante","zona-ii-cervical","propedeutica-no-trauma"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -1141,7 +1213,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Western Trauma Association Critical Decisions in Trauma"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1631
   },
   {
@@ -1150,8 +1222,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 19,
     "grandeAreaId": "cirurgia_geral",
     "grandeArea": "Cirurgia Geral",
-    "tema": "Trauma Abdominal",
-    "subtema": "Tratamento Não Operatório (TNO) no Trauma Abdominal",
+    "tema": "Trauma e ATLS",
+    "subtema": "Trauma Abdominal e Pélvico",
+    "temaSlug": "cg-trauma",
+    "subtemaSlug": "cg-trauma-trauma-abdominal-e-pelvico",
+    "tags": ["trauma-abdominal","tratamento-nao-operatorio","trauma-abdominal-fechado","tomografia-computadorizada"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -1204,7 +1280,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "WSES Guidelines on Liver/Spleen Trauma"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1632
   },
   {
@@ -1214,7 +1290,11 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "grandeAreaId": "cirurgia_geral",
     "grandeArea": "Cirurgia Geral",
     "tema": "Trauma e ATLS",
-    "subtema": "Atendimento Inicial ao Politraumatizado (ATLS)",
+    "subtema": "Atendimento Inicial ao Politraumatizado",
+    "temaSlug": "cg-trauma",
+    "subtemaSlug": "cg-trauma-atendimento-inicial-ao-politraumatizado",
+    "tags": ["atls","atendimento-inicial","politraumatizado","vias-aereas"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -1266,7 +1346,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "ATLS 10ª Edição"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1632
   },
   {
@@ -1275,8 +1355,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 21,
     "grandeAreaId": "pediatria",
     "grandeArea": "Pediatria",
-    "tema": "Puericultura / Hematologia Pediátrica",
-    "subtema": "Profilaxia da Anemia Ferropriva no Lactente (SBP)",
+    "tema": "Puericultura, Crescimento e Nutrição",
+    "subtema": "Alimentação Complementar e Carências Nutricionais",
+    "temaSlug": "ped-puericultura",
+    "subtemaSlug": "ped-puericultura-alimentacao-complementar-e-carencias-nutricionais",
+    "tags": ["suplementacao-de-ferro","anemia-ferropriva","puericultura","diretriz-sbp"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -1328,17 +1412,21 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "SBP — Guia Prático de Atualização: Anemia Ferropriva (2021)"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1633
   },
   {
     "id": "q-sus-sp-2023-022",
     "code": "Q-SUSSP23-0022",
     "numeroOriginal": 22,
-    "grandeAreaId": "pediatria",
-    "grandeArea": "Pediatria",
-    "tema": "Dermatologia Pediátrica",
-    "subtema": "Dermatite Atópica",
+    "grandeAreaId": "clinica_medica",
+    "grandeArea": "Clínica Médica",
+    "tema": "Dermatologia",
+    "subtema": "Dermatoses Eczematosas e Psoríase",
+    "temaSlug": "cm-dermato",
+    "subtemaSlug": "cm-dermato-dermatoses-eczematosas-e-psoriase",
+    "tags": ["dermatite-atopica","prurido","eczema-infantil","hidratacao-cutanea"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -1390,7 +1478,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Tratado de Pediatria SBP — 5ª Edição"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1633
   },
   {
@@ -1399,8 +1487,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 23,
     "grandeAreaId": "pediatria",
     "grandeArea": "Pediatria",
-    "tema": "Hematologia Pediátrica",
-    "subtema": "Deficiência de G6PD",
+    "tema": "Cardiologia, Hematologia e Oncologia Pediátrica",
+    "subtema": "Anemias e Doença Falciforme na Infância",
+    "temaSlug": "ped-cardio-hemato-ped",
+    "subtemaSlug": "ped-cardio-hemato-ped-anemias-e-doenca-falciforme-na-infancia",
+    "tags": ["deficiencia-de-g6pd","anemia-hemolitica","naftalina","crise-hemolitica"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -1452,7 +1544,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Nelson Textbook of Pediatrics — 21st Edition"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1633
   },
   {
@@ -1461,8 +1553,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 24,
     "grandeAreaId": "pediatria",
     "grandeArea": "Pediatria",
-    "tema": "Infectologia Pediátrica",
-    "subtema": "Tuberculose na Infância — Investigação de Contatos e ILTB",
+    "tema": "Infectologia Pediátrica e Exantemáticas",
+    "subtema": "Tuberculose e Arboviroses na Infância",
+    "temaSlug": "ped-infecto-ped",
+    "subtemaSlug": "ped-infecto-ped-tuberculose-e-arboviroses-na-infancia",
+    "tags": ["tuberculose","rn-exposto","vacina-bcg","amamentacao"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -1514,7 +1610,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Ministério da Saúde — Manual de Recomendações para o Controle da Tuberculose no Brasil"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1634
   },
   {
@@ -1524,7 +1620,11 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "grandeAreaId": "pediatria",
     "grandeArea": "Pediatria",
     "tema": "Imunizações",
-    "subtema": "Calendário Nacional de Vacinação (PNI — Atualizações)",
+    "subtema": "Calendário Nacional de Vacinação - PNI",
+    "temaSlug": "ped-vacinas",
+    "subtemaSlug": "ped-vacinas-calendario-nacional-de-vacinacao-pni",
+    "tags": ["vacina-hpv","pni","imunizacao","esquema-vacinal"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -1576,7 +1676,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Calendário Nacional de Vacinação — Ministério da Saúde"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1634
   },
   {
@@ -1585,8 +1685,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 26,
     "grandeAreaId": "pediatria",
     "grandeArea": "Pediatria",
-    "tema": "Gastroenterologia Pediátrica / Infectopediatria",
-    "subtema": "Parasitoses Intestinais — Enterobíase",
+    "tema": "Infectologia Pediátrica e Exantemáticas",
+    "subtema": "Parasitoses Intestinais",
+    "temaSlug": "ped-infecto-ped",
+    "subtemaSlug": "ped-infecto-ped-parasitoses-intestinais",
+    "tags": ["enterobioze","enterobius-vermicularis","prurido-anal","vulvovaginite"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -1638,7 +1742,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Tratado de Pediatria SBP — 5ª Edição"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1634
   },
   {
@@ -1647,8 +1751,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 27,
     "grandeAreaId": "pediatria",
     "grandeArea": "Pediatria",
-    "tema": "Puericultura / Aleitamento Materno",
-    "subtema": "Aleitamento Materno e Prevenção de Alergias (APLV)",
+    "tema": "Gastroenterologia e Nefrologia Pediátrica",
+    "subtema": "Diarreia Crônica, APLV e Doença Celíaca",
+    "temaSlug": "ped-gastro-nefro-ped",
+    "subtemaSlug": "ped-gastro-nefro-ped-diarreia-cronica-aplv-e-doenca-celiaca",
+    "tags": ["aplv","aleitamento-materno","dieta-de-exclusao","alergia-alimentar"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -1700,7 +1808,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Guia Prático de Atualização SBP: Alergia Alimentar (2021)"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1634
   },
   {
@@ -1709,8 +1817,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 28,
     "grandeAreaId": "pediatria",
     "grandeArea": "Pediatria",
-    "tema": "Pneumopediatria",
-    "subtema": "Pneumonia Bacteriana",
+    "tema": "Pneumologia Pediátrica",
+    "subtema": "Pneumonia Adquirida na Comunidade em Pediatria",
+    "temaSlug": "ped-pneumo-ped",
+    "subtemaSlug": "ped-pneumo-ped-pneumonia-adquirida-na-comunidade-em-pediatria",
+    "tags": ["pac-pediatrica","etiologia-bacteriana","mycoplasma-pneumoniae","fatores-de-risco"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -1762,7 +1874,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Tratado de Pediatria SBP — 5ª Edição"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1635
   },
   {
@@ -1771,8 +1883,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 29,
     "grandeAreaId": "pediatria",
     "grandeArea": "Pediatria",
-    "tema": "Infectopediatria",
-    "subtema": "Meningite Bacteriana e Análise do LCR",
+    "tema": "Infectologia Pediátrica e Exantemáticas",
+    "subtema": "Meningites e Sepse em Pediatria",
+    "temaSlug": "ped-infecto-ped",
+    "subtemaSlug": "ped-infecto-ped-meningites-e-sepse-em-pediatria",
+    "tags": ["meningite-tuberculosa","liquor","mycobacterium-tuberculosis","analise-do-lcr"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -1824,7 +1940,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Ministério da Saúde — Manual de Recomendações para o Controle da Tuberculose no Brasil"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1635
   },
   {
@@ -1833,8 +1949,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 30,
     "grandeAreaId": "pediatria",
     "grandeArea": "Pediatria",
-    "tema": "Neurologia Pediátrica",
-    "subtema": "Crise Febril em Lactentes — Indicação de Punção Lombar",
+    "tema": "Emergências Pediátricas e Proteção Infantil",
+    "subtema": "Convulsão Febril e Emergências Neurológicas",
+    "temaSlug": "ped-emerg-ped",
+    "subtemaSlug": "ped-emerg-ped-convulsao-febril-e-emergencias-neurologicas",
+    "tags": ["crise-febril","convulsao-febril","conduta-emergencia","lactente"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -1886,7 +2006,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "SBP — Guia Prático: Crise Febril (2022)"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1636
   },
   {
@@ -1896,7 +2016,11 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "grandeAreaId": "pediatria",
     "grandeArea": "Pediatria",
     "tema": "Pneumologia Pediátrica",
-    "subtema": "Resfriado Comum",
+    "subtema": "Infecções de Vias Aéreas Superiores",
+    "temaSlug": "ped-pneumo-ped",
+    "subtemaSlug": "ped-pneumo-ped-infeccoes-de-vias-aereas-superiores",
+    "tags": ["resfriado-comum","ivas","lavagem-nasal","conduta-ambulatorial"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -1948,17 +2072,21 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Tratado de Pediatria SBP — 5ª Edição"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1636
   },
   {
     "id": "q-sus-sp-2023-032",
     "code": "Q-SUSSP23-0032",
     "numeroOriginal": 32,
-    "grandeAreaId": "pediatria",
-    "grandeArea": "Pediatria",
-    "tema": "Emergências Pediátricas",
-    "subtema": "Traumatismo Cranioencefálico",
+    "grandeAreaId": "cirurgia_geral",
+    "grandeArea": "Cirurgia Geral",
+    "tema": "Trauma e ATLS",
+    "subtema": "Trauma Cranioencefálico e Raquimedular",
+    "temaSlug": "cg-trauma",
+    "subtemaSlug": "cg-trauma-trauma-cranioencefalico-e-raquimedular",
+    "tags": ["tce","trauma-pediatrico","pecarn","mecanismo-de-trauma"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -2010,7 +2138,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "PECARN — Pediatric Emergency Care Applied Research Network"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1636
   },
   {
@@ -2019,8 +2147,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 33,
     "grandeAreaId": "pediatria",
     "grandeArea": "Pediatria",
-    "tema": "Emergências Pediátricas",
-    "subtema": "Ingestão de Corpo Estranho na Infância",
+    "tema": "Emergências Pediátricas e Proteção Infantil",
+    "subtema": "Acidentes, Intoxicações e Maus-Tratos na Infância",
+    "temaSlug": "ped-emerg-ped",
+    "subtemaSlug": "ped-emerg-ped-acidentes-intoxicacoes-e-maus-tratos-na-infancia",
+    "tags": ["corpo-estranho","ingestao-de-bateria","endoscopia-digestiva-alta","emergencias-pediatricas"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -2072,7 +2204,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "NASPGHAN — Management of Ingested Foreign Bodies in Children"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1636
   },
   {
@@ -2081,8 +2213,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 34,
     "grandeAreaId": "pediatria",
     "grandeArea": "Pediatria",
-    "tema": "Pneumopediatria",
-    "subtema": "Crise Asmática Moderada/Grave na Infância — Conduta na Emergência",
+    "tema": "Pneumologia Pediátrica",
+    "subtema": "Asma na Infância e Fibrose Cística",
+    "temaSlug": "ped-pneumo-ped",
+    "subtemaSlug": "ped-pneumo-ped-asma-na-infancia-e-fibrose-cistica",
+    "tags": ["asma-infantil","gina-2022","crise-asmatica","corticoterapia"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -2134,7 +2270,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "GINA — Global Initiative for Asthma (2022)"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1637
   },
   {
@@ -2143,8 +2279,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 35,
     "grandeAreaId": "pediatria",
     "grandeArea": "Pediatria",
-    "tema": "Emergências Pediátricas / Terapia Intensiva",
-    "subtema": "Suporte Avançado de Vida em Pediatria (PALS)",
+    "tema": "Emergências Pediátricas e Proteção Infantil",
+    "subtema": "Suporte Avançado de Vida em Pediatria - PALS",
+    "temaSlug": "ped-emerg-ped",
+    "subtemaSlug": "ped-emerg-ped-suporte-avancado-de-vida-em-pediatria-pals",
+    "tags": ["pals","pcr-pediatrica","ritmo-chocavel","desfibrilacao"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -2196,7 +2336,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "PALS — Pediatric Advanced Life Support (AHA 2020)"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1637
   },
   {
@@ -2205,8 +2345,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 36,
     "grandeAreaId": "pediatria",
     "grandeArea": "Pediatria",
-    "tema": "Nefrologia Pediátrica",
-    "subtema": "Síndrome Nefrótica na Infância (Lesão Mínima) — Diagnóstico e Manejo Terapêutico",
+    "tema": "Gastroenterologia e Nefrologia Pediátrica",
+    "subtema": "Síndrome Nefrítica e Nefrótica Pediátrica",
+    "temaSlug": "ped-gastro-nefro-ped",
+    "subtemaSlug": "ped-gastro-nefro-ped-sindrome-nefritica-e-nefrotica-pediatrica",
+    "tags": ["sindrome-nefrotica","lesao-minima","hipoalbuminemia","proteinuria"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -2258,7 +2402,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Tratado de Pediatria SBP — 5ª Edição"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1637
   },
   {
@@ -2268,7 +2412,11 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "grandeAreaId": "pediatria",
     "grandeArea": "Pediatria",
     "tema": "Pneumologia Pediátrica",
-    "subtema": "Bronquiolite Viral Aguda — Critérios de Internação e Suporte",
+    "subtema": "Bronquiolite Viral Aguda e Coqueluche",
+    "temaSlug": "ped-pneumo-ped",
+    "subtemaSlug": "ped-pneumo-ped-bronquiolite-viral-aguda-e-coqueluche",
+    "tags": ["bronquiolite-viral-aguda","vsr","broncodilatador","diretrizes-sbp"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -2320,7 +2468,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "SBP — Diretrizes no Manejo da Bronquiolite Viral Aguda"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1638
   },
   {
@@ -2329,8 +2477,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 38,
     "grandeAreaId": "pediatria",
     "grandeArea": "Pediatria",
-    "tema": "Infectologia Pediátrica",
-    "subtema": "Dengue",
+    "tema": "Infectologia Pediátrica e Exantemáticas",
+    "subtema": "Tuberculose e Arboviroses na Infância",
+    "temaSlug": "ped-infecto-ped",
+    "subtemaSlug": "ped-infecto-ped-tuberculose-e-arboviroses-na-infancia",
+    "tags": ["dengue","sinais-de-alarme","reposicao-volemica","notificacao-compulsoria"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -2382,7 +2534,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Ministério da Saúde — Dengue: Diagnóstico e Manejo Clínico"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1638
   },
   {
@@ -2391,8 +2543,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 39,
     "grandeAreaId": "pediatria",
     "grandeArea": "Pediatria",
-    "tema": "Gastroenterologia Pediátrica",
-    "subtema": "Doença Diarreica Aguda, Disenteria e Plano B de Reidratação",
+    "tema": "Gastroenterologia e Nefrologia Pediátrica",
+    "subtema": "Diarreia Aguda e Desidratação",
+    "temaSlug": "ped-gastro-nefro-ped",
+    "subtemaSlug": "ped-gastro-nefro-ped-diarreia-aguda-e-desidratacao",
+    "tags": ["diarreia-aguda","desidratacao","plano-b","reidratacao-oral"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -2444,7 +2600,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Ministério da Saúde — Manejo da Criança com Diarreia Aguda"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1638
   },
   {
@@ -2453,8 +2609,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 40,
     "grandeAreaId": "pediatria",
     "grandeArea": "Pediatria",
-    "tema": "Puericultura / Endocrinologia Pediátrica",
-    "subtema": "Obesidade Infantil — Fatores de Risco e Prevenção",
+    "tema": "Puericultura, Crescimento e Nutrição",
+    "subtema": "Obesidade Infantil e Desnutrição Grave",
+    "temaSlug": "ped-puericultura",
+    "subtemaSlug": "ped-puericultura-obesidade-infantil-e-desnutricao-grave",
+    "tags": ["obesidade-infantil","antropometria","circunferencia-abdominal","risco-cardiovascular"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -2506,7 +2666,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "SBP — Manual de Orientação: Obesidade na Infância e Adolescência"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1639
   },
   {
@@ -2515,8 +2675,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 41,
     "grandeAreaId": "ginecologia_obstetricia",
     "grandeArea": "Ginecologia e Obstetrícia",
-    "tema": "Ginecologia",
-    "subtema": "Massas Anexiais",
+    "tema": "Oncologia Ginecológica e Mastologia",
+    "subtema": "Câncer de Ovário e Massas Anexiais",
+    "temaSlug": "go-onco-go",
+    "subtemaSlug": "go-onco-go-cancer-de-ovario-e-massas-anexiais",
+    "tags": ["massas-anexiais","ultrassonografia-transvaginal","rastreamento","ginecologia"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -2569,7 +2733,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "USPSTF — Screening for Ovarian Cancer: Recommendation Statement"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1639
   },
   {
@@ -2578,8 +2742,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 42,
     "grandeAreaId": "ginecologia_obstetricia",
     "grandeArea": "Ginecologia e Obstetrícia",
-    "tema": "Ginecologia",
-    "subtema": "Atendimento à Vítima de Violência Sexual",
+    "tema": "Ginecologia Geral e Uroginecologia",
+    "subtema": "Violência Sexual e Aborto Previsto em Lei",
+    "temaSlug": "go-gineco-geral",
+    "subtemaSlug": "go-gineco-geral-violencia-sexual-e-aborto-previsto-em-lei",
+    "tags": ["violencia-sexual","profilaxia-pep","hiv","preservativo","indicacao-pep"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -2631,7 +2799,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Protocolo Clínico e Diretrizes Terapêuticas para Profilaxia Pós-Exposição (PEP) de Risco à Infecção pelo HIV, IST e Hepatites Virais — Ministério da Saúde"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1639
   },
   {
@@ -2640,8 +2808,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 43,
     "grandeAreaId": "ginecologia_obstetricia",
     "grandeArea": "Ginecologia e Obstetrícia",
-    "tema": "Ginecologia / Sangramento Uterino Anormal",
-    "subtema": "Adenomiose",
+    "tema": "Ginecologia Geral e Uroginecologia",
+    "subtema": "Endometriose e Adenomiose",
+    "temaSlug": "go-gineco-geral",
+    "subtemaSlug": "go-gineco-geral-endometriose-e-adenomiose",
+    "tags": ["adenomiose","sangramento-uterino-anormal","ultrassonografia","dismenorreia"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -2693,7 +2865,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) — Tratado de Ginecologia"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1640
   },
   {
@@ -2702,8 +2874,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 44,
     "grandeAreaId": "ginecologia_obstetricia",
     "grandeArea": "Ginecologia e Obstetrícia",
-    "tema": "Ginecologia / Sangramento Uterino Anormal",
-    "subtema": "Pólipo Endometrial",
+    "tema": "Ginecologia Geral e Uroginecologia",
+    "subtema": "Miomatose Uterina e Pólipos",
+    "temaSlug": "go-gineco-geral",
+    "subtemaSlug": "go-gineco-geral-miomatose-uterina-e-polipos",
+    "tags": ["polipo-endometrial","sangramento-uterino-anormal","histeroscopia","ultrassonografia-transvaginal"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -2755,7 +2931,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "FEBRASGO — Manual de Ginecologia Endócrina"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1640
   },
   {
@@ -2764,8 +2940,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 45,
     "grandeAreaId": "ginecologia_obstetricia",
     "grandeArea": "Ginecologia e Obstetrícia",
-    "tema": "Oncologia Ginecológica",
-    "subtema": "Sangramento Pós-Menopausa e Câncer de Endométrio",
+    "tema": "Oncologia Ginecológica e Mastologia",
+    "subtema": "Câncer de Endométrio",
+    "temaSlug": "go-onco-go",
+    "subtemaSlug": "go-onco-go-cancer-de-endometrio",
+    "tags": ["sangramento-pos-menopausa","cancer-de-endometrio","espessamento-endometrial","histeroscopia-com-biopsia"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -2817,17 +2997,21 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Diretrizes Brasileiras para o Diagnóstico e Tratamento do Câncer de Endométrio"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1641
   },
   {
     "id": "q-sus-sp-2023-046",
     "code": "Q-SUSSP23-0046",
     "numeroOriginal": 46,
-    "grandeAreaId": "ginecologia_obstetricia",
-    "grandeArea": "Ginecologia e Obstetrícia",
-    "tema": "Ginecologia Endócrina / Climatério",
-    "subtema": "Osteoporose",
+    "grandeAreaId": "clinica_medica",
+    "grandeArea": "Clínica Médica",
+    "tema": "Endocrinologia e Metabologia",
+    "subtema": "Osteoporose e Doenças Osteometabólicas",
+    "temaSlug": "cm-endocrino",
+    "subtemaSlug": "cm-endocrino-osteoporose-e-doencas-osteometabolicas",
+    "tags": ["osteoporose","menopausa","tratamento-nao-farmacologico","densidade-mineral-ossea"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -2879,7 +3063,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Protocolo Clínico e Diretrizes Terapêuticas da Osteoporose — Ministério da Saúde"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1641
   },
   {
@@ -2888,8 +3072,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 47,
     "grandeAreaId": "ginecologia_obstetricia",
     "grandeArea": "Ginecologia e Obstetrícia",
-    "tema": "Ginecologia Endócrina",
-    "subtema": "Amenorreia Primária — Síndrome de Mayer-Rokitansky-Küster-Hauser",
+    "tema": "Ginecologia Endócrina e Reprodutiva",
+    "subtema": "Fisiologia do Ciclo Menstrual e Amenorreias",
+    "temaSlug": "go-gineco-endocrino",
+    "subtemaSlug": "go-gineco-endocrino-fisiologia-do-ciclo-menstrual-e-amenorreias",
+    "tags": ["amenorreia-primaria","rokitansky","sindrome-de-morris","cariotipo","vagina-em-fundo-cego"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -2941,7 +3129,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "FEBRASGO — Manual de Ginecologia Endócrina"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1641
   },
   {
@@ -2950,8 +3138,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 48,
     "grandeAreaId": "ginecologia_obstetricia",
     "grandeArea": "Ginecologia e Obstetrícia",
-    "tema": "Ginecologia Endócrina",
-    "subtema": "Síndrome dos Ovários Policísticos (SOP) e Hirsutismo",
+    "tema": "Ginecologia Endócrina e Reprodutiva",
+    "subtema": "Síndrome dos Ovários Policísticos",
+    "temaSlug": "go-gineco-endocrino",
+    "subtemaSlug": "go-gineco-endocrino-sindrome-dos-ovarios-policisticos",
+    "tags": ["sop","hirsutismo","escala-de-ferriman-gallwey","anticoncepcional-oral-combinado","oligomenorreia"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -3003,7 +3195,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "FEBRASGO — Protocolo de Síndrome dos Ovários Policísticos"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1642
   },
   {
@@ -3012,8 +3204,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 49,
     "grandeAreaId": "ginecologia_obstetricia",
     "grandeArea": "Ginecologia e Obstetrícia",
-    "tema": "Uroginecologia",
-    "subtema": "Prolapso de Órgãos Pélvicos — Classificação POP-Q (ICS)",
+    "tema": "Ginecologia Geral e Uroginecologia",
+    "subtema": "Incontinência Urinária e Prolapsos Genitais",
+    "temaSlug": "go-gineco-geral",
+    "subtemaSlug": "go-gineco-geral-incontinencia-urinaria-e-prolapsos-genitais",
+    "tags": ["prolapso-genital","pop-q","colpocleise","pessario-vaginal"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -3065,7 +3261,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "FEBRASGO — Manual de Uroginecologia e Cirurgia Vaginal"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1642
   },
   {
@@ -3074,8 +3270,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 50,
     "grandeAreaId": "ginecologia_obstetricia",
     "grandeArea": "Ginecologia e Obstetrícia",
-    "tema": "Ginecologia / Mastologia",
-    "subtema": "Câncer de Mama — Rastreamento",
+    "tema": "Oncologia Ginecológica e Mastologia",
+    "subtema": "Rastreamento e Câncer de Mama",
+    "temaSlug": "go-onco-go",
+    "subtemaSlug": "go-onco-go-rastreamento-e-cancer-de-mama",
+    "tags": ["cancer-de-mama","rastreamento","mamografia","densidade-mamaria","ultrassonografia-mamaria"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -3128,7 +3328,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Posicionamento SBM/FEBRASGO/CBR sobre Rastreamento"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1643
   },
   {
@@ -3137,8 +3337,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 51,
     "grandeAreaId": "ginecologia_obstetricia",
     "grandeArea": "Ginecologia e Obstetrícia",
-    "tema": "Obstetrícia",
-    "subtema": "Classificação de Robson",
+    "tema": "Parto, Prematuridade e Puerpério",
+    "subtema": "Partograma e Distocias",
+    "temaSlug": "go-parto",
+    "subtemaSlug": "go-parto-partograma-e-distocias",
+    "tags": ["classificacao-de-robson","gestacao-gemelar","robson-8","via-de-parto"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -3190,7 +3394,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "WHO — Robson Classification: Implementation Manual"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1643
   },
   {
@@ -3199,8 +3403,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 52,
     "grandeAreaId": "ginecologia_obstetricia",
     "grandeArea": "Ginecologia e Obstetrícia",
-    "tema": "Obstetrícia / Parto",
-    "subtema": "Índice de Bishop",
+    "tema": "Parto, Prematuridade e Puerpério",
+    "subtema": "Indução do Parto e Gestação Pós-Termo",
+    "temaSlug": "go-parto",
+    "subtemaSlug": "go-parto-inducao-do-parto-e-gestacao-pos-termo",
+    "tags": ["indice-de-bishop","inducao-do-parto","apagamento-cervical","maturacao-cervical"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -3252,7 +3460,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "FEBRASGO — Manual de Indução do Parto"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1643
   },
   {
@@ -3261,8 +3469,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 53,
     "grandeAreaId": "ginecologia_obstetricia",
     "grandeArea": "Ginecologia e Obstetrícia",
-    "tema": "Obstetrícia / Pré-Natal",
-    "subtema": "Procedimentos Invasivos",
+    "tema": "Sangramentos da Gestação",
+    "subtema": "Doença Hemolítica Perinatal",
+    "temaSlug": "go-sangramento",
+    "subtemaSlug": "go-sangramento-doenca-hemolitica-perinatal",
+    "tags": ["procedimentos-invasivos","imunoglobulina-anti-d","fator-rh","medicina-fetal"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -3314,7 +3526,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "FEBRASGO — Medicina Fetal"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1643
   },
   {
@@ -3323,8 +3535,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 54,
     "grandeAreaId": "ginecologia_obstetricia",
     "grandeArea": "Ginecologia e Obstetrícia",
-    "tema": "Obstetrícia / Parto",
-    "subtema": "Partograma e Distócias",
+    "tema": "Parto, Prematuridade e Puerpério",
+    "subtema": "Mecanismo e Assistência ao Trabalho de Parto",
+    "temaSlug": "go-parto",
+    "subtemaSlug": "go-parto-mecanismo-e-assistencia-ao-trabalho-de-parto",
+    "tags": ["trabalho-de-parto","assistencia-ao-parto","ausculta-fetal-intermitente","partograma"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -3376,7 +3592,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Diretriz Nacional de Assistência ao Parto Normal — Ministério da Saúde"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1644
   },
   {
@@ -3385,8 +3601,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 55,
     "grandeAreaId": "ginecologia_obstetricia",
     "grandeArea": "Ginecologia e Obstetrícia",
-    "tema": "Obstetrícia / Parto",
-    "subtema": "Assistência ao Parto — Fórceps",
+    "tema": "Parto, Prematuridade e Puerpério",
+    "subtema": "Mecanismo e Assistência ao Trabalho de Parto",
+    "temaSlug": "go-parto",
+    "subtemaSlug": "go-parto-mecanismo-e-assistencia-ao-trabalho-de-parto",
+    "tags": ["forceps","parto-operatorio","apresentacao-pelvica","cabeca-derradeira"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -3438,7 +3658,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "FEBRASGO — Manual de Assistência ao Parto"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1644
   },
   {
@@ -3447,8 +3667,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 56,
     "grandeAreaId": "ginecologia_obstetricia",
     "grandeArea": "Ginecologia e Obstetrícia",
-    "tema": "Obstetrícia",
-    "subtema": "Medicina Fetal - Teratoma Cervical",
+    "tema": "Pré-Natal e Fisiologia Obstétrica",
+    "subtema": "Avaliação da Vitalidade Fetal",
+    "temaSlug": "go-prenatal",
+    "subtemaSlug": "go-prenatal-avaliacao-da-vitalidade-fetal",
+    "tags": ["teratoma-cervical","ultrassonografia-obstetrica","bolha-gastrica","medicina-fetal"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -3500,7 +3724,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Callen — Ultrassonografia em Ginecologia e Obstetrícia"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1644,
     "hasPdfFigure": true,
     "clinicalImage": {
@@ -3516,8 +3740,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 57,
     "grandeAreaId": "ginecologia_obstetricia",
     "grandeArea": "Ginecologia e Obstetrícia",
-    "tema": "Obstetrícia / Urgências",
-    "subtema": "Pré-eclâmpsia",
+    "tema": "Síndromes Hipertensivas e Metabólicas na Gestação",
+    "subtema": "Pré-Eclâmpsia, Eclâmpsia e Síndrome HELLP",
+    "temaSlug": "go-shg",
+    "subtemaSlug": "go-shg-pre-eclampsia-eclampsia-e-sindrome-hellp",
+    "tags": ["pre-eclampsia","suplementacao-de-calcio","hipertensao-na-gestacao","prevencao-obstetrica"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -3570,7 +3798,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "WHO — Recommendations for Prevention and Treatment of Pre-eclampsia and Eclampsia"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1645
   },
   {
@@ -3579,8 +3807,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 58,
     "grandeAreaId": "ginecologia_obstetricia",
     "grandeArea": "Ginecologia e Obstetrícia",
-    "tema": "Obstetrícia / Parto",
-    "subtema": "Assistência ao Parto — Período Expulsivo",
+    "tema": "Parto, Prematuridade e Puerpério",
+    "subtema": "Mecanismo e Assistência ao Trabalho de Parto",
+    "temaSlug": "go-parto",
+    "subtemaSlug": "go-parto-mecanismo-e-assistencia-ao-trabalho-de-parto",
+    "tags": ["periodo-expulsivo","trabalho-de-parto","posicao-verticalizada","assistencia-ao-parto"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -3632,17 +3864,21 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Diretriz Nacional de Assistência ao Parto Normal — Ministério da Saúde"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1646
   },
   {
     "id": "q-sus-sp-2023-059",
     "code": "Q-SUSSP23-0059",
     "numeroOriginal": 59,
-    "grandeAreaId": "ginecologia_obstetricia",
-    "grandeArea": "Ginecologia e Obstetrícia",
-    "tema": "Puericultura / Aleitamento Materno",
-    "subtema": "Contraindicações e Intercorrências",
+    "grandeAreaId": "pediatria",
+    "grandeArea": "Pediatria",
+    "tema": "Puericultura, Crescimento e Nutrição",
+    "subtema": "Aleitamento Materno e Fórmulas Infantis",
+    "temaSlug": "ped-puericultura",
+    "subtemaSlug": "ped-puericultura-aleitamento-materno-e-formulas-infantis",
+    "tags": ["aleitamento-materno","contraindicacoes-da-amamentacao","hiv-e-gestacao","inibicao-da-lactacao"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -3694,7 +3930,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Protocolo de Transmissão Vertical do HIV — Ministério da Saúde"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1646
   },
   {
@@ -3703,8 +3939,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 60,
     "grandeAreaId": "ginecologia_obstetricia",
     "grandeArea": "Ginecologia e Obstetrícia",
-    "tema": "Obstetrícia / Puerpério",
-    "subtema": "Fisiologia do Puerpério",
+    "tema": "Parto, Prematuridade e Puerpério",
+    "subtema": "Infecção Puerperal e Mastite",
+    "temaSlug": "go-parto",
+    "subtemaSlug": "go-parto-infeccao-puerperal-e-mastite",
+    "tags": ["puerperio","loquios","fisiologia-puerperal","lochia-alba"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -3757,7 +3997,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Manual de Planejamento Familiar — Ministério da Saúde"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1646
   },
   {
@@ -3766,8 +4006,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 61,
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
-    "tema": "Farmacologia Clínica / Cardiologia / Endocrinologia",
-    "subtema": "Efeitos Adversos de Anti-hipertensivos e Metformina",
+    "tema": "Cardiologia",
+    "subtema": "Hipertensão Arterial Sistêmica",
+    "temaSlug": "cm-cardio",
+    "subtemaSlug": "cm-cardio-hipertensao-arterial-sistemica",
+    "tags": ["hipertensao-arterial","enalapril","ieca","microalbuminuria","bradicardia"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -3820,7 +4064,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "KDIGO 2022 Clinical Practice Guideline for Diabetes Management in Chronic Kidney Disease"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1646
   },
   {
@@ -3829,8 +4073,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 62,
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
-    "tema": "Geriatria / Clínica Médica",
-    "subtema": "Sarcopenia e Envelhecimento Muscular",
+    "tema": "Geriatria e Oncologia Clínica",
+    "subtema": "Síndromes Geriátricas e Avaliação Geriátrica Ampla",
+    "temaSlug": "cm-geriatria",
+    "subtemaSlug": "cm-geriatria-sindromes-geriatricas-e-avaliacao-geriatrica-ampla",
+    "tags": ["iatrogenia","geriatria","vitamina-d","toxicidade"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -3883,7 +4131,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Tratado de Geriatria e Gerontologia (SBGG)"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1647
   },
   {
@@ -3893,7 +4141,11 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
     "tema": "Neurologia",
-    "subtema": "Demência por Corpos de Lewy",
+    "subtema": "Demências e Delirium",
+    "temaSlug": "cm-neuro",
+    "subtemaSlug": "cm-neuro-demencias-e-delirium",
+    "tags": ["sindrome-demencial","demencia","geriatria","supervisao-medicamentosa"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -3946,7 +4198,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Protocolo Clínico e Diretrizes Terapêuticas (PCDT) — Doença de Alzheimer"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1647
   },
   {
@@ -3955,8 +4207,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 64,
     "grandeAreaId": "medicina_preventiva",
     "grandeArea": "Medicina Preventiva",
-    "tema": "Atenção Primária à Saúde",
-    "subtema": "Rastreamento e Interpretação de Exames na UBS",
+    "tema": "Medicina de Família e Comunidade",
+    "subtema": "Prevenção Quaternária e Rastreamento Populacional",
+    "temaSlug": "mp-mfc",
+    "subtemaSlug": "mp-mfc-prevencao-quaternaria-e-rastreamento-populacional",
+    "tags": ["dislipidemia","rastreamento-populacional","atencao-primaria","prevencao-cardiovascular"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -4009,7 +4265,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "USPSTF — Screening for Lipid Disorders in Adults"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1647
   },
   {
@@ -4018,8 +4274,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 65,
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
-    "tema": "Endocrinologia",
-    "subtema": "Hipercalcemia da Malignidade",
+    "tema": "Endocrinologia e Metabologia",
+    "subtema": "Osteoporose e Doenças Osteometabólicas",
+    "temaSlug": "cm-endocrino",
+    "subtemaSlug": "cm-endocrino-osteoporose-e-doencas-osteometabolicas",
+    "tags": ["osteoporose","vitamina-d","hipovitaminose-d","tratamento"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -4072,17 +4332,21 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Posicionamento Oficial da SBEM/SBDP sobre Vitamina D"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1648
   },
   {
     "id": "q-sus-sp-2023-066",
     "code": "Q-SUSSP23-0066",
     "numeroOriginal": 66,
-    "grandeAreaId": "medicina_preventiva",
-    "grandeArea": "Medicina Preventiva",
-    "tema": "Atenção Primária à Saúde",
-    "subtema": "Cessação do Tabagismo",
+    "grandeAreaId": "clinica_medica",
+    "grandeArea": "Clínica Médica",
+    "tema": "Psiquiatria",
+    "subtema": "Transtornos por Uso de Substâncias e Abstinência",
+    "temaSlug": "cm-psiq",
+    "subtemaSlug": "cm-psiq-transtornos-por-uso-de-substancias-e-abstinencia",
+    "tags": ["tabagismo-passivo","prevencao","cancer-seios-da-face","aps"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -4135,7 +4399,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Surgeon General's Report on Secondhand Smoke"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1648
   },
   {
@@ -4145,7 +4409,11 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
     "tema": "Pneumologia",
-    "subtema": "Pneumonia Adquirida na Comunidade (PAC) na Emergência",
+    "subtema": "Pneumonia Adquirida na Comunidade e Hospitalar",
+    "temaSlug": "cm-pneumo",
+    "subtemaSlug": "cm-pneumo-pneumonia-adquirida-na-comunidade-e-hospitalar",
+    "tags": ["pac","tratamento-ambulatorial","streptococcus-pneumoniae","sbpt"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -4198,7 +4466,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Escore CURB-65"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1648
   },
   {
@@ -4208,7 +4476,11 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
     "tema": "Cardiologia",
-    "subtema": "Insuficiência Cardíaca — Hepatomegalia Congestiva e Refluxo Hepatojugular",
+    "subtema": "Insuficiência Cardíaca",
+    "temaSlug": "cm-cardio",
+    "subtemaSlug": "cm-cardio-insuficiencia-cardiaca",
+    "tags": ["insuficiencia-cardiaca","pos-alta","vacinacao-influenza","feve-reduzida"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -4261,7 +4533,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Diretriz SBC de Miocardites e Pericardites"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1649
   },
   {
@@ -4271,7 +4543,11 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
     "tema": "Infectologia",
-    "subtema": "Farmacocinética e Farmacodinâmica de Antimicrobianos (Beta-Lactâmicos)",
+    "subtema": "Infecções de Pele e Partes Moles",
+    "temaSlug": "cm-infecto",
+    "subtemaSlug": "cm-infecto-infeccoes-de-pele-e-partes-moles",
+    "tags": ["osteomielite","mssa","oxacilina","fratura-exposta"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -4324,7 +4600,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Harrison's Principles of Internal Medicine, 21st Edition"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1650
   },
   {
@@ -4333,8 +4609,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 70,
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
-    "tema": "Hematologia",
-    "subtema": "Trombofilias e Trombose Venosa Profunda (TVP)",
+    "tema": "Pneumologia",
+    "subtema": "Tromboembolismo Pulmonar e TVP",
+    "temaSlug": "cm-pneumo",
+    "subtemaSlug": "cm-pneumo-tromboembolismo-pulmonar-e-tvp",
+    "tags": ["tep","anticoagulacao","tempo-de-tratamento","pos-operatorio"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -4387,7 +4667,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Chest Guideline: Antithrombotic Therapy for VTE Disease"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1651
   },
   {
@@ -4397,7 +4677,11 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
     "tema": "Cardiologia",
-    "subtema": "Insuficiência Cardíaca — Hepatomegalia Congestiva e Refluxo Hepatojugular",
+    "subtema": "Insuficiência Cardíaca",
+    "temaSlug": "cm-cardio",
+    "subtemaSlug": "cm-cardio-insuficiencia-cardiaca",
+    "tags": ["ic-descompensada","ortopneia","dpn","edema-de-mmii"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -4450,7 +4734,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Critérios de Framingham para Insuficiência Cardíaca"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1651
   },
   {
@@ -4459,8 +4743,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 72,
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
-    "tema": "Medicina Intensiva",
-    "subtema": "Delirium no Paciente Hospitalizado",
+    "tema": "Neurologia",
+    "subtema": "Demências e Delirium",
+    "temaSlug": "cm-neuro",
+    "subtemaSlug": "cm-neuro-demencias-e-delirium",
+    "tags": ["delirium","idoso","alzheimer","investigacao-inicial"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -4513,7 +4801,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Tratado de Geriatria e Gerontologia (SBGG)"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1651
   },
   {
@@ -4522,8 +4810,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 73,
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
-    "tema": "Infectologia / Atenção Primária à Saúde",
-    "subtema": "Tuberculose em População em Situação de Rua (PSR)",
+    "tema": "Infectologia",
+    "subtema": "Tuberculose Pulmonar e Extrapulmonar",
+    "temaSlug": "cm-infecto",
+    "subtemaSlug": "cm-infecto-tuberculose-pulmonar-e-extrapulmonar",
+    "tags": ["tuberculose-pulmonar","cavitacao-pulmonar","baar","escarro"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -4576,7 +4868,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Diretrizes da SBPT sobre Tuberculose"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1652,
     "hasPdfFigure": true,
     "clinicalImage": {
@@ -4592,8 +4884,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 74,
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
-    "tema": "Infectologia / Atenção Primária à Saúde",
-    "subtema": "Tuberculose em População em Situação de Rua (PSR)",
+    "tema": "Infectologia",
+    "subtema": "HIV/AIDS e Infecções Oportunistas",
+    "temaSlug": "cm-infecto",
+    "subtemaSlug": "cm-infecto-hiv-aids-e-infeccoes-oportunistas",
+    "tags": ["coinfeccao-tb-hiv","tarv","esquema-ripe","cd4"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -4646,7 +4942,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Manual de Recomendações para o Controle da Tuberculose no Brasil"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1653,
     "hasPdfFigure": true,
     "clinicalImage": {
@@ -4663,7 +4959,11 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
     "tema": "Cardiologia",
-    "subtema": "Semiologia Cardiovascular e Valvopatias",
+    "subtema": "Síndrome Coronariana Aguda com Supra de ST",
+    "temaSlug": "cm-cardio",
+    "subtemaSlug": "cm-cardio-sindrome-coronariana-aguda-com-supra-de-st",
+    "tags": ["iamcsst","parede-inferior","hemodinamica","choque-cardiogenico"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -4716,7 +5016,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "ESC Guidelines for the management of acute myocardial infarction in patients presenting with ST-segment elevation"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1654
   },
   {
@@ -4725,8 +5025,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 76,
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
-    "tema": "Emergências Clínicas / Toxicologia",
-    "subtema": "Intoxicação Aguda por Opioides",
+    "tema": "Medicina Intensiva e Toxicologia",
+    "subtema": "Intoxicações Exógenas e Síndromes Toxicológicas",
+    "temaSlug": "cm-uti",
+    "subtemaSlug": "cm-uti-intoxicacoes-exogenas-e-sindromes-toxicologicas",
+    "tags": ["intoxicacao-exogena","opioide","organofosforado","antidotos"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -4779,7 +5083,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Manual de Toxicologia Clínica — Ministério da Saúde"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1654
   },
   {
@@ -4789,7 +5093,11 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
     "tema": "Neurologia",
-    "subtema": "Demência por Corpos de Lewy",
+    "subtema": "Doença de Parkinson e Transtornos do Movimento",
+    "temaSlug": "cm-neuro",
+    "subtemaSlug": "cm-neuro-doenca-de-parkinson-e-transtornos-do-movimento",
+    "tags": ["parkinsonismo-secundario","cinarizina","bradicinesia","iatrogenia"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -4842,7 +5150,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Tratado de Neurologia da Academia Brasileira de Neurologia"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1655
   },
   {
@@ -4851,8 +5159,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 78,
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
-    "tema": "Endocrinologia",
-    "subtema": "Diabetes Mellitus Tipo 2 — Farmacoterapia (GLP-1 e iSGLT2)",
+    "tema": "Endocrinologia e Metabologia",
+    "subtema": "Complicações Agudas do Diabetes",
+    "temaSlug": "cm-endocrino",
+    "subtemaSlug": "cm-endocrino-complicacoes-agudas-do-diabetes",
+    "tags": ["cetoacidose-diabetica","diabetes-mellitus-tipo-1","gasometria-arterial","corpos-cetonicos"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -4905,7 +5217,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "ADA Standards of Care in Diabetes 2023"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1655
   },
   {
@@ -4915,7 +5227,11 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
     "tema": "Hematologia",
-    "subtema": "Anemias Hemolíticas (Marcadores Laboratoriais de Hemólise)",
+    "subtema": "Anemias Hemolíticas e Doença Falciforme",
+    "temaSlug": "cm-hemato",
+    "subtemaSlug": "cm-hemato-anemias-hemoliticas-e-doenca-falciforme",
+    "tags": ["anemia-falciforme","sindrome-toracica-aguda","complicacoes-falciformes"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -4968,7 +5284,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Hematology: Basic Principles and Practice (Hoffman)"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1655
   },
   {
@@ -4977,8 +5293,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 80,
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
-    "tema": "Gastroenterologia",
-    "subtema": "Ascite e Gradiente de Albumina Soro-Ascite (GASA)",
+    "tema": "Gastroenterologia e Hepatologia",
+    "subtema": "Complicações da Cirrose",
+    "temaSlug": "cm-gastro",
+    "subtemaSlug": "cm-gastro-complicacoes-da-cirrose",
+    "tags": ["peritonite-bacteriana-espontanea","cirrose-hepatica","ascite"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -5031,17 +5351,21 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "EASL Clinical Practice Guidelines on the management of ascites, spontaneous bacterial peritonitis, and hepatorenal syndrome in patients with cirrhosis"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1655
   },
   {
     "id": "q-sus-sp-2023-081",
     "code": "Q-SUSSP23-0081",
     "numeroOriginal": 81,
-    "grandeAreaId": "medicina_preventiva",
-    "grandeArea": "Medicina Preventiva",
-    "tema": "Infectologia / Atenção Primária à Saúde",
-    "subtema": "Rastreamento de IST, Sífilis e PrEP",
+    "grandeAreaId": "clinica_medica",
+    "grandeArea": "Clínica Médica",
+    "tema": "Infectologia",
+    "subtema": "HIV/AIDS e Infecções Oportunistas",
+    "temaSlug": "cm-infecto",
+    "subtemaSlug": "cm-infecto-hiv-aids-e-infeccoes-oportunistas",
+    "tags": ["prevencao-combinada","reducao-de-danos","hiv-aids","atencao-primaria-a-saude"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -5094,7 +5418,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "PCDT para Profilaxia Pré-Exposição (PrEP) de Risco à Infecção pelo HIV"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1656
   },
   {
@@ -5103,8 +5427,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 82,
     "grandeAreaId": "medicina_preventiva",
     "grandeArea": "Medicina Preventiva",
-    "tema": "Políticas de Saúde / SUS",
-    "subtema": "Lei Orgânica da Saúde (Lei 8.080/1990) — Dever do Estado e Corresponsabilidade",
+    "tema": "SUS, Políticas Públicas e Gestão em Saúde",
+    "subtema": "História, Princípios e Leis Orgânicas do SUS",
+    "temaSlug": "mp-sus",
+    "subtemaSlug": "mp-sus-historia-principios-e-leis-organicas-do-sus",
+    "tags": ["principios-do-sus","universalidade","acesso-universal"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -5157,7 +5485,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Lei 8.080/1990"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1656
   },
   {
@@ -5167,7 +5495,11 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "grandeAreaId": "medicina_preventiva",
     "grandeArea": "Medicina Preventiva",
     "tema": "Saúde do Trabalhador",
-    "subtema": "Acidente de Trabalho, PAIR e CAT",
+    "subtema": "Acidentes de Trabalho, CAT e Schilling",
+    "temaSlug": "mp-trabalho",
+    "subtemaSlug": "mp-trabalho-acidentes-de-trabalho-cat-e-schilling",
+    "tags": ["acidente-de-trabalho","acidente-de-trajeto","cat","sinan"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -5220,7 +5552,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Lei 8.213/1991"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1656
   },
   {
@@ -5230,7 +5562,11 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "grandeAreaId": "medicina_preventiva",
     "grandeArea": "Medicina Preventiva",
     "tema": "Vigilância em Saúde",
-    "subtema": "Notificação Compulsória e Impactos da Subnotificação no SUS",
+    "subtema": "Vigilância Epidemiológica e Notificação Compulsória",
+    "temaSlug": "mp-vigilancia",
+    "subtemaSlug": "mp-vigilancia-vigilancia-epidemiologica-e-notificacao-compulsoria",
+    "tags": ["notificacao-compulsoria","lista-de-notificacao","vigilancia-epidemiologica"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -5283,7 +5619,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Guia de Vigilância em Saúde — Ministério da Saúde"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1657
   },
   {
@@ -5292,8 +5628,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 85,
     "grandeAreaId": "medicina_preventiva",
     "grandeArea": "Medicina Preventiva",
-    "tema": "Ética Médica",
-    "subtema": "Cuidados Paliativos na Emergência e Código de Ética Médica",
+    "tema": "Ética Médica, Bioética e Medicina Legal",
+    "subtema": "Princípios da Bioética e Terminalidade",
+    "temaSlug": "mp-etica",
+    "subtemaSlug": "mp-etica-principios-da-bioetica-e-terminalidade",
+    "tags": ["bioetica","nao-maleficencia","etica-medica"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -5346,7 +5686,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Beauchamp & Childress — Princípios de Ética Biomédica"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1657
   },
   {
@@ -5355,8 +5695,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 86,
     "grandeAreaId": "medicina_preventiva",
     "grandeArea": "Medicina Preventiva",
-    "tema": "Epidemiologia",
-    "subtema": "Delineamento de Estudos Epidemiológicos",
+    "tema": "Epidemiologia e Bioestatística",
+    "subtema": "Indicadores de Saúde e Transição Epidemiológica",
+    "temaSlug": "mp-epidemio",
+    "subtemaSlug": "mp-epidemio-indicadores-de-saude-e-transicao-epidemiologica",
+    "tags": ["virulencia","indicadores-epidemiologicos","monkeypox"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -5409,7 +5753,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Gordis — Epidemiology"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1658
   },
   {
@@ -5418,8 +5762,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 87,
     "grandeAreaId": "medicina_preventiva",
     "grandeArea": "Medicina Preventiva",
-    "tema": "Atenção Primária à Saúde",
-    "subtema": "Rastreamento e Interpretação de Exames na UBS",
+    "tema": "Medicina de Família e Comunidade",
+    "subtema": "Prevenção Quaternária e Rastreamento Populacional",
+    "temaSlug": "mp-mfc",
+    "subtemaSlug": "mp-mfc-prevencao-quaternaria-e-rastreamento-populacional",
+    "tags": ["rastreamento","mamografia","prevencao-quaternaria"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -5471,7 +5819,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Diretrizes para a Detecção Precoce do Câncer de Mama no Brasil (INCA/MS)"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1658
   },
   {
@@ -5480,8 +5828,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 88,
     "grandeAreaId": "medicina_preventiva",
     "grandeArea": "Medicina Preventiva",
-    "tema": "Políticas de Saúde / SUS",
-    "subtema": "Estratégia de Agentes Comunitários de Saúde (EACS)",
+    "tema": "SUS, Políticas Públicas e Gestão em Saúde",
+    "subtema": "Atenção Primária à Saúde e ESF",
+    "temaSlug": "mp-sus",
+    "subtemaSlug": "mp-sus-atencao-primaria-a-saude-e-esf",
+    "tags": ["equipe-de-atencao-primaria","eap","pnab"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -5534,7 +5886,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Portaria nº 2.539/2019"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1658
   },
   {
@@ -5543,8 +5895,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 89,
     "grandeAreaId": "medicina_preventiva",
     "grandeArea": "Medicina Preventiva",
-    "tema": "Atenção Primária à Saúde",
-    "subtema": "Níveis de Prevenção de Leavell & Clark e Prevenção Quaternária",
+    "tema": "Medicina de Família e Comunidade",
+    "subtema": "Prevenção Quaternária e Rastreamento Populacional",
+    "temaSlug": "mp-mfc",
+    "subtemaSlug": "mp-mfc-prevencao-quaternaria-e-rastreamento-populacional",
+    "tags": ["prevencao-quinquenaria","niveis-de-prevencao","saude-do-trabalhador"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -5597,7 +5953,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Gusso & Lopes — Tratado de Medicina de Família e Comunidade"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1659
   },
   {
@@ -5606,8 +5962,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 90,
     "grandeAreaId": "medicina_preventiva",
     "grandeArea": "Medicina Preventiva",
-    "tema": "Políticas de Saúde / SUS",
-    "subtema": "Lei Orgânica da Saúde (Lei 8.080/1990) — Dever do Estado e Corresponsabilidade",
+    "tema": "SUS, Políticas Públicas e Gestão em Saúde",
+    "subtema": "Redes de Atenção à Saúde e Regulação",
+    "temaSlug": "mp-sus",
+    "subtemaSlug": "mp-sus-redes-de-atencao-a-saude-e-regulacao",
+    "tags": ["telessaude","lei-14510","telemedicina","sus"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -5659,7 +6019,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Lei nº 14.510/2022 (Lei da Telessaúde)"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1659
   },
   {
@@ -5668,8 +6028,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 91,
     "grandeAreaId": "medicina_preventiva",
     "grandeArea": "Medicina Preventiva",
-    "tema": "Saúde Coletiva e Ética Médica",
-    "subtema": "Sigilo Médico no Atendimento ao Adolescente e Risco de Suicídio",
+    "tema": "Ética Médica, Bioética e Medicina Legal",
+    "subtema": "Código de Ética Médica e Sigilo Profissional",
+    "temaSlug": "mp-etica",
+    "subtemaSlug": "mp-etica-codigo-de-etica-medica-e-sigilo-profissional",
+    "tags": ["sigilo-medico","adolescente","gravidez-na-adolescencia","etica"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -5723,7 +6087,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Caderno de Atenção Básica nº 24 (Saúde do Adolescente)"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1660
   },
   {
@@ -5732,8 +6096,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 92,
     "grandeAreaId": "medicina_preventiva",
     "grandeArea": "Medicina Preventiva",
-    "tema": "Epidemiologia",
-    "subtema": "Delineamento de Estudos Epidemiológicos",
+    "tema": "Epidemiologia e Bioestatística",
+    "subtema": "Estudos Epidemiológicos",
+    "temaSlug": "mp-epidemio",
+    "subtemaSlug": "mp-epidemio-estudos-epidemiologicos",
+    "tags": ["estudo-de-coorte","rastreamento","psa","cancer-de-prostata"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -5786,7 +6154,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Diretrizes da USPSTF sobre Rastreamento de Câncer de Próstata"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1660
   },
   {
@@ -5795,8 +6163,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 93,
     "grandeAreaId": "medicina_preventiva",
     "grandeArea": "Medicina Preventiva",
-    "tema": "Indicadores de Saúde",
-    "subtema": "Curva de Mortalidade Proporcional de Nelson de Moraes (Questão Anulada)",
+    "tema": "Epidemiologia e Bioestatística",
+    "subtema": "Indicadores de Saúde e Transição Epidemiológica",
+    "temaSlug": "mp-epidemio",
+    "subtemaSlug": "mp-epidemio-indicadores-de-saude-e-transicao-epidemiologica",
+    "tags": ["curva-de-nelson-moraes","swaroop-uemura","mortalidade","indicadores"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -5849,7 +6221,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Rouquayrol — Epidemiologia & Saúde"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1661
   },
   {
@@ -5858,8 +6230,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 94,
     "grandeAreaId": "medicina_preventiva",
     "grandeArea": "Medicina Preventiva",
-    "tema": "Atenção Primária à Saúde",
-    "subtema": "Apoio Matricial e Saúde Mental na APS",
+    "tema": "SUS, Políticas Públicas e Gestão em Saúde",
+    "subtema": "Atenção Primária à Saúde e ESF",
+    "temaSlug": "mp-sus",
+    "subtemaSlug": "mp-sus-atencao-primaria-a-saude-e-esf",
+    "tags": ["atributos-da-aps","starfield","orientacao-familiar","aps"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -5912,7 +6288,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "PNAB 2017"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1661
   },
   {
@@ -5921,8 +6297,13 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 95,
     "grandeAreaId": "clinica_medica",
     "grandeArea": "Clínica Médica",
-    "tema": "Endocrinologia",
-    "subtema": "Diabetes Mellitus Tipo 2 — Farmacoterapia (GLP-1 e iSGLT2)",
+    "tema": "Endocrinologia e Metabologia",
+    "subtema": "Diabetes Mellitus - Diagnóstico e Tratamento",
+    "temaSlug": "cm-endocrino",
+    "subtemaSlug": "cm-endocrino-diabetes-mellitus-diagnostico-e-tratamento",
+    "tags": ["isglt2","icfer","polifarmacia","prevencao-quaternaria","questao-anulada"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
+    "needsTaxonomyReview": true,
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -5975,7 +6356,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Diretriz da Sociedade Brasileira de Diabetes (SBD)"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1661
   },
   {
@@ -5984,8 +6365,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 96,
     "grandeAreaId": "medicina_preventiva",
     "grandeArea": "Medicina Preventiva",
-    "tema": "Políticas de Saúde / SUS",
-    "subtema": "Atenção Básica para Populações Específicas (eCR e eSFR)",
+    "tema": "SUS, Políticas Públicas e Gestão em Saúde",
+    "subtema": "Atenção Primária à Saúde e ESF",
+    "temaSlug": "mp-sus",
+    "subtemaSlug": "mp-sus-atencao-primaria-a-saude-e-esf",
+    "tags": ["territorializacao","territorio-distrito","aps","gestao-municipal"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -6038,7 +6423,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "PNAB 2017"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1662
   },
   {
@@ -6047,8 +6432,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 97,
     "grandeAreaId": "medicina_preventiva",
     "grandeArea": "Medicina Preventiva",
-    "tema": "Saúde Coletiva e Ética Médica",
-    "subtema": "Declaração de Óbito (Preenchimento da Parte I e Parte II)",
+    "tema": "Vigilância em Saúde",
+    "subtema": "Declaração de Óbito",
+    "temaSlug": "mp-vigilancia",
+    "subtemaSlug": "mp-vigilancia-declaracao-de-obito",
+    "tags": ["declaracao-de-obito","iml","causas-externas","tce"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -6101,17 +6490,21 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Resolução CFM nº 1.779/2005"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1662
   },
   {
     "id": "q-sus-sp-2023-098",
     "code": "Q-SUSSP23-0098",
     "numeroOriginal": 98,
-    "grandeAreaId": "medicina_preventiva",
-    "grandeArea": "Medicina Preventiva",
-    "tema": "Atenção Primária à Saúde",
-    "subtema": "Hanseníase — Esquema PQT-U e Efeitos Adversos da Clofazimina",
+    "grandeAreaId": "clinica_medica",
+    "grandeArea": "Clínica Médica",
+    "tema": "Dermatologia",
+    "subtema": "Hanseníase",
+    "temaSlug": "cm-dermato",
+    "subtemaSlug": "cm-dermato-hanseniase",
+    "tags": ["hanseniase-paucibacilar","pqt","dapsona","rifampicina"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -6164,17 +6557,21 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Protocolo PQT-U (Poliquimioterapia Única)"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1662
   },
   {
     "id": "q-sus-sp-2023-099",
     "code": "Q-SUSSP23-0099",
     "numeroOriginal": 99,
-    "grandeAreaId": "ginecologia_obstetricia",
-    "grandeArea": "Ginecologia e Obstetrícia",
-    "tema": "Ginecologia",
-    "subtema": "Atendimento à Vítima de Violência Sexual",
+    "grandeAreaId": "medicina_preventiva",
+    "grandeArea": "Medicina Preventiva",
+    "tema": "SUS, Políticas Públicas e Gestão em Saúde",
+    "subtema": "Redes de Atenção à Saúde e Regulação",
+    "temaSlug": "mp-sus",
+    "subtemaSlug": "mp-sus-redes-de-atencao-a-saude-e-regulacao",
+    "tags": ["pnaism","saude-da-mulher","politicas-publicas","sus"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -6226,7 +6623,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Política Nacional de Atenção Integral à Saúde da Mulher (PNAISM) — Ministério da Saúde"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1663
   },
   {
@@ -6235,8 +6632,12 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "numeroOriginal": 100,
     "grandeAreaId": "medicina_preventiva",
     "grandeArea": "Medicina Preventiva",
-    "tema": "Atenção Primária à Saúde",
-    "subtema": "Rastreamento e Interpretação de Exames na UBS",
+    "tema": "Medicina de Família e Comunidade",
+    "subtema": "Método Clínico Centrado na Pessoa e Comunicação",
+    "temaSlug": "mp-mfc",
+    "subtemaSlug": "mp-mfc-metodo-clinico-centrado-na-pessoa-e-comunicacao",
+    "tags": ["mccp","sife","moira-stewart","comunicacao-clinica"],
+    "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "SUS-SP",
     "instituicao": "SUS-SP",
     "estado": "SP",
@@ -6289,7 +6690,7 @@ export const SUS_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "Gusso & Lopes — Tratado de Medicina de Família e Comunidade"
     ],
     "sourceBatch": "r1-2023-pack:sus-sp-2023",
-    "importedAt": "2026-11-26T00:17:14Z",
+    "importedAt": "2026-11-27T11:57:53Z",
     "sourcePdfPage": 1663
   }
 ];

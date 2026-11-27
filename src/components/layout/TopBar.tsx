@@ -16,7 +16,10 @@ import {
   Filter,
   Search,
   Trophy,
+  LogIn,
 } from 'lucide-react';
+import type { AuthStudentProfile } from '../../lib/authClient';
+import type { SyncStatus } from '../../hooks/useSyncEngine';
 import type {
   ActiveTab,
   DailyGoalProgress,
@@ -58,6 +61,9 @@ interface TopBarProps {
   onOpenMobileMenu: () => void;
   gamificationCore?: GamificationCoreState;
   onOpenGamificationHub?: () => void;
+  authStudent?: AuthStudentProfile | null;
+  syncStatus?: SyncStatus;
+  onOpenAuthModal?: () => void;
 }
 
 const PRIMARY_NAV_ITEMS: ReadonlyArray<{ id: PrimaryNavId; label: string }> = [
@@ -102,6 +108,9 @@ export function TopBar({
   onOpenMobileMenu,
   gamificationCore,
   onOpenGamificationHub,
+  authStudent = null,
+  syncStatus = 'idle',
+  onOpenAuthModal,
 }: TopBarProps) {
   const crumb = resolveTopBarContext(activeTab, mode, simuladoActive);
   const [themeMenuOpen, setThemeMenuOpen] = useState(false);
@@ -213,7 +222,7 @@ export function TopBar({
   const nextSwitchLabel = darkMode ? 'Claro' : 'Escuro';
 
   return (
-    <header className="sticky top-0 z-30 flex h-12 shrink-0 items-center justify-between gap-2 border-b border-slate-200/80 bg-[#F8FAFC]/95 px-3 sm:px-5 backdrop-blur-md transition-colors duration-200 dark:border-white/[0.08] dark:bg-[#0B0F17]/95">
+    <header className="sticky top-0 z-30 flex h-12 shrink-0 items-center justify-between gap-2 border-b border-black/5 bg-[#F5F5F7]/90 px-3 sm:px-5 backdrop-blur-xl transition-colors duration-200 dark:border-white/[0.08] dark:bg-[#0B0F17]/95">
       {/* Left: Unified Drawer button (desktop + mobile) + Brand + Primary Desktop Nav / Context */}
       <div className="flex items-center gap-2 min-w-0">
         {!focusMode && (
@@ -743,6 +752,47 @@ export function TopBar({
             </div>
           )}
         </div>
+
+        {/* Account / Login Trigger */}
+        {onOpenAuthModal && (
+          <button
+            type="button"
+            onClick={onOpenAuthModal}
+            aria-label={authStudent ? `Conta de ${authStudent.fullName}` : 'Entrar ou criar conta'}
+            title={authStudent ? `${authStudent.fullName} (${authStudent.email})` : 'Entrar ou criar conta para salvar histórico na nuvem'}
+            className={cn(
+              'inline-flex h-8 items-center gap-1.5 rounded-lg border px-2.5 text-xs font-medium transition cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#007AFF]',
+              authStudent
+                ? 'border-black/10 bg-white text-[#1D1D1F] hover:bg-black/[0.03] dark:border-white/10 dark:bg-white/[0.05] dark:text-slate-100 dark:hover:bg-white/[0.09]'
+                : 'border-transparent bg-[#007AFF] text-white shadow-xs hover:bg-[#0066D6]'
+            )}
+          >
+            {authStudent ? (
+              <>
+                <span className="relative flex h-5 w-5 items-center justify-center rounded-full bg-[#007AFF] text-[10px] font-semibold text-white">
+                  {authStudent.avatarInitials}
+                  <span
+                    aria-hidden="true"
+                    className={cn(
+                      'absolute -bottom-0.5 -right-0.5 h-2 w-2 rounded-full ring-1 ring-white dark:ring-[#131926]',
+                      syncStatus === 'idle' && 'bg-emerald-500',
+                      syncStatus === 'syncing' && 'bg-sky-400 animate-pulse',
+                      (syncStatus === 'offline' || syncStatus === 'local-fallback') && 'bg-amber-400'
+                    )}
+                  />
+                </span>
+                <span className="hidden md:inline max-w-[110px] truncate">
+                  {authStudent.fullName.split(' ')[0]}
+                </span>
+              </>
+            ) : (
+              <>
+                <LogIn size={14} strokeWidth={1.75} aria-hidden="true" />
+                <span>Entrar</span>
+              </>
+            )}
+          </button>
+        )}
       </div>
     </header>
   );

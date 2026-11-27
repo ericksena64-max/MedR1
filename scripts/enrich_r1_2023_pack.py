@@ -174,6 +174,7 @@ def process_batch(
                     response_mime_type="application/json",
                     response_schema=response_schema(),
                     temperature=0.2,
+                    thinking_config=types.ThinkingConfig(thinking_budget=0),
                 ),
             )
             parsed = json.loads(resp.text)

@@ -26,6 +26,7 @@ import {
   type CalibrationPair,
   type Stage1Model,
 } from '../../lib/psychometricApproval';
+import { isSyntheticCalibrationDataset } from '../../lib/recencyAnalytics';
 import { cn } from '../../lib/utils';
 
 interface ApprovalProbabilityCardProps {
@@ -553,6 +554,14 @@ export function ApprovalProbabilityCard({
                 <span className="text-xs font-semibold text-slate-900 dark:text-white">
                   Etapa 2 · Calibração Histórica (MQO)
                 </span>
+                {isSyntheticCalibrationDataset(calibrationPairs) && (
+                  <span
+                    title="Os 6 pares iniciais são dados ilustrativos de exemplo. Substitua por pares reais para calibração verdadeira."
+                    className="rounded-md bg-amber-500/12 px-1.5 py-0.5 text-[10px] font-medium text-amber-700 dark:text-amber-300"
+                  >
+                    Base ilustrativa
+                  </span>
+                )}
               </label>
 
               {enableOls && (

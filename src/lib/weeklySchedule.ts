@@ -52,11 +52,20 @@ export interface WeeklyTopicInput {
   answered: number;
 }
 
+export interface WeeklySubtemaItem {
+  label: string;
+  estimatedQuestions: number;
+  matchedTema?: string;
+  matchedSubtema?: string;
+}
+
 export interface WeeklyTopicBlock {
   id: string;
   topic: string;
   subtema?: string;
+  subtemas?: WeeklySubtemaItem[];
   grandeAreaId: GrandeAreaId;
+  grandeAreaName?: string;
   shortArea: string;
   estimatedQuestions: number;
   estimatedMinutes: number;
@@ -89,6 +98,16 @@ export interface WeeklyDayPlan {
 
 export type IncidenceSource = 'bank' | 'mixed' | 'fallback';
 
+export interface FullExamCoverageSummary {
+  totalTopics: number;
+  pareto80Topics: number;
+  blocksPerWeek: number;
+  weeksToCover100Pct: number;
+  daysToCover100Pct: number;
+  weekCoveragePct: number;
+  cumulativeIncidencePctThisWeek: number;
+}
+
 export interface WeeklyScheduleResult {
   weekLabel: string;
   weekRangeFullLabel: string;
@@ -105,6 +124,7 @@ export interface WeeklyScheduleResult {
   calendarSummary: ExamCalendarSummary;
   weekPhase: StudyPhaseMeta;
   feasibility: ParetoFeasibilityReport;
+  fullExamCoverage: FullExamCoverageSummary;
 }
 
 export const WEEKLY_SCHEDULE_STORAGE_KEY = 'medr1_weekly_schedule_v1';
@@ -328,7 +348,7 @@ export function loadWeeklyScheduleConfig(rawJson: string | null): WeeklySchedule
 
     const rawHours = Number(parsed.hoursPerDay);
     const hoursPerDay = Number.isFinite(rawHours)
-      ? Math.max(1, Math.min(8, Math.round(rawHours)))
+      ? Math.max(0.5, Math.min(12, Math.round(rawHours * 2) / 2))
       : DEFAULT_WEEKLY_SCHEDULE_CONFIG.hoursPerDay;
 
     const paceMode: StudyPaceMode =
@@ -495,37 +515,57 @@ export function buildWeeklySchedule({
     flashcardsByDate.set(bucketKey, (flashcardsByDate.get(bucketKey) ?? 0) + 1);
   }
 
-  // Candidate pool: student topicRows -> real bank topics for selected exams -> static fallback catalog
+  // Candidate pool: always cover 100% of real bank topics for selected exams when available,
+  // enriching each topic with student accuracy/answered counts from topicRows so 100% of the
+  // exam blueprint is plotted by Pareto order across weeks.
   const shortAreaMap = new Map(GRANDES_AREAS.map((a) => [a.id, a.shortName]));
-  let candidatePool: WeeklyTopicInput[];
-  if (topicRows.length > 0) {
-    candidatePool = topicRows;
-  } else {
-    const bankTopics = new Map<string, WeeklyTopicInput>();
-    for (const profile of bankProfiles.values()) {
-      if (profile.usedFallback) continue;
-      for (const [normKey, entry] of profile.topicIncidence.entries()) {
-        if (!bankTopics.has(normKey)) {
-          bankTopics.set(normKey, {
-            grandeAreaId: entry.grandeAreaId,
-            label: entry.label,
-            shortArea: shortAreaMap.get(entry.grandeAreaId) ?? entry.grandeAreaId,
-            studentPct: 65,
-            answered: 0,
-          });
+  const fullAreaNameMap = new Map(GRANDES_AREAS.map((a) => [a.id, a.name]));
+  const studentTopicMap = new Map<string, WeeklyTopicInput>();
+  for (const row of topicRows) {
+    studentTopicMap.set(normalizeTopicKey(row.label), row);
+  }
+
+  const bankTopics = new Map<string, WeeklyTopicInput>();
+  let pareto80UnionCount = 0;
+  for (const profile of bankProfiles.values()) {
+    if (profile.usedFallback) continue;
+    for (const [normKey, entry] of profile.topicIncidence.entries()) {
+      if (!bankTopics.has(normKey)) {
+        const studentRow = studentTopicMap.get(normKey);
+        bankTopics.set(normKey, {
+          grandeAreaId: entry.grandeAreaId,
+          label: entry.label,
+          shortArea: shortAreaMap.get(entry.grandeAreaId) ?? entry.grandeAreaId,
+          studentPct: studentRow?.studentPct ?? 65,
+          answered: studentRow?.answered ?? 0,
+        });
+        if (entry.inPareto80) {
+          pareto80UnionCount += 1;
         }
       }
     }
-    candidatePool =
-      bankTopics.size > 0
-        ? Array.from(bankTopics.values())
-        : getExpandedTopicCatalog(targetExams).map((item) => ({
-            grandeAreaId: item.grandeAreaId,
-            label: item.label,
-            shortArea: item.shortArea,
-            studentPct: 65,
-            answered: 0,
-          }));
+  }
+
+  let candidatePool: WeeklyTopicInput[];
+  if (bankTopics.size > 0) {
+    // Also include any extra student topicRows not yet in bankTopics
+    for (const row of topicRows) {
+      const k = normalizeTopicKey(row.label);
+      if (!bankTopics.has(k)) {
+        bankTopics.set(k, row);
+      }
+    }
+    candidatePool = Array.from(bankTopics.values());
+  } else if (topicRows.length > 0) {
+    candidatePool = topicRows;
+  } else {
+    candidatePool = getExpandedTopicCatalog(targetExams).map((item) => ({
+      grandeAreaId: item.grandeAreaId,
+      label: item.label,
+      shortArea: item.shortArea,
+      studentPct: 65,
+      answered: 0,
+    }));
   }
 
   const rankedCandidates = candidatePool
@@ -586,18 +626,98 @@ export function buildWeeklySchedule({
   const subtemaCursorByTema = new Map<string, number>();
 
   const activeSet = new Set<WeekdayIndex>(config.activeDays);
-  const blocksPerActiveDay =
-    config.hoursPerDay >= 6 ? 3 : config.hoursPerDay >= 3 ? 2 : 1;
+
+  // Group ranked candidates by Grande Área so every active study day obligatorily covers
+  // all available Grandes Áreas (all 5 in production), ordered by highest priority area first.
+  const candidatesByArea = new Map<GrandeAreaId, Array<{ cand: ScoredTopicCandidate; globalIdx: number }>>();
+  rankedCandidates.forEach((cand, globalIdx) => {
+    const areaList = candidatesByArea.get(cand.topic.grandeAreaId) ?? [];
+    areaList.push({ cand, globalIdx });
+    candidatesByArea.set(cand.topic.grandeAreaId, areaList);
+  });
+
+  const orderedAreaIds = Array.from(candidatesByArea.keys()).sort((a, b) => {
+    const topA = candidatesByArea.get(a)?.[0]?.cand.score ?? 0;
+    const topB = candidatesByArea.get(b)?.[0]?.cand.score ?? 0;
+    return topB - topA;
+  });
+
+  const blocksPerActiveDay = Math.max(1, orderedAreaIds.length);
 
   const days: WeeklyDayPlan[] = [];
   const usedInWeekIndices = new Set<number>();
   let prevActiveDayTopicKeys = new Set<string>();
   const activeDayCount = Math.max(1, config.activeDays.length);
-  let weekCursor =
-    rankedCandidates.length > 0 && weekOffset !== 0
-      ? Math.abs(weekOffset * blocksPerActiveDay * activeDayCount) %
-        rankedCandidates.length
-      : 0;
+  const areaCursors = new Map<GrandeAreaId, number>();
+  for (const areaId of orderedAreaIds) {
+    const areaLen = candidatesByArea.get(areaId)?.length ?? 1;
+    let startCursor = 0;
+    if (weekOffset !== 0 && areaLen > 1) {
+      const rawShift = Math.abs(weekOffset * activeDayCount) % areaLen;
+      startCursor = rawShift === 0 ? Math.abs(weekOffset) % areaLen : rawShift;
+    }
+    areaCursors.set(areaId, startCursor);
+  }
+
+  const pickCandidateForArea = (
+    areaId: GrandeAreaId,
+    usedIndicesToday: Set<number>
+  ): { cand: ScoredTopicCandidate; globalIdx: number } | null => {
+    const list = candidatesByArea.get(areaId);
+    if (!list || list.length === 0) return null;
+    const startCursor = areaCursors.get(areaId) ?? 0;
+
+    const findMatch = (
+      predicate: (entry: { cand: ScoredTopicCandidate; globalIdx: number }) => boolean
+    ): { entry: { cand: ScoredTopicCandidate; globalIdx: number }; localIdx: number } | null => {
+      for (let offset = 0; offset < list.length; offset++) {
+        const localIdx = (startCursor + offset) % list.length;
+        const entry = list[localIdx];
+        if (predicate(entry)) {
+          return { entry, localIdx };
+        }
+      }
+      return null;
+    };
+
+    const match =
+      // Pass 1: unused in week + not in previous active day + not used today
+      findMatch(
+        (e) =>
+          !usedInWeekIndices.has(e.globalIdx) &&
+          !usedIndicesToday.has(e.globalIdx) &&
+          !prevActiveDayTopicKeys.has(normalizeTopicKey(e.cand.topic.label))
+      ) ??
+      // Pass 2: not in previous active day + not used today
+      findMatch(
+        (e) =>
+          !usedIndicesToday.has(e.globalIdx) &&
+          !prevActiveDayTopicKeys.has(normalizeTopicKey(e.cand.topic.label))
+      ) ??
+      // Pass 3: unused in week + not used today
+      findMatch(
+        (e) => !usedInWeekIndices.has(e.globalIdx) && !usedIndicesToday.has(e.globalIdx)
+      ) ??
+      // Pass 4: any candidate in this area not used today
+      findMatch((e) => !usedIndicesToday.has(e.globalIdx));
+
+    if (!match) return null;
+
+    usedInWeekIndices.add(match.entry.globalIdx);
+    usedIndicesToday.add(match.entry.globalIdx);
+    areaCursors.set(areaId, (match.localIdx + 1) % list.length);
+    return match.entry;
+  };
+
+  const nextSubtemaForTema = (temaLabel: string): string | undefined => {
+    const temaKey = normalizeTopicKey(temaLabel);
+    const availableSubtemas = subtemasByTema.get(temaKey);
+    if (!availableSubtemas || availableSubtemas.length === 0) return undefined;
+    const cursor = subtemaCursorByTema.get(temaKey) ?? 0;
+    const pickedSubtema = availableSubtemas[cursor % availableSubtemas.length];
+    subtemaCursorByTema.set(temaKey, cursor + 1);
+    return pickedSubtema;
+  };
 
   const weekHasExamDay = Array.from({ length: 7 }).some((_, i) => {
     const dCheck = new Date(sunday);
@@ -666,108 +786,103 @@ export function buildWeeklySchedule({
         reasonTag: weekPhase.shortLabel,
         blockKind: 'simulado',
       });
-    } else if (isActive && quota.estimatedQuestions > 0 && rankedCandidates.length > 0) {
+    } else if (isActive && quota.estimatedQuestions > 0 && orderedAreaIds.length > 0) {
+      // Every active study day obligatorily covers all available Grandes Áreas (all 5 in production),
+      // bounded only if the daily quota is smaller than the number of areas.
       const countForDay = Math.min(
-        blocksPerActiveDay,
-        rankedCandidates.length,
+        orderedAreaIds.length,
         Math.max(1, quota.estimatedQuestions)
       );
       const baseQ = Math.floor(quota.estimatedQuestions / countForDay);
       const remainderQ = quota.estimatedQuestions % countForDay;
       const minsPerQ = PACE_MINUTES_PER_QUESTION[config.paceMode];
-      const usedAreasToday = new Set<GrandeAreaId>();
       const usedIndicesToday = new Set<number>();
       const currentDayTopicKeys = new Set<string>();
 
       for (let b = 0; b < countForDay; b++) {
-        // Pick highest-priority candidate enforcing:
-        // (1) distinct grandeAreaId today, (2) not repeated from previous active day, (3) unused in week.
-        let pickedIdx = -1;
+        const areaId = orderedAreaIds[b];
+        const primaryPick = pickCandidateForArea(areaId, usedIndicesToday);
+        if (!primaryPick) continue;
 
-        // Pass 1: unused in week + not in prev active day + distinct grandeAreaId today
-        for (let offset = 0; offset < rankedCandidates.length; offset++) {
-          const idx = (weekCursor + offset) % rankedCandidates.length;
-          const cand = rankedCandidates[idx];
-          const candKey = normalizeTopicKey(cand.topic.label);
-          if (
-            !usedInWeekIndices.has(idx) &&
-            !usedIndicesToday.has(idx) &&
-            !prevActiveDayTopicKeys.has(candKey) &&
-            !usedAreasToday.has(cand.topic.grandeAreaId)
-          ) {
-            pickedIdx = idx;
-            break;
-          }
-        }
-
-        // Pass 2: allow reused in week, still enforce not in prev active day + distinct grandeAreaId today
-        if (pickedIdx === -1) {
-          for (let offset = 0; offset < rankedCandidates.length; offset++) {
-            const idx = (weekCursor + offset) % rankedCandidates.length;
-            const cand = rankedCandidates[idx];
-            const candKey = normalizeTopicKey(cand.topic.label);
-            if (
-              !usedIndicesToday.has(idx) &&
-              !prevActiveDayTopicKeys.has(candKey) &&
-              !usedAreasToday.has(cand.topic.grandeAreaId)
-            ) {
-              pickedIdx = idx;
-              break;
-            }
-          }
-        }
-
-        // Pass 3: enforce distinct grandeAreaId today (if pool lacks enough distinct areas outside prev day)
-        if (pickedIdx === -1) {
-          for (let offset = 0; offset < rankedCandidates.length; offset++) {
-            const idx = (weekCursor + offset) % rankedCandidates.length;
-            const cand = rankedCandidates[idx];
-            if (!usedIndicesToday.has(idx) && !usedAreasToday.has(cand.topic.grandeAreaId)) {
-              pickedIdx = idx;
-              break;
-            }
-          }
-        }
-
-        // Pass 4: enforce not in prev active day (even if grandeAreaId repeats on small pools)
-        if (pickedIdx === -1) {
-          for (let offset = 0; offset < rankedCandidates.length; offset++) {
-            const idx = (weekCursor + offset) % rankedCandidates.length;
-            const candKey = normalizeTopicKey(rankedCandidates[idx].topic.label);
-            if (!usedIndicesToday.has(idx) && !prevActiveDayTopicKeys.has(candKey)) {
-              pickedIdx = idx;
-              break;
-            }
-          }
-        }
-
-        // Pass 5: fallback if pool is smaller than needed
-        if (pickedIdx === -1) {
-          for (let offset = 0; offset < rankedCandidates.length; offset++) {
-            const idx = (weekCursor + offset) % rankedCandidates.length;
-            if (!usedIndicesToday.has(idx)) {
-              pickedIdx = idx;
-              break;
-            }
-          }
-        }
-
-        if (pickedIdx === -1) {
-          pickedIdx = weekCursor % rankedCandidates.length;
-        }
-
-        usedInWeekIndices.add(pickedIdx);
-        usedIndicesToday.add(pickedIdx);
-        const picked = rankedCandidates[pickedIdx];
-        usedAreasToday.add(picked.topic.grandeAreaId);
+        const picked = primaryPick.cand;
         currentDayTopicKeys.add(normalizeTopicKey(picked.topic.label));
-        weekCursor = (pickedIdx + 1) % rankedCandidates.length;
 
         const blockQuestions = baseQ + (b < remainderQ ? 1 : 0);
         const blockMinutes = Math.round(blockQuestions * minsPerQ);
-        const answeredToday = isToday
+        const primarySubtema = nextSubtemaForTema(picked.topic.label);
+
+        const subtemas: WeeklySubtemaItem[] = [];
+        let answeredToday = isToday
           ? answeredNormMap.get(normalizeTopicKey(picked.topic.label)) ?? 0
           : 0;
+
+        // When the Grande Área receives >= 8 questions, split into 2 distinct subtemas/temas
+        // (e.g., Cirurgia Geral -> ATLS 6q + Hérnias 5q) when a second item is available.
+        const shouldSplitTwo = blockQuestions >= 8;
+        let secondaryPick: { cand: ScoredTopicCandidate; globalIdx: number } | null = null;
+        if (shouldSplitTwo) {
+          secondaryPick = pickCandidateForArea(areaId, usedIndicesToday);
+        }
+
+        if (secondaryPick) {
+          const q1 = Math.ceil(blockQuestions / 2);
+          const q2 = blockQuestions - q1;
+          const secondarySubtema = nextSubtemaForTema(secondaryPick.cand.topic.label);
+          currentDayTopicKeys.add(normalizeTopicKey(secondaryPick.cand.topic.label));
+          if (isToday) {
+            answeredToday +=
+              answeredNormMap.get(normalizeTopicKey(secondaryPick.cand.topic.label)) ?? 0;
+          }
+
+          subtemas.push(
+            {
+              label: primarySubtema ?? picked.topic.label,
+              estimatedQuestions: q1,
+              matchedTema: picked.topic.label,
+              matchedSubtema: primarySubtema,
+            },
+            {
+              label: secondarySubtema ?? secondaryPick.cand.topic.label,
+              estimatedQuestions: q2,
+              matchedTema: secondaryPick.cand.topic.label,
+              matchedSubtema: secondarySubtema,
+            }
+          );
+        } else {
+          // If only 1 tema exists for this area, check if it has >= 2 distinct real bank subtemas
+          const primaryTemaKey = normalizeTopicKey(picked.topic.label);
+          const bankSubs = subtemasByTema.get(primaryTemaKey);
+          const secondSubtema =
+            shouldSplitTwo && bankSubs && bankSubs.length >= 2
+              ? nextSubtemaForTema(picked.topic.label)
+              : undefined;
+
+          if (secondSubtema && primarySubtema && secondSubtema !== primarySubtema) {
+            const q1 = Math.ceil(blockQuestions / 2);
+            const q2 = blockQuestions - q1;
+            subtemas.push(
+              {
+                label: primarySubtema,
+                estimatedQuestions: q1,
+                matchedTema: picked.topic.label,
+                matchedSubtema: primarySubtema,
+              },
+              {
+                label: secondSubtema,
+                estimatedQuestions: q2,
+                matchedTema: picked.topic.label,
+                matchedSubtema: secondSubtema,
+              }
+            );
+          } else {
+            subtemas.push({
+              label: primarySubtema ?? picked.topic.label,
+              estimatedQuestions: blockQuestions,
+              matchedTema: picked.topic.label,
+              matchedSubtema: primarySubtema,
+            });
+          }
+        }
 
         let status: TopicBlockStatus = 'nao_iniciado';
         if (isToday) {
@@ -778,20 +893,13 @@ export function buildWeeklySchedule({
           }
         }
 
-        const pickedTemaKey = normalizeTopicKey(picked.topic.label);
-        const availableSubtemas = subtemasByTema.get(pickedTemaKey);
-        let pickedSubtema: string | undefined;
-        if (availableSubtemas && availableSubtemas.length > 0) {
-          const cursor = subtemaCursorByTema.get(pickedTemaKey) ?? 0;
-          pickedSubtema = availableSubtemas[cursor % availableSubtemas.length];
-          subtemaCursorByTema.set(pickedTemaKey, cursor + 1);
-        }
-
         topicBlocks.push({
-          id: `${dateKey}-${b}-${picked.topic.label}`,
+          id: `${dateKey}-${areaId}-${picked.topic.label}`,
           topic: picked.topic.label,
-          subtema: pickedSubtema,
-          grandeAreaId: picked.topic.grandeAreaId,
+          subtema: primarySubtema,
+          subtemas,
+          grandeAreaId: areaId,
+          grandeAreaName: fullAreaNameMap.get(areaId) ?? picked.topic.shortArea,
           shortArea: picked.topic.shortArea,
           estimatedQuestions: blockQuestions,
           estimatedMinutes: blockMinutes,
@@ -865,6 +973,57 @@ export function buildWeeklySchedule({
     estimatedQuestionsPerActiveDay: baseDailyQuota,
   });
 
+  // 100% Exam Pareto Coverage calculation across weeks based on configured hours/day
+  const totalTopics = Math.max(1, rankedCandidates.length);
+  const effectiveStudyDaysPerWeek = Math.max(
+    1,
+    config.activeDays.length - (shouldScheduleSimuladoThisWeek ? 1 : 0)
+  );
+  const blocksPerWeek = Math.max(1, blocksPerActiveDay * effectiveStudyDaysPerWeek);
+  const weeksToCover100Pct = Math.ceil(totalTopics / blocksPerWeek);
+  const daysToCover100Pct = weeksToCover100Pct * Math.max(1, config.activeDays.length);
+  const coveredTopicsThroughThisWeek = Math.min(
+    totalTopics,
+    (Math.abs(weekOffset) + 1) * blocksPerWeek
+  );
+  const weekCoveragePct = Math.min(
+    100,
+    Math.round((coveredTopicsThroughThisWeek / totalTopics) * 100)
+  );
+
+  // Sum real bank Pareto incidence (%) represented by the topics plotted in this week
+  let thisWeekIncidenceSum = 0;
+  const seenWeekTopicKeys = new Set<string>();
+  const primaryProfile = bankProfiles.get(targetExam);
+  for (const day of days) {
+    for (const block of day.topicBlocks) {
+      if (block.blockKind === 'simulado') continue;
+      const tKey = normalizeTopicKey(block.topic);
+      if (seenWeekTopicKeys.has(tKey)) continue;
+      seenWeekTopicKeys.add(tKey);
+      if (primaryProfile && !primaryProfile.usedFallback) {
+        thisWeekIncidenceSum += resolveTopicIncidenceFromBank(
+          block.topic,
+          block.grandeAreaId,
+          primaryProfile
+        ).incidence;
+      }
+    }
+  }
+  const cumulativeIncidencePctThisWeek = Number(
+    Math.min(100, thisWeekIncidenceSum * 100).toFixed(1)
+  );
+
+  const fullExamCoverage: FullExamCoverageSummary = {
+    totalTopics,
+    pareto80Topics: pareto80UnionCount > 0 ? pareto80UnionCount : Math.ceil(totalTopics * 0.35),
+    blocksPerWeek,
+    weeksToCover100Pct,
+    daysToCover100Pct,
+    weekCoveragePct,
+    cumulativeIncidencePctThisWeek,
+  };
+
   return {
     weekLabel,
     weekRangeFullLabel,
@@ -881,5 +1040,6 @@ export function buildWeeklySchedule({
     calendarSummary,
     weekPhase,
     feasibility,
+    fullExamCoverage,
   };
 }

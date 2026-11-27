@@ -13,11 +13,13 @@ import type {
   QuestionFilters,
   StudentFilterStatus,
   StudyMode,
+  UserAnswerRecord,
 } from '../../types/medical';
 import {
   getAllBankQuestions,
   getOfficialExamCatalog,
 } from '../../lib/questionBankStore';
+import { buildCascadingTaxonomyOptions } from '../../lib/taxonomyAnalytics';
 import { GRANDES_AREAS, REGIOES_BRASIL } from '../../data/taxonomy';
 import { Select } from '../ui/Select';
 import { Switch } from '../ui/Switch';
@@ -33,8 +35,12 @@ interface FilterPanelProps {
   onChangeMode: (mode: StudyMode) => void;
   onStartSimulado: () => void;
   simuladoActive: boolean;
+  includeAnsweredInSimulado?: boolean;
+  onToggleIncludeAnsweredInSimulado?: (include: boolean) => void;
   variant?: 'sidebar' | 'top';
   questions?: MedicalQuestion[];
+  answers?: Record<string, UserAnswerRecord>;
+  bookmarks?: string[];
 }
 
 const STATUS_OPTIONS: Array<{ id: StudentFilterStatus; label: string }> = [
@@ -55,7 +61,8 @@ export function countActiveQuestionFilters(filters: QuestionFilters): number {
   else if (filters.tema) count++;
   if (filters.subtema) count++;
   if (filters.banca) count++;
-  if (filters.instituicao) count++;
+  if (filters.instituicoes && filters.instituicoes.length > 0) count++;
+  else if (filters.instituicao) count++;
   if (filters.regiao) count++;
   if (filters.ano) count++;
   if (filters.dificuldade) count++;
@@ -74,34 +81,31 @@ export function FilterPanel({
   onChangeMode,
   onStartSimulado,
   simuladoActive,
+  includeAnsweredInSimulado = false,
+  onToggleIncludeAnsweredInSimulado,
   variant = 'sidebar',
   questions,
+  answers,
+  bookmarks,
 }: FilterPanelProps) {
   const [expanded, setExpanded] = useState(true);
+  const [topPanelOpen, setTopPanelOpen] = useState(false);
   const bankQuestions = questions ?? getAllBankQuestions();
 
-  // Cascading hierarchy options derived dynamically from the full question bank
-  const temaOptions = useMemo(() => {
-    const subset = filters.grandeAreaId
-      ? bankQuestions.filter((q) => q.grandeAreaId === filters.grandeAreaId)
-      : bankQuestions;
-    const unique = Array.from(new Set(subset.map((q) => q.tema))).sort((a, b) =>
-      a.localeCompare(b, 'pt-BR')
-    );
-    return unique.map((t) => ({ value: t, label: t }));
-  }, [bankQuestions, filters.grandeAreaId]);
-
-  const subtemaOptions = useMemo(() => {
-    const subset = bankQuestions.filter((q) => {
-      if (filters.grandeAreaId && q.grandeAreaId !== filters.grandeAreaId) return false;
-      if (filters.tema && q.tema !== filters.tema) return false;
-      return true;
-    });
-    const unique = Array.from(new Set(subset.map((q) => q.subtema))).sort((a, b) =>
-      a.localeCompare(b, 'pt-BR')
-    );
-    return unique.map((s) => ({ value: s, label: s }));
-  }, [bankQuestions, filters.grandeAreaId, filters.tema]);
+  // Cascading v1 hierarchy options derived dynamically from current non-taxonomy slice
+  const {
+    grandeAreaOptions,
+    temaOptions,
+    subtemaOptions,
+    topTags,
+  } = useMemo(
+    () =>
+      buildCascadingTaxonomyOptions(bankQuestions, filters, {
+        answers,
+        bookmarks,
+      }),
+    [bankQuestions, filters, answers, bookmarks]
+  );
 
   const catalogEntries = getOfficialExamCatalog();
 
@@ -210,16 +214,29 @@ export function FilterPanel({
         </div>
 
         {mode === 'simulado' && !simuladoActive && (
-          <Button
-            variant="primary"
-            size="sm"
-            onClick={onStartSimulado}
-            disabled={resultCount === 0}
-            className="w-full justify-center"
-          >
-            <Play className="h-3.5 w-3.5" />
-            <span>Iniciar Simulado ({resultCount})</span>
-          </Button>
+          <div className="space-y-2.5">
+            {onToggleIncludeAnsweredInSimulado && (
+              <label className="flex items-center gap-2 rounded-lg border border-slate-200/80 bg-slate-50/70 px-2.5 py-2 text-[11px] font-medium text-slate-700 cursor-pointer dark:border-slate-700 dark:bg-slate-950/60 dark:text-slate-300">
+                <input
+                  type="checkbox"
+                  checked={includeAnsweredInSimulado}
+                  onChange={(e) => onToggleIncludeAnsweredInSimulado(e.target.checked)}
+                  className="h-3.5 w-3.5 rounded border-slate-300 text-[#007AFF] focus:ring-[#007AFF]"
+                />
+                <span>Incluir questões já respondidas</span>
+              </label>
+            )}
+            <Button
+              variant="primary"
+              size="sm"
+              onClick={onStartSimulado}
+              disabled={resultCount === 0}
+              className="w-full justify-center"
+            >
+              <Play className="h-3.5 w-3.5" />
+              <span>Iniciar Simulado ({resultCount})</span>
+            </Button>
+          </div>
         )}
 
         {expanded && (
@@ -235,11 +252,43 @@ export function FilterPanel({
                 value={filters.search}
                 disabled={simuladoActive}
                 onChange={(e) => onChange({ ...filters, search: e.target.value })}
-                aria-label="Buscar por palavra-chave no enunciado ou comentário"
-                placeholder="Palavra-chave (ATLS, supra...)"
+                aria-label="Buscar por palavra-chave no enunciado, comentário ou tag"
+                placeholder="Palavra-chave ou tag (atls, has...)"
                 className="h-9 w-full rounded-lg border border-slate-200 bg-slate-50/70 pl-8 pr-3 text-xs text-slate-900 placeholder:text-slate-400 transition-colors focus:border-sky-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 disabled:opacity-50 dark:border-slate-700 dark:bg-slate-950/60 dark:text-slate-100 dark:placeholder:text-slate-500 dark:focus:border-sky-400 dark:focus:bg-slate-950"
               />
             </div>
+
+            {topTags.length > 0 && (
+              <div className="flex flex-wrap items-center gap-1" aria-label="Tags frequentes no recorte">
+                {topTags.slice(0, 6).map(({ tag, count }) => {
+                  const cleanSearch = filters.search.trim().replace(/^#+/, '').toLowerCase();
+                  const isActiveTag = cleanSearch === tag;
+                  return (
+                    <button
+                      key={tag}
+                      type="button"
+                      disabled={simuladoActive}
+                      onClick={() =>
+                        onChange({
+                          ...filters,
+                          search: isActiveTag ? '' : tag,
+                        })
+                      }
+                      className={cn(
+                        'inline-flex items-center gap-1 rounded-md border px-1.5 py-0.5 font-mono text-[10px] tabular-nums transition-colors cursor-pointer disabled:opacity-50',
+                        isActiveTag
+                          ? 'border-[#007AFF]/40 bg-[#007AFF]/10 text-[#007AFF] dark:border-sky-400/40 dark:bg-sky-500/15 dark:text-sky-300'
+                          : 'border-black/5 bg-[#F5F5F7] text-[#86868B] hover:bg-[#E5E5EA] hover:text-[#1D1D1F] dark:border-white/10 dark:bg-white/[0.04] dark:text-slate-400 dark:hover:text-slate-200'
+                      )}
+                      title={`Filtrar pela tag #${tag} (${count})`}
+                    >
+                      <span>#{tag}</span>
+                      <span className="opacity-70">{count}</span>
+                    </button>
+                  );
+                })}
+              </div>
+            )}
 
             {/* Specific Exam Name Search */}
             <div className="relative">
@@ -274,12 +323,13 @@ export function FilterPanel({
                 placeholder="Todas as 5 áreas"
                 disabled={simuladoActive}
                 value={filters.grandeAreaId}
-                options={GRANDES_AREAS.map((a) => ({ value: a.id, label: a.name }))}
+                options={grandeAreaOptions}
                 onChange={(val) =>
                   onChange({
                     ...filters,
                     grandeAreaId: val,
                     tema: '',
+                    temas: [],
                     subtema: '',
                   })
                 }
@@ -287,14 +337,19 @@ export function FilterPanel({
               <Select
                 id="filter-tema"
                 label="Especialidade / Tema"
-                placeholder="Todos os temas"
-                disabled={simuladoActive}
+                placeholder={
+                  temaOptions.length === 0
+                    ? 'Nenhum tema disponível'
+                    : 'Todos os temas'
+                }
+                disabled={simuladoActive || temaOptions.length === 0}
                 value={filters.tema}
                 options={temaOptions}
                 onChange={(val) =>
                   onChange({
                     ...filters,
                     tema: val,
+                    temas: [],
                     subtema: '',
                   })
                 }
@@ -302,8 +357,12 @@ export function FilterPanel({
               <Select
                 id="filter-subtema"
                 label="Subtema / Foco"
-                placeholder="Todos os subtemas"
-                disabled={simuladoActive}
+                placeholder={
+                  subtemaOptions.length === 0
+                    ? 'Nenhum subtema disponível'
+                    : 'Todos os subtemas'
+                }
+                disabled={simuladoActive || subtemaOptions.length === 0}
                 value={filters.subtema}
                 options={subtemaOptions}
                 onChange={(val) => onChange({ ...filters, subtema: val })}
@@ -319,7 +378,9 @@ export function FilterPanel({
                 disabled={simuladoActive}
                 value={filters.instituicao}
                 options={instituicaoOptions}
-                onChange={(val) => onChange({ ...filters, instituicao: val })}
+                onChange={(val) =>
+                  onChange({ ...filters, instituicao: val, instituicoes: [] })
+                }
               />
               <Select
                 id="filter-banca"
@@ -429,8 +490,6 @@ export function FilterPanel({
     );
   }
 
-  const [topPanelOpen, setTopPanelOpen] = useState(false);
-
   const activeChips: Array<{ key: string; label: string; onRemove: () => void }> = [];
   if (filters.grandeAreaId) {
     const areaName =
@@ -440,14 +499,14 @@ export function FilterPanel({
       key: 'area',
       label: areaName,
       onRemove: () =>
-        onChange({ ...filters, grandeAreaId: '', tema: '', subtema: '' }),
+        onChange({ ...filters, grandeAreaId: '', tema: '', temas: [], subtema: '' }),
     });
   }
   if (filters.tema) {
     activeChips.push({
       key: 'tema',
       label: filters.tema,
-      onRemove: () => onChange({ ...filters, tema: '', subtema: '' }),
+      onRemove: () => onChange({ ...filters, tema: '', temas: [], subtema: '' }),
     });
   }
   if (filters.subtema) {
@@ -457,11 +516,17 @@ export function FilterPanel({
       onRemove: () => onChange({ ...filters, subtema: '' }),
     });
   }
-  if (filters.instituicao) {
+  if (filters.instituicoes && filters.instituicoes.length > 0) {
+    activeChips.push({
+      key: 'instituicoes',
+      label: filters.instituicoes.join(' / '),
+      onRemove: () => onChange({ ...filters, instituicoes: [], instituicao: '' }),
+    });
+  } else if (filters.instituicao) {
     activeChips.push({
       key: 'instituicao',
       label: filters.instituicao,
-      onRemove: () => onChange({ ...filters, instituicao: '' }),
+      onRemove: () => onChange({ ...filters, instituicao: '', instituicoes: [] }),
     });
   }
   if (filters.banca) {
@@ -568,7 +633,7 @@ export function FilterPanel({
                 type="search"
                 value={filters.search}
                 onChange={(e) => onChange({ ...filters, search: e.target.value })}
-                placeholder="Buscar por tema, prova, texto..."
+                placeholder="Buscar texto, tema ou tag..."
                 className="w-full rounded-lg border border-slate-200 bg-white py-1.5 pl-8 pr-2.5 text-xs text-slate-900 placeholder:text-slate-400 focus:border-[#007AFF] focus:outline-none dark:border-white/10 dark:bg-[#131926] dark:text-slate-100"
               />
             </div>
@@ -577,12 +642,13 @@ export function FilterPanel({
               aria-label="Grande Área"
               value={filters.grandeAreaId}
               placeholder="Todas as Grandes Áreas"
-              options={GRANDES_AREAS.map((a) => ({ value: a.id, label: a.name }))}
+              options={grandeAreaOptions}
               onChange={(val) =>
                 onChange({
                   ...filters,
                   grandeAreaId: val,
                   tema: '',
+                  temas: [],
                   subtema: '',
                 })
               }
@@ -591,9 +657,29 @@ export function FilterPanel({
             <Select
               aria-label="Tema"
               value={filters.tema}
-              placeholder="Todos os Temas"
+              placeholder={
+                temaOptions.length === 0
+                  ? 'Nenhum tema disponível'
+                  : 'Todos os Temas'
+              }
+              disabled={temaOptions.length === 0}
               options={temaOptions}
-              onChange={(val) => onChange({ ...filters, tema: val, subtema: '' })}
+              onChange={(val) =>
+                onChange({ ...filters, tema: val, temas: [], subtema: '' })
+              }
+            />
+
+            <Select
+              aria-label="Subtema"
+              value={filters.subtema}
+              placeholder={
+                subtemaOptions.length === 0
+                  ? 'Nenhum subtema disponível'
+                  : 'Todos os Subtemas'
+              }
+              disabled={subtemaOptions.length === 0}
+              options={subtemaOptions}
+              onChange={(val) => onChange({ ...filters, subtema: val })}
             />
 
             <Select
@@ -601,7 +687,9 @@ export function FilterPanel({
               value={filters.instituicao}
               placeholder="Todas as Instituições"
               options={instituicaoOptions}
-              onChange={(val) => onChange({ ...filters, instituicao: val })}
+              onChange={(val) =>
+                onChange({ ...filters, instituicao: val, instituicoes: [] })
+              }
             />
 
             <Select
@@ -640,7 +728,18 @@ export function FilterPanel({
               }
             />
 
-            <div className="flex items-center justify-end gap-2">
+            <div className="flex flex-wrap items-center justify-end gap-2.5">
+              {mode === 'simulado' && onToggleIncludeAnsweredInSimulado && (
+                <label className="inline-flex items-center gap-1.5 text-[11px] font-medium text-slate-600 dark:text-slate-300 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={includeAnsweredInSimulado}
+                    onChange={(e) => onToggleIncludeAnsweredInSimulado(e.target.checked)}
+                    className="h-3.5 w-3.5 rounded border-slate-300 text-[#007AFF] focus:ring-[#007AFF]"
+                  />
+                  <span>Incluir já respondidas</span>
+                </label>
+              )}
               {mode === 'simulado' && (
                 <button
                   type="button"

@@ -150,15 +150,62 @@ async function upsertFsrsState(
     ? normalizeIsoTimestamp(payload.lastReview, nowIso)
     : null;
   const clientUpdatedAt = normalizeIsoTimestamp(payload.clientUpdatedAt, nowIso);
+  const questionId = payload.questionId ?? null;
+  const cardId = payload.cardId ?? (questionId ? `fc-${questionId}` : null);
+
+  if (!questionId && !cardId) {
+    return;
+  }
+
+  if (questionId) {
+    await client.query(
+      `INSERT INTO review_states (
+         student_id, question_id, card_id, state, stability, difficulty,
+         elapsed_days, scheduled_days, reps, lapses, due_at,
+         last_reviewed_at, client_updated_at
+       )
+       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)
+       ON CONFLICT (student_id, question_id) DO UPDATE SET
+         card_id = COALESCE(EXCLUDED.card_id, review_states.card_id),
+         state = EXCLUDED.state,
+         stability = EXCLUDED.stability,
+         difficulty = EXCLUDED.difficulty,
+         elapsed_days = EXCLUDED.elapsed_days,
+         scheduled_days = EXCLUDED.scheduled_days,
+         reps = EXCLUDED.reps,
+         lapses = EXCLUDED.lapses,
+         due_at = EXCLUDED.due_at,
+         last_reviewed_at = EXCLUDED.last_reviewed_at,
+         client_updated_at = EXCLUDED.client_updated_at
+       WHERE EXCLUDED.client_updated_at >= review_states.client_updated_at`,
+      [
+        studentId,
+        questionId,
+        cardId,
+        fsrsStateNumberToLabel(payload.state),
+        payload.stability,
+        payload.difficulty,
+        payload.elapsedDays,
+        payload.scheduledDays,
+        Math.max(0, Math.round(payload.reps)),
+        Math.max(0, Math.round(payload.lapses)),
+        dueAt,
+        lastReviewedAt,
+        clientUpdatedAt,
+      ]
+    );
+    return;
+  }
 
   await client.query(
     `INSERT INTO review_states (
-       student_id, question_id, state, stability, difficulty,
+       student_id, question_id, card_id, card_payload, state, stability, difficulty,
        elapsed_days, scheduled_days, reps, lapses, due_at,
        last_reviewed_at, client_updated_at
      )
-     VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)
-     ON CONFLICT (student_id, question_id) DO UPDATE SET
+     VALUES ($1, NULL, $2, $3::JSONB, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)
+     ON CONFLICT (student_id, card_id) DO UPDATE SET
+       card_payload = COALESCE(EXCLUDED.card_payload, review_states.card_payload),
        state = EXCLUDED.state,
        stability = EXCLUDED.stability,
        difficulty = EXCLUDED.difficulty,
@@ -172,7 +219,8 @@ async function upsertFsrsState(
      WHERE EXCLUDED.client_updated_at >= review_states.client_updated_at`,
     [
       studentId,
-      payload.questionId,
+      cardId,
+      payload.cardPayload ? JSON.stringify(payload.cardPayload) : null,
       fsrsStateNumberToLabel(payload.state),
       payload.stability,
       payload.difficulty,
@@ -193,31 +241,75 @@ async function insertFsrsLogIdempotent(
   payload: FsrsReviewLogSyncPayload
 ): Promise<void> {
   const reviewedAt = normalizeIsoTimestamp(payload.reviewedAt, new Date().toISOString());
+  const questionId = payload.questionId ?? null;
+  const cardId = payload.cardId ?? (questionId ? `fc-${questionId}` : null);
+
+  if (!questionId && !cardId) {
+    return;
+  }
+
+  if (questionId) {
+    await client.query(
+      `INSERT INTO review_states (student_id, question_id, card_id)
+       VALUES ($1, $2, $3)
+       ON CONFLICT (student_id, question_id) DO NOTHING`,
+      [studentId, questionId, cardId]
+    );
+
+    await client.query(
+      `INSERT INTO fsrs_review_logs (
+         id, review_state_id, student_id, question_id, card_id, rating, state,
+         stability, difficulty, elapsed_days, scheduled_days,
+         reviewed_at, client_updated_at
+       )
+       SELECT
+         $1, rs.id, $2, $3, $4, $5, $6,
+         $7, $8, $9, $10,
+         $11, $11
+       FROM review_states rs
+       WHERE rs.student_id = $2 AND rs.question_id = $3
+       ON CONFLICT (id) DO NOTHING`,
+      [
+        payload.id,
+        studentId,
+        questionId,
+        cardId,
+        Math.min(4, Math.max(1, Math.round(payload.rating))),
+        fsrsStateNumberToLabel(payload.state),
+        payload.stability,
+        payload.difficulty,
+        payload.elapsedDays,
+        payload.scheduledDays,
+        reviewedAt,
+      ]
+    );
+    return;
+  }
 
   await client.query(
-    `INSERT INTO review_states (student_id, question_id)
-     VALUES ($1, $2)
-     ON CONFLICT (student_id, question_id) DO NOTHING`,
-    [studentId, payload.questionId]
+    `INSERT INTO review_states (student_id, question_id, card_id)
+     VALUES ($1, NULL, $2)
+     ON CONFLICT (student_id, card_id) DO NOTHING`,
+    [studentId, cardId]
   );
 
   await client.query(
     `INSERT INTO fsrs_review_logs (
-       id, review_state_id, student_id, question_id, rating, state,
+       id, review_state_id, student_id, question_id, card_id, rating, state,
        stability, difficulty, elapsed_days, scheduled_days,
        reviewed_at, client_updated_at
      )
      SELECT
-       $1, rs.id, $2, $3, $4, $5,
+       $1, rs.id, $2, NULL, $3, $4, $5,
        $6, $7, $8, $9,
        $10, $10
      FROM review_states rs
-     WHERE rs.student_id = $2 AND rs.question_id = $3
+     WHERE rs.student_id = $2 AND rs.card_id = $3
      ON CONFLICT (id) DO NOTHING`,
     [
       payload.id,
       studentId,
-      payload.questionId,
+      cardId,
       Math.min(4, Math.max(1, Math.round(payload.rating))),
       fsrsStateNumberToLabel(payload.state),
       payload.stability,
@@ -401,7 +493,16 @@ export async function pullSyncDelta(
         [studentId, since]
       ),
       runQuery<{
-        question_id: string;
+        question_id: string | null;
+        card_id: string | null;
+        card_payload: {
+          grandeAreaId: string;
+          grandeArea: string;
+          tema: string;
+          front: string;
+          backPearl: string;
+          source: string;
+        } | null;
         stability: number;
         difficulty: number;
         elapsed_days: number;
@@ -413,7 +514,7 @@ export async function pullSyncDelta(
         last_reviewed_at: Date | string | null;
         client_updated_at: Date | string;
       }>(
-        `SELECT question_id, stability, difficulty, elapsed_days, scheduled_days,
+        `SELECT question_id, card_id, card_payload, stability, difficulty, elapsed_days, scheduled_days,
                 reps, lapses, state, due_at, last_reviewed_at, client_updated_at
          FROM review_states
          WHERE student_id = $1 AND server_updated_at > $2`,
@@ -479,7 +580,9 @@ export async function pullSyncDelta(
       clientUpdatedAt: new Date(row.client_updated_at).toISOString(),
     })),
     reviewStates: reviewStatesRes.rows.map((row) => ({
-      questionId: row.question_id,
+      questionId: row.question_id ?? undefined,
+      cardId: row.card_id ?? undefined,
+      cardPayload: row.card_payload ?? undefined,
       stability: row.stability,
       difficulty: row.difficulty,
       elapsedDays: row.elapsed_days,
@@ -546,7 +649,7 @@ export async function bootstrapSyncState(
   }
   for (const rs of request.reviewStates) {
     events.push({
-      eventId: `bootstrap-fsrs-${rs.questionId}`,
+      eventId: `bootstrap-fsrs-${rs.questionId ?? rs.cardId ?? 'card'}`,
       type: 'FSRS_STATE_UPSERT',
       payload: rs,
     });

@@ -91,7 +91,11 @@ export function matchesExamCatalogFilters(
   entry: ExamCatalogEntry,
   filters: Partial<QuestionFilters>
 ): boolean {
-  if (filters.instituicao && entry.instituicao !== filters.instituicao) {
+  if (filters.instituicoes && filters.instituicoes.length > 0) {
+    if (!filters.instituicoes.includes(entry.instituicao)) {
+      return false;
+    }
+  } else if (filters.instituicao && entry.instituicao !== filters.instituicao) {
     return false;
   }
   if (filters.banca && entry.banca !== filters.banca) {

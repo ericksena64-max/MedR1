@@ -81,6 +81,12 @@ export interface MedicalQuestion {
   grandeArea: string;
   tema: string;
   subtema: string;
+  /** Taxonomia canônica medr1_taxonomy_v1 (slugs estáveis). */
+  temaSlug?: string;
+  subtemaSlug?: string;
+  tags?: string[];
+  taxonomyVersion?: string;
+  needsTaxonomyReview?: boolean;
   banca: string;
   instituicao: string;
   estado: string;
@@ -126,6 +132,7 @@ export interface QuestionFilters {
   subtema: string;
   banca: string;
   instituicao: string;
+  instituicoes?: string[];
   regiao: string;
   ano: string;
   dificuldade: string;

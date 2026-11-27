@@ -1,9 +1,15 @@
 import type { Flashcard } from '../types/medical';
+import {
+  IMPORTED_ANKI_DECK_VERSION,
+  buildImportedAnkiFlashcards,
+} from './importedAnkiFlashcards';
+
+export { IMPORTED_ANKI_DECK_VERSION, buildImportedAnkiFlashcards };
 
 const now = Date.now();
 const DAY_MS = 24 * 60 * 60 * 1000;
 
-export const INITIAL_FLASHCARDS: Flashcard[] = [
+const BASE_SEED_FLASHCARDS: Flashcard[] = [
   {
     id: 'fc-q-usp-2025-cardio-01',
     questionId: 'q-usp-2025-cardio-01',
@@ -138,4 +144,9 @@ export const INITIAL_FLASHCARDS: Flashcard[] = [
     lapses: 0,
     state: 'Review',
   },
+];
+
+export const INITIAL_FLASHCARDS: Flashcard[] = [
+  ...BASE_SEED_FLASHCARDS,
+  ...buildImportedAnkiFlashcards(now),
 ];

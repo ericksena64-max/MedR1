@@ -58,6 +58,7 @@ export class LocalOnlyAdapter implements StorageAdapter {
 export interface HybridSyncAdapterOptions {
   baseUrl?: string;
   fetchImpl?: typeof fetch;
+  getAuthToken?: () => string | null;
 }
 
 /**
@@ -68,10 +69,24 @@ export class HybridPostgresSyncAdapter implements StorageAdapter {
   readonly mode = 'hybrid' as const;
   private readonly baseUrl: string;
   private readonly fetchFn: typeof fetch;
+  private readonly getAuthToken?: () => string | null;
 
   constructor(options: HybridSyncAdapterOptions = {}) {
     this.baseUrl = options.baseUrl ?? '';
     this.fetchFn = options.fetchImpl ?? globalThis.fetch.bind(globalThis);
+    this.getAuthToken = options.getAuthToken;
+  }
+
+  private buildHeaders(includeJsonContentType = false): Record<string, string> {
+    const headers: Record<string, string> = {};
+    if (includeJsonContentType) {
+      headers['content-type'] = 'application/json';
+    }
+    const token = this.getAuthToken?.()?.trim();
+    if (token) {
+      headers.authorization = `Bearer ${token}`;
+    }
+    return headers;
   }
 
   async enqueue(events: SyncOutboxEvent[]): Promise<void> {
@@ -95,7 +110,7 @@ export class HybridPostgresSyncAdapter implements StorageAdapter {
     try {
       const res = await this.fetchFn(`${this.baseUrl}/api/sync/push`, {
         method: 'POST',
-        headers: { 'content-type': 'application/json' },
+        headers: this.buildHeaders(true),
         body: JSON.stringify({ studentId, events: pending }),
       });
 
@@ -130,7 +145,11 @@ export class HybridPostgresSyncAdapter implements StorageAdapter {
 
     try {
       const params = new URLSearchParams({ studentId, since: sinceIso });
-      const res = await this.fetchFn(`${this.baseUrl}/api/sync/pull?${params.toString()}`);
+      const headers = this.buildHeaders(false);
+      const res = await this.fetchFn(
+        `${this.baseUrl}/api/sync/pull?${params.toString()}`,
+        Object.keys(headers).length > 0 ? { headers } : undefined
+      );
       if (!res.ok) return null;
 
       const data = (await res.json()) as SyncPullResponse;
@@ -151,7 +170,7 @@ export class HybridPostgresSyncAdapter implements StorageAdapter {
     try {
       const res = await this.fetchFn(`${this.baseUrl}/api/sync/bootstrap`, {
         method: 'POST',
-        headers: { 'content-type': 'application/json' },
+        headers: this.buildHeaders(true),
         body: JSON.stringify(payload),
       });
       if (!res.ok) return null;

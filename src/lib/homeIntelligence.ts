@@ -77,6 +77,17 @@ export function readPersistedEstimatorConfig(
   return parseEstimatorConfigJson(rawJson, fallbackCutoff);
 }
 
+export function applyTargetExamPresetToEstimatorConfig(
+  baseConfig: ConfiguracaoProva,
+  preset: { defaultCutoff: number; totalQuestions: number }
+): ConfiguracaoProva {
+  return {
+    ...baseConfig,
+    notaCorteMedia: preset.defaultCutoff,
+    totalQuestoesProva: preset.totalQuestions,
+  };
+}
+
 export function buildHomeIntelligenceSummary({
   areaRows,
   simulados,

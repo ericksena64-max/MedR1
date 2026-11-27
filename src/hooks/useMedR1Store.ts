@@ -68,7 +68,16 @@ import {
 } from '../lib/diagnosticExam';
 import { generateClientUuid } from '../lib/syncOutbox';
 import { useSyncEngine } from './useSyncEngine';
-import type { SyncOutboxEvent } from '../types/sync';
+import type {
+  SyncBootstrapRequest,
+  SyncOutboxEvent,
+  SyncPullResponse,
+} from '../types/sync';
+import { aggregateWeightedAreaPerformance } from '../lib/recencyAnalytics';
+import {
+  matchesTaxonomyLabel,
+  matchesTaxonomySearch,
+} from '../lib/taxonomyAnalytics';
 import {
   areAllOfficialExamsLoaded,
   clearAllImportedQuestionsFromDB,
@@ -237,6 +246,7 @@ export const DEFAULT_FILTERS: QuestionFilters = {
   subtema: '',
   banca: '',
   instituicao: '',
+  instituicoes: [],
   regiao: '',
   ano: '',
   dificuldade: '',
@@ -360,8 +370,12 @@ const FSRS_STATE_TO_NUM: Record<string, number> = {
 export function useMedR1Store(options?: {
   liveRankingEnabled?: boolean;
   storageAdapter?: StorageAdapter;
+  studentId?: string;
 }) {
-  const syncEngine = useSyncEngine({ adapter: options?.storageAdapter });
+  const syncEngine = useSyncEngine({
+    adapter: options?.storageAdapter,
+    studentId: options?.studentId,
+  });
   const liveRankingEnabled = options?.liveRankingEnabled ?? false;
   const [storageQuotaExceeded, setStorageQuotaExceeded] = useState(false);
 
@@ -1319,6 +1333,28 @@ export function useMedR1Store(options?: {
         }));
     }
 
+    const questionById = new Map(allQuestions.map((q) => [q.id, q]));
+    const weightedByArea = aggregateWeightedAreaPerformance(
+      Object.values(answers),
+      questionById
+    );
+    const recentWeightedAreaRows = areaRows.map((row) => {
+      const w = weightedByArea.get(row.grandeAreaId);
+      if (!w || w.effectiveTotal <= 0) {
+        return row;
+      }
+      const studentPct = Number(w.weightedAccuracyPct.toFixed(1));
+      const delta = Number((studentPct - row.communityMedianPct).toFixed(1));
+      return {
+        ...row,
+        answered: Math.round(w.effectiveTotal),
+        correct: Math.round(w.effectiveCorrect),
+        studentPct,
+        delta,
+        status: computePerformanceStatus(delta),
+      };
+    });
+
     return {
       totalAnswered,
       totalCorrect,
@@ -1328,6 +1364,7 @@ export function useMedR1Store(options?: {
       overallDelta,
       overallStatus: computePerformanceStatus(overallDelta),
       areaRows,
+      recentWeightedAreaRows,
       topicRows,
       weeklyEvolution,
       monthlyEvolution,
@@ -1654,16 +1691,18 @@ export function useMedR1Store(options?: {
             );
           });
           if (!matchesAnyTopic) return false;
-        } else if (filters.tema && item.tema !== filters.tema) {
+        } else if (filters.tema && !matchesTaxonomyLabel(item.tema, filters.tema)) {
           return false;
         }
-        if (filters.subtema && item.subtema !== filters.subtema) {
+        if (filters.subtema && !matchesTaxonomyLabel(item.subtema, filters.subtema)) {
           return false;
         }
         if (filters.banca && item.banca !== filters.banca) {
           return false;
         }
-        if (filters.instituicao && item.instituicao !== filters.instituicao) {
+        if (filters.instituicoes && filters.instituicoes.length > 0) {
+          if (!filters.instituicoes.includes(item.instituicao)) return false;
+        } else if (filters.instituicao && item.instituicao !== filters.instituicao) {
           return false;
         }
         if (filters.regiao && item.regiao !== filters.regiao) {
@@ -1683,21 +1722,8 @@ export function useMedR1Store(options?: {
           return false;
         }
 
-        if (q) {
-          const haystack = [
-            item.code,
-            item.enunciado,
-            item.comentarioGeral,
-            item.perolaClinica,
-            item.grandeArea,
-            item.tema,
-            item.subtema,
-            item.instituicao,
-            item.banca,
-          ]
-            .join(' ')
-            .toLowerCase();
-          if (!haystack.includes(q)) return false;
+        if (q && !matchesTaxonomySearch(item, filters.search)) {
+          return false;
         }
 
         return true;
@@ -2095,6 +2121,168 @@ export function useMedR1Store(options?: {
     setDiagnosticState(DEFAULT_DIAGNOSTIC_STATE);
   }, []);
 
+  const applyRemoteSyncSnapshot = useCallback((snapshot: SyncPullResponse) => {
+    if (snapshot.profile) {
+      const remoteProfile = snapshot.profile;
+      setProfile((prev) => ({
+        ...prev,
+        realName: remoteProfile.fullName?.trim() || prev.realName,
+        targetSpecialty: remoteProfile.targetSpecialty?.trim() || prev.targetSpecialty,
+        targetInstitution:
+          remoteProfile.targetInstitutions?.[0]?.trim() || prev.targetInstitution,
+      }));
+      if (typeof remoteProfile.dailyGoal === 'number' && remoteProfile.dailyGoal >= 1) {
+        setDailyGoalTargetState(Math.min(300, Math.max(1, Math.round(remoteProfile.dailyGoal))));
+      }
+    }
+
+    if (Array.isArray(snapshot.attempts) && snapshot.attempts.length > 0) {
+      setAnswers((prev) => {
+        const next = { ...prev };
+        for (const attempt of snapshot.attempts) {
+          const letter = String(attempt.selectedOption || '').toUpperCase();
+          if (
+            letter !== 'A' &&
+            letter !== 'B' &&
+            letter !== 'C' &&
+            letter !== 'D' &&
+            letter !== 'E'
+          ) {
+            continue;
+          }
+          const existing = next[attempt.questionId];
+          const incomingTime = Date.parse(attempt.answeredAt || '') || 0;
+          const existingTime = existing ? Date.parse(existing.answeredAt || '') || 0 : -1;
+          if (!existing || incomingTime >= existingTime) {
+            next[attempt.questionId] = {
+              questionId: attempt.questionId,
+              selectedLetter: letter as AlternativeLetter,
+              isCorrect: Boolean(attempt.isCorrect),
+              answeredAt: attempt.answeredAt || new Date().toISOString(),
+              mode: attempt.mockExamId ? 'simulado' : 'estudo',
+              timeSpentSec: Math.max(0, Math.round((attempt.timeSpentMs || 0) / 1000)),
+            };
+          }
+        }
+        return next;
+      });
+    }
+
+    if (Array.isArray(snapshot.bookmarks) && snapshot.bookmarks.length > 0) {
+      setBookmarks((prev) => {
+        const set = new Set(prev);
+        for (const bm of snapshot.bookmarks) {
+          if (bm.isDeleted) {
+            set.delete(bm.questionId);
+          } else {
+            set.add(bm.questionId);
+          }
+        }
+        return Array.from(set);
+      });
+    }
+  }, []);
+
+  const syncWithCloud = useCallback(
+    async (studentOverride?: {
+      id: string;
+      fullName?: string;
+      email?: string;
+      targetSpecialty?: string | null;
+      targetInstitution?: string | null;
+      dailyGoal?: number;
+      avatarInitials?: string;
+    }): Promise<SyncPullResponse | null> => {
+      const targetStudentId = studentOverride?.id || syncEngine.studentId;
+      if (studentOverride) {
+        setProfile((prev) => ({
+          ...prev,
+          realName: studentOverride.fullName?.trim() || prev.realName,
+          avatarInitials: studentOverride.avatarInitials || prev.avatarInitials,
+          targetSpecialty: studentOverride.targetSpecialty?.trim() || prev.targetSpecialty,
+          targetInstitution: studentOverride.targetInstitution?.trim() || prev.targetInstitution,
+        }));
+        if (typeof studentOverride.dailyGoal === 'number' && studentOverride.dailyGoal >= 1) {
+          setDailyGoalTargetState(
+            Math.min(300, Math.max(1, Math.round(studentOverride.dailyGoal)))
+          );
+        }
+      }
+
+      const nowIso = new Date().toISOString();
+      const payload: SyncBootstrapRequest = {
+        studentId: targetStudentId,
+        profile: {
+          id: targetStudentId,
+          email: studentOverride?.email ?? null,
+          fullName: studentOverride?.fullName ?? profile.realName,
+          targetSpecialty: studentOverride?.targetSpecialty ?? profile.targetSpecialty,
+          targetInstitutions:
+            studentOverride?.targetInstitution || profile.targetInstitution
+              ? [studentOverride?.targetInstitution || profile.targetInstitution]
+              : [],
+          dailyGoal: studentOverride?.dailyGoal ?? dailyGoalTarget,
+          clientUpdatedAt: nowIso,
+        },
+        attempts: Object.values(answers).map((ans) => ({
+          id: generateClientUuid(),
+          questionId: ans.questionId,
+          selectedOption: ans.selectedLetter,
+          isCorrect: ans.isCorrect,
+          timeSpentMs: Math.round((ans.timeSpentSec || 0) * 1000),
+          answeredAt: ans.answeredAt || nowIso,
+          clientUpdatedAt: ans.answeredAt || nowIso,
+        })),
+        reviewStates: flashcards.map((fc) => ({
+          cardId: fc.id,
+          questionId: fc.questionId ?? null,
+          cardPayload: {
+            grandeAreaId: fc.grandeAreaId,
+            grandeArea: fc.grandeArea,
+            tema: fc.tema,
+            front: fc.front,
+            backPearl: fc.backPearl,
+            source: fc.source,
+          },
+          stability: fc.stability,
+          difficulty: fc.difficulty,
+          elapsedDays: fc.elapsed_days,
+          scheduledDays: fc.scheduled_days,
+          reps: fc.reps,
+          lapses: fc.lapses,
+          state: FSRS_STATE_TO_NUM[fc.state] ?? 0,
+          due: fc.dueAt,
+          lastReview: fc.lastReviewedAt ?? null,
+          clientUpdatedAt: fc.lastReviewedAt ?? nowIso,
+        })),
+        bookmarks: bookmarks.map((qId) => ({
+          questionId: qId,
+          isDeleted: false,
+          clientUpdatedAt: nowIso,
+        })),
+        mockExams: [],
+      };
+
+      await syncEngine.flushNow();
+      const snapshot = await syncEngine.bootstrapSync(payload);
+      if (snapshot && snapshot.mode === 'postgres') {
+        applyRemoteSyncSnapshot(snapshot);
+      }
+      return snapshot;
+    },
+    [
+      answers,
+      applyRemoteSyncSnapshot,
+      bookmarks,
+      dailyGoalTarget,
+      flashcards,
+      profile.realName,
+      profile.targetInstitution,
+      profile.targetSpecialty,
+      syncEngine,
+    ]
+  );
+
   return {
     darkMode,
     setDarkMode,
@@ -2173,6 +2361,7 @@ export function useMedR1Store(options?: {
     pendingSyncCount: syncEngine.pendingCount,
     lastSyncedAt: syncEngine.lastSyncedAt,
     flushSyncNow: syncEngine.flushNow,
+    syncWithCloud,
     diagnosticState,
     diagnosticUnlocked,
     startDiagnosticExam,

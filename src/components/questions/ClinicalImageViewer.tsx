@@ -17,6 +17,7 @@ import {
 } from 'react-zoom-pan-pinch';
 import 'react-zoom-pan-pinch/dist/styles.css';
 import type { ClinicalImage } from '../../types/medical';
+import { resolveClinicalAssetUrl } from '../../lib/assetUrl';
 import { cn } from '../../lib/utils';
 
 interface ClinicalImageViewerProps {
@@ -28,6 +29,7 @@ const MAX_SCALE = 5;
 const ZOOM_PRESETS = [1, 2, 3, 5] as const;
 
 export function ClinicalImageViewer({ image }: ClinicalImageViewerProps) {
+  const resolvedImageUrl = resolveClinicalAssetUrl(image.url);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [isZoomed, setIsZoomed] = useState(false);
   const [highContrast, setHighContrast] = useState(false);
@@ -184,7 +186,7 @@ export function ClinicalImageViewer({ image }: ClinicalImageViewerProps) {
           aria-label={`Ampliar ${image.modality}`}
         >
           <img
-            src={image.url}
+            src={resolvedImageUrl}
             alt={image.caption}
             referrerPolicy="no-referrer"
             onError={() => setLoadError(true)}
@@ -405,7 +407,7 @@ export function ClinicalImageViewer({ image }: ClinicalImageViewerProps) {
                     }}
                   >
                     <img
-                      src={image.url}
+                      src={resolvedImageUrl}
                       alt={image.caption}
                       referrerPolicy="no-referrer"
                       draggable={false}
@@ -431,7 +433,7 @@ export function ClinicalImageViewer({ image }: ClinicalImageViewerProps) {
                         zoomable
                       >
                         <img
-                          src={image.url}
+                          src={resolvedImageUrl}
                           alt=""
                           aria-hidden="true"
                           referrerPolicy="no-referrer"

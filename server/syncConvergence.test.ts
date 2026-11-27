@@ -71,7 +71,7 @@ function createStatefulPostgresMock() {
         const studentId = String(params[0]);
         const questionId = String(params[1]);
         const key = `${studentId}:${questionId}`;
-        const incomingUpdatedAt = Date.parse(String(params[11]));
+        const incomingUpdatedAt = Date.parse(String(params[12]));
         const existing = reviewStates.get(key);
 
         if (!existing || incomingUpdatedAt >= Date.parse(existing.client_updated_at)) {
@@ -79,16 +79,16 @@ function createStatefulPostgresMock() {
             id: existing?.id ?? `rs-${questionId}`,
             student_id: studentId,
             question_id: questionId,
-            state: String(params[2]),
-            stability: Number(params[3]),
-            difficulty: Number(params[4]),
-            elapsed_days: Number(params[5]),
-            scheduled_days: Number(params[6]),
-            reps: Number(params[7]),
-            lapses: Number(params[8]),
-            due_at: String(params[9]),
-            last_reviewed_at: (params[10] as string | null) ?? null,
-            client_updated_at: String(params[11]),
+            state: String(params[3]),
+            stability: Number(params[4]),
+            difficulty: Number(params[5]),
+            elapsed_days: Number(params[6]),
+            scheduled_days: Number(params[7]),
+            reps: Number(params[8]),
+            lapses: Number(params[9]),
+            due_at: String(params[10]),
+            last_reviewed_at: (params[11] as string | null) ?? null,
+            client_updated_at: String(params[12]),
           });
         }
         return { rows: [], rowCount: 1 };

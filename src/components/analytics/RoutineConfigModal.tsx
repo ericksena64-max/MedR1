@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { CalendarDays, ChevronLeft, ChevronRight, Plus, X } from 'lucide-react';
-import type { Flashcard } from '../../types/medical';
+import type { Flashcard, MedicalQuestion } from '../../types/medical';
 import {
   buildWeeklySchedule,
   loadWeeklyScheduleConfig,
@@ -20,12 +20,14 @@ export interface RoutineConfigModalProps {
   open: boolean;
   onClose: () => void;
   flashcards: Flashcard[];
+  questions?: MedicalQuestion[];
 }
 
 export function RoutineConfigModal({
   open,
   onClose,
   flashcards,
+  questions = [],
 }: RoutineConfigModalProps): React.ReactElement | null {
   const [config, setConfig] = useState<WeeklyScheduleConfig>(() => {
     try {
@@ -95,7 +97,7 @@ export function RoutineConfigModal({
   };
 
   const setHours = (hours: number) => {
-    const clamped = Math.max(1, Math.min(8, Math.round(hours)));
+    const clamped = Math.max(0.5, Math.min(12, Math.round(hours * 2) / 2));
     updateAndPersist((prev) => ({ ...prev, hoursPerDay: clamped }));
   };
 
@@ -159,8 +161,9 @@ export function RoutineConfigModal({
         config,
         flashcards,
         weekOffset: 0,
+        questions,
       }),
-    [config, flashcards]
+    [config, flashcards, questions]
   );
 
   if (!open) return null;
@@ -356,7 +359,7 @@ export function RoutineConfigModal({
           </div>
         </div>
 
-        {/* Hours per Day Slider (1h - 8h) */}
+        {/* Hours per Day Slider (0.5h - 12h) */}
         <div className="space-y-2">
           <div className="flex items-center justify-between text-xs">
             <label
@@ -366,24 +369,39 @@ export function RoutineConfigModal({
               Carga horária por dia ativo
             </label>
             <span className="font-mono font-semibold tabular-nums text-slate-900 dark:text-white">
-              {config.hoursPerDay}h/dia
+              {String(config.hoursPerDay).replace('.', ',')}h/dia
             </span>
           </div>
           <input
             id="global-weekly-hours-slider"
             type="range"
-            min={1}
-            max={8}
-            step={1}
+            min={0.5}
+            max={12}
+            step={0.5}
             value={config.hoursPerDay}
             onChange={(e) => setHours(Number(e.target.value))}
             className="w-full accent-[#007AFF] cursor-pointer"
           />
-          <div className="flex justify-between font-mono text-[11px] tabular-nums text-slate-500 dark:text-slate-400">
-            <span>1h</span>
-            <span>4h</span>
-            <span>8h</span>
+          <div className="flex flex-wrap items-center justify-between gap-1 pt-0.5">
+            {[1, 2, 3, 4, 6, 8, 10, 12].map((preset) => (
+              <button
+                key={preset}
+                type="button"
+                onClick={() => setHours(preset)}
+                className={cn(
+                  'rounded-md border px-2 py-0.5 font-mono text-[11px] tabular-nums transition-colors cursor-pointer',
+                  config.hoursPerDay === preset
+                    ? 'border-[#007AFF] bg-[#007AFF] text-white'
+                    : 'border-slate-200 bg-white text-slate-600 hover:text-slate-900 dark:border-white/10 dark:bg-[#0B0F17] dark:text-slate-400'
+                )}
+              >
+                {preset}h
+              </button>
+            ))}
           </div>
+          <p className="text-[11px] text-slate-500 dark:text-slate-400 tabular-nums">
+            Cobre <strong className="text-slate-800 dark:text-slate-200">100% da {preview.targetExam}</strong> ({preview.fullExamCoverage.totalTopics} temas por Pareto) em ~<strong className="text-[#007AFF] dark:text-sky-400">{preview.fullExamCoverage.weeksToCover100Pct} semanas</strong> ({preview.fullExamCoverage.daysToCover100Pct} dias ativos).
+          </p>
         </div>
 
         {/* Pace Mode Segmented Control (2.2 vs 3.0 min/q) */}

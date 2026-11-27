@@ -20,7 +20,16 @@ export interface QuestionAttemptSyncPayload {
 }
 
 export interface FsrsReviewStateSyncPayload {
-  questionId: string;
+  questionId?: string | null;
+  cardId?: string;
+  cardPayload?: {
+    grandeAreaId: string;
+    grandeArea: string;
+    tema: string;
+    front: string;
+    backPearl: string;
+    source: string;
+  };
   stability: number;
   difficulty: number;
   elapsedDays: number;
@@ -35,7 +44,8 @@ export interface FsrsReviewStateSyncPayload {
 
 export interface FsrsReviewLogSyncPayload {
   id: string;
-  questionId: string;
+  questionId?: string | null;
+  cardId?: string;
   rating: number; // 1: Again, 2: Hard, 3: Good, 4: Easy
   state: number;
   due: string;

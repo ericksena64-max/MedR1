@@ -153,7 +153,7 @@ def cmd_validate(args: argparse.Namespace) -> int:
             errors.append({"questao": num, "error": "Ano ausente ou inválido"})
 
         letters = [a["letter"] for a in q["alternativas"]]
-        if tuple(letters) != VALID_LETTERS:
+        if tuple(letters) not in (VALID_LETTERS, ("A", "B", "C", "D")):
             errors.append(
                 {
                     "questao": num,

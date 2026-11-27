@@ -37,9 +37,11 @@ describe('questionBankStore — code-splitting e carregamento sob demanda de pro
       'usp-sp-2023',
       'sus-sp-2023',
       'unifesp-2023',
+      'enamed-2025',
+      'enare-2024',
     ]);
-    expect(catalog.reduce((acc, e) => acc + e.questionCount, 0)).toBe(920);
-    expect(getUnloadedOfficialCatalogEntries()).toHaveLength(9);
+    expect(catalog.reduce((acc, e) => acc + e.questionCount, 0)).toBe(1107);
+    expect(getUnloadedOfficialCatalogEntries()).toHaveLength(11);
   });
 
   it('seleciona apenas as provas compatíveis com os filtros ativos', () => {
@@ -49,7 +51,8 @@ describe('questionBankStore — code-splitting e carregamento sob demanda de pro
     expect(getMatchingOfficialExamIds({ examSearch: 'UEPA 2023' })).toEqual(['uepa-2023']);
     expect(getMatchingOfficialExamIds({ examSearch: 'UEPA 2022' })).toEqual(['uepa-2022']);
     expect(getMatchingOfficialExamIds({ instituicao: 'USP-SP' })).toEqual(['usp-sp-2023']);
-    expect(getMatchingOfficialExamIds({ instituicao: 'ENARE' })).toEqual([]);
+    expect(getMatchingOfficialExamIds({ instituicao: 'ENARE' })).toEqual(['enare-2024']);
+    expect(getMatchingOfficialExamIds({ instituicao: 'AMRIGS' })).toEqual([]);
     expect(getMatchingOfficialExamIds({ regiao: 'Sudeste' })).toEqual([
       'usp-rp-2023',
       'usp-sp-2023',
@@ -73,6 +76,8 @@ describe('questionBankStore — code-splitting e carregamento sob demanda de pro
       'usp-sp-2023',
       'sus-sp-2023',
       'unifesp-2023',
+      'enamed-2025',
+      'enare-2024',
     ]);
   });
 
@@ -106,13 +111,15 @@ describe('questionBankStore — code-splitting e carregamento sob demanda de pro
       'usp-sp-2023',
       'sus-sp-2023',
       'unifesp-2023',
+      'enamed-2025',
+      'enare-2024',
     ]);
     expect(getAllBankQuestions().length).toBeGreaterThan(100);
   });
 
   it('não baixa nenhum chunk oficial quando o filtro aponta para outra banca', async () => {
     const loaded = await loadOfficialExamsMatchingFilters({
-      instituicao: 'ENARE',
+      instituicao: 'AMRIGS',
     });
     expect(loaded).toEqual([]);
     expect(getLoadedOfficialExamIds()).toEqual([]);
@@ -124,7 +131,7 @@ describe('questionBankStore — code-splitting e carregamento sob demanda de pro
     expect(getLoadedOfficialExamIds()).toEqual(['uepa-2024']);
 
     const allCatalog = await loadOfficialCatalogQuestions();
-    expect(allCatalog).toHaveLength(920);
+    expect(allCatalog).toHaveLength(1107);
     expect(areAllOfficialExamsLoaded()).toBe(true);
     expect(getUnloadedOfficialCatalogEntries()).toEqual([]);
 

@@ -201,6 +201,20 @@ def build_medr1_question(
         "grandeArea": grande_area,
         "tema": (q.get("tema") or "Clínica Geral").strip(),
         "subtema": (q.get("subtema") or "Questão de Prova").strip(),
+    }
+
+    if q.get("temaSlug"):
+        record["temaSlug"] = str(q["temaSlug"]).strip()
+    if q.get("subtemaSlug"):
+        record["subtemaSlug"] = str(q["subtemaSlug"]).strip()
+    if isinstance(q.get("tags"), list) and q["tags"]:
+        record["tags"] = [str(t).strip() for t in q["tags"] if str(t).strip()]
+    if q.get("taxonomyVersion"):
+        record["taxonomyVersion"] = str(q["taxonomyVersion"]).strip()
+    if q.get("needsTaxonomyReview") is True:
+        record["needsTaxonomyReview"] = True
+
+    record.update({
         "banca": banca,
         "instituicao": instituicao,
         "estado": estado,
@@ -217,7 +231,7 @@ def build_medr1_question(
         "comentarioGeral": comentario_geral,
         "perolaClinica": perola,
         "referencias": referencias,
-    }
+    })
 
     if image_urls:
         record["clinicalImage"] = {

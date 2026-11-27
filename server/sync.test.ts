@@ -353,4 +353,86 @@ describe('Fase 2 — /api/sync/* (push, pull, bootstrap)', () => {
     expect(json.mode).toBe('postgres');
     expect(Array.isArray(json.attempts)).toBe(true);
   });
+
+  it('sincroniza flashcards standalone/Anki sem questionId usando card_id em POST /api/sync/push', async () => {
+    const executedQueries: Array<{ sql: string; params: unknown[] }> = [];
+    const mockClient = {
+      query: vi.fn(async (sql: string, params: unknown[] = []) => {
+        executedQueries.push({ sql, params });
+        return { rows: [], rowCount: 1 };
+      }),
+    } as unknown as PoolClient;
+
+    const srv = await startTestServer({
+      syncDepsOverride: {
+        isConfigured: () => true,
+        withTransaction: async (cb) => cb(mockClient),
+      },
+    });
+    closers.push(srv.close);
+
+    const res = await fetch(`${srv.baseUrl}/api/sync/push`, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({
+        studentId: VALID_STUDENT_ID,
+        events: [
+          {
+            eventId: 'evt-anki-state-1',
+            type: 'FSRS_STATE_UPSERT',
+            payload: {
+              questionId: null,
+              cardId: 'fc-anki-001',
+              cardPayload: {
+                grandeAreaId: 'cirurgia_geral',
+                grandeArea: 'Cirurgia Geral',
+                tema: 'Cirurgia / Pré e Pós-Operatório',
+                front: 'Qual o melhor momento para equipe cirúrgica confirmar a reserva de sangue?',
+                backPearl: 'Antes da indução anestésica.',
+                source: 'manual',
+              },
+              stability: 3.1,
+              difficulty: 5.0,
+              elapsedDays: 0,
+              scheduledDays: 3,
+              reps: 1,
+              lapses: 0,
+              state: 2,
+              due: '2026-11-29T12:00:00.000Z',
+              lastReview: '2026-11-26T12:00:00.000Z',
+              clientUpdatedAt: '2026-11-26T12:00:00.000Z',
+            },
+          },
+          {
+            eventId: 'evt-anki-log-1',
+            type: 'FSRS_LOG_CREATE',
+            payload: {
+              id: '33333333-3333-4333-8333-333333333333',
+              questionId: null,
+              cardId: 'fc-anki-001',
+              rating: 3,
+              state: 2,
+              due: '2026-11-29T12:00:00.000Z',
+              stability: 3.1,
+              difficulty: 5.0,
+              elapsedDays: 0,
+              lastElapsedDays: 0,
+              scheduledDays: 3,
+              reviewedAt: '2026-11-26T12:00:00.000Z',
+            },
+          },
+        ],
+      }),
+    });
+
+    expect(res.status).toBe(200);
+    const json = (await res.json()) as { acknowledgedEventIds: string[] };
+    expect(json.acknowledgedEventIds).toEqual(['evt-anki-state-1', 'evt-anki-log-1']);
+    expect(
+      executedQueries.some((q) => q.sql.includes('ON CONFLICT (student_id, card_id)'))
+    ).toBe(true);
+    expect(
+      executedQueries.some((q) => q.sql.includes('WHERE rs.student_id = $2 AND rs.card_id = $3'))
+    ).toBe(true);
+  });
 });

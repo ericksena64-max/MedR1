@@ -24,6 +24,8 @@ import {
 } from './hooks/useMedR1Store';
 import { Sidebar } from './components/layout/Sidebar';
 import { TopBar } from './components/layout/TopBar';
+import { useAuthSession } from './hooks/useAuthSession';
+import { AuthModal } from './components/auth/AuthModal';
 import { MobileBottomNav } from './components/layout/MobileBottomNav';
 import type { CommandPaletteAction } from './lib/commandPalette';
 import {
@@ -36,7 +38,7 @@ import {
   buildBatchFinishSummary,
   type BatchFinishSummary,
 } from './components/questions/BatchFinishModal';
-import { HomeUnifiedView } from './components/analytics/HomeUnifiedView';
+import { ArenaHomeView } from './components/analytics/ArenaHomeView';
 import { RoutineConfigModal } from './components/analytics/RoutineConfigModal';
 import { AchievementToast } from './components/gamification/AchievementToast';
 import { GamificationHubModal } from './components/gamification/GamificationHubModal';
@@ -118,8 +120,9 @@ export default function App() {
   const [gamificationHubOpen, setGamificationHubOpen] = useState(false);
   const [commandPaletteOpen, setCommandPaletteOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const [authModalOpen, setAuthModalOpen] = useState(false);
   const [focusMode, setFocusMode] = useState(false);
+  const auth = useAuthSession();
   const [rankingPulseOn, setRankingPulseOn] = useState<boolean>(() => {
     try {
       const saved = window.localStorage.getItem('medr1_ranking_pulse_v1');
@@ -131,7 +134,22 @@ export default function App() {
 
   const store = useMedR1Store({
     liveRankingEnabled: activeTab === 'ranking' && rankingPulseOn,
+    studentId: auth.student?.id,
   });
+
+  // Hydrate / converge cloud history once when an authenticated session is active
+  const lastCloudSyncedStudentRef = useRef<string | null>(null);
+  useEffect(() => {
+    if (!auth.student?.id) {
+      lastCloudSyncedStudentRef.current = null;
+      return;
+    }
+    if (lastCloudSyncedStudentRef.current === auth.student.id) {
+      return;
+    }
+    lastCloudSyncedStudentRef.current = auth.student.id;
+    void store.syncWithCloud(auth.student);
+  }, [auth.student, store.syncWithCloud]);
 
   const handleToggleRankingPulse = useCallback((next?: boolean) => {
     setRankingPulseOn((prev) => {
@@ -163,6 +181,7 @@ export default function App() {
   const [simuladoActive, setSimuladoActive] = useState(false);
   const [simuladoFinished, setSimuladoFinished] = useState(false);
   const [simuladoPaused, setSimuladoPaused] = useState(false);
+  const [includeAnsweredInSimulado, setIncludeAnsweredInSimulado] = useState(false);
   const [simuladoSecondsLeft, setSimuladoSecondsLeft] = useState(0);
   const [simuladoDrafts, setSimuladoDrafts] = useState<
     Record<string, AlternativeLetter>
@@ -189,19 +208,30 @@ export default function App() {
   const lastTrackedQuestionIdRef = useRef<string | null>(null);
   const pendingQuestionIdRef = useRef<string | null>(null);
 
-  const filteredQuestions = useMemo(
-    () =>
-      diagnosticQuestions && mode === 'simulado'
-        ? diagnosticQuestions
-        : store.filterQuestions(filters),
-    [diagnosticQuestions, mode, store.filterQuestions, filters]
-  );
+  const filteredQuestions = useMemo(() => {
+    if (diagnosticQuestions && mode === 'simulado') {
+      return diagnosticQuestions;
+    }
+    const base = store.filterQuestions(filters);
+    if (mode === 'simulado' && !includeAnsweredInSimulado) {
+      return base.filter((q) => !store.answers[q.id]);
+    }
+    return base;
+  }, [
+    diagnosticQuestions,
+    mode,
+    store.filterQuestions,
+    filters,
+    includeAnsweredInSimulado,
+    store.answers,
+  ]);
 
   // On-demand lazy loading of official exam chunks based on active tab & filters
   useEffect(() => {
     if (activeTab === 'questoes') {
       void store.ensureExamsLoadedForFilters(filters);
     } else if (
+      activeTab === 'inicio' ||
       activeTab === 'desempenho' ||
       activeTab === 'importar' ||
       activeTab === 'caderno_erros'
@@ -211,6 +241,7 @@ export default function App() {
   }, [
     activeTab,
     filters.instituicao,
+    filters.instituicoes,
     filters.banca,
     filters.regiao,
     filters.ano,
@@ -476,29 +507,32 @@ export default function App() {
     if (topics.length === 0) return;
     const topicNames = topics.map((t) => t.topic);
 
-    // Filter strictly to the 3 Gap Radar topics first
+    // Filter strictly to the 3 Gap Radar topics first, never repeating answered questions
     let nextFilters: QuestionFilters = {
       ...DEFAULT_FILTERS,
       temas: topicNames,
+      status: 'nao_resolvidas',
       excluirAnuladasDesatualizadas: true,
     };
     let matched = store.filterQuestions(nextFilters);
 
-    // Fallback to include annulled/outdated if strict active pool is empty
+    // Fallback to include annulled/outdated if strict active pool is empty (still unanswered only)
     if (matched.length === 0) {
       nextFilters = {
         ...DEFAULT_FILTERS,
         temas: topicNames,
+        status: 'nao_resolvidas',
         excluirAnuladasDesatualizadas: false,
       };
       matched = store.filterQuestions(nextFilters);
     }
 
-    // Final safety fallback to the primary weak topic's Grande Área if needed
+    // Final safety fallback to the primary weak topic's Grande Área (unanswered only)
     if (matched.length === 0 && topics[0]?.grandeAreaId) {
       nextFilters = {
         ...DEFAULT_FILTERS,
         grandeAreaId: topics[0].grandeAreaId,
+        status: 'nao_resolvidas',
         excluirAnuladasDesatualizadas: false,
       };
       matched = store.filterQuestions(nextFilters);
@@ -509,6 +543,7 @@ export default function App() {
     simuladoSubmitGuardRef.current.reset();
     simuladoQuestionTimesRef.current = {};
     questionStartedAtRef.current = Date.now();
+    setIncludeAnsweredInSimulado(false);
     setFilters(nextFilters);
     setMode('simulado');
     setSimuladoActive(true);
@@ -609,56 +644,94 @@ export default function App() {
     matchedTema?: string;
     matchedSubtema?: string;
     grandeAreaId?: GrandeAreaId;
+    instituicao?: string;
+    ano?: string;
+    status?: QuestionFilters['status'];
   }) => {
     setMode('estudo');
     setSimuladoActive(false);
     setSimuladoFinished(false);
+
+    const scopePatch = {
+      instituicao: payload.instituicao ?? '',
+      ano: payload.ano ?? '',
+    };
+    const preferredStatus: QuestionFilters['status'] =
+      payload.status ?? 'nao_resolvidas';
 
     const candidates: QuestionFilters[] = [];
 
     if (payload.matchedTema && payload.matchedSubtema) {
       candidates.push({
         ...DEFAULT_FILTERS,
+        ...scopePatch,
         grandeAreaId: payload.grandeAreaId ?? '',
         tema: payload.matchedTema,
         subtema: payload.matchedSubtema,
+        status: preferredStatus,
         excluirAnuladasDesatualizadas: false,
       });
+      if (preferredStatus !== 'todas') {
+        candidates.push({
+          ...DEFAULT_FILTERS,
+          ...scopePatch,
+          grandeAreaId: payload.grandeAreaId ?? '',
+          tema: payload.matchedTema,
+          subtema: payload.matchedSubtema,
+          status: 'todas',
+          excluirAnuladasDesatualizadas: false,
+        });
+      }
     }
 
     if (payload.matchedTema) {
       candidates.push({
         ...DEFAULT_FILTERS,
+        ...scopePatch,
         grandeAreaId: payload.grandeAreaId ?? '',
         tema: payload.matchedTema,
+        status: preferredStatus,
         excluirAnuladasDesatualizadas: false,
       });
       candidates.push({
         ...DEFAULT_FILTERS,
+        ...scopePatch,
         grandeAreaId: payload.grandeAreaId ?? '',
         search: payload.matchedTema,
+        status: preferredStatus,
         excluirAnuladasDesatualizadas: false,
       });
     }
 
     candidates.push({
       ...DEFAULT_FILTERS,
+      ...scopePatch,
       grandeAreaId: payload.grandeAreaId ?? '',
       search: payload.topicLabel,
+      status: preferredStatus,
       excluirAnuladasDesatualizadas: false,
     });
 
     if (payload.grandeAreaId) {
       candidates.push({
         ...DEFAULT_FILTERS,
+        ...scopePatch,
         grandeAreaId: payload.grandeAreaId,
+        status: preferredStatus,
         excluirAnuladasDesatualizadas: false,
       });
     }
 
     const bestMatch =
-      candidates.find((cand) => store.filterQuestions(cand).length > 0) ??
-      DEFAULT_FILTERS;
+      candidates.find((cand) => store.filterQuestions(cand).length > 0) ?? {
+        ...DEFAULT_FILTERS,
+        ...scopePatch,
+        grandeAreaId: payload.grandeAreaId ?? '',
+        tema: payload.matchedTema ?? '',
+        subtema: payload.matchedSubtema ?? '',
+        status: 'todas',
+        excluirAnuladasDesatualizadas: false,
+      };
 
     setFilters(bestMatch);
     setCurrentIndex(0);
@@ -701,6 +774,53 @@ export default function App() {
     setFilters({
       ...DEFAULT_FILTERS,
       grandeAreaId,
+    });
+    setCurrentIndex(0);
+    setActiveTab('questoes');
+  };
+
+  const handleStartOfficialWeeklySimulado = async () => {
+    await store.ensureExamsLoadedForFilters({ instituicao: 'UEPA', ano: '2026' });
+    const nextFilters: QuestionFilters = {
+      ...DEFAULT_FILTERS,
+      instituicao: 'UEPA',
+      instituicoes: [],
+      ano: '2026',
+      status: 'todas',
+      excluirAnuladasDesatualizadas: false,
+    };
+    simuladoSubmitGuardRef.current.reset();
+    simuladoQuestionTimesRef.current = {};
+    questionStartedAtRef.current = Date.now();
+    setDiagnosticQuestions(null);
+    setDiagnosticIncompleteError(null);
+    setIncludeAnsweredInSimulado(true);
+    setFilters(nextFilters);
+    setMode('simulado');
+    setSimuladoActive(true);
+    setSimuladoFinished(false);
+    setSimuladoPaused(false);
+    setSimuladoDrafts({});
+    setFlaggedIds([]);
+    setCustomSimuladoTitle('UEPA 2026 — Prova Completa');
+    setCustomSimuladoTopics([]);
+    setCurrentIndex(0);
+    setSimuladoSecondsLeft(100 * 180);
+    setActiveTab('questoes');
+  };
+
+  const handleFilterArenaBoard = (institutions: string[]) => {
+    setMode('estudo');
+    setSimuladoActive(false);
+    setSimuladoFinished(false);
+    setCustomSimuladoTitle(null);
+    setCustomSimuladoTopics([]);
+    setFilters({
+      ...DEFAULT_FILTERS,
+      instituicao: institutions.length === 1 ? institutions[0] : '',
+      instituicoes: institutions.length > 1 ? institutions : [],
+      status: 'todas',
+      excluirAnuladasDesatualizadas: false,
     });
     setCurrentIndex(0);
     setActiveTab('questoes');
@@ -896,6 +1016,9 @@ export default function App() {
         onOpenMobileMenu={() => setMobileMenuOpen(true)}
         gamificationCore={store.gamification.core}
         onOpenGamificationHub={() => setGamificationHubOpen(true)}
+        authStudent={auth.student}
+        syncStatus={store.syncStatus}
+        onOpenAuthModal={() => setAuthModalOpen(true)}
       />
 
       {/* Full-Width Workspace + Unified Slide-Over Navigation Drawer */}
@@ -916,27 +1039,16 @@ export default function App() {
             dueFlashcardsCount={store.dueFlashcardsCount}
             onlineTotal={store.liveRanking.onlineTotal}
             currentUserRank={store.liveRanking.currentUser.rank}
-            collapsed={sidebarCollapsed}
-            onToggleCollapse={() => setSidebarCollapsed((c) => !c)}
-            rankingPulseOn={rankingPulseOn}
-            onToggleRankingPulse={handleToggleRankingPulse}
             mobileOpen={mobileMenuOpen}
             onCloseMobile={() => setMobileMenuOpen(false)}
-            activeFilterCount={countActiveQuestionFilters(filters)}
             importedQuestionsCount={store.importedQuestions.length}
-            dailyGoal={store.dailyGoal}
-            onUpdateDailyGoalTarget={store.setDailyGoalTarget}
-            allQuestions={store.allQuestions}
-            answeredIds={store.answers}
-            filteredQuestionsCount={filteredQuestions.length}
-            onSelectGrandeAreaFromBank={handleSelectGrandeAreaFromBank}
-            areaRows={store.analytics.areaRows}
-            cutoffTarget={store.cutoffTarget}
             sidebarFilters={
               activeTab === 'questoes' && !simuladoActive ? (
                 <FilterPanel
                   variant="sidebar"
                   questions={store.allQuestions}
+                  answers={store.answers}
+                  bookmarks={store.bookmarks}
                   filters={filters}
                   onChange={(next) => {
                     setFilters(next);
@@ -951,6 +1063,8 @@ export default function App() {
                   onChangeMode={handleModeChange}
                   onStartSimulado={handleStartSimulado}
                   simuladoActive={simuladoActive}
+                  includeAnsweredInSimulado={includeAnsweredInSimulado}
+                  onToggleIncludeAnsweredInSimulado={setIncludeAnsweredInSimulado}
                 />
               ) : undefined
             }
@@ -1030,8 +1144,14 @@ export default function App() {
                   <FilterPanel
                     variant="top"
                     filters={filters}
-                    onChange={setFilters}
-                    onReset={() => setFilters(DEFAULT_FILTERS)}
+                    onChange={(next) => {
+                      setFilters(next);
+                      setCurrentIndex(0);
+                    }}
+                    onReset={() => {
+                      setFilters(DEFAULT_FILTERS);
+                      setCurrentIndex(0);
+                    }}
                     resultCount={filteredQuestions.length}
                     mode={mode}
                     onChangeMode={(nextMode) => {
@@ -1041,7 +1161,11 @@ export default function App() {
                     }}
                     onStartSimulado={handleStartSimulado}
                     simuladoActive={simuladoActive}
+                    includeAnsweredInSimulado={includeAnsweredInSimulado}
+                    onToggleIncludeAnsweredInSimulado={setIncludeAnsweredInSimulado}
                     questions={store.allQuestions}
+                    answers={store.answers}
+                    bookmarks={store.bookmarks}
                   />
                 )}
 
@@ -1368,41 +1492,22 @@ export default function App() {
           {/* MULTI-CARD STUDIO VIEWS (Início, Desempenho, Ranking, Caderno de Erros, Flashcards, Importar) */}
           {activeTab !== 'questoes' && (
             <div className="mx-auto w-full max-w-[1380px] px-0.5 py-0.5 sm:px-1 pb-6">
-              {/* TAB 0: INÍCIO — HOME UNIFICADA (Grade Semanal + Resumo Executivo + 5 Grandes Áreas) */}
+              {/* TAB 0: INÍCIO — ARENA DE BANCAS & PERCENTIL REAL */}
               {activeTab === 'inicio' && (
-                <HomeUnifiedView
-                  areaRows={store.analytics.areaRows}
-                  topicRows={store.analytics.topicRows}
-                  totalAnswered={store.analytics.totalAnswered}
-                  totalCorrect={store.analytics.totalCorrect}
+                <ArenaHomeView
                   questions={store.allQuestions}
                   answers={store.answers}
-                  flashcards={store.flashcards}
-                  simuladoHistory={store.simuladoHistory}
-                  cutoffTarget={store.cutoffTarget}
-                  darkMode={store.darkMode}
-                  routineModalOpen={routineModalOpen}
-                  onRoutineModalOpenChange={setRoutineModalOpen}
-                  onPracticeArea={handleSelectGrandeAreaFromBank}
-                  onPracticeTopic={handleFilterQuestionsFromPareto}
-                  onGoToQuestionBank={() => navigateToTab('questoes', { mode: 'estudo' })}
-                  onGoToFlashcards={() => navigateToTab('flashcards')}
-                  onGoToErrorNotebook={() => navigateToTab('caderno_erros')}
-                  onGoToPerformance={() => navigateToTab('desempenho')}
-                  onAddSimulado={store.addSimuladoRecord}
-                  onDeleteSimulado={store.deleteSimuladoRecord}
-                  onUpdateCutoffTarget={store.updateCutoffTarget}
-                  onRestoreExampleSimulados={store.restoreExampleSimulados}
-                  gamification={store.gamification}
-                  onExecuteMission={handleExecuteMission}
-                  onOpenGamificationHub={() => setGamificationHubOpen(true)}
-                  diagnosticUnlocked={store.diagnosticUnlocked}
-                  diagnosticState={store.diagnosticState}
-                  diagnosticAnsweredCount={
-                    diagnosticQuestions ? Object.keys(simuladoDrafts).length : 0
+                  defaultTargetSpecialty={store.profile.targetSpecialty}
+                  onStartOfficialWeeklySimulado={handleStartOfficialWeeklySimulado}
+                  onFilterBoard={handleFilterArenaBoard}
+                  onPracticeSubtema={handleFilterQuestionsFromPareto}
+                  onGoToQuestionBank={() =>
+                    navigateToTab('questoes', { mode: 'estudo' })
                   }
-                  diagnosticLoading={diagnosticLoading}
-                  onStartDiagnostic={handleStartDiagnostic}
+                  onGoToSimulados={() =>
+                    navigateToTab('questoes', { mode: 'simulado' })
+                  }
+                  onGoToPerformance={() => navigateToTab('desempenho')}
                 />
               )}
 
@@ -1550,6 +1655,7 @@ export default function App() {
         open={routineModalOpen}
         onClose={() => setRoutineModalOpen(false)}
         flashcards={store.flashcards}
+        questions={store.allQuestions}
       />
       <GamificationHubModal
         open={gamificationHubOpen}
@@ -1558,6 +1664,28 @@ export default function App() {
         missions={store.gamification.missions}
         achievements={store.gamification.achievements}
         onExecuteMission={handleExecuteMission}
+      />
+      <AuthModal
+        open={authModalOpen}
+        onClose={() => setAuthModalOpen(false)}
+        student={auth.student}
+        syncStatus={store.syncStatus}
+        pendingSyncCount={store.pendingSyncCount}
+        lastSyncedAt={store.lastSyncedAt}
+        onLogin={async (input) => {
+          const next = await auth.login(input);
+          lastCloudSyncedStudentRef.current = next.student.id;
+          await store.syncWithCloud(next.student);
+        }}
+        onRegister={async (input) => {
+          const next = await auth.register(input);
+          lastCloudSyncedStudentRef.current = next.student.id;
+          await store.syncWithCloud(next.student);
+        }}
+        onLogout={auth.logout}
+        onSyncNow={async () => {
+          await store.syncWithCloud(auth.student ?? undefined);
+        }}
       />
       <AchievementToast
         achievement={store.pendingAchievement}

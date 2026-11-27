@@ -471,10 +471,20 @@ export function QuestionCard({
           !seamless && 'px-5 sm:px-8'
         )}
       >
-        <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-xs">
-          <span className="font-semibold text-[#1A56DB] dark:text-sky-400">
-            {question.tema}
-          </span>
+        <div className="flex flex-wrap items-center gap-x-2 gap-y-1.5 text-xs">
+          <div className="inline-flex flex-wrap items-center gap-1.5" aria-label="Taxonomia v1 da questão">
+            <span className="inline-flex items-center rounded-md border border-black/5 bg-[#F5F5F7] px-2 py-0.5 text-[11px] font-medium text-[#1D1D1F] dark:border-white/10 dark:bg-white/[0.06] dark:text-slate-200">
+              {question.grandeArea}
+            </span>
+            <span className="inline-flex items-center rounded-md border border-black/5 bg-[#F5F5F7] px-2 py-0.5 text-[11px] font-medium text-[#1D1D1F] dark:border-white/10 dark:bg-white/[0.06] dark:text-slate-200">
+              {question.tema}
+            </span>
+            {(mode !== 'simulado' || isRevealed) && question.subtema && (
+              <span className="inline-flex items-center rounded-md border border-[#007AFF]/15 bg-[#007AFF]/[0.08] px-2 py-0.5 text-[11px] font-medium text-[#007AFF] dark:border-sky-400/20 dark:bg-sky-500/15 dark:text-sky-300">
+                {question.subtema}
+              </span>
+            )}
+          </div>
           <span aria-hidden="true" className="text-slate-300 dark:text-slate-700">
             ·
           </span>
@@ -491,7 +501,7 @@ export function QuestionCard({
           <span aria-hidden="true" className="text-slate-300 dark:text-slate-700">
             ·
           </span>
-          <span className="font-mono text-slate-500 dark:text-slate-400">
+          <span className="font-mono text-slate-500 dark:text-slate-400 tabular-nums">
             {question.instituicao} {question.ano} · {question.banca}
           </span>
         </div>
@@ -1340,6 +1350,25 @@ export function QuestionCard({
               </div>
             )}
           </div>
+
+          {question.tags && question.tags.length > 0 && (
+            <div
+              className="flex flex-wrap items-center gap-1.5 pt-1"
+              aria-label="Tags clínicas da questão"
+            >
+              <span className="text-[11px] font-medium text-[#86868B] dark:text-slate-400 mr-0.5">
+                Tags:
+              </span>
+              {question.tags.slice(0, 6).map((tag) => (
+                <span
+                  key={tag}
+                  className="inline-flex items-center rounded-md border border-black/5 bg-[#F5F5F7] px-2 py-0.5 font-mono text-[11px] text-[#86868B] dark:border-white/10 dark:bg-white/[0.04] dark:text-slate-400"
+                >
+                  #{tag}
+                </span>
+              ))}
+            </div>
+          )}
 
           {/* Progressive Disclosure: Community Metrics & Benchmark (Quiet by default) */}
           <div className="border-t border-black/5 pt-4 dark:border-white/[0.07]">

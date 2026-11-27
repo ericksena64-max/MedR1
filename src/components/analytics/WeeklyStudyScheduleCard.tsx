@@ -16,8 +16,10 @@ import {
   buildWeeklySchedule,
   loadWeeklyScheduleConfig,
   PACE_MINUTES_PER_QUESTION,
+  TARGET_EXAM_PRESETS,
   WEEKLY_SCHEDULE_STORAGE_KEY,
   WEEKLY_SCHEDULE_UPDATED_EVENT,
+  type TargetExamPreset,
   type TopicBlockStatus,
   type WeeklyScheduleConfig,
   type WeeklyTopicInput,
@@ -148,6 +150,43 @@ export function WeeklyStudyScheduleCard({
 
   const todayCardsCount = schedule.todayPlan?.flashcardsCount ?? 0;
   const nextExam = schedule.calendarSummary.nextExam;
+
+  const updateInlineConfig = (
+    updater: (prev: WeeklyScheduleConfig) => WeeklyScheduleConfig
+  ) => {
+    setConfig((prev) => {
+      const next = updater(prev);
+      try {
+        window.localStorage.setItem(
+          WEEKLY_SCHEDULE_STORAGE_KEY,
+          JSON.stringify(next)
+        );
+        window.dispatchEvent(new Event(WEEKLY_SCHEDULE_UPDATED_EVENT));
+      } catch {
+        // ignore storage quota errors
+      }
+      return next;
+    });
+  };
+
+  const handleSelectQuickExam = (exam: TargetExamPreset) => {
+    setWeekOffset(0);
+    updateInlineConfig((prev) => ({
+      ...prev,
+      targetExam: exam,
+      targetExams: [exam],
+    }));
+  };
+
+  const handleStepQuickHours = (delta: number) => {
+    updateInlineConfig((prev) => ({
+      ...prev,
+      hoursPerDay: Math.max(
+        0.5,
+        Math.min(12, Math.round((prev.hoursPerDay + delta) * 2) / 2)
+      ),
+    }));
+  };
 
   return (
     <section
@@ -300,11 +339,66 @@ export function WeeklyStudyScheduleCard({
                 : schedule.incidenceSource === 'mixed'
                 ? `Base real (${schedule.bankQuestionsMatched}q) + padrão`
                 : 'Base padrão'}{' '}
-              · {PACE_MINUTES_PER_QUESTION[config.paceMode].toFixed(1).replace('.', ',')} min/q
+              · 5 grandes áreas/dia · 100% da prova ({schedule.fullExamCoverage.totalTopics} temas em{' '}
+              {schedule.fullExamCoverage.weeksToCover100Pct} sem) ·{' '}
+              {PACE_MINUTES_PER_QUESTION[config.paceMode].toFixed(1).replace('.', ',')} min/q
             </p>
           </div>
 
           <div className="flex flex-wrap items-center gap-2">
+            {/* Quick Inline Board Selector (plots week by Pareto of selected exam) */}
+            <div
+              role="group"
+              aria-label="Selecionar banca-alvo para plotar semana por Pareto"
+              className="inline-flex rounded-lg bg-[#E5E5EA]/70 p-0.5 dark:bg-[#0B0F17]"
+            >
+              {TARGET_EXAM_PRESETS.map((exam) => {
+                const active =
+                  schedule.targetExams.length === 1 && schedule.targetExam === exam;
+                return (
+                  <button
+                    key={exam}
+                    type="button"
+                    onClick={() => handleSelectQuickExam(exam)}
+                    aria-pressed={active}
+                    className={cn(
+                      'rounded-md px-2 py-1 text-[11px] font-semibold transition-colors cursor-pointer whitespace-nowrap',
+                      active
+                        ? 'bg-white text-[#007AFF] shadow-xs dark:bg-[#182030] dark:text-sky-300'
+                        : 'text-[#86868B] hover:text-[#1D1D1F] dark:text-slate-400 dark:hover:text-slate-200'
+                    )}
+                  >
+                    {exam}
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* Quick Inline Hours/Day Stepper (0.5h - 12h) */}
+            <div className="inline-flex items-center gap-1 rounded-lg border border-black/10 bg-white px-1.5 py-0.5 dark:border-white/10 dark:bg-[#0B0F17]">
+              <button
+                type="button"
+                onClick={() => handleStepQuickHours(-0.5)}
+                disabled={config.hoursPerDay <= 0.5}
+                aria-label="Diminuir horas por dia"
+                className="rounded px-1.5 py-0.5 text-xs font-semibold text-slate-600 hover:bg-slate-100 disabled:opacity-40 dark:text-slate-300 dark:hover:bg-white/10 cursor-pointer"
+              >
+                −
+              </button>
+              <span className="font-mono text-[11px] font-semibold tabular-nums text-slate-900 dark:text-white px-1">
+                {String(config.hoursPerDay).replace('.', ',')}h/dia
+              </span>
+              <button
+                type="button"
+                onClick={() => handleStepQuickHours(0.5)}
+                disabled={config.hoursPerDay >= 12}
+                aria-label="Aumentar horas por dia"
+                className="rounded px-1.5 py-0.5 text-xs font-semibold text-slate-600 hover:bg-slate-100 disabled:opacity-40 dark:text-slate-300 dark:hover:bg-white/10 cursor-pointer"
+              >
+                +
+              </button>
+            </div>
+
             <button
               type="button"
               onClick={() => setConfigOpen(true)}
@@ -376,11 +470,12 @@ export function WeeklyStudyScheduleCard({
           open={configOpen}
           onClose={() => setConfigOpen(false)}
           flashcards={flashcards}
+          questions={questions}
         />
       )}
 
       {/* 7-Column Weekly Schedule Grid (Dom to Sáb) com scroll interno controlado */}
-      <div className="max-h-[340px] overflow-y-auto pr-1">
+      <div className="max-h-[540px] overflow-y-auto pr-1">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-2">
           {schedule.days.map((day) => (
             <div
@@ -468,71 +563,116 @@ export function WeeklyStudyScheduleCard({
                     </span>
                   </button>
 
-                  {/* Individualized Topic Bars (1 to 3 per active day) */}
+                  {/* 5 Grandes Áreas obrigatórias por dia ativo com seus subtemas e metas de questões */}
                   {day.topicBlocks.length > 0 ? (
                     day.topicBlocks.map((block) => {
                       const statusMeta = STATUS_META[block.status];
                       const isSimuladoBlock = block.blockKind === 'simulado';
-                      return (
-                        <button
-                          key={block.id}
-                          type="button"
-                          onClick={() => {
-                            if (isSimuladoBlock) {
-                              onGoToQuestionBank();
-                            } else if (onPracticeTopic) {
-                              onPracticeTopic({
-                                topicLabel: block.subtema ?? block.topic,
+
+                      if (isSimuladoBlock) {
+                        return (
+                          <button
+                            key={block.id}
+                            type="button"
+                            onClick={onGoToQuestionBank}
+                            title={`Treinar ${block.topic} (${block.estimatedQuestions} questões · ~${block.estimatedMinutes} min)`}
+                            className="group w-full rounded-xl border border-[#007AFF]/35 bg-[#007AFF]/[0.06] px-2.5 py-2 text-left hover:bg-[#007AFF]/10 dark:border-sky-400/35 dark:bg-sky-500/10 transition-colors cursor-pointer space-y-1"
+                          >
+                            <div className="flex items-center justify-between gap-1 text-[10px]">
+                              <span className="inline-flex items-center gap-1 font-semibold text-[#007AFF] dark:text-sky-300 truncate">
+                                <Timer size={11} strokeWidth={1.5} className="shrink-0" />
+                                <span className="truncate">Simulado</span>
+                              </span>
+                              <span className="font-mono font-semibold tabular-nums text-[#1D1D1F] dark:text-slate-100 shrink-0">
+                                {block.estimatedQuestions}q
+                              </span>
+                            </div>
+                            <p className="text-[11px] font-semibold leading-snug text-[#1D1D1F] group-hover:text-[#007AFF] dark:text-slate-100 dark:group-hover:text-sky-300 line-clamp-2">
+                              {block.topic}
+                            </p>
+                            {block.subtema && (
+                              <p className="text-[10px] leading-snug text-[#86868B] dark:text-slate-400 line-clamp-2">
+                                {block.subtema}
+                              </p>
+                            )}
+                          </button>
+                        );
+                      }
+
+                      const subtemaItems =
+                        block.subtemas && block.subtemas.length > 0
+                          ? block.subtemas
+                          : [
+                              {
+                                label: block.subtema ?? block.topic,
+                                estimatedQuestions: block.estimatedQuestions,
                                 matchedTema: block.topic,
                                 matchedSubtema: block.subtema,
-                                grandeAreaId: block.grandeAreaId,
-                              });
-                            } else {
-                              onPracticeArea(block.grandeAreaId);
-                            }
-                          }}
-                          title={`Treinar ${block.subtema ? `${block.topic} · ${block.subtema}` : block.topic} (${block.estimatedQuestions} questões · ~${block.estimatedMinutes} min)`}
-                          className={cn(
-                            'group w-full rounded-lg border px-2.5 py-2 text-left transition-colors cursor-pointer space-y-1',
-                            isSimuladoBlock
-                              ? 'border-[#007AFF]/35 bg-[#007AFF]/[0.06] hover:bg-[#007AFF]/10 dark:border-sky-400/35 dark:bg-sky-500/10'
-                              : 'border-slate-200/75 bg-white hover:border-[#007AFF]/45 hover:bg-[#007AFF]/[0.03] dark:border-white/[0.08] dark:bg-[#161E2E] dark:hover:border-sky-400/45'
-                          )}
+                              },
+                            ];
+
+                      const areaTitle = block.grandeAreaName ?? block.shortArea;
+
+                      return (
+                        <div
+                          key={block.id}
+                          className="w-full rounded-xl border border-black/5 bg-white p-2 shadow-[0_1px_4px_rgba(0,0,0,0.03)] dark:border-white/[0.08] dark:bg-[#161E2E] space-y-1.5"
                         >
-                          <div className="flex items-center justify-between gap-1 text-[10px]">
-                            <span className="inline-flex items-center gap-1 text-slate-500 dark:text-slate-400 truncate">
-                              {isSimuladoBlock && (
-                                <Timer size={11} strokeWidth={1.5} className="text-[#007AFF] dark:text-sky-400 shrink-0" />
-                              )}
-                              <span className="truncate">
-                                {isSimuladoBlock
-                                  ? 'Simulado'
-                                  : block.subtema
-                                  ? block.topic
-                                  : block.shortArea}
-                              </span>
-                            </span>
-                            <span className="font-mono font-semibold tabular-nums text-slate-700 dark:text-slate-200 shrink-0">
+                          {/* Cabeçalho da Grande Área */}
+                          <div className="flex items-center justify-between gap-1 border-b border-black/[0.04] pb-1 dark:border-white/[0.06]">
+                            <button
+                              type="button"
+                              onClick={() => onPracticeArea(block.grandeAreaId)}
+                              title={`Abrir questões de ${areaTitle}`}
+                              className="inline-flex items-center gap-1 min-w-0 text-left text-[10px] font-semibold uppercase tracking-wider text-[#1D1D1F] hover:text-[#007AFF] dark:text-slate-100 dark:hover:text-sky-300 transition-colors cursor-pointer"
+                            >
+                              <span
+                                className={cn('h-1.5 w-1.5 rounded-full shrink-0', statusMeta.dotClass)}
+                                title={statusMeta.label}
+                              />
+                              <span className="truncate">{areaTitle}</span>
+                            </button>
+                            <span className="font-mono text-[10px] font-semibold tabular-nums text-[#86868B] dark:text-slate-400 shrink-0">
                               {block.estimatedQuestions}q
                             </span>
                           </div>
-                          <p className="text-[11px] font-semibold leading-snug text-slate-900 group-hover:text-[#007AFF] dark:text-slate-100 dark:group-hover:text-sky-300 line-clamp-2">
-                            {isSimuladoBlock ? block.topic : block.subtema ?? block.topic}
-                          </p>
-                          {block.reasonTag && (
-                            <span className="inline-block max-w-full truncate rounded bg-[#007AFF]/[0.08] px-1.5 py-0.5 text-[9px] font-medium text-[#007AFF] dark:bg-sky-500/15 dark:text-sky-300">
-                              {block.reasonTag}
-                            </span>
-                          )}
-                          <div className="flex items-center gap-1 pt-0.5 text-[10px]">
-                            <span
-                              className={cn('h-1.5 w-1.5 rounded-full shrink-0', statusMeta.dotClass)}
-                            />
-                            <span className={cn('truncate', statusMeta.textClass)}>
-                              {statusMeta.label}
-                            </span>
+
+                          {/* Lista de Subtemas -> N questões */}
+                          <div className="space-y-1">
+                            {subtemaItems.map((sub, subIdx) => (
+                              <button
+                                key={`${block.id}-sub-${subIdx}`}
+                                type="button"
+                                onClick={() => {
+                                  if (onPracticeTopic) {
+                                    onPracticeTopic({
+                                      topicLabel: sub.label,
+                                      matchedTema: sub.matchedTema ?? block.topic,
+                                      matchedSubtema: sub.matchedSubtema,
+                                      grandeAreaId: block.grandeAreaId,
+                                    });
+                                  } else {
+                                    onPracticeArea(block.grandeAreaId);
+                                  }
+                                }}
+                                title={`${areaTitle} → ${sub.label} (${sub.estimatedQuestions} questões)`}
+                                className="group flex w-full items-start justify-between gap-1.5 rounded-lg px-1.5 py-1 text-left hover:bg-[#007AFF]/[0.06] dark:hover:bg-sky-500/10 transition-colors cursor-pointer"
+                              >
+                                <span className="flex items-start gap-1 min-w-0 text-[11px] leading-snug text-[#1D1D1F] group-hover:text-[#007AFF] dark:text-slate-200 dark:group-hover:text-sky-300">
+                                  <ArrowRight
+                                    size={11}
+                                    strokeWidth={1.5}
+                                    className="mt-0.5 shrink-0 text-[#86868B] group-hover:text-[#007AFF] dark:text-slate-500 dark:group-hover:text-sky-400"
+                                  />
+                                  <span className="line-clamp-2 font-medium">{sub.label}</span>
+                                </span>
+                                <span className="shrink-0 rounded bg-[#007AFF]/10 px-1.5 py-0.5 font-mono text-[10px] font-semibold tabular-nums text-[#007AFF] dark:bg-sky-500/15 dark:text-sky-300">
+                                  {sub.estimatedQuestions}q
+                                </span>
+                              </button>
+                            ))}
                           </div>
-                        </button>
+                        </div>
                       );
                     })
                   ) : (

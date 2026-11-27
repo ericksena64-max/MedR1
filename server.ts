@@ -4,27 +4,30 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { GoogleGenAI, Type, ThinkingLevel } from '@google/genai';
 import { checkDatabaseHealth, type DatabaseHealthStatus } from './server/db.ts';
-import {
-  bootstrapSyncState,
-  isValidUuid,
-  pullSyncDelta,
-  pushSyncEvents,
-  type SyncServiceDeps,
-} from './server/syncService.ts';
-import {
-  getLiveRankingSnapshot,
-  normalizeRankingPeriod,
-  type RankingServiceDeps,
-} from './server/rankingService.ts';
+import type { SyncServiceDeps } from './server/syncService.ts';
+import type { RankingServiceDeps } from './server/rankingService.ts';
+import type { QuestionsServiceDeps } from './server/questionsService.ts';
+import { createSyncAuthMiddleware, safeCompareSecret } from './server/auth.ts';
+import { registerAuthRoutes, type AuthServiceDeps } from './server/authRoutes.ts';
+import { registerCoreRoutes } from './server/syncRoutes.ts';
+import { registerQuestionsRoutes } from './server/questionsRoutes.ts';
 import { registerAnalyticsRoutes } from './server/analyticsRoutes.ts';
-import type { SyncBootstrapRequest, SyncOutboxEvent } from './src/types/sync.ts';
+import {
+  TAXONOMY_VERSION,
+  buildTaxonomyPromptGuide,
+  TAXONOMY_PROMPT_RULES,
+  normalizeAiClassification,
+  resolveSubtema,
+  entryToClassification,
+} from './src/lib/taxonomyClassifier';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const PORT = Number(process.env.PORT || 3000);
-const MODEL_ID = (process.env.GEMINI_MODEL || 'gemini-2.5-flash').trim();
+const MODEL_ID = (process.env.GEMINI_MODEL || 'gemini-3.8-flash').trim();
 const API_AUTH_TOKEN = (process.env.MEDR1_API_TOKEN || '').trim();
+const JWT_SECRET = (process.env.MEDR1_JWT_SECRET || '').trim();
 const AI_RATE_LIMIT_WINDOW_MS = 60_000;
 const AI_RATE_LIMIT_MAX_REQUESTS = Number(process.env.AI_RATE_LIMIT_MAX || 20);
 
@@ -52,21 +55,13 @@ const GRANDE_AREA_NAME_MAP: Record<string, string> = {
 const VALID_LETTERS = new Set(['A', 'B', 'C', 'D', 'E']);
 
 const MEDR1_TAXONOMY_GUIDE = `
-Use EXATAMENTE uma destas 5 Grandes Áreas (grandeAreaId -> grandeArea):
-- "clinica_medica" -> "Clínica Médica"
-- "cirurgia_geral" -> "Cirurgia Geral"
-- "ginecologia_obstetricia" -> "Ginecologia e Obstetrícia"
-- "pediatria" -> "Pediatria"
-- "medicina_preventiva" -> "Medicina Preventiva e Social"
+${TAXONOMY_PROMPT_RULES}
+O campo "grandeAreaId" deve ser coerente com o subtema escolhido. Preencha também "tema" e "subtema" com os rótulos exatos do slug escolhido.
 
-Para o campo "tema", padronize sempre que possível usando os temas canônicos abaixo (para alimentar corretamente a curva de Pareto 80/20, o Mapa de Calor e a Retenção Dinâmica FSRS — especialmente UEPA e ENARE):
-- Clínica Médica: "Cardiologia", "Infectologia", "Doenças Endêmicas", "Endocrinologia", "Pneumologia", "Nefrologia", "Gastroenterologia", "Hematologia", "Neurologia", "Psiquiatria", "Reumatologia", "Dermatologia"
-- Cirurgia Geral: "Trauma e Abdome Agudo", "Cirurgia do Aparelho Digestivo", "Hérnias e Parede Abdominal", "Perioperatório e Cicatrização", "Urologia", "Ortopedia", "Oftalmologia / Otorrino", "Subespecialidades Cirúrgicas"
-- Ginecologia e Obstetrícia: "Pré-Natal e Alto Risco", "Síndromes Hipertensivas", "Assistência ao Parto", "Anticoncepção e SUA", "Ginecologia", "Oncologia Ginecológica", "Urgências Obstétricas"
-- Pediatria: "Neonatologia", "Imunizações", "Puericultura", "Infectopediatria", "Pneumopediatria", "Gastroenterologia Pediátrica", "Emergências Pediátricas", "Genética"
-- Medicina Preventiva e Social: "Atenção Primária e SUS", "Epidemiologia", "Vigilância em Saúde", "Doenças Endêmicas", "Saúde do Trabalhador", "Ética Médica"
+TAXONOMIA FECHADA (slug | rótulo):
+${buildTaxonomyPromptGuide()}
 
-Observação regional UEPA / Amazônia: questões de Malária, Dengue, Chagas, Hanseníase, Tuberculose, Leishmaniose, Leptospirose, Febre Amarela ou Esquistossomose devem usar tema "Doenças Endêmicas" ou "Infectologia" com subtema específico (ex.: "Malária por Plasmodium vivax — Tratamento e Recaída").
+Observação regional UEPA / Amazônia: Malária, Dengue, Chagas, Hanseníase, Tuberculose, Leishmaniose, Leptospirose, Febre Amarela e Esquistossomose devem usar os subtemas de Vigilância em Saúde / Doenças Infecciosas correspondentes da lista acima.
 `;
 
 const MEDR1_MARKDOWN_FORMAT_GUIDE = `
@@ -100,7 +95,16 @@ const QUESTION_ITEM_SCHEMA = {
     },
     subtema: {
       type: Type.STRING,
-      description: 'Subtema específico cobrado pela questão (conciso e técnico).',
+      description: 'Rótulo exato do subtema canônico escolhido.',
+    },
+    subtemaSlug: {
+      type: Type.STRING,
+      description: 'Slug EXATO do subtema na taxonomia fechada MedR1 (ex.: cm-cardio-hipertensao-arterial-sistemica).',
+    },
+    tags: {
+      type: Type.ARRAY,
+      description: '3 a 5 tags lowercase-kebab-case sem acentos.',
+      items: { type: Type.STRING },
     },
     anulada: {
       type: Type.BOOLEAN,
@@ -174,8 +178,8 @@ const QUESTION_ITEM_SCHEMA = {
   required: [
     'numeroOriginal',
     'grandeAreaId',
-    'tema',
-    'subtema',
+    'subtemaSlug',
+    'tags',
     'anulada',
     'enunciado',
     'gabaritoOficial',
@@ -272,6 +276,8 @@ interface RawAiQuestion {
   grandeAreaId?: string;
   tema?: string;
   subtema?: string;
+  subtemaSlug?: string;
+  tags?: string[];
   anulada?: boolean;
   enunciado?: string;
   labTable?: Array<{
@@ -324,10 +330,15 @@ function formatAiQuestionsToMedR1(
           ? Math.round(q.numeroOriginal)
           : idx + 1;
 
+      const taxonomy = normalizeAiClassification(
+        q,
+        `${q.tema ?? ''} ${q.subtema ?? ''} ${(q.enunciado ?? '').slice(0, 400)}`
+      );
       const grandeAreaId =
-        typeof q.grandeAreaId === 'string' && VALID_GRANDE_AREA_IDS.has(q.grandeAreaId)
+        taxonomy?.grandeAreaId ??
+        (typeof q.grandeAreaId === 'string' && VALID_GRANDE_AREA_IDS.has(q.grandeAreaId)
           ? q.grandeAreaId
-          : 'clinica_medica';
+          : 'clinica_medica');
       const grandeArea = GRANDE_AREA_NAME_MAP[grandeAreaId] ?? 'Clínica Médica';
 
       const cleanedAlts = (Array.isArray(q.alternativas) ? q.alternativas : [])
@@ -400,8 +411,17 @@ function formatAiQuestionsToMedR1(
         code: `Q-${instCode}${shortYear}-${String(numero).padStart(3, '0')}`,
         grandeAreaId,
         grandeArea,
-        tema: sanitizeShortText(q.tema, 'Clínica Geral', 80),
-        subtema: sanitizeShortText(q.subtema, 'Revisão de Prova', 120),
+        tema: taxonomy?.tema ?? sanitizeShortText(q.tema, 'Clínica Geral', 80),
+        subtema: taxonomy?.subtema ?? sanitizeShortText(q.subtema, 'Revisão de Prova', 120),
+        ...(taxonomy
+          ? {
+              temaSlug: taxonomy.temaSlug,
+              subtemaSlug: taxonomy.subtemaSlug,
+              tags: taxonomy.tags,
+              taxonomyVersion: TAXONOMY_VERSION,
+              ...(taxonomy.needsTaxonomyReview ? { needsTaxonomyReview: true } : {}),
+            }
+          : { needsTaxonomyReview: true }),
         banca: meta.banca,
         instituicao: meta.instituicao,
         estado: meta.estado,
@@ -488,7 +508,10 @@ function createApiTokenMiddleware(expectedToken: string = API_AUTH_TOKEN) {
     const bearer = authHeader.startsWith('Bearer ') ? authHeader.slice(7).trim() : '';
     const headerToken = typeof req.headers['x-api-token'] === 'string' ? req.headers['x-api-token'].trim() : '';
 
-    if (bearer !== expectedToken && headerToken !== expectedToken) {
+    if (
+      (!bearer || !safeCompareSecret(bearer, expectedToken)) &&
+      (!headerToken || !safeCompareSecret(headerToken, expectedToken))
+    ) {
       res.status(401).json({ error: 'Token de autenticação da API ausente ou inválido.' });
       return;
     }
@@ -541,6 +564,8 @@ export function classifyErrorResponse(err: unknown): { status: number; message: 
 export interface CreateAppOptions {
   aiRateLimitMax?: number;
   apiAuthToken?: string;
+  jwtSecret?: string;
+  isProduction?: boolean;
   getAiClientOverride?: () => {
     models: {
       generateContent: (params: Record<string, unknown>) => Promise<{ text?: string }>;
@@ -549,16 +574,24 @@ export interface CreateAppOptions {
   checkDbHealthOverride?: () => Promise<DatabaseHealthStatus>;
   syncDepsOverride?: SyncServiceDeps;
   rankingDepsOverride?: RankingServiceDeps;
+  questionsDepsOverride?: QuestionsServiceDeps;
+  authDepsOverride?: AuthServiceDeps;
+  authRateLimitMax?: number;
 }
 
 export function createApp(options: CreateAppOptions = {}) {
   const app = express();
   const aiRateLimiter = createAiRateLimiter(options.aiRateLimitMax ?? AI_RATE_LIMIT_MAX_REQUESTS);
   const requireOptionalApiToken = createApiTokenMiddleware(options.apiAuthToken ?? API_AUTH_TOKEN);
+  const requireSyncSession = createSyncAuthMiddleware({
+    jwtSecret: options.jwtSecret ?? JWT_SECRET,
+    isProduction: options.isProduction,
+  });
   const resolveAiClient = options.getAiClientOverride ?? getAiClient;
   const resolveDbHealth = options.checkDbHealthOverride ?? checkDatabaseHealth;
   const syncDeps = options.syncDepsOverride ?? {};
   const rankingDeps = options.rankingDepsOverride ?? {};
+  const questionsDeps = options.questionsDepsOverride ?? {};
   const defaultJsonParser = express.json({ limit: '1mb' });
   const largeJsonParser = express.json({ limit: '28mb' });
 
@@ -570,121 +603,23 @@ export function createApp(options: CreateAppOptions = {}) {
     defaultJsonParser(req, res, next);
   });
 
-  app.get('/api/health', async (_req: Request, res: Response) => {
-    const database = await resolveDbHealth();
-    res.json({ ok: true, model: MODEL_ID, database });
+  registerAuthRoutes(app, {
+    jwtSecret: options.jwtSecret ?? JWT_SECRET,
+    isProduction: options.isProduction,
+    rateLimitMax: options.authRateLimitMax,
+    authDeps: options.authDepsOverride,
   });
 
-  app.post('/api/sync/push', requireOptionalApiToken, async (req: Request, res: Response) => {
-    try {
-      const body = req.body as Record<string, unknown>;
-      const studentId = typeof body.studentId === 'string' ? body.studentId.trim() : '';
-      const events = Array.isArray(body.events) ? (body.events as SyncOutboxEvent[]) : null;
-
-      if (!isValidUuid(studentId) || !events) {
-        res.status(400).json({ error: 'studentId (UUID) e events (array) são obrigatórios.' });
-        return;
-      }
-
-      const result = await pushSyncEvents(studentId, events, syncDeps);
-      if (result === null) {
-        res.status(503).json({
-          mode: 'local-fallback',
-          error: 'DATABASE_URL not configured',
-        });
-        return;
-      }
-
-      res.json(result);
-    } catch (err) {
-      console.error('[MedR1 Sync Push Error]', err);
-      res.status(500).json({ error: 'Falha ao persistir lote de sincronização.' });
-    }
+  registerCoreRoutes(app, {
+    modelId: MODEL_ID,
+    requireOptionalApiToken,
+    requireSyncSession,
+    resolveDbHealth,
+    syncDeps,
+    rankingDeps,
   });
 
-  app.get('/api/sync/pull', requireOptionalApiToken, async (req: Request, res: Response) => {
-    try {
-      const rawStudentId =
-        typeof req.query.studentId === 'string'
-          ? req.query.studentId
-          : req.header('x-student-id') ?? '';
-      const studentId = rawStudentId.trim();
-      const since =
-        typeof req.query.since === 'string' && req.query.since.trim()
-          ? req.query.since.trim()
-          : '1970-01-01T00:00:00.000Z';
-
-      if (!isValidUuid(studentId)) {
-        res.status(400).json({ error: 'studentId (UUID) é obrigatório.' });
-        return;
-      }
-
-      const result = await pullSyncDelta(studentId, since, syncDeps);
-      if (result === null) {
-        res.status(503).json({
-          mode: 'local-fallback',
-          error: 'DATABASE_URL not configured',
-        });
-        return;
-      }
-
-      res.json(result);
-    } catch (err) {
-      console.error('[MedR1 Sync Pull Error]', err);
-      res.status(500).json({ error: 'Falha ao consultar delta de sincronização.' });
-    }
-  });
-
-  app.post('/api/sync/bootstrap', requireOptionalApiToken, async (req: Request, res: Response) => {
-    try {
-      const body = req.body as Partial<SyncBootstrapRequest>;
-      const studentId = typeof body.studentId === 'string' ? body.studentId.trim() : '';
-
-      if (!isValidUuid(studentId)) {
-        res.status(400).json({ error: 'studentId (UUID) é obrigatório.' });
-        return;
-      }
-
-      const normalized: SyncBootstrapRequest = {
-        studentId,
-        profile: body.profile ?? null,
-        attempts: Array.isArray(body.attempts) ? body.attempts : [],
-        reviewStates: Array.isArray(body.reviewStates) ? body.reviewStates : [],
-        reviewLogs: Array.isArray(body.reviewLogs) ? body.reviewLogs : [],
-        bookmarks: Array.isArray(body.bookmarks) ? body.bookmarks : [],
-        mockExams: Array.isArray(body.mockExams) ? body.mockExams : [],
-      };
-
-      const result = await bootstrapSyncState(normalized, syncDeps);
-      if (result === null) {
-        res.status(503).json({
-          mode: 'local-fallback',
-          error: 'DATABASE_URL not configured',
-        });
-        return;
-      }
-
-      res.json(result);
-    } catch (err) {
-      console.error('[MedR1 Sync Bootstrap Error]', err);
-      res.status(500).json({ error: 'Falha ao executar bootstrap de sincronização.' });
-    }
-  });
-
-  app.get('/api/ranking/live', async (req: Request, res: Response) => {
-    try {
-      const limit = Number(req.query.limit || 50);
-      const period = normalizeRankingPeriod(req.query.period);
-      const snapshot = await getLiveRankingSnapshot(
-        { limit: Number.isFinite(limit) ? limit : 50, period },
-        rankingDeps
-      );
-      res.json(snapshot);
-    } catch (err) {
-      console.error('[MedR1 Ranking Error]', err);
-      res.status(500).json({ error: 'Falha ao carregar ranking ao vivo.' });
-    }
-  });
+  registerQuestionsRoutes(app, questionsDeps);
 
   /**
    * POST /api/import/extract-exam
@@ -1033,6 +968,8 @@ ${MEDR1_MARKDOWN_FORMAT_GUIDE}
           },
           tema: { type: Type.STRING },
           subtema: { type: Type.STRING },
+          subtemaSlug: { type: Type.STRING },
+          tags: { type: Type.ARRAY, items: { type: Type.STRING } },
           dificuldadeEstimada: {
             type: Type.STRING,
             enum: ['Fácil', 'Médio', 'Difícil'],
@@ -1131,6 +1068,8 @@ ${MEDR1_MARKDOWN_FORMAT_GUIDE}`;
         grandeAreaId?: string;
         tema?: string;
         subtema?: string;
+        subtemaSlug?: string;
+        tags?: string[];
         dificuldadeEstimada?: string;
         comentarioGeral?: string;
         alternativas?: Array<{ letter?: string; explanation?: string }>;
@@ -1138,10 +1077,19 @@ ${MEDR1_MARKDOWN_FORMAT_GUIDE}`;
         labTable?: Array<{ exame?: string; resultado?: string; referencia?: string; alterado?: string }>;
       }>(rawText);
 
+      // Classificação canônica já existente é preservada; senão normaliza a saída da IA.
+      const existingEntry = resolveSubtema(typeof q.subtemaSlug === 'string' ? q.subtemaSlug : undefined);
+      const taxonomy = existingEntry
+        ? entryToClassification(existingEntry, q.tags)
+        : normalizeAiClassification(
+            parsed,
+            `${parsed.tema ?? ''} ${parsed.subtema ?? ''} ${String(q.enunciado ?? '').slice(0, 400)}`
+          );
       const grandeAreaId =
-        parsed.grandeAreaId && VALID_GRANDE_AREA_IDS.has(parsed.grandeAreaId)
+        taxonomy?.grandeAreaId ??
+        (parsed.grandeAreaId && VALID_GRANDE_AREA_IDS.has(parsed.grandeAreaId)
           ? parsed.grandeAreaId
-          : sanitizeShortText(q.grandeAreaId, 'clinica_medica', 40);
+          : sanitizeShortText(q.grandeAreaId, 'clinica_medica', 40));
       const grandeArea = GRANDE_AREA_NAME_MAP[grandeAreaId] ?? 'Clínica Médica';
 
       const expByLetter = new Map<string, string>();
@@ -1181,8 +1129,19 @@ ${MEDR1_MARKDOWN_FORMAT_GUIDE}`;
       res.json({
         grandeAreaId,
         grandeArea,
-        tema: sanitizeShortText(parsed.tema, sanitizeShortText(q.tema, 'Clínica Geral', 80), 80),
-        subtema: sanitizeShortText(parsed.subtema, sanitizeShortText(q.subtema, 'Questão Oficial', 120), 120),
+        tema: taxonomy?.tema ?? sanitizeShortText(parsed.tema, sanitizeShortText(q.tema, 'Clínica Geral', 80), 80),
+        subtema:
+          taxonomy?.subtema ??
+          sanitizeShortText(parsed.subtema, sanitizeShortText(q.subtema, 'Questão Oficial', 120), 120),
+        ...(taxonomy
+          ? {
+              temaSlug: taxonomy.temaSlug,
+              subtemaSlug: taxonomy.subtemaSlug,
+              tags: taxonomy.tags,
+              taxonomyVersion: TAXONOMY_VERSION,
+              ...(taxonomy.needsTaxonomyReview ? { needsTaxonomyReview: true } : {}),
+            }
+          : { needsTaxonomyReview: true }),
         comentarioGeral: (parsed.comentarioGeral || '').trim(),
         alternativas: cleanedAlts.map((alt) => ({
           letter: alt.letter,

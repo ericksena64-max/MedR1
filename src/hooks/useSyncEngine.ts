@@ -1,10 +1,15 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import type { SyncOutboxEvent } from '../types/sync';
+import type {
+  SyncBootstrapRequest,
+  SyncOutboxEvent,
+  SyncPullResponse,
+} from '../types/sync';
 import {
   HybridPostgresSyncAdapter,
   type StorageAdapter,
 } from '../lib/storageAdapter';
-import { getOrCreateSyncStudentId } from '../lib/syncOutbox';
+import { getLastPullTimestamp, getOrCreateSyncStudentId } from '../lib/syncOutbox';
+import { getStoredAuthToken } from '../lib/authClient';
 
 export type SyncStatus =
   | 'idle'
@@ -21,7 +26,9 @@ export interface UseSyncEngineOptions {
 
 export function useSyncEngine(options: UseSyncEngineOptions = {}) {
   const adapter = useMemo(
-    () => options.adapter ?? new HybridPostgresSyncAdapter(),
+    () =>
+      options.adapter ??
+      new HybridPostgresSyncAdapter({ getAuthToken: getStoredAuthToken }),
     [options.adapter]
   );
   const studentId = useMemo(
@@ -125,6 +132,52 @@ export function useSyncEngine(options: UseSyncEngineOptions = {}) {
     };
   }, [adapter.mode, enabled, flushNow, refreshPendingCount]);
 
+  const bootstrapSync = useCallback(
+    async (payload: SyncBootstrapRequest): Promise<SyncPullResponse | null> => {
+      if (!enabled || adapter.mode === 'local') {
+        return null;
+      }
+      setSyncStatus('syncing');
+      try {
+        const result = await adapter.bootstrap(payload);
+        if (result && result.mode === 'postgres') {
+          setLastSyncedAt(result.serverTimestamp);
+          setSyncStatus('idle');
+          return result;
+        }
+        setSyncStatus(result?.mode === 'local-fallback' ? 'local-fallback' : 'offline');
+        return result;
+      } catch {
+        setSyncStatus('offline');
+        return null;
+      }
+    },
+    [adapter, enabled]
+  );
+
+  const pullSync = useCallback(
+    async (sinceIso?: string): Promise<SyncPullResponse | null> => {
+      if (!enabled || adapter.mode === 'local') {
+        return null;
+      }
+      setSyncStatus('syncing');
+      try {
+        const result = await adapter.pull(studentId, sinceIso ?? getLastPullTimestamp());
+        if (result && result.mode === 'postgres') {
+          setLastSyncedAt(result.serverTimestamp);
+          setSyncStatus('idle');
+          return result;
+        }
+        setSyncStatus(result?.mode === 'local-fallback' ? 'local-fallback' : 'offline');
+        return result;
+      } catch {
+        setSyncStatus('offline');
+        return null;
+      }
+    },
+    [adapter, enabled, studentId]
+  );
+
   return {
     studentId,
     syncStatus,
@@ -132,6 +185,8 @@ export function useSyncEngine(options: UseSyncEngineOptions = {}) {
     lastSyncedAt,
     enqueueEvents,
     flushNow,
+    bootstrapSync,
+    pullSync,
     refreshPendingCount,
   };
 }

@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import {
+  applyTargetExamPresetToEstimatorConfig,
   buildHomeIntelligenceSummary,
   readPersistedEstimatorConfig,
   type HomeAreaInput,
@@ -139,5 +140,41 @@ describe('homeIntelligence — derivação pura dos KPIs da Home', () => {
     expect(cfg.notaCorteMedia).toBe(78);
     expect(cfg.totalQuestoesProva).toBe(100);
     expect(cfg.usarSuavizacaoLaplace).toBe(false);
+  });
+
+  it('applyTargetExamPresetToEstimatorConfig aplica notaCorteMedia e totalQuestoesProva corretamente ao trocar banca', () => {
+    const baseCfg = readPersistedEstimatorConfig(null, 76);
+    const uepaCfg = applyTargetExamPresetToEstimatorConfig(baseCfg, {
+      defaultCutoff: 72,
+      totalQuestions: 100,
+    });
+    const uspCfg = applyTargetExamPresetToEstimatorConfig(baseCfg, {
+      defaultCutoff: 84,
+      totalQuestions: 120,
+    });
+
+    expect(uepaCfg.notaCorteMedia).toBe(72);
+    expect(uepaCfg.totalQuestoesProva).toBe(100);
+    expect(uspCfg.notaCorteMedia).toBe(84);
+    expect(uspCfg.totalQuestoesProva).toBe(120);
+
+    const uepaSummary = buildHomeIntelligenceSummary({
+      areaRows: SAMPLE_AREAS,
+      simulados: SAMPLE_SIMULADOS,
+      cutoffTarget: TARGET,
+      estimatorConfig: uepaCfg,
+    });
+    const uspSummary = buildHomeIntelligenceSummary({
+      areaRows: SAMPLE_AREAS,
+      simulados: SAMPLE_SIMULADOS,
+      cutoffTarget: TARGET,
+      estimatorConfig: uspCfg,
+    });
+
+    expect(uepaSummary.cutoffScore).toBe(72);
+    expect(uepaSummary.totalExamQuestions).toBe(100);
+    expect(uspSummary.cutoffScore).toBe(84);
+    expect(uspSummary.totalExamQuestions).toBe(120);
+    expect(uspSummary.approvalProbabilityPct).toBeLessThan(uepaSummary.approvalProbabilityPct);
   });
 });
