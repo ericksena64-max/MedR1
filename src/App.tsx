@@ -181,6 +181,9 @@ export default function App() {
   const [simuladoActive, setSimuladoActive] = useState(false);
   const [simuladoFinished, setSimuladoFinished] = useState(false);
   const [simuladoPaused, setSimuladoPaused] = useState(false);
+  const [shuffleSessionSeed] = useState(() =>
+    Math.random().toString(36).slice(2, 10)
+  );
   const [includeAnsweredInSimulado, setIncludeAnsweredInSimulado] = useState(false);
   const [simuladoSecondsLeft, setSimuladoSecondsLeft] = useState(0);
   const [simuladoDrafts, setSimuladoDrafts] = useState<
@@ -1452,6 +1455,11 @@ export default function App() {
                         }
                         onOpenFlashcards={() => setActiveTab('flashcards')}
                         readingComfort={store.readingComfort}
+                        shuffleAlternatives={store.shuffleAlternatives}
+                        onToggleShuffleAlternatives={() =>
+                          store.setShuffleAlternatives((prev) => !prev)
+                        }
+                        shuffleSeed={shuffleSessionSeed}
                         onGenerateAiCommentary={
                           store.generateAiCommentaryForQuestion
                         }

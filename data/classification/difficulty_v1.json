@@ -1,0 +1,6938 @@
+{
+  "q-enamed-2025-001": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-003": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-004": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-005": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-006": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-008": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-012": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-013": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-014": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-015": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-016": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-017": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-018": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-019": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-020": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-021": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-022": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-023": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-024": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-025": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-026": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-027": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-028": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-029": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-030": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-031": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-032": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-033": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-034": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-035": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-036": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-037": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-038": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-039": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-041": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-042": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-044": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-045": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-046": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-047": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-048": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-049": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-050": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-051": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-052": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-053": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-054": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-055": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-056": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-057": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-058": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-059": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-060": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-061": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-062": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-063": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-064": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-065": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-066": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-067": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-068": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-069": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-070": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-071": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-072": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-073": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-074": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-075": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-077": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-078": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-079": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-080": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-081": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-082": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-083": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-084": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-085": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-086": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-087": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-089": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-090": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-091": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-092": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-093": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-094": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-095": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-096": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-097": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-098": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enamed-2025-099": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-001": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-002": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-003": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-004": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-005": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-006": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-007": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-008": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-009": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-010": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-011": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-012": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-013": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-014": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-015": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-016": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-017": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-018": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-019": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-020": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-021": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-022": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-023": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-024": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-025": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-026": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-027": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-028": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-029": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-030": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-031": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-032": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-033": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-034": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-035": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-036": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-037": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-038": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-039": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-040": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-041": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-043": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-044": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-045": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-046": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-047": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-048": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-049": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-050": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-051": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-052": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-053": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-054": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-055": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-057": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-058": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-059": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-060": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-061": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-062": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-063": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-064": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-065": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-066": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-067": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-068": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-069": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-070": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-071": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-072": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-073": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-074": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-075": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-076": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-077": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-078": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-079": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-080": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-081": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-082": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-083": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-085": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-086": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-087": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-088": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-089": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-090": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-091": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-092": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-093": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-094": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-095": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-096": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-097": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-098": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-099": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-enare-2024-100": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-001": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-002": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-003": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-004": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-006": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-007": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-008": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-009": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-010": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-011": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-012": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-013": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-014": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-015": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-016": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-017": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-018": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-019": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-020": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-021": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-022": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-023": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-024": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-025": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-026": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-027": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-028": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-029": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-030": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-031": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-032": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-033": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-034": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-035": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-036": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-037": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-038": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-039": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-040": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-041": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-042": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-043": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-044": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-045": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-046": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-047": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-048": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-049": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-ieppa-2026-050": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-001": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-002": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-003": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-004": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-005": {
+    "difficulty": "Anulada",
+    "taxaAcertoBase": 0.0,
+    "taxaAcertoGlobal": 0.0,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-006": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-007": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-008": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-009": {
+    "difficulty": "Anulada",
+    "taxaAcertoBase": 0.0,
+    "taxaAcertoGlobal": 0.0,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-010": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-011": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-012": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-013": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-014": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-015": {
+    "difficulty": "Anulada",
+    "taxaAcertoBase": 0.0,
+    "taxaAcertoGlobal": 0.0,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-016": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-017": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-018": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-019": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-020": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-021": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-022": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-023": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-024": {
+    "difficulty": "Anulada",
+    "taxaAcertoBase": 0.0,
+    "taxaAcertoGlobal": 0.0,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-025": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-026": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-027": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-028": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-029": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-030": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-031": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-032": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-033": {
+    "difficulty": "Anulada",
+    "taxaAcertoBase": 0.0,
+    "taxaAcertoGlobal": 0.0,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-034": {
+    "difficulty": "Anulada",
+    "taxaAcertoBase": 0.0,
+    "taxaAcertoGlobal": 0.0,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-035": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-036": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-037": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-038": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-039": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-040": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-041": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-042": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-043": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-044": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-045": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-046": {
+    "difficulty": "Anulada",
+    "taxaAcertoBase": 0.0,
+    "taxaAcertoGlobal": 0.0,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-047": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-048": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-049": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-050": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-051": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-052": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-053": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-054": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-055": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-056": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-057": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-058": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-059": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-060": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-061": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-062": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-063": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-064": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-065": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-066": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-067": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-068": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-069": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-070": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-071": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-072": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-073": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-074": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-075": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-076": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-077": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-078": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-079": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-080": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-081": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-082": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-083": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-084": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-085": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-086": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-087": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-088": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-089": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-090": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-091": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-092": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-093": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-094": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-095": {
+    "difficulty": "Anulada",
+    "taxaAcertoBase": 0.0,
+    "taxaAcertoGlobal": 0.0,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-096": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-097": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-098": {
+    "difficulty": "Anulada",
+    "taxaAcertoBase": 0.0,
+    "taxaAcertoGlobal": 0.0,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-099": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-sus-sp-2023-100": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-001": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-002": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-003": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-004": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-005": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-006": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-007": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-008": {
+    "difficulty": "Anulada",
+    "taxaAcertoBase": 0.0,
+    "taxaAcertoGlobal": 0.0,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-009": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-010": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-011": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-012": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-013": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-014": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-015": {
+    "difficulty": "Anulada",
+    "taxaAcertoBase": 0.0,
+    "taxaAcertoGlobal": 0.0,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-016": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-017": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-018": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-019": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-020": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-021": {
+    "difficulty": "Anulada",
+    "taxaAcertoBase": 0.0,
+    "taxaAcertoGlobal": 0.0,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-022": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-023": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-024": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-025": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-026": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-027": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-028": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-029": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-030": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-031": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-032": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-033": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-034": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-035": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-036": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-037": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-038": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-039": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-040": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-041": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-042": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-043": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-044": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-045": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-046": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-047": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-048": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-049": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-050": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-051": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-052": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-053": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-054": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-055": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-056": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-057": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-058": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-059": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-060": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-061": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-062": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-063": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-064": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-065": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-066": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-067": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-068": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-069": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-070": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-071": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-072": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-073": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-074": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-075": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-076": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-077": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-078": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-079": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-080": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-081": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-082": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-083": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-084": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-085": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-086": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-087": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-088": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-089": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-090": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-091": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-092": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-093": {
+    "difficulty": "Anulada",
+    "taxaAcertoBase": 0.0,
+    "taxaAcertoGlobal": 0.0,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-094": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-095": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-096": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-097": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-098": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-099": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2022-100": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-001": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-002": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-003": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-004": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-005": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-006": {
+    "difficulty": "Anulada",
+    "taxaAcertoBase": 0.0,
+    "taxaAcertoGlobal": 0.0,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-007": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-008": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-009": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-010": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-011": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-012": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-013": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-014": {
+    "difficulty": "Anulada",
+    "taxaAcertoBase": 0.0,
+    "taxaAcertoGlobal": 0.0,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-015": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-016": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-017": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-018": {
+    "difficulty": "Anulada",
+    "taxaAcertoBase": 0.0,
+    "taxaAcertoGlobal": 0.0,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-019": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-020": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-021": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-022": {
+    "difficulty": "Anulada",
+    "taxaAcertoBase": 0.0,
+    "taxaAcertoGlobal": 0.0,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-023": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-024": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-025": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-026": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-027": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-028": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-029": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-030": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-031": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-032": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-033": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-034": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-035": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-036": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-037": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-038": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-039": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-040": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-041": {
+    "difficulty": "Anulada",
+    "taxaAcertoBase": 0.0,
+    "taxaAcertoGlobal": 0.0,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-042": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-043": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-044": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-045": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-046": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-047": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-048": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-049": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-050": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-051": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-052": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-053": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-054": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-055": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-056": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-057": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-058": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-059": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-060": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-061": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-062": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-063": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-064": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-065": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-066": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-067": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-068": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-069": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-070": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-071": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-072": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-073": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-074": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-075": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-076": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-077": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-078": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-079": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-080": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-081": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-082": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-083": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-084": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-085": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-086": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-087": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-088": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-089": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-090": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-091": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-092": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-093": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-094": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-095": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-096": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-097": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-098": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-099": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2023-100": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-001": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-002": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-003": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-004": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-005": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-006": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-007": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-008": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-009": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-010": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-011": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-012": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-013": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-014": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-015": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-016": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-017": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-018": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-019": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-020": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-021": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-022": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-023": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-024": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-025": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-026": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-027": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-028": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-029": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-030": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-031": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-032": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-033": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-034": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-035": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-036": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-037": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-038": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-039": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-040": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-041": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-042": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-043": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-044": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-045": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-046": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-047": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-048": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-049": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-050": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-051": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-052": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-053": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-054": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-055": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-056": {
+    "difficulty": "Anulada",
+    "taxaAcertoBase": 0.0,
+    "taxaAcertoGlobal": 0.0,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-057": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-058": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-059": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-060": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-061": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-062": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-063": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-064": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-065": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-066": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-067": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-068": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-069": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-070": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-071": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-072": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-073": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-074": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-075": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-076": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-077": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-078": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-079": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-080": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-081": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-082": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-083": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-084": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-085": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-086": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-087": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-088": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-089": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-090": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-091": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-092": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-093": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-094": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-095": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-096": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-097": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-098": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-099": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2024-100": {
+    "difficulty": "Anulada",
+    "taxaAcertoBase": 0.0,
+    "taxaAcertoGlobal": 0.0,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-001": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-002": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-003": {
+    "difficulty": "Anulada",
+    "taxaAcertoBase": 0.0,
+    "taxaAcertoGlobal": 0.0,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-004": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-005": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-006": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-007": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-008": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-009": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-010": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-011": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-012": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-013": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-014": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-015": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-016": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-017": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-018": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-019": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-020": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-021": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-022": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-023": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-024": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-025": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-026": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-027": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-028": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-029": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-030": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-031": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-032": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-033": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-034": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-035": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-036": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-037": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-038": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-039": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-040": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-041": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-042": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-043": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-044": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-045": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-046": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-047": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-048": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-049": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-050": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-051": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-052": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-053": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-054": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-055": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-056": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-057": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-058": {
+    "difficulty": "Anulada",
+    "taxaAcertoBase": 0.0,
+    "taxaAcertoGlobal": 0.0,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-059": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-060": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-061": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-062": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-063": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-064": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-065": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-066": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-067": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-068": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-069": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-070": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-071": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-072": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-073": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-074": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-075": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-076": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-077": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-078": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-079": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-080": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-081": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-082": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-083": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-084": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-085": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-086": {
+    "difficulty": "Anulada",
+    "taxaAcertoBase": 0.0,
+    "taxaAcertoGlobal": 0.0,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-087": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-088": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-089": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-090": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-091": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-092": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-093": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-094": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-095": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-096": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-097": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-098": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-099": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2025-100": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-001": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-002": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-003": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-004": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-005": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-006": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-007": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-008": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-009": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-010": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-011": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-012": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-013": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-014": {
+    "difficulty": "Anulada",
+    "taxaAcertoBase": 0.0,
+    "taxaAcertoGlobal": 0.0,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-015": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-016": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-017": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-018": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-019": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-020": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-021": {
+    "difficulty": "Anulada",
+    "taxaAcertoBase": 0.0,
+    "taxaAcertoGlobal": 0.0,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-022": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-023": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-024": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-025": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-026": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-027": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-028": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-029": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-030": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-031": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-032": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-033": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-034": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-035": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-036": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-037": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-038": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-039": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-040": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-041": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-042": {
+    "difficulty": "Anulada",
+    "taxaAcertoBase": 0.0,
+    "taxaAcertoGlobal": 0.0,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-043": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-044": {
+    "difficulty": "Anulada",
+    "taxaAcertoBase": 0.0,
+    "taxaAcertoGlobal": 0.0,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-045": {
+    "difficulty": "Anulada",
+    "taxaAcertoBase": 0.0,
+    "taxaAcertoGlobal": 0.0,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-046": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-047": {
+    "difficulty": "Anulada",
+    "taxaAcertoBase": 0.0,
+    "taxaAcertoGlobal": 0.0,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-048": {
+    "difficulty": "Anulada",
+    "taxaAcertoBase": 0.0,
+    "taxaAcertoGlobal": 0.0,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-049": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-050": {
+    "difficulty": "Anulada",
+    "taxaAcertoBase": 0.0,
+    "taxaAcertoGlobal": 0.0,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-051": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-052": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-053": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-054": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-055": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-056": {
+    "difficulty": "Anulada",
+    "taxaAcertoBase": 0.0,
+    "taxaAcertoGlobal": 0.0,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-057": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-058": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-059": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-060": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-061": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-062": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-063": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-064": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-065": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-066": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-067": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-068": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-069": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-070": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-071": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-072": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-073": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-074": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-075": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-076": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-077": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-078": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-079": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-080": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-081": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-082": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-083": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-084": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-085": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-086": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-087": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-088": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-089": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-090": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-091": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-092": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-093": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-094": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-095": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-096": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-097": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-098": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-099": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-uepa-2026-100": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-001": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-002": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-003": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-004": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-005": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-006": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-007": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-008": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-009": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-010": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-011": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-012": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-013": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-014": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-015": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-016": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-017": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-018": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-019": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-020": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-021": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-022": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-023": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-024": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-025": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-026": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-027": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-028": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-029": {
+    "difficulty": "Anulada",
+    "taxaAcertoBase": 0.0,
+    "taxaAcertoGlobal": 0.0,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-030": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-031": {
+    "difficulty": "Anulada",
+    "taxaAcertoBase": 0.0,
+    "taxaAcertoGlobal": 0.0,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-032": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-033": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-034": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-035": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-036": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-037": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-038": {
+    "difficulty": "Anulada",
+    "taxaAcertoBase": 0.0,
+    "taxaAcertoGlobal": 0.0,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-039": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-040": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-041": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-042": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-043": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-044": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-045": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-046": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-047": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-048": {
+    "difficulty": "Anulada",
+    "taxaAcertoBase": 0.0,
+    "taxaAcertoGlobal": 0.0,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-049": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-050": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-051": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-052": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-053": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-054": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-055": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-056": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-057": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-058": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-059": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-060": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-061": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-062": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-063": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-064": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-065": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-066": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-067": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-068": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-069": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-070": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-071": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-072": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-073": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-074": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-075": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-076": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-077": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-078": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-079": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-080": {
+    "difficulty": "Anulada",
+    "taxaAcertoBase": 0.0,
+    "taxaAcertoGlobal": 0.0,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-081": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-082": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-083": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-084": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-085": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-086": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-087": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-088": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-089": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-090": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-091": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-092": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-093": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-094": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-095": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-096": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-097": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-098": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-099": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-unifesp-2023-100": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-001": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-002": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-003": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-004": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-005": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-006": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-007": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-008": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-009": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-010": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-011": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-012": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-013": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-014": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-015": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-016": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-017": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-018": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-019": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-020": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-021": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-022": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-023": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-024": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-025": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-026": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-027": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-028": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-029": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-030": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-031": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-032": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-033": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-034": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-035": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-036": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-037": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-038": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-039": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-040": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-041": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-042": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-043": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-044": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-045": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-046": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-047": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-048": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-049": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-050": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-051": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-052": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-053": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-054": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-055": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-056": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-057": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-058": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-059": {
+    "difficulty": "Anulada",
+    "taxaAcertoBase": 0.0,
+    "taxaAcertoGlobal": 0.0,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-060": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-061": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-062": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-063": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-064": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-065": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-066": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-067": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-068": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-069": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-070": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-071": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-072": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-073": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-074": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-075": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-076": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-077": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-078": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-079": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-080": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-081": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-082": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-083": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-084": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-085": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-086": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-087": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-088": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-089": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-090": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-091": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-092": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-093": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-094": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-095": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-096": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-097": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-098": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-099": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-rp-2023-100": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-001": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-002": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-003": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-004": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-005": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-006": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-007": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-008": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-009": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-010": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-011": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-012": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-013": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-014": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-015": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-016": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-017": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-018": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-019": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-020": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-021": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-022": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-023": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-024": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-025": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-026": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-027": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-028": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-029": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-030": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-031": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-032": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-033": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-034": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-035": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-036": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-037": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-038": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-039": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-040": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-041": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-042": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-043": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-044": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-045": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-046": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-047": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-048": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-049": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-050": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-051": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-052": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-053": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-054": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-055": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-056": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-057": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-058": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-059": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-060": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-061": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-062": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-063": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-064": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-065": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-066": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-067": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-068": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-069": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-070": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-071": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-072": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-073": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-074": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-075": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-076": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-077": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-078": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-079": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-080": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-081": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-082": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-083": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-084": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-085": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-086": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-087": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-088": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-089": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-090": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-091": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-092": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-093": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-094": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-095": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-096": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-097": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-098": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-099": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-100": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-101": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-102": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-103": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-104": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-105": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-106": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-107": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-108": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-109": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-110": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-111": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-112": {
+    "difficulty": "Fácil",
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-113": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-114": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-115": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-116": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-117": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-118": {
+    "difficulty": "Difícil",
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-119": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  },
+  "q-usp-sp-2023-120": {
+    "difficulty": "Médio",
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
+    "version": "difficulty_v1"
+  }
+}

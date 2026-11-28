@@ -15,7 +15,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Diverticulite Aguda",
     "temaSlug": "cg-abdome",
     "subtemaSlug": "cg-abdome-diverticulite-aguda",
-    "tags": ["diverticulite-aguda","tratamento-clinico","abdome-agudo"],
+    "tags": [
+      "diverticulite-aguda",
+      "tratamento-clinico",
+      "abdome-agudo"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -54,7 +58,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "O quadro clínico e tomográfico evidencia diverticulite aguda não complicada (ou Hinchey Ia, com apenas espessamento parietal e densificação da gordura pericolônica, sem coleção drenável ou pneumoperitônio à distância). Nesses pacientes estáveis e sem sinais de peritonite difusa, a conduta recomendada pelas diretrizes internacionais (WSES, ASCRS) é o tratamento clínico conservador.",
     "perolaClinica": "Diverticulite Hinchey Ia ou sem coleções > 3-4 cm em paciente estável tem indicação de tratamento clínico conservador.",
     "referencias": [
@@ -70,6 +75,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Tomografia",
       "caption": "TC de abdome com contraste evidenciando espessamento da parede do sigmoide e densificação da gordura pericolônica, sem grandes coleções organizadas.",
       "aspectRatio": "16:9"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Conduta conservadora na diverticulite aguda não complicada (Hinchey Ia) em paciente clinicamente estável.",
+      "raciocinioChave": "Idoso estável com dor em flanco/fossa ilíaca esquerda e diverticulite aguda sem coleção abscedida grande ou pneumoperitônio difuso na tomografia (Hinchey Ia) deve receber tratamento clínico. Analgesia, suporte e antibioticoterapia quando indicada controlam a fase inflamatória sem necessidade de intervenção invasiva.",
+      "armadilhaBanca": "Indicar drenagem percutânea ou abordagem cirúrgica precoce diante de dor localizada e leucocitose sem abscesso drenável ou peritonite difusa."
+    },
+    "mapaDistratores": {
+      "A": "A laparoscopia diagnóstica ou terapêutica reserva-se a casos de peritonite difusa (Hinchey III/IV), sepse refratária ou falha do manejo conservador.",
+      "B": "A drenagem percutânea guiada por imagem é indicada para abscessos pericólicos ou pélvicos maiores que 3 a 4 cm (Hinchey Ib/II), ausentes neste caso.",
+      "D": "A colectomia esquerda de urgência é reservada para perfuração livre, peritonite generalizada ou obstrução completa, sendo desproporcional na forma não complicada."
     }
   },
   {
@@ -82,7 +97,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Complicações Pós-Operatórias e Infecção de Sítio Cirúrgico",
     "temaSlug": "cg-periop",
     "subtemaSlug": "cg-periop-complicacoes-pos-operatorias-e-infeccao-de-sitio-cirurgico",
-    "tags": ["deiscencia-de-anastomose","peritonite","piperacilina-tazobactam"],
+    "tags": [
+      "deiscencia-de-anastomose",
+      "peritonite",
+      "piperacilina-tazobactam"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -121,7 +140,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "Pacientes com peritonite secundária a deiscência anastomótica no pós-operatório hospitalar (infecção intra-abdominal nosocomial) necessitam de antibioticoterapia de amplo espectro com ação contra bacilos Gram-negativos multirresistentes, incluindo Pseudomonas aeruginosa (ex.: Piperacilina-Tazobactam). Após a intervenção e controle cirúrgico satisfatório do foco infeccioso, o tempo recomendado é curto, em torno de 4 a 5 dias, conforme preconizado pelas diretrizes da SIS/IDSA e pelo estudo STOP-IT.",
     "perolaClinica": "Infecção intra-abdominal nosocomial pós-operatória: cobrir Pseudomonas (ex: pip/tazo) e tratar por tempo curto (4-5 dias) pós-controle de foco.",
     "referencias": [
@@ -131,7 +151,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 2963
+    "sourcePdfPage": 2963,
+    "analiseBanca": {
+      "conceitoCentral": "Antibioticoterapia nosocomial de curto prazo (5 dias com piperacilina-tazobactam) na deiscência anastomótica controlada.",
+      "raciocinioChave": "Deiscência anastomótica no 6º pós-operatório configura infecção intra-abdominal nosocomial, demandando cobertura de amplo espectro com ação antipseudomonas e anaeróbia (piperacilina-tazobactam). Após laparotomia com controle cirúrgico satisfatório do foco infeccioso (estudo STOP-IT), o tempo indicado é curto, em torno de 5 dias.",
+      "armadilhaBanca": "Prescrever esquema comunitário (ceftriaxone + metronidazol) para infecção pós-operatória nosocomial ou prolongar a terapia por 10 dias após controle do foco."
+    },
+    "mapaDistratores": {
+      "A": "Ceftriaxone com metronidazol não cobre adequadamente patógenos nosocomiais como Pseudomonas aeruginosa na deiscência pós-operatória, além de 10 dias exceder a duração recomendada.",
+      "B": "Embora piperacilina-tazobactam tenha espectro adequado, manter o antibiótico por 10 dias após controle cirúrgico do foco contraria as evidências atuais do estudo STOP-IT.",
+      "C": "O esquema ceftriaxone + metronidazol é restrito a infecções intra-abdominais comunitárias, mostrando-se insuficiente para infecção pós-operatória hospitalar."
+    }
   },
   {
     "id": "q-usp-sp-2023-003",
@@ -143,7 +173,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Abdome Agudo Perfurativo",
     "temaSlug": "cg-abdome",
     "subtemaSlug": "cg-abdome-abdome-agudo-perfurativo",
-    "tags": ["ulcera-perfurada","abdome-agudo-perfurativo","aine"],
+    "tags": [
+      "ulcera-perfurada",
+      "abdome-agudo-perfurativo",
+      "aine"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -182,7 +216,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A história de uso crônico de corticoide e recente de AINE (cetoprofeno), associada à dor abdominal súbita de forte intensidade e abdome em tábua com peritonite difusa, é o clássico quadro de abdome agudo perfurativo por úlcera péptica. A TC de abdome confirma o diagnóstico ao evidenciar ar extraluminal livre na cavidade peritoneal (pneumoperitônio), retratado na alternativa A.",
     "perolaClinica": "Dor súbita em facada associada ao uso de AINEs/corticoides com peritonite difusa = úlcera péptica perfurada; procure pneumoperitônio na TC/RX.",
     "referencias": [
@@ -199,6 +234,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Tomografia",
       "caption": "Tomografia computadorizada de abdome demonstrando ar livre intraperitoneal (pneumoperitônio) peri-hepático e subdiafragmático.",
       "aspectRatio": "4:3"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Diagnóstico tomográfico de abdome agudo perfurativo (pneumoperitônio) secundário ao uso de AINE e corticoide.",
+      "raciocinioChave": "Dor abdominal súbita intensa e peritonite difusa em paciente usuária crônica de corticoide e recente de cetoprofeno indicam perfuração de úlcera péptica. A confirmação ocorre pela identificação de gás extraluminal livre na cavidade peritoneal (pneumoperitônio) demonstrado na alternativa A.",
+      "armadilhaBanca": "Supervalorizar leve elevação de amilase/lipase secundária à perfuração e peritonite para pensar em pancreatite aguda, deixando de identificar o pneumoperitônio."
+    },
+    "mapaDistratores": {
+      "B": "A imagem correspondente não evidencia gás extraluminal livre na cavidade peritoneal compatível com abdome agudo perfurativo.",
+      "C": "Os cortes tomográficos mostrados não apresentam o pneumoperitônio livre subdiafragmático ou peri-hepático característico da perfuração de víscera oca.",
+      "D": "A imagem não exibe o acúmulo de ar livre intraperitoneal esperado na perfuração gastroduodenal associada a AINE e corticoide."
     }
   },
   {
@@ -211,7 +256,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Doenças Orificiais",
     "temaSlug": "cg-cad",
     "subtemaSlug": "cg-cad-doencas-orificiais",
-    "tags": ["abscesso-perianal","fistula-perianal","glandulas-anais"],
+    "tags": [
+      "abscesso-perianal",
+      "fistula-perianal",
+      "glandulas-anais"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -250,7 +299,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A apresentação clínica com abaulamento doloroso e saída de secreção purulenta por orifício externo é típica de abscesso perianal com fístula em formação. De acordo com a clássica teoria criptoglandular de Eisenhammer e Parks, a etiologia mais comum de fístulas e abscessos anorretais não específicos é a infecção das glândulas anais ramificadas na linha criptopretínea.",
     "perolaClinica": ">90% dos abscessos e fístulas anorretais são de origem criptoglandular (infecção das glândulas do canal anal).",
     "referencias": [
@@ -267,6 +317,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Fotografia Clínica",
       "caption": "Inspeção anal e cortes de TC de pelve demonstrando coleção líquida com trajeto fistuloso perianal.",
       "aspectRatio": "4:3"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Etiologia criptoglandular como principal causa de abscesso e fístula perianal na população geral.",
+      "raciocinioChave": "Homem jovem com abaulamento perianal doloroso e drenagem purulenta por orifício externo apresenta abscesso e fístula anorretal. Conforme a teoria criptoglandular de Parks, mais de 90% desses quadros originam-se da obstrução e inflamação das glândulas anais nas criptas de Morgagni.",
+      "armadilhaBanca": "Supervalorizar o histórico de relação anal ou possíveis doenças inflamatórias para marcar IST ou Crohn em vez da origem criptoglandular primária."
+    },
+    "mapaDistratores": {
+      "A": "A doença de Crohn pode cursar com fístulas perianais complexas, porém representa menos de 10% do total de casos e não há manifestações intestinais sugestivas.",
+      "C": "A retocolite ulcerativa limita-se à mucosa colorretal e raramente ocasiona abscessos ou trajetos fistulosos perianais.",
+      "D": "Infecções sexualmente transmissíveis podem causar proctite ou ulcerações anorretais, mas não constituem a etiologia predominante dos abscessos e fístulas perianais."
     }
   },
   {
@@ -279,7 +339,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Apendicite Aguda",
     "temaSlug": "cg-abdome",
     "subtemaSlug": "cg-abdome-apendicite-aguda",
-    "tags": ["apendicectomia","pos-operatorio","alta-hospitalar"],
+    "tags": [
+      "apendicectomia",
+      "pos-operatorio",
+      "alta-hospitalar"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -318,7 +382,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "Após a apendicectomia por apendicite aguda inicial/não complicada, em paciente jovem sem comorbidades e sem intercorrências, os conceitos de reabilitação multimodal (protocolos ACERTO/ERAS) preconizam o retorno precoce da dieta oral (dieta leve no 1º PO) e alta precoce programada no 1º pós-operatório.",
     "perolaClinica": "Apendicite aguda não complicada tratada com sucesso: reintrodução precoce da dieta e alta no 1º dia pós-operatório.",
     "referencias": [
@@ -335,6 +400,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Fotografia Clínica",
       "caption": "Peça cirúrgica e achado intraoperatório de apendicite aguda inicial não perfurada.",
       "aspectRatio": "16:9"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Protocolo ERAS/ACERTO na apendicectomia não complicada: dieta leve e alta no 1º pós-operatório.",
+      "raciocinioChave": "Em paciente jovem sem comorbidades submetido a apendicectomia não complicada e sem intercorrências, aplicam-se as diretrizes de aceleração da recuperação pós-operatória (ERAS/ACERTO). Recomenda-se reintrodução precoce de dieta leve e alta hospitalar já no 1º dia pós-operatório.",
+      "armadilhaBanca": "Manter jejum pós-operatório desnecessário ou prolongar a internação por 3 dias seguindo conduta tradicionalista em caso não complicado."
+    },
+    "mapaDistratores": {
+      "A": "Postergar a alta até o 3º pós-operatório em apendicectomia simples sem intercorrências prolonga a hospitalização e eleva riscos sem benefício clínico.",
+      "C": "Manter jejum no 1º pós-operatório de cirurgia abdominal não complicada sem íleo adinâmico retarda a recuperação e contraria os protocolos ERAS/ACERTO.",
+      "D": "Combinar jejum prolongado e alta apenas no 3º pós-operatório em jovem hígido pós-apendicectomia simples carece de respaldo científico atual."
     }
   },
   {
@@ -347,7 +422,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Complicações Pós-Operatórias e Infecção de Sítio Cirúrgico",
     "temaSlug": "cg-periop",
     "subtemaSlug": "cg-periop-complicacoes-pos-operatorias-e-infeccao-de-sitio-cirurgico",
-    "tags": ["infeccao-de-sitio-cirurgico","herniorrafia-incisional","desbridamento"],
+    "tags": [
+      "infeccao-de-sitio-cirurgico",
+      "herniorrafia-incisional",
+      "desbridamento"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -386,7 +465,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A presença de secreção purulenta na ferida operatória traduz infecção de sítio cirúrgico. O princípio cirúrgico básico fundamental diante de secreção purulenta ou abscesso é a drenagem imediata: retirada de pontos da sutura, lavagem mecânica, remoção de crostas ou tecidos necróticos e realização de curativos diários.",
     "perolaClinica": "Pus na ferida operatória = retirada de pontos, drenagem ampla, desbridamento e curativos frequentes.",
     "referencias": [
@@ -403,6 +483,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Fotografia Clínica",
       "caption": "Ferida operatória mediana com eritema, deiscência parcial e drenagem purulenta ativa após correção de hérnia.",
       "aspectRatio": "4:3"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Manejo de infecção superficial de sítio cirúrgico com secreção purulenta pós-hernioplastia onlay.",
+      "raciocinioChave": "Saída de secreção espessa e purulenta na incisão traduz infecção de sítio cirúrgico com indicação absoluta de drenagem imediata. A retirada de pontos, abertura da ferida, desbridamento de tecidos desvitalizados e curativos diários controlam a infecção permitindo frequentemente preservar a tela de polipropileno macroporosa.",
+      "armadilhaBanca": "Indicar retirada ou troca imediata da tela de polipropileno em infecção superficial, ou tentar tratar secreção purulenta apenas com antibiótico sem drenagem."
+    },
+    "mapaDistratores": {
+      "A": "Implantar nova tela em leito francamente infectado resulta em recontaminação inevitável da prótese e manutenção do foco séptico.",
+      "B": "Postergar a drenagem mecânica apostando apenas em cefazolina é erro técnico, pois coleção purulenta em ferida cirúrgica exige abertura imediata.",
+      "C": "A remoção imediata da tela macroporosa de polipropileno não é obrigatória inicialmente quando a infecção se restringe ao subcutâneo e responde à drenagem aberta e curativos."
     }
   },
   {
@@ -415,7 +505,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Hérnias Umbilical, Epigástrica e Incisional",
     "temaSlug": "cg-hernias",
     "subtemaSlug": "cg-hernias-hernias-umbilical-epigastrica-e-incisional",
-    "tags": ["seroma","hernia-incisional","cinta-abdominal"],
+    "tags": [
+      "seroma",
+      "hernia-incisional",
+      "cinta-abdominal"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -454,7 +548,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "Coleções líquidas subcutâneas indolores, anecoicas e sem sinais inflamatórios sistêmicos ou locais após reparo de hérnias incisionais correspondem a seromas. A conduta padrão para seromas assintomáticos ou pouco sintomáticos é eminentemente conservadora, utilizando suporte com cinta abdominal compressiva para favorecer a reabsorção natural.",
     "perolaClinica": "Seroma asséptico pós-correção de hérnia com tela: conduta expectante com cinta abdominal compressiva; evite puncionar sem necessidade.",
     "referencias": [
@@ -471,6 +566,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Ultrassonografia",
       "caption": "Ultrassonografia de parede abdominal mostrando coleção líquida anecoica homogênea no subcutâneo (seroma) sem fluxo ao Doppler.",
       "aspectRatio": "1:1"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Conduta conservadora (cinta abdominal) no seroma pós-operatório assintomático após hernioplastia onlay.",
+      "raciocinioChave": "Abaulamento indolor sem sinais flogísticos e coleção subcutânea anecoica ao ultrassom após hernioplastia com tela onlay caracterizam seroma simples pós-descolamento. Na ausência de infecção ou dor importante, a conduta é conservadora com uso de cinta abdominal compressiva para favorecer a reabsorção.",
+      "armadilhaBanca": "Prescrever antibiótico para seroma estéril ou abrir/recolocar dreno na ferida, contaminando uma coleção asséptica sobre a tela."
+    },
+    "mapaDistratores": {
+      "A": "O líquido anecoico homogêneo e a ausência de dor, hiperemia ou febre afastam infecção ativa, não havendo indicação de antibioticoterapia.",
+      "B": "Recolocar um dreno subcutâneo em seroma estéril cria porta de entrada bacteriana e aumenta o risco de infecção secundária da tela.",
+      "D": "Abrir parcialmente a incisão converte uma coleção asséptica em ferida aberta contaminada com exposição direta da prótese."
     }
   },
   {
@@ -483,7 +588,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Complicações Pós-Operatórias e Infecção de Sítio Cirúrgico",
     "temaSlug": "cg-periop",
     "subtemaSlug": "cg-periop-complicacoes-pos-operatorias-e-infeccao-de-sitio-cirurgico",
-    "tags": ["dreno-cirurgico","gradiente-de-pressao","herniorrafia-incisional"],
+    "tags": [
+      "dreno-cirurgico",
+      "gradiente-de-pressao",
+      "herniorrafia-incisional"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -522,7 +631,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "O dreno de escolha para prevenir seromas e hematomas em grandes descolamentos de tela pré-aponeurótica é o dreno de sucção fechada (Portovac/Jackson-Pratt). Esses drenos utilizam pressão subatmosférica criada artificialmente pelo reservatório para aspirar fluidos ativamente contra a resistência dos tecidos (mecanismo ativo por gradiente de pressão).",
     "perolaClinica": "Drenos de sucção fechada (Portovac/Jackson-Pratt): princípio por gradiente de pressão negativa, mecanismo ATIVO.",
     "referencias": [
@@ -539,6 +649,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Fotografia Clínica",
       "caption": "Fixação de tela de polipropileno pré-aponeurótica (onlay) em parede abdominal com grande descolamento subcutâneo.",
       "aspectRatio": "1:1"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Princípio físico do dreno fechado a vácuo (gradiente de pressão ativo) em hernioplastia incisional onlay.",
+      "raciocinioChave": "O extenso descolamento subcutâneo necessário na técnica onlay gera amplo espaço morto, requerendo drenagem fechada por sucção (Portovac ou Jackson-Pratt). Esse sistema funciona ativamente por gradiente de pressão negativa gerado pelo reservatório colapsado.",
+      "armadilhaBanca": "Confundir o mecanismo de sucção fechada com drenagem passiva por gravidade ou com drenagem capilar laminar (dreno de Penrose)."
+    },
+    "mapaDistratores": {
+      "A": "Drenos passivos por gradiente de pressão dependem apenas da gravidade ou da pressão interna da cavidade, não da aspiração contínua a vácuo do reservatório.",
+      "C": "A capilaridade é o princípio físico de drenos laminares abertos, que operam sempre de forma passiva e não ativa.",
+      "D": "Drenos passivos por capilaridade (Penrose) são inadequados para grandes espaços mortos sobre telas protéticas pelo alto risco de infecção retrógrada."
     }
   },
   {
@@ -551,7 +671,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Atendimento Inicial ao Politraumatizado",
     "temaSlug": "cg-trauma",
     "subtemaSlug": "cg-trauma-atendimento-inicial-ao-politraumatizado",
-    "tags": ["politrauma","ventilacao-mecanica","trauma-toracico","atls"],
+    "tags": [
+      "politrauma",
+      "ventilacao-mecanica",
+      "trauma-toracico",
+      "atls"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -590,7 +715,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "No paciente politraumatizado intubado ('A' controlado) com hipoxemia importante ('B' comprometido: SatO2 85%), a primeira etapa imediata após assegurar o posicionamento do tubo é conectar e fornecer suporte ventilatório adequado via ventilação mecânica com FiO2 100%, prosseguindo com a avaliação radiológica/ultrassonográfica imediata do tórax.",
     "perolaClinica": "No politraumatizado intubado com hipoxemia, a prioridade imediata do 'B' é garantir a ventilação mecânica e oxigenação adequadas.",
     "referencias": [
@@ -606,6 +732,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Fotografia Clínica",
       "caption": "Condições do paciente politraumatizado na sala de emergência.",
       "aspectRatio": "1:1"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Priorização do \"B\" no trauma: ventilação mecânica imediata no paciente já intubado com hipoxemia grave.",
+      "raciocinioChave": "Com a via aérea garantida por intubação (\"A\"), a presença de hipoxemia grave (SatO2 85%) e ausculta reduzida à direita sem hipotensão ou enfisema subcutâneo direciona a prioridade imediata ao \"B\". Deve-se instituir ventilação mecânica adequada para corrigir a hipoxemia enquanto se completa a avaliação torácica.",
+      "armadilhaBanca": "Indicar drenagem torácica precipitada sem sinais de pneumotórax hipertensivo ou tracionar o tubo às cegas presumindo intubação seletiva no lado errado."
+    },
+    "mapaDistratores": {
+      "B": "Sem instabilidade hemodinâmica, enfisema subcutâneo ou confirmação radiológica/eFAST de pneumotórax ou hemotórax volumoso, não se deve drenar o tórax antes de otimizar a ventilação.",
+      "C": "A intubação seletiva ocorre tipicamente no brônquio direito e reduziria o murmúrio à esquerda (não à direita), além de tração às cegas poder provocar extubação acidental.",
+      "D": "A videotoracoscopia é procedimento cirúrgico de centro cirúrgico, impróprio para o atendimento inicial de emergência na sala de trauma."
     }
   },
   {
@@ -618,7 +754,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Trauma Cranioencefálico e Raquimedular",
     "temaSlug": "cg-trauma",
     "subtemaSlug": "cg-trauma-trauma-cranioencefalico-e-raquimedular",
-    "tags": ["tce","edema-cerebral-difuso","proclive","controle-termico"],
+    "tags": [
+      "tce",
+      "edema-cerebral-difuso",
+      "proclive",
+      "controle-termico"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -657,7 +798,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "No paciente com TCE que apresenta edema difuso sem sinais francos de herniação imediata, a neuroproteção inicial visa minimizar lesões cerebrais secundárias. Isso é obtido com elevação da cabeceira a 30° (proclive), cabeça alinhada em posição neutra (otimizando o retorno venoso do encéfalo) e controle estrito da temperatura corporal (normotermia, prevenindo hipertermia que aumenta a demanda metabólica).",
     "perolaClinica": "Medidas basais de neuroproteção no TCE: cabeceira elevada a 30° (proclive), pescoço em posição neutra e normotermia estrita.",
     "referencias": [
@@ -667,7 +809,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 2969
+    "sourcePdfPage": 2969,
+    "analiseBanca": {
+      "conceitoCentral": "Medidas de neuroproteção inicial na sala de trauma para TCE com edema difuso sem herniação focal.",
+      "raciocinioChave": "No TCE com edema difuso e sem sinais de hipertensão intracraniana descompensada, o foco inicial é prevenir lesão cerebral secundária e otimizar o retorno venoso. Isso é alcançado com cabeceira elevada em proclive (30°), coluna cervical em posição neutra e controle rigoroso da temperatura (normotermia).",
+      "armadilhaBanca": "Aplicar medidas de exceção sem indicação (manitol profilático, hiperventilação, tiopental) ou condutas deletérias (hipotensão permissiva e hipotermia)."
+    },
+    "mapaDistratores": {
+      "A": "Hipotermia profilática e hipotensão permissiva são contraindicadas no TCE grave por comprometerem a pressão de perfusão cerebral e agravarem o prognóstico neurológico.",
+      "B": "Hiperventilação rotineira provoca vasoconstrição e isquemia cerebral, e o manitol não deve ser administrado profilaticamente sem sinais clínicos ou tomográficos de herniação.",
+      "C": "O coma barbitúrico com tiopental restringe-se à hipertensão intracraniana refratária em ambiente de UTI, não sendo conduta inicial na sala de trauma."
+    }
   },
   {
     "id": "q-usp-sp-2023-011",
@@ -679,7 +831,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Câncer Gástrico e Cirurgia Bariátrica",
     "temaSlug": "cg-cad",
     "subtemaSlug": "cg-cad-cancer-gastrico-e-cirurgia-bariatrica",
-    "tags": ["gist","melena","endoscopia-digestiva-alta"],
+    "tags": [
+      "gist",
+      "melena",
+      "endoscopia-digestiva-alta"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -718,7 +874,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "O tumor estromal gastrointestinal (GIST) é a neoplasia mesenquimal mais comum do trato gastrointestinal, acometendo preferencialmente o estômago. Na endoscopia, manifesta-se tipicamente como nódulo ou massa subepitelial (submucosa), muitas vezes com ulceração central apical (sinal do 'olho de boi'), que é a fonte do sangramento digestivo apresentado.",
     "perolaClinica": "Massa subepitelial gástrica com umbilicação/ulceração central na EDA = pensar fortemente em GIST.",
     "referencias": [
@@ -735,6 +892,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Fotografia Clínica",
       "caption": "Endoscopia digestiva alta demonstrando lesão subepitelial volumosa em corpo gástrico com ulceração na porção central.",
       "aspectRatio": "1:1"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Aspecto endoscópico característico do GIST gástrico: lesão subepitelial protusa com ulceração central.",
+      "raciocinioChave": "Paciente com hemorragia digestiva alta (melena e anemia) evidencia à endoscopia nódulo subepitelial protuso recoberto por mucosa preservada com ulceração central apical no corpo gástrico. Esse aspecto típico em \"olho de boi\" é característico de tumor estromal gastrointestinal (GIST).",
+      "armadilhaBanca": "Confundir lesão subepitelial ulcerada com adenocarcinoma gástrico mucoso ou atribuir a melena a uma úlcera péptica simples pelo uso de AINE."
+    },
+    "mapaDistratores": {
+      "B": "O adenocarcinoma gástrico origina-se do epitélio mucoso e apresenta bordas irregulares e infiltrativas com necrose, e não mucosa íntegra recobrindo massa submucosa.",
+      "C": "Varizes gástricas manifestam-se como cordões venosos tortuosos e azulados no fundo ou cárdia em pacientes com hipertensão portal.",
+      "D": "A úlcera gástrica Forrest III é uma lesão plana com fundo limpo de fibrina sem abaulamento tumoral subepitelial nem sinais de sangramento recente."
     }
   },
   {
@@ -747,7 +914,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Malformações Congênitas Cirúrgicas",
     "temaSlug": "cg-espec",
     "subtemaSlug": "cg-espec-malformacoes-congenitas-cirurgicas",
-    "tags": ["cisto-broncogenico","malformacao-congenita","cirurgia-toracica-pediatrica"],
+    "tags": [
+      "cisto-broncogenico",
+      "malformacao-congenita",
+      "cirurgia-toracica-pediatrica"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -786,7 +957,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "Cistos broncogênicos originam-se do brotamento anômalo do trato traqueobrônquico primitivo e localizam-se predominantemente no mediastino médio, em torno da carina traqueal e brônquios principais. A radiografia de tórax evidencia massa arredondada ou ovalar, homogênea, de contornos nítidos na topografia subcarinal, aspecto típico da questão.",
     "perolaClinica": "Cisto broncogênico: lesão mediastinal média benigna mais comum em crianças, frequentemente subcarinal.",
     "referencias": [
@@ -803,6 +975,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Radiografia",
       "caption": "Radiografia simples de tórax exibindo opacidade mediastinal média subcarinal bem delimitada em paciente pediátrico.",
       "aspectRatio": "4:3"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Cisto broncogênico como massa bem delimitada do mediastino médio (região subcarinal/paratraqueal) na infância.",
+      "raciocinioChave": "Lactente oligossintomático com opacidade arredondada, homogênea e de contornos nítidos junto à carina traqueal apresenta quadro clássico de cisto broncogênico. Originado do brotamento anômalo do intestino anterior, localiza-se tipicamente no mediastino médio.",
+      "armadilhaBanca": "Confundir massas do mediastino médio (cisto broncogênico) com lesões do parênquima pulmonar ou tumores típicos do mediastino anterior (teratoma)."
+    },
+    "mapaDistratores": {
+      "A": "A malformação adenomatoide cística situa-se no parênquima pulmonar e apresenta múltiplos cistos ou componente sólido intrapulmonar, não massa mediastinal única.",
+      "B": "O cisto pulmonar congênito localiza-se no interior do parênquima pulmonar periférico, diferindo da topografia mediastinal média paratraqueal/subcarinal.",
+      "D": "O teratoma é um tumor de células germinativas característico do mediastino anterior, e não da região retrocarinal do mediastino médio."
     }
   },
   {
@@ -815,7 +997,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Otorrinolaringologia e Cabeça e Pescoço",
     "temaSlug": "cg-espec",
     "subtemaSlug": "cg-espec-otorrinolaringologia-e-cabeca-e-pescoco",
-    "tags": ["cancer-de-cavidade-oral","cabeca-e-pescoco","estomatologia"],
+    "tags": [
+      "cancer-de-cavidade-oral",
+      "cabeca-e-pescoco",
+      "estomatologia"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -854,7 +1040,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "O câncer da cavidade oral mais prevalente é o carcinoma de células escamosas (espinocelular), com forte associação a tabagismo e etilismo. Os sítios anatômicos com maior risco de desenvolvimento neoplásico e os mais comuns no exame físico são o bordo lateral da língua e o assoalho da boca.",
     "perolaClinica": "Local mais comum do carcinoma espinocelular de cavidade oral: bordo lateral da língua e assoalho bucal.",
     "referencias": [
@@ -871,6 +1058,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Fotografia Clínica",
       "caption": "Fotografia da cavidade oral indicando diferentes sítios anatômicos para exame físico.",
       "aspectRatio": "4:3"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Sítio anatômico mais frequente do carcinoma espinocelular de cavidade oral: borda lateral da língua.",
+      "raciocinioChave": "O carcinoma espinocelular (CEC) corresponde a mais de 90% dos tumores malignos da cavidade oral. Seu sítio anatômico mais frequentemente acometido é a borda lateral da língua, seguida pelo assoalho da boca.",
+      "armadilhaBanca": "Apontar regiões da mucosa oral menos acometidas pelo CEC, como dorso da língua, mucosa jugal ou palato duro."
+    },
+    "mapaDistratores": {
+      "A": "O dorso da língua apresenta mucosa espessa queratinizada com papilas e raramente é a sede primária do carcinoma espinocelular oral.",
+      "B": "A face interna da bochecha (mucosa jugal) pode ser acometida, mas com frequência muito inferior à da borda lateral da língua.",
+      "D": "O palato duro é local incomum para carcinoma espinocelular, estando mais associado a tumores de glândulas salivares menores."
     }
   },
   {
@@ -883,7 +1080,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Queimaduras e Lesão Inalatória",
     "temaSlug": "cg-trauma",
     "subtemaSlug": "cg-trauma-queimaduras-e-lesao-inalatoria",
-    "tags": ["queimaduras","queimadura-de-face","desbridamento-de-flictenas"],
+    "tags": [
+      "queimaduras",
+      "queimadura-de-face",
+      "desbridamento-de-flictenas"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -922,7 +1123,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "Segundo as diretrizes da Sociedade Brasileira de Queimaduras e do Ministério da Saúde/ATLS, queimaduras de 2º grau envolvendo áreas críticas (face, mãos, pés, genitália, períneo e grandes articulações) exigem internação hospitalar independentemente da porcentagem total de SCQ. O manejo das lesões consiste em limpeza estéril, remoção/desbridamento de flictenas e curativos com pomadas antimicrobianas (como sulfadiazina de prata a 1%) ou coberturas especiais.",
     "perolaClinica": "Queimadura de 2º grau em áreas nobres (face, mãos, genitália): critério absoluto de internação hospitalar.",
     "referencias": [
@@ -932,7 +1134,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 2971
+    "sourcePdfPage": 2971,
+    "analiseBanca": {
+      "conceitoCentral": "Critérios de internação em queimaduras (áreas nobres: face e membros superiores) e desbridamento de flictenas.",
+      "raciocinioChave": "Queimaduras de 2º grau por explosão envolvendo áreas nobres (face e membros superiores) impõem internação hospitalar independentemente da extensão (10% SCQ), pelo risco de edema de vias aéreas e sequelas funcionais. O manejo local exige desbridamento das flictenas e curativos adequados.",
+      "armadilhaBanca": "Optar por tratamento ambulatorial devido à SCQ reduzida (10%), ignorando o acometimento de áreas nobres ou deixando flictenas íntegras em áreas de risco."
+    },
+    "mapaDistratores": {
+      "A": "Flictenas em queimaduras de 2º grau devem ser desbridadas para limpeza e avaliação da profundidade do leito, não mantidas intactas.",
+      "C": "O envolvimento de áreas nobres (face e membros superiores) por explosão contraindica o seguimento ambulatorial e exige internação hospitalar.",
+      "D": "Embora preveja desbridamento e curativos, o manejo ambulatorial é inadequado diante do acometimento facial e do risco de edema de via aérea superior."
+    }
   },
   {
     "id": "q-usp-sp-2023-015",
@@ -944,7 +1156,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Câncer Gástrico e Cirurgia Bariátrica",
     "temaSlug": "cg-cad",
     "subtemaSlug": "cg-cad-cancer-gastrico-e-cirurgia-bariatrica",
-    "tags": ["bypass-gastrico","obstrucao-intestinal","hernia-interna","cirurgia-bariatrica"],
+    "tags": [
+      "bypass-gastrico",
+      "obstrucao-intestinal",
+      "hernia-interna",
+      "cirurgia-bariatrica"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -983,7 +1200,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A hérnia interna é uma complicação potencialmente catastrófica e relativamente frequente após o bypass gástrico em Y de Roux laparoscópico, ocorrendo pelo espaço de Petersen ou pelos defeitos do mesentério. Na TC, a presença do sinal do redemoinho dos vasos mesentéricos indica volvo de alça de intestino delgado, exigindo exploração cirúrgica urgente para reduzir a hérnia e prevenir ou ressecar necrose intestinal.",
     "perolaClinica": "Dor abdominal intensa após By-pass em Y de Roux com sinal do redemoinho na TC = hérnia interna -> cirurgia de emergência!",
     "referencias": [
@@ -1000,6 +1218,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Tomografia",
       "caption": "TC de abdome evidenciando sinal do redemoinho ('whirl sign') dos vasos mesentéricos, compatível com volvo/hérnia interna.",
       "aspectRatio": "1:1"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Emergência cirúrgica por hérnia interna (sinal do redemoinho na TC) após bypass gástrico em Y de Roux.",
+      "raciocinioChave": "Dor abdominal intensa após grande emagrecimento pós-derivação gástrica em Y de Roux levanta forte suspeita de hérnia interna. A tomografia com sinal do redemoinho mesentérico confirma volvo e obstrução em alça fechada, indicando tratamento operatório de emergência.",
+      "armadilhaBanca": "Tentar tratamento conservador com sonda nasogástrica (ineficaz na obstrução em alça fechada) ou confundir dor intensa pós-bariátrica com estenose anastomótica."
+    },
+    "mapaDistratores": {
+      "A": "O quadro resulta de torção mecânica de alça intestinal herniada e não de tromboembolismo arterial primário passível de trombólise.",
+      "B": "A observação clínica com sonda gástrica na hérnia interna estrangulada retarda o tratamento definitivo e leva rapidamente à necrose intestinal maciça.",
+      "C": "A dilatação endoscópica trata estenose crônica da anastomose gastrojejunal, sendo completamente ineficaz na torção mesentérica por hérnia interna."
     }
   },
   {
@@ -1012,7 +1240,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Doenças Orificiais",
     "temaSlug": "cg-cad",
     "subtemaSlug": "cg-cad-doencas-orificiais",
-    "tags": ["hemorroidas","doenca-hemorroidaria","tratamento-conservador"],
+    "tags": [
+      "hemorroidas",
+      "doenca-hemorroidaria",
+      "tratamento-conservador"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -1051,7 +1283,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "O paciente apresenta doença hemorroidária interna de baixo grau (grau I a II), cuja manifestação principal é sangramento vivo vermelho-rutilante indolor gotejando no vaso ou no papel higiênico, associado a fezes ressecadas. A primeira linha de tratamento recomendada pelas sociedades de coloproctologia é eminentemente comportamental e clínica (fibras, líquidos e cuidados higiênicos locais).",
     "perolaClinica": "Hemorroidas internas graus I e II: primeira conduta é sempre tratamento conservador (fibras, água e higiene sem papel).",
     "referencias": [
@@ -1068,6 +1301,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Fotografia Clínica",
       "caption": "Anuscopia revelando plexos hemorroidários internos sem prolapso mantido ao nível da linha pectínea.",
       "aspectRatio": "16:9"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Tratamento clínico inicial (fibras, hidratação e higiene anal) na doença hemorroidária interna grau I/II.",
+      "raciocinioChave": "Sangramento vermelho-vivo indolor às evacuações associado a fezes ressecadas e mamilos internos pequenos à anuscopia configura doença hemorroidária interna de baixo grau. Como já há colonoscopia recente sem neoplasia e ausência de prolapso grave, a primeira linha é o tratamento clínico com dieta rica em fibras e higiene anal.",
+      "armadilhaBanca": "Indicar hemorroidectomia para hemorroida interna de baixo grau ou drenagem de trombo em mamilo interno não trombosado."
+    },
+    "mapaDistratores": {
+      "A": "A drenagem de trombo aplica-se exclusivamente à trombose hemorroidária externa aguda nas primeiras 72 horas, não à hemorroida interna não trombosada.",
+      "C": "O paciente realizou colonoscopia completa há 2 anos sem sinais de alarme atuais, dispensando nova retossigmoidoscopia diante de anuscopia conclusiva.",
+      "D": "A hemorroidectomia cirúrgica é reservada para doença hemorroidária graus III e IV ou casos refratários às medidas clínicas e ambulatoriais."
     }
   },
   {
@@ -1080,7 +1323,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Complicações Crônicas do Diabetes",
     "temaSlug": "cm-endocrino",
     "subtemaSlug": "cm-endocrino-complicacoes-cronicas-do-diabetes",
-    "tags": ["pe-diabetico","desbridamento","antibioticoterapia"],
+    "tags": [
+      "pe-diabetico",
+      "desbridamento",
+      "antibioticoterapia"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -1119,7 +1366,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "No pé diabético com ferida infectada e presença de esfacelo/necrose, mas com boa perfusão distal (pulsos tibiais presentes, descartando componente isquêmico grave imediato), o pilar fundamental do tratamento é o desbridamento de tecidos necróticos associado à antibioticoterapia empírica direcionada contra patógenos comuns e controle glicêmico.",
     "perolaClinica": "Pé diabético infectado com pulsos arteriais normais: urgência cirúrgica para desbridamento agressivo + antibióticos.",
     "referencias": [
@@ -1136,6 +1384,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Fotografia Clínica",
       "caption": "Lesão ulcerada em dorso e face medial do pé com áreas de necrose tecidual e eritema perilesional.",
       "aspectRatio": "4:3"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Manejo de pé diabético infectado com pulsos presentes: desbridamento cirúrgico precoce e antibioticoterapia.",
+      "raciocinioChave": "Paciente diabético com úlcera infectada e necrótica no pé após atrito com calçado, porém com pulsos poplíteo e tibiais palpáveis, apresenta infecção em extremidade bem perfundida. A conduta imperativa é o desbridamento cirúrgico do tecido desvitalizado associado a antibioticoterapia sistêmica.",
+      "armadilhaBanca": "Aguardar delimitação da necrose na vigência de infecção ativa ou indicar arteriografia/amputação maior desnecessária com pulsos preservados."
+    },
+    "mapaDistratores": {
+      "A": "A amputação transtibial primária é mutiladora e desnecessária em paciente com boa perfusão distal e lesão passível de salvamento com desbridamento.",
+      "B": "A presença franca dos pulsos poplíteo e tibiais descarta isquemia crítica primária, tornando arteriografia e revascularização desnecessárias.",
+      "D": "Aguardar a delimitação espontânea da necrose em infecção bacteriana ativa do pé diabético permite progressão para fasceíte e perda do membro."
     }
   },
   {
@@ -1148,7 +1406,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Trauma Urológico e Litíase Cirúrgica",
     "temaSlug": "cg-uro",
     "subtemaSlug": "cg-uro-trauma-urologico-e-litiase-cirurgica",
-    "tags": ["trauma-renal","tratamento-conservador","hematuria"],
+    "tags": [
+      "trauma-renal",
+      "tratamento-conservador",
+      "hematuria"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -1187,7 +1449,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "O manejo do trauma renal mudou drasticamente nas últimas décadas. Mesmo em lesões de alto grau (graus III e IV da AAST), se o paciente mantiver estabilidade hemodinâmica (normotenso, gasometria/lactato adequados), a conduta preconizada pelas diretrizes mundiais (EAU, AUA, WSES) é o tratamento conservador não operatório com observação estrita e repouso no leito.",
     "perolaClinica": "Trauma renal com paciente estável = tratamento conservador (TNO) com monitorização hemodinâmica rigorosa.",
     "referencias": [
@@ -1204,6 +1467,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Tomografia",
       "caption": "TC de abdome com contraste mostrando laceração renal esquerda sem extravasamento maciço de contraste na fase excretora.",
       "aspectRatio": "1:1"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Tratamento não operatório (observação e monitorização) no trauma renal fechado com estabilidade hemodinâmica.",
+      "raciocinioChave": "Jovem vítima de trauma renal fechado com hematúria apresenta-se estável hemodinamicamente (PA 120x70 mmHg, lactato e gasometria normais) e sem avulsão de pedículo na tomografia. O tratamento padrão é o não operatório, com observação clínica e monitorização hemodinâmica rigorosa.",
+      "armadilhaBanca": "Indicar nefrectomia exploradora apenas pela presença de hematúria ou laceração parenquimatosa na TC em paciente hemodinamicamente estável."
+    },
+    "mapaDistratores": {
+      "B": "O cateter duplo J é indicado diante de extravasamento urinário persistente ou urinoma sintomático evolutivo, não na abordagem inicial de paciente estável.",
+      "C": "A laparotomia com nefrectomia restringe-se a instabilidade hemodinâmica refratária atribuída ao rim ou lesão vascular hilar com avulsão.",
+      "D": "A nefrostomia percutânea não tem indicação na fase aguda do trauma renal na ausência de obstrução ureteral prévia ou urinoma infectado."
     }
   },
   {
@@ -1216,7 +1489,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Ortopedia e Traumatologia Básica",
     "temaSlug": "cg-espec",
     "subtemaSlug": "cg-espec-ortopedia-e-traumatologia-basica",
-    "tags": ["fratura-de-colo-de-femur","ortopedia","idoso"],
+    "tags": [
+      "fratura-de-colo-de-femur",
+      "ortopedia",
+      "idoso"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -1255,7 +1532,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "Idosos vítimas de queda da própria altura sobre a região do quadril que evoluem com impotência funcional para deambular devem ser imediatamente avaliados para fratura de fêmur proximal. Ao exame físico ortopédico, a deformidade clássica resultante da ação das musculaturas iliopsoas, glúteas e rotadoras sobre o coto distal é a rotação externa com encurtamento do membro acometido.",
     "perolaClinica": "Fratura de fêmur proximal no idoso: encurtamento + rotação externa do membro acometido.",
     "referencias": [
@@ -1272,6 +1550,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Radiografia",
       "caption": "Radiografia da bacia e quadril direito mostrando descontinuidade óssea e fratura desviada de fêmur proximal.",
       "aspectRatio": "16:9"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Semiologia clássica da fratura de fêmur proximal em idoso: encurtamento e rotação externa do membro.",
+      "raciocinioChave": "Idoso após queda sobre o quadril com impotência funcional absoluta e fratura de fêmur proximal à radiografia exibe atitude semiológica característica. Pela ação muscular dos rotadores externos e do iliopsoas sobre o fragmento distal, observa-se encurtamento associado a rotação externa do membro acometido.",
+      "armadilhaBanca": "Confundir a atitude da fratura de fêmur proximal (encurtamento e rotação externa) com a da luxação posterior do quadril (encurtamento e rotação interna)."
+    },
+    "mapaDistratores": {
+      "A": "Encurtamento associado a rotação interna é a deformidade clássica da luxação traumática posterior do quadril, não da fratura de fêmur proximal.",
+      "C": "A fratura femoral com desvio provoca encurtamento evidente do membro inferior e assume rotação externa, não mantendo simetria nem rotação interna.",
+      "D": "Embora haja rotação externa, a perda da continuidade óssea com desvio acarreta encurtamento do membro fraturado em relação ao contralateral."
     }
   },
   {
@@ -1284,7 +1572,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Ortopedia e Traumatologia Básica",
     "temaSlug": "cg-espec",
     "subtemaSlug": "cg-espec-ortopedia-e-traumatologia-basica",
-    "tags": ["osteossarcoma","tumor-osseo","ortopedia"],
+    "tags": [
+      "osteossarcoma",
+      "tumor-osseo",
+      "ortopedia"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -1323,7 +1615,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A história de dor articular ou óssea persistente atribuída inicialmente a um trauma esportivo em crianças e adolescentes é a apresentação inicial mais clássica de neoplasias ósseas primárias. A imagem radiográfica revelando lesão óssea mista na região metafisária ao redor do joelho com rompimento cortical e reação periosteal agressiva confirma o diagnóstico presuntivo de neoplasia maligna (especialmente osteossarcoma).",
     "perolaClinica": "Dor óssea persistente após trauma esportivo em adolescente + lesão metafisária com reação periosteal = neoplasia óssea primária (osteossarcoma).",
     "referencias": [
@@ -1340,6 +1633,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Radiografia",
       "caption": "Radiografia de joelho evidenciando lesão óssea destrutiva metafisária com reação periosteal agressiva compatível com tumor ósseo.",
       "aspectRatio": "1:1"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Suspeita de neoplasia óssea maligna (osteossarcoma) em adolescente com dor persistente pós-trauma e lesão metafisária.",
+      "raciocinioChave": "Adolescente com dor persistente no joelho após trauma leve e radiografia demonstrando lesão metafisária mista com destruição cortical e reação periosteal agressiva (triângulo de Codman/raios de sol) tem alta suspeita de neoplasia óssea maligna primária, notadamente osteossarcoma.",
+      "armadilhaBanca": "Atribuir a dor persistente apenas ao trauma esportivo inicial (hematoma) ou confundir reação periosteal agressiva em jovem com abscesso crônico."
+    },
+    "mapaDistratores": {
+      "A": "Corpos estranhos radiopacos de partes moles não produzem destruição cortical metafisária nem reação periosteal em raios de sol.",
+      "B": "Abscessos ósseos subagudos ou crônicos exibem halo esclerótico delimitado, sem o padrão osteolítico/osteoblástico agressivo e expansivo da neoplasia maligna.",
+      "C": "Hematomas restringem-se a partes moles e não causam lise óssea ou reação periosteal agressiva na metáfise femoral ou tibial."
     }
   },
   {
@@ -1352,7 +1655,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Doenças Benignas da Mama",
     "temaSlug": "go-onco-go",
     "subtemaSlug": "go-onco-go-doencas-benignas-da-mama",
-    "tags": ["cisto-mamario","paaf","seguimento-clinico"],
+    "tags": [
+      "cisto-mamario",
+      "paaf",
+      "seguimento-clinico"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -1391,7 +1698,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "O quadro clínico e ultrassonográfico é clássico de cisto mamário simples sintomático. A punção aspirativa com agulha fina (PAAF) é simultaneamente diagnóstica e terapêutica; ao aspirar líquido característico não hemático com regressão completa do nódulo, afasta-se malignidade e estabelece-se seguimento clínico habitual.",
     "perolaClinica": "Cisto mamário com líquido não sanguinolento e desaparecimento completo após PAAF = seguimento clínico de rotina.",
     "referencias": [
@@ -1408,6 +1716,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Ultrassonografia",
       "caption": "Ultrassonografia mamária demonstrando imagem cística anecoica bem delimitada e seringa com líquido seroso acastanhado pós-PAAF.",
       "aspectRatio": "1:1"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Conduta conservadora (seguimento clínico) após esvaziamento completo de cisto mamário simples por PAAF.",
+      "raciocinioChave": "Mulher jovem com nódulo doloroso pré-menstrual e imagem cística ao ultrassom apresentou aspiração de líquido não sanguinolento na PAAF com colapso total da lesão. A resolução clínica e ultrassonográfica completa com fluido não hemático descarta malignidade, indicando apenas seguimento clínico.",
+      "armadilhaBanca": "Solicitar biópsia cirúrgica ou core biopsy após resolução completa de cisto simples com fluido não hemático, ou indicar tomossíntese desnecessária."
+    },
+    "mapaDistratores": {
+      "A": "A biópsia excisional é indicada para nódulos suspeitos (BI-RADS 4/5) ou lesões de alto risco, sendo desnecessária após esvaziamento completo de cisto benigno.",
+      "C": "A biópsia por agulha grossa aplica-se a lesões sólidas ou cistos complexos com componente sólido intracístico, inexistentes após o colapso da lesão.",
+      "D": "A tomossíntese mamária é método para rastreamento e avaliação de lesões sólidas ou distorções arquiteturais, sem indicação para cisto simples já resolvido."
     }
   },
   {
@@ -1420,7 +1738,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Miomatose Uterina e Pólipos",
     "temaSlug": "go-gineco-geral",
     "subtemaSlug": "go-gineco-geral-miomatose-uterina-e-polipos",
-    "tags": ["histerectomia","cupula-vaginal","poliglactina","fio-cirurgico"],
+    "tags": [
+      "histerectomia",
+      "cupula-vaginal",
+      "poliglactina",
+      "fio-cirurgico"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -1459,7 +1782,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "O fechamento da cúpula vaginal em histerectomias requer fios absorvíveis sintéticos de degradação intermediária, que mantenham a aposição tecidual durante a cicatrização da mucosa e tecido conjuntivo vaginal sem risco de erosão ou retenção de corpo estranho.",
     "perolaClinica": "Para sutura de cúpula vaginal em histerectomia, utiliza-se fio sintético absorvível (poliglactina 910).",
     "referencias": [
@@ -1469,7 +1793,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 2977
+    "sourcePdfPage": 2977,
+    "analiseBanca": {
+      "conceitoCentral": "Escolha de fio sintético absorvível (poliglactina) para síntese da cúpula vaginal em histerectomia total.",
+      "raciocinioChave": "O fechamento da cúpula vaginal na histerectomia total exige fio que garanta boa força tênsil durante a cicatrização e seja absorvido sem deixar corpo estranho residual. A poliglactina 910 (Vicryl), fio sintético absorvível multifilamentar, é o padrão-ouro para esse tempo cirúrgico.",
+      "armadilhaBanca": "Escolher fios inabsorvíveis (poliéster, nylon ou polipropileno) para síntese da cúpula vaginal, favorecendo granulomas, extrusão e dispareunia."
+    },
+    "mapaDistratores": {
+      "A": "O poliéster é um fio inabsorvível multifilamentar inadequado para mucosa vaginal pelo risco de extrusão crônica, infecção persistente e granulomas.",
+      "B": "O nylon é inabsorvível e rígido, causando dispareunia de contato pelas pontas e exigindo retirada posterior se utilizado na cúpula vaginal.",
+      "D": "O polipropileno é inabsorvível e indicado para anastomoses vasculares ou aponeuroses, sendo contraindicado em mucosas intracavitárias pelo risco de erosão."
+    }
   },
   {
     "id": "q-usp-sp-2023-023",
@@ -1481,7 +1815,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Fisiologia do Ciclo Menstrual e Amenorreias",
     "temaSlug": "go-gineco-endocrino",
     "subtemaSlug": "go-gineco-endocrino-fisiologia-do-ciclo-menstrual-e-amenorreias",
-    "tags": ["insensibilidade-androgenica","amenorreia-primaria","testosterona"],
+    "tags": [
+      "insensibilidade-androgenica",
+      "amenorreia-primaria",
+      "testosterona"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -1520,7 +1858,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A Síndrome de Insensibilidade Completa aos Androgênios decorre de mutação no gene do receptor androgênico (AR). O indivíduo 46,XY tem testículos produtores de hormônio antimulleriano (levando à regressão dos ductos mullerianos e ausência de útero/tubas) e testosterona em níveis masculinos normais ou elevados, porém sem resposta tecidual aos androgênios, gerando genitália externa feminina e ausência de pelos.",
     "perolaClinica": "Mulher fenotípica sem útero e sem pelos pubianos = Insensibilidade Androgênica (Morris, 46,XY) com testosterona elevada para o sexo feminino.",
     "referencias": [
@@ -1530,7 +1869,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 2977
+    "sourcePdfPage": 2977,
+    "analiseBanca": {
+      "conceitoCentral": "Diagnóstico diferencial de amenorreia: Síndrome de Insensibilidade Completa aos Androgênios (Síndrome de Morris).",
+      "raciocinioChave": "O fenótipo feminino com mamas desenvolvidas, pelos escassos ou ausentes, hérnias inguinais bilaterais (testículos) e ausência de útero caracteriza a Síndrome de Morris (46,XY). Nela há produção testicular normal ou elevada de testosterona, porém sem resposta nos receptores androgênicos periféricos.",
+      "armadilhaBanca": "Confundir a ausência de útero com agenesia mulleriana (Rokitansky, que tem pelos normais e testosterona feminina) ou com disgenesia gonadal de Turner."
+    },
+    "mapaDistratores": {
+      "A": "FSH e LH marcadamente elevados são típicos de disgenesia gonadal (como Turner), enquanto na insensibilidade androgênica o FSH costuma estar normal e o LH normal ou discretamente elevado.",
+      "B": "O cariótipo 45,X0 define a Síndrome de Turner, que cursa com baixa estatura, útero presente e gônadas em fita, e não com estatura preservada e ausência uterina.",
+      "D": "O cariótipo 47,XXY corresponde à Síndrome de Klinefelter, que apresenta fenótipo masculino com hipogonadismo hipergonadotrófico e genitália externa masculina."
+    }
   },
   {
     "id": "q-usp-sp-2023-024",
@@ -1542,7 +1891,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Síndrome dos Ovários Policísticos",
     "temaSlug": "go-gineco-endocrino",
     "subtemaSlug": "go-gineco-endocrino-sindrome-dos-ovarios-policisticos",
-    "tags": ["sop","lh-elevado","hiperandrogenismo"],
+    "tags": [
+      "sop",
+      "lh-elevado",
+      "hiperandrogenismo"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -1581,7 +1934,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A paciente jovem apresenta critérios diagnósticos de Rotterdam para SOP (oligo/anovulação traduzida por ciclos de 40 dias e hiperandrogenismo clínico manifestado por hirsutismo e acne). Laboratorialmente, observa-se hipersecreção de LH em relação ao FSH, estimulando a teca ovariana a superproduzir androgênios.",
     "perolaClinica": "Na SOP, a alteração clássica do eixo hipófise-ovário é a relação LH/FSH invertida (LH elevado em relação ao FSH).",
     "referencias": [
@@ -1591,7 +1945,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 2977
+    "sourcePdfPage": 2977,
+    "analiseBanca": {
+      "conceitoCentral": "Perfil hormonal neuroendócrino na Síndrome dos Ovários Policísticos (SOP): inversão da relação LH/FSH.",
+      "raciocinioChave": "Ciclos espaniomenorreicos (40 dias) associados a sinais clínicos de hiperandrogenismo (hirsutismo facial e acne) fecham critérios de Rotterdam para SOP. Nessa condição, o aumento da frequência dos pulsos de GnRH eleva seletivamente o LH em relação ao FSH.",
+      "armadilhaBanca": "Inverter a razão LH/FSH na leitura apressada ou confundir o aumento do hormônio antimulleriano (AMH) típico da SOP com diminuição da reserva ovariana."
+    },
+    "mapaDistratores": {
+      "A": "Na SOP ocorre aumento desproporcional do LH pela alta frequência de pulsos de GnRH, e não uma queda isolada do FSH com LH baixo.",
+      "C": "O acúmulo de múltiplos folículos antrais na SOP eleva caracteristicamente o hormônio antimulleriano (AMH), em vez de reduzi-lo.",
+      "D": "O cortisol sérico mantém-se normal na SOP; sua elevação sugeriria Síndrome de Cushing como diagnóstico diferencial de hiperandrogenismo."
+    }
   },
   {
     "id": "q-usp-sp-2023-025",
@@ -1603,7 +1967,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Câncer de Endométrio",
     "temaSlug": "go-onco-go",
     "subtemaSlug": "go-onco-go-cancer-de-endometrio",
-    "tags": ["cancer-de-endometrio","preservacao-de-fertilidade","progestagenio"],
+    "tags": [
+      "cancer-de-endometrio",
+      "preservacao-de-fertilidade",
+      "progestagenio"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -1642,7 +2010,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A preservação da fertilidade no adenocarcinoma de endométrio é uma exceção terapêutica reservada estritamente para tumores estádio IA (sem invasão miometrial), histologia endometrioide e Grau 1 (G1). O tratamento médico é baseado em progesterona em altas doses para induzir diferenciação secretora e apoptose tumoral, seguido de gestação imediata e histerectomia profilática após o término da prole.",
     "perolaClinica": "Câncer de endométrio endometrioide G1 sem invasão miometrial em mulher com desejo de engravidar = tratamento clínico com progestagênio em alta dose.",
     "referencias": [
@@ -1652,7 +2021,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 2978
+    "sourcePdfPage": 2978,
+    "analiseBanca": {
+      "conceitoCentral": "Tratamento conservador preservador de fertilidade no adenocarcinoma de endométrio grau 1 restrito ao endométrio.",
+      "raciocinioChave": "Em mulher jovem com desejo reprodutivo e adenocarcinoma endometrioide bem diferenciado (G1) limitado ao endométrio na RM (sem invasão miometrial), admite-se terapia clínica com progestagênio em alta dose para regressão tumoral temporária.",
+      "armadilhaBanca": "Indicar tratamentos ablativos ou actínicos que destroem o endométrio e inviabilizam a gestação futura, ou prescrever estrogênio que estimula o tumor."
+    },
+    "mapaDistratores": {
+      "A": "A braquiterapia causa destruição endometrial e esterilidade irreversível, sendo contraindicada quando o objetivo é preservar a fertilidade.",
+      "B": "O estrogênio em alta dose estimula a proliferação endometrial e acelera a progressão do adenocarcinoma endometrioide hormonodependente.",
+      "C": "A ablação da cavidade endometrial destrói a camada basal e gera sinéquias uterinas, inviabilizando futuras gestações e o seguimento histológico."
+    }
   },
   {
     "id": "q-usp-sp-2023-026",
@@ -1664,7 +2043,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Incontinência Urinária e Prolapsos Genitais",
     "temaSlug": "go-gineco-geral",
     "subtemaSlug": "go-gineco-geral-incontinencia-urinaria-e-prolapsos-genitais",
-    "tags": ["retocele","prolapso-de-parede-posterior","colporrafia"],
+    "tags": [
+      "retocele",
+      "prolapso-de-parede-posterior",
+      "colporrafia"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -1703,7 +2086,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "O prolapso da parede vaginal posterior (retocele) decorre de fraqueza ou rotura da fáscia retovaginal (fáscia de Denonvilliers). Isso propicia a formação de um fundo de saco fecal voltado para a vagina durante o esforço evacuatório, exigindo suporte digital para orientar o bolo fecal em direção ao canal anal.",
     "perolaClinica": "Paciente que precisa digitar a parede posterior da vagina para evacuar tem retocele sintomática; cirurgia indicada: colporrafia retovaginal.",
     "referencias": [
@@ -1713,7 +2097,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 2978
+    "sourcePdfPage": 2978,
+    "analiseBanca": {
+      "conceitoCentral": "Diagnóstico clínico e correção cirúrgica específica da retocele sintomática (defeito da fáscia retovaginal).",
+      "raciocinioChave": "A dificuldade evacuatória com necessidade de digitação vaginal para auxiliar a exoneração fecal é altamente específica de retocele. A correção cirúrgica dirigida ao compartimento posterior é a colporrafia da fáscia retovaginal.",
+      "armadilhaBanca": "Confundir a reparação da fáscia retovaginal com a colporrafia anterior (vesicovaginal) ou com procedimentos exclusivos para defeito apical ou perineal."
+    },
+    "mapaDistratores": {
+      "A": "A colporrafia da fáscia vesicovaginal corrige o prolapso de parede anterior (cistocele), sem atuar no defeito posterior responsável pelos sintomas defecatórios.",
+      "C": "A rafia isolada do músculo transverso superficial do períneo integra a perineoplastia, insuficiente para corrigir a herniação retovaginal.",
+      "D": "A colpossacrofixação é indicada principalmente para prolapso apical ou de cúpula vaginal pós-histerectomia, não sendo primeira escolha para retocele isolada."
+    }
   },
   {
     "id": "q-usp-sp-2023-027",
@@ -1725,7 +2119,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Fisiologia do Ciclo Menstrual e Amenorreias",
     "temaSlug": "go-gineco-endocrino",
     "subtemaSlug": "go-gineco-endocrino-fisiologia-do-ciclo-menstrual-e-amenorreias",
-    "tags": ["ciclo-menstrual","muco-cervical","ovulacao","citrato-de-clomifeno"],
+    "tags": [
+      "ciclo-menstrual",
+      "muco-cervical",
+      "ovulacao",
+      "citrato-de-clomifeno"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -1764,7 +2163,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A ação estrogênica típica da fase pré-ovulatória sobre o colo uterino induz a produção de muco tipo E (estrogênico), caracterizado por ser límpido, elástico, fluido e acelular, o qual se cristaliza em padrão de folhas de samambaia ao microscópio.",
     "perolaClinica": "Pico de estrogênio peri-ovulatório (D14) = muco cervical abundante, transparente e filante (clara de ovo).",
     "referencias": [
@@ -1774,7 +2174,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 2978
+    "sourcePdfPage": 2978,
+    "analiseBanca": {
+      "conceitoCentral": "Alterações fisiológicas do muco cervical sob ação estrogênica no período periovulatório.",
+      "raciocinioChave": "No 14º dia do ciclo com indução ovulatória por citrato de clomifeno, o pico pré-ovulatório de estradiol estimula o epitélio endocervical a secretar muco abundante, transparente, fluido e com alta filância (elástico).",
+      "armadilhaBanca": "Confundir o muco estrogênico periovulatório (filante e cristalino) com o muco progestacional da fase lútea (espesso e pegajoso) ou com secreções patológicas."
+    },
+    "mapaDistratores": {
+      "A": "O muco esbranquiçado, espesso e pegajoso é típico da fase lútea por ação da progesterona, dificultando a ascensão espermática.",
+      "C": "Muco sanguinolento e viscoso não representa resposta hormonal fisiológica à ovulação, sugerindo lesões cervicais ou sangramento intermenstrual.",
+      "D": "Secreção amarelada e purulenta indica processo infeccioso como cervicite bacteriana, sem relação com o pico estrogênico periovulatório."
+    }
   },
   {
     "id": "q-usp-sp-2023-028",
@@ -1786,7 +2196,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Rastreamento e Lesões Precursoras do Colo Uterino",
     "temaSlug": "go-onco-go",
     "subtemaSlug": "go-onco-go-rastreamento-e-lesoes-precursoras-do-colo-uterino",
-    "tags": ["colpocitologia","homem-transgenero","testosterona"],
+    "tags": [
+      "colpocitologia",
+      "homem-transgenero",
+      "testosterona"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -1825,7 +2239,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "O rastreamento de câncer cervical em homens transgênero com preservação do colo deve ser mantido conforme as diretrizes populacionais. Entretanto, a virilização medicamentosa gera atrofia epitelial significativa, elevando a proporção de células basais/parabasais e dificultando a interpretação citológica, o que resulta em menor sensibilidade e maior índice de falso-negativos ou laudos insatisfatórios.",
     "perolaClinica": "Terapia androgênica em homem trans induz esfregaço atrófico (muitas células basais/parabasais) e piora a acurácia citológica.",
     "referencias": [
@@ -1835,7 +2250,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 2979
+    "sourcePdfPage": 2979,
+    "analiseBanca": {
+      "conceitoCentral": "Impacto da testosterona exógena na citologia oncótica cervical de homens transgênero.",
+      "raciocinioChave": "A terapia hormonal androgênica em homens trans com colo uterino preservado induz atrofia epitelial cervicovaginal por hipoestrogenismo relativo, elevando a proporção de células basais/parabasais e piorando a acurácia diagnóstica da colpocitologia.",
+      "armadilhaBanca": "Inverter o efeito da atrofia hormonal na maturidade celular do epitélio escamoso (superficiais vs. basais) ou supor que o esfregaço atrófico facilita a leitura."
+    },
+    "mapaDistratores": {
+      "A": "Embora reduza as células superficiais maduras, o esfregaço atrófico piora a acurácia diagnóstica, aumentando laudos insatisfatórios ou falso-negativos.",
+      "B": "O ambiente androgênico provoca atrofia epitelial com diminuição, e não aumento, da representação de células superficiais.",
+      "C": "A atrofia induzida por testosterona aumenta a proporção de células basais e parabasais no esfregaço e prejudica a sensibilidade do exame."
+    }
   },
   {
     "id": "q-usp-sp-2023-029",
@@ -1847,7 +2272,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Câncer de Endométrio",
     "temaSlug": "go-onco-go",
     "subtemaSlug": "go-onco-go-cancer-de-endometrio",
-    "tags": ["sangramento-pos-menopausa","atrofia-endometrial","histeroscopia"],
+    "tags": [
+      "sangramento-pos-menopausa",
+      "atrofia-endometrial",
+      "histeroscopia"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -1886,7 +2315,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "Todo sangramento genital na pós-menopausa impõe investigação para exclusão de câncer endometrial. Uma vez obtido o laudo histopatológico definitivo de atrofia endometrial benigna após visualização histeroscópica da cavidade, encerra-se a investigação invasiva e adota-se conduta expectante com controle clínico.",
     "perolaClinica": "Sangramento na pós-menopausa investigado com histeroscopia e biópsia compatível com atrofia = seguimento clínico expectante.",
     "referencias": [
@@ -1896,7 +2326,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 2979
+    "sourcePdfPage": 2979,
+    "analiseBanca": {
+      "conceitoCentral": "Conduta após confirmação histológica de atrofia endometrial como causa de sangramento pós-menopausa.",
+      "raciocinioChave": "A atrofia é a causa mais frequente de sangramento uterino pós-menopausa; após exclusão segura de hiperplasia ou câncer por histeroscopia normal e biópsia representativa mostrando atrofia, indica-se seguimento clínico habitual.",
+      "armadilhaBanca": "Indicar terapia hormonal sem sintomas climatéricos ou prescrever estrogênio isolado em paciente com útero, aumentando o risco neoplásico."
+    },
+    "mapaDistratores": {
+      "A": "A terapia hormonal combinada não é indicada na ausência de sintomas vasomotores ou indicação específica apenas por achado de atrofia endometrial já investigada.",
+      "B": "A reposição com estrogênio isolado em mulher não histerectomizada é contraindicada pelo risco elevado de hiperplasia e câncer de endométrio.",
+      "D": "A ablação endometrial destina-se a sangramentos benignos refratários na pré-menopausa, sendo desnecessária e inadequada em endométrio já atrófico."
+    }
   },
   {
     "id": "q-usp-sp-2023-030",
@@ -1908,7 +2348,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Sangramento Uterino Anormal",
     "temaSlug": "go-gineco-endocrino",
     "subtemaSlug": "go-gineco-endocrino-sangramento-uterino-anormal",
-    "tags": ["sangramento-uterino-anormal","coagulopatia","pti","adolescencia"],
+    "tags": [
+      "sangramento-uterino-anormal",
+      "coagulopatia",
+      "pti",
+      "adolescencia"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -1947,7 +2392,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "Cerca de 20% das adolescentes hospitalizadas por sangramento uterino anormal grave na menarca possuem uma coagulopatia subjacente. A coexistência de petéquias cutâneas e trombocitopenia isolada acentuada sela o diagnóstico de PTI, cujo pilar terapêutico de primeira linha é o corticosteroide.",
     "perolaClinica": "Menorragia grave associada a petéquias e trombocitopenia isolada = PTI; conduta: corticosteroide.",
     "referencias": [
@@ -1964,6 +2410,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Gráfico/Tabela",
       "caption": "Exames laboratoriais revelando trombocitopenia grave isolada compatível com púrpura trombocitopênica imune.",
       "aspectRatio": "16:9"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Sangramento uterino anormal na adolescência secundário à Púrpura Trombocitopênica Imune (PTI).",
+      "raciocinioChave": "Menometrorragia na adolescência associada a petéquias esparsas e trombocitopenia isolada nos exames aponta para PTI; o tratamento inicial de escolha para elevar as plaquetas e conter a hemorragia é o corticosteroide.",
+      "armadilhaBanca": "Tratar apenas como sangramento uterino disfuncional hormonal da anovulação juvenil (progesterona/estradiol) ou confundir PTI com doença de von Willebrand (desmopressina)."
+    },
+    "mapaDistratores": {
+      "B": "A desmopressina é útil na doença de von Willebrand e hemofilia A leve por liberar fator VIII e fator de von Willebrand, mas não corrige a plaquetopenia autoimune da PTI.",
+      "C": "A progesterona controla sangramento disfuncional anovulatório, porém é insuficiente isoladamente diante de diátese hemorrágica por plaquetopenia grave.",
+      "D": "O estradiol pode auxiliar na estabilização endometrial aguda, mas não trata a destruição plaquetária imunomediada que causa as petéquias e a hemorragia."
     }
   },
   {
@@ -1976,7 +2432,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Hemorragia Pós-Parto",
     "temaSlug": "go-parto",
     "subtemaSlug": "go-parto-hemorragia-pos-parto",
-    "tags": ["hemorragia-pos-parto","atonia-uterina","misoprostol","descolamento-prematuro-de-placenta"],
+    "tags": [
+      "hemorragia-pos-parto",
+      "atonia-uterina",
+      "misoprostol",
+      "descolamento-prematuro-de-placenta"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -2015,7 +2476,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "O manejo da hemorragia pós-parto por atonia uterina obedece a uma sequência escalonada de uterotônicos. Após a ocitocina, o segundo agente habitual seria a metilergometrina; contudo, por se tratar de paciente com pré-eclâmpsia grave, ela é formalmente contraindicada pelo risco de crise hipertensiva e AVC, impondo a prescrição imediata de misoprostol.",
     "perolaClinica": "Na atonia uterina em gestante hipertensa/pré-eclâmpsia: METILERGOMETRINA É CONTRAINDICADA; usar Misoprostol.",
     "referencias": [
@@ -2025,7 +2487,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 2980
+    "sourcePdfPage": 2980,
+    "analiseBanca": {
+      "conceitoCentral": "Manejo farmacológico escalonado da hemorragia pós-parto por atonia uterina em paciente com pré-eclâmpsia.",
+      "raciocinioChave": "Na atonia uterina pós-parto em paciente com pré-eclâmpsia grave, os derivados do ergot são contraindicados pelo risco de crise hipertensiva; após ocitocina, o próximo uterotônico de escolha é o misoprostol, antes de medidas invasivas.",
+      "armadilhaBanca": "Indicar ergotamina/metilergometrina ignorando sua contraindicação absoluta na pré-eclâmpsia, ou pular precocemente para tamponamento/cirurgia antes dos uterotônicos."
+    },
+    "mapaDistratores": {
+      "A": "A ergotamina provoca vasoconstrição intensa e elevação aguda da pressão arterial, sendo formalmente contraindicada em gestantes com pré-eclâmpsia.",
+      "B": "O balão de Bakri é medida mecânica de segunda linha utilizada apenas quando há falha dos uterotônicos farmacológicos disponíveis.",
+      "D": "A sutura compressiva de B-Lynch é intervenção cirúrgica de resgate reservada aos casos refratários ao manejo clínico medicamentoso completo."
+    }
   },
   {
     "id": "q-usp-sp-2023-032",
@@ -2037,7 +2509,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "ITU, Tromboembolismo e Intercorrências Clínicas",
     "temaSlug": "go-intercorrencias",
     "subtemaSlug": "go-intercorrencias-itu-tromboembolismo-e-intercorrencias-clinicas",
-    "tags": ["protese-valvar-mecanica","anticoagulacao-na-gestacao","varfarina","enoxaparina"],
+    "tags": [
+      "protese-valvar-mecanica",
+      "anticoagulacao-na-gestacao",
+      "varfarina",
+      "enoxaparina"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -2076,7 +2553,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A anticoagulação de próteses mecânicas na gravidez representa um dilema terapêutico entre eficácia antitrombótica materna (na qual a varfarina é superior) e segurança fetal. A estratégia tradicional alterna Enoxaparina no 1º trimestre (evita embriopatia), Varfarina no 2º trimestre e reintrodução de Enoxaparina a termo (>36 semanas) para programar o parto com segurança.",
     "perolaClinica": "Anticoagulação em prótese metálica: Enoxaparina no 1º tri (antiteratogênica) -> Varfarina no 2º tri -> Enoxaparina após 36 sem (anti-hemorrágica no parto).",
     "referencias": [
@@ -2086,7 +2564,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 2981
+    "sourcePdfPage": 2981,
+    "analiseBanca": {
+      "conceitoCentral": "Esquema sequencial de anticoagulação na gestação em portadora de prótese valvar cardíaca metálica.",
+      "raciocinioChave": "Para equilibrar teratogenicidade fetal e proteção trombótica materna na prótese metálica, substitui-se a varfarina por enoxaparina no 1º trimestre (evitando embriopatia), retorna-se à varfarina no 2º trimestre (menor trombose valvar) e volta-se à enoxaparina após 36 semanas para segurança no parto.",
+      "armadilhaBanca": "Manter varfarina no primeiro trimestre (risco de embriopatia varfarínica) ou após 36 semanas (hemorragia fetal no parto), ou deixar enoxaparina durante toda a gestação."
+    },
+    "mapaDistratores": {
+      "A": "Manter varfarina no 1º trimestre expõe o embrião à embriopatia varfarínica, caracterizada por hipoplasia nasal e condrodisplasia pontilhada.",
+      "B": "Manter varfarina após 36 semanas eleva o risco de hemorragia intracraniana fetal no parto, além de a enoxaparina no 2º trimestre conferir menor proteção valvar que a varfarina.",
+      "C": "Usar varfarina no 1º trimestre e após 36 semanas combina justamente os dois períodos de maior risco fetal (teratogênese inicial e hemorragia periparto)."
+    }
   },
   {
     "id": "q-usp-sp-2023-033",
@@ -2098,7 +2586,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Gestação Gemelar e Restrição de Crescimento Fetal",
     "temaSlug": "go-intercorrencias",
     "subtemaSlug": "go-intercorrencias-gestacao-gemelar-e-restricao-de-crescimento-fetal",
-    "tags": ["gestacao-gemelar","apresentacao-pelvica","parto-cesareo","prematuridade"],
+    "tags": [
+      "gestacao-gemelar",
+      "apresentacao-pelvica",
+      "parto-cesareo",
+      "prematuridade"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -2137,7 +2630,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "Na gravidez gemelar, o parto vaginal só é admitido se o primeiro gemelar estiver em apresentação cefálica. Caso o gemelar 1 esteja em situação transversa ou apresentação pélvica, impõe-se a via alta (cesariana). A rotura prévia de membranas associada à dilatação cervical confirma a necessidade de interrupção cirúrgica imediata.",
     "perolaClinica": "Parto em gestação gemelar: Primeiro feto não cefálico = indicação absoluta de cesariana.",
     "referencias": [
@@ -2147,7 +2641,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 2981
+    "sourcePdfPage": 2981,
+    "analiseBanca": {
+      "conceitoCentral": "Via de parto na gestação gemelar com primeiro feto em apresentação pélvica e trabalho de parto.",
+      "raciocinioChave": "Na gestação gemelar, a apresentação do primeiro gemelar define a via de parto: estando pélvico em paciente com trabalho de parto franco e rotura prematura de membranas, impõe-se cesariana de urgência.",
+      "armadilhaBanca": "Tentar conduzir parto vaginal em gemelaridade com primeiro feto pélvico ou realizar tocólise na presença de rotura prematura de membranas há 4 dias."
+    },
+    "mapaDistratores": {
+      "B": "A condução de parto vaginal com primeiro gemelar pélvico prematuro apresenta alto risco de retenção da cabeça derradeira e intertravamento cefálico.",
+      "C": "O butilbrometo de escopolamina é antiespasmódico sem efeito tocolítico e apenas retardaria a resolução obstétrica cirúrgica necessária.",
+      "D": "A tocólise é contraindicada na vigência de rotura prematura de membranas há 4 dias devido ao risco elevado de corioamnionite e sofrimento fetal."
+    }
   },
   {
     "id": "q-usp-sp-2023-034",
@@ -2159,7 +2663,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Assistência Pré-Natal de Baixo Risco",
     "temaSlug": "go-prenatal",
     "subtemaSlug": "go-prenatal-assistencia-pre-natal-de-baixo-risco",
-    "tags": ["translucencia-nucal","trissomia","pre-natal","primeiro-trimestre"],
+    "tags": [
+      "translucencia-nucal",
+      "trissomia",
+      "pre-natal",
+      "primeiro-trimestre"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -2198,7 +2707,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A medida da translucência nucal entre 11 semanas e 13 semanas e 6 dias (CCN entre 45 e 84 mm) é o principal marcador ultrassonográfico para o rastreamento de aneuploidias no primeiro trimestre. Níveis anormais elevam substancialmente o risco de trissomias.",
     "perolaClinica": "Translucência nucal aumentada no 1º trimestre = marcador de alto risco para aneuploidias (trissomias) e cardiopatias congênitas.",
     "referencias": [
@@ -2215,6 +2725,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Ultrassonografia",
       "caption": "Ultrassonografia obstétrica de primeiro trimestre avaliando a translucência nucal e osso nasal.",
       "aspectRatio": "4:3"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Interpretação da translucência nucal alterada no rastreamento ultrassonográfico de 1º trimestre.",
+      "raciocinioChave": "Uma translucência nucal aumentada no exame de 12 semanas (associada aos marcadores do 1º trimestre) eleva significativamente a probabilidade de aneuploidias cromossômicas, principalmente as trissomias 21, 18 e 13.",
+      "armadilhaBanca": "Associar o aumento da translucência nucal primariamente a defeitos abertos do tubo neural (espinha bífida/meningomielocele) ou negar a relação com cardiopatias fetais."
+    },
+    "mapaDistratores": {
+      "A": "O aumento da translucência nucal associa-se também a risco elevado de cardiopatias congênitas estruturais, não mantendo o risco basal da idade.",
+      "B": "A meningomielocele é um defeito do tubo neural avaliado principalmente no morfológico de 2º trimestre, não pela translucência nucal aumentada isolada.",
+      "D": "A espinha bífida aberta é rastreada por sinais cranianos e vertebrais no segundo trimestre, não constituindo o principal desfecho apontado pela TN alterada."
     }
   },
   {
@@ -2227,7 +2747,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Abortamento e Incompetência Istmocervical",
     "temaSlug": "go-sangramento",
     "subtemaSlug": "go-sangramento-abortamento-e-incompetencia-istmocervical",
-    "tags": ["abortamento-incompleto","amiu","sangramento-primeiro-trimestre"],
+    "tags": [
+      "abortamento-incompleto",
+      "amiu",
+      "sangramento-primeiro-trimestre"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -2266,7 +2790,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "O quadro de sangramento no primeiro trimestre associado à eliminação parcial de tecido gestacional e eco endometrial heterogêneo > 15 mm define abortamento incompleto. Conforme o Ministério da Saúde e a OMS, a AMIU é a modalidade intervencionista padrão-ouro para o primeiro trimestre por sua rapidez, eficácia e menor trauma endometrial.",
     "perolaClinica": "Abortamento incompleto < 12 semanas com sangramento ativo: o método de escolha para esvaziamento é a AMIU.",
     "referencias": [
@@ -2283,6 +2808,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Ultrassonografia",
       "caption": "Ultrassonografia transvaginal demonstrando cavidade endometrial espessada (23 mm) e heterogênea com restos ovulares.",
       "aspectRatio": "4:3"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Esvaziamento uterino por AMIU no abortamento incompleto de primeiro trimestre.",
+      "raciocinioChave": "Gestante de 7 semanas com sangramento moderado, eliminação de material ovular ao exame especular e endométrio espessado (23 mm) apresenta abortamento incompleto; a Aspiração Manual Intrauterina (AMIU) é o método de escolha para esvaziamento no 1º trimestre.",
+      "armadilhaBanca": "Indicar curetagem uterina convencional (denominada aqui impropriamente de puerperal) ou histeroscopia em cenário de emergência com sangramento ativo."
+    },
+    "mapaDistratores": {
+      "A": "A conduta expectante não é apropriada diante de sangramento vaginal moderado ativo com material ovular exteriorizando-se pelo colo.",
+      "C": "A curetagem puerperal aplica-se ao pós-parto tardio, e a curetagem uterina tradicional oferece maior risco de sinéquias e perfuração que a AMIU.",
+      "D": "A histeroscopia cirúrgica não tem indicação no atendimento de emergência de abortamento incompleto com sangramento ativo."
     }
   },
   {
@@ -2295,7 +2830,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Diagnóstico de Gravidez e Modificações Fisiológicas",
     "temaSlug": "go-prenatal",
     "subtemaSlug": "go-prenatal-diagnostico-de-gravidez-e-modificacoes-fisiologicas",
-    "tags": ["granuloma-gravidico","modificacoes-fisiologicas-da-gestacao","higiene-bucal"],
+    "tags": [
+      "granuloma-gravidico",
+      "modificacoes-fisiologicas-da-gestacao",
+      "higiene-bucal"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -2334,7 +2873,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "O épulis gravídico é uma hiperplasia vascular reacional benigna comum durante o segundo trimestre da gestação. Decorre da resposta tecidual exacerbada a irritantes locais (placa e cálculo) sob efeito hormonal. A higiene oral adequada reduz o componente inflamatório e frequentemente estabiliza ou resolve o quadro, aguardando-se a resolução pós-parto.",
     "perolaClinica": "Nódulo gengival sangrante benigno na gestante = granuloma piogênico (épulis gravídico); conduta inicial: higiene bucal rigorosa.",
     "referencias": [
@@ -2351,6 +2891,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Fotografia Clínica",
       "caption": "Lesão nodular avermelhada pediculada em gengiva maxilar compatível com granuloma piogênico oral da gestação.",
       "aspectRatio": "4:3"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Conduta conservadora no granuloma piogênico oral da gestação (épulis gravídico).",
+      "raciocinioChave": "Lesão gengival avermelhada, dolorida e friável ao escovar em gestante no 2º trimestre é clássica de granuloma gravídico (épulis gravídico), hiperplasia vascular reacional benigna cujo manejo inicial é conservador com higiene bucal rigorosa.",
+      "armadilhaBanca": "Indicar biópsia ou ressecção cirúrgica imediata durante a gravidez, expondo a paciente a sangramento profuso e alta taxa de recidiva antes do parto."
+    },
+    "mapaDistratores": {
+      "B": "A biópsia é desnecessária diante do quadro clínico típico e acarreta risco de sangramento abundante devido à intensa vascularização da lesão.",
+      "C": "A exérese cirúrgica na gestação deve ser evitada salvo sangramento incoercível ou prejuízo funcional grave, pois a lesão costuma regredir após o parto.",
+      "D": "A cauterização gengival direta é contraindicada pelo risco de dor, sangramento e necrose tecidual periodontal sem tratar o fator irritativo local."
     }
   },
   {
@@ -2363,7 +2913,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Avaliação da Vitalidade Fetal",
     "temaSlug": "go-prenatal",
     "subtemaSlug": "go-prenatal-avaliacao-da-vitalidade-fetal",
-    "tags": ["cardiotocografia","vitalidade-fetal","bem-estar-fetal"],
+    "tags": [
+      "cardiotocografia",
+      "vitalidade-fetal",
+      "bem-estar-fetal"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -2402,7 +2956,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A cardiotocografia basal anteparto com parâmetros dentro da normalidade (Categoria I de Miller/ACOG) possui excelente valor preditivo negativo para hipóxia e acidemia fetal nas 24 a 48 horas subsequentes, confirmando higidez e vitalidade fetal preservada.",
     "perolaClinica": "Cardiotocografia Categoria I (frequência normal, boa variabilidade, acelerações e sem desacelerações) = higidez e bem-estar fetal.",
     "referencias": [
@@ -2419,6 +2974,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Gráfico/Tabela",
       "caption": "Cardiotocografia demonstrando traçado categoria I com boa variabilidade e acelerações transitórias.",
       "aspectRatio": "4:3"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Interpretação de cardiotocografia anteparto basal normal (Categoria I).",
+      "raciocinioChave": "Um traçado cardiotocográfico com linha de base entre 110 e 160 bpm, variabilidade moderada, acelerações transitórias espontâneas e ausência de desacelerações patológicas caracteriza padrão Categoria I, confirmando bem-estar fetal.",
+      "armadilhaBanca": "Atribuir reatividade a estímulo vibroacústico não descrito ou confundir contrações fracas e esparsas com taquissistolia/atividade uterina excessiva."
+    },
+    "mapaDistratores": {
+      "A": "O traçado basal demonstra reatividade espontânea associada à movimentação fetal fisiológica, não havendo registro de estímulo acústico.",
+      "B": "A presença de acelerações transitórias no traçado comprova movimentação fetal preservada e resposta autonômica íntegra.",
+      "C": "As contrações registradas são esparsas e de fraca intensidade (2 em 10 minutos), não configurando taquissistolia nem atividade uterina excessiva."
     }
   },
   {
@@ -2431,7 +2996,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Trabalho de Parto Prematuro",
     "temaSlug": "go-parto",
     "subtemaSlug": "go-parto-trabalho-de-parto-prematuro",
-    "tags": ["trabalho-de-parto-prematuro","falso-trabalho-de-parto","conduta-clinica"],
+    "tags": [
+      "trabalho-de-parto-prematuro",
+      "falso-trabalho-de-parto",
+      "conduta-clinica"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -2470,7 +3039,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "O diagnóstico de trabalho de parto prematuro requer contrações regulares associadas a modificação cervical progressiva comprovada (apagamento ou dilatação). Na ausência de alterações cervicais após observação e analgesia, conclui-se tratar-se de falso trabalho de parto, permitindo desospitalização segura com orientações.",
     "perolaClinica": "Contrações que cessam sem modificação cervical em colo grosso e CTG reativa = falso trabalho de parto; conduta: alta com orientações.",
     "referencias": [
@@ -2487,6 +3057,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Gráfico/Tabela",
       "caption": "Traçado cardiotocográfico atestando feto hígido e reativo sem contrações patológicas.",
       "aspectRatio": "4:3"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Diferenciação entre trabalho de parto prematuro verdadeiro e falso trabalho de parto.",
+      "raciocinioChave": "Gestante de 33 semanas com contrações fracas que cessam após analgesia, sem progressão cervical na reavaliação e com cardiotocografia normal, apresenta falso trabalho de parto; a conduta é alta com orientação de sinais de alarme.",
+      "armadilhaBanca": "Iniciar tocólise ou manter internação/observação prolongada apenas pela dilatação estática sem modificação cervical evolutiva."
+    },
+    "mapaDistratores": {
+      "A": "A tocólise requer diagnóstico confirmado de trabalho de parto prematuro verdadeiro com modificação cervical progressiva, ausente neste caso.",
+      "B": "Manter observação prolongada no pronto-socorro é desnecessário após resolução das contrações álgicas, estabilidade cervical e garantia de bem-estar fetal.",
+      "D": "Não há indicação de reavaliação programada da vitalidade fetal em 48 horas diante de gestação sem intercorrência materna ou fetal ativa e CTG categoria I."
     }
   },
   {
@@ -2499,7 +3079,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Mecanismo e Assistência ao Trabalho de Parto",
     "temaSlug": "go-parto",
     "subtemaSlug": "go-parto-mecanismo-e-assistencia-ao-trabalho-de-parto",
-    "tags": ["apresentacao-de-fronte","deflexao-cefalica","mecanismo-de-parto","raiz-do-nariz"],
+    "tags": [
+      "apresentacao-de-fronte",
+      "deflexao-cefalica",
+      "mecanismo-de-parto",
+      "raiz-do-nariz"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -2538,7 +3123,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A apresentação de fronte é a deflexão de 2º grau, caracterizada por apresentar à pelve materna o diâmetro occipitomentoniano (13,5 cm), incompatível com os estreitos da bacia materna normal. O ponto de referência tocado pelo examinador é a raiz do nariz (naso). Se não converter espontaneamente para face ou vértice, requer cesariana.",
     "perolaClinica": "Apresentação de fronte = ponto de referência é a RAIZ DO NARIZ; diâmetro occipitomentoniano (13,5 cm) impede o parto vaginal.",
     "referencias": [
@@ -2555,6 +3141,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Gráfico/Tabela",
       "caption": "Esquema da apresentação cefálica defletida de segundo grau (apresentação de fronte).",
       "aspectRatio": "1:1"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Pontos de referência das apresentações cefálicas defletidas: fronte (raiz do nariz).",
+      "raciocinioChave": "A apresentação cefálica defletida de 2º grau (fronte) tem como ponto de referência a raiz do nariz e expõe o maior diâmetro cefálico (occipitomentoniano, 13,5 cm), constituindo distócia grave que dificulta ou impede o parto vaginal.",
+      "armadilhaBanca": "Confundir os pontos de referência das apresentações cefálicas (occipício para fletida, bregma para defletida de 1º grau, raiz do nariz para 2º grau e mento para 3º grau)."
+    },
+    "mapaDistratores": {
+      "B": "O occipício é o ponto de referência da apresentação cefálica fletida (vértice), que oferece o menor diâmetro e é a mais favorável ao parto vaginal.",
+      "C": "O bregma corresponde à deflexão de 1º grau, na qual o parto vaginal geralmente é possível com o diâmetro occipitofrontal.",
+      "D": "O mento é o ponto de referência da deflexão de 3º grau (face), que permite parto vaginal quando em variedade mentoanterior."
     }
   },
   {
@@ -2567,7 +3163,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Indicadores de Saúde e Transição Epidemiológica",
     "temaSlug": "mp-epidemio",
     "subtemaSlug": "mp-epidemio-indicadores-de-saude-e-transicao-epidemiologica",
-    "tags": ["mortalidade-materna","taxa-de-cesariana","indicadores-de-saude"],
+    "tags": [
+      "mortalidade-materna",
+      "taxa-de-cesariana",
+      "indicadores-de-saude"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -2606,7 +3206,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "Estudos de saúde global da OMS (incluindo o estudo de Volpe et al., 2011) apontam que taxas populacionais de cesárea inferiores a 10-15% refletem subutilização e falta de acesso a cuidados obstétricos cirúrgicos em urgências, acarretando índices elevados de mortes maternas evitáveis. Acima desse patamar de 15%, novos aumentos nas taxas de cesárea não reduzem mais a mortalidade materna.",
     "perolaClinica": "Taxas muito baixas de cesariana (< 10%) refletem escassez de assistência obstétrica de emergência e correlacionam-se com alta mortalidade materna.",
     "referencias": [
@@ -2623,6 +3224,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Gráfico/Tabela",
       "caption": "Gráfico de dispersão correlacionando taxas de mortalidade materna e taxas de parto cesáreo por países.",
       "aspectRatio": "1:1"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Relação ecológica inversa entre subutilização de cesarianas (<10-15%) e mortalidade materna.",
+      "raciocinioChave": "O gráfico demonstra que países com taxas muito baixas de cesárea (indicando falta de acesso à assistência obstétrica cirúrgica essencial) concentram os maiores índices de mortalidade materna; portanto, quanto menor a taxa de cesárea nesse extremo, maior a mortalidade.",
+      "armadilhaBanca": "Extrapolar erroneamente uma relação linear inversa ilimitada ('quanto maior a taxa, menor a mortalidade'), ignorando que acima de 15–20% a mortalidade se estabiliza em platô."
+    },
+    "mapaDistratores": {
+      "A": "Os países com maiores taxas de cesárea apresentam baixos coeficientes de mortalidade materna no gráfico, refutando associação positiva.",
+      "B": "Acima do limiar de acesso adequado (~15%), aumentos adicionais nas taxas de cesárea não reduzem mais a mortalidade materna, invalidando a relação linear irrestrita.",
+      "D": "Os dados evidenciam forte associação inversa não linear, com explosão da mortalidade materna nos cenários de escassez extrema de cesarianas."
     }
   },
   {
@@ -2635,7 +3246,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Insuficiência Respiratória e Ventilação Mecânica",
     "temaSlug": "cm-pneumo",
     "subtemaSlug": "cm-pneumo-insuficiencia-respiratoria-e-ventilacao-mecanica",
-    "tags": ["apneia-obstrutiva-do-sono","cpap","saos","obesidade"],
+    "tags": [
+      "apneia-obstrutiva-do-sono",
+      "cpap",
+      "saos",
+      "obesidade"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -2674,7 +3290,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "O quadro clínico apresentado é clássico de Síndrome da Apneia/Hipopneia Obstrutiva do Sono (SAOS) em homem jovem/meia-idade com obesidade e sonolência diurna. O tratamento de escolha e mais eficaz para manter a patência de vias aéreas e prevenir eventos cardiovasculares associados é o CPAP noturno.",
     "perolaClinica": "Para SAOS moderada a grave ou sintomática em pacientes obesos, o CPAP é o tratamento de primeira escolha padrão-ouro.",
     "referencias": [
@@ -2684,7 +3301,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 2986
+    "sourcePdfPage": 2986,
+    "analiseBanca": {
+      "conceitoCentral": "Tratamento de escolha da Síndrome da Apneia Obstrutiva do Sono (SAOS) sintomática.",
+      "raciocinioChave": "Homem obeso (IMC 34 kg/m²) com roncos, sonolência diurna crônica e apneias presenciadas pela esposa apresenta quadro típico de SAOS clinicamente relevante, cuja terapia padrão-ouro de primeira linha é o aparelho de pressão aérea positiva (CPAP).",
+      "armadilhaBanca": "Optar por medidas comportamentais isoladas (elevação da cabeceira) ou dispositivo intraoral como primeira linha em paciente obeso com sintomas clássicos marcantes, ou recomendar exercício antes de dormir."
+    },
+    "mapaDistratores": {
+      "B": "A elevação da cabeceira é medida adjuvante de baixa eficácia isolada para controle de SAOS sintomática em pacientes obesos.",
+      "C": "Atividade física vigorosa imediatamente antes de deitar prejudica a higiene do sono por aumentar a ativação simpática e dificultar o adormecimento.",
+      "D": "O aparelho intraoral de avanço mandibular é alternativa para casos leves ou intolerância ao CPAP, não sendo a terapia clínica inicial de escolha aqui."
+    }
   },
   {
     "id": "q-usp-sp-2023-042",
@@ -2696,7 +3323,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Cuidados Paliativos",
     "temaSlug": "cm-uti",
     "subtemaSlug": "cm-uti-cuidados-paliativos",
-    "tags": ["cuidados-paliativos","protocolo-spikes","comunicacao-de-mas-noticias","cancer-de-pancreas"],
+    "tags": [
+      "cuidados-paliativos",
+      "protocolo-spikes",
+      "comunicacao-de-mas-noticias",
+      "cancer-de-pancreas"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -2735,7 +3367,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "Diante de progressão rápida de doença metastática refratária com declínio funcional (ECOG 2) e solicitação de tratamentos experimentais, o manejo ético e comunicacional exige explorar a percepção da paciente sobre sua doença e suas reais expectativas. Isso permite estabelecer metas de cuidado compartilhadas e realistas, alicerce dos Cuidados Paliativos.",
     "perolaClinica": "Antes de traçar novas condutas em oncologia avançada, explore a percepção e as expectativas do paciente (Protocolo SPIKES).",
     "referencias": [
@@ -2745,7 +3378,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 2986
+    "sourcePdfPage": 2986,
+    "analiseBanca": {
+      "conceitoCentral": "Comunicação de más notícias e alinhamento de metas em cuidados paliativos (protocolo SPIKES).",
+      "raciocinioChave": "Diante de progressão rápida de câncer pancreático metastático e declínio funcional com questionamento sobre novos tratamentos, o passo comunicacional fundamental é investigar primeiro a percepção e as expectativas da paciente sobre sua doença para alinhar decisões compartilhadas.",
+      "armadilhaBanca": "Omitir informações prognósticas, impor o encaminhamento paliativo como ruptura abrupta de cuidado ou convocar a família antes de dialogar com a paciente autônoma."
+    },
+    "mapaDistratores": {
+      "A": "Postergar informações sobre a progressão da doença fere a autonomia da paciente e impede o planejamento compartilhado de cuidados proporcionais.",
+      "C": "Comunicar de forma impositiva o fim das opções sem explorar antes a compreensão da paciente gera sensação de abandono e quebra do vínculo terapêutico.",
+      "D": "Convocar familiares antes de abordar a própria paciente, que é lúcida e autônoma, viola a confidencialidade e o protagonismo decisório do indivíduo."
+    }
   },
   {
     "id": "q-usp-sp-2023-043",
@@ -2757,7 +3400,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Hanseníase",
     "temaSlug": "cm-dermato",
     "subtemaSlug": "cm-dermato-hanseniase",
-    "tags": ["hanseniase","avaliacao-oftalmologica","urgencia"],
+    "tags": [
+      "hanseniase",
+      "avaliacao-oftalmologica",
+      "urgencia"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -2796,7 +3443,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "Sinais de gravidade em queixas oftalmológicas ('red flags') incluem hipópio (nível de pus na câmara anterior), infiltrado corneano denso, perda súbita da acuidade visual, dor intensa e midríase média fixa. A presença de hipópio demanda avaliação urgente pelo oftalmologista para descartar endoftalmite ou úlcera de córnea grave.",
     "perolaClinica": "Hipópio (nível leucocitário na câmara anterior) é emergência oftalmológica: risco iminente de perfuração ocular e amaurose.",
     "referencias": [
@@ -2813,6 +3461,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Fotografia Clínica",
       "caption": "Fotografia de segmento anterior evidenciando nível purulento em câmara anterior (hipópio).",
       "aspectRatio": "4:3"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Reconhecimento de emergência oftalmológica (hipópio / úlcera corneana grave / endoftalmite).",
+      "raciocinioChave": "A identificação visual de hipópio ou lesão corneana/intraocular grave (Alternativa A) sinaliza infecção intraocular ou ceratite severa com risco iminente de perfuração ou perda visual permanente, exigindo avaliação oftalmológica de urgência.",
+      "armadilhaBanca": "Subestimar sinais de alarme em câmara anterior/córnea ou confundir condições benignas e autolimitadas (como hemorragia subconjuntival ou pterígio) com emergências."
+    },
+    "mapaDistratores": {
+      "B": "A imagem B retrata alteração ocular benigna ou crônica sem comprometimento agudo de câmara anterior, permitindo manejo ambulatorial eletivo.",
+      "C": "A imagem C ilustra quadro superficial benigno e autolimitado (como hiposfagma), sem risco imediato à acuidade visual.",
+      "D": "A imagem D mostra afecção palpebral ou conjuntival crônica ou leve sem sinais de gravidade que exijam intervenção oftalmológica emergencial."
     }
   },
   {
@@ -2825,7 +3483,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Hanseníase",
     "temaSlug": "cm-dermato",
     "subtemaSlug": "cm-dermato-hanseniase",
-    "tags": ["hanseniase-virchowiana","baciloscopia","madarose","celulas-de-virchow"],
+    "tags": [
+      "hanseniase-virchowiana",
+      "baciloscopia",
+      "madarose",
+      "celulas-de-virchow"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -2864,7 +3527,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A hanseníase virchowiana decorre da ineficácia da resposta celular (Th1) contra o Mycobacterium leprae, cursando com resposta Th2 desregulada, intensa proliferação bacilar, infiltração cutânea difusa, madarose e histologia com histiócitos espumosos repletos de bacilos (células de Virchow). A baciloscopia é invariavelmente francamente positiva.",
     "perolaClinica": "Hanseníase virchowiana: fáscies leonina, madarose, células de Virchow vacuoladas e baciloscopia fortemente positiva.",
     "referencias": [
@@ -2881,6 +3545,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Fotografia Clínica",
       "caption": "Paciente com madarose e infiltração cutânea difusa eritêmato-acastanhada com fáscies leonina.",
       "aspectRatio": "16:9"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Diagnóstico clínico, histopatológico e baciloscópico da Hanseníase Virchowiana.",
+      "raciocinioChave": "Infiltração difusa da face e orelhas (fácies leonina), madarose, nódulos eritêmato-acastanhados e macrófagos espumosos (células de Virchow) perineurais caracterizam a forma multibacilar virchowiana, na qual a baciloscopia cutânea é francamente positiva.",
+      "armadilhaBanca": "Confundir a histologia de células de Virchow com granuloma tuberculoide (forma paucibacilar), amiloidose (vermelho-congo) ou linfoma cutâneo (epidermotropismo)."
+    },
+    "mapaDistratores": {
+      "A": "Depósitos hialinos corados pelo vermelho-congo com birrefringência verde-maçã são típicos de amiloidose, não explicando madarose e macrófagos perineurais.",
+      "B": "Epidermotropismo com linfócitos atípicos (microabscessos de Pautrier) é o padrão histológico da micose fungoide (linfoma cutâneo de células T).",
+      "D": "Granulomas tuberculoides com escassez bacilar ocorrem no polo tuberculoide da hanseníase ou na tuberculose cutânea, opostos à forma virchowiana multibacilar."
     }
   },
   {
@@ -2893,7 +3567,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Insuficiência Venosa Crônica e Úlceras",
     "temaSlug": "cg-vascular",
     "subtemaSlug": "cg-vascular-insuficiencia-venosa-cronica-e-ulceras",
-    "tags": ["insuficiencia-venosa-cronica","dermatite-ocre","eczema-de-estase","lipodermatoesclerose"],
+    "tags": [
+      "insuficiencia-venosa-cronica",
+      "dermatite-ocre",
+      "eczema-de-estase",
+      "lipodermatoesclerose"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -2932,7 +3611,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A estase venosa crônica gera hipertensão venocapilar crônica, promovendo extravasamento eritrocitário com acúmulo de hemossiderina (dermatite ocre), processo inflamatório descamativo exsudativo (eczema de estase) e proliferação fibrótica/isquemia tecidual com induração subcutânea (lipodermatoesclerose).",
     "perolaClinica": "Insuficiência venosa crônica grave: tríade cutânea de eczema de estase, dermatite ocre (hemossiderina) e lipodermatoesclerose.",
     "referencias": [
@@ -2949,6 +3629,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Fotografia Clínica",
       "caption": "Membros inferiores com varizes calibrosas, dermatite ocre, lesões descamativo-crostosas e induração cutânea.",
       "aspectRatio": "4:3"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Complicações cutâneas crônicas da insuficiência venosa de membros inferiores.",
+      "raciocinioChave": "Varizes calibrosas de longa evolução associadas a eritema/exsudação/crostas (eczema de estase), hipercromia por hemossiderina (dermatite ocre) e induração subcutânea em terço inferior das pernas (dermatoesclerose) compõem a tríade cutânea da estase venosa crônica.",
+      "armadilhaBanca": "Confundir o eritema exsudativo crônico bilateral do eczema de estase com infecção bacteriana aguda (erisipela) ou dermatofitose/colagenose."
+    },
+    "mapaDistratores": {
+      "A": "Erisipela é uma infecção bacteriana aguda, febril e tipicamente unilateral, incompatível com quadro bilateral crônico de 4 anos.",
+      "B": "Tinha do corpo apresenta placas anulares com bordas descamativas e esclerodermia tem distribuição distinta, não justificando varizes com exsudação crônica.",
+      "C": "Neurodermatite e líquen escleroso não decorrem de hipertensão venocapilar nem produzem depósito difuso de hemossiderina associado a varizes."
     }
   },
   {
@@ -2961,7 +3651,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Tromboembolismo Pulmonar e TVP",
     "temaSlug": "cm-pneumo",
     "subtemaSlug": "cm-pneumo-tromboembolismo-pulmonar-e-tvp",
-    "tags": ["tep","tvp","fatores-de-risco","dispneia-aguda"],
+    "tags": [
+      "tep",
+      "tvp",
+      "fatores-de-risco",
+      "dispneia-aguda"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -3000,7 +3695,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "O quadro clínico com dor torácica pleurítica súbita, taquicardia, taquipneia, hipoxemia e assimetria de panturrilhas (> 3 cm) é altamente sugestivo de TEP decorrente de TVP em MIE. Na estratificação etiológica de fatores predisponentes da ESC, a hospitalização médica recente por descompensação de insuficiência cardíaca ou arritmia atrial figura entre os fatores de risco mais relevantes e frequentes.",
     "perolaClinica": "Internação hospitalar recente por insuficiência cardíaca confere risco moderado-alto (OR 2-9) para tromboembolismo venoso.",
     "referencias": [
@@ -3010,7 +3706,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 2989
+    "sourcePdfPage": 2989,
+    "analiseBanca": {
+      "conceitoCentral": "Estratificação de fatores de risco para tromboembolismo pulmonar (ESC): fatores moderados/fortes vs. fracos.",
+      "raciocinioChave": "Diante da suspeita clínica de TEP (dor torácica súbita, taquipneia, taquicardia, hipoxemia e assimetria de panturrilha > 3 cm), as diretrizes da ESC classificam a internação recente por insuficiência cardíaca ou fibrilação atrial como fator de risco mais relevante (moderado/forte) em comparação aos fatores fracos.",
+      "armadilhaBanca": "Escolher fatores de risco amplamente lembrados (idade avançada, viagem aérea longa, insuficiência venosa), porém classificados como fracos (OR < 2) pelas diretrizes."
+    },
+    "mapaDistratores": {
+      "A": "A insuficiência venosa crônica de membros inferiores é classificada como fator de risco fraco para eventos tromboembólicos agudos (OR < 2).",
+      "B": "A idade avançada isolada atua apenas como fator de risco fraco na estratificação da ESC quando comparada a hospitalizações agudas por descompensação cardíaca.",
+      "D": "Viagem aérea de longa duração é reconhecida como fator predisponente fraco (OR < 2), de menor peso que internação recente por insuficiência cardíaca ou fibrilação atrial."
+    }
   },
   {
     "id": "q-usp-sp-2023-047",
@@ -3022,7 +3728,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Pericardite e Tamponamento Cardíaco",
     "temaSlug": "cm-cardio",
     "subtemaSlug": "cm-cardio-pericardite-e-tamponamento-cardiaco",
-    "tags": ["tamponamento-cardiaco","pericardiocentese","derrame-pericardico","pocus"],
+    "tags": [
+      "tamponamento-cardiaco",
+      "pericardiocentese",
+      "derrame-pericardico",
+      "pocus"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -3061,7 +3772,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "O tamponamento cardíaco neoplásico manifesta-se pela tríade clássica de Beck (hipotensão, turgência jugular patológica e hipofonese de bulhas) e culmina em choque obstrutivo por colapso das câmaras direitas durante a diástole. A descompressão imediata por pericardiocentese subxifoidiana guiada por POCUS é mandatória para restaurar o débito cardíaco.",
     "perolaClinica": "Hipotensão + turgência jugular + derrame pericárdico ao POCUS = tamponamento cardíaco: conduta imediata é pericardiocentese.",
     "referencias": [
@@ -3078,6 +3790,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Ultrassonografia",
       "caption": "Ecocardiograma à beira do leito evidenciando derrame pericárdico volumoso com colapso diastólico de câmaras direitas.",
       "aspectRatio": "1:1"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Diagnóstico de choque obstrutivo por tamponamento cardíaco e indicação de pericardiocentese imediata.",
+      "raciocinioChave": "Paciente com neoplasia evoluindo com estase jugular, hipotensão grave (80x40 mmHg) e confirmação de derrame pericárdico à beira do leito encontra-se em tamponamento cardíaco agudo; a conduta salvadora imediata é a pericardiocentese descompressiva.",
+      "armadilhaBanca": "Indicar drenagem pleural (confundindo com o derrame pleural neoplásico prévio) ou trombólise em cenário de choque obstrutivo pericárdico."
+    },
+    "mapaDistratores": {
+      "A": "A trombólise é indicada para TEP maciço ou IAMCST e seria catastrófica no tamponamento cardíaco ao agravar hemorragia intrapericárdica.",
+      "B": "A drenagem torácica trata coleções pleurais (pneumotórax ou hemotórax), não resolvendo o colapso diastólico cardíaco causado pelo líquido no saco pericárdico.",
+      "C": "A cineangiocoronariografia avalia doença coronariana aguda e atrasaria a descompressão mecânica urgente necessária no choque obstrutivo."
     }
   },
   {
@@ -3090,7 +3812,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Demências e Delirium",
     "temaSlug": "cm-neuro",
     "subtemaSlug": "cm-neuro-demencias-e-delirium",
-    "tags": ["delirium","estado-confusional-agudo","geriatria"],
+    "tags": [
+      "delirium",
+      "estado-confusional-agudo",
+      "geriatria"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -3129,7 +3855,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "Idosos com demência prévia apresentam vulnerabilidade aumentada para o desenvolvimento de delirium diante de qualquer estressor agudo (infecções, distúrbios hidroeletrolíticos, insuficiência cardíaca). O CAM positivo (início agudo + desatenção + pensamento desorganizado/nível de consciência alterado) fecha o diagnóstico de delirium hipoativo, que se associa a pior prognóstico e requer investigação imediata do fator desencadeante.",
     "perolaClinica": "Piora cognitiva aguda e flutuante com desatenção em idoso = delirium; é emergência médica e marcador independente de mortalidade.",
     "referencias": [
@@ -3139,7 +3866,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 2990
+    "sourcePdfPage": 2990,
+    "analiseBanca": {
+      "conceitoCentral": "Reconhecimento e significado prognóstico do delirium hipoativo em idosa com demência prévia.",
+      "raciocinioChave": "Início agudo e evolução flutuante com sonolência, desatenção e pensamento desorganizado configuram delirium (forma hipoativa) superposto à demência, frequentemente precipitado por descompensação clínica aguda e marcador de elevada mortalidade.",
+      "armadilhaBanca": "Atribuir a confusão aguda à progressão natural da demência de base ou interpretar o quadro agudo reversível como processo ativo de morte."
+    },
+    "mapaDistratores": {
+      "B": "A paciente apresenta descompensação clínica aguda potencialmente reversível, não sendo o momento adequado para limitar a abordagem apenas à autorização familiar para intubação sem investigação etiológica.",
+      "C": "Sinais de congestão e rebaixamento agudo apontam para causa orgânica tratável (como insuficiência cardíaca descompensada ou infecção), e não para processo ativo de morte.",
+      "D": "Mudança aguda em dias com desatenção define delirium, e não evolução crônica da demência; causas infecciosas devem ser ativamente investigadas e tratadas com antibióticos se confirmadas."
+    }
   },
   {
     "id": "q-usp-sp-2023-049",
@@ -3151,7 +3888,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Intoxicações Exógenas e Síndromes Toxicológicas",
     "temaSlug": "cm-uti",
     "subtemaSlug": "cm-uti-intoxicacoes-exogenas-e-sindromes-toxicologicas",
-    "tags": ["sindrome-colinergica","intoxicacao-exogena","rivastigmina","miose"],
+    "tags": [
+      "sindrome-colinergica",
+      "intoxicacao-exogena",
+      "rivastigmina",
+      "miose"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -3190,7 +3932,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A síndrome colinérgica é marcada pelo excesso de acetilcolina nos receptores muscarínicos e nicotínicos, gerando o mnemônico 'DUMBELS' (diarreia, urina solta, miose, broncorreia/bradicardia, emese, lacrimejamento e salivação/sudorese). A rivastigmina, como inibidor da acetilcolinesterase, em intoxicação exógena mimetiza exatamente esses achados.",
     "perolaClinica": "Intoxicação por inibidores da colinesterase (rivastigmina, organofosforados) causa síndrome colinérgica: miose, bradicardia, broncorreia e sudorese.",
     "referencias": [
@@ -3200,7 +3943,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 2990
+    "sourcePdfPage": 2990,
+    "analiseBanca": {
+      "conceitoCentral": "Identificação da síndrome toxicológica colinérgica e correlação com inibidores da acetilcolinesterase.",
+      "raciocinioChave": "Sudorese profusa, bradicardia, miose, hipotensão e broncorreia compõem a síndrome colinérgica clássica por hiperestimulação muscarínica. Dentre as opções, apenas a rivastigmina (inibidor da acetilcolinesterase) reproduz esse quadro quando ingerida em grande quantidade.",
+      "armadilhaBanca": "Confundir miose colinérgica com síndrome opioide (loperamida) ou confundir anticolinérgicos (escopolamina, imipramina) com agentes colinérgicos."
+    },
+    "mapaDistratores": {
+      "A": "A loperamida é um opioide que em toxicidade extrema pode causar depressão respiratória e miose, mas não provoca broncorreia nem sudorese profusa colinérgica.",
+      "C": "A escopolamina é um antagonista muscarínico que produz síndrome anticolinérgica (midríase, taquicardia, pele seca e retenção urinária), oposta ao quadro.",
+      "D": "A imipramina é antidepressivo tricíclico com forte efeito anticolinérgico e bloqueio de canais de sódio, causando taquicardia, midríase e alargamento de QRS."
+    }
   },
   {
     "id": "q-usp-sp-2023-050",
@@ -3212,7 +3965,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Fibrilação Atrial e Taquiarritmias",
     "temaSlug": "cm-cardio",
     "subtemaSlug": "cm-cardio-fibrilacao-atrial-e-taquiarritmias",
-    "tags": ["fibrilacao-atrial","anticoagulacao","cha2ds2-vasc","avc-previo"],
+    "tags": [
+      "fibrilacao-atrial",
+      "anticoagulacao",
+      "cha2ds2-vasc",
+      "avc-previo"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -3251,7 +4009,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "Todo paciente com fibrilação atrial confirmada ao ECG deve ser estratificado quanto ao risco embólico pelo escore CHA₂DS₂-VASc. Em presença de AVC prévio associado à idade avançada e hipertensão, a indicação de anticoagulação oral (DOACs ou varfarina) é absoluta classe I, sendo a terapia antiplaquetária isolada contraindicada para tal fim.",
     "perolaClinica": "FA com antecedente de AVC (2 pontos no CHA₂DS₂-VASc) tem indicação mandatória de anticoagulação oral em dose plena.",
     "referencias": [
@@ -3268,6 +4027,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "ECG",
       "caption": "Eletrocardiograma de 12 derivações com ritmo irregularmente irregular sem ondas P identificáveis, compatível com fibrilação atrial.",
       "aspectRatio": "16:9"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Indicação de anticoagulação oral plena na fibrilação atrial em idoso com alto risco embólico (CHA2DS2-VASc).",
+      "raciocinioChave": "Paciente com fibrilação atrial ao ECG, 78 anos, hipertenso e com AVC isquêmico prévio possui escore CHA2DS2-VASc muito elevado, impondo indicação absoluta de anticoagulação oral em dose plena para prevenção de novo evento cardioembólico.",
+      "armadilhaBanca": "Manter ou aumentar antiagregação plaquetária (AAS) como profilaxia de AVC na FA ou priorizar controle de ritmo/frequência sem anticoagular primeiro."
+    },
+    "mapaDistratores": {
+      "B": "A aspirina, mesmo em dose de 300 mg/dia, é ineficaz e inadequada para prevenção tromboembólica na fibrilação atrial em comparação aos anticoagulantes.",
+      "C": "A amiodarona atua no controle do ritmo, não substituindo a anticoagulação obrigatória e podendo ainda expor a embolização ao cardioverter sem anticoagular.",
+      "D": "Sem queixas de instabilidade ou taquicardia sintomática refratária, a adição isolada de betabloqueador não protege contra novos AVCs cardioembólicos."
     }
   },
   {
@@ -3280,7 +4049,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Bradiarritmias e Bloqueios Atrioventriculares",
     "temaSlug": "cm-cardio",
     "subtemaSlug": "cm-cardio-bradiarritmias-e-bloqueios-atrioventriculares",
-    "tags": ["bav-segundo-grau","mobitz-ii","ecg","bradiarritmia"],
+    "tags": [
+      "bav-segundo-grau",
+      "mobitz-ii",
+      "ecg",
+      "bradiarritmia"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -3319,7 +4093,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "O BAV de 2º grau Mobitz II é caracterizado por ondas P que falham em conduzir de forma inesperada, mantendo o intervalo PR rigorosamente constante nos batimentos prévios e posteriores. Por acometer o sistema de condução infranodal, tem prognóstico desfavorável e exige monitorização e frequentemente implante de marcapasso definitivo.",
     "perolaClinica": "BAV 2º grau Mobitz II: intervalos PR fixos com onda P bloqueada subitamente; acometimento infra-hissiano com alto risco de BAVT.",
     "referencias": [
@@ -3336,6 +4111,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "ECG",
       "caption": "Traçado eletrocardiográfico exibindo BAV de segundo grau com intervalos PR constantes antes da onda P bloqueada (Mobitz II).",
       "aspectRatio": "16:9"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Diferenciação eletrocardiográfica entre BAV de 2º grau Mobitz I e Mobitz II.",
+      "raciocinioChave": "A presença de ondas P bloqueadas de forma intermitente sem prolongamento progressivo prévio do intervalo PR (intervalo PR fixo nos batimentos conduzidos) define o Bloqueio Atrioventricular de 2º grau tipo Mobitz II.",
+      "armadilhaBanca": "Confundir BAV de 2º grau Mobitz II com Mobitz I (Wenckebach, em que o PR aumenta progressivamente) ou com BAV de 1º grau (sem bloqueio de condução)."
+    },
+    "mapaDistratores": {
+      "A": "No BAV de 2º grau Mobitz I ocorre alongamento progressivo do intervalo PR (fenômeno de Wenckebach) antes da onda P bloqueada, ausente neste traçado.",
+      "B": "Na bradicardia sinusal todas as ondas P são conduzidas na relação 1:1 aos ventrículos, sem pausas por ondas P bloqueadas.",
+      "C": "No BAV de 1º grau todas as ondas P conduzem para o complexo QRS, observando-se apenas intervalo PR constantemente prolongado (> 200 ms)."
     }
   },
   {
@@ -3348,7 +4133,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Hipertensão Arterial Sistêmica",
     "temaSlug": "cm-cardio",
     "subtemaSlug": "cm-cardio-hipertensao-arterial-sistemica",
-    "tags": ["hipertensao-secundaria","hipocalemia","hiperaldosteronismo"],
+    "tags": [
+      "hipertensao-secundaria",
+      "hipocalemia",
+      "hiperaldosteronismo"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -3387,7 +4176,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A presença de hipertensão em indivíduos jovens associada a hipocalemia não provocada por diuréticos é a apresentação clássica que exige rastreamento para causas endócrinas de hipertensão secundária (como hiperaldosteronismo primário). O manejo correto inclui a reposição de potássio, manutenção de medidas não farmacológicas e investigação laboratorial imediata (ARR) antes da prescrição de drogas anti-hipertensivas que alterem o eixo.",
     "perolaClinica": "Hipertensão em jovem + hipocalemia espontânea = investigar hiperaldosteronismo primário (relação aldosterona/renina) antes de medicar.",
     "referencias": [
@@ -3397,7 +4187,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 2992
+    "sourcePdfPage": 2992,
+    "analiseBanca": {
+      "conceitoCentral": "Rastreamento de hipertensão secundária (hiperaldosteronismo) sem interferência medicamentosa.",
+      "raciocinioChave": "Adulto jovem (< 35 anos) com hipertensão confirmada e hipocalemia espontânea exige investigação imediata de hipertensão secundária (como hiperaldosteronismo primário). Deve-se manter apenas mudança de estilo de vida durante o rastreio inicial para não falsear a dosagem de renina e aldosterona.",
+      "armadilhaBanca": "Iniciar anti-hipertensivos habituais (IECA, BRA, diuréticos ou betabloqueadores) antes da coleta hormonal, alterando o eixo renina-angiotensina-aldosterona."
+    },
+    "mapaDistratores": {
+      "B": "Iniciar anti-hipertensivos convencionais antes da coleta laboratorial altera os níveis de renina e aldosterona e prejudica o diagnóstico de hiperaldosteronismo primário.",
+      "C": "Dispensar investigação etiológica em hipertenso jovem com hipocalemia espontânea deixa sem diagnóstico causas potencialmente curáveis de hipertensão secundária.",
+      "D": "Deixar de investigar causa secundária e iniciar fármacos indiscriminadamente mascara os exames hormonais e atrasa o tratamento específico."
+    }
   },
   {
     "id": "q-usp-sp-2023-053",
@@ -3409,7 +4209,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Anemias Hemolíticas e Doença Falciforme",
     "temaSlug": "cm-hemato",
     "subtemaSlug": "cm-hemato-anemias-hemoliticas-e-doenca-falciforme",
-    "tags": ["anemia-hemolitica","reticulocitose","investigacao-de-anemia"],
+    "tags": [
+      "anemia-hemolitica",
+      "reticulocitose",
+      "investigacao-de-anemia"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -3448,7 +4252,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A abordagem sindrômica inicial das anemias baseia-se na contagem de reticulócitos. Anemias hiperproliferativas (reticulocitose) resultam tipicamente de perda sanguínea aguda ou hemólise periférica. Na hemólise, a resposta eritropoética medular saudável eleva a liberação de reticulócitos para a corrente sanguínea.",
     "perolaClinica": "Anemia com reticulocitose reflete resposta medular aumentada: pensar em hemólise ou sangramento agudo.",
     "referencias": [
@@ -3458,7 +4263,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 2993
+    "sourcePdfPage": 2993,
+    "analiseBanca": {
+      "conceitoCentral": "Classificação fisiopatológica das anemias pela contagem de reticulócitos e marcadores de hemólise.",
+      "raciocinioChave": "Anemia por hemólise promove destruição periférica precoce das hemácias, estimulando a eritropoese compensatória e elevando a proporção de reticulócitos (anemia hiperproliferativa). Esse padrão contrasta com anemias carenciais ou defeitos medulares, que cursam com reticulopenia.",
+      "armadilhaBanca": "Associar marcadores hematológicos verdadeiros de uma síndrome (como haptoglobina baixa ou VCM elevado) a etiologias incompatíveis (ferropenia ou talassemia)."
+    },
+    "mapaDistratores": {
+      "A": "Promielócitos no sangue periférico indicam leucemia promielocítica aguda, enquanto a deficiência de folato causa macrocitose e neutrófilos hipersegmentados.",
+      "B": "A haptoglobina reduzida é marcador de hemólise intravascular por consumo ao se ligar à hemoglobina livre, permanecendo normal ou elevada na anemia ferropriva.",
+      "D": "A talassemia major cursa com microcitose e hipocromia acentuadas (redução importante do VCM), e não com aumento do volume corpuscular."
+    }
   },
   {
     "id": "q-usp-sp-2023-054",
@@ -3470,7 +4285,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Insuficiência Cardíaca",
     "temaSlug": "cm-cardio",
     "subtemaSlug": "cm-cardio-insuficiencia-cardiaca",
-    "tags": ["insuficiencia-cardiaca","fibrilacao-atrial","tsh","descompensacao-cardiaca"],
+    "tags": [
+      "insuficiencia-cardiaca",
+      "fibrilacao-atrial",
+      "tsh",
+      "descompensacao-cardiaca"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -3509,7 +4329,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "Todo episódio de descompensação aguda ou subaguda da insuficiência cardíaca crônica previamente estável exige a pesquisa ativa de fatores precipitantes (mnemônico HEART FAIL: infecções, anemia, arritmias, má adesão, disfunção tireoidiana). A dosagem de TSH permite identificar tireotoxicose apática do idoso, comum deflagradora de fibrilação atrial e alto débito/descompensação miocárdica.",
     "perolaClinica": "Idoso com IC estável que descompensa com nova arritmia: investigar fator precipitante sistêmico com TSH.",
     "referencias": [
@@ -3519,7 +4340,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 2993
+    "sourcePdfPage": 2993,
+    "analiseBanca": {
+      "conceitoCentral": "Investigação de fatores precipitantes de descompensação da insuficiência cardíaca e fibrilação atrial no idoso.",
+      "raciocinioChave": "Idoso previamente estável em terapia otimizada desenvolve piora progressiva da IC associada a arritmia recém-surgida (bulhas arrítmicas). A dosagem de TSH é mandatória para rastrear tireotoxicose (muitas vezes apática no idoso) ou hipotireoidismo como causa reversível da descompensação e da fibrilação atrial.",
+      "armadilhaBanca": "Solicitar exames invasivos ou de alta complexidade (angio-TC ou cateterismo) antes de investigar causas metabólicas básicas e reversíveis como disfunção tireoidiana."
+    },
+    "mapaDistratores": {
+      "A": "A angiotomografia de tórax é indicada na suspeita clínica de tromboembolismo pulmonar, não sendo exame inicial de rotina para piora congestiva lenta com arritmia.",
+      "C": "A cineangiocoronariografia não é indicada de imediato na ausência de dor torácica típica, alterações isquêmicas agudas ou instabilidade coronariana evidente.",
+      "D": "A proteína C-reativa é um marcador inflamatório inespecífico que não identifica a etiologia da arritmia nem define a causa da descompensação cardíaca."
+    }
   },
   {
     "id": "q-usp-sp-2023-055",
@@ -3531,7 +4362,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Doenças Pulmonares Intersticiais",
     "temaSlug": "cm-pneumo",
     "subtemaSlug": "cm-pneumo-doencas-pulmonares-intersticiais",
-    "tags": ["pneumonite-por-imunoterapia","imunoterapia","insuficiencia-respiratoria","corticoterapia"],
+    "tags": [
+      "pneumonite-por-imunoterapia",
+      "imunoterapia",
+      "insuficiencia-respiratoria",
+      "corticoterapia"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -3570,7 +4406,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A pneumonite associada a inibidores de checkpoint (anti-PD-1 / anti-PD-L1) é uma complicação imunomediada potencialmente fatal. Em quadros graves (grau ≥ 3), caracterizados por hipoxemia acentuada e infiltrados extensos, a internação em leito intensivo, início imediato de pulsoterapia/corticosteroide em alta dose e cobertura antimicrobiana empírica são essenciais.",
     "perolaClinica": "Pneumonite por inibidores de checkpoint grave (grau ≥ 3): suporte em UTI + corticoterapia em alta dose + antibioticoterapia.",
     "referencias": [
@@ -3587,6 +4424,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Tomografia",
       "caption": "TC de tórax em corte axial mostrando opacidades em vidro fosco difusas e áreas de consolidação periféricas em paciente sob uso de imunoterapia.",
       "aspectRatio": "1:1"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Manejo da pneumonite grave (grau ≥ 3) induzida por inibidores de checkpoint imunológico (anti-PD-L1).",
+      "raciocinioChave": "Paciente em uso de anticorpo anti-PD-L1 apresenta insuficiência respiratória hipoxêmica aguda (SatO₂ 85%, FR 32 irpm) e infiltrados tomográficos compatíveis com pneumonite imunomediada grave. A conduta exige suporte intensivo em UTI, corticoterapia em alta dose, pesquisa viral e antibioticoterapia empírica para cobrir infecções concomitantes.",
+      "armadilhaBanca": "Subestimar a gravidade da hipoxemia indicando enfermaria ou corticoide em dose baixa, ou confundir toxicidade imunomediada com progressão tumoral tratável por radioterapia."
+    },
+    "mapaDistratores": {
+      "B": "A internação em enfermaria é insegura diante da insuficiência respiratória grave e a radioterapia torácica agrava o processo inflamatório pulmonar imunomediado.",
+      "C": "Corticosteroides em dose baixa são insuficientes para pneumonite grave por imunoterapia (que requer alta dose endovenosa) e a radioterapia é contraindicada.",
+      "D": "O paciente com hipoxemia acentuada e taquipneia requer monitorização intensiva em UTI e doses altas de corticoide, tornando enfermaria e dose baixa condutas inadequadas."
     }
   },
   {
@@ -3599,7 +4446,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Artrite Séptica e Osteoartrite",
     "temaSlug": "cm-reumato",
     "subtemaSlug": "cm-reumato-artrite-septica-e-osteoartrite",
-    "tags": ["bursite-pre-patelar","joelho","diagnostico-diferencial"],
+    "tags": [
+      "bursite-pre-patelar",
+      "joelho",
+      "diagnostico-diferencial"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -3638,7 +4489,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A bursa pré-patelar situa-se entre a face anterior da patela e a pele. O atrito crônico por apoio contínuo em superfícies rígidas (ajoelhar-se) deflagra bursite inflamatória (ou séptica por microtraumas), provocando edema e dor localizados sobre o polo patelar, com preservação da articulação femorotibial.",
     "perolaClinica": "Aumento de volume anterior à patela em paciente que trabalha ajoelhada = bursite pré-patelar.",
     "referencias": [
@@ -3655,6 +4507,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Fotografia Clínica",
       "caption": "Abaulamento inflamatório restrito à região anterior da patela direita compatível com bursite pré-patelar.",
       "aspectRatio": "1:1"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Diagnóstico clínico de bursite pré-patelar aguda após sobrecarga mecânica por ajoelhamento repetitivo.",
+      "raciocinioChave": "Edema localizado na face anterior do joelho com dor e calor superficiais, limitação apenas à flexão por tensão cutânea e preservação da deambulação após trabalho doméstico intenso são típicos de bursite pré-patelar. A ausência de trauma direto de alta energia reforça o processo inflamatório da bursa.",
+      "armadilhaBanca": "Confundir coleção inflamatória superficial restrita à bursa pré-patelar com artrite ou derrame intra-articular verdadeiro do joelho."
+    },
+    "mapaDistratores": {
+      "A": "A fratura patelar exige trauma direto ou contração excêntrica violenta, cursando com incapacidade funcional importante para extensão e deambulação.",
+      "B": "A subluxação patelar manifesta-se com episódio agudo de falseio, deslocamento lateral da patela e dor parapatelar medial sem flogose superficial pré-patelar típica.",
+      "C": "A artrite intra-articular gera derrame difuso nos recessos supra e parapatelares (choque patelar positivo) e dor importante à movimentação passiva e carga."
     }
   },
   {
@@ -3667,7 +4529,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Meningites e Encefalites no Adulto",
     "temaSlug": "cm-infecto",
     "subtemaSlug": "cm-infecto-meningites-e-encefalites-no-adulto",
-    "tags": ["encefalite-herpetica","liquor","hsv","ressonancia-magnetica"],
+    "tags": [
+      "encefalite-herpetica",
+      "liquor",
+      "hsv",
+      "ressonancia-magnetica"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -3706,7 +4573,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A encefalite por HSV-1 produz necrose hemorrágica assimétrica nos lobos temporal e frontal basais. O exame do líquor reflete essa fisiopatologia ao apresentar pleocitose mononuclear moderada, níveis normais de glicose e contagem aumentada de hemácias devido ao componente necro-hemorrágico local.",
     "perolaClinica": "Febre, crise temporal e RM com alteração em lobo temporal/ínsula = Encefalite por HSV; líquor linfomonocitário com hemácias.",
     "referencias": [
@@ -3716,7 +4584,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 2995
+    "sourcePdfPage": 2995,
+    "analiseBanca": {
+      "conceitoCentral": "Padrão liquórico clássico da encefalite herpética por HSV-1 com acometimento temporal e insular.",
+      "raciocinioChave": "Febre, cefaleia, confusão mental e crise focal com automatismos mastigatórios associados a hipersinal em lobo temporal e ínsula caracterizam encefalite herpética. O líquor apresenta pleocitose discreta a moderada linfomonocitária, glicorraquia normal, proteinorraquia leve e hemácias pelo caráter necro-hemorrágico.",
+      "armadilhaBanca": "Exigir o reconhecimento do perfil liquórico viral com componente hemorrágico entre opções que misturam padrões de meningite bacteriana ou tuberculosa."
+    },
+    "mapaDistratores": {
+      "A": "Pleocitose intensa com 80% de neutrófilos, hiperproteinorraquia e hipoglicorraquia acentuada (18 mg/dL) são características de meningite bacteriana aguda.",
+      "B": "O predomínio de 70% de neutrófilos associado à hiperproteinorraquia extrema (500 mg/dL) sem hemácias é incompatível com o perfil típico da encefalite viral herpética.",
+      "D": "Glicose liquórica praticamente zerada (1 mg/dL) e 50% de neutrófilos sugerem infecção bacteriana ou micobacteriana grave, afastando encefalite herpética."
+    }
   },
   {
     "id": "q-usp-sp-2023-058",
@@ -3728,7 +4606,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Doenças Desmielinizantes",
     "temaSlug": "cm-neuro",
     "subtemaSlug": "cm-neuro-doencas-desmielinizantes",
-    "tags": ["mielite-transversa","sindrome-medular","ressonancia-magnetica"],
+    "tags": [
+      "mielite-transversa",
+      "sindrome-medular",
+      "ressonancia-magnetica"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -3767,7 +4649,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A mielite transversa aguda provoca comprometimento inflamatório focal da medula espinhal, culminando em disfunção motora (paraparesia/plegia), sensorial (nível sensitivo bem delimitado correspondente ao nível da lesão medular) e autonômica (retenção urinária aguda). O exame de escolha é a ressonância magnética da topografia correspondente (coluna torácica para nível T10).",
     "perolaClinica": "Nível sensitivo bem delimitado no tronco + déficit motor com Babinski e bexigoma = lesão medular torácica (mielite transversa). RM torácica imediata.",
     "referencias": [
@@ -3777,7 +4660,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 2995
+    "sourcePdfPage": 2995,
+    "analiseBanca": {
+      "conceitoCentral": "Diagnóstico topográfico e etiológico da mielite transversa aguda torácica por nível sensitivo T10.",
+      "raciocinioChave": "Paraparesia com sinais de liberação piramidal (hiper-reflexia e sinal de Babinski), retenção urinária e nível sensitivo na cicatriz umbilical (dermátomo T10) configuram síndrome medular torácica aguda, típica de mielite transversa. O exame complementar de escolha na emergência é a ressonância magnética de coluna torácica.",
+      "armadilhaBanca": "Confundir mielopatia aguda com síndrome de Guillain-Barré ou solicitar ressonância lombar para um nível sensitivo localizado na altura do umbigo (T10)."
+    },
+    "mapaDistratores": {
+      "A": "A neuroesquistossomose acomete classicamente cone medular e cauda equina (nível lombossacro com hipo/arreflexia), além de a RM lombossacra não cobrir o segmento torácico T10.",
+      "B": "A degeneração combinada subaguda por deficiência de B12 cursa com alteração proprioceptiva e ataxia sensitiva progressiva, sem nível sensitivo espinotalâmico agudo em T10 com bexigoma.",
+      "C": "A síndrome de Guillain-Barré causa paralisia flácida periférica com arreflexia precoce, sem sinal de Babinski ou nível sensitivo bem delimitado no tronco."
+    }
   },
   {
     "id": "q-usp-sp-2023-059",
@@ -3789,7 +4682,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Transtorno Afetivo Bipolar",
     "temaSlug": "cm-psiq",
     "subtemaSlug": "cm-psiq-transtorno-afetivo-bipolar",
-    "tags": ["transtorno-bipolar","mania","saude-mental"],
+    "tags": [
+      "transtorno-bipolar",
+      "mania",
+      "saude-mental"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -3828,7 +4725,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "O diagnóstico de Transtorno Bipolar Tipo I é estabelecido com a identificação de pelo menos um episódio maníaco na vida do indivíduo. O quadro clínico de agitação psicomotora, logorreia, aceleração do curso do pensamento e redução da necessidade de sono por mais de uma semana em paciente com histórico de depressão maior e história familiar psiquiátrica positiva caracteriza a doença.",
     "perolaClinica": "Episódio atual de mania (agitação, diminuição do sono, aceleração da fala > 7 dias) + histórico de depressão = Transtorno Bipolar.",
     "referencias": [
@@ -3838,7 +4736,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 2995
+    "sourcePdfPage": 2995,
+    "analiseBanca": {
+      "conceitoCentral": "Diagnóstico de Transtorno Afetivo Bipolar tipo I a partir de episódio maníaco típico após depressão.",
+      "raciocinioChave": "Paciente jovem apresenta síndrome maníaca franca há 7 dias (agitação, múltiplos projetos, taquipsiquismo/logorreia com fuga de ideias e redução da necessidade de sono), sucedendo episódio depressivo maior prévio. A ocorrência de ao menos um episódio maníaco define o diagnóstico de transtorno bipolar.",
+      "armadilhaBanca": "Atribuir o quadro de mania aguda a luto reativo, transtorno de personalidade borderline ou intoxicação sem valorizar a polaridade afetiva e a duração ≥ 7 dias."
+    },
+    "mapaDistratores": {
+      "A": "O transtorno de personalidade borderline caracteriza-se por padrão crônico de instabilidade emocional e impulsividade desde o início da vida adulta, não por episódio maníaco agudo em paciente previamente eutímico.",
+      "B": "O transtorno depressivo reativo ou luto cursa com humor deprimido e anedonia, sendo incompatível com o quadro atual de agitação, taquilalia e redução da necessidade de sono.",
+      "D": "Embora estimulantes mimetizem mania, não há relato de uso de drogas no caso, enquanto a história de depressão prévia e o quadro sindrômico completo favorecem transtorno bipolar primário."
+    }
   },
   {
     "id": "q-usp-sp-2023-060",
@@ -3850,7 +4758,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Miastenia Gravis e Doenças da Junção Neuromuscular",
     "temaSlug": "cm-neuro",
     "subtemaSlug": "cm-neuro-miastenia-gravis-e-doencas-da-juncao-neuromuscular",
-    "tags": ["miastenia-gravis","ptose-palpebral","diplopia","crise-miastenica"],
+    "tags": [
+      "miastenia-gravis",
+      "ptose-palpebral",
+      "diplopia",
+      "crise-miastenica"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -3889,7 +4802,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "Acometimentos subagudos de nervos cranianos motores oculares e bulbares com febre e complicações sistêmicas podem ocorrer na tuberculose meningoencefálica, em que o exsudato inflamatório na base do crânio aprisiona as raízes dos nervos cranianos. De acordo com o gabarito oficial homologado pela banca USP-SP, assinala-se a alternativa A.",
     "perolaClinica": "Meningoencefalite tuberculosa: curso subagudo com acometimento proeminente de múltiplos nervos cranianos pelo exsudato basilar espesso.",
     "referencias": [
@@ -3899,7 +4813,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 2996
+    "sourcePdfPage": 2996,
+    "analiseBanca": {
+      "conceitoCentral": "Acometimento subagudo de múltiplos nervos cranianos na meningoencefalite tuberculosa (gabarito oficial).",
+      "raciocinioChave": "Apesar de ptose flutuante e disfagia sugerirem síndrome miastênica, o gabarito oficial homologado pela USP-SP apontou meningoencefalite tuberculosa, atribuindo a disfunção de pares cranianos oculomotores e bulbares ao exsudato basal tuberculoso. A evolução subaguda de dois meses culminando em febre e sintomas respiratórios sustenta a chave adotada pela banca.",
+      "armadilhaBanca": "Questão de gabarito oficial controverso em que a vinheta clínica mimetiza fortemente crise miastênica, mas a banca homologou meningoencefalite tuberculosa como resposta definitiva."
+    },
+    "mapaDistratores": {
+      "B": "A polirradiculoneurite aguda (Guillain-Barré) instala-se rapidamente em dias a poucas semanas de forma ascendente e com arreflexia, divergindo do curso de dois meses.",
+      "C": "Uma neoplasia maligna de tronco encefálico causaria sinais piramidais e sensitivos de vias longas assimétricos e progressivos sem caráter flutuante ou febre subaguda associada.",
+      "D": "Apesar da forte semelhança clínica com miastenia gravis pela ptose e diplopia flutuantes, a banca examinadora manteve oficialmente a alternativa A no gabarito definitivo."
+    }
   },
   {
     "id": "q-usp-sp-2023-061",
@@ -3911,7 +4835,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Sistemas de Informação em Saúde",
     "temaSlug": "mp-vigilancia",
     "subtemaSlug": "mp-vigilancia-sistemas-de-informacao-em-saude",
-    "tags": ["cascata-do-hiv","siscel","siclom","vigilancia-em-saude"],
+    "tags": [
+      "cascata-do-hiv",
+      "siscel",
+      "siclom",
+      "vigilancia-em-saude"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -3950,7 +4879,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A cascata de cuidado contínuo do HIV monitora as etapas essenciais: diagnóstico, vinculação ao serviço, retenção no cuidado, uso de TARV e supressão viral (carga viral < 50 cópias/mL). Nos jovens de 18 a 24 anos, observam-se os maiores gargalos de adesão, sendo que 15% dos que estavam em tratamento com exame de controle não alcançaram a supressão da replicação viral.",
     "perolaClinica": "Jovens de 18-24 anos representam a faixa etária com maiores desafios de retenção e menor taxa de supressão viral na cascata do HIV.",
     "referencias": [
@@ -3966,6 +4896,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Gráfico/Tabela",
       "caption": "Cascata de cuidado contínuo do HIV por faixa etária no Brasil (2020).",
       "aspectRatio": "1:1"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Interpretação de indicadores epidemiológicos da cascata de cuidado contínuo do HIV no Brasil.",
+      "raciocinioChave": "Na cascata de 2020, o denominador da supressão viral engloba pessoas em TARV (dispensa nos últimos 100 dias) com exame de carga viral após 6 meses de tratamento. Na faixa de 18 a 24 anos, 85% desse grupo atingiram carga viral < 50 cópias/mL, indicando que 15% não alcançaram supressão viral.",
+      "armadilhaBanca": "Confundir os denominadores entre etapas distintas da cascata (vinculados, retidos, em TARV e com exame de carga viral após 6 meses)."
+    },
+    "mapaDistratores": {
+      "B": "A fração de 15% refere-se à ausência de supressão viral entre os tratados com carga viral avaliada, e não à taxa de abandono ou não início de TARV entre vinculados.",
+      "C": "A cascata apresentada retrata pessoas já diagnosticadas e vinculadas por faixa etária, não demonstrando crescimento linear da proporção de diagnóstico com a idade.",
+      "D": "Na faixa etária de 50 anos ou mais, a taxa de supressão viral entre pacientes em TARV com exame de carga viral é superior a 90%, e não de 82%."
     }
   },
   {
@@ -3978,7 +4918,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Vieses, Confundimento e Bioestatística",
     "temaSlug": "mp-epidemio",
     "subtemaSlug": "mp-epidemio-vieses-confundimento-e-bioestatistica",
-    "tags": ["confundimento","vies","epidemiologia"],
+    "tags": [
+      "confundimento",
+      "vies",
+      "epidemiologia"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -4017,7 +4961,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "O fator de confusão distorce a medida de efeito entre a exposição e o desfecho. Para ser classificado como tal, precisa estar associado tanto à exposição quanto ao desfecho, sem ser uma consequência da exposição ou um passo intermediário da cascata causal.",
     "perolaClinica": "Variável no caminho causal é mediadora; para ser confusão, deve ser associada à exposição e ao desfecho, fora da cadeia causal.",
     "referencias": [
@@ -4027,7 +4972,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 2997
+    "sourcePdfPage": 2997,
+    "analiseBanca": {
+      "conceitoCentral": "Critérios epidemiológicos formais que definem uma variável de confusão (confundimento).",
+      "raciocinioChave": "Para gerar viés de confundimento, a terceira variável deve estar associada à exposição, ser fator de risco independente associado ao desfecho e não pertencer ao caminho causal entre ambos. Desse modo, ela distorce a medida de efeito sem atuar como mediadora.",
+      "armadilhaBanca": "Confundir variável de confusão com variável mediadora (intermediária) ao incluí-la no caminho causal entre exposição e desfecho."
+    },
+    "mapaDistratores": {
+      "A": "Estar presente na população geral não constitui critério definidor de confundimento, além de faltar a exigência explícita de não estar na via causal.",
+      "C": "A associação da variável de confusão com a exposição e o desfecho não se restringe apenas aos indivíduos que não desenvolveram o desfecho.",
+      "D": "Uma variável situada no caminho causal entre exposição e desfecho funciona como mediadora (variável intermediária), e não como fator de confusão."
+    }
   },
   {
     "id": "q-usp-sp-2023-063",
@@ -4039,7 +4994,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "História, Princípios e Leis Orgânicas do SUS",
     "temaSlug": "mp-sus",
     "subtemaSlug": "mp-sus-historia-principios-e-leis-organicas-do-sus",
-    "tags": ["equidade","principios-do-sus","dsei"],
+    "tags": [
+      "equidade",
+      "principios-do-sus",
+      "dsei"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -4078,7 +5037,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A equidade busca diminuir desigualdades ao reconhecer que diferentes populações e situações clínicas exigem respostas proporcionais às suas vulnerabilidades. Tanto a classificação de risco no pronto-socorro quanto as políticas específicas para a saúde indígena corporificam esse princípio doutrinário.",
     "perolaClinica": "Equidade no SUS significa tratar desigualmente os desiguais, oferecendo mais a quem mais necessita.",
     "referencias": [
@@ -4088,7 +5048,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 2998
+    "sourcePdfPage": 2998,
+    "analiseBanca": {
+      "conceitoCentral": "Princípio doutrinário da equidade no SUS aplicado à classificação de risco e à saúde indígena.",
+      "raciocinioChave": "Os dois episódios ilustram o tratamento desigual para necessidades desiguais: priorização clínica imediata pela gravidade no pronto-socorro e estruturação de Distrito Sanitário Especial Indígena para reduzir vulnerabilidades históricas. Ambos materializam o princípio da equidade.",
+      "armadilhaBanca": "Trocar o princípio doutrinário da equidade por diretrizes organizativas (hierarquização ou descentralização) ou pelo conceito amplo de acesso."
+    },
+    "mapaDistratores": {
+      "A": "A descentralização diz respeito à redistribuição de poder e responsabilidades administrativas entre União, estados e municípios.",
+      "B": "O acesso universal garante entrada no sistema a todos sem barreiras, enquanto a priorização conforme gravidade ou vulnerabilidade específica expressa a equidade.",
+      "D": "A hierarquização organiza a rede de serviços por níveis crescentes de complexidade tecnológica, não se referindo à justiça distributiva no cuidado."
+    }
   },
   {
     "id": "q-usp-sp-2023-064",
@@ -4100,7 +5070,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Financiamento e Pactos do SUS",
     "temaSlug": "mp-sus",
     "subtemaSlug": "mp-sus-financiamento-e-pactos-do-sus",
-    "tags": ["financiamento-do-sus","gasto-em-saude","saude-suplementar"],
+    "tags": [
+      "financiamento-do-sus",
+      "gasto-em-saude",
+      "saude-suplementar"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -4139,7 +5113,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "O modelo de financiamento em saúde no Brasil apresenta uma contradição estrutural: apesar de possuir um sistema público concebido para ser universal (o SUS), mais da metade das despesas totais de saúde provêm do setor privado (planos de saúde e gasto 'out-of-pocket'), contrariando o padrão internacional de sistemas de cobertura universal.",
     "perolaClinica": "No Brasil, o gasto privado em saúde supera o gasto público, cenário incomum para países que possuem sistemas universais.",
     "referencias": [
@@ -4149,7 +5124,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 2998
+    "sourcePdfPage": 2998,
+    "analiseBanca": {
+      "conceitoCentral": "Estrutura de financiamento da saúde no Brasil: predomínio do gasto privado frente a sistemas universais.",
+      "raciocinioChave": "Embora o Brasil possua o SUS como sistema público universal, menos da metade do gasto total em saúde provém do setor público, fazendo com que a participação do gasto privado (planos e desembolso direto) supere a observada em outros países com cobertura universal.",
+      "armadilhaBanca": "Presumir que a existência constitucional do SUS torna o gasto público brasileiro majoritário ou superior ao de países vizinhos e europeus per capita."
+    },
+    "mapaDistratores": {
+      "B": "O gasto per capita com saúde no Brasil é significativamente menor do que a média dos países europeus desenvolvidos.",
+      "C": "O gasto per capita brasileiro em saúde não supera o de todos os países latino-americanos, ficando atrás de países como Uruguai e Chile.",
+      "D": "Em países ricos com sistemas universais predomina o financiamento público, ao contrário do Brasil, onde o gasto privado responde pela maior fatia das despesas totais."
+    }
   },
   {
     "id": "q-usp-sp-2023-065",
@@ -4161,7 +5146,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Vigilância Sanitária, Ambiental e Saúde Planetária",
     "temaSlug": "mp-vigilancia",
     "subtemaSlug": "mp-vigilancia-vigilancia-sanitaria-ambiental-e-saude-planetaria",
-    "tags": ["anvisa","agrotoxicos","vigilancia-sanitaria","toxicologia"],
+    "tags": [
+      "anvisa",
+      "agrotoxicos",
+      "vigilancia-sanitaria",
+      "toxicologia"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -4200,7 +5190,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A regulação de agrotóxicos no Brasil envolve três órgãos federais com competências distintas: o MAPA cuida da eficácia agronômica e do registro; o IBAMA avalia os impactos ambientais; e a ANVISA analisa os riscos toxicológicos à saúde humana (trabalhadores e consumidores).",
     "perolaClinica": "Registro de agrotóxicos no Brasil: MAPA (agronômico), IBAMA (ambiental) e ANVISA (toxicológico/humano).",
     "referencias": [
@@ -4210,7 +5201,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 2998
+    "sourcePdfPage": 2998,
+    "analiseBanca": {
+      "conceitoCentral": "Competência legal da ANVISA na avaliação toxicológica para registro de agrotóxicos no Brasil.",
+      "raciocinioChave": "No modelo regulatório tripartite brasileiro para agrotóxicos, cabe à ANVISA elaborar o dossiê toxicológico, avaliando os riscos à saúde humana e definindo condições seguras de uso e limites de resíduos. O registro final só ocorre após anuência conjunta com IBAMA e MAPA.",
+      "armadilhaBanca": "Trocar as atribuições sanitárias da ANVISA pelas competências ambientais do IBAMA ou agronômicas e econômicas do MAPA."
+    },
+    "mapaDistratores": {
+      "A": "A análise de custo-benefício agrícola e econômico não compete à ANVISA, cuja avaliação restringe-se estritamente aos riscos sanitários à saúde humana.",
+      "B": "A elaboração do dossiê ambiental para avaliar potencial poluidor e ecotoxicidade é atribuição legal do IBAMA.",
+      "C": "A avaliação da eficiência e viabilidade agronômica por meio de dossiê específico compete ao Ministério da Agricultura e Pecuária (MAPA)."
+    }
   },
   {
     "id": "q-usp-sp-2023-066",
@@ -4222,7 +5223,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Financiamento e Pactos do SUS",
     "temaSlug": "mp-sus",
     "subtemaSlug": "mp-sus-financiamento-e-pactos-do-sus",
-    "tags": ["saude-suplementar","ans","ressarcimento-ao-sus"],
+    "tags": [
+      "saude-suplementar",
+      "ans",
+      "ressarcimento-ao-sus"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -4261,7 +5266,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "O ressarcimento ao SUS é uma obrigação legal estabelecida para coibir o enriquecimento sem causa das operadoras suplementares quando a rede pública atende pacientes por procedimentos contratualmente cobertos pelas operadoras privadas, com constitucionalidade confirmada pelo STF.",
     "perolaClinica": "Planos de saúde devem ressarcir o SUS por atendimentos de seus clientes previstos em contrato; a ANS só fixa reajuste de planos individuais.",
     "referencias": [
@@ -4271,7 +5277,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 2999
+    "sourcePdfPage": 2999,
+    "analiseBanca": {
+      "conceitoCentral": "Regulação da saúde suplementar (Lei 9.656/98) e obrigatoriedade de ressarcimento ao SUS.",
+      "raciocinioChave": "O artigo 32 da Lei nº 9.656/1998 determina que as operadoras de planos privados ressarçam o SUS pelos atendimentos prestados a seus beneficiários na rede pública ou conveniada, dentro dos limites contratuais de cobertura. Essa regra evita enriquecimento sem causa das operadoras.",
+      "armadilhaBanca": "Generalizar o teto de reajuste anual da ANS (restrito a planos individuais/familiares) para contratos coletivos ou inverter o predomínio real de carteiras no mercado."
+    },
+    "mapaDistratores": {
+      "B": "A ANS define o teto máximo de reajuste anual apenas para planos individuais e familiares, enquanto os planos coletivos têm reajuste negociado entre operadora e contratante.",
+      "C": "A maior parcela do mercado de saúde suplementar brasileiro corresponde aos planos coletivos empresariais e por adesão, e não aos individuais/familiares.",
+      "D": "O maior número de beneficiários concentra-se nas modalidades de medicina de grupo e cooperativas médicas, superando numericamente as seguradoras especializadas."
+    }
   },
   {
     "id": "q-usp-sp-2023-067",
@@ -4283,7 +5299,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Investigação de Surtos e Epidemias",
     "temaSlug": "mp-vigilancia",
     "subtemaSlug": "mp-vigilancia-investigacao-de-surtos-e-epidemias",
-    "tags": ["mpox","emergencia-em-saude-publica","epidemiologia"],
+    "tags": [
+      "mpox",
+      "emergencia-em-saude-publica",
+      "epidemiologia"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -4322,7 +5342,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A emergência global de Mpox declarada em julho de 2022 decorreu da propagação do Clado IIb fora das áreas endêmicas africanas. A ampla distribuição geográfica inicial indicou transmissão sustentada não detectada em redes de contato íntimo antes do primeiro alerta oficial.",
     "perolaClinica": "Mpox 2022: Clado IIb (África Ocidental, menor letalidade), transmissão por contato cutâneo direto com lesões ativas.",
     "referencias": [
@@ -4332,7 +5353,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 2999
+    "sourcePdfPage": 2999,
+    "analiseBanca": {
+      "conceitoCentral": "Características epidemiológicas e dinâmica de disseminação do surto global de Mpox em 2022.",
+      "raciocinioChave": "A detecção quase simultânea de casos de Mpox sem vínculo com viagens à África em múltiplos países não endêmicos indicou transmissão inter-humana silenciosa e não detectada previamente. O surto foi impulsionado pelo Clado IIb principalmente por contato íntimo pele a pele.",
+      "armadilhaBanca": "Confundir o clado circulante no surto de 2022 (Clado IIb, antiga África Ocidental, menos letal) com o Clado I ou restringir a transmissão ao sêmen."
+    },
+    "mapaDistratores": {
+      "A": "A concentração inicial entre homens que fazem sexo com homens não era historicamente esperada, pois em áreas endêmicas o perfil era predominantemente zoonótico e familiar.",
+      "C": "A transmissão ocorre principalmente pelo contato direto e íntimo com lesões cutâneo-mucosas e secreções respiratórias próximas, não prioritariamente pelo sêmen.",
+      "D": "A disseminação global de 2022 deveu-se ao Clado IIb (antiga variante da África Ocidental), menos virulento que o Clado I (da Bacia do Congo)."
+    }
   },
   {
     "id": "q-usp-sp-2023-068",
@@ -4344,7 +5375,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Redes de Atenção à Saúde e Regulação",
     "temaSlug": "mp-sus",
     "subtemaSlug": "mp-sus-redes-de-atencao-a-saude-e-regulacao",
-    "tags": ["conitec","incorporacao-de-tecnologias","sus","custo-efetividade"],
+    "tags": [
+      "conitec",
+      "incorporacao-de-tecnologias",
+      "sus",
+      "custo-efetividade"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -4383,7 +5419,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A incorporação de medicamentos e procedimentos no SUS exige análise baseada em Avaliação de Tecnologias em Saúde (ATS). A CONITEC deve subsidiar a decisão demonstrando benefícios clínicos comprovados, custo-efetividade em relação às alternativas vigentes e sustentabilidade financeira por meio do impacto orçamentário.",
     "perolaClinica": "Incorporação no SUS pela CONITEC exige: eficácia, segurança, efetividade, custo-efetividade e análise de impacto orçamentário.",
     "referencias": [
@@ -4393,7 +5430,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 3000
+    "sourcePdfPage": 3000,
+    "analiseBanca": {
+      "conceitoCentral": "Requisitos legais obrigatórios dos relatórios de avaliação de tecnologias pela CONITEC.",
+      "raciocinioChave": "Segundo o artigo 19-Q da Lei nº 8.080/1990, os relatórios da CONITEC devem contemplar obrigatoriamente evidências científicas de eficácia, acurácia, efetividade e segurança, somadas às avaliações econômicas de custo-efetividade e impacto orçamentário no SUS.",
+      "armadilhaBanca": "Apresentar alternativas quase completas (como eficácia, segurança e custo-efetividade) omitindo o requisito legal indispensável do impacto orçamentário."
+    },
+    "mapaDistratores": {
+      "A": "O relatório legal da CONITEC exige critérios clínicos precisos (eficácia, acurácia, efetividade e segurança) e impacto orçamentário, não termos vagos sobre eficiência ou ambiente.",
+      "B": "A ausência da análise econômica de custo-efetividade e de impacto orçamentário torna a descrição incompleta perante a Lei nº 8.080/1990.",
+      "C": "Embora liste os parâmetros clínicos e o custo-efetividade, a alternativa omite a avaliação do impacto orçamentário, exigência legal expressa para incorporação no SUS."
+    }
   },
   {
     "id": "q-usp-sp-2023-069",
@@ -4405,7 +5452,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Redes de Atenção à Saúde e Regulação",
     "temaSlug": "mp-sus",
     "subtemaSlug": "mp-sus-redes-de-atencao-a-saude-e-regulacao",
-    "tags": ["conitec","anvisa","incorporacao-de-tecnologias","sus"],
+    "tags": [
+      "conitec",
+      "anvisa",
+      "incorporacao-de-tecnologias",
+      "sus"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -4444,7 +5496,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "O fluxo de uma nova tecnologia no Brasil segue duas etapas: primeiro o registro sanitário na ANVISA (que julga eficácia, segurança e qualidade fabril); em seguida, a avaliação pela CONITEC para decidir se o produto deve ser financiado pelo SUS, pesando o benefício clínico adicional contra o impacto orçamentário.",
     "perolaClinica": "ANVISA registra e autoriza o comércio; CONITEC avalia impacto orçamentário e custo-efetividade para incorporação no SUS.",
     "referencias": [
@@ -4454,7 +5507,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 3000
+    "sourcePdfPage": 3000,
+    "analiseBanca": {
+      "conceitoCentral": "Papel distinto entre ANVISA (registro sanitário) e CONITEC (incorporação de tecnologias ao SUS).",
+      "raciocinioChave": "Para uma terapia gênica como o Zolgensma ser fornecida gratuita e universalmente pelo SUS, não basta o registro na ANVISA: é necessário parecer favorável da CONITEC avaliando efetividade comparativa, custo-efetividade e impacto orçamentário frente às terapias já disponíveis.",
+      "armadilhaBanca": "Inverter as competências regulatórias atribuindo autorização comercial à CONITEC ou análise de custo-efetividade e incorporação no SUS à ANVISA."
+    },
+    "mapaDistratores": {
+      "A": "A ANVISA avalia eficácia, segurança e qualidade para conceder registro de comercialização no país, sem realizar avaliação de custo-efetividade ou incorporação ao SUS.",
+      "C": "A CONITEC assessora o Ministério da Saúde na incorporação de tecnologias ao SUS, não tendo competência legal para autorizar a comercialização de fármacos no Brasil.",
+      "D": "Estudos de efetividade comparativa e impacto orçamentário para financiamento público no SUS são competências da CONITEC, e não da ANVISA."
+    }
   },
   {
     "id": "q-usp-sp-2023-070",
@@ -4466,7 +5529,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Rastreamento e Lesões Precursoras do Colo Uterino",
     "temaSlug": "go-onco-go",
     "subtemaSlug": "go-onco-go-rastreamento-e-lesoes-precursoras-do-colo-uterino",
-    "tags": ["colpocitologia","saude-trans","testosterona","rastreamento"],
+    "tags": [
+      "colpocitologia",
+      "saude-trans",
+      "testosterona",
+      "rastreamento"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -4505,7 +5573,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "O rastreamento do câncer do colo do útero deve ser oferecido a todas as pessoas que possuem colo uterino, independentemente de sua identidade de gênero. Em homens trans sob androgenoterapia, a atrofia epitelial é frequente, podendo ser atenuada pelo preparo com estrogênio tópico prévio e lubrificação hidrossolúvel do espéculo.",
     "perolaClinica": "Pessoas transmasculinas com colo uterino devem rastrear câncer cervical; estrogênio tópico prévio e lubrificante aquoso aliviam o desconforto.",
     "referencias": [
@@ -4515,7 +5584,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 3000
+    "sourcePdfPage": 3000,
+    "analiseBanca": {
+      "conceitoCentral": "Rastreamento do câncer de colo uterino em pessoas transmasculinas em uso de testosterona.",
+      "raciocinioChave": "Pessoas com colo do útero e atividade sexual devem realizar o rastreamento citopatológico conforme as diretrizes vigentes, independentemente da identidade de gênero. Em usuários de testosterona com atrofia e ressecamento vaginal, recomenda-se estrogênio tópico prévio por alguns dias e lubrificante à base de água na coleta para reduzir desconforto e evitar amostra insatisfatória.",
+      "armadilhaBanca": "Contraindicar equivocadamente o estrogênio tópico vaginal ou o lubrificante hidrossolúvel por receio infundado de interferência na hormonização ou no esfregaço."
+    },
+    "mapaDistratores": {
+      "A": "O estrogênio tópico vaginal em baixa dose não é contraindicado em pessoas transmasculinas e auxilia na melhora do trofismo epitelial para reduzir dor e amostras inadequadas.",
+      "B": "Tanto o estrogênio tópico prévio quanto o lubrificante hidrossolúvel em pequena quantidade no espéculo podem ser usados sem prejudicar a adequabilidade da coleta.",
+      "D": "A manutenção do colo do útero mantém o risco oncológico, não havendo justificativa para suspender o rastreamento; o manejo adequado minimiza o desconforto físico."
+    }
   },
   {
     "id": "q-usp-sp-2023-071",
@@ -4527,7 +5606,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Violência Sexual e Aborto Previsto em Lei",
     "temaSlug": "go-gineco-geral",
     "subtemaSlug": "go-gineco-geral-violencia-sexual-e-aborto-previsto-em-lei",
-    "tags": ["violencia-sexual","aborto-legal","notificacao-compulsoria"],
+    "tags": [
+      "violencia-sexual",
+      "aborto-legal",
+      "notificacao-compulsoria"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -4566,7 +5649,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "O ato sexual praticado com pessoa sem capacidade de resistência ou desacordada caracteriza violência sexual (estupro de vulnerável). A gestação resultante confere direito ao abortamento legal no SUS, sem necessidade de boletim de ocorrência ou autorização judicial, sendo mandatória a notificação compulsória no SINAN.",
     "perolaClinica": "Gestação por estupro: aborto legal no SUS não exige BO nem ordem judicial; a notificação de violência na ficha do SINAN é obrigatória.",
     "referencias": [
@@ -4576,7 +5660,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 3001
+    "sourcePdfPage": 3001,
+    "analiseBanca": {
+      "conceitoCentral": "Conduta médica, ética e legal diante de gestação decorrente de estupro de vulnerável em adolescente.",
+      "raciocinioChave": "Relação sexual com pessoa desacordada e alcoolizada caracteriza estupro de vulnerável pela incapacidade de consentimento. O médico deve esclarecer o direito ao aborto legal previsto no Código Penal, emitir a notificação compulsória de violência e decidir o plano de cuidado em conjunto com a adolescente.",
+      "armadilhaBanca": "Exigir boletim de ocorrência ou autorização judicial para aborto legal, ou condicionar a notificação compulsória à decisão da paciente ou comunicação aos pais."
+    },
+    "mapaDistratores": {
+      "A": "A apresentação de boletim de ocorrência ou autorização judicial não é exigida por lei para o atendimento médico ou a realização do abortamento legal.",
+      "B": "Comunicar os responsáveis sem autorização da adolescente capaz de discernimento viola o sigilo profissional e desconsidera o direito à interrupção legal da gestação.",
+      "D": "Pessoa desacordada não tem capacidade jurídica de consentir, não cabendo investigação policial pelo médico, e a notificação compulsória de violência no SINAN é obrigatória independentemente de autorização."
+    }
   },
   {
     "id": "q-usp-sp-2023-072",
@@ -4588,7 +5682,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Método Clínico Centrado na Pessoa e Comunicação",
     "temaSlug": "mp-mfc",
     "subtemaSlug": "mp-mfc-metodo-clinico-centrado-na-pessoa-e-comunicacao",
-    "tags": ["comunicacao-clinica","mccp","pergunta-aberta","aps"],
+    "tags": [
+      "comunicacao-clinica",
+      "mccp",
+      "pergunta-aberta",
+      "aps"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -4627,7 +5726,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "No Método Clínico Centrado na Pessoa (MCCP), a condução inicial da consulta deve privilegiar perguntas abertas para explorar os motivos do comparecimento e o impacto dos sintomas, combinadas a facilitadores verbais curtos ('entendo', 'sim') que demonstram escuta ativa sem interromper a narrativa.",
     "perolaClinica": "Perguntas abertas e encorajamentos curtos estimulam o paciente a expressar seus sentimentos, ideias e expectativas (FIFE).",
     "referencias": [
@@ -4636,7 +5736,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 3001
+    "sourcePdfPage": 3001,
+    "analiseBanca": {
+      "conceitoCentral": "Técnicas de comunicação clínica centrada na pessoa: pergunta aberta e encorajamento verbal curto.",
+      "raciocinioChave": "O médico abriu a consulta com uma pergunta ampla ('como tem passado?') permitindo a narrativa livre sem interrupções, e sustentou a escuta ativa com um facilitador verbal mínimo ('Entendo'). Na sequência, refletiu a fala da paciente para estimular a exploração do contexto.",
+      "armadilhaBanca": "Confundir pergunta aberta com pergunta focal ou classificar o facilitador curto como técnica de direcionamento diagnóstico."
+    },
+    "mapaDistratores": {
+      "B": "A abertura da consulta com pergunta aberta visou explorar livremente a queixa da paciente, sem direcionamento precoce para hipóteses diagnósticas fechadas.",
+      "C": "O início do atendimento deu-se por pergunta aberta clássica combinada a encorajamento mínimo ('Entendo'), não constituindo uma abordagem isolada de reflexão em espelho.",
+      "D": "Uma pergunta focal restringe a resposta a detalhes específicos ou opções fechadas, ao passo que 'como tem passado?' é uma pergunta aberta típica."
+    }
   },
   {
     "id": "q-usp-sp-2023-073",
@@ -4648,7 +5758,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Prevenção Quaternária e Rastreamento Populacional",
     "temaSlug": "mp-mfc",
     "subtemaSlug": "mp-mfc-prevencao-quaternaria-e-rastreamento-populacional",
-    "tags": ["sobrediagnostico","prevencao-quaternaria","rastreamento","cancer-de-tireoide"],
+    "tags": [
+      "sobrediagnostico",
+      "prevencao-quaternaria",
+      "rastreamento",
+      "cancer-de-tireoide"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -4687,7 +5802,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A curva clássica do câncer de tireoide (explosão de diagnósticos impulsionada por ultrassonografias de alta resolução, enquanto a taxa de mortalidade permanece inalterada e baixa por décadas) ilustra o sobrediagnóstico. Diferente do falso positivo (no qual a doença não existe), no sobrediagnóstico a neoplasia histológica existe, mas seu curso biológico é inofensivo.",
     "perolaClinica": "Sobrediagnóstico: detecção correta de uma lesão real que nunca causaria sintomas ou morte no tempo de vida do indivíduo.",
     "referencias": [
@@ -4704,6 +5820,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Imagem Clínica",
       "caption": "Figura clínica — USP-SP 2023 Q73",
       "aspectRatio": "16:9"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Conceito epidemiológico de sobrediagnóstico ilustrado pela dissociação incidência-mortalidade.",
+      "raciocinioChave": "O gráfico evidencia aumento expressivo na detecção de casos de câncer de tireoide sem variação correspondente na taxa de mortalidade, padrão clássico de sobrediagnóstico. Esse fenômeno ocorre quando se diagnostica corretamente uma neoplasia indolente que jamais causaria sintomas ou óbito.",
+      "armadilhaBanca": "Confundir sobrediagnóstico (doença verdadeira, porém biologicamente inofensiva) com resultado falso-positivo (ausência real da doença)."
+    },
+    "mapaDistratores": {
+      "A": "Um rastreamento positivo não confirmado por exame diagnóstico subsequente define resultado falso-positivo, e não sobrediagnóstico.",
+      "C": "A definição apresentada refere-se a uma condição realmente diagnosticada de curso indolente, o que caracteriza sobrediagnóstico em vez de falso-positivo.",
+      "D": "O gráfico demonstra casos verdadeiros diagnosticados sem impacto na mortalidade, definindo sobrediagnóstico e não resultados falso-positivos não confirmados."
     }
   },
   {
@@ -4716,7 +5842,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Método Clínico Centrado na Pessoa e Comunicação",
     "temaSlug": "mp-mfc",
     "subtemaSlug": "mp-mfc-metodo-clinico-centrado-na-pessoa-e-comunicacao",
-    "tags": ["registro-soap","mccp","comunicacao-clinica","aps"],
+    "tags": [
+      "registro-soap",
+      "mccp",
+      "comunicacao-clinica",
+      "aps"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -4755,7 +5886,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "Segundo os preceitos de Weed e do Método Clínico Centrado na Pessoa, quando o raciocínio clínico não permite firmar um diagnóstico nosológico preciso com segurança, a 'Avaliação' (A do SOAP) deve ser registrada como sinal ou sintoma (neste caso, palpitações). A abordagem subsequente deve explorar a correlação entre as crises e os estressores financeiros apontados pelo cônjuge.",
     "perolaClinica": "No SOAP, quando não há doença firmada, a Avaliação registra o sintoma-guia, evitando diagnósticos presuntivos precoces.",
     "referencias": [
@@ -4765,7 +5897,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 3002
+    "sourcePdfPage": 3002,
+    "analiseBanca": {
+      "conceitoCentral": "Registro do problema em nível de certeza (SOAP) e abordagem centrada na pessoa de sintomas sem diagnóstico.",
+      "raciocinioChave": "Sem critérios definidos para transtorno psiquiátrico e com exames cardiológicos normais, o campo Avaliação do SOAP deve registrar o sintoma em seu grau máximo de certeza ('Palpitações'). A intervenção adequada integra a observação da esposa sobre o gatilho financeiro, convidando o paciente a refletir sobre essa relação.",
+      "armadilhaBanca": "Rotular precocemente o sintoma como transtorno de ansiedade/pânico e prescrever medicação, ou encerrar a queixa dizendo que 'não é nada grave'."
+    },
+    "mapaDistratores": {
+      "A": "Diagnosticar distúrbio ansioso precocemente e propor propranolol medicaliza uma queixa cujo contexto psicossocial ainda não foi explorado com o paciente.",
+      "B": "O quadro não preenche critérios de transtorno do pânico e a pergunta fechada com viés dualista ('algo psicológico') pode gerar resistência do paciente.",
+      "C": "Reafirmar apenas que os exames estão normais invalida o sofrimento percebido e desperdiça a pista contextual relevante fornecida pela esposa."
+    }
   },
   {
     "id": "q-usp-sp-2023-075",
@@ -4777,7 +5919,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Prevenção Quaternária e Rastreamento Populacional",
     "temaSlug": "mp-mfc",
     "subtemaSlug": "mp-mfc-prevencao-quaternaria-e-rastreamento-populacional",
-    "tags": ["niveis-de-prevencao","prevencao-quaternaria","leavell-e-clark","niveis-de-atencao"],
+    "tags": [
+      "niveis-de-prevencao",
+      "prevencao-quaternaria",
+      "leavell-e-clark",
+      "niveis-de-atencao"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -4816,7 +5963,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A classificação de Leavell & Clark define: Primária (evita o surgimento do agravo - ex.: PEP, vacina); Secundária (diagnóstico precoce e tratamento - ex.: rastreamento); Terciária (reabilitação e redução de incapacidades). A prevenção Quaternária (Jamoulle) visa evitar sobrediagnósticos e iatrogenias. Já os níveis de atenção dividem-se em Primário (UBS/consultório geral), Secundário (ambulatórios especializados, CAPS, UPAs) e Terciário (hospitais de alta complexidade).",
     "perolaClinica": "Prevenção quaternária: identificar pessoas em risco de hipermedicalização e protegê-las de novas intervenções iatrogênicas.",
     "referencias": [
@@ -4826,7 +5974,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 3003
+    "sourcePdfPage": 3003,
+    "analiseBanca": {
+      "conceitoCentral": "Classificação dos níveis de prevenção (Leavell & Clark / Jamoulle) e níveis de atenção no SUS.",
+      "raciocinioChave": "A reabilitação em CAPS-IJ configura prevenção terciária na atenção secundária; a PEP em UPA evita o estabelecimento da infecção após exposição (prevenção primária) na atenção secundária; e evitar dosagem rotineira desnecessária de vitamina D em consultório geral é prevenção quaternária na atenção primária.",
+      "armadilhaBanca": "Confundir CAPS ou UPA com atenção primária ou terciária e classificar a PEP como prevenção secundária por ocorrer após a relação de risco."
+    },
+    "mapaDistratores": {
+      "B": "Ações de reabilitação para agravo já estabelecido configuram prevenção terciária, a UPA integra a atenção secundária e a PEP previne o adoecimento (prevenção primária).",
+      "C": "O CAPS-IJ é um serviço especializado de atenção secundária (não terciária), a UPA pertence à atenção secundária e evitar exame desnecessário é prevenção quaternária.",
+      "D": "No CAPS-IJ realiza-se prevenção terciária (não primária), a PEP atua evitando a infecção pelo HIV (prevenção primária) e evitar iatrogenia é prevenção quaternária."
+    }
   },
   {
     "id": "q-usp-sp-2023-076",
@@ -4838,7 +5996,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Atenção Primária à Saúde e ESF",
     "temaSlug": "mp-sus",
     "subtemaSlug": "mp-sus-atencao-primaria-a-saude-e-esf",
-    "tags": ["promocao-da-saude","pnps","atencao-primaria","sus"],
+    "tags": [
+      "promocao-da-saude",
+      "pnps",
+      "atencao-primaria",
+      "sus"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -4877,7 +6040,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A Promoção da Saúde distingue-se da Prevenção de Doenças por atuar globalmente sobre os determinantes sociais da saúde (educação, renda, ambiente seguro, combate à poluição, discriminação e fomento à autonomia), capacitando a comunidade para a melhoria de sua qualidade de vida, em consonância com a PNPS.",
     "perolaClinica": "Promoção da saúde atua sobre determinantes sociais e bem-estar geral; prevenção específica foca na doença (ex.: vacinas).",
     "referencias": [
@@ -4887,7 +6051,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 3003
+    "sourcePdfPage": 3003,
+    "analiseBanca": {
+      "conceitoCentral": "Distinção entre ações de promoção da saúde (PNPS) e medidas de prevenção específica ou rastreamento.",
+      "raciocinioChave": "Conforme a Política Nacional de Promoção da Saúde, ações promotoras atuam sobre determinantes sociais, ambientes sustentáveis e direitos humanos, sem foco em uma doença isolada. Redução da poluição urbana, estímulo à atividade física e garantia da diversidade e direitos humanos exemplificam promoção da saúde.",
+      "armadilhaBanca": "Misturar duas ações legítimas de promoção da saúde com uma medida clássica de prevenção primária (vacinação, preservativo) ou secundária (sorologias, antropometria)."
+    },
+    "mapaDistratores": {
+      "A": "A vacinação é uma medida clássica de prevenção primária (proteção específica contra doenças infecciosas), e não de promoção geral da saúde.",
+      "B": "A aferição seriada de peso e altura na puericultura constitui vigilância nutricional e detecção precoce de desvios do crescimento (prevenção secundária).",
+      "C": "O uso de preservativo é prevenção primária específica contra ISTs e a realização de sorologias configura rastreamento (prevenção secundária)."
+    }
   },
   {
     "id": "q-usp-sp-2023-077",
@@ -4899,7 +6073,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Estudos Epidemiológicos",
     "temaSlug": "mp-epidemio",
     "subtemaSlug": "mp-epidemio-estudos-epidemiologicos",
-    "tags": ["estudos-epidemiologicos","odds-ratio","cancer-de-mama","epidemiologia"],
+    "tags": [
+      "estudos-epidemiologicos",
+      "odds-ratio",
+      "cancer-de-mama",
+      "epidemiologia"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -4938,7 +6117,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "Na interpretação de medidas de associação com Odds Ratio (OR), uma variável só demonstra associação estatisticamente significante quando seu intervalo de confiança de 95% (IC 95%) não contém o valor 1 (valor nulo). Na tabela da questão, somente as variantes nos genes TGFBR1 e KRAS tiveram IC 95% estritamente superior a 1 no modelo de CM total.",
     "perolaClinica": "Razão de chances (OR): se o IC95% incluir o número 1, a associação não tem significância estatística (p ≥ 0,05).",
     "referencias": [
@@ -4955,6 +6135,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Imagem Clínica",
       "caption": "Figura clínica — USP-SP 2023 Q77",
       "aspectRatio": "4:3"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Interpretação de Odds Ratio e intervalo de confiança de 95% em estudo de associação genética.",
+      "raciocinioChave": "Na tabela de associação genética, uma variante só demonstra associação estatisticamente significante quando seu IC 95% não cruza o valor nulo (1,00). Para o desfecho 'CM total', apenas as variantes em TGFBR1 e KRAS mantiveram IC 95% estritamente acima de 1, indicando aumento real de risco.",
+      "armadilhaBanca": "Focar apenas na estimativa pontual do Odds Ratio (como > 1 ou < 1) ignorando se o intervalo de confiança de 95% inclui a unidade (1,00)."
+    },
+    "mapaDistratores": {
+      "A": "Na estratificação do subgrupo ER+, a tabela apresenta ao menos uma variante genética com intervalo de confiança que não inclui a unidade, indicando associação significativa.",
+      "C": "A variante no gene IQGAP1 no subgrupo ER- apresenta intervalo de confiança que engloba o valor 1,00, não podendo ser considerada fator de proteção estatisticamente significante.",
+      "D": "A variante rs1042538 não apresentou a maior razão de chances pontual nem significância estatística para o risco de câncer de mama total."
     }
   },
   {
@@ -4967,7 +6157,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Estudos Epidemiológicos",
     "temaSlug": "mp-epidemio",
     "subtemaSlug": "mp-epidemio-estudos-epidemiologicos",
-    "tags": ["ensaio-clinico","covid-19","medicina-baseada-em-evidencias"],
+    "tags": [
+      "ensaio-clinico",
+      "covid-19",
+      "medicina-baseada-em-evidencias"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -5006,7 +6200,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "Ensaios clínicos randomizados controlados com Ivermectina para a COVID-19 demonstraram de forma consistente que a droga não reduz tempo de internação, progressão para formas graves ou risco de óbito, com estimativas de efeito sem significância estatística, desaconselhando seu uso.",
     "perolaClinica": "Eficácia clínica requer significância estatística (IC95% sem cruzar a unidade) em desfechos centrados no paciente.",
     "referencias": [
@@ -5023,6 +6218,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Imagem Clínica",
       "caption": "Figura clínica — USP-SP 2023 Q78",
       "aspectRatio": "16:9"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Análise de significância estatística em ensaio clínico randomizado controlado.",
+      "raciocinioChave": "Ao comparar o grupo Ivermectina com o grupo controle em todos os desfechos clínicos avaliados (progressão, UTI, ventilação mecânica e óbito), nenhum apresentou diferença estatisticamente significante (p > 0,05 e intervalos de confiança cruzando o valor nulo). Logo, conclui-se ausência de eficácia observada para todos os desfechos.",
+      "armadilhaBanca": "Interpretar pequenas diferenças numéricas percentuais favoráveis ao grupo experimental como prova de eficácia, ignorando p-valores não significantes."
+    },
+    "mapaDistratores": {
+      "A": "A diferença observada na taxa de óbitos não alcançou significância estatística, não permitindo afirmar redução de mortalidade pela Ivermectina.",
+      "B": "Nenhum dos desfechos de gravidade (internação em UTI, ventilação mecânica ou morte) apresentou redução estatisticamente significante no grupo experimental.",
+      "D": "O ensaio clínico controlado com 490 pacientes tem poder e desenho adequados para concluir pela ausência de benefício estatisticamente comprovado nos desfechos avaliados."
     }
   },
   {
@@ -5035,7 +6240,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Estudos Epidemiológicos",
     "temaSlug": "mp-epidemio",
     "subtemaSlug": "mp-epidemio-estudos-epidemiologicos",
-    "tags": ["caso-controle","odds-ratio","transtornos-alimentares","epidemiologia"],
+    "tags": [
+      "caso-controle",
+      "odds-ratio",
+      "transtornos-alimentares",
+      "epidemiologia"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -5074,7 +6284,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "Estudos de caso-controle medem a associação entre exposições pregressas e desfechos clínicos por meio da Razão de Chances (Odds Ratio - OR). Quando o limite inferior do IC 95% é maior do que 1, comprova-se uma associação positiva de risco estatisticamente significante.",
     "perolaClinica": "Em estudos de caso-controle, a associação é estatisticamente significante apenas quando o IC95% do Odds Ratio não inclui o 1,0.",
     "referencias": [
@@ -5091,6 +6302,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Imagem Clínica",
       "caption": "Figura clínica — USP-SP 2023 Q79",
       "aspectRatio": "16:9"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Leitura de Odds Ratio ajustado e significância estatística em estudo de caso-controle.",
+      "raciocinioChave": "Em estudos de caso-controle, a associação significativa exige que o intervalo de confiança de 95% do Odds Ratio não contenha o valor 1,00. Na tabela apresentada, apenas 'bullying verbal' e 'bullying verbal relacionado ao corpo' cumpriram esse critério, elevando a chance de transtornos alimentares.",
+      "armadilhaBanca": "Generalizar a associação significativa de dois subtipos para todos os tipos de bullying ou para todo bullying verbal indistintamente."
+    },
+    "mapaDistratores": {
+      "B": "Nem todos os tipos avaliados mostraram associação válida, pois o bullying físico apresentou intervalo de confiança englobando o valor nulo.",
+      "C": "O subtipo 'bullying verbal não relacionado ao corpo' não alcançou significância estatística, refutando a generalização para qualquer forma de agressão verbal.",
+      "D": "Os resultados de um estudo caso-controle bem delineado permitem inferir conclusões válidas sobre a associação positiva entre determinados tipos de bullying e transtornos alimentares."
     }
   },
   {
@@ -5103,7 +6324,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "História, Princípios e Leis Orgânicas do SUS",
     "temaSlug": "mp-sus",
     "subtemaSlug": "mp-sus-historia-principios-e-leis-organicas-do-sus",
-    "tags": ["integralidade","principios-do-sus","redes-de-atencao"],
+    "tags": [
+      "integralidade",
+      "principios-do-sus",
+      "redes-de-atencao"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -5142,7 +6367,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "O princípio da integralidade (art. 7º, inciso II da Lei 8.080/90) preconiza um conjunto articulado e contínuo de ações e serviços preventivos e curativos, individuais e coletivos, exigidos para cada caso em todos os níveis de complexidade do sistema. A incapacidade de ofertar o tratamento especializado aos pacientes com diagnóstico rastreado na APS quebra diretamente esse princípio.",
     "perolaClinica": "Acesso a todas as etapas do cuidado — da prevenção primária ao tratamento de alta complexidade — traduz a Integralidade no SUS.",
     "referencias": [
@@ -5152,7 +6378,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 3006
+    "sourcePdfPage": 3006,
+    "analiseBanca": {
+      "conceitoCentral": "Princípio doutrinário da integralidade diante da descontinuidade entre rastreamento e tratamento.",
+      "raciocinioChave": "A integralidade garante ao usuário acesso articulado e contínuo a todos os níveis de atenção, desde prevenção e rastreamento até diagnóstico e tratamento de alta complexidade. Quando pacientes rastreados na atenção básica não conseguem realizar cirurgia, radioterapia ou quimioterapia, esse princípio é violado.",
+      "armadilhaBanca": "Confundir integralidade (continuidade do cuidado entre prevenção e cura em todos os níveis) com universalidade (direito de acesso) ou diretrizes organizativas."
+    },
+    "mapaDistratores": {
+      "A": "A universalidade assegura o direito de acesso de todo cidadão ao sistema, mas a falha descrita ocorre na continuidade assistencial entre prevenção e terapia especializada.",
+      "B": "A hierarquização é uma diretriz organizativa de distribuição dos serviços por complexidade, não o princípio doutrinário que assegura a assistência completa ao indivíduo.",
+      "D": "A regionalização refere-se à organização territorial das redes de atenção em regiões de saúde, não definindo a articulação preventiva e curativa do cuidado individual."
+    }
   },
   {
     "id": "q-usp-sp-2023-081",
@@ -5164,7 +6400,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Suporte Avançado de Vida em Pediatria - PALS",
     "temaSlug": "ped-emerg-ped",
     "subtemaSlug": "ped-emerg-ped-suporte-avancado-de-vida-em-pediatria-pals",
-    "tags": ["anafilaxia","adrenalina-intramuscular","emergencia-pediatrica"],
+    "tags": [
+      "anafilaxia",
+      "adrenalina-intramuscular",
+      "emergencia-pediatrica"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -5203,7 +6443,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "O caso descreve um paciente que evoluiu rapidamente após picada (provavelmente de himenóptero) com envolvimento de múltiplos órgãos e sistemas (respiratório, digestivo, cardiovascular com hipotensão e choque). Trata-se de uma anafilaxia grave, cuja droga de escolha imediata e sem contraindicação é a adrenalina 1:1.000 intramuscular no vasto lateral da coxa, acompanhada de posicionamento em decúbito dorsal com elevação de membros inferiores e ressuscitação volêmica.",
     "perolaClinica": "Na anafilaxia, a adrenalina 1:1.000 IM (0,01 mg/kg no vasto lateral da coxa) é o tratamento de 1ª linha mandatório imediato; corticoides e anti-histamínicos são apenas adjuvantes.",
     "referencias": [
@@ -5220,6 +6461,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Fotografia Clínica",
       "caption": "Lesão eritemato-edematosa localizada no membro superior compatível com picada de inseto/himenóptero.",
       "aspectRatio": "4:3"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Tratamento de primeira linha da anafilaxia grave pediátrica com adrenalina intramuscular.",
+      "raciocinioChave": "Criança com dor aguda no braço no parquinho evoluiu em 30 minutos com acometimento respiratório (sibilos, SatO₂ 92%), gastrointestinal (vômitos, diarreia) e hemodinâmico (hipotensão e taquicardia), configurando anafilaxia grave por picada de inseto. Além de O₂ e volume, a conduta imediata prioritária é adrenalina 1:1.000 intramuscular e elevação dos membros inferiores.",
+      "armadilhaBanca": "Indicar adrenalina por via endovenosa em bolus (risco de arritmias fatais na abordagem inicial) ou confundir anafilaxia por himenóptero com escorpionismo ou aracneísmo."
+    },
+    "mapaDistratores": {
+      "A": "A adrenalina endovenosa em bolus é contraindicada no manejo inicial da anafilaxia pelo risco de arritmias letais, e anti-histamínicos/corticoides são apenas medidas secundárias.",
+      "C": "O quadro sistêmico agudo com broncoespasmo, diarreia e choque distributivo imediato configura reação anafilática, não justificando soro antiaracnídico nem morfina (que piora a hipotensão).",
+      "D": "O escorpionismo grave cursa tipicamente com sudorese profusa, sialorreia, vômitos incoercíveis e hiperatividade adrenérgica/colinérgica sem sibilância anafilática típica, e alfa-1 bloqueador agravaria o choque."
     }
   },
   {
@@ -5232,7 +6483,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Acidentes, Intoxicações e Maus-Tratos na Infância",
     "temaSlug": "ped-emerg-ped",
     "subtemaSlug": "ped-emerg-ped-acidentes-intoxicacoes-e-maus-tratos-na-infancia",
-    "tags": ["corpo-estranho","ingestao-de-moeda","endoscopia","emergencia-pediatrica"],
+    "tags": [
+      "corpo-estranho",
+      "ingestao-de-moeda",
+      "endoscopia",
+      "emergencia-pediatrica"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -5271,7 +6527,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A ingestão de moedas alojadas no esôfago proximal com repercussão sintomática (inabilidade para engolir a própria saliva, sialorreia importante ou engasgos) caracteriza urgência/emergência endoscópica absoluta (remoção em até 2 horas). Se o paciente estivesse totalmente assintomático, uma observação de até 12-24 horas poderia ser considerada para verificar progressão espontânea ao estômago, o que não se aplica ao caso clínico apresentado.",
     "perolaClinica": "Corpo estranho no esôfago com disfagia/sialorreia (incapacidade de deglutir secreções) exige EDA de emergência em até 2 horas pelo risco iminente de aspiração.",
     "referencias": [
@@ -5288,6 +6545,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Radiografia",
       "caption": "Radiografia cervical/torácica revelando corpo estranho metálico radiopaco e circular compatível com moeda alojada no terço superior do esôfago.",
       "aspectRatio": "4:3"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Indicação de endoscopia digestiva alta de emergência (até 2h) na impactação esofágica sintomática.",
+      "raciocinioChave": "Lactente com ingestão recente de moeda apresenta dificuldade para engolir saliva e engasgos, evidenciando obstrução esofágica sintomática na radiografia. Pelas diretrizes pediátricas, corpos estranhos impactados no esôfago com incapacidade de deglutir secreções demandam remoção endoscópica de emergência em até 2 horas.",
+      "armadilhaBanca": "Aplicar a janela de até 24 horas (válida apenas para moedas esofágicas em pacientes totalmente assintomáticos) em uma criança com sialorreia e engasgos."
+    },
+    "mapaDistratores": {
+      "A": "O prazo de até 24 horas aplica-se apenas a pacientes assintomáticos com objeto rombo no esôfago; a dificuldade para engolir saliva exige endoscopia de emergência em até 2 horas.",
+      "C": "A observação domiciliar de corpo estranho impactado no esôfago é contraindicada pelo alto risco de necrose de parede, perfuração, mediastinite e broncoaspiração.",
+      "D": "Manter criança sintomática com obstrução esofágica em observação hospitalar expectante retarda a desobstrução necessária e eleva o risco de aspiração de secreções."
     }
   },
   {
@@ -5300,7 +6567,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Suporte Avançado de Vida em Pediatria - PALS",
     "temaSlug": "ped-emerg-ped",
     "subtemaSlug": "ped-emerg-ped-suporte-avancado-de-vida-em-pediatria-pals",
-    "tags": ["ventilacao-bolsa-valvula-mascara","via-aerea-pediatrica","pals"],
+    "tags": [
+      "ventilacao-bolsa-valvula-mascara",
+      "via-aerea-pediatrica",
+      "pals"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -5339,7 +6610,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A anatomia da via aérea no lactente pequeno se caracteriza por occipital volumoso, língua proporcionalmente grande e traqueia mais maleável. Por isso, a retificação da via aérea é obtida com a colocação de um coxim sob as escápulas (ombros), mantendo a cabeça em posição neutra. A vedação com a máscara exige seleção do tamanho apropriado e fixação com a manobra 'C-E', apoiando os dedos apenas no rebordo ósseo da mandíbula.",
     "perolaClinica": "Em lactentes, coxim é SOB AS ESCÁPULAS (para compensar o grande occipital e manter posição neutra); nunca sob o crânio.",
     "referencias": [
@@ -5356,6 +6628,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Fotografia Clínica",
       "caption": "Painel de alternativas fotográficas demonstrando tamanhos de máscara facial, apoio de dedos e posição de coxim subescapular em manequim de lactente.",
       "aspectRatio": "1:1"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Posicionamento da via aérea (coxim subescapular) e técnica da máscara em C-E para ventilação assistida no lactente pequeno.",
+      "raciocinioChave": "Devido ao occipital proeminente do lactente de 2 meses, o decúbito dorsal flexiona o pescoço e obstrui a via aérea; o coxim sob os ombros/escápulas retifica o eixo em posição neutra. A vedação exige máscara do tamanho correto (da ponte nasal ao sulco mentoniano) segurada com a manobra C-E apoiada no rebordo ósseo mandibular.",
+      "armadilhaBanca": "Confundir a posição neutra com coxim subescapular no lactente com a hiperextensão cervical ou coxim sob a cabeça usados em crianças maiores e adultos."
+    },
+    "mapaDistratores": {
+      "B": "O posicionamento do coxim sob a cabeça acentua a flexão cervical pelo occipital proeminente e pode haver compressão de partes moles do assoalho oral.",
+      "C": "A máscara apresenta tamanho inadequado (comprimindo órbitas ou extrapolando o mento) ou posicionamento incorreto dos dedos fora do rebordo mandibular.",
+      "D": "A hiperextensão cervical ou o desajuste da máscara promove o colapso da traqueia cartilaginosa maleável típica do lactente pequeno."
     }
   },
   {
@@ -5368,7 +6650,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Vacinas Especiais - CRIE e Eventos Adversos",
     "temaSlug": "ped-vacinas",
     "subtemaSlug": "ped-vacinas-vacinas-especiais-crie-e-eventos-adversos",
-    "tags": ["evento-adverso-pos-vacinal","ehh","brue","pediatria"],
+    "tags": [
+      "evento-adverso-pos-vacinal",
+      "ehh",
+      "brue",
+      "pediatria"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -5407,7 +6694,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "O Episódio Hipotônico-Hiporresponsivo (EHH) ocorre predominantemente nas primeiras 48 horas (geralmente primeiras 6 a 12 horas) após a administração da vacina de células inteiras contra coqueluche (Penta de células inteiras). É caracterizado pela tríade: hipotonia muscular, hiporresponsividade e palidez ou cianose. Trata-se de um evento funcional transitório sem repercussões neurológicas crônicas, não havendo necessidade de exames adicionais após a estabilização clínica completa (a próxima dose da vacina com pertussis deverá ser com a fórmula acelular).",
     "perolaClinica": "Episódio Hipotônico-Hiporresponsivo (EHH) pós-DTP/Penta: início em até 48h, tríade de hipotonia + palidez/cianose + arresponsividade. É autolimitado e dispensa propedêutica invasiva após normalização clínica.",
     "referencias": [
@@ -5417,7 +6705,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 3008
+    "sourcePdfPage": 3008,
+    "analiseBanca": {
+      "conceitoCentral": "Reconhecimento e conduta conservadora no Episódio Hipotônico-Hiporresponsivo (EHH) pós-vacina pertussis celular aos 2 meses.",
+      "raciocinioChave": "A tríade de hipotonia, hiporresponsividade e cianose/palidez poucas horas após a vacinação dos 2 meses (pentavalente), seguida de recuperação completa e exame físico normal, fecha o diagnóstico clínico de EHH. Por ser um evento funcional transitório sem sequelas neurológicas, não há indicação de exames complementares adicionais.",
+      "armadilhaBanca": "Tratar um evento adverso vacinal benigno e autolimitado como sepse, meningite ou cardiopatia, levando a investigação invasiva desnecessária."
+    },
+    "mapaDistratores": {
+      "A": "Não há indicação rotineira de ECG ou EEG após EHH típico autolimitado com recuperação completa e ausência de sinais focais ou cardiológicos.",
+      "B": "O retorno pleno do tônus, da consciência e da respiração sem déficits focais ou alterações de fontanela torna desnecessária a neuroimagem.",
+      "C": "A coleta de líquor e pesquisa de Bordetella pertussis não se justificam diante de evento pós-vacinal típico sem sinais de sepse ou neuroinfecção."
+    }
   },
   {
     "id": "q-usp-sp-2023-085",
@@ -5429,7 +6727,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Asma na Infância e Fibrose Cística",
     "temaSlug": "ped-pneumo-ped",
     "subtemaSlug": "ped-pneumo-ped-asma-na-infancia-e-fibrose-cistica",
-    "tags": ["fibrose-cistica","pseudomonas","mrsa","exacerbacao-pulmonar"],
+    "tags": [
+      "fibrose-cistica",
+      "pseudomonas",
+      "mrsa",
+      "exacerbacao-pulmonar"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -5468,7 +6771,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "Nas exacerbações infecciosas pulmonares de pacientes com fibrose cística, a terapia antimicrobiana deve ser instituída de imediato, direcionada pelo histórico de colonizações crônicas prévias do paciente. Havendo histórico de colonização por Pseudomonas aeruginosa e MRSA, a recomendação clássica é utilizar dois antimicrobianos antipseudomonas de classes distintas (betalactâmico com ação antipseudomonas + aminoglicosídeo) associados a um agente com excelente penetração pulmonar contra MRSA (linezolida ou vancomicina).",
     "perolaClinica": "Exacerbação em fibrose cística com colonização prévia por Pseudomonas + MRSA = cobertura antipseudomonas dupla (ex: Ceftazidima + Amicacina) + anti-MRSA (Linezolida ou Vancomicina).",
     "referencias": [
@@ -5485,6 +6789,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Radiografia",
       "caption": "Radiografias de tórax comparativas demonstrando bronquiectasias difusas, espessamento peribrônquico e novos infiltrados interstício-alveolares bilaterais.",
       "aspectRatio": "4:3"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Antibioticoterapia empírica na exacerbação pulmonar de fibrose cística guiada por colonização crônica (Pseudomonas e MRSA).",
+      "raciocinioChave": "A piora da tosse, escarro purulento, hemoptise leve e aumento da demanda de O2 caracterizam exacerbação infecciosa aguda na fibrose cística, exigindo tratamento empírico imediato guiado pelas culturas prévias. Para cobertura simultânea de Pseudomonas aeruginosa (dupla terapia sinérgica) e MRSA, associa-se ceftazidima + amicacina + linezolida.",
+      "armadilhaBanca": "Escolher ceftriaxona por ser um betalactâmico comum em pneumonias comunitárias ou postergar o início do antibiótico aguardando nova cultura."
+    },
+    "mapaDistratores": {
+      "A": "A ceftriaxona não possui ação antipseudomonas e o metronidazol não integra o esquema empírico habitual sem evidência de abscesso por anaeróbios.",
+      "C": "Aguardar os resultados das culturas atuais atrasaria a terapia frente à deterioração respiratória clínica, agravando o dano pulmonar.",
+      "D": "O aumento da purulência do escarro e da necessidade de oxigênio define exacerbação aguda com indicação formal de antibioticoterapia parenteral precoce."
     }
   },
   {
@@ -5497,7 +6811,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Neoplasias Pediátricas",
     "temaSlug": "ped-cardio-hemato-ped",
     "subtemaSlug": "ped-cardio-hemato-ped-neoplasias-pediatricas",
-    "tags": ["sindrome-de-lise-tumoral","emergencia-oncologica","neoplasias-pediatricas"],
+    "tags": [
+      "sindrome-de-lise-tumoral",
+      "emergencia-oncologica",
+      "neoplasias-pediatricas"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -5536,7 +6854,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A apresentação de sintomas constitucionais, aumento de volume abdominal, comprometimento respiratório e oligúria súbita em criança previamente sadia aponta para uma neoplasia de alta fração de proliferação (ex.: Linfoma de Burkitt) com Síndrome de Lise Tumoral (SLT) espontânea, gerando nefropatia obstrutiva por ácido úrico e/ou fosfato de cálcio. A prioridade de emergência para instituir estabilização e suporte nefrológico/metabólico envolve dosar DHL, fósforo, ácido úrico, cálcio e eletrólitos.",
     "perolaClinica": "Suspeita de malignidade de rápida proliferação com lesão renal aguda/oligúria = dosar imediatamente Ácido Úrico, Fósforo, Cálcio, Potássio e DHL para diagnosticar Síndrome de Lise Tumoral.",
     "referencias": [
@@ -5553,6 +6872,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Radiografia",
       "caption": "Radiografia de tórax/abdome e exames laboratoriais iniciais demonstrando alterações compatíveis com acometimento neoplásico abdominal e disfunção renal.",
       "aspectRatio": "4:3"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Rastreamento imediato de Síndrome de Lise Tumoral em criança com suspeita de neoplasia hematológica e lesão renal aguda oligúrica.",
+      "raciocinioChave": "Febre prolongada, falha de antibiótico, massa/acometimento abdominal e respiratório com oligúria súbita sugerem neoplasia de alta proliferação (como linfoma de Burkitt) complicada por Síndrome de Lise Tumoral espontânea. Dosar DHL, fósforo e ácido úrico é prioritário para definir medidas de estabilização metabólica e proteção renal imediatas.",
+      "armadilhaBanca": "Focar apenas na investigação etiológica do derrame pleural ou infecções crônicas, ignorando a emergência metabólica da Síndrome de Lise Tumoral."
+    },
+    "mapaDistratores": {
+      "A": "A análise do líquido pleural auxilia no diagnóstico e estadiamento, mas não define os distúrbios metabólicos ameaçadores à vida na estabilização inicial.",
+      "B": "A pesquisa de esquizócitos investiga microangiopatias trombóticas (como SHU), quadro incompatível com massa abdominal/torácica de provável origem linfoproliferativa.",
+      "D": "A rápida progressão clínica com oligúria e provável massa neoplásica aponta para lise tumoral, e não para tuberculose como prioridade de estabilização aguda."
     }
   },
   {
@@ -5565,7 +6894,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Síndrome Nefrítica e Nefrótica Pediátrica",
     "temaSlug": "ped-gastro-nefro-ped",
     "subtemaSlug": "ped-gastro-nefro-ped-sindrome-nefritica-e-nefrotica-pediatrica",
-    "tags": ["sindrome-nefrotica","sindrome-nefritica","investigacao-renal","pediatria"],
+    "tags": [
+      "sindrome-nefrotica",
+      "sindrome-nefritica",
+      "investigacao-renal",
+      "pediatria"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -5604,7 +6938,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "Crianças em idade escolar com acometimento glomerular evidente (edema, hipertensão arterial, alteração urinária e lesão renal) fora do padrão epidemiológico ou clínico típico da GNPE benigna requerem investigação de causas secundárias, notadamente colagenoses como Lúpus Eritematoso Sistêmico (FAN, anti-DNA, complemento C3/C4).",
     "perolaClinica": "Glomerulonefrite com apresentação atípica em menina escolar exige investigação diagnóstica ampliada para causas sistêmicas e autoimunes (especialmente LES).",
     "referencias": [
@@ -5621,6 +6956,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Gráfico/Tabela",
       "caption": "Painel de exames laboratoriais demonstrando urinálise com hematúria/proteinúria e provas de função renal alteradas.",
       "aspectRatio": "1:1"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Indicação de investigação de glomerulopatias secundárias em criança escolar com síndrome nefrítica e quadro clínico atípico.",
+      "raciocinioChave": "Menina de 8 anos com síndrome nefrítica, hipertensão importante e alterações laboratoriais fora do curso clássico da GNPE pós-infecciosa benigna ou da lesão mínima pura necessita investigação etiológica ampliada. Deve-se rastrear causas secundárias como Lúpus Eritematoso Sistêmico e outras colagenoses/vasculites antes de definir imunossupressão ou biópsia.",
+      "armadilhaBanca": "Assumir automaticamente tratar-se de síndrome nefrótica por lesão mínima ou GNPE típica, aplicando o prazo de 8 semanas de conduta expectante."
+    },
+    "mapaDistratores": {
+      "A": "Aguardar 8 semanas de resposta ao corticoide aplica-se à síndrome nefrótica idiopática típica, sem hematúria ou padrão nefrítico atípico.",
+      "B": "Iniciar corticoterapia empírica antes do diagnóstico etiológico pode mascarar doenças sistêmicas graves, como nefrite lúpica, e prejudicar a conduta definitiva.",
+      "C": "A espera de 8 semanas pela normalização do complemento restringe-se à GNPE clássica com história infecciosa compatível e evolução benigna esperada."
     }
   },
   {
@@ -5633,7 +6978,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Suporte Avançado de Vida em Pediatria - PALS",
     "temaSlug": "ped-emerg-ped",
     "subtemaSlug": "ped-emerg-ped-suporte-avancado-de-vida-em-pediatria-pals",
-    "tags": ["atresia-de-vias-biliares","hipertensao-portal","hemorragia-digestiva-alta","octreotide"],
+    "tags": [
+      "atresia-de-vias-biliares",
+      "hipertensao-portal",
+      "hemorragia-digestiva-alta",
+      "octreotide"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -5672,7 +7022,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A falha da cirurgia de Kasai na atresia de vias biliares cursa com fibrose hepática progressiva e hipertensão portal. A exteriorização de melena escura e malcheirosa nesse cenário denota sangramento digestivo alto por rotura de varizes de esôfago. A abordagem inicial inclui estabilização hemodinâmica cuidadosa, antibioprofilaxia e início imediato de vasoconstritor esplâncnico (como octreotida ou terlipressina) antes da endoscopia digestiva diagnóstica e terapêutica.",
     "perolaClinica": "HDA varicosa na hipertensão portal pediátrica: jejum + proteção de via aérea + expansão parcimoniosa + antibiótico profilático + VASOCONSTRITOR ESPLÂNCNICO (octreotide).",
     "referencias": [
@@ -5689,6 +7040,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Fotografia Clínica",
       "caption": "Fotografia de fezes em melena volumosa (Figura A) e abdome globoso distendido com circulação colateral evidente e ascite.",
       "aspectRatio": "16:9"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Manejo inicial da hemorragia digestiva alta varicosa na hipertensão portal secundária à atresia de vias biliares.",
+      "raciocinioChave": "Lactente com atresia de vias biliares pós-Kasai sem drenagem adequada evolui com cirrose e hipertensão portal, apresentando agora melena e ascite por provável sangramento varicoso. Além de jejum e antibioticoprofilaxia, a medida farmacológica imediata de escolha é iniciar vasoconstritor esplâncnico (como octreotida) para reduzir o fluxo e a pressão portal.",
+      "armadilhaBanca": "Indicar expansão volêmica vigorosa (40–60 mL/kg), que eleva a pressão portal e agrava a hemorragia varicosa."
+    },
+    "mapaDistratores": {
+      "A": "O TIPS é terapia de resgate para sangramento varicoso refratário à farmacoterapia e endoscopia, não constituindo medida inicial imediata.",
+      "C": "Expansões volêmicas agressivas aumentam a pressão hidrostática portal e precipitam ressangramento ou piora da hemorragia varicosa.",
+      "D": "O quadro decorre de hipertensão portal com sangramento digestivo alto, e não de abdome agudo obstrutivo por bridas, contraindicando laparoscopia."
     }
   },
   {
@@ -5701,7 +7062,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Triagens Neonatais",
     "temaSlug": "ped-neo",
     "subtemaSlug": "ped-neo-triagens-neonatais",
-    "tags": ["triagem-auditiva-neonatal","emissoes-otoacusticas","recem-nascido"],
+    "tags": [
+      "triagem-auditiva-neonatal",
+      "emissoes-otoacusticas",
+      "recem-nascido"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -5740,7 +7105,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A triagem auditiva neonatal universal deve ser realizada preferencialmente nos primeiros 30 dias de vida. Em crianças sem indicadores de risco para deficiência auditiva (IRDA), o teste de escolha é a Emissão Otoacústica Evocada (EOAE). O PEATE/BERA só é o exame de triagem de primeira escolha nos recém-nascidos que apresentam pelo menos um IRDA.",
     "perolaClinica": "Triagem auditiva neonatal universal: SEM fatores de risco (IRDA) = Emissões Otoacústicas (EOA); COM fatores de risco (IRDA) = PEATE/BERA.",
     "referencias": [
@@ -5750,7 +7116,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 3012
+    "sourcePdfPage": 3012,
+    "analiseBanca": {
+      "conceitoCentral": "Escolha do método de Triagem Auditiva Neonatal (EOA vs. PEATE) conforme presença de indicadores de risco (IRDA).",
+      "raciocinioChave": "O recém-nascido a termo teve apenas icterícia tratada com fototerapia (sem necessidade de exsanguinotransfusão e sem internação em UTI > 5 dias) e não possui antecedentes familiares ou malformações, não configurando IRDA. Na ausência de indicadores de risco, a triagem auditiva até 30 dias deve ser feita por Emissões Otoacústicas Evocadas (EOA).",
+      "armadilhaBanca": "Classificar erroneamente a icterícia tratada com fototerapia convencional como Indicador de Risco para Deficiência Auditiva (IRDA), indicando PEATE."
+    },
+    "mapaDistratores": {
+      "A": "O PEATE (BERA) como exame inicial de triagem destina-se apenas aos recém-nascidos que apresentam pelo menos um indicador de risco para deficiência auditiva.",
+      "C": "Icterícia neonatal em fototerapia convencional sem nível de exsanguinotransfusão e parto a termo sem UTI > 5 dias não configuram IRDA.",
+      "D": "Além de indicar incorretamente o PEATE para um caso de baixo risco, atribui erroneamente a presença de IRDA ao recém-nascido descrito."
+    }
   },
   {
     "id": "q-usp-sp-2023-090",
@@ -5762,7 +7138,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Sepse Neonatal e Infecções Congênitas no RN",
     "temaSlug": "ped-neo",
     "subtemaSlug": "ped-neo-sepse-neonatal-e-infeccoes-congenitas-no-rn",
-    "tags": ["toxoplasmose-congenita","avidez-de-igg","pre-natal","recem-nascido"],
+    "tags": [
+      "toxoplasmose-congenita",
+      "avidez-de-igg",
+      "pre-natal",
+      "recem-nascido"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -5801,7 +7182,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alta avidez de IgG realizada no primeiro trimestre (até a 12ª-16ª semana de gestação) confirma que a aquisição do Toxoplasma gondii ocorreu pelo menos 12 a 16 semanas antes da realização do teste, ou seja, antes do período gestacional. Como a transmissão congênita só ocorre na primoinfecção durante a gravidez (salvo exceções de imunossupressão grave como AIDS descompensada), não há risco de toxoplasmose congênita, dispensando investigação e tratamento no concepto.",
     "perolaClinica": "IgG e IgM reagentes com ALTA AVIDEZ no 1º trimestre (< 16 sem) = infecção pré-concepcional (antiga). Risco fetal nulo; RN necessita apenas de puericultura habitual.",
     "referencias": [
@@ -5811,7 +7193,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 3012
+    "sourcePdfPage": 3012,
+    "analiseBanca": {
+      "conceitoCentral": "Interpretação da avidez de IgG para toxoplasmose no 1º trimestre gestacional e conduta no recém-nascido.",
+      "raciocinioChave": "A alta avidez de IgG detectada com 7 semanas de gestação comprova que a infecção materna por Toxoplasma gondii ocorreu há mais de 12–16 semanas, ou seja, antes da concepção. Descartada a primoinfecção gestacional em mãe hígida, o RN assintomático recebe apenas cuidados de rotina, sem investigação ou tratamento.",
+      "armadilhaBanca": "Ignorar a idade gestacional da coleta e indicar investigação invasiva ou tratamento do RN apenas pela presença de IgM positiva materna."
+    },
+    "mapaDistratores": {
+      "A": "A investigação completa do RN (líquor, fundo de olho e neuroimagem) só é indicada quando há suspeita ou confirmação de infecção materna adquirida na gestação.",
+      "B": "A sorologia de sangue de cordão sofre contaminação materna e é desnecessária quando a infecção aguda gestacional já foi excluída pela alta avidez precoce.",
+      "C": "O esquema tríplice por 1 ano expõe o recém-nascido a toxicidade medular desnecessária, pois a infecção materna foi pré-gestacional."
+    }
   },
   {
     "id": "q-usp-sp-2023-091",
@@ -5823,7 +7215,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Triagens Neonatais",
     "temaSlug": "ped-neo",
     "subtemaSlug": "ped-neo-triagens-neonatais",
-    "tags": ["teste-do-pezinho","fenilcetonuria","triagem-neonatal"],
+    "tags": [
+      "teste-do-pezinho",
+      "fenilcetonuria",
+      "triagem-neonatal"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -5862,7 +7258,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "O teste do pezinho para identificação da fenilcetonúria depende da ingestão de fenilalanina através da dieta láctea. Se coletado precocemente antes de 48 horas de vida ou antes de uma ingesta proteica adequada, os níveis sanguíneos de fenilalanina podem estar falsamente baixos, impossibilitando a detecção da doença. O período preconizado pelo Ministério da Saúde é entre o 3º e 5º dia de vida.",
     "perolaClinica": "Triagem para Fenilcetonúria (Teste do Pezinho): deve ser realizada entre o 3º e o 5º dia de vida, impreterivelmente após 48h de ingesta proteica para evitar falso-negativos.",
     "referencias": [
@@ -5872,7 +7269,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 3012
+    "sourcePdfPage": 3012,
+    "analiseBanca": {
+      "conceitoCentral": "Momento ideal para coleta da triagem neonatal (Teste do Pezinho) para fenilcetonúria após aporte proteico.",
+      "raciocinioChave": "A detecção da fenilcetonúria na triagem neonatal depende do acúmulo sérico de fenilalanina proveniente da digestão de proteínas do leite materno ou fórmula. Portanto, a coleta deve ocorrer após 48 horas de vida (idealmente entre o 3º e o 5º dia), garantindo ingesta proteica suficiente para evitar resultados falso-negativos.",
+      "armadilhaBanca": "Ceder à ansiedade materna e coletar o Teste do Pezinho antes das 48 horas de vida ou antes do início da alimentação láctea, gerando falso-negativo."
+    },
+    "mapaDistratores": {
+      "A": "A fenilcetonúria possui tratamento dietético eficaz com restrição de fenilalanina, prevenindo deficiência intelectual quando iniciada precocemente.",
+      "B": "Coletar antes da introdução do leite e logo após o nascimento impede a elevação da fenilalanina sérica, gerando resultado falso-negativo.",
+      "D": "A triagem neonatal para fenilcetonúria é universal e obrigatória para todos os recém-nascidos, independentemente do exame físico normal."
+    }
   },
   {
     "id": "q-usp-sp-2023-092",
@@ -5884,7 +7291,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Icterícia Neonatal",
     "temaSlug": "ped-neo",
     "subtemaSlug": "ped-neo-ictericia-neonatal",
-    "tags": ["ictericia-neonatal","zonas-de-kramer","deficiencia-de-g6pd","fototerapia"],
+    "tags": [
+      "ictericia-neonatal",
+      "zonas-de-kramer",
+      "deficiencia-de-g6pd",
+      "fototerapia"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -5923,7 +7335,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A escala de Kramer correlaciona a progressão cefalocaudal da icterícia com os níveis séricos presumidos, situando a raiz das coxas na Zona III. Para a idade de 40 horas de vida em paciente com processo hemolítico subjacente confirmado (deficiência de G6PD com presença de hemácias fragmentadas), o valor de BI de 11,1 mg/dL ultrapassa o limiar de indicação de fototerapia para RNs de médio/alto risco.",
     "perolaClinica": "Icterícia até os joelhos e coxas = Zona III de Kramer. Na presença de hemólise (G6PD baixa, fragmentos) e BI > 11 mg/dL com 40h de vida, a fototerapia imediata é mandatória.",
     "referencias": [
@@ -5933,7 +7346,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 3013
+    "sourcePdfPage": 3013,
+    "analiseBanca": {
+      "conceitoCentral": "Classificação topográfica de Kramer (Zona III) e indicação de fototerapia na hiperbilirrubinemia hemolítica por deficiência de G6PD.",
+      "raciocinioChave": "A extensão da icterícia até a raiz das coxas corresponde à Zona III de Kramer (umbigo até joelhos/coxas). Diante de BI de 11,1 mg/dL com 40 horas de vida em RN portador de doença hemolítica (deficiência de G6PD e hemácias fragmentadas), o nível atinge o limiar para fototerapia imediata.",
+      "armadilhaBanca": "Errar a correspondência anatômica da Zona III de Kramer (raiz das coxas) ou subestimar o risco hemolítico da deficiência de G6PD para indicar fototerapia."
+    },
+    "mapaDistratores": {
+      "A": "A raiz das coxas define Zona III (e não IV), além de a conduta expectante ser inadequada frente à hemólise por G6PD e BI de 11,1 mg/dL às 40h.",
+      "B": "A Zona IV de Kramer engloba pernas abaixo dos joelhos e antebraços/braços, não correspondendo à distribuição até a raiz das coxas.",
+      "C": "Apesar da classificação correta como Zona III, aguardar 12 horas em RN com hemólise por deficiência de G6PD aumenta o risco de neurotoxicidade bilirrubínica."
+    }
   },
   {
     "id": "q-usp-sp-2023-093",
@@ -5945,7 +7368,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Convulsão Febril e Emergências Neurológicas",
     "temaSlug": "ped-emerg-ped",
     "subtemaSlug": "ped-emerg-ped-convulsao-febril-e-emergencias-neurologicas",
-    "tags": ["crise-febril-simples","convulsao-febril","observacao-clinica"],
+    "tags": [
+      "crise-febril-simples",
+      "convulsao-febril",
+      "observacao-clinica"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -5984,7 +7411,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A crise convulsiva febril simples é um evento neurológico benigno comum na infância. Os critérios incluem idade entre 6 meses e 5 anos, crise tônico-clônica generalizada, duração menor que 15 minutos, episódio único em 24 horas e ausência de infecção do sistema nervoso central ou distúrbio metabólico. Uma vez excluída meningite e com recuperação clínica completa, não há indicação de EEG, neuroimagem ou profilaxia medicamentosa, recomendando-se apenas seguimento ambulatorial e esclarecimento aos pais.",
     "perolaClinica": "Crise Febril Simples (generalizada, < 15 min, única em 24h, 6m-5a): prognóstico excelente; NÃO requer EEG, TC nem anticonvulsivante contínuo profilático.",
     "referencias": [
@@ -5994,7 +7422,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 3013
+    "sourcePdfPage": 3013,
+    "analiseBanca": {
+      "conceitoCentral": "Conduta conservadora após crise convulsiva febril simples em lactente neurologicamente hígido.",
+      "raciocinioChave": "A crise generalizada, única em 24 horas, com duração de 8 minutos (< 15 min) durante episódio febril por otite média aguda em lactente de 18 meses com exame neurológico normal preenche critérios de crise febril simples. Por ter evolução benigna, indica-se apenas acompanhamento pediátrico de rotina, sem exames complementares ou profilaxia.",
+      "armadilhaBanca": "Solicitar EEG, neuroimagem ou anticonvulsivante profilático em uma criança que apresentou apenas um episódio típico de crise febril simples."
+    },
+    "mapaDistratores": {
+      "A": "A tomografia de crânio não é recomendada na crise febril simples em criança sem sinais focais, trauma ou hipertensão intracraniana.",
+      "B": "Antiepilépticos profiláticos contínuos não são indicados na crise febril simples devido aos efeitos adversos superiores ao risco benigno de recorrência.",
+      "C": "O eletroencefalograma não altera a conduta nem prediz epilepsia ou recorrência após um episódio típico de crise febril simples."
+    }
   },
   {
     "id": "q-usp-sp-2023-094",
@@ -6006,7 +7444,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Calendário Nacional de Vacinação - PNI",
     "temaSlug": "ped-vacinas",
     "subtemaSlug": "ped-vacinas-calendario-nacional-de-vacinacao-pni",
-    "tags": ["calendario-vacinal","rotavirus","atraso-vacinal","pni"],
+    "tags": [
+      "calendario-vacinal",
+      "rotavirus",
+      "atraso-vacinal",
+      "pni"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -6045,7 +7488,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A vacina contra o rotavírus (VORH) monovalente atenuada é a única vacina do calendário básico infantil do PNI que possui rigorosa 'idade limite de corte' para início e término do esquema vacinal, visando minimizar a incidência de intussuscepção/invaginação intestinal. A primeira dose só pode ser aplicada até 3 meses e 15 dias (15 semanas e 6 dias). Crianças com idade superior a essa que não receberam a 1ª dose não poderão mais iniciar o esquema de rotavírus.",
     "perolaClinica": "Vacina Rotavírus (VORH): limite rígido da 1ª dose = 3 meses e 15 dias; limite da 2ª dose = 7 meses e 29 dias. Passou do prazo, NÃO vacina!",
     "referencias": [
@@ -6055,7 +7499,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 3014
+    "sourcePdfPage": 3014,
+    "analiseBanca": {
+      "conceitoCentral": "Idade máxima limite para início do esquema vacinal da vacina oral de rotavírus humano (VORH) pelo PNI.",
+      "raciocinioChave": "Pelo PNI, a primeira dose da vacina contra rotavírus (VORH) só pode ser administrada até no máximo 3 meses e 15 dias de idade devido ao risco aumentado de invaginação intestinal em faixas etárias maiores. Como o lactente já tem 4 meses e 10 dias e não recebeu a 1ª dose, essa vacina está contraindicada definitivamente.",
+      "armadilhaBanca": "Achar que o uso de corticosteroide oral por 5 dias para broncoespasmo contraindica vacinas inativadas ou esquecer a idade limite rígida do rotavírus."
+    },
+    "mapaDistratores": {
+      "A": "A vacina pentavalente é inativada/combinada e deve ser iniciada normalmente em esquema de atualização aos 4 meses e 10 dias.",
+      "B": "A vacina pneumocócica 10-valente pode ser aplicada sem restrição nessa idade para atualização vacinal.",
+      "D": "A vacina inativada contra poliomielite (VIP) não possui limite etário estreito que impeça o início aos 4 meses e 10 dias."
+    }
   },
   {
     "id": "q-usp-sp-2023-095",
@@ -6067,7 +7521,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Obesidade Infantil e Desnutrição Grave",
     "temaSlug": "ped-puericultura",
     "subtemaSlug": "ped-puericultura-obesidade-infantil-e-desnutricao-grave",
-    "tags": ["obesidade-infantil","curvas-oms","pressao-arterial-em-pediatria"],
+    "tags": [
+      "obesidade-infantil",
+      "curvas-oms",
+      "pressao-arterial-em-pediatria"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -6106,7 +7564,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "Com base nos referenciais antropométricos da Organização Mundial da Saúde (OMS) para crianças > 5 anos: escore Z entre +1 e +2 define sobrepeso; escore Z > +2 define obesidade; e escore Z > +3 define obesidade grave. O IMC de 23,67 kg/m² aos 10 anos e 6 meses corresponde a escore Z > +2 (obesidade). A estatura de 1,30 m é adequada (Z > -2). Pelas diretrizes de hipertensão arterial pediátrica, pressão arterial com sistólica e diastólica < percentil 90 é estritamente normal.",
     "perolaClinica": "Crianças > 5 anos nas curvas da OMS: IMC Z > +1 = sobrepeso; Z > +2 = obesidade. Pressão arterial pediátrica < P90 = normal.",
     "referencias": [
@@ -6123,6 +7582,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Gráfico/Tabela",
       "caption": "Gráficos de referência da OMS para IMC por idade e Estatura por idade para meninos de 5 a 19 anos, e tabelas percentilares de pressão arterial pediátrica.",
       "aspectRatio": "4:3"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Classificação nutricional (IMC/idade e estatura/idade da OMS) e avaliação pressórica pediátrica.",
+      "raciocinioChave": "Com peso de 40 kg e estatura de 1,30 m, o IMC é 23,67 kg/m², situando-se acima do escore Z +2 para meninos de 10 anos e 6 meses, o que define obesidade. A estatura de 1,30 m está acima do escore Z -2 (normal para a idade) e a PA de 100x70 mmHg encontra-se abaixo do percentil 90 para idade, sexo e estatura (normal).",
+      "armadilhaBanca": "Confundir os pontos de corte do escore Z do IMC da OMS (classificando Z > +2 como sobrepeso) ou considerar PA 100x70 mmHg elevada sem consultar o percentil."
+    },
+    "mapaDistratores": {
+      "A": "O IMC de 23,67 kg/m² ultrapassa o escore Z +2 (obesidade, não sobrepeso) e a pressão arterial de 100x70 mmHg situa-se na faixa normal para o percentil estatural.",
+      "B": "A estatura de 1,30 m encontra-se dentro da normalidade (acima do escore Z -2) e a pressão arterial é normotensa para o sexo e estatura.",
+      "D": "O diagnóstico nutricional é de obesidade (escore Z > +2), e a estatura é adequada para a idade, sem critério de risco para baixa estatura."
     }
   },
   {
@@ -6135,7 +7604,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Calendário Nacional de Vacinação - PNI",
     "temaSlug": "ped-vacinas",
     "subtemaSlug": "ped-vacinas-calendario-nacional-de-vacinacao-pni",
-    "tags": ["vacina-bcg","reacao-vacinal","linfadenopatia-axilar"],
+    "tags": [
+      "vacina-bcg",
+      "reacao-vacinal",
+      "linfadenopatia-axilar"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -6174,7 +7647,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A vacina BCG (bacilo de Calmette-Guérin) sofre evolução cicatricial típica que atinge a fase de úlcera (normalmente até 1 cm de diâmetro) entre 4 e 6 semanas pós-aplicação. Além disso, o surgimento de linfadenomegalia axilar ou supraclavicular homolateral de consistência elástica, não supurativa, com menos de 3 cm de diâmetro, decorre da resposta imune celular normal e deve ser manejada exclusivamente com conduta expectante e acompanhamento clínico.",
     "perolaClinica": "Evolução normal da BCG: úlcera até 1 cm + gânglio axilar homolateral não supurado < 3 cm = CONDUTA EXPECTANTE / acompanhamento clínico.",
     "referencias": [
@@ -6184,7 +7658,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 3015
+    "sourcePdfPage": 3015,
+    "analiseBanca": {
+      "conceitoCentral": "Evolução local fisiológica da vacina BCG e manejo conservador de linfadenomegalia axilar não supurada < 3 cm.",
+      "raciocinioChave": "A presença de úlcera vacinal de até 1 cm entre a 3ª e 6ª semana pós-BCG associada a gânglio axilar homolateral único, indolor, móvel, não supurado e menor que 3 cm (2,5 cm) traduz resposta imune normal. Nessa situação, a única conduta indicada é o acompanhamento clínico expectante.",
+      "armadilhaBanca": "Indicar isoniazida ou punção ganglionar diante da reação vacinal cicatricial e linfadenopatia reacional fisiológicas da BCG."
+    },
+    "mapaDistratores": {
+      "A": "A isoniazida reserva-se a eventos adversos graves, como úlcera > 1 cm persistente por mais de 12 semanas, linfadenite supurada/fistulizada ou disseminação.",
+      "C": "Não existe infecção bacteriana piogênica secundária na úlcera fisiológica da BCG, sendo injustificado o uso de cefalexina.",
+      "D": "A punção de linfonodo pós-BCG não supurado é contraindicada pelo risco de induzir fistulização e atraso cicatricial."
+    }
   },
   {
     "id": "q-usp-sp-2023-097",
@@ -6196,7 +7680,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Bronquiolite Viral Aguda e Coqueluche",
     "temaSlug": "ped-pneumo-ped",
     "subtemaSlug": "ped-pneumo-ped-bronquiolite-viral-aguda-e-coqueluche",
-    "tags": ["bronquiolite-viral-aguda","otite-media-aguda","complicacao"],
+    "tags": [
+      "bronquiolite-viral-aguda",
+      "otite-media-aguda",
+      "complicacao"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -6235,7 +7723,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A Bronquiolite Viral Aguda acomete lactentes menores de 2 anos e frequentemente evolui com disfunção da tuba auditiva devido ao edema e secreção nasofaríngea. A Otite Média Aguda (OMA) é a principal complicação bacteriana associada à BVA, ocorrendo em 20 a 50% dos lactentes internados. O reaparecimento da febre e a irritabilidade no curso de melhora respiratória devem alertar imediatamente para o exame da membrana timpânica por otoscopia.",
     "perolaClinica": "Piora febril ou irritabilidade no curso da Bronquiolite Viral Aguda: examine os ouvidos! A complicação secundária mais frequente é a Otite Média Aguda.",
     "referencias": [
@@ -6252,19 +7741,34 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Fotografia Clínica",
       "caption": "Otoscopia demonstrando membrana timpânica francamente hiperemiada, opaca e intensamente abaulada com perda do cone luminoso, compatível com OMA.",
       "aspectRatio": "4:3"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Otite Média Aguda como complicação bacteriana secundária mais frequente na evolução da Bronquiolite Viral Aguda.",
+      "raciocinioChave": "Lactente de 5 meses internado por Bronquiolite Viral Aguda com boa melhora pulmonar apresenta novo pico febril e irritabilidade no 5º dia de doença. A complicação bacteriana mais comum da BVA é a Otite Média Aguda (20–50% dos casos), identificada à otoscopia por membrana timpânica hiperemiada e abaulada.",
+      "armadilhaBanca": "Atribuir a febre recorrente no 5º dia de internação obrigatoriamente a pneumonia bacteriana extensa, esquecendo a OMA como complicação mais comum da BVA."
+    },
+    "mapaDistratores": {
+      "B": "Alterações pulmonares extensas são menos frequentes que a otite média aguda como causa de febre rebote isolada após melhora respiratória na BVA.",
+      "C": "Uma membrana timpânica normal e translúcida exclui o foco otológico, não explicando a complicação febril com irritabilidade.",
+      "D": "Achados não compatíveis com otoscopia de OMA não representam a complicação bacteriana secundária mais prevalente da bronquiolite."
     }
   },
   {
     "id": "q-usp-sp-2023-098",
     "code": "Q-USPSP23-0098",
     "numeroOriginal": 98,
-    "grandeAreaId": "clinica_medica",
-    "grandeArea": "Clínica Médica",
-    "tema": "Infectologia",
-    "subtema": "Infecções de Pele e Partes Moles",
-    "temaSlug": "cm-infecto",
-    "subtemaSlug": "cm-infecto-infeccoes-de-pele-e-partes-moles",
-    "tags": ["impetigo-bolhoso","staphylococcus-aureus","sindrome-da-pele-escaldada","pediatria"],
+    "grandeAreaId": "pediatria",
+    "grandeArea": "Pediatria",
+    "tema": "Infectologia Pediátrica e Exantemáticas",
+    "subtema": "Doenças Exantemáticas",
+    "temaSlug": "ped-infecto-ped",
+    "subtemaSlug": "ped-infecto-ped-doencas-exantematicas",
+    "tags": [
+      "impetigo-bolhoso",
+      "staphylococcus-aureus",
+      "sindrome-da-pele-escaldada",
+      "pediatria"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -6303,7 +7807,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "O impetigo bolhoso é uma forma de piodermite superficial provocada pelas toxinas esfoliativas (A e B) produzidas pelo Staphylococcus aureus. Essas toxinas provocam clivagem seletiva da proteína de adesão celular desmogleína 1 no estrato granuloso da epiderme. A Síndrome da Pele Escaldada Estafilocócica (SSSS) compartilha exatamente o mesmo agente etiológico e a mesma toxina esfoliativa, ocorrendo disseminação hematogênica da toxina a partir de um foco infeccioso cutâneo ou de mucosas.",
     "perolaClinica": "Impetigo bolhoso = Staphylococcus aureus (toxina esfoliativa que cliva desmogleína 1). É a mesma toxina e bactéria da Síndrome da Pele Escaldada Estafilocócica.",
     "referencias": [
@@ -6320,6 +7825,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Fotografia Clínica",
       "caption": "Lesões cutâneas caracterizadas por bolhas flácidas rotas, erosões superficiais com colarete descamativo e exsudato, típicas de impetigo bolhoso.",
       "aspectRatio": "4:3"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Etiologia compartilhada por Staphylococcus aureus produtor de toxina esfoliativa no impetigo bolhoso e na SSSS.",
+      "raciocinioChave": "Pápulas e vesículas que evoluem para bolhas flácidas com rotura espontânea e colarete descamativo em lactente afebril caracterizam impetigo bolhoso, causado exclusivamente pelo Staphylococcus aureus produtor de toxinas esfoliativas (A/B) que clivam a desmogleína 1. O mesmo agente e mecanismo causam a síndrome da pele escaldada estafilocócica (SSSS).",
+      "armadilhaBanca": "Confundir a etiologia estafilocócica do impetigo bolhoso com piodermites estreptocócicas clássicas como escarlatina e erisipela."
+    },
+    "mapaDistratores": {
+      "A": "A escarlatina é causada por Streptococcus pyogenes produtor de exotoxina pirogênica, agente distinto do impetigo bolhoso.",
+      "B": "A erisipela tem como principal agente etiológico o Streptococcus pyogenes, e não o Staphylococcus aureus produtor de toxina esfoliativa.",
+      "C": "A candidíase é uma micose cutaneomucosa provocada por leveduras do gênero Candida, sem relação com infecção estafilocócica bolhosa."
     }
   },
   {
@@ -6332,7 +7847,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Anemias e Doença Falciforme na Infância",
     "temaSlug": "ped-cardio-hemato-ped",
     "subtemaSlug": "ped-cardio-hemato-ped-anemias-e-doenca-falciforme-na-infancia",
-    "tags": ["anemia-falciforme","crise-vaso-oclusiva","sindrome-toracica-aguda","opioide"],
+    "tags": [
+      "anemia-falciforme",
+      "crise-vaso-oclusiva",
+      "sindrome-toracica-aguda",
+      "opioide"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -6371,7 +7891,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "Na doença falciforme, o desenvolvimento de dor torácica e nova hipoxemia associada a quadro respiratório define a suspeita clínica de Síndrome Torácica Aguda (STA), principal causa de mortalidade na doença. O manejo analgésico da dor grave (nota 9/10) exige opioides parenterais com reavaliação seriada e rápida (a cada 30 minutos). A repetição da imagem radiográfica do tórax é indispensável, pois novos infiltrados pulmonares podem se manifestar horas após o início da dor torácica.",
     "perolaClinica": "Dor aguda torácica + hipoxemia em anemia falciforme = suspeitar de Síndrome Torácica Aguda! Conduta: Morfina EV (dor grave) + REPETIR Raio-X de tórax.",
     "referencias": [
@@ -6381,7 +7902,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 3017
+    "sourcePdfPage": 3017,
+    "analiseBanca": {
+      "conceitoCentral": "Analgesia com opioide e reavaliação radiográfica na suspeita de Síndrome Torácica Aguda em doença falciforme.",
+      "raciocinioChave": "Paciente falciforme internado por crise asmática/IVAS desenvolve dor torácica e em membros de forte intensidade (9/10) associada a piora da hipoxemia, configurando suspeita de Síndrome Torácica Aguda. O manejo exige analgesia parenteral imediata com opioide forte e reavaliação em 30 minutos, além de repetir a radiografia de tórax para detectar novo infiltrado pulmonar.",
+      "armadilhaBanca": "Subtratar dor intensa (9/10) com analgésicos simples/AINEs ou deixar de repetir a radiografia de tórax frente à suspeita de Síndrome Torácica Aguda."
+    },
+    "mapaDistratores": {
+      "B": "Analgésicos simples não controlam dor vaso-oclusiva intensa (9/10), e não repetir a imagem pulmonar atrasa o diagnóstico de Síndrome Torácica Aguda.",
+      "C": "AINEs isolados são insuficientes para dor grave na doença falciforme e omitir nova radiografia coloca o paciente em risco frente à hipoxemia e dor torácica.",
+      "D": "A metadona não é droga de escolha para titulação analgésica aguda na emergência e opioides (morfina) não devem ser evitados na crise álgica falciforme."
+    }
   },
   {
     "id": "q-usp-sp-2023-100",
@@ -6393,7 +7924,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Pneumonia Adquirida na Comunidade em Pediatria",
     "temaSlug": "ped-pneumo-ped",
     "subtemaSlug": "ped-pneumo-ped-pneumonia-adquirida-na-comunidade-em-pediatria",
-    "tags": ["pneumonia-aspirativa","sialorreia","atropina","encefalopatia-cronica"],
+    "tags": [
+      "pneumonia-aspirativa",
+      "sialorreia",
+      "atropina",
+      "encefalopatia-cronica"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -6432,7 +7968,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "Crianças com sequelas neurológicas graves (encefalopatia hipóxico-isquêmica) e via aérea artificial frequentemente sofrem com sialorreia crônica e pneumonia aspirativa de repetição. O manejo clínico da hipersecreção salivar inclui fármacos anticolinérgicos, sendo o colírio de atropina 1% por via oral/sublingual uma medida de fácil acesso, segura e consagrada pela literatura neuropediátrica para reduzir o volume salivar e proteger a árvore traqueobrônquica.",
     "perolaClinica": "Sialorreia com risco de broncoaspiração em neuropatas: anticolinérgicos orais/sublinguais (como colírio de sulfato de atropina 1% VO/SL) diminuem a produção de saliva e a aspiração.",
     "referencias": [
@@ -6442,7 +7979,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 3017
+    "sourcePdfPage": 3017,
+    "analiseBanca": {
+      "conceitoCentral": "Uso de anticolinérgico (atropina oral) no controle da sialorreia para prevenir pneumonias aspirativas em neuropata.",
+      "raciocinioChave": "Criança com encefalopatia crônica grave, traqueostomia e disfagia apresenta pneumonias aspirativas recorrentes devido ao acúmulo de saliva e microaspiração pela sialorreia. O uso off-label de colírio de atropina por via oral/sublingual reduz a produção salivar por ação anticolinérgica, diminuindo a frequência de aspirações.",
+      "armadilhaBanca": "Prescrever antibioticoprofilaxia contínua ou bloqueador H2, que selecionam patógenos resistentes e aumentam a colonização gástrica por Gram-negativos."
+    },
+    "mapaDistratores": {
+      "A": "A antibioticoprofilaxia com amoxicilina não reduz episódios de pneumonia aspirativa e induz seleção de cepas bacterianas multirresistentes.",
+      "B": "Pró-cinéticos não previnem aspiração de saliva e bloqueadores H2 elevam o pH gástrico, favorecendo colonização bacteriana por Gram-negativos.",
+      "D": "Benzodiazepínicos causam sedação e hipotonia faríngea, agravando a incoordenação da deglutição e o risco de broncoaspiração."
+    }
   },
   {
     "id": "q-usp-sp-2023-101",
@@ -6454,7 +8001,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Artrite Séptica e Osteoartrite",
     "temaSlug": "cm-reumato",
     "subtemaSlug": "cm-reumato-artrite-septica-e-osteoartrite",
-    "tags": ["osteoartrite","liquido-sinovial","artrocentese"],
+    "tags": [
+      "osteoartrite",
+      "liquido-sinovial",
+      "artrocentese"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -6493,7 +8044,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A apresentação clínica é típica de osteoartrite (gonartrose) com dor de padrão mecânico aos esforços e piora no decorrer do dia. O líquido sinovial não inflamatório (Grupo I) apresenta contagem leucocitária baixa (200 a 2.000/mm³) com menos de 50% de polimorfonucleares e aspecto límpido amarelo-claro.",
     "perolaClinica": "Líquido sinovial na osteoartrite é não inflamatório: aspecto citrino límpido, leucócitos de 200 a 2.000/mm³ e PMN < 50%.",
     "referencias": [
@@ -6510,6 +8062,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Gráfico/Tabela",
       "caption": "Tabela de características de líquido sinovial e traçados de monitorização",
       "aspectRatio": "16:9"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Características citológicas e bioquímicas do líquido sinovial não inflamatório (Grupo I) na osteoartrite.",
+      "raciocinioChave": "Dor crônica de ritmo mecânico nos joelhos, crepitações e varismo em idosa obesa com PCR normal configuram osteoartrite. O líquido sinovial correspondente pertence ao Grupo I (não inflamatório): coloração amarela clara, viscosidade preservada ou discretamente reduzida, leucócitos entre 200 e 2.000/mm³ e menos de 50% de polimorfonucleares.",
+      "armadilhaBanca": "Confundir o padrão do líquido sinovial não inflamatório da osteoartrite com o padrão inflamatório (2.000–50.000) ou séptico (> 50.000)."
+    },
+    "mapaDistratores": {
+      "A": "Leucócitos acima de 50.000/mm³, aspecto purulento e > 75% de PMN definem padrão séptico (Grupo III), típico de artrite infecciosa.",
+      "B": "Contagem de 2.000 a 50.000 leucócitos/mm³ com PMN > 75% caracteriza líquido inflamatório (Grupo II), próprio de artrite reumatoide ou microcristalina.",
+      "C": "Líquido incolor com menos de 200 leucócitos/mm³ representa o padrão fisiológico normal de articulação sem derrame patológico."
     }
   },
   {
@@ -6522,7 +8084,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Sepse e Choque Séptico",
     "temaSlug": "cm-infecto",
     "subtemaSlug": "cm-infecto-sepse-e-choque-septico",
-    "tags": ["choque-septico","sepse-urinaria","ressuscitacao-volemica"],
+    "tags": [
+      "choque-septico",
+      "sepse-urinaria",
+      "ressuscitacao-volemica"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -6561,7 +8127,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "No choque séptico com sinais de hipoperfusão persistente pós-ressuscitação inicial, a avaliação de parâmetros hemodinâmicos dinâmicos guia a continuidade da fluidoterapia. Demonstrada a fluidorresponsividade, a infusão adicional de cristaloides aumenta o volume sistólico e o débito cardíaco.",
     "perolaClinica": "Em pacientes ventilados em ritmo sinusal, a variação da pressão de pulso (PPV/VPP) prevê resposta favorável à infusão volêmica.",
     "referencias": [
@@ -6578,6 +8145,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Gráfico/Tabela",
       "caption": "Traçados de pressão arterial invasiva e monitorização hemodinâmica funcional",
       "aspectRatio": "1:1"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Avaliação dinâmica de fluidorresponsividade para guiar ressuscitação volêmica no choque séptico.",
+      "raciocinioChave": "No choque séptico urinário com hipoperfusão persistente, a presença de parâmetros hemodinâmicos dinâmicos favoráveis (elevada variação da pressão de pulso/volume sistólico) demonstra que o paciente está na porção ascendente da curva de Frank-Starling. Assim, prosseguir com expansão volêmica elevará o volume sistólico e o débito cardíaco.",
+      "armadilhaBanca": "Indicar dopamina como vasopressor inicial ou restringir volume diante de sinais dinâmicos claros de fluidorresponsividade."
+    },
+    "mapaDistratores": {
+      "A": "Não há evidência de hiperinsuflação ou barotrauma que indique redução adicional do volume corrente além da estratégia protetora padrão.",
+      "C": "O quadro descreve choque séptico urinário com fluidorresponsividade, sem achados clínicos ou ecocardiográficos de tamponamento cardíaco.",
+      "D": "O vasopressor de primeira escolha no choque séptico é a noradrenalina, enquanto a dopamina associa-se a maior incidência de taquiarritmias e mortalidade."
     }
   },
   {
@@ -6590,7 +8167,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "ITU, Tromboembolismo e Intercorrências Clínicas",
     "temaSlug": "go-intercorrencias",
     "subtemaSlug": "go-intercorrencias-itu-tromboembolismo-e-intercorrencias-clinicas",
-    "tags": ["tep-na-gestacao","tvp","pocus","choque-obstrutivo"],
+    "tags": [
+      "tep-na-gestacao",
+      "tvp",
+      "pocus",
+      "choque-obstrutivo"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -6629,7 +8211,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "Em gestantes com suspeita de tromboembolismo pulmonar que evoluem com instabilidade hemodinâmica, métodos de imagem à beira-leito são prioritários. O achado de TVP proximal pelo POCUS venoso de membros inferiores em paciente com suspeita de TEP é suficiente para confirmar TEV e autorizar condutas específicas de reperfusão.",
     "perolaClinica": "No TEP com instabilidade hemodinâmica, evite o transporte: priorize POCUS venoso compressivo e ecocardiograma à beira-leito.",
     "referencias": [
@@ -6646,19 +8229,33 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Gráfico/Tabela",
       "caption": "Curvas de ventilação mecânica e parâmetros hemodinâmicos",
       "aspectRatio": "16:9"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Uso do POCUS venoso de membros inferiores à beira-leito em gestante instável com suspeita de TEP maciço.",
+      "raciocinioChave": "Em gestante evoluindo com choque obstrutivo por suspeita de TEP maciço, a instabilidade contraindica o transporte para angiotomografia de tórax. O POCUS venoso de compressão dos membros inferiores à beira-leito confirma TVP rapidamente sem radiação ou deslocamento, autorizando a terapia de reperfusão imediata.",
+      "armadilhaBanca": "Solicitar angiotomografia de tórax em paciente hemodinamicamente instável em uso de vasopressor ou confiar no D-dímero durante a gestação."
+    },
+    "mapaDistratores": {
+      "A": "A instabilidade hemodinâmica grave em uso de vasopressores contraindica o transporte da paciente até o setor de tomografia.",
+      "B": "A radiografia de tórax no leito possui baixa sensibilidade e especificidade, não confirmando nem afastando o diagnóstico de TEP.",
+      "D": "O D-dímero encontra-se fisiologicamente elevado na gravidez e não tem utilidade diagnóstica em pacientes de alta probabilidade clínica ou choque."
     }
   },
   {
     "id": "q-usp-sp-2023-104",
     "code": "Q-USPSP23-0104",
     "numeroOriginal": 104,
-    "grandeAreaId": "clinica_medica",
-    "grandeArea": "Clínica Médica",
-    "tema": "Pneumologia",
-    "subtema": "Insuficiência Respiratória e Ventilação Mecânica",
-    "temaSlug": "cm-pneumo",
-    "subtemaSlug": "cm-pneumo-insuficiencia-respiratoria-e-ventilacao-mecanica",
-    "tags": ["ventilacao-mecanica","modo-vcv","medicina-intensiva"],
+    "grandeAreaId": "ginecologia_obstetricia",
+    "grandeArea": "Ginecologia e Obstetrícia",
+    "tema": "Intercorrências Clínicas e Infecciosas na Gestação",
+    "subtema": "ITU, Tromboembolismo e Intercorrências Clínicas",
+    "temaSlug": "go-intercorrencias",
+    "subtemaSlug": "go-intercorrencias-itu-tromboembolismo-e-intercorrencias-clinicas",
+    "tags": [
+      "ventilacao-mecanica",
+      "modo-vcv",
+      "medicina-intensiva"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -6697,7 +8294,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A identificação do modo ventilatório nas telas de ventilação mecânica baseia-se na análise das curvas de fluxo e pressão. O fluxo retangular (onda quadrada) fixo com pressão ascendente em rampa é a assinatura clássica do modo volume assisto-controlado (VCV).",
     "perolaClinica": "Fluxo constante (onda quadrada) + pressão ascendente em rampa = ventilação controlada a volume (VCV).",
     "referencias": [
@@ -6714,6 +8312,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Gráfico/Tabela",
       "caption": "Curvas de fluxo, pressão e volume na monitorização gráfica do ventilador mecânico",
       "aspectRatio": "16:9"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Identificação do modo ventilatório volume assisto-controlado (VCV) pelas curvas de fluxo e pressão.",
+      "raciocinioChave": "Na ventilação em modo volume assisto-controlado (VCV), o fluxo inspiratório é entregue de forma constante (onda quadrada/retangular), resultando em aumento progressivo da pressão de via aérea em rampa ascendente até o pico inspiratório. Esse padrão gráfico distingue o VCV dos modos limitados a pressão.",
+      "armadilhaBanca": "Confundir as curvas de fluxo quadrado e pressão em rampa do modo VCV com o formato retangular de pressão e fluxo desacelerado do modo PCV."
+    },
+    "mapaDistratores": {
+      "A": "O modo SIMV intercala ciclos mandatórios pré-programados com respirações espontâneas em suporte de pressão, gerando curvas heterogêneas.",
+      "B": "No modo pressão assisto-controlada (PCV), a curva de pressão é retangular (platô constante) e o fluxo inspiratório é tipicamente desacelerado.",
+      "C": "Na pressão de suporte (PSV), todos os ciclos são disparados pelo paciente com fluxo desacelerado e ciclagem a fluxo, sem fluxo inspiratório fixo quadrado."
     }
   },
   {
@@ -6726,7 +8334,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Doença Inflamatória Pélvica",
     "temaSlug": "go-gineco-geral",
     "subtemaSlug": "go-gineco-geral-doenca-inflamatoria-pelvica",
-    "tags": ["dip","doenca-inflamatoria-pelvica","exame-especular"],
+    "tags": [
+      "dip",
+      "doenca-inflamatoria-pelvica",
+      "exame-especular"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -6765,7 +8377,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "O diagnóstico de Doença Inflamatória Pélvica (DIP) baseia-se em critérios clínicos (dor em hipogástrio + dor à palpação anexial + dor à mobilização do colo). O achado adicional no exame especular que fortalece o diagnóstico é a presença de cervicite mucopurulenta saindo pelo orifício externo do colo.",
     "perolaClinica": "Corrimento endocervical mucopurulento ao exame especular é critério adicional altamente sugestivo de DIP.",
     "referencias": [
@@ -6782,6 +8395,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Fotografia Clínica",
       "caption": "Exame especular exibindo colo uterino com secreção mucopurulenta endocervical",
       "aspectRatio": "1:1"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Achado especular clássico de cervicite mucopurulenta na Doença Inflamatória Pélvica (DIP).",
+      "raciocinioChave": "Mulher jovem com dor pélvica progressiva, febre baixa, dor à mobilização do colo e espessamento anexial à ultrassonografia preenche critérios clínicos de Doença Inflamatória Pélvica. No exame especular, o achado adicional típico associado é a secreção endocervical mucopurulenta fluindo pelo orifício externo do colo uterino.",
+      "armadilhaBanca": "Confundir cervicite mucopurulenta típica da DIP com ectopia cervical fisiológica, muco hialino ovulatório ou lesões ulceradas/atróficas."
+    },
+    "mapaDistratores": {
+      "A": "Ectopia cervical fisiológica ou lesão sem exsudato purulento não caracterizam o processo infeccioso cervical ascendente da DIP.",
+      "C": "Muco cervical hialino fisiológico ou discreto sangramento isolado não traduzem infecção bacteriana mucopurulenta do canal endocervical.",
+      "D": "Úlcera cervical ou mucosa atrófica apontam para outras etiologias (como infecções ulcerativas ou hipoestrogenismo), não para DIP aguda."
     }
   },
   {
@@ -6794,7 +8417,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Infertilidade Conjugal",
     "temaSlug": "go-gineco-endocrino",
     "subtemaSlug": "go-gineco-endocrino-infertilidade-conjugal",
-    "tags": ["infertilidade-conjugal","fator-tuboperitoneal","dip","histerossalpingografia"],
+    "tags": [
+      "infertilidade-conjugal",
+      "fator-tuboperitoneal",
+      "dip",
+      "histerossalpingografia"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -6833,7 +8461,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A DIP é uma das principais causas de infertilidade por fator tuboperitoneal secundária a salpingite, aderências pélvicas e hidrossalpinge. Na histerossalpingografia, a presença de trompas dilatadas e ocluídas (obstrução tubária) confirma o comprometimento decorrente do episódio infeccioso prévio.",
     "perolaClinica": "A complicação tardia clássica da DIP é a infertilidade por fator tubário (obstrução e hidrossalpinge na HSG).",
     "referencias": [
@@ -6850,6 +8479,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Radiografia",
       "caption": "Histerossalpingografia demonstrando hidrossalpinge e obstrução tubária bilateral",
       "aspectRatio": "1:1"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Fator tuboperitoneal (obstrução tubária/hidrossalpinge na HSG) como sequela de Doença Inflamatória Pélvica prévia.",
+      "raciocinioChave": "Após um episódio de DIP, o processo inflamatório tubário frequentemente resulta em fibrose, aderências e obstrução das tubas uterinas, levando à infertilidade por fator tuboperitoneal. Na histerossalpingografia, isso se manifesta por dilatação sacular distal (hidrossalpinge) e ausência de extravasamento peritoneal do contraste (prova de Cotte negativa).",
+      "armadilhaBanca": "Não reconhecer a hidrossalpinge/obstrução tubária na histerossalpingografia ou confundi-la com trompas pérvias com prova de Cotte positiva."
+    },
+    "mapaDistratores": {
+      "B": "Trompas de calibre preservado com livre passagem de contraste para a cavidade peritoneal (Cotte positivo bilateral) demonstram exame normal.",
+      "C": "Malformações müllerianas (útero unicorno ou septado) são alterações congênitas do desenvolvimento uterino, não sequelas infecciosas da DIP.",
+      "D": "Falhas de enchimento intracavitárias (como pólipos ou miomas submucosos) refletem fator uterino, e não dano tubário pós-salpingite."
     }
   },
   {
@@ -6862,7 +8501,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Hipertensão Crônica e Gestacional",
     "temaSlug": "go-shg",
     "subtemaSlug": "go-shg-hipertensao-cronica-e-gestacional",
-    "tags": ["hipertensao-cronica-na-gestacao","restricao-de-crescimento-fetal","plano-de-parto"],
+    "tags": [
+      "hipertensao-cronica-na-gestacao",
+      "restricao-de-crescimento-fetal",
+      "plano-de-parto"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -6901,7 +8544,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A presença de comorbidade materna grave (hipertensão arterial crônica) associada a feto pequeno para a idade gestacional/RCF com termo precoce (37 semanas) indica resolução imediata da gestação. Não se deve aguardar trabalho de parto espontâneo até 41-42 semanas pelo elevado risco de sofrimento e óbito fetal.",
     "perolaClinica": "Gestante com HAC e feto PIG/RCF atinge 37 semanas com indicação de interrupção imediata da gestação.",
     "referencias": [
@@ -6911,7 +8555,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 3025
+    "sourcePdfPage": 3025,
+    "analiseBanca": {
+      "conceitoCentral": "Indicação de resolução da gestação com 37 semanas em hipertensa crônica com feto em restrição de crescimento (P7).",
+      "raciocinioChave": "A gestante apresenta hipertensão arterial crônica associada a feto no percentil 7 (restrição de crescimento fetal) atingindo o termo precoce (37 semanas). Nessa situação de alto risco de insuficiência placentária progressiva e óbito fetal intrauterino, não se deve aguardar o trabalho de parto espontâneo, indicando-se interrupção da gestação.",
+      "armadilhaBanca": "Permitir que a gestante aguarde trabalho de parto espontâneo após 37 semanas apesar da combinação de HAC e restrição de crescimento fetal."
+    },
+    "mapaDistratores": {
+      "A": "O contato pele a pele imediato deve ser incentivado sempre que o recém-nascido a termo apresentar boa vitalidade ao nascimento.",
+      "B": "A via vaginal não é contraindicada pelo plano de parto ou pela hipertensão crônica compensada, sendo preferível à cesariana eletiva na ausência de sofrimento fetal.",
+      "C": "O clampeamento oportuno do cordão umbilical (1 a 3 minutos) é seguro e recomendado caso o neonato não necessite de reanimação imediata."
+    }
   },
   {
     "id": "q-usp-sp-2023-108",
@@ -6923,7 +8577,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Indução do Parto e Gestação Pós-Termo",
     "temaSlug": "go-parto",
     "subtemaSlug": "go-parto-inducao-do-parto-e-gestacao-pos-termo",
-    "tags": ["inducao-do-parto","misoprostol","preparo-cervical"],
+    "tags": [
+      "inducao-do-parto",
+      "misoprostol",
+      "preparo-cervical"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -6962,7 +8620,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "Diante da indicação de interrupção da gestação em primigesta com feto viável e ausência de sofrimento fetal, o parto vaginal deve ser favorecido. Apresentando colo desfavorável (Bishop <= 6) sem contraindicações como cesárea prévia, a primeira etapa é o preparo/maturação cervical com prostaglandinas.",
     "perolaClinica": "Colo desfavorável (Bishop <= 6) sem cicatriz uterina = maturação cervical com misoprostol antes da ocitocina.",
     "referencias": [
@@ -6972,7 +8631,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 3026
+    "sourcePdfPage": 3026,
+    "analiseBanca": {
+      "conceitoCentral": "Preparo cervical com prostaglandina antes da indução do parto em primigesta com colo desfavorável (Bishop <= 6).",
+      "raciocinioChave": "Diante da necessidade de interrupção gestacional às 37 semanas sem sofrimento fetal agudo ou cicatriz uterina prévia, busca-se o parto vaginal. Como o colo encontra-se desfavorável (grosso, posterior, 2 cm, apresentação alta; Bishop <= 6), a primeira conduta é a maturação cervical com análogo de prostaglandina (ex.: misoprostol).",
+      "armadilhaBanca": "Iniciar indução diretamente com ocitocina ou cesariana em primigesta com colo desfavorável, em vez de realizar maturação cervical."
+    },
+    "mapaDistratores": {
+      "A": "A infusão inicial de ocitocina sem preparo cervical prévio em colo com Bishop desfavorável resulta em altas taxas de falha de indução.",
+      "B": "Realizar amniotomia com colo desfavorável e apresentação alta e móvel acarreta elevado risco de prolapso de cordão umbilical.",
+      "D": "A cesariana de imediato não se justifica na ausência de comprometimento agudo da vitalidade fetal ou contraindicação obstétrica ao parto vaginal."
+    }
   },
   {
     "id": "q-usp-sp-2023-109",
@@ -6984,7 +8653,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Método Clínico Centrado na Pessoa e Comunicação",
     "temaSlug": "mp-mfc",
     "subtemaSlug": "mp-mfc-metodo-clinico-centrado-na-pessoa-e-comunicacao",
-    "tags": ["comunicacao-clinica","mccp","pre-natal","adesao"],
+    "tags": [
+      "comunicacao-clinica",
+      "mccp",
+      "pre-natal",
+      "adesao"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -7023,7 +8697,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "O Método Clínico Centrado na Pessoa preconiza a compreensão ampla da pessoa, a exploração de suas dificuldades reais e o manejo compartilhado. Perguntas abertas e livres de julgamento constituem a melhor ferramenta para acolher usuárias com absenteísmo e reconstruir a adesão ao cuidado.",
     "perolaClinica": "Para resgatar adesão na APS: explore barreiras com perguntas abertas e empáticas; nunca ameace ou puna.",
     "referencias": [
@@ -7033,7 +8708,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 3026
+    "sourcePdfPage": 3026,
+    "analiseBanca": {
+      "conceitoCentral": "Comunicação empática e perguntas abertas no Método Clínico Centrado na Pessoa frente ao absenteísmo no pré-natal.",
+      "raciocinioChave": "Para resgatar uma gestante com sífilis que faltou às consultas, o Método Clínico Centrado na Pessoa prioriza perguntas abertas, acolhedoras e isentas de julgamento. Explorar as barreiras vividas e pactuar soluções facilita o vínculo e a adesão ao seguimento pré-natal e ao tratamento.",
+      "armadilhaBanca": "Usar abordagem punitiva (Conselho Tutelar), acusatória ou puramente prescritiva, rompendo o vínculo com a gestante faltosa."
+    },
+    "mapaDistratores": {
+      "B": "A ameaça de acionar o Conselho Tutelar adota postura coercitiva que destrói a confiança e afasta a gestante do acompanhamento de saúde.",
+      "C": "Questionar diretamente sobre impedimento pelo parceiro ou violência sem abertura prévia soa acusatório e invasivo, bloqueando o diálogo.",
+      "D": "A fala puramente informativa e diretiva foca apenas na agenda médica sem investigar os obstáculos psicossociais reais para o comparecimento."
+    }
   },
   {
     "id": "q-usp-sp-2023-110",
@@ -7045,7 +8730,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Infecções Congênitas na Gestação",
     "temaSlug": "go-intercorrencias",
     "subtemaSlug": "go-intercorrencias-infeccoes-congenitas-na-gestacao",
-    "tags": ["sifilis-na-gestacao","parcerias-sexuais","penicilina-benzatina","aps"],
+    "tags": [
+      "sifilis-na-gestacao",
+      "parcerias-sexuais",
+      "penicilina-benzatina",
+      "aps"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -7084,7 +8774,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A elevação de dois títulos (4 vezes) após queda documentada do VDRL define reinfecção. Como a reinfecção ocorreu há menos de 1 ano, classifica-se como sífilis recente e trata-se com 1 dose de 2,4 milhões UI de penicilina benzatina. A parceria sexual atual com contato em até 90 dias deve ser tratada presuntivamente com dose única, independentemente de sintomas ou do teste rápido ser negativo.",
     "perolaClinica": "Reinfecção documentada < 1 ano = penicilina benzatina 2,4 milhões UI dose única; tratar parceiro recente em dose única.",
     "referencias": [
@@ -7094,7 +8785,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 3027
+    "sourcePdfPage": 3027,
+    "analiseBanca": {
+      "conceitoCentral": "Conduta na reinfecção recente de sífilis na gestação (elevação >= 2 diluições no VDRL) e tratamento presuntivo da parceria.",
+      "raciocinioChave": "A queda de 1:64 para 1:8 comprovou resposta terapêutica prévia; a posterior subida para 1:32 na 32ª semana (aumento de 2 diluições / 4 vezes) confirma reinfecção recente (< 1 ano), cujo tratamento é dose única de penicilina benzatina (2,4 milhões UI). A parceria atual com exposição nos últimos 90 dias também recebe dose única presuntiva, mesmo com teste rápido negativo.",
+      "armadilhaBanca": "Prescrever esquema de 3 doses semanais por tratar-se de gestante, ignorando que a reinfecção documentada em < 1 ano exige apenas dose única."
+    },
+    "mapaDistratores": {
+      "A": "O esquema de duas doses semanais de penicilina benzatina não faz parte dos protocolos padronizados para sífilis recente ou tardia pelo Ministério da Saúde.",
+      "B": "O esquema de três doses aplica-se à sífilis tardia ou de duração ignorada; como a reinfecção ocorreu há menos de 1 ano, basta dose única.",
+      "C": "Nem a gestante com reinfecção recente documentada nem o parceiro exposto há menos de 90 dias necessitam de três doses semanais."
+    }
   },
   {
     "id": "q-usp-sp-2023-111",
@@ -7106,7 +8807,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Investigação de Surtos e Epidemias",
     "temaSlug": "mp-vigilancia",
     "subtemaSlug": "mp-vigilancia-investigacao-de-surtos-e-epidemias",
-    "tags": ["investigacao-de-surtos","meningite","vigilancia-epidemiologica"],
+    "tags": [
+      "investigacao-de-surtos",
+      "meningite",
+      "vigilancia-epidemiologica"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -7145,7 +8850,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "Metodologicamente, para confirmar ou descartar uma epidemia ou surto em uma população, a vigilância deve comparar a incidência observada com a frequência basal histórica (endêmica) dos anos anteriores na mesma localidade e período sazonal.",
     "perolaClinica": "Definição de surto/epidemia: ocorrência de casos claramente acima do esperado em relação à série histórica anterior.",
     "referencias": [
@@ -7162,6 +8868,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Gráfico/Tabela",
       "caption": "Dados de distribuição e cronologia dos casos notificados de meningite",
       "aspectRatio": "16:9"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Etapa inicial na investigação de surtos: comparação da ocorrência observada com a série histórica dos anos anteriores.",
+      "raciocinioChave": "Para confirmar metodologicamente se há um surto ou epidemia de meningite, a vigilância epidemiológica deve comparar o número de casos observados no período atual com o número esperado (limiar endêmico) baseado nos registros de anos anteriores na mesma população e época. Essa etapa precede ações investigativas amplas ou conclusões definitivas.",
+      "armadilhaBanca": "Partir diretamente para inquéritos sorológicos ou exames em massa de participantes antes de confirmar o excesso de casos em relação à linha de base."
+    },
+    "mapaDistratores": {
+      "A": "Examinar clinicamente todos os mais de 1.300 participantes da festa é operacionalmente inviável e não define por si só a existência estatística de um surto.",
+      "C": "Inquéritos soroepidemiológicos não são indicados na rotina inicial para confirmar ou descartar surtos agudos de doença meningocócica.",
+      "D": "Aguardar passivamente novos casos de doença invasiva grave viola o princípio da vigilância epidemiológica de intervenção e bloqueio precoces."
     }
   },
   {
@@ -7174,7 +8890,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Investigação de Surtos e Epidemias",
     "temaSlug": "mp-vigilancia",
     "subtemaSlug": "mp-vigilancia-investigacao-de-surtos-e-epidemias",
-    "tags": ["surto","vinculo-epidemiologico","meningite","vigilancia-epidemiologica"],
+    "tags": [
+      "surto",
+      "vinculo-epidemiologico",
+      "meningite",
+      "vigilancia-epidemiologica"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -7213,7 +8934,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "Considera-se surto a ocorrência de dois ou mais casos relacionados entre si no espaço e no tempo, com vínculo epidemiológico claramente estabelecido (mesmo evento com aglomeração). Isso autoriza medidas imediatas de bloqueio e quimioprofilaxia de contatos íntimos.",
     "perolaClinica": "Casos de doença meningocócica associados ao mesmo evento restrito no tempo e espaço = surto com vínculo epidemiológico.",
     "referencias": [
@@ -7230,6 +8952,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Gráfico/Tabela",
       "caption": "Resumo temporal e perfil epidemiológico dos casos investigados",
       "aspectRatio": "16:9"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Definição operacional de surto por agregado espaço-temporal de casos com vínculo epidemiológico comum.",
+      "raciocinioChave": "Caracteriza-se um surto pela ocorrência de dois ou mais casos epidemiologicamente vinculados entre si em determinado espaço e tempo, como estudantes expostos a um mesmo evento social com aglomeração (festa universitária). Na doença meningocócica, o nexo clínico-epidemiológico já configura surto para fins de resposta e bloqueio rápidos.",
+      "armadilhaBanca": "Descartar a definição de surto pelo número absoluto reduzido de casos ou pela ausência de confirmação laboratorial em todos os suspeitos."
+    },
+    "mapaDistratores": {
+      "A": "O conceito de surto em ambiente fechado ou evento específico não exige grande volume absoluto de casos, bastando dois ou mais casos ligados entre si.",
+      "B": "A caracterização do surto institucional decorre do agrupamento espaço-temporal em torno de um evento comum, e não da taxa média de incidência anual.",
+      "D": "Na vigilância de emergências transmissíveis graves, casos suspeitos compatíveis clinicamente com vínculo epidemiológico são suficientes para definir o surto sem aguardar confirmação laboratorial completa."
     }
   },
   {
@@ -7242,7 +8974,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Suporte Avançado de Vida em Pediatria - PALS",
     "temaSlug": "ped-emerg-ped",
     "subtemaSlug": "ped-emerg-ped-suporte-avancado-de-vida-em-pediatria-pals",
-    "tags": ["cetoacidose-diabetica","dm1","emergencia-pediatrica","tratamento"],
+    "tags": [
+      "cetoacidose-diabetica",
+      "dm1",
+      "emergencia-pediatrica",
+      "tratamento"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -7281,7 +9018,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "Na cetoacidose diabética pediátrica, a ressuscitação volêmica deve ser iniciada na 1ª hora exclusivamente com solução isotônica. A insulina em bomba (0,05-0,1 U/kg/h) só deve ser introduzida na 2ª hora, nunca em bolus, com reposição de potássio após confirmar débito urinário e adição de glicose para manter valores entre 150 e 200 mg/dL.",
     "perolaClinica": "CAD pediátrica: primeira hora é só expansão isotônica (SF 0,9%); insulina EV contínua entra apenas na 2ª hora, sem bolus.",
     "referencias": [
@@ -7298,6 +9036,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Gráfico/Tabela",
       "caption": "Tabelas de protocolos de infusão e etapas terapêuticas de cetoacidose diabética",
       "aspectRatio": "16:9"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Sequência temporal da ressuscitação volêmica, insulinoterapia e reposição de potássio na cetoacidose diabética pediátrica.",
+      "raciocinioChave": "Criança com DM1 em choque desidratado por CAD exige expansão inicial com cristaloide isotônico na 1ª hora sem insulina. A partir da 2ª hora, após melhora hemodinâmica, inicia-se insulina regular em infusão contínua (0,05–0,1 U/kg/h) e reposição de potássio conforme diurese.",
+      "armadilhaBanca": "Administrar insulina na primeira hora, fazer bolus insulínico ou usar bicarbonato de rotina aumenta o risco de edema cerebral e colapso hemodinâmico."
+    },
+    "mapaDistratores": {
+      "B": "A administração de insulina rápida em bolus na primeira hora é proscrita em pediatria pelo risco elevado de hipoglicemia abrupta, hipocalemia e edema cerebral.",
+      "C": "O bicarbonato de sódio precoce é contraindicado na rotina da CAD infantil por induzir acidose liquórica paradoxal e aumentar a incidência de edema cerebral.",
+      "D": "Hipoglicemiantes orais não tratam CAD por DM1 e a infusão de potássio em bolus sem diurese documentada provoca arritmias fatais."
     }
   },
   {
@@ -7310,7 +9058,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Suporte Avançado de Vida em Pediatria - PALS",
     "temaSlug": "ped-emerg-ped",
     "subtemaSlug": "ped-emerg-ped-suporte-avancado-de-vida-em-pediatria-pals",
-    "tags": ["cetoacidose-diabetica","edema-cerebral","emergencia-pediatrica"],
+    "tags": [
+      "cetoacidose-diabetica",
+      "edema-cerebral",
+      "emergencia-pediatrica"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -7349,7 +9101,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "O edema cerebral é a complicação aguda mais temida e a principal causa de mortalidade na CAD pediátrica. O surgimento de cefaleia, sonolência, vômitos e tríade de Cushing alerta para hipertensão intracraniana grave, cuja tomografia revela apagamento dos sulcos e compressão ventricular difusa.",
     "perolaClinica": "Rebaixamento neurológico + bradicardia + hipertensão em CAD pediátrica = edema cerebral (TC com apagamento difuso de sulcos).",
     "referencias": [
@@ -7366,6 +9119,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Tomografia",
       "caption": "Tomografia computadorizada de crânio com apagamento de sulcos corticais e colapso ventricular por edema cerebral",
       "aspectRatio": "1:1"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Reconhecimento clínico e tomográfico do edema cerebral como complicação aguda da cetoacidose diabética pediátrica.",
+      "raciocinioChave": "A deterioração neurológica durante o tratamento da CAD pediátrica, associada a vômitos e sinais de hipertensão intracraniana (tríade de Cushing), aponta para edema cerebral. Na TC de crânio, esse quadro se traduz por apagamento difuso dos sulcos corticais e colabamento ventricular.",
+      "armadilhaBanca": "Confundir edema cerebral iatrogênico pós-hidratação na CAD com eventos vasculares focais ou hidrocefalia obstrutiva na tomografia de crânio."
+    },
+    "mapaDistratores": {
+      "A": "Uma tomografia normal com sulcos preservados ou com hemorragia intraparenquimatosa focal não corresponde ao edema cerebral difuso da CAD.",
+      "B": "Acidente vascular encefálico isquêmico focal ou lesão expansiva localizada não explicam o edema citotóxico/vasogênico difuso da CAD pediátrica.",
+      "C": "A hidrocefalia obstrutiva cursa com dilatação ventricular, o oposto da compressão ventricular e apagamento de sulcos vistos no edema cerebral difuso."
     }
   },
   {
@@ -7378,7 +9141,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Pneumonia Adquirida na Comunidade em Pediatria",
     "temaSlug": "ped-pneumo-ped",
     "subtemaSlug": "ped-pneumo-ped-pneumonia-adquirida-na-comunidade-em-pediatria",
-    "tags": ["pneumonia-pediatrica","crise-asmatica","salbutamol","penicilina-cristalina"],
+    "tags": [
+      "pneumonia-pediatrica",
+      "crise-asmatica",
+      "salbutamol",
+      "penicilina-cristalina"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -7417,7 +9185,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "O manejo inicial conjunto da exacerbação de asma com pneumonia comunitária associada inclui broncodilatador de curta ação inalatório em doses plenas (salbutamol 6 jatos de 100 mcg), corticoide oral precoce e antibioticoterapia empírica parenteral direcionada ao *Streptococcus pneumoniae* (penicilina cristalina ou ampicilina).",
     "perolaClinica": "Crise de asma moderada/grave: Salbutamol 4-6 jatos a cada 20 min na 1ª hora + Corticoide sistêmico oral precoce.",
     "referencias": [
@@ -7434,6 +9203,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Radiografia",
       "caption": "Radiografia de tórax com hiperinsuflação pulmonar difusa e condensação alveolar em base pulmonar direita",
       "aspectRatio": "4:3"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Manejo simultâneo da exacerbação asmática moderada a grave e da pneumonia bacteriana comunitária em criança internada.",
+      "raciocinioChave": "Criança atópica de 5 anos (~20 kg) com tiragens múltiplas, sibilância, febre alta e crepitações em base apresenta crise asmática associada a PAC bacteriana. A conduta exige salbutamol em dose plena (600 mcg = 6 jatos a cada 20 min), corticoide oral precoce (prednisolona 30 mg), Venturi 50% e penicilina cristalina IV contra pneumococo.",
+      "armadilhaBanca": "Prescrever subdoses de salbutamol para crise moderada/grave, expandir volume desnecessariamente em paciente normovolêmico ou escolher macrolídeo na PAC típica."
+    },
+    "mapaDistratores": {
+      "B": "A dose de 200 mcg de salbutamol é insuficiente para crise moderada/grave e a azitromicina não é primeira escolha para pneumonia pneumocócica internada.",
+      "C": "Não há indicação de expansão volêmica com 400 mL de soro fisiológico em criança hemodinamicamente estável, além de a dose de salbutamol ser subótima.",
+      "D": "A infusão rápida de cristaloide sem choque pode piorar a congestão pulmonar e a azitromicina não oferece cobertura ideal para pneumococo típico hospitalizado."
     }
   },
   {
@@ -7446,7 +9225,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Pneumonia Adquirida na Comunidade em Pediatria",
     "temaSlug": "ped-pneumo-ped",
     "subtemaSlug": "ped-pneumo-ped-pneumonia-adquirida-na-comunidade-em-pediatria",
-    "tags": ["pneumonia-pediatrica","pocus-pulmonar","ultrassonografia-pulmonar"],
+    "tags": [
+      "pneumonia-pediatrica",
+      "pocus-pulmonar",
+      "ultrassonografia-pulmonar"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -7485,7 +9268,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "No POCUS pulmonar, a condensação bacteriana caracteriza-se por perda do padrão artefatual habitual e aparecimento de imagem tecidual ecogênica semelhante ao fígado (sinal da hepatização pulmonar) com imagens hiperecóicas ramificadas no seu interior (broncogramas aéreos).",
     "perolaClinica": "Consolidação pulmonar ao ultrassom = sinal da hepatização tecidual com broncogramas aéreos hiperecogênicos.",
     "referencias": [
@@ -7502,6 +9286,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Ultrassonografia",
       "caption": "Ultrassonografia pulmonar demonstrando consolidação com sinal de hepatização e broncogramas aéreos",
       "aspectRatio": "4:3"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Achados ultrassonográficos pulmonares (POCUS) característicos da consolidação pneumônica lobar em pediatria.",
+      "raciocinioChave": "Na criança com febre alta e estertores localizados em base direita por pneumonia bacteriana, a ultrassonografia pulmonar evidencia perda da aeração alveolar. Isso gera imagem subpleural ecogênica semelhante ao parênquima hepático (hepatização) contendo broncogramas aéreos hiperecogênicos.",
+      "armadilhaBanca": "Confundir o padrão de consolidação pneumônica (hepatização e broncogramas aéreos) com linhas B de congestão ou linhas A de parênquima normal."
+    },
+    "mapaDistratores": {
+      "B": "Linhas A paralelas com deslizamento pleural preservado representam pulmão normalmente aerado, incompatível com consolidação em base direita.",
+      "C": "Linhas B confluentes difusas indicam síndrome intersticial ou edema pulmonar alveolar, e não consolidação lobar bacteriana localizada.",
+      "D": "A ausência de deslizamento pleural associada a ponto pulmonar é achado patognomônico de pneumotórax, não de pneumonia."
     }
   },
   {
@@ -7514,7 +9308,11 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Câncer Gástrico e Cirurgia Bariátrica",
     "temaSlug": "cg-cad",
     "subtemaSlug": "cg-cad-cancer-gastrico-e-cirurgia-bariatrica",
-    "tags": ["cancer-gastrico","terapia-nutricional","obstrucao-piloro-duodenal"],
+    "tags": [
+      "cancer-gastrico",
+      "terapia-nutricional",
+      "obstrucao-piloro-duodenal"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -7553,7 +9351,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "Em pacientes com estenose da via de saída gástrica e desnutrição grave que serão submetidos à cirurgia oncológica de grande porte, a terapia nutricional enteral pré-operatória por sonda nasoentérica posicionada em jejuno (pós-pilórica) é a melhor escolha, reduzindo complicações pós-operatórias.",
     "perolaClinica": "Se o trato gastrointestinal distal está funcionante, use sonda nasoentérica pós-pilórica para nutrir o paciente com estenose gástrica.",
     "referencias": [
@@ -7570,6 +9369,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Fotografia Clínica",
       "caption": "Sonda nasoentérica radiopaca de ponta de tungstênio para posicionamento pós-pilórico",
       "aspectRatio": "16:9"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Via preferencial de terapia nutricional pré-operatória em paciente desnutrido com obstrução gástrica neoplásica.",
+      "raciocinioChave": "Homem desnutrido com estenose antro-pilórica e vômitos refratários necessita de preparo nutricional antes da gastrectomia oncológica. Estando o intestino distal íntegro, a via de escolha é a nutrição enteral por sonda nasoentérica posicionada em jejuno (pós-pilórica), ultrapassando a obstrução.",
+      "armadilhaBanca": "Indicar gastrostomia em estômago neoplásico obstruído ou optar precocemente por nutrição parenteral quando o intestino delgado está funcionante."
+    },
+    "mapaDistratores": {
+      "B": "A gastrostomia percutânea é contraindicada em obstrução antral neoplásica pelo risco de implante tumoral e incapacidade de esvaziamento gástrico.",
+      "C": "A nutrição parenteral total por cateter central é reservada aos casos de falência ou impossibilidade de acesso enteral, não sendo primeira opção com delgado viável.",
+      "D": "A sonda nasogástrica em sifonagem promove apenas descompressão gástrica, sendo incapaz de nutrir o paciente diante de estenose pilórica fixa."
     }
   },
   {
@@ -7582,7 +9391,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Avaliação Pré-Operatória e Risco Cirúrgico",
     "temaSlug": "cg-periop",
     "subtemaSlug": "cg-periop-avaliacao-pre-operatoria-e-risco-cirurgico",
-    "tags": ["pre-operatorio","clopidogrel","metformina","manejo-perioperatorio"],
+    "tags": [
+      "pre-operatorio",
+      "clopidogrel",
+      "metformina",
+      "manejo-perioperatorio"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -7621,7 +9435,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "Para cirurgias eletivas de grande porte, o clopidogrel deve ser descontinuado 5 dias antes do ato operatório (em pacientes com mais de 6 meses após implante de stent coronariano farmacológico, com manutenção do AAS se o risco trombótico justificar). A metformina deve ser suspensa 24 a 48 horas antes da cirurgia pelo risco de acidose lática.",
     "perolaClinica": "Manejo pré-operatório clássico: suspender clopidogrel 5 dias antes e suspender metformina 2 dias (48h) antes da cirurgia.",
     "referencias": [
@@ -7631,7 +9446,17 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "sourceBatch": "r1-2023-pack:usp-sp-2023",
     "importedAt": "2026-11-27T11:57:53Z",
-    "sourcePdfPage": 3036
+    "sourcePdfPage": 3036,
+    "analiseBanca": {
+      "conceitoCentral": "Manejo perioperatório de antiagregantes plaquetários (após stent) e antidiabéticos orais (metformina) antes de cirurgia eletiva maior.",
+      "raciocinioChave": "Passados 7 meses da angioplastia com stent, já foi superado o período crítico de trombose, permitindo suspender o clopidogrel 5 dias antes da cirurgia oncológica para evitar sangramento grave. A metformina deve ser suspensa 24 a 48 horas antes do procedimento pelo risco de acidose lática perioperatória.",
+      "armadilhaBanca": "Manter o clopidogrel pelo antecedente de stent há 7 meses ou manter a metformina até o dia da cirurgia de grande porte."
+    },
+    "mapaDistratores": {
+      "A": "Manter a metformina até a cirurgia expõe o paciente ao risco de acidose lática associada a jejum, hipoperfusão ou disfunção renal perioperatória.",
+      "C": "Manter o clopidogrel em gastrectomia eletiva eleva drasticamente o risco hemorrágico, e suspender metformina com 5 dias de antecedência é desnecessário.",
+      "D": "A manutenção simultânea de clopidogrel e metformina combina alto risco de sangramento cirúrgico maciço com risco de acidose lática."
+    }
   },
   {
     "id": "q-usp-sp-2023-119",
@@ -7643,7 +9468,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Atendimento Inicial ao Politraumatizado",
     "temaSlug": "cg-trauma",
     "subtemaSlug": "cg-trauma-atendimento-inicial-ao-politraumatizado",
-    "tags": ["fast","politrauma","trauma-abdominal","atls"],
+    "tags": [
+      "fast",
+      "politrauma",
+      "trauma-abdominal",
+      "atls"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -7682,7 +9512,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "O protocolo FAST (Focused Assessment with Sonography for Trauma) pesquisa líquido livre na cavidade abdominal e pericárdio. O recesso hepatorrenal (espaço de Morison) é o local mais sensível e dependente no paciente em decúbito dorsal, onde o hemoperitônio é visualizado como faixa escura/preta (anecoica).",
     "perolaClinica": "O espaço de Morison (hepatorrenal) é o sítio mais precoce e sensível para detecção de hemoperitônio no FAST.",
     "referencias": [
@@ -7699,6 +9530,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Ultrassonografia",
       "caption": "Janela do espaço de Morison no FAST mostrando lâmina anecoica de líquido livre entre o fígado e o rim direito",
       "aspectRatio": "16:9"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Identificação de hemoperitônio no protocolo FAST em paciente politraumatizado instável com líquido livre difuso.",
+      "raciocinioChave": "Diante de trauma fechado grave, choque hemorrágico e FAST positivo em todos os quadrantes, espera-se observar faixa anecoica (escura) representando sangue livre. O espaço hepatorrenal (recesso de Morison), no quadrante superior direito, é o local mais sensível e clássico para essa demonstração em decúbito dorsal.",
+      "armadilhaBanca": "Escolher janelas ultrassonográficas normais do exame ou confundir o recesso hepatorrenal (Morison) com janelas sem coleção anecoica."
+    },
+    "mapaDistratores": {
+      "A": "A janela pericárdica normal sem derrame não representa o achado de hemoperitônio difuso descrito no protocolo FAST da paciente.",
+      "B": "O quadrante superior esquerdo sem faixa anecoica livre contradiz o resultado positivo em todos os quadrantes descrito no enunciado.",
+      "D": "A janela suprapúbica sem líquido livre anecoico no fundo de saco não condiz com o achado de hemoperitônio generalizado ao FAST."
     }
   },
   {
@@ -7711,7 +9552,12 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Trauma Abdominal e Pélvico",
     "temaSlug": "cg-trauma",
     "subtemaSlug": "cg-trauma-trauma-abdominal-e-pelvico",
-    "tags": ["trauma-hepatico","controle-de-danos","empacotamento-hepatico","laparotomia"],
+    "tags": [
+      "trauma-hepatico",
+      "controle-de-danos",
+      "empacotamento-hepatico",
+      "laparotomia"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "USP-SP",
     "instituicao": "USP-SP",
@@ -7750,7 +9596,8 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1150,
-    "taxaAcertoGlobal": 62.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "Na presença de sangramento maciço decorrente de trauma hepático grave associado a sinais da tríade letal (acidose, coagulopatia, hipotermia), a conduta operatória de escolha é a cirurgia de controle de danos. A hemostasia rápida obtida por empacotamento compressivo peri-hepático associada à peritoniostomia salva vidas ao permitir a reanimação prévia em UTI.",
     "perolaClinica": "Trauma hepático grave + choque + acidose = cirurgia de controle de danos com empacotamento peri-hepático e peritoniostomia.",
     "referencias": [
@@ -7767,6 +9614,16 @@ export const USP_SP_2023_QUESTIONS: MedicalQuestion[] = [
       "modality": "Fotografia Clínica",
       "caption": "Ilustração demonstrando empacotamento peri-hepático com compressas na cirurgia de controle de danos",
       "aspectRatio": "16:9"
+    },
+    "analiseBanca": {
+      "conceitoCentral": "Indicação de cirurgia de controle de danos (empacotamento peri-hepático) no trauma abdominal grave com instabilidade e tríade letal.",
+      "raciocinioChave": "A paciente evolui em choque hemorrágico grave com acidose e hiperlactatemia diante de lesão hepática complexa com grande hemoperitônio. Nessa condição, impõe-se abreviar o tempo operatório via controle de danos: empacotamento compressivo peri-hepático e peritoniostomia para reanimação em UTI antes do reparo definitivo.",
+      "armadilhaBanca": "Tentar reparos anatômicos definitivos e demorados (hepatectomia ou rafia extensa) em paciente já em tríade letal e choque refratário."
+    },
+    "mapaDistratores": {
+      "A": "Hepatectomias regradas ou suturas hemostáticas demoradas prolongam o ato cirúrgico e agravam hipotermia, acidose e coagulopatia no paciente instável.",
+      "B": "A manobra de Pringle isolada causa isquemia hepática prolongada e não substitui o empacotamento compressivo como medida de controle de danos.",
+      "C": "A ressecção hepática em cunha com fechamento primário da parede abdominal ignora a tríade letal e aumenta o risco de síndrome compartimental abdominal."
     }
   }
 ];

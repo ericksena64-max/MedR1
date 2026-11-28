@@ -1,6 +1,6 @@
 /**
  * Classificação taxonômica canônica do MedR1 (taxonomia v1: 5 grandes áreas,
- * 44 temas, 260 subtemas). Módulo puro, compartilhado por frontend, servidor
+ * 44 temas, 262 subtemas). Módulo puro, compartilhado por frontend, servidor
  * (importação automática) e scripts offline (`scripts/classify_bank.ts`).
  */
 import taxonomyJson from '../data/taxonomy/medr1_taxonomy_v1.json';
@@ -136,8 +136,162 @@ export function entryToClassification(
 
 /**
  * Classificador determinístico (sem IA): casa slug/label/alias exatos e, na falta,
- * o alias mais longo contido no texto. Retorna `undefined` se não houver evidência.
+ * aplica a Hierarquia de Precedência Clínica sobre o texto antes de escolher o alias
+ * mais longo contido no texto. Retorna `undefined` se não houver evidência.
  */
+function hasAnyNormalizedPhrase(hay: string, phrases: string[]): boolean {
+  return phrases.some((p) => hay.includes(` ${p} `));
+}
+
+function hasPediatricAgeContext(hay: string): boolean {
+  if (
+    hasAnyNormalizedPhrase(hay, [
+      'crianca',
+      'criancas',
+      'lactente',
+      'lactentes',
+      'pre escolar',
+      'escolar',
+      'adolescente',
+      'adolescentes',
+      'menino',
+      'meninos',
+      'menina',
+      'meninas',
+      'pediatrico',
+      'pediatrica',
+      'pediatria',
+      'recem nascido',
+      'recem nascida',
+      'neonato',
+      'neonatal',
+      'rn',
+    ])
+  ) {
+    return true;
+  }
+  return /(?:^| )(?!ha |por |durante )(?:[1-9]|1[0-7]) (?:anos|ano|meses|mes|dias de vida) /.test(
+    hay
+  );
+}
+
+function inferBoundaryOverride(hay: string): TaxonomyEntry | undefined {
+  const isPed = hasPediatricAgeContext(hay);
+  const isObs = hasAnyNormalizedPhrase(hay, [
+    'gestante',
+    'gestantes',
+    'gravida',
+    'gravidas',
+    'puerpera',
+    'puerperas',
+    'puerperio',
+    'idade gestacional',
+    'semanas de gestacao',
+  ]);
+  const isSurg = hasAnyNormalizedPhrase(hay, [
+    'transfusao',
+    'transfusao macica',
+    'hemocomponente',
+    'hemocomponentes',
+    'concentrado de hemacias',
+    'plasma fresco',
+    'pre operatorio',
+    'pos operatorio',
+    'perioperatorio',
+    'cirurgico',
+    'cirurgica',
+    'politraumatizado',
+    'laparotomia',
+    'choque hemorragico',
+  ]);
+
+  if (isObs) {
+    if (
+      hasAnyNormalizedPhrase(hay, [
+        'tromboembolismo',
+        'tep',
+        'tvp',
+        'trombose venosa',
+        'itu',
+        'pielonefrite',
+        'anticoagulacao',
+        'heparina',
+        'enoxaparina',
+      ])
+    ) {
+      return bySubtemaSlug.get(
+        'go-intercorrencias-itu-tromboembolismo-e-intercorrencias-clinicas'
+      );
+    }
+    if (
+      hasAnyNormalizedPhrase(hay, [
+        'diabetes gestacional',
+        'dmg',
+        'insulina',
+        'hiperglicemia',
+      ])
+    ) {
+      return bySubtemaSlug.get('go-shg-diabetes-mellitus-gestacional-e-previo');
+    }
+  }
+
+  if (isPed) {
+    if (
+      hasAnyNormalizedPhrase(hay, [
+        'cetoacidose',
+        'cetoacidose diabetica',
+        'cad',
+        'diabetes',
+        'dm1',
+        'insulina',
+        'hipotireoidismo congenito',
+        'hiperplasia adrenal',
+      ])
+    ) {
+      return bySubtemaSlug.get(
+        'ped-puericultura-endocrinologia-pediatrica-e-diabetes-na-infancia'
+      );
+    }
+    if (hasAnyNormalizedPhrase(hay, ['asma', 'crise asmatica', 'fibrose cistica'])) {
+      return bySubtemaSlug.get('ped-pneumo-ped-asma-na-infancia-e-fibrose-cistica');
+    }
+    if (
+      hasAnyNormalizedPhrase(hay, [
+        'sindrome nefritica',
+        'sindrome nefrotica',
+        'gnpe',
+        'glomerulonefrite',
+      ])
+    ) {
+      return bySubtemaSlug.get(
+        'ped-gastro-nefro-ped-sindrome-nefritica-e-nefrotica-pediatrica'
+      );
+    }
+  }
+
+  if (isSurg) {
+    if (
+      hasAnyNormalizedPhrase(hay, [
+        'transfusao macica',
+        'protocolo de transfusao',
+        'hemocomponente',
+        'hemocomponentes',
+        'concentrado de hemacias',
+        'plasma fresco',
+        'choque hemorragico',
+        'acido tranexamico',
+        'reposicao volemica',
+      ])
+    ) {
+      return bySubtemaSlug.get(
+        'cg-periop-hemoterapia-transfusao-macica-e-reposicao-volemica'
+      );
+    }
+  }
+
+  return undefined;
+}
+
 export function classifyByAliases(
   ...texts: Array<string | undefined | null>
 ): TaxonomyEntry | undefined {
@@ -146,11 +300,48 @@ export function classifyByAliases(
     if (exact) return exact;
   }
   const hay = ` ${normalizeTaxonomyText(texts.filter(Boolean).join(' '))} `;
-  let best: { entry: TaxonomyEntry; len: number } | undefined;
+  const boundaryMatch = inferBoundaryOverride(hay);
+  if (boundaryMatch) return boundaryMatch;
+
+  const preferredAreas = new Set<GrandeAreaId>();
+  if (hasPediatricAgeContext(hay)) preferredAreas.add('pediatria');
+  if (
+    hasAnyNormalizedPhrase(hay, [
+      'gestante',
+      'gravida',
+      'puerpera',
+      'idade gestacional',
+      'semanas de gestacao',
+    ])
+  ) {
+    preferredAreas.add('ginecologia_obstetricia');
+  }
+  if (
+    hasAnyNormalizedPhrase(hay, [
+      'transfusao macica',
+      'pre operatorio',
+      'pos operatorio',
+      'perioperatorio',
+      'politraumatizado',
+      'laparotomia',
+      'choque hemorragico',
+    ])
+  ) {
+    preferredAreas.add('cirurgia_geral');
+  }
+
+  let best: { entry: TaxonomyEntry; len: number; preferred: boolean } | undefined;
   for (const [alias, entry] of byNormAlias) {
     if (alias.length < 5) continue;
-    if (hay.includes(` ${alias} `) && (!best || alias.length > best.len)) {
-      best = { entry, len: alias.length };
+    if (hay.includes(` ${alias} `)) {
+      const isPref = preferredAreas.has(entry.grandeAreaId);
+      if (
+        !best ||
+        (isPref && !best.preferred) ||
+        (isPref === best.preferred && alias.length > best.len)
+      ) {
+        best = { entry, len: alias.length, preferred: isPref };
+      }
     }
   }
   return best?.entry;
@@ -188,4 +379,12 @@ export function buildTaxonomyPromptGuide(): string {
     .join('\n');
 }
 
-export const TAXONOMY_PROMPT_RULES = `Classifique cada questão escolhendo EXATAMENTE UM "subtemaSlug" da lista fechada abaixo (copie o slug literalmente, nunca invente). O tema e a grande área derivam do slug. Escolha o subtema mais específico para o ASSUNTO PRINCIPAL cobrado (não o cenário). Se nada se encaixar bem, escolha o mais próximo e marque "baixaConfianca": true. Gere de 3 a 5 "tags" em lowercase-kebab-case sem acentos (conceitos-chave: doença, fármaco, conduta, padrão de cobrança).`;
+export const CLINICAL_PRECEDENCE_RULES = `HIERARQUIA DE PRECEDÊNCIA CLÍNICA (OBRIGATÓRIA EM FRONTEIRAS):
+1. Pediatria > Clínica Médica: Paciente pediátrico (RN, lactente, pré-escolar, escolar, adolescente / idade < 18 anos) com abordagem diagnóstica ou terapêutica pediátrica (incluindo DM1 e cetoacidose diabética na infância, asma infantil, nefropatias e infecções pediátricas) DEVE ser classificado em Pediatria (ex.: "ped-puericultura-endocrinologia-pediatrica-e-diabetes-na-infancia").
+2. Cirurgia Geral > Clínica Médica: Transfusão de hemocomponentes, protocolo de transfusão maciça, reposição volêmica no choque hemorrágico/trauma, preparo pré-operatório, manejo de anticoagulantes no perioperatório e complicações pós-operatórias DEVEM ser classificados em Cirurgia Geral (ex.: "cg-periop-hemoterapia-transfusao-macica-e-reposicao-volemica").
+3. Ginecologia e Obstetrícia > Clínica Médica: Gestantes ou puérperas com intercorrências clínicas, metabólicas ou trombóticas DEVEM ser classificadas em Ginecologia e Obstetrícia.
+4. Sinal de Bloco da Prova: Em provas organizadas por blocos clássicos (Clínica Médica, Cirurgia Geral, Pediatria, Ginecologia e Obstetrícia, Medicina Preventiva), use a numeração/posição da questão como critério auxiliar de desempate.`;
+
+export const TAXONOMY_PROMPT_RULES = `Classifique cada questão escolhendo EXATAMENTE UM "subtemaSlug" da lista fechada abaixo (copie o slug literalmente, nunca invente). O tema e a grande área derivam do slug. Escolha o subtema mais específico para o ASSUNTO PRINCIPAL cobrado (não o cenário). Se nada se encaixar bem, escolha o mais próximo e marque "baixaConfianca": true. Gere de 3 a 5 "tags" em lowercase-kebab-case sem acentos (conceitos-chave: doença, fármaco, conduta, padrão de cobrança).
+
+${CLINICAL_PRECEDENCE_RULES}`;

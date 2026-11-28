@@ -15,7 +15,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Anemias Carenciais",
     "temaSlug": "cm-hemato",
     "subtemaSlug": "cm-hemato-anemias-carenciais",
-    "tags": ["anemia-megaloblastica","deficiencia-de-vitamina-b12","cianocobalamina","macrocitose"],
+    "tags": [
+      "anemia-megaloblastica",
+      "deficiencia-de-vitamina-b12",
+      "cianocobalamina",
+      "macrocitose"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -60,13 +65,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **C** está correta. Na deficiência grave de vitamina B12 acompanhada de manifestações neurológicas ou neuropsiquiátricas (parestesias simétricas e déficit cognitivo), as diretrizes hematológicas (BSH / UpToDate / Harrison) recomendam reposição parenteral inicial — cianocobalamina 1.000 mcg IM diariamente (ou em dias alternados) na primeira semana, seguida de aplicações semanais até resolução/reavaliação clínica e definição etiológica, garantindo biodisponibilidade imediata independentemente de má absorção.\n- **A) Incorreta:** Em quadros neurológicos graves, prefere-se reposição parenteral inicial, e a manutenção oral requer doses diárias (1.000–2.000 mcg/dia), não mensais.\n- **B) Incorreta:** A manutenção oral mensal de 1.000 mcg é insuficiente para manter níveis adequados de cobalamina.\n- **D) Incorreta:** A via oral não é preferencial no ataque de quadro neurológico e a manutenção vitalícia semanal não é o esquema padrão (geralmente mensal após normalização, dependendo da causa).\n- **E) Incorreta:** Suspender a reposição assim que os sintomas melhoram, sem esquema de manutenção e sem definição da causa (ex.: anemia perniciosa), leva à recidiva neurológica.",
     "perolaClinica": "Na deficiência grave de vitamina B12 acompanhada de manifestações neurológicas ou neuropsiquiátricas (parestesias simétricas e déficit cognitivo), as diretrizes hematológicas (BSH / UpToDate / Harrison) recomendam reposi",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Reposição parenteral de vitamina B12 na anemia megaloblástica com manifestações neurológicas.",
+      "raciocinioChave": "A presença de parestesias simétricas e déficit cognitivo associados à hipovitaminose B12 (125 pg/mL) exige ataque parenteral com cianocobalamina 1.000 mcg/dia IM. Após a fase inicial, mantém-se esquema semanal IM até reavaliação dos sintomas e definição da causa.",
+      "armadilhaBanca": "A banca testa a confusão entre a reposição oral/manutenção mensal (inadequada na fase aguda neurológica) e a suspensão precoce do tratamento após melhora clínica."
+    },
+    "mapaDistratores": {
+      "A": "A via oral não é preferencial no ataque de quadros neurológicos graves, e a manutenção oral exige doses diárias, não mensais.",
+      "B": "A manutenção por via oral em dose única mensal de 1.000 mcg é insuficiente para sustentar níveis adequados de cobalamina.",
+      "D": "O ataque oral não é preferencial com déficit neurológico e a manutenção semanal vitalícia não é o padrão após estabilização clínica.",
+      "E": "Suspender a reposição logo após a melhora dos sintomas sem manutenção nem investigação etiológica leva à recidiva neurológica."
+    }
   },
   {
     "id": "q-enare-2024-002",
@@ -78,7 +95,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "HIV/AIDS e Infecções Oportunistas",
     "temaSlug": "cm-infecto",
     "subtemaSlug": "cm-infecto-hiv-aids-e-infeccoes-oportunistas",
-    "tags": ["hiv-aids","sindrome-de-reconstituicao-imune","corticoterapia","tarv"],
+    "tags": [
+      "hiv-aids",
+      "sindrome-de-reconstituicao-imune",
+      "corticoterapia",
+      "tarv"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -123,13 +145,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "E",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **E** está correta. O paciente com imunossupressão avançada (CD4 = 45 células/mm³) desenvolveu, 1 mês após iniciar TARV, quadro clássico de Síndrome Inflamatória de Reconstituição Imune (SIRI) desmascarando provável tuberculose disseminada (linfonodos necróticos, fistulização, infiltrado miliar/reticulonodular, hipoxemia). Segundo o PCDT de Manejo da Infecção pelo HIV em Adultos (Ministério da Saúde), na SIRI **não se deve suspender a TARV** (exceto em situações de risco imediato à vida refratárias, como meningite criptocócica com hipertensão intracraniana grave), devendo-se manter a TARV e associar corticoterapia sistêmica nas formas moderadas a graves enquanto se conduz a investigação/tratamento da infecção oportunista.\n- **A) Incorreta:** A suspensão da TARV piora o prognóstico imunológico e aumenta mortalidade em pacientes com CD4 < 50 células/mm³.\n- **B) Incorreta:** A apresentação com linfonodos necróticos fistulizantes e padrão reticulonodular miliar pós-TARV aponta fortemente para tuberculose/SIRI, não justificando focar apenas em linfoma sem manejo da reação imune.\n- **C) Incorreta:** Procinéticos e laxativos não resolvem o espessamento ileal/linfadenopatia mesentérica e podem ser prejudiciais em suboclusão; além disso, omitiu o manejo da SIRI.\n- **D) Incorreta:** Embora a investigação microbiológica e histopatológica seja válida, a recomendação de suspender a TARV torna a alternativa incorreta.",
     "perolaClinica": "O paciente com imunossupressão avançada (CD4 = 45 células/mm³) desenvolveu, 1 mês após iniciar TARV, quadro clássico de Síndrome Inflamatória de Reconstituição Imune (SIRI) desmascarando provável tuberculose disseminada ",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Manejo da Síndrome Inflamatória de Reconstituição Imune (SIRI) por tuberculose pós-TARV.",
+      "raciocinioChave": "Paciente com HIV avançado (CD4 45) que evolui 1 mês após início da TARV com linfonodos necróticos fistulizantes e infiltrado miliar apresenta SIRI desmascarando tuberculose. A conduta é manter a TARV e associar corticosteroide para modular a resposta inflamatória exacerbada.",
+      "armadilhaBanca": "O candidato é induzido a suspender a TARV diante da piora clínica após o início do tratamento, conduta que eleva a mortalidade na imunossupressão grave."
+    },
+    "mapaDistratores": {
+      "A": "A suspensão da TARV piora o prognóstico imunológico e aumenta a mortalidade em pacientes com contagem de CD4 abaixo de 50 células/mm³.",
+      "B": "Os linfonodos necróticos fistulizantes e o padrão miliar pós-TARV apontam para tuberculose/SIRI, tornando insuficiente focar apenas em biópsia para linfoma.",
+      "C": "Procinéticos e laxativos são inadequados e potencialmente danosos diante de espessamento ileal/suboclusão, além de omitirem o corticoide para a SIRI.",
+      "D": "Apesar de a investigação microbiológica e histopatológica ser pertinente, a indicação de suspender a TARV invalida a conduta."
+    }
   },
   {
     "id": "q-enare-2024-003",
@@ -141,7 +175,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Fibromialgia e Dor Crônica",
     "temaSlug": "cm-reumato",
     "subtemaSlug": "cm-reumato-fibromialgia-e-dor-cronica",
-    "tags": ["lombalgia","sinais-de-alarme","red-flags","ressonancia-magnetica"],
+    "tags": [
+      "lombalgia",
+      "sinais-de-alarme",
+      "red-flags",
+      "ressonancia-magnetica"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -186,13 +225,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **C** está correta conforme o gabarito definitivo da banca (FGV/ENARE). Em idoso tabagista pesado com dor toracolombar há 3 semanas (aguda) sem déficit motor grave nem síndrome da cauda equina estabelecida, recomenda-se investigação laboratorial inicial (hemograma, VHS, PCR) e radiografia de tórax (pelo risco neoplásico pulmonar), reservando a RNM de coluna toracolombar para casos com falha clínica ou suspeita persistente de compressão/lesão estrutural (diretrizes ACP / UpToDate para abordagem de lombalgia aguda).\n- **A) Incorreta:** A banca considerou que, na ausência de perda ponderal, dor noturna progressiva ou déficit motor focal, não se adota investigação oncológica invasiva imediata apenas pela idade e tabagismo.\n- **B) Incorreta:** A RNM imediata é obrigatória na suspeita de síndrome da cauda equina, mielopatia progressiva ou abscesso epidural, não apenas pela duração de 3 semanas.\n- **D) Incorreta:** Idade > 50 anos isoladamente, sem outros sinais de alarme, não torna obrigatória a RNM com contraste para todos os pacientes.\n- **E) Incorreta:** Sinais de alarme continuam sendo fundamentais para racionalizar exames de imagem na lombalgia em maiores de 50 anos.",
     "perolaClinica": "conforme o gabarito definitivo da banca (FGV/ENARE).",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Investigação escalonada da dor toracolombar aguda em idoso tabagista sem déficit motor.",
+      "raciocinioChave": "Diante de dor toracolombar há 3 semanas (aguda) em tabagista pesado com constipação recente e dor à palpação vertebral, mas sem síndrome da cauda equina ou déficit motor grave, inicia-se com radiografia de tórax e marcadores inflamatórios (hemograma, VHS, PCR). A RNM de coluna fica reservada caso não haja resposta às medidas clínicas iniciais.",
+      "armadilhaBanca": "A banca explora o reflexo de solicitar RNM imediata em qualquer paciente acima de 50 anos, em vez de seguir a estratificação inicial com laboratório e radiografia de tórax."
+    },
+    "mapaDistratores": {
+      "A": "Na ausência de perda ponderal ou déficit neurológico focal progressivo, não se indica investigação oncológica invasiva imediata apenas por idade e tabagismo.",
+      "B": "A RNM imediata da coluna é mandatória na suspeita de síndrome da cauda equina, mielopatia progressiva ou abscesso epidural, não apenas pela duração de 3 semanas.",
+      "D": "A idade superior a 50 anos isoladamente não obriga a realização universal de RNM de coluna com contraste sem outros critérios clínicos ou refratariedade.",
+      "E": "A avaliação dos sinais de alarme é essencial para indicar e racionalizar exames de imagem na lombalgia em maiores de 50 anos."
+    }
   },
   {
     "id": "q-enare-2024-004",
@@ -204,7 +255,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Infecções de Pele e Partes Moles",
     "temaSlug": "cm-infecto",
     "subtemaSlug": "cm-infecto-infeccoes-de-pele-e-partes-moles",
-    "tags": ["herpes-zoster","imunossupressao","aciclovir-ev","isolamento-hospitalar"],
+    "tags": [
+      "herpes-zoster",
+      "imunossupressao",
+      "aciclovir-ev",
+      "isolamento-hospitalar"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -249,13 +305,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **C** está correta. Trata-se de paciente gravemente imunossuprimido (pulsoterapia com corticoide + ciclofosfamida) com herpes-zóster acometendo múltiplos dermátomos (V1 oftálmico e V2 maxilar — alto risco de ceratite, necrose retiniana e disseminação). Segundo o Guia de Vigilância em Saúde (Ministério da Saúde) e o CDC/IDSA, impõe-se internação hospitalar, **precauções para aerossóis (isolamento respiratório) e contato**, além de **aciclovir endovenoso (10 mg/kg 8/8h)** e avaliação oftalmológica/vigilância de complicações.\n- **A) Incorreta:** Terapia oral ambulatorial é inadequada em imunossuprimido grave com acometimento multidermatomal e ramo oftálmico.\n- **B) Incorreta:** A vacina de varicela (vírus vivo atenuado) é contraindicada em imunossuprimidos e gestantes, e sua indicação pós-exposição depende do status imune e da janela de tempo (até 5 dias).\n- **D) Incorreta:** Em imunossuprimidos ou acometimento oftálmico/disseminado, o aciclovir venoso é indicado mesmo após 72 horas do início das lesões enquanto houver vesículas ativas.\n- **E) Incorreta:** Para isolamento de aerossóis exige-se máscara N95/PFF2 (não cirúrgica) e a terapia deve ser parenteral, não oral.",
     "perolaClinica": "Trata-se de paciente gravemente imunossuprimido (pulsoterapia com corticoide + ciclofosfamida) com herpes-zóster acometendo múltiplos dermátomos (V1 oftálmico e V2 maxilar — alto risco de ceratite, necrose retiniana e di",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Manejo e isolamento do herpes-zóster multidermatomal e oftálmico em imunossuprimido.",
+      "raciocinioChave": "Paciente em pulsoterapia com corticoide e ciclofosfamida com zóster acometendo os ramos oftálmico (V1) e maxilar (V2) apresenta alto risco de disseminação e complicações oculares. Impõe-se internação hospitalar, isolamento respiratório (aerossóis) e de contato, além de aciclovir endovenoso.",
+      "armadilhaBanca": "As opções tentam confundir com tratamento ambulatorial oral, restrição à janela de 72 horas ou erro na especificação da máscara cirúrgica para precaução de aerossóis."
+    },
+    "mapaDistratores": {
+      "A": "O tratamento oral ambulatorial é insuficiente para imunossuprimidos graves com acometimento multidermatomal e do ramo oftálmico.",
+      "B": "A vacina de vírus vivo atenuado contra varicela é contraindicada em imunossuprimidos e gestantes, e sua indicação pós-exposição depende do status imune e do tempo decorrido.",
+      "D": "Em imunossuprimidos ou no acometimento oftálmico/disseminado, o aciclovir parenteral deve ser iniciado mesmo após 72 horas enquanto houver lesões vesiculares ativas.",
+      "E": "O isolamento respiratório para aerossóis exige máscara N95/PFF2 (não máscara cirúrgica), e o antiviral deve ser administrado por via parenteral."
+    }
   },
   {
     "id": "q-enare-2024-005",
@@ -267,7 +335,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Mieloma Múltiplo e Gamopatias",
     "temaSlug": "cm-hemato",
     "subtemaSlug": "cm-hemato-mieloma-multiplo-e-gamopatias",
-    "tags": ["sindrome-poems","gamopatia-monoclonal","eletroforese-de-proteinas","imunofixacao"],
+    "tags": [
+      "sindrome-poems",
+      "gamopatia-monoclonal",
+      "eletroforese-de-proteinas",
+      "imunofixacao"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -312,13 +385,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **B** está correta. O caso reúne os critérios clássicos da **Síndrome POEMS**: **P**olineuropatia desmielinizante crônica, **O**rganomegalia (hepatoesplenomegalia), **E**ndocrinopatia (hipotireoidismo), **M**onoclonalidade (distúrbio plasmocitário — critério obrigatório junto com a polineuropatia) e **S**kin changes (hiperpigmentação), além de lesões osteoescleróticas, papiledema/hipertensão intracraniana e sobrecarga extravascular (ascite, derrame pleural e pericárdico). Segundo os critérios diagnósticos do International Myeloma Working Group (IMWG), a investigação obrigatória inclui eletroforese de proteínas séricas e urinárias com **imunofixação** para identificar o componente monoclonal (geralmente cadeia leve lambda).\n- **A) Incorreta:** Embora haja fenômeno de Raynaud e serosite, a combinação de polineuropatia desmielinizante crônica com lesões osteoescleróticas e organomegalia define POEMS, não colagenose.\n- **C) Incorreta:** Amiloidose sistêmica cursa tipicamente com neuropatia axonal (não desmielinizante) e sem lesões osteoescleróticas.\n- **D) Incorreta:** A ascite na síndrome POEMS decorre de hiperpermeabilidade vascular mediada por VEGF, não exigindo biópsia peritoneal como exame definidor.\n- **E) Incorreta:** Cistos tireoidianos simples não explicam o quadro sistêmico.",
     "perolaClinica": "O caso reúne os critérios clássicos da **Síndrome POEMS**: **P**olineuropatia desmielinizante crônica, **O**rganomegalia (hepatoesplenomegalia), **E**ndocrinopatia (hipotireoidismo), **M**onoclonalidade (distúrbio plasmo",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Diagnóstico da síndrome POEMS por pesquisa de gamopatia monoclonal.",
+      "raciocinioChave": "A associação de polineuropatia desmielinizante crônica ascendente, organomegalia, endocrinopatia, hipertensão intracraniana, ascite e lesões osteoescleróticas preenche os critérios da síndrome POEMS. Como a gamopatia monoclonal é critério diagnóstico obrigatório, deve-se solicitar eletroforese de proteínas séricas e urinárias com imunofixação.",
+      "armadilhaBanca": "Sintomas como derrames cavitários, alterações cutâneas ou disfunção tireoidiana desviam a atenção para colagenoses ou amiloidose, que não explicam a neuropatia desmielinizante com lesões osteoescleróticas."
+    },
+    "mapaDistratores": {
+      "A": "A presença de polineuropatia desmielinizante crônica, organomegalia e lesões osteoescleróticas aponta para síndrome POEMS, e não para colagenose indiferenciada.",
+      "C": "A amiloidose sistêmica cursa tipicamente com neuropatia axonal (não desmielinizante) e não produz lesões ósseas osteoescleróticas.",
+      "D": "A ascite na síndrome POEMS decorre do aumento da permeabilidade vascular mediado por VEGF, não sendo a biópsia peritoneal o exame definidor do diagnóstico.",
+      "E": "A punção de cisto tireoidiano não esclarece o comprometimento neurológico e sistêmico multiorgânico."
+    }
   },
   {
     "id": "q-enare-2024-006",
@@ -330,7 +415,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Lúpus Eritematoso Sistêmico",
     "temaSlug": "cm-reumato",
     "subtemaSlug": "cm-reumato-lupus-eritematoso-sistemico",
-    "tags": ["lupus-eritematoso-sistemico","anemia-hemolitica-autoimune","corticoterapia","autoanticorpos"],
+    "tags": [
+      "lupus-eritematoso-sistemico",
+      "anemia-hemolitica-autoimune",
+      "corticoterapia",
+      "autoanticorpos"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -375,13 +465,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **B** está correta. A paciente apresenta **lúpus eritematoso sistêmico (LES)** em atividade grave (nefrite lúpica, consumo de complemento, FAN/anti-DNA/anti-Sm positivos) complicado por **anemia hemolítica autoimune (AHAI) por anticorpos quentes** (Hb 7,0 g/dL, reticulocitose 18%, DHL 1150 UI/L, hiperbilirrubinemia indireta, Coombs direto positivo). Conforme as diretrizes da EULAR/SBR para LES e hematologia, a terapia de primeira linha imediata para AHAI é **corticoterapia sistêmica** (prednisona 1 mg/kg/dia ou pulsoterapia com metilprednisolona, que também trata a nefrite lúpica).\n- **A) Incorreta:** A medula está hiperproliferativa (reticulócitos 18%), não havendo déficit de eritropoetina.\n- **C) Incorreta:** Ferritina elevada (650 ng/mL) e TIBC baixa indicam perfil inflamatório/hemolítico, não deficiência de ferro.\n- **D) Incorreta:** A paciente está hemodinamicamente estável (PA 160x90, FC 97, SpO2 98%); na AHAI evita-se transfusão desnecessária pelo risco de hemólise acelerada e dificuldade de prova cruzada.\n- **E) Incorreta:** Hidroxicloroquina é terapia de manutenção para todo paciente com LES, mas tem início de ação lento e não trata a hemólise aguda.",
     "perolaClinica": "A paciente apresenta **lúpus eritematoso sistêmico (LES)** em atividade grave (nefrite lúpica, consumo de complemento, FAN/anti-DNA/anti-Sm positivos) complicado por **anemia hemolítica autoimune (AHAI) por anticorpos qu",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Tratamento inicial da anemia hemolítica autoimune (AHAI) secundária ao LES.",
+      "raciocinioChave": "A paciente apresenta lúpus eritematoso sistêmico em atividade complicado por anemia hemolítica autoimune por anticorpos quentes (Hb 7,0 g/dL, reticulocitose, DHL elevado, bilirrubina indireta aumentada e Coombs direto positivo). A terapia de primeira linha para conter a hemólise aguda imunomediada é a corticoterapia sistêmica.",
+      "armadilhaBanca": "A anemia importante com Hb de 7,0 g/dL induz à indicação imediata de hemotransfusão ou reposição de ferro, mesmo com estabilidade hemodinâmica e ferritina elevada."
+    },
+    "mapaDistratores": {
+      "A": "A reticulocitose de 18% demonstra resposta medular hiperproliferativa adequada, descartando déficit de eritropoetina.",
+      "C": "Ferritina elevada e capacidade total de ligação do ferro reduzida refletem perfil inflamatório e hemolítico, contraindicando reposição de ferro.",
+      "D": "Na AHAI com estabilidade hemodinâmica evita-se hemotransfusão desnecessária pelo risco de incompatibilidade na prova cruzada e exacerbação da hemólise.",
+      "E": "A hidroxicloroquina tem início de ação lento e atua na manutenção do LES, não controlando a crise hemolítica aguda."
+    }
   },
   {
     "id": "q-enare-2024-007",
@@ -393,7 +495,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Doenças Pulmonares Intersticiais",
     "temaSlug": "cm-pneumo",
     "subtemaSlug": "cm-pneumo-doencas-pulmonares-intersticiais",
-    "tags": ["pneumonia-em-organizacao","boop","doenca-pulmonar-intersticial","tomografia-computadorizada"],
+    "tags": [
+      "pneumonia-em-organizacao",
+      "boop",
+      "doenca-pulmonar-intersticial",
+      "tomografia-computadorizada"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -438,13 +545,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **D** está correta. O padrão tomográfico clássico da pneumonia em organização (tanto criptogênica quanto secundária — inclusive secundária à inalação de drogas como a cocaína) consiste em **consolidações irregulares/periféricas do espaço aéreo, opacidades em vidro fosco e pequenos nódulos** (podendo exibir o sinal do halo invertido), conforme diretrizes da ATS/ERS para pneumonias intersticiais idiopáticas.\n- **A) Incorreta:** Imagem apical fibrótica com cavitação e sintomas por 3 semanas sugere tuberculose pulmonar.\n- **B) Incorreta:** Padrão reticulonodular difuso agudo sugere tuberculose miliar, linfangite carcinomatosa ou infecção viral/fúngica disseminada.\n- **C) Incorreta:** Consolidação lobar com febre alta aguda é clássica de pneumonia bacteriana adquirida na comunidade (ex.: *Streptococcus pneumoniae*).\n- **E) Incorreta:** Bronquiectasias centrais com impactação mucoide, eosinofilia e broncoespasmo caracterizam aspergilose broncopulmonar alérgica (ABPA).",
     "perolaClinica": "O padrão tomográfico clássico da pneumonia em organização (tanto criptogênica quanto secundária — inclusive secundária à inalação de drogas como a cocaína) consiste em **consolidações irregulares/periféricas do espaço aé",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Padrão tomográfico e diagnóstico diferencial da pneumonia em organização.",
+      "raciocinioChave": "A pneumonia em organização apresenta-se na TC de tórax com consolidações irregulares e periféricas do espaço aéreo, opacidades em vidro fosco e pequenos nódulos, podendo ser secundária à inalação de drogas como a cocaína. O reconhecimento desse padrão radiológico e de suas causas secundárias permite excluí-las antes de firmá-la como criptogênica.",
+      "armadilhaBanca": "A banca contrasta o padrão de consolidações periféricas irregulares com outros padrões clássicos de TC, como ABPA, tuberculose miliar ou pneumonia lobar."
+    },
+    "mapaDistratores": {
+      "A": "Infiltrado apical fibrótico com cavitação e evolução subaguda é característico de tuberculose pulmonar, não de pneumonia em organização.",
+      "B": "O padrão reticulonodular difuso agudo sugere tuberculose miliar, linfangite carcinomatosa ou infecção viral/fúngica disseminada.",
+      "C": "Consolidação lobar homogênea associada a febre alta de início agudo é típica de pneumonia bacteriana adquirida na comunidade.",
+      "E": "Bronquiectasias centrais com impactação mucoide, eosinofilia e broncoespasmo definem aspergilose broncopulmonar alérgica (ABPA)."
+    }
   },
   {
     "id": "q-enare-2024-008",
@@ -456,7 +575,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "DRGE e Doenças do Esôfago",
     "temaSlug": "cm-gastro",
     "subtemaSlug": "cm-gastro-drge-e-doencas-do-esofago",
-    "tags": ["esofagite-eosinofilica","disfagia","corticosteroide-topico","budesonida"],
+    "tags": [
+      "esofagite-eosinofilica",
+      "disfagia",
+      "corticosteroide-topico",
+      "budesonida"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -501,13 +625,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "E",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **E** está correta. Segundo as diretrizes da ACG/AGA e da Federação Brasileira de Gastroenterologia (FBG), o tratamento farmacológico de primeira linha para esofagite eosinofílica refratária a IBP e dieta de eliminação é o uso de **corticosteroides tópicos deglutidos** (fluticasona em spray deglutido ou budesonida viscosa oral), que induzem remissão histológica e sintomática com baixa absorção sistêmica.\n- **A) Incorreta:** Sucralfato não atua na inflamação eosinofílica da mucosa esofágica.\n- **B) Incorreta:** O paciente já fez uso prolongado de IBP em dose plena (esomeprazol 40 mg/dia por 6 meses) sem resposta; trocar de IBP não é a conduta de escolha.\n- **C) Incorreta:** Imunobiológicos (como dupilumabe) ficam reservados para casos refratários aos corticoides tópicos ou doença grave/fibroestenosante recorrente.\n- **D) Incorreta:** Procinéticos não tratam esofagite eosinofílica.",
     "perolaClinica": "Segundo as diretrizes da ACG/AGA e da Federação Brasileira de Gastroenterologia (FBG), o tratamento farmacológico de primeira linha para esofagite eosinofílica refratária a IBP e dieta de eliminação é o uso de **corticos",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Tratamento de escolha da esofagite eosinofílica refratária a IBP e dieta.",
+      "raciocinioChave": "Homem jovem com disfagia para sólidos, impactação alimentar e biópsia confirmando esofagite eosinofílica sem resposta a IBP em dose plena e dieta de eliminação necessita de terapia anti-inflamatória tópica esofágica. Os corticosteroides tópicos deglutidos (fluticasona ou budesonida) são a primeira escolha medicamentosa nessa etapa.",
+      "armadilhaBanca": "A alternativa de troca de IBP ou escalonamento precoce para imunobiológico tenta confundir a sequência terapêutica escalonada da esofagite eosinofílica."
+    },
+    "mapaDistratores": {
+      "A": "O sucralfato atua apenas como barreira mucosa gástrica e não reduz o infiltrado inflamatório eosinofílico do esôfago.",
+      "B": "Após falha comprovada com esomeprazol 40 mg/dia por 6 meses, a simples substituição por outro IBP não é a conduta recomendada.",
+      "C": "Terapias biológicas (como dupilumabe) são reservadas para casos refratários aos corticosteroides tópicos deglutidos.",
+      "D": "Procinéticos atuam na motilidade gastroesofágica e não tratam a inflamação eosinofílica da mucosa."
+    }
   },
   {
     "id": "q-enare-2024-009",
@@ -519,7 +655,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Fibrilação Atrial e Taquiarritmias",
     "temaSlug": "cm-cardio",
     "subtemaSlug": "cm-cardio-fibrilacao-atrial-e-taquiarritmias",
-    "tags": ["fibrilacao-atrial","estenose-mitral","anticoagulacao","varfarina"],
+    "tags": [
+      "fibrilacao-atrial",
+      "estenose-mitral",
+      "anticoagulacao",
+      "varfarina"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -564,13 +705,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **D** está correta. A paciente apresenta **fibrilação atrial associada a estenose mitral moderada de etiologia reumática** (FA \"valvar\") e antecedente de AVC isquêmico. De acordo com a Diretriz Brasileira de Fibrilação Atrial (SBC) e o ensaio INVICTUS (NEJM 2022), os anticoagulantes orais diretos (DOACs) são contraindicados na estenose mitral moderada a grave, sendo a **varfarina** (alvo de INR 2,0–3,0) a única medicação indicada para prevenção de eventos tromboembólicos.\n- **A) Incorreta:** Rivaroxabana foi inferior à varfarina em pacientes com FA reumática no estudo INVICTUS e é contraindicada na estenose mitral moderada a grave.\n- **B) Incorreta:** Antiagregação plaquetária com AAS não oferece proteção adequada contra tromboembolismo na FA.\n- **C) Incorreta:** Apixabana (assim como os demais DOACs) não deve ser utilizada na estenose mitral moderada a importante.\n- **E) Incorreta:** Betabloqueadores controlam frequência cardíaca, mas não substituem a anticoagulação oral para prevenção de AVC.",
     "perolaClinica": "A paciente apresenta **fibrilação atrial associada a estenose mitral moderada de etiologia reumática** (FA \"valvar\") e antecedente de AVC isquêmico.",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Anticoagulação na fibrilação atrial associada à estenose mitral reumática.",
+      "raciocinioChave": "Paciente com história reumática, estenose mitral moderada e episódios de fibrilação atrial apresenta FA valvar, condição em que os anticoagulantes orais diretos (DOACs) são contraindicados. A prevenção de embolia sistêmica deve ser feita exclusivamente com varfarina ajustada pelo INR.",
+      "armadilhaBanca": "A redução do clearance de creatinina (46 mL/min) e a presença de doses ajustadas de rivaroxabana e apixabana nos distratores induzem o candidato a escolher um DOAC em vez da varfarina."
+    },
+    "mapaDistratores": {
+      "A": "A rivaroxabana é contraindicada na estenose mitral moderada a grave e mostrou-se inferior à varfarina na FA reumática.",
+      "B": "A monoterapia antiagregante com aspirina não confere proteção eficaz contra eventos cardioembólicos na fibrilação atrial.",
+      "C": "A apixabana, assim como os demais DOACs, não deve ser utilizada em pacientes com estenose mitral moderada ou importante.",
+      "E": "Betabloqueadores auxiliam no controle da frequência cardíaca, mas não substituem a anticoagulação na prevenção de AVC."
+    }
   },
   {
     "id": "q-enare-2024-010",
@@ -582,7 +735,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Emergências Psiquiátricas e Risco de Suicídio",
     "temaSlug": "cm-psiq",
     "subtemaSlug": "cm-psiq-emergencias-psiquiatricas-e-risco-de-suicidio",
-    "tags": ["sindrome-neuroleptica-maligna","dantrolene","bromocriptina","antipsicoticos"],
+    "tags": [
+      "sindrome-neuroleptica-maligna",
+      "dantrolene",
+      "bromocriptina",
+      "antipsicoticos"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -627,13 +785,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **C** está correta. A **síndrome neuroléptica maligna (SNM)** manifesta-se com hipertermia, rigidez muscular (\"em cano de chumbo\"), disautonomia, alteração do sensório e elevação acentuada de CPK. Além da suspensão imediata do agente causal e suporte intensivo (hidratação, resfriamento), o tratamento farmacológico específico (DSM-5-TR / UpToDate) utiliza o relaxante muscular de ação direta **dantrolene** e o agonista dopaminérgico **bromocriptina** (ou amantadina).\n- **A) Incorreta:** Haloperidol é justamente um dos principais desencadeantes da SNM por ser antagonista D2 potente.\n- **B) Incorreta:** Quetiapina e olanzapina são antipsicóticos atípicos, contraindicados na fase aguda da SNM.\n- **D) Incorreta:** Risperidona é antagonista dopaminérgico (pode precipitar/agravar SNM).\n- **E) Incorreta:** Prometazina tem ação antidopaminérgica/anticolinérgica e pode piorar a hipertermia e a SNM.",
     "perolaClinica": "A **síndrome neuroléptica maligna (SNM)** manifesta-se com hipertermia, rigidez muscular (\"em cano de chumbo\"), disautonomia, alteração do sensório e elevação acentuada de CPK.",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Tratamento farmacológico específico da síndrome neuroléptica maligna (SNM).",
+      "raciocinioChave": "Hipertermia, rigidez muscular generalizada, disautonomia, confusão mental e elevação de CPK em paciente usando medicações para transtorno bipolar caracterizam síndrome neuroléptica maligna. Além da suspensão do antipsicótico e suporte intensivo, o tratamento específico associa dantrolene (miorrelaxante direto) e bromocriptina (agonista dopaminérgico).",
+      "armadilhaBanca": "Os distratores incluem antipsicóticos típicos e atípicos ou prometazina, que agravam o bloqueio dopaminérgico central e pioram a síndrome."
+    },
+    "mapaDistratores": {
+      "A": "O haloperidol é um antagonista dopaminérgico D2 potente e um dos principais desencadeantes da síndrome neuroléptica maligna.",
+      "B": "Antipsicóticos atípicos como quetiapina e olanzapina também bloqueiam receptores de dopamina e são contraindicados na fase aguda da SNM.",
+      "D": "A risperidona exerce bloqueio dopaminérgico intenso, podendo precipitar ou agravar o quadro de rigidez e hipertermia.",
+      "E": "A prometazina possui atividade antidopaminérgica e anticolinérgica que prejudica a termorregulação e agrava a SNM."
+    }
   },
   {
     "id": "q-enare-2024-011",
@@ -645,7 +815,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Farmacodermias Graves",
     "temaSlug": "cm-dermato",
     "subtemaSlug": "cm-dermato-farmacodermias-graves",
-    "tags": ["sindrome-dress","farmacodermia","alopurinol","eosinofilia"],
+    "tags": [
+      "sindrome-dress",
+      "farmacodermia",
+      "alopurinol",
+      "eosinofilia"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -690,13 +865,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "E",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **E** está correta. O uso recente de **alopurinol** (um dos principais fármacos desencadeantes, ao lado de anticonvulsivantes aromáticos) seguido de febre, exantema maculopapular disseminado, **edema facial**, linfadenomegalia generalizada, **eosinofilia** e acometimento visceral (**elevação de transaminases**) preenche os critérios RegiSCAR para **síndrome DRESS** (*Drug Reaction with Eosinophilia and Systemic Symptoms*).\n- **A) Incorreta:** Eritema multiforme caracteriza-se por lesões em alvo típicas, geralmente desencadeadas por herpes simples, sem hepatite e eosinofilia sistêmica marcante.\n- **B) Incorreta:** Urticária medicamentosa cursa com placas eritematoedematosas pruriginosas fugazes (< 24h), sem febre, linfadenomegalia ou hepatite.\n- **C) Incorreta:** SSJ caracteriza-se por necrose epidérmica com bolhas/descolamento cutâneo (< 10% SC) e acometimento mucoso grave, não descritos no caso.\n- **D) Incorreta:** PTI manifesta-se por plaquetopenia isolada com petéquias/equimoses, sem exantema maculopapular febril com eosinofilia.",
     "perolaClinica": "O uso recente de **alopurinol** (um dos principais fármacos desencadeantes, ao lado de anticonvulsivantes aromáticos) seguido de febre, exantema maculopapular disseminado, **edema facial**, linfadenomegalia generalizada,",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Reconhecimento clínico da síndrome DRESS desencadeada por alopurinol.",
+      "raciocinioChave": "Uso recente de alopurinol seguido de febre, exantema maculopapular disseminado, edema facial, linfadenomegalia generalizada, eosinofilia e hepatite (elevação de transaminases) fecha o diagnóstico de síndrome DRESS. A combinação de acometimento sistêmico visceral, edema de face e eosinofilia distingue essa farmacodermia grave.",
+      "armadilhaBanca": "A sobreposição inicial com outras farmacodermias leva à confusão com síndrome de Stevens-Johnson ou urticária medicamentosa, que não cursam com eosinofilia e hepatite associadas ao edema facial sem descolamento epidérmico."
+    },
+    "mapaDistratores": {
+      "A": "O eritema multiforme cursa com lesões em alvo típicas, geralmente desencadeadas por herpes simples, sem eosinofilia nem acometimento hepático sistêmico.",
+      "B": "A urticária medicamentosa apresenta pápulas e placas pruriginosas fugazes (< 24 horas), sem febre, adenomegalia ou elevação de transaminases.",
+      "C": "A síndrome de Stevens-Johnson caracteriza-se por necrose epidérmica com bolhas, descolamento cutâneo e mucosite erosiva grave, ausentes no relato.",
+      "D": "A púrpura trombocitopênica idiopática manifesta-se por plaquetopenia isolada com petéquias e equimoses, não por exantema maculopapular febril com eosinofilia."
+    }
   },
   {
     "id": "q-enare-2024-012",
@@ -708,7 +895,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Cirrose Hepática e Hipertensão Portal",
     "temaSlug": "cm-gastro",
     "subtemaSlug": "cm-gastro-cirrose-hepatica-e-hipertensao-portal",
-    "tags": ["doenca-de-wilson","penicilamina","acumulo-de-cobre","hipertensao-portal"],
+    "tags": [
+      "doenca-de-wilson",
+      "penicilamina",
+      "acumulo-de-cobre",
+      "hipertensao-portal"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -753,13 +945,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alternativa **D** está correta. A associação em adulto jovem de **hepatopatia com anemia hemolítica Coombs negativa**, sintomas extrapiramidais/disfunção de gânglios da base (parkinsonismo, tremores, disartria, ataxia) e resposta a quelantes de cobre (**D-penicilamina** + piridoxina) e **zinco** (que bloqueia absorção intestinal de cobre) é patognomônica da **doença de Wilson** (diretriz AASLD / EASL).\n- **A) Incorreta:** Hemocromatose cursa com sobrecarga de ferro (cirrose, diabetes, hiperpigmentação, cardiopatia), tratada com flebotomias, sem parkinsonismo nem uso de D-penicilamina.\n- **B) Incorreta:** Hepatite autoimune é tratada com corticoides e azatioprina, sem acometimento de gânglios da base.\n- **C) Incorreta:** Colangite esclerosante primária é colangiopatia colestática frequentemente associada à retocolite ulcerativa, sem quadro neurológico extrapiramidal.\n- **E) Incorreta:** Síndrome de Budd-Chiari decorre de trombose das veias supra-hepáticas, manifestando-se por ascite, hepatomegalia e dor abdominal, sem sintomas extrapiramidais.",
     "perolaClinica": "A associação em adulto jovem de **hepatopatia com anemia hemolítica Coombs negativa**, sintomas extrapiramidais/disfunção de gânglios da base (parkinsonismo, tremores, disartria, ataxia) e resposta a quelantes de cobre (",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Diagnóstico da doença de Wilson pelo binômio hepato-extrapiramidal e resposta a quelantes.",
+      "raciocinioChave": "Adulto jovem com hepatopatia, hipertensão portal, anemia hemolítica Coombs negativa e sintomas extrapiramidais de gânglios da base (parkinsonismo, tremor, disartria) apresenta doença de Wilson. A resposta clínica à D-penicilamina associada à piridoxina e ao zinco confirma a sobrecarga de cobre.",
+      "armadilhaBanca": "Outras hepatopatias metabólicas ou autoimunes em jovens são colocadas como distratores, exigindo reconhecer a tríade de hemólise Coombs negativa, parkinsonismo e quelante de cobre."
+    },
+    "mapaDistratores": {
+      "A": "A hemocromatose promove sobrecarga de ferro tratada com flebotomias e não cursa com sintomas extrapiramidais ou indicação de D-penicilamina.",
+      "B": "A hepatite autoimune é tratada com corticoides e azatioprina e não provoca síndrome rígido-acinética por depósito em gânglios da base.",
+      "C": "A colangite esclerosante primária é uma colangiopatia crônica ligada à doença inflamatória intestinal, sem manifestações extrapiramidais nem hemólise Coombs negativa.",
+      "E": "A síndrome de Budd-Chiari resulta da trombose das veias supra-hepáticas, causando ascite e dor abdominal sem disfunção de gânglios da base."
+    }
   },
   {
     "id": "q-enare-2024-013",
@@ -771,7 +975,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Espondiloartrites",
     "temaSlug": "cm-reumato",
     "subtemaSlug": "cm-reumato-espondiloartrites",
-    "tags": ["espondilite-anquilosante","espondiloartrites","lombalgia-inflamatoria","sacroiliite"],
+    "tags": [
+      "espondilite-anquilosante",
+      "espondiloartrites",
+      "lombalgia-inflamatoria",
+      "sacroiliite"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -816,13 +1025,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "E",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alternativa **E** está correta. Homem jovem (< 40 anos) com **lombalgia inflamatória crônica (> 3 meses)** — caracterizada por início insidioso, dor noturna, rigidez matinal que **melhora com exercícios**, dor sacroilíaca e **redução da expansibilidade torácica** (acometimento costovertebral) — apresenta o quadro clássico de **espondilite anquilosante** (espondiloartrite axial radiográfica, critérios ASAS / SBR).\n- **A) Incorreta:** Artrite reumatoide acomete preferencialmente pequenas articulações periféricas de forma simétrica e poupa a coluna lombar/sacroilíacas (acomete apenas coluna cervical).\n- **B) Incorreta:** Esclerose sistêmica manifesta-se por esclerodactilia, fenômeno de Raynaud e fibrose visceral, não por lombalgia inflamatória com sacroileíte.\n- **C) Incorreta:** Não há qualquer sintoma gastrointestinal relatado para sustentar doença de Crohn.\n- **D) Incorreta:** Não há história de infecção pelo HIV nem quadro clássico de oligoartrite periférica assimétrica pós-infecciosa.",
     "perolaClinica": "Homem jovem (< 40 anos) com **lombalgia inflamatória crônica (> 3 meses)** — caracterizada por início insidioso, dor noturna, rigidez matinal que **melhora com exercícios**, dor sacroilíaca e **redução da expansibilidade",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Diagnóstico clínico da espondilite anquilosante por lombalgia inflamatória.",
+      "raciocinioChave": "Homem de 24 anos com dor lombar e sacroilíaca crônica (> 3 meses), despertar noturno, rigidez matinal que melhora com exercício e redução da expansibilidade torácica preenche o perfil clássico de lombalgia inflamatória. Esse conjunto caracteriza a espondilite anquilosante.",
+      "armadilhaBanca": "A irradiação para membro inferior pode simular ciatalgia mecânica ou sugerir artrites periféricas, mas a melhora com exercício e a limitação torácica definem o acometimento axial inflamatório."
+    },
+    "mapaDistratores": {
+      "A": "A artrite reumatoide acomete principalmente pequenas articulações periféricas de forma simétrica e poupa as articulações sacroilíacas e a coluna lombar.",
+      "B": "A esclerose sistêmica manifesta-se com fenômeno de Raynaud, esclerodactilia e fibrose visceral, sem lombalgia inflamatória com sacroileíte.",
+      "C": "Não existem sintomas gastrointestinais (diarreia crônica ou dor abdominal) que sustentem o diagnóstico de doença de Crohn.",
+      "D": "Não há relato de infecção pelo HIV ou histórico infeccioso prévio acompanhado de oligoartrite periférica assimétrica típica da artrite reativa."
+    }
   },
   {
     "id": "q-enare-2024-014",
@@ -834,7 +1055,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Hipertensão Arterial Sistêmica",
     "temaSlug": "cm-cardio",
     "subtemaSlug": "cm-cardio-hipertensao-arterial-sistemica",
-    "tags": ["estenose-de-arteria-renal","hipertensao-renovascular","ieca-bra","hipertensao-secundaria"],
+    "tags": [
+      "estenose-de-arteria-renal",
+      "hipertensao-renovascular",
+      "ieca-bra",
+      "hipertensao-secundaria"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -879,13 +1105,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **D** está correta. A combinação de **fatores de risco ateroscleróticos** (tabagismo, DM, dislipidemia, ateromatose carotídea), **edema agudo de pulmão hipertensivo súbito (\"flash pulmonary edema\")**, hipertensão refratária, **piora aguda da função renal após bloqueador do receptor da angiotensina (losartana)** e **sopro abdominal periumbilical** é clássica de **estenose aterosclerótica de artéria renal** (provavelmente bilateral ou em rim único funcionante), conforme a Diretriz Brasileira de Hipertensão Arterial (SBC).\n- **A) Incorreta:** Doença de Kawasaki é vasculite febril aguda da infância com aneurismas coronarianos.\n- **B) Incorreta:** Arterite de Takayasu acomete predominantemente mulheres jovens (< 40 anos) com claudicação de membros superiores e assimetria de pulsos/PA.\n- **C) Incorreta:** Hiperaldosteronismo primário cursa com HAS e hipocalemia/alcalose metabólica, sem sopro abdominal nem piora renal clássica com BRA.\n- **E) Incorreta:** Feocromocitoma manifesta-se por paroxismos de cefaleia, sudorese e palpitações, sem sopro renal nem IRA induzida por losartana.",
     "perolaClinica": "A combinação de **fatores de risco ateroscleróticos** (tabagismo, DM, dislipidemia, ateromatose carotídea), **edema agudo de pulmão hipertensivo súbito (\"flash pulmonary edema\")**, hipertensão refratária, **piora aguda d",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Diagnóstico da estenose de artéria renal aterosclerótica após piora renal com BRA.",
+      "raciocinioChave": "Paciente aterosclerótico com edema agudo pulmonar hipertensivo súbito, hipertensão refratária, sopro abdominal periumbilical e insuficiência renal aguda após iniciar losartana apresenta estenose de artéria renal (provavelmente bilateral). O bloqueio da angiotensina II reduz a pressão de filtração glomerular na arteríola eferente, precipitando queda da TFG.",
+      "armadilhaBanca": "Outras causas de hipertensão secundária (como feocromocitoma ou hiperaldosteronismo) não explicam o sopro abdominal nem a piora aguda da função renal induzida por bloqueador do receptor de angiotensina."
+    },
+    "mapaDistratores": {
+      "A": "A doença de Kawasaki é uma vasculite febril aguda da infância com predileção por artérias coronárias, incompatível com o perfil etário e aterosclerótico.",
+      "B": "A arterite de Takayasu acomete tipicamente mulheres jovens (< 40 anos) com assimetria de pulsos e claudicação de membros superiores.",
+      "C": "O hiperaldosteronismo primário cursa com hipocalemia e alcalose metabólica, sem sopro abdominal ou IRA desencadeada por losartana.",
+      "E": "O feocromocitoma apresenta-se com tríade paroxística de cefaleia, sudorese e palpitações, não causando estenose aterosclerótica renal."
+    }
   },
   {
     "id": "q-enare-2024-015",
@@ -897,7 +1135,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Hepatites Virais",
     "temaSlug": "cm-gastro",
     "subtemaSlug": "cm-gastro-hepatites-virais",
-    "tags": ["porfiria-cutanea-tardia","hepatite-c","manifestacoes-extrahepaticas","flebotomia"],
+    "tags": [
+      "porfiria-cutanea-tardia",
+      "hepatite-c",
+      "manifestacoes-extrahepaticas",
+      "flebotomia"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -942,13 +1185,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **C** está correta. A **porfiria cutânea tardia (PCT)** é o tipo mais comum de porfiria e tem forte associação epidemiológica com **infecção crônica pelo vírus da hepatite C (HCV)**, etilismo e sobrecarga de ferro. Seu tratamento padrão consiste na erradicação do HCV com antivirais de ação direta, **flebotomias seriadas** (para reduzir estoques hepáticos de ferro) e/ou **hidroxicloroquina em baixas doses** (que mobiliza uroporfirinas hepáticas), conforme diretrizes dermatológicas e hepatológicas.\n- **A) Incorreta:** Porfiria aguda intermitente cursa com dor abdominal e sintomas neuropsiquiátricos agudos (sem lesões cutâneas), tratada com hemina e glicose.\n- **B) Incorreta:** Protoporfiria eritropoiética inicia-se na infância com fotossensibilidade dolorosa aguda sem bolhas, não respondendo a flebotomia ou hidroxicloroquina.\n- **D) Incorreta:** Porfiria variegata é porfiria aguda mista autossômica dominante que não é tratada com flebotomias e hidroxicloroquina.\n- **E) Incorreta:** Protoporfiria ligada ao X tem apresentação semelhante à protoporfiria eritropoiética na infância, sem associação clássica com HCV ou resposta a flebotomias.",
     "perolaClinica": "A **porfiria cutânea tardia (PCT)** é o tipo mais comum de porfiria e tem forte associação epidemiológica com **infecção crônica pelo vírus da hepatite C (HCV)**, etilismo e sobrecarga de ferro.",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Associação da porfiria cutânea tardia (PCT) com hepatite C crônica.",
+      "raciocinioChave": "A porfiria cutânea tardia é fortemente associada à infecção crônica pelo vírus da hepatite C e à sobrecarga hepática de ferro. Seu manejo inclui erradicação do HCV com antivirais de ação direta, flebotomias seriadas e hidroxicloroquina em baixas doses.",
+      "armadilhaBanca": "A banca testa a diferenciação entre os subtipos de porfiria a partir do gatilho infeccioso (HCV) e da resposta terapêutica a flebotomias e hidroxicloroquina."
+    },
+    "mapaDistratores": {
+      "A": "A porfiria aguda intermitente cursa com crises neuroviscerais (dor abdominal intensa e neuropatia) sem lesões cutâneas, sendo tratada com hemina e glicose.",
+      "B": "A protoporfiria eritropoiética inicia-se na infância com fotossensibilidade dolorosa aguda sem resposta a flebotomias ou hidroxicloroquina.",
+      "D": "A porfiria variegata é uma porfiria aguda mista hereditária cujo manejo não se baseia em flebotomias regulares e hidroxicloroquina.",
+      "E": "A protoporfiria ligada ao X manifesta-se na infância de modo semelhante à forma eritropoiética e não apresenta associação clássica com HCV."
+    }
   },
   {
     "id": "q-enare-2024-016",
@@ -960,7 +1215,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Leptospirose e Rickettsioses",
     "temaSlug": "cm-infecto",
     "subtemaSlug": "cm-infecto-leptospirose-e-rickettsioses",
-    "tags": ["leptospirose","nefrite-tubulointersticial","injuria-renal-aguda","histopatologia"],
+    "tags": [
+      "leptospirose",
+      "nefrite-tubulointersticial",
+      "injuria-renal-aguda",
+      "histopatologia"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -1005,13 +1265,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **A** está correta. Na **leptospirose**, o rim é um dos principais órgãos-alvo e a lesão histopatológica fundamental e característica é a **nefrite tubulointersticial aguda (NTIA)** causada por invasão direta das espiroquetas e resposta imune no interstício renal, cursando classicamente com IRA não oligúrica e hipocalemia/normocalemia (Manual de Leptospirose — Ministério da Saúde / Harrison).\n- **B) Incorreta:** Embora possa ocorrer necrose tubular aguda secundária à hipovolemia ou rabdomiólise em casos graves, a lesão histopatológica primária e clássica descrita na leptospirose é a nefrite tubulointersticial.\n- **C) Incorreta:** Glomerulonefrite membranosa é causa de síndrome nefrótica crônica (ex.: anti-PLA2R, hepatite B), não da IRA da leptospirose.\n- **D) Incorreta:** Glomerulonefrite rapidamente progressiva cursa com crescentes glomerulares e síndrome nefrítica grave (vasculites ANCA, Goodpasture).\n- **E) Incorreta:** GESF é glomerulopatia associada a síndrome nefrótica (ex.: HIV, hiperfiltração), não à leptospirose aguda.",
     "perolaClinica": "Na **leptospirose**, o rim é um dos principais órgãos-alvo e a lesão histopatológica fundamental e característica é a **nefrite tubulointersticial aguda (NTIA)** causada por invasão direta das espiroquetas e resposta imu",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Lesão histopatológica renal primária da leptospirose: nefrite tubulointersticial.",
+      "raciocinioChave": "Na leptospirose, a insuficiência renal aguda (tipicamente não oligúrica e associada a hipocalemia) resulta da invasão direta das espiroquetas e resposta inflamatória no interstício renal. A lesão histopatológica característica é a nefrite tubulointersticial aguda.",
+      "armadilhaBanca": "O distrator mais atraente é a necrose tubular aguda, que pode ocorrer secundariamente no choque ou na rabdomiólise, mas não é a lesão histopatológica primária e clássica descrita na leptospirose."
+    },
+    "mapaDistratores": {
+      "B": "Embora a necrose tubular aguda possa surgir secundariamente à hipovolemia ou rabdomiólise, a lesão histopatológica primária característica da leptospirose é a nefrite tubulointersticial.",
+      "C": "A glomerulonefrite membranosa manifesta-se como síndrome nefrótica crônica e não explica a lesão renal aguda da leptospirose.",
+      "D": "A glomerulonefrite rapidamente progressiva caracteriza-se por crescentes glomerulares e síndrome nefrítica grave em vasculites ou doença antimembrana basal.",
+      "E": "A glomeruloesclerose focal e segmentar é uma glomerulopatia crônica associada a proteinúria nefrótica, não à infecção aguda por leptospira."
+    }
   },
   {
     "id": "q-enare-2024-017",
@@ -1023,7 +1295,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Miastenia Gravis e Doenças da Junção Neuromuscular",
     "temaSlug": "cm-neuro",
     "subtemaSlug": "cm-neuro-miastenia-gravis-e-doencas-da-juncao-neuromuscular",
-    "tags": ["botulismo","clostridium-botulinum","paralisia-flacida-descendente","juncao-neuromuscular"],
+    "tags": [
+      "botulismo",
+      "clostridium-botulinum",
+      "paralisia-flacida-descendente",
+      "juncao-neuromuscular"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -1068,13 +1345,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **D** está correta. O quadro descreve a apresentação clássica do **botulismo alimentar** (toxina do *Clostridium botulinum* bloqueando a liberação pré-sináptica de acetilcolina): pródromo gastrointestinal seguido de **acometimento simétrico de pares cranianos** (ptose, diplopia, visão turva, disfagia, disartria), **paralisia flácida motora descendente**, **sensibilidade e consciência preservadas**, além de **disautonomia anticolinérgica** (boca seca, retenção urinária, hipotensão sem taquicardia) evoluindo para insuficiência respiratória (Guia de Vigilância em Saúde — Ministério da Saúde).\n- **A) Incorreta:** Meningite bacteriana cursa com febre, rigidez de nuca e rebaixamento do nível de consciência, não paralisia flácida descendente com consciência preservada.\n- **B) Incorreta:** A síndrome de Guillain-Barré clássica apresenta paralisia flácida **ascendente** com arreflexia e frequentemente alterações sensitivas leves.\n- **C) Incorreta:** Doença de Lyme pode causar paralisia facial (Bell) e meningorradiculite subaguda, não paralisia descendente fulminante em horas.\n- **E) Incorreta:** Raiva cursa com encefalite aguda, hidrofobia, aerofobia, agitação e alteração grave do sensório.",
     "perolaClinica": "O quadro descreve a apresentação clássica do **botulismo alimentar** (toxina do *Clostridium botulinum* bloqueando a liberação pré-sináptica de acetilcolina): pródromo gastrointestinal seguido de **acometimento simétrico",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Quadro clássico de botulismo alimentar: paralisia flácida descendente com disautonomia.",
+      "raciocinioChave": "Pródromo gastrointestinal seguido de acometimento simétrico de pares cranianos (ptose, diplopia, disfagia, disartria), paralisia flácida descendente, preservação sensitiva/cognitiva e disautonomia anticolinérgica (boca seca, retenção urinária, hipotensão sem taquicardia) definem botulismo. A toxina do Clostridium botulinum bloqueia a liberação pré-sináptica de acetilcolina.",
+      "armadilhaBanca": "A principal confusão cobrada em prova é diferenciar a paralisia flácida descendente com nervos cranianos e disautonomia anticolinérgica do botulismo da paralisia ascendente da síndrome de Guillain-Barré."
+    },
+    "mapaDistratores": {
+      "A": "A meningite por Haemophilus influenzae cursa com febre, rigidez de nuca e alteração do sensório, não com paralisia flácida descendente afebril e consciência preservada.",
+      "B": "A síndrome de Guillain-Barré manifesta-se tipicamente por paralisia flácida ascendente com arreflexia e alterações sensitivas leves, e não por paralisia descendente rápida em poucas horas.",
+      "C": "A doença de Lyme pode causar meningorradiculite subaguda e paralisia facial, sem paralisia flácida descendente fulminante e disautonomia anticolinérgica.",
+      "E": "A raiva provoca encefalite aguda com agitação, hidrofobia, aerofobia e grave rebaixamento ou alteração do estado mental."
+    }
   },
   {
     "id": "q-enare-2024-018",
@@ -1086,7 +1375,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Leptospirose e Rickettsioses",
     "temaSlug": "cm-infecto",
     "subtemaSlug": "cm-infecto-leptospirose-e-rickettsioses",
-    "tags": ["leptospirose","sindrome-de-weil","sufusao-conjuntival","cpk-elevada"],
+    "tags": [
+      "leptospirose",
+      "sindrome-de-weil",
+      "sufusao-conjuntival",
+      "cpk-elevada"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -1131,13 +1425,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alternativa **C** está correta. O enunciado descreve explicitamente a evolução da **leptospirose** grave: febre abrupta, intensa mialgia em panturrilhas, sufusão/hemorragia conjuntival, CPK elevada, plaquetopenia e evolução para a **síndrome de Weil** (tríade de icterícia rubínica, insuficiência renal e manifestações hemorrágicas, incluindo hemorragia pulmonar), com resposta à **penicilina G cristalina** (Manual de Leptospirose — Ministério da Saúde).\n- **A) Incorreta:** Febre maculosa é causada por *Rickettsia rickettsii*, cursa com exantema maculopapular centrípeto (palmoplantar) e responde à doxiciclina, não à penicilina G.\n- **B) Incorreta:** Endocardite infecciosa não cursa com síndrome de Weil nem mialgia intensa em panturrilhas com CPK elevada como apresentação típica.\n- **D) Incorreta:** Dengue grave cursa com extravasamento plasmático e hemoconcentração, sem icterícia rubínica nem resposta à penicilina cristalina.\n- **E) Incorreta:** *Pseudomonas aeruginosa* é resistente à penicilina G cristalina e não produz síndrome de Weil.",
     "perolaClinica": "O enunciado descreve explicitamente a evolução da **leptospirose** grave: febre abrupta, intensa mialgia em panturrilhas, sufusão/hemorragia conjuntival, CPK elevada, plaquetopenia e evolução para a **síndrome de Weil** ",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Reconhecimento da leptospirose grave (síndrome de Weil) e resposta à penicilina G.",
+      "raciocinioChave": "Febre abrupta, mialgia intensa, sufusão/hemorragia conjuntival, CPK elevada, plaquetopenia e evolução para icterícia, disfunção renal e fenômenos hemorrágicos compõem a síndrome de Weil na leptospirose. O quadro clínico e a resposta à penicilina G cristalina confirmam a etiologia.",
+      "armadilhaBanca": "O exantema após uso de sulfametoxazol-trimetoprim e a síndrome febril com plaquetopenia podem simular dengue grave ou febre maculosa, mas a hemorragia conjuntival com CPK alta e resposta à penicilina apontam para leptospirose."
+    },
+    "mapaDistratores": {
+      "A": "A febre maculosa é causada por Rickettsia rickettsii, apresenta exantema maculopapular centrípeto palmoplantar e exige doxiciclina, não respondendo à penicilina G.",
+      "B": "A endocardite infecciosa não cursa tipicamente com sufusão conjuntival, CPK elevada e evolução aguda para síndrome de Weil.",
+      "D": "A dengue grave caracteriza-se por extravasamento plasmático com hemoconcentração, não causando síndrome de Weil com icterícia rubínica nem respondendo à penicilina.",
+      "E": "Pseudomonas aeruginosa é intrinsecamente resistente à penicilina G cristalina e não desencadeia síndrome de Weil."
+    }
   },
   {
     "id": "q-enare-2024-019",
@@ -1149,7 +1455,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Hepatites Virais",
     "temaSlug": "cm-gastro",
     "subtemaSlug": "cm-gastro-hepatites-virais",
-    "tags": ["hepatite-c","antivirais-de-acao-direta","sofosbuvir-pibrentasvir","glecaprevir"],
+    "tags": [
+      "hepatite-c",
+      "antivirais-de-acao-direta",
+      "sofosbuvir-pibrentasvir",
+      "glecaprevir"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -1194,13 +1505,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **C** está correta. Conforme o **PCDT para Hepatite C e Coinfecções do Ministério da Saúde**, no retratamento de pacientes com cirrose compensada (**Child-Pugh A**) que apresentaram falha terapêutica prévia a antivirais de ação direta (AADs), recomenda-se o esquema pangenotípico triplo **sofosbuvir + glecaprevir/pibrentasvir** (ou sofosbuvir/velpatasvir/voxilaprevir) por **12 semanas** (podendo estender-se a 16 semanas conforme o perfil de resistência).\n- **A) Incorreta:** Sofosbuvir/velpatasvir + ribavirina por 24 semanas é reservado para cirrose descompensada (Child-Pugh B ou C), situação em que inibidores de protease (como glecaprevir) são contraindicados.\n- **B) Incorreta:** Sofosbuvir + daclatasvir por 12 semanas não é o esquema de retratamento pós-falha a AAD.\n- **D) Incorreta:** Sofosbuvir/velpatasvir por 12 semanas é esquema de primeira linha para pacientes virgens de tratamento, não de resgate pós-falha a AAD.\n- **E) Incorreta:** Sofosbuvir + ribavirina sem inibidor de NS5A/protease é esquema obsoleto e ineficaz no retratamento.",
     "perolaClinica": "Conforme o **PCDT para Hepatite C e Coinfecções do Ministério da Saúde**, no retratamento de pacientes com cirrose compensada (**Child-Pugh A**) que apresentaram falha terapêutica prévia a antivirais de ação direta (AADs",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Esquema de retratamento da hepatite C após falha a antivirais de ação direta (AAD).",
+      "raciocinioChave": "Em paciente com hepatite C e cirrose hepática compensada (Child-Pugh A) com falha prévia a antivirais de ação direta, o PCDT do Ministério da Saúde indica esquema pangenotípico triplo de resgate. A associação de sofosbuvir com glecaprevir/pibrentasvir por 12 semanas é a opção preconizada.",
+      "armadilhaBanca": "A banca explora a diferença entre esquemas de primeira linha (sofosbuvir/velpatasvir), esquemas para cirrose descompensada (sem inibidor de protease) e o esquema triplo de resgate para Child-Pugh A."
+    },
+    "mapaDistratores": {
+      "A": "Sofosbuvir/velpatasvir com ribavirina por 24 semanas é reservado para cirrose descompensada (Child-Pugh B ou C), cenário em que inibidores de protease são contraindicados.",
+      "B": "A combinação sofosbuvir + daclatasvir por 12 semanas não constitui esquema de retratamento após falha prévia a AADs.",
+      "D": "Sofosbuvir/velpatasvir por 12 semanas é esquema de primeira linha para pacientes virgens de tratamento, não sendo suficiente no resgate pós-falha a AAD.",
+      "E": "A associação de sofosbuvir com ribavirina sem inibidor de NS5A ou de protease é obsoleta e apresenta baixa eficácia no retratamento."
+    }
   },
   {
     "id": "q-enare-2024-020",
@@ -1212,7 +1535,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Cirrose Hepática e Hipertensão Portal",
     "temaSlug": "cm-gastro",
     "subtemaSlug": "cm-gastro-cirrose-hepatica-e-hipertensao-portal",
-    "tags": ["colangite-biliar-primaria","anticorpo-antimitocondria","colestase","prurido"],
+    "tags": [
+      "colangite-biliar-primaria",
+      "anticorpo-antimitocondria",
+      "colestase",
+      "prurido"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -1257,13 +1585,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **D** está correta. Mulher de meia-idade/idosa com **fadiga, prurido palmoplantar, síndrome colestática acentuada** (FA > 1.000, GGT > 1.200, hiperbilirrubinemia direta) e **ausência de dilatação de vias biliares** ao ultrassom apresenta o quadro típico de **colangite biliar primária (CBP)**. Segundo a diretriz da AASLD/EASL, o marcador sorológico de alta sensibilidade e especificidade (> 95%) é o **anticorpo antimitocôndria (AMA)**.\n- **A) Incorreta:** Hepatite autoimune clássica apresenta predomínio acentuado de transaminases (padrão hepatocelular), não colestase intensa com FA > 1.000.\n- **B) Incorreta:** Colangite esclerosante primária predomina em homens jovens com doença inflamatória intestinal e geralmente cursa com dilatações/estenoses biliares focais à colangio-RM.\n- **C) Incorreta:** Anti-LKM1 é marcador de hepatite autoimune tipo 2 (predominante em crianças/jovens), não de CBP.\n- **E) Incorreta:** Não há histórico medicamentoso descrito e FAN/antimúsculo liso não confirmam hepatite medicamentosa.",
     "perolaClinica": "Mulher de meia-idade/idosa com **fadiga, prurido palmoplantar, síndrome colestática acentuada** (FA > 1.000, GGT > 1.200, hiperbilirrubinemia direta) e **ausência de dilatação de vias biliares** ao ultrassom apresenta o ",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Diagnóstico da colangite biliar primária (CBP) pelo anticorpo antimitocôndria.",
+      "raciocinioChave": "Mulher de 65 anos com astenia, prurido palmoplantar, elevação acentuada de fosfatase alcalina e GGT e ausência de dilatação das vias biliares ao ultrassom apresenta colestase intra-hepática crônica compatível com colangite biliar primária. O exame sorológico de escolha com alta especificidade é a pesquisa do anticorpo antimitocôndria (AMA).",
+      "armadilhaBanca": "A banca mistura marcadores sorológicos de diferentes hepatopatias autoimunes (FAN, antimúsculo liso, anti-LKM1 e p-ANCA) para testar a associação específica entre CBP e AMA."
+    },
+    "mapaDistratores": {
+      "A": "A hepatite autoimune cursa predominantemente com elevação acentuada de transaminases (padrão hepatocelular), e não com colestase intensa isolada.",
+      "B": "A colangite esclerosante primária predomina em homens jovens com doença inflamatória intestinal e cursa com estenoses e dilatações biliares.",
+      "C": "O anticorpo anti-LKM1 é marcador da hepatite autoimune tipo 2, mais comum em crianças e jovens, não estando associado à colangite biliar primária.",
+      "E": "Não há histórico de exposição medicamentosa referido no enunciado, e FAN/antimúsculo liso não são marcadores diagnósticos de hepatite medicamentosa."
+    }
   },
   {
     "id": "q-enare-2024-021",
@@ -1275,7 +1615,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Câncer de Pele",
     "temaSlug": "cm-dermato",
     "subtemaSlug": "cm-dermato-cancer-de-pele",
-    "tags": ["melanoma-maligno","excisao-cirurgica","linfonodo-sentinela","cancer-de-pele"],
+    "tags": [
+      "melanoma-maligno",
+      "excisao-cirurgica",
+      "linfonodo-sentinela",
+      "cancer-de-pele"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -1320,13 +1665,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "E",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alternativa **E** está correta. Lesão pigmentada acastanhada, de crescimento progressivo, bordas irregulares, diâmetro > 6 mm (1,2 cm), ulceração e **linfadenomegalia axilar palpável** preenche os critérios ABCDE para **melanoma maligno**. Segundo as diretrizes da NCCN e do GBM (Grupo Brasileiro de Melanoma), o manejo definitivo exige **excisão cirúrgica ampla** com margens adequadas (definidas pelo Breslow) associada à **avaliação linfonodal** (biópsia/PAAF do linfonodo clinicamente suspeito).\n- **A) Incorreta:** Carcinoma basocelular raramente metastatiza para linfonodos e não deve ser tratado com crioterapia nesse cenário.\n- **B) Incorreta:** Queratoacantoma é lesão cupuliforme de crescimento rápido com rolha córnea central e não se trata com antibióticos.\n- **C) Incorreta:** Dermatofibroma é lesão benigna firme, sem ulceração ou linfadenopatia axilar.\n- **D) Incorreta:** Mesmo que fosse carcinoma espinocelular ulcerado com linfonodo palpável, eletrocoagulação e curetagem são contraindicadas em lesões de alto risco.",
     "perolaClinica": "Lesão pigmentada acastanhada, de crescimento progressivo, bordas irregulares, diâmetro > 6 mm (1,2 cm), ulceração e **linfadenomegalia axilar palpável** preenche os critérios ABCDE para **melanoma maligno**.",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Suspeita clínica e conduta cirúrgica no melanoma maligno com linfonodo palpável.",
+      "raciocinioChave": "Lesão pigmentada acastanhada, assimétrica, de bordas irregulares, diâmetro > 6 mm (1,2 cm), com ulceração e linfadenomegalia axilar palpável preenche critérios clínicos para melanoma maligno metastático para linfonodo regional. A conduta definitiva envolve excisão cirúrgica ampla e avaliação do linfonodo acometido.",
+      "armadilhaBanca": "Tratamentos destrutivos locais como crioterapia ou eletrocoagulação e curetagem são armadilhas perigosas diante de lesão pigmentada ulcerada com linfadenopatia axilar."
+    },
+    "mapaDistratores": {
+      "A": "O carcinoma basocelular raramente gera metástases linfonodais e não deve ser tratado com crioterapia diante de lesão pigmentada ulcerada de alto risco.",
+      "B": "O queratoacantoma apresenta-se como nódulo cupuliforme de crescimento rápido com cratera córnea central e não tem tratamento antibiótico.",
+      "C": "O dermatofibroma é uma lesão benigna firme e estável, incompatível com ulceração e linfadenomegalia axilar.",
+      "D": "Mesmo no carcinoma espinocelular de alto risco com ulceração e linfonodo palpável, eletrocoagulação e curetagem são contraindicadas."
+    }
   },
   {
     "id": "q-enare-2024-022",
@@ -1338,7 +1695,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Otorrinolaringologia e Cabeça e Pescoço",
     "temaSlug": "cg-espec",
     "subtemaSlug": "cg-espec-otorrinolaringologia-e-cabeca-e-pescoco",
-    "tags": ["carcinoma-espinocelular","cancer-de-boca","biopsia","estadiamento"],
+    "tags": [
+      "carcinoma-espinocelular",
+      "cancer-de-boca",
+      "biopsia",
+      "estadiamento"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -1383,13 +1745,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "E",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alternativa **E** está correta. Homem tabagista e etilista pesado com **úlcera crônica (> 2 semanas) na borda lateral da língua**, margens endurecidas, base infiltrada, disfagia e otalgia reflexa tem como principal diagnóstico **carcinoma espinocelular (CEC) de cavidade oral** (responsável por > 90% das neoplasias orais). Conforme diretrizes da NCCN e SBCCP, a conduta é **biópsia incisional confirmatória, estadiamento locorregional/sistêmico e ressecção cirúrgica** (com avaliação cervical).\n- **A) Incorreta:** Adenoma de glândula salivar menor não se apresenta tipicamente como úlcera infiltrada em borda lateral de língua em tabagista/etilista.\n- **B) Incorreta:** Candidíase oral produz placas esbranquiçadas removíveis, não úlcera endurecida crônica.\n- **C) Incorreta:** Úlcera traumática cicatriza em 10–14 dias após remoção do fator irritativo; 3 meses de evolução exige biópsia imediata.\n- **D) Incorreta:** Líquen plano oral apresenta estrias reticulares esbranquiçadas (estrias de Wickham) bilaterais, não úlcera única infiltrada com otalgia reflexa.",
     "perolaClinica": "Homem tabagista e etilista pesado com **úlcera crônica (> 2 semanas) na borda lateral da língua**, margens endurecidas, base infiltrada, disfagia e otalgia reflexa tem como principal diagnóstico **carcinoma espinocelular",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Diagnóstico e estadiamento do carcinoma espinocelular (CEC) de língua.",
+      "raciocinioChave": "Homem tabagista e etilista crônico com úlcera endurecida e infiltrada na borda lateral da língua há 3 meses, associada a disfagia e otalgia reflexa, tem forte suspeita de carcinoma espinocelular oral. A conduta inicial exige biópsia da lesão para confirmação histológica, estadiamento e planejamento cirúrgico.",
+      "armadilhaBanca": "A apresentação ulcerada pode tentar o candidato a tratar empiricamente como candidíase ou úlcera traumática, retardando o diagnóstico oncológico."
+    },
+    "mapaDistratores": {
+      "A": "Adenoma de glândula salivar menor não se apresenta tipicamente como úlcera infiltrada e dolorosa na borda lateral da língua em tabagista/etilista.",
+      "B": "A candidíase oral manifesta-se por placas esbranquiçadas removíveis à raspagem, não por úlcera única endurecida crônica.",
+      "C": "Úlceras traumáticas cicatrizam em até 14 dias após remoção do agente agressor; lesão persistente por 3 meses exige biópsia obrigatória.",
+      "D": "O líquen plano oral cursa tipicamente com estrias reticulares esbranquiçadas bilaterais, e não com úlcera infiltrada única associada a otalgia reflexa."
+    }
   },
   {
     "id": "q-enare-2024-023",
@@ -1401,7 +1775,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Trauma Abdominal e Pélvico",
     "temaSlug": "cg-trauma",
     "subtemaSlug": "cg-trauma-trauma-abdominal-e-pelvico",
-    "tags": ["trauma-abdominal","trauma-esplenico","esplenectomia","tratamento-nao-operatorio"],
+    "tags": [
+      "trauma-abdominal",
+      "trauma-esplenico",
+      "esplenectomia",
+      "tratamento-nao-operatorio"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -1446,13 +1825,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **C** está correta. O paciente apresentou **falha do tratamento não operatório (TNO)** de trauma esplênico, caracterizada por **instabilidade hemodinâmica súbita, sinais de irritação peritoneal e aumento do hemoperitônio**. Segundo o **ATLS (10ª edição)** e diretrizes da WSES/EAST, instabilidade hemodinâmica ou peritonite no trauma abdominal contuso constituem indicação absoluta de **laparotomia exploradora de emergência (esplenectomia)**.\n- **A) Incorreta:** Cirurgia de Warren (derivação esplenorrenal distal) é procedimento eletivo para hipertensão portal, sem relação com trauma esplênico.\n- **B) Incorreta:** Embolização arterial esplênica é reservada a pacientes hemodinamicamente estáveis ou respondedores transitórios sem peritonite.\n- **D) Incorreta:** Manter tratamento conservador diante de choque hemorrágico e peritonite coloca a vida do paciente em risco imediato.\n- **E) Incorreta:** Reposição volêmica/hemotransfusão são medidas de suporte simultâneas, mas não substituem o controle cirúrgico definitivo da hemorragia.",
     "perolaClinica": "O paciente apresentou **falha do tratamento não operatório (TNO)** de trauma esplênico, caracterizada por **instabilidade hemodinâmica súbita, sinais de irritação peritoneal e aumento do hemoperitônio**.",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Falha do tratamento não operatório (TNO) no trauma esplênico com instabilidade.",
+      "raciocinioChave": "Paciente inicialmente estável em TNO por laceração esplênica grau II que evolui com hipotensão súbita, taquicardia, irritação peritoneal e aumento do hemoperitônio caracteriza falha do manejo conservador. Segundo o ATLS, instabilidade hemodinâmica e peritonite exigem laparotomia/esplenectomia de emergência imediata.",
+      "armadilhaBanca": "A opção por embolização arterial esplênica funciona como distrator clássico, mas é contraindicada quando já existe instabilidade hemodinâmica e irritação peritoneal."
+    },
+    "mapaDistratores": {
+      "A": "A cirurgia de Warren (derivação esplenorrenal distal) é um procedimento eletivo para hipertensão portal, sem aplicação no trauma esplênico agudo.",
+      "B": "A embolização seletiva da artéria esplênica é reservada a pacientes hemodinamicamente estáveis ou respondedores transitórios sem peritonite.",
+      "D": "Manter o tratamento conservador diante de choque hemorrágico e peritonite retarda o controle cirúrgico do sangramento e ameaça a vida.",
+      "E": "A reposição volêmica e hemotransfusão são medidas de ressuscitação simultâneas, insuficientes sem o controle cirúrgico definitivo da hemorragia."
+    }
   },
   {
     "id": "q-enare-2024-024",
@@ -1464,7 +1855,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Queimaduras e Lesão Inalatória",
     "temaSlug": "cg-trauma",
     "subtemaSlug": "cg-trauma-queimaduras-e-lesao-inalatoria",
-    "tags": ["queimaduras","formula-de-parkland","ressuscitacao-hidrica","ringer-lactato"],
+    "tags": [
+      "queimaduras",
+      "formula-de-parkland",
+      "ressuscitacao-hidrica",
+      "ringer-lactato"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -1509,13 +1905,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alternativa **D** está correta. A fórmula clássica de **Parkland** (Sabiston / Ministério da Saúde) preconiza **4 mL/kg/%SCQ de Ringer Lactato nas primeiras 24 horas**, administrando **metade do volume nas primeiras 8 horas** a partir do momento da queimadura e a **outra metade nas 16 horas subsequentes**, ajustando-se o ritmo conforme o débito urinário (0,5 mL/kg/h em adultos). (Observação: embora o ATLS 10ª ed. proponha 2 mL/kg/%SCQ, também divide 50% nas primeiras 8h e 50% nas 16h seguintes — nunca igualmente ao longo de 24h.)\n- **A) Incorreta:** Mesmo usando 2 mL/kg/%SCQ (ATLS 10ª ed.), a divisão NÃO é igual ao longo das 24 horas, e sim metade nas primeiras 8h e metade nas 16h seguintes.\n- **B) Incorreta:** 8 mL/kg/%SCQ com NaCl 0,9% causa sobrecarga hídrica excessiva e acidose metabólica hiperclorêmica.\n- **C) Incorreta:** Não existe fórmula padrão de 6 mL/kg/%SCQ com ajuste por grau de queimadura.\n- **E) Incorreta:** Coloides (albumina) não são recomendados nas primeiras 24 horas pela hiperpermeabilidade capilar inicial.",
     "perolaClinica": "A fórmula clássica de **Parkland** (Sabiston / Ministério da Saúde) preconiza **4 mL/kg/%SCQ de Ringer Lactato nas primeiras 24 horas**, administrando **metade do volume nas primeiras 8 horas** a partir do momento da que",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Fórmula de Parkland e fracionamento da reposição volêmica no grande queimado.",
+      "raciocinioChave": "Na reanimação hídrica do grande queimado adulto (45% de SCQ) pela fórmula de Parkland, calcula-se 4 mL/kg/%SCQ de Ringer Lactato nas primeiras 24 horas. Metade do volume total deve ser infundida nas primeiras 8 horas após a queimadura e a metade restante nas 16 horas seguintes.",
+      "armadilhaBanca": "A alternativa A usa o volume de 2 mL/kg/%SCQ do ATLS 10ª edição, porém erra ao propor divisão igualitária do volume ao longo das 24 horas em vez do fracionamento 8h/16h."
+    },
+    "mapaDistratores": {
+      "A": "Mesmo quando se utiliza 2 mL/kg/%SCQ, o volume total não deve ser dividido igualmente ao longo das 24 horas, e sim metade nas primeiras 8 horas e metade nas 16 horas seguintes.",
+      "B": "Administrar 8 mL/kg/%SCQ com solução salina 0,9% provoca sobrecarga hídrica grave e acidose metabólica hiperclorêmica.",
+      "C": "Não há fórmula padronizada de 6 mL/kg/%SCQ com acréscimo percentual conforme a profundidade da queimadura.",
+      "E": "Soluções coloidais como albumina são evitadas nas primeiras 24 horas devido ao intenso extravasamento capilar inicial."
+    }
   },
   {
     "id": "q-enare-2024-025",
@@ -1527,7 +1935,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Abdome Agudo Obstrutivo",
     "temaSlug": "cg-abdome",
     "subtemaSlug": "cg-abdome-abdome-agudo-obstrutivo",
-    "tags": ["abdome-agudo-obstrutivo","bridas","sonda-nasogastrica","tratamento-conservador"],
+    "tags": [
+      "abdome-agudo-obstrutivo",
+      "bridas",
+      "sonda-nasogastrica",
+      "tratamento-conservador"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -1572,13 +1985,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "E",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **E** está correta. O paciente apresenta **obstrução intestinal por bridas (aderências)** — causa mais frequente de obstrução de intestino delgado em pacientes com cirurgias abdominais prévias — **sem sinais de complicação/estrangulamento** (afebril, estável, sem peritonite, leucograma normal). Conforme as diretrizes de Bologna (WSES) e Sabiston, o manejo inicial é **conservador**: jejum, **hidratação endovenosa com correção hidroeletrolítica, descompressão com sonda nasogástrica e observação seriada** (taxa de resolução espontânea de 65–80% em 48–72h).\n- **A) Incorreta:** Colonoscopia urgente não é indicada na obstrução de delgado por aderências.\n- **B) Incorreta:** Laxantes são contraindicados na obstrução intestinal mecânica pelo risco de piora da distensão e perfuração.\n- **C) Incorreta:** Cirurgia imediata é indicada apenas na suspeita de estrangulamento/isquemia, peritonite, hérnia estrangulada ou falha do tratamento conservador.\n- **D) Incorreta:** Obstrução intestinal exige internação hospitalar e vigilância clínica rigorosa.",
     "perolaClinica": "O paciente apresenta **obstrução intestinal por bridas (aderências)** — causa mais frequente de obstrução de intestino delgado em pacientes com cirurgias abdominais prévias — **sem sinais de complicação/estrangulamento**",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Tratamento conservador inicial da obstrução intestinal por bridas não complicada.",
+      "raciocinioChave": "Paciente com cirurgias abdominais prévias apresentando parada de eliminação de gases/fezes, vômitos e peristalse de luta, mas estável, afebril, sem peritonite e sem leucocitose, tem obstrução intestinal por aderências sem sinais de estrangulamento. A conduta inicial é conservadora com hidratação venosa, descompressão nasogástrica e observação clínica.",
+      "armadilhaBanca": "O quadro obstrutivo intenso leva muitos candidatos a indicarem cirurgia imediata, ignorando a ausência de sinais de alarme para isquemia, estrangulamento ou peritonite."
+    },
+    "mapaDistratores": {
+      "A": "A colonoscopia urgente não é método diagnóstico ou terapêutico adequado para obstrução mecânica do intestino delgado por bridas.",
+      "B": "Laxantes são formalmente contraindicados na obstrução intestinal mecânica pelo risco de aumentar a distensão e causar perfuração.",
+      "C": "A abordagem cirúrgica imediata é reservada a casos com sinais de estrangulamento, isquemia, peritonite, hérnia estrangulada ou falha do tratamento conservador.",
+      "D": "A obstrução intestinal mecânica requer internação hospitalar, jejum e monitoramento seriado, nunca alta ambulatorial."
+    }
   },
   {
     "id": "q-enare-2024-026",
@@ -1590,7 +2015,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Ortopedia e Traumatologia Básica",
     "temaSlug": "cg-espec",
     "subtemaSlug": "cg-espec-ortopedia-e-traumatologia-basica",
-    "tags": ["fratura-de-umero","ortopedia","reducao-aberta-e-fixacao-interna","traumatologia"],
+    "tags": [
+      "fratura-de-umero",
+      "ortopedia",
+      "reducao-aberta-e-fixacao-interna",
+      "traumatologia"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -1635,13 +2065,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **B** está correta conforme o gabarito definitivo da banca (FGV/ENARE). Diante de **fratura diafisária do úmero com desvio significativo e deformidade visível** em adulto ativo vítima de queda de altura (trauma de maior energia), a banca considerou a **redução aberta e fixação interna (RAFI)** com placa e parafusos (ou haste intramedular) como a abordagem mais apropriada para restabelecer o alinhamento anatômico, permitir mobilização precoce e reduzir risco de pseudartrose ou consolidação viciosa (Rockwood & Green / SBOT).\n- **A) Incorreta:** Fixação externa é reservada para fraturas expostas graves com extensa lesão de partes moles ou politraumatizados instáveis (controle de danos).\n- **C) Incorreta:** Apenas tipoia e observação não estabilizam adequadamente uma fratura diafisária desviada.\n- **D) Incorreta:** Embora fraturas diafisárias de úmero com desvio aceitável possam ser tratadas conservadoramente com órtese funcional (Sarmiento) ou pinça de confeiteiro, a banca destacou o desvio/deformidade visível para indicar tratamento cirúrgico definitivo (RAFI).\n- **E) Incorreta:** Alta apenas com analgésicos sem estabilização ortopédica é conduta inadequada.",
     "perolaClinica": "conforme o gabarito definitivo da banca (FGV/ENARE).",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Conduta cirúrgica em fratura diafisária desviada do úmero após trauma de energia.",
+      "raciocinioChave": "Adulto vítima de queda de dois metros apresentando fratura diafisária do úmero com desvio evidente e deformidade importante do braço tem indicação de estabilização cirúrgica para restabelecimento anatômico. A redução aberta e fixação interna (RAFI) permite alinhamento e reabilitação precoce.",
+      "armadilhaBanca": "Como muitas fraturas diafisárias de úmero alinhadas podem ser tratadas com imobilização funcional, o distrator de redução fechada e gesso testa a atenção ao desvio acentuado e à deformidade visível descritos."
+    },
+    "mapaDistratores": {
+      "A": "A fixação externa fica restrita a fraturas expostas graves com extensa lesão de partes moles ou politraumatizados instáveis em controle de danos.",
+      "C": "Apenas tipoia e observação não promovem redução nem estabilização suficiente para uma fratura diafisária desviada com deformidade.",
+      "D": "Em fraturas com desvio importante e deformidade visível em adulto ativo após queda de altura, a banca prioriza a fixação interna definitiva em vez de redução fechada com gesso.",
+      "E": "A liberação apenas com analgesia sem redução ou imobilização ortopédica leva à consolidação viciosa e pseudoartrose."
+    }
   },
   {
     "id": "q-enare-2024-027",
@@ -1653,7 +2095,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Trauma Torácico",
     "temaSlug": "cg-trauma",
     "subtemaSlug": "cg-trauma-trauma-toracico",
-    "tags": ["trauma-toracico","tamponamento-cardiaco","toracotomia-de-emergencia","triade-de-beck"],
+    "tags": [
+      "trauma-toracico",
+      "tamponamento-cardiaco",
+      "toracotomia-de-emergencia",
+      "triade-de-beck"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -1698,13 +2145,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **D** está correta. O paciente apresenta **tríade de Beck / tamponamento cardíaco traumático** com choque obstrutivo. Segundo o **ATLS (10ª edição)**, o tratamento definitivo do tamponamento cardíaco traumático é a **intervenção cirúrgica imediata (toracotomia ou esternotomia de emergência)** para descompressão pericárdica e reparo da lesão cardíaca/vascular; a pericardiocentese fica restrita apenas como medida temporária de ponte quando não há cirurgião/centro cirúrgico imediatamente disponível (além de frequentemente falhar por sangue coagulado no saco pericárdico).\n- **A) Incorreta:** A pericardiocentese é apenas medida temporária de salvamento na ausência de equipe cirúrgica imediata, não a conduta cirúrgica definitiva.\n- **B) Incorreta:** PAAF não trata tamponamento cardíaco.\n- **C) Incorreta:** Expansão volêmica isolada é apenas medida transitória e não resolve a compressão mecânica das câmaras cardíacas.\n- **E) Incorreta:** Drenagem pleural trata pneumotórax/hemotórax, não hemopericárdio.",
     "perolaClinica": "O paciente apresenta **tríade de Beck / tamponamento cardíaco traumático** com choque obstrutivo.",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Conduta cirúrgica definitiva no tamponamento cardíaco pós-trauma torácico.",
+      "raciocinioChave": "Hipotensão, taquicardia, turgência jugular e pulso fino após trauma torácico caracterizam choque obstrutivo por tamponamento cardíaco. Conforme o ATLS, o tratamento definitivo é a toracotomia (ou esternotomia) de emergência para drenagem do pericárdio e reparo da lesão cardíaca subjacente.",
+      "armadilhaBanca": "A pericardiocentese é o distrator clássico por ser frequentemente lembrada como medida de alívio, mas no trauma ela é apenas ponte temporária quando não há acesso imediato à cirurgia definitiva."
+    },
+    "mapaDistratores": {
+      "A": "A pericardiocentese é apenas uma medida temporária de salvamento na impossibilidade de cirurgia imediata, não constituindo tratamento definitivo no trauma.",
+      "B": "Punção aspirativa por agulha fina não tem finalidade descompressiva nem terapêutica no tamponamento cardíaco.",
+      "C": "A expansão volêmica isolada atua apenas como suporte transitório e não desfaz a compressão mecânica sobre as câmaras cardíacas.",
+      "E": "A drenagem pleural com tubo torácico trata pneumotórax e hemotórax, sendo ineficaz para drenar sangue acumulado no saco pericárdico."
+    }
   },
   {
     "id": "q-enare-2024-028",
@@ -1716,7 +2175,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Câncer Gástrico e Cirurgia Bariátrica",
     "temaSlug": "cg-cad",
     "subtemaSlug": "cg-cad-cancer-gastrico-e-cirurgia-bariatrica",
-    "tags": ["sindrome-de-dumping","gastrectomia","cancer-gastrico","complicacao-pos-operatoria"],
+    "tags": [
+      "sindrome-de-dumping",
+      "gastrectomia",
+      "cancer-gastrico",
+      "complicacao-pos-operatoria"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -1761,13 +2225,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alternativa **C** está correta. A **síndrome de dumping** ocorre após cirurgias que alteram o reservatório gástrico ou o esfíncter pilórico (como gastrectomia subtotal), levando ao esvaziamento rápido de conteúdo hiperosmolar no intestino delgado. Manifesta-se na forma precoce (15–30 min pós-prandial) por sintomas vasomotores (sudorese, palpitações, tontura, rubor) e gastrointestinais (diarreia, cólicas) e na forma tardia (1–3h) por hipoglicemia reativa hiperinsulinêmica (Sabiston).\n- **A) Incorreta:** O quadro é pós-prandial vasomotor/diarreico típico de esvaziamento gástrico acelerado, não de diabetes tipo 2.\n- **B) Incorreta:** TVP manifesta-se por edema/dor assimétrica em membro inferior, sem relação com refeições.\n- **D) Incorreta:** Gastrectomias associam-se a risco de osteopenia/osteoporose (redução da absorção de cálcio/vitamina D), não aumento da densidade óssea.\n- **E) Incorreta:** Gastrite/úlcera por refluxo alcalino cursa com dor epigástrica em queimação contínua e vômitos biliosos.",
     "perolaClinica": "A **síndrome de dumping** ocorre após cirurgias que alteram o reservatório gástrico ou o esfíncter pilórico (como gastrectomia subtotal), levando ao esvaziamento rápido de conteúdo hiperosmolar no intestino delgado.",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Reconhecimento da síndrome de dumping precoce após gastrectomia subtotal.",
+      "raciocinioChave": "A ressecção gástrica parcial compromete a função de reservatório e do piloro, permitindo o esvaziamento acelerado de conteúdo hiperosmolar para o intestino delgado. Isso provoca sintomas vasomotores (sudorese, palpitações, tontura) e diarreia logo após as refeições, característicos da síndrome de dumping.",
+      "armadilhaBanca": "Sintomas autonômicos como sudorese e tontura após refeições podem confundir com complicações metabólicas ou refluxo alcalino, que tem dor epigástrica contínua e vômitos biliosos."
+    },
+    "mapaDistratores": {
+      "A": "A apresentação vasomotora e diarreica pós-prandial imediata decorre de esvaziamento gástrico rápido, não do desenvolvimento de diabetes tipo 2.",
+      "B": "A trombose venosa profunda manifesta-se com dor e edema assimétrico em membros inferiores, sem relação temporal com a alimentação.",
+      "D": "A gastrectomia está associada à redução da absorção de cálcio e vitamina D com risco de osteopenia, e não ao aumento da densidade óssea.",
+      "E": "A gastrite ou úlcera de refluxo alcalino manifesta-se por dor epigástrica em queimação contínua e vômitos biliosos."
+    }
   },
   {
     "id": "q-enare-2024-029",
@@ -1779,7 +2255,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Doença Inflamatória Intestinal",
     "temaSlug": "cm-gastro",
     "subtemaSlug": "cm-gastro-doenca-inflamatoria-intestinal",
-    "tags": ["doenca-de-crohn","doenca-inflamatoria-intestinal","ileite-terminal","dor-em-fid"],
+    "tags": [
+      "doenca-de-crohn",
+      "doenca-inflamatoria-intestinal",
+      "ileite-terminal",
+      "dor-em-fid"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -1824,13 +2305,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **B** está correta. Paciente jovem com diarreia/alteração do hábito intestinal, **perda ponderal** (sinal de alarme que afasta distúrbio funcional), discreto sangramento retal e **dor localizada no quadrante inferior direito** (sítio clássico de acometimento do íleo terminal e ceco) tem como principal hipótese **doença de Crohn** (diretriz ECCO / GEDIIB).\n- **A) Incorreta:** Síndrome do intestino irritável não causa perda de peso inexplicada nem sangramento retal (sinais de alarme).\n- **C) Incorreta:** Retocolite ulcerativa acomete obrigatoriamente o reto com sangramento vivo/muco predominante e dor mais típica em fossa ilíaca esquerda, poupando classicamente o íleo terminal.\n- **D) Incorreta:** PAF é autossômica dominante com forte histórico familiar (ausente no caso) e centenas de pólipos colônicos.\n- **E) Incorreta:** Síndrome de Gardner é variante da PAF com osteomas, tumores desmoides e cistos epidermoides, também hereditária.",
     "perolaClinica": "Paciente jovem com diarreia/alteração do hábito intestinal, **perda ponderal** (sinal de alarme que afasta distúrbio funcional), discreto sangramento retal e **dor localizada no quadrante inferior direito** (sítio clássi",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Diagnóstico diferencial de doença de Crohn em jovem com sinais de alarme e dor em QID.",
+      "raciocinioChave": "Paciente jovem com alteração do hábito intestinal, perda ponderal inexplicada, pequeno sangramento retal e dor à palpação no quadrante inferior direito apresenta sinais de alarme que excluem distúrbio funcional. A localização da dor no QID reflete o acometimento clássico do íleo terminal na doença de Crohn.",
+      "armadilhaBanca": "A ausência de histórico familiar e a idade jovem podem sugerir síndrome do intestino irritável, mas a perda de peso e o sangramento retal obrigam a investigar doença orgânica inflamatória."
+    },
+    "mapaDistratores": {
+      "A": "A síndrome do intestino irritável é um distúrbio funcional que não justifica perda de peso inexplicada nem sangramento retal.",
+      "C": "A retocolite ulcerativa acomete continuamente o reto com sangramento vivo e muco predominantes e dor mais típica à esquerda, poupando classicamente o íleo.",
+      "D": "A polipose adenomatosa familiar tem padrão autossômico dominante com forte histórico familiar e centenas de pólipos colônicos.",
+      "E": "A síndrome de Gardner é uma variante hereditária da PAF associada a osteomas, tumores desmoides e cistos epidermoides."
+    }
   },
   {
     "id": "q-enare-2024-030",
@@ -1842,7 +2335,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Apendicite Aguda",
     "temaSlug": "cg-abdome",
     "subtemaSlug": "cg-abdome-apendicite-aguda",
-    "tags": ["apendicite-aguda","apendicite-perfurada","apendicectomia","peritonite"],
+    "tags": [
+      "apendicite-aguda",
+      "apendicite-perfurada",
+      "apendicectomia",
+      "peritonite"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -1887,13 +2385,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **B** está correta. O paciente apresenta **apendicite aguda complicada (perfurada com peritonite e abscesso periapendicular)** evidenciada por 3 dias de evolução, febre alta, irritação peritoneal, líquido livre na cavidade e abscesso à TC. Segundo as diretrizes da WSES (Jerusalém 2020) e Sabiston, a presença de peritonite exige **intervenção cirúrgica de urgência com apendicectomia, lavagem/drenagem do abscesso e antibioticoterapia venosa de amplo espectro** (a via aberta ou laparoscópica é aceita conforme experiência da equipe; entre as opções, apenas B traz o diagnóstico correto de apendicite perfurada com peritonite).\n- **A) Incorreta:** Classifica erroneamente como \"apendicite não complicada\", ignorando o líquido livre, o abscesso periapendicular e a peritonite.\n- **C) Incorreta:** Conduta expectante sem cirurgia é contraindicada diante de peritonite difusa.\n- **D) Incorreta:** A TC confirma apendicite complicada, afastando gastroenterite viral.\n- **E) Incorreta:** Corticosteroides piorariam dramaticamente uma sepse abdominal por apendicite perfurada.",
     "perolaClinica": "O paciente apresenta **apendicite aguda complicada (perfurada com peritonite e abscesso periapendicular)** evidenciada por 3 dias de evolução, febre alta, irritação peritoneal, líquido livre na cavidade e abscesso à TC.",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Conduta na apendicite aguda perfurada com peritonite e abscesso.",
+      "raciocinioChave": "Dor em QID há 3 dias, febre alta, irritação peritoneal difusa e TC evidenciando líquido livre e abscesso periapendicular configuram apendicite complicada perfurada. A presença de peritonite indica abordagem cirúrgica urgente com apendicectomia, drenagem do abscesso e antibioticoterapia.",
+      "armadilhaBanca": "A alternativa A tenta atrair por mencionar laparoscopia, mas classifica erroneamente o quadro como apendicite não complicada, ignorando a perfuração, o líquido livre e o abscesso."
+    },
+    "mapaDistratores": {
+      "A": "Classifica equivocadamente o caso como apendicite não complicada, desconsiderando a presença de abscesso periapendicular, líquido livre e peritonite.",
+      "C": "A conduta expectante apenas com antibióticos é contraindicada quando há sinais clínicos de irritação peritoneal difusa.",
+      "D": "Os achados tomográficos de apêndice espessado, líquido livre e abscesso confirmam apendicite complicada e descartam gastroenterite viral.",
+      "E": "O uso de corticosteroides agravaria gravemente a sepse abdominal decorrente de apendicite perfurada."
+    }
   },
   {
     "id": "q-enare-2024-031",
@@ -1905,7 +2415,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Gestação Ectópica",
     "temaSlug": "go-sangramento",
     "subtemaSlug": "go-sangramento-gestacao-ectopica",
-    "tags": ["gestacao-ectopica","gravidez-tubaria-rota","sangramento-primeiro-trimestre","choque-hemorragico"],
+    "tags": [
+      "gestacao-ectopica",
+      "gravidez-tubaria-rota",
+      "sangramento-primeiro-trimestre",
+      "choque-hemorragico"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -1950,13 +2465,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alternativa **C** está correta. Em mulher em idade fértil (22 anos) com **dor pélvica/abdominal de início súbito associada a choque hipovolêmico agudo** (hipocorada ++/4, PA 90x40 mmHg, FC 118 bpm) e sinais de irritação peritoneal, a principal hipótese diagnóstica que deve ser imediatamente considerada e excluída/tratada é a **gravidez ectópica (tubária) rota** (FEBRASGO / Sabiston).\n- **A) Incorreta:** Apendicite aguda tem evolução progressiva (horas a dias) e não provoca choque hipovolêmico agudo com anemia em 2 horas.\n- **B) Incorreta:** Embora cisto ovariano hemorrágico roto possa causar hemoperitônio, a gravidez ectópica rota é a causa mais grave e mais provável de choque hemorrágico súbito em mulher em idade reprodutiva.\n- **D) Incorreta:** *Mittelschmerz* (dor ovulatória) é autolimitada e jamais cursa com choque hipovolêmico.\n- **E) Incorreta:** Torção anexial causa dor intensa súbita com náuseas/vômitos, mas não produz hemorragia maciça com hipocoração e choque hipovolêmico.",
     "perolaClinica": "Em mulher em idade fértil (22 anos) com **dor pélvica/abdominal de início súbito associada a choque hipovolêmico agudo** (hipocorada ++/4, PA 90x40 mmHg, FC 118 bpm) e sinais de irritação peritoneal, a principal hipótese",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Diagnóstico diferencial de abdome agudo hemorrágico em mulher jovem com choque hipovolêmico súbito.",
+      "raciocinioChave": "Mulher em idade fértil com dor pélvica súbita, irritação peritoneal e choque hipovolêmico agudo (hipocoração ++/4, hipotensão e taquicardia) em apenas 2 horas tem na gravidez tubária rota a hipótese mais grave e prioritária.",
+      "armadilhaBanca": "Confundir gravidez ectópica rota com cisto ovariano hemorrágico roto ou torção anexial, que podem cursar com dor súbita em FID, mas raramente geram choque hemorrágico fulminante em 2 horas."
+    },
+    "mapaDistratores": {
+      "A": "Apendicite aguda apresenta evolução progressiva de dor visceral para somática em horas a dias, sem provocar choque hemorrágico agudo e anemia súbita.",
+      "B": "Embora o cisto ovariano roto possa causar hemoperitônio, a gravidez ectópica rota é a causa mais provável e letal de choque hipovolêmico súbito na idade reprodutiva.",
+      "D": "Mittelschmerz (dor ovulatória) é um quadro benigno e autolimitado do meio do ciclo, incapaz de causar instabilidade hemodinâmica ou anemia aguda.",
+      "E": "Torção de ovário provoca dor súbita intensa com náuseas e vômitos por isquemia anexial, mas não cursa com hemorragia maciça nem choque hipovolêmico."
+    }
   },
   {
     "id": "q-enare-2024-032",
@@ -1968,7 +2495,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Hepatocarcinoma e Nódulos Hepáticos",
     "temaSlug": "cm-gastro",
     "subtemaSlug": "cm-gastro-hepatocarcinoma-e-nodulos-hepaticos",
-    "tags": ["hiperplasia-nodular-focal","nodulo-hepatico","cicatriz-central","tomografia-trifasica"],
+    "tags": [
+      "hiperplasia-nodular-focal",
+      "nodulo-hepatico",
+      "cicatriz-central",
+      "tomografia-trifasica"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -2013,13 +2545,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **D** está correta. Mulher jovem assintomática com achado incidental de **nódulo hepático sólido hipervascular (hipercaptante na fase arterial), bem circunscrito e com cicatriz central** na TC trifásica apresenta o aspecto clássico da **hiperplasia nodular focal (HNF)** — segundo tumor benigno hepático mais comum, sem risco de malignização e de manejo conservador (EASL / Sabiston).\n- **A) Incorreta:** Adenoma hepático costuma ser heterogêneo (áreas de hemorragia/necrose), sem cicatriz central típica, e associa-se ao uso prolongado de anticoncepcionais orais.\n- **B) Incorreta:** Hepatocarcinoma ocorre em fígados cirróticos/hepatopatas crônicos, com *wash-in* arterial e *wash-out* portal/tardio, sem cicatriz central típica.\n- **C) Incorreta:** Hemangioma hepático apresenta realce nodular periférico descontínuo com preenchimento centrípeto progressivo.\n- **E) Incorreta:** Colangiocarcinoma periférico acomete pacientes mais velhos e mostra realce tardio com retração capsular e dilatação biliar.",
     "perolaClinica": "Mulher jovem assintomática com achado incidental de **nódulo hepático sólido hipervascular (hipercaptante na fase arterial), bem circunscrito e com cicatriz central** na TC trifásica apresenta o aspecto clássico da **hip",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Diagnóstico por imagem de nódulos hepáticos benignos em mulher jovem na tomografia trifásica.",
+      "raciocinioChave": "Lesão hepática sólida incidental, bem circunscrita, hipervascular na fase arterial e com cicatriz central em mulher jovem assintomática define o aspecto tomográfico clássico da hiperplasia nodular focal.",
+      "armadilhaBanca": "Confundir hiperplasia nodular focal com adenoma hepático em mulheres jovens, diferenciando-os principalmente pela presença da cicatriz central típica e ausência de hemorragia ou necrose."
+    },
+    "mapaDistratores": {
+      "A": "O adenoma hepático costuma ter aspecto heterogêneo por focos de necrose ou hemorragia, sem cicatriz central típica, e associa-se ao uso prolongado de anticoncepcionais.",
+      "B": "O hepatocarcinoma ocorre tipicamente em fígado cirrótico ou hepatopata crônico, exibindo hiperrealce arterial com clareamento (wash-out) portal/tardio e sem cicatriz central.",
+      "C": "O hemangioma hepático caracteriza-se por realce nodular periférico descontínuo na fase arterial com preenchimento centrípeto progressivo nas fases tardias.",
+      "E": "O colangiocarcinoma periférico acomete pacientes mais idosos e apresenta realce tardio progressivo associado a retração capsular e dilatação biliar."
+    }
   },
   {
     "id": "q-enare-2024-033",
@@ -2031,7 +2575,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Doenças Orificiais",
     "temaSlug": "cg-cad",
     "subtemaSlug": "cg-cad-doencas-orificiais",
-    "tags": ["trombose-hemorroidaria","doenca-hemorroidaria","doencas-orificiais","banho-de-assento"],
+    "tags": [
+      "trombose-hemorroidaria",
+      "doenca-hemorroidaria",
+      "doencas-orificiais",
+      "banho-de-assento"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -2076,13 +2625,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **A** está correta. O quadro é de **trombose hemorroidária externa** (nódulo violáceo perianal distal à linha denteada, doloroso). Segundo as diretrizes da ASCRS (American Society of Colon and Rectal Surgeons) e SBCP, a excisão do trombo/hemorroida trombosada tem benefício principalmente nas **primeiras 72 horas**; como a paciente já tem **4 dias (96 horas)** de evolução, a reabsorção espontânea já se iniciou e o tratamento de escolha é **conservador** (analgésicos orais e tópicos, banhos de assento mornos, dieta rica em fibras e emolientes fecais).\n- **B) Incorreta:** A excisão cirúrgica sob anestesia local é indicada preferencialmente até 72 horas do início dos sintomas (pico da dor).\n- **C) Incorreta:** Ligadura elástica é contraindicada em hemorroidas externas (distais à linha denteada, ricamente inervadas por fibras somáticas) por causar dor excruciante.\n- **D) Incorreta:** Escleroterapia é indicada para hemorroidas internas graus I–II, nunca externas trombosadas.\n- **E) Incorreta:** Hemorroidectomia de urgência não é indicada na trombose hemorroidária externa isolada com 4 dias de evolução.",
     "perolaClinica": "O quadro é de **trombose hemorroidária externa** (nódulo violáceo perianal distal à linha denteada, doloroso).",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Indicação temporal entre tratamento clínico e excisão cirúrgica na trombose hemorroidária externa.",
+      "raciocinioChave": "O nódulo violáceo doloroso distal à linha denteada caracteriza trombose hemorroidária externa; com 4 dias de evolução (> 72 horas), já iniciou resolução espontânea, indicando manejo conservador com analgesia e banhos de assento.",
+      "armadilhaBanca": "Indicar excisão do trombo fora da janela ideal de 72 horas do início dos sintomas ou confundir manejo de hemorroida externa com procedimentos para hemorroidas internas."
+    },
+    "mapaDistratores": {
+      "B": "A excisão do trombo sob anestesia local traz benefício apenas nas primeiras 72 horas do início da dor; após 4 dias, o tratamento conservador é preferido.",
+      "C": "A ligadura elástica é formalmente contraindicada em hemorroidas externas (abaixo da linha denteada) por causar dor excruciante devido à inervação somática.",
+      "D": "A escleroterapia com fenol aplica-se apenas a hemorroidas internas graus I e II, nunca a trombose hemorroidária externa.",
+      "E": "A hemorroidectomia de urgência não é indicada na trombose externa isolada com 4 dias de evolução, diante da boa resposta ao manejo clínico."
+    }
   },
   {
     "id": "q-enare-2024-034",
@@ -2094,7 +2655,11 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Pancreatite Aguda e Crônica",
     "temaSlug": "cm-gastro",
     "subtemaSlug": "cm-gastro-pancreatite-aguda-e-cronica",
-    "tags": ["pancreatite-aguda","escore-bisap","prognostico"],
+    "tags": [
+      "pancreatite-aguda",
+      "escore-bisap",
+      "prognostico"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -2139,13 +2704,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **B** está correta (é o único item que **NÃO** faz parte do escore BISAP). O acrônimo **BISAP** (*Bedside Index for Severity in Acute Pancreatitis*) reúne 5 variáveis nas primeiras 24h: **B**UN (ureia nitrogenada sérica) > 25 mg/dL, **I**mpaired mental status (alteração do estado mental), **S**IRS (≥ 2 critérios), **A**ge (idade) > 60 anos e **P**leural effusion (derrame pleural). A glicemia > 200 mg/dL pertence aos **critérios de Ranson**, não ao BISAP.\n- **A) Incorreta:** Derrame pleural corresponde ao \"P\" do BISAP.\n- **C) Incorreta:** BUN > 25 mg/dL corresponde ao \"B\" do BISAP.\n- **D) Incorreta:** Idade > 60 anos corresponde ao \"A\" do BISAP.\n- **E) Incorreta:** Alteração do estado mental corresponde ao \"I\" do BISAP.",
     "perolaClinica": "(é o único item que **NÃO** faz parte do escore BISAP).",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Critérios do escore prognóstico BISAP na avaliação inicial da pancreatite aguda.",
+      "raciocinioChave": "O acrônimo BISAP contempla BUN > 25 mg/dL, alteração do estado mental (Impaired), SIRS >= 2 critérios, idade > 60 anos (Age) e derrame pleural (Pleural effusion), deixando a glicemia > 200 mg/dL fora do escore.",
+      "armadilhaBanca": "Misturar variáveis dos critérios de Ranson (como glicemia > 200 mg/dL) com os cinco parâmetros específicos do acrônimo BISAP."
+    },
+    "mapaDistratores": {
+      "A": "A presença de derrame pleural corresponde à letra P (Pleural effusion) e integra o escore BISAP.",
+      "C": "A ureia nitrogenada sérica (BUN) superior a 25 mg/dL corresponde à letra B do escore BISAP.",
+      "D": "A idade superior a 60 anos corresponde à letra A (Age) dos critérios prognósticos do BISAP.",
+      "E": "A alteração do estado mental (Glasgow < 15) corresponde à letra I (Impaired mental status) do escore BISAP."
+    }
   },
   {
     "id": "q-enare-2024-035",
@@ -2157,7 +2734,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Diverticulite Aguda",
     "temaSlug": "cg-abdome",
     "subtemaSlug": "cg-abdome-diverticulite-aguda",
-    "tags": ["diverticulite-aguda","hinchey-ib","abscesso-pericolico","drenagem-percutanea"],
+    "tags": [
+      "diverticulite-aguda",
+      "hinchey-ib",
+      "abscesso-pericolico",
+      "drenagem-percutanea"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -2202,13 +2784,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **C** está correta. Trata-se de **diverticulite aguda complicada com abscesso pericólico de 6 cm** (classificação **Hinchey Ib**). Segundo as diretrizes da ASCRS e WSES, abscessos diverticulares **≥ 4 cm** (ou ≥ 3–4 cm) têm alta taxa de falha com antibiótico isolado, sendo a conduta inicial padrão a **antibioticoterapia venosa associada à drenagem percutânea guiada por TC/USG** (evitando cirurgia de urgência com estoma).\n- **A) Incorreta:** Abscesso de 6 cm exige internação e antibioticoterapia venosa + drenagem, nunca tratamento oral ambulatorial.\n- **B) Incorreta:** Antibioticoterapia venosa exclusiva é indicada para abscessos pequenos (< 3–4 cm).\n- **D) Incorreta:** Laparotomia não é a primeira linha na ausência de peritonite difusa ou falha da drenagem percutânea.\n- **E) Incorreta:** Cirurgia de Hartmann de urgência reserva-se para peritonite purulenta/fecal (Hinchey III/IV) ou instabilidade/falha do manejo minimamente invasivo.",
     "perolaClinica": "Trata-se de **diverticulite aguda complicada com abscesso pericólico de 6 cm** (classificação **Hinchey Ib**).",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Conduta na diverticulite aguda complicada com abscesso pericólico (Hinchey Ib) >= 4 cm.",
+      "raciocinioChave": "A presença de abscesso pericólico mesentérico de 6 cm (Hinchey Ib, >= 4 cm) sem peritonite difusa exige internação com antibioticoterapia venosa associada à drenagem percutânea guiada por imagem.",
+      "armadilhaBanca": "Indicar antibioticoterapia venosa isolada (reservada para abscessos < 3–4 cm) ou partir diretamente para laparotomia/Hartmann sem peritonite generalizada."
+    },
+    "mapaDistratores": {
+      "A": "Abscessos diverticulares de 6 cm requerem internação hospitalar, antibioticoterapia intravenosa e drenagem, sendo o tratamento oral ambulatorial inadequado.",
+      "B": "A antibioticoterapia venosa exclusiva tem alta taxa de falha em abscessos >= 4 cm, sendo indicada apenas para coleções pequenas (< 3 a 4 cm).",
+      "D": "A laparotomia com lavagem cavitária não é primeira linha na ausência de peritonite difusa ou de falha da drenagem percutânea.",
+      "E": "O procedimento de Hartmann de urgência reserva-se para peritonite purulenta ou fecal (Hinchey III/IV), instabilidade ou refratariedade ao tratamento minimamente invasivo."
+    }
   },
   {
     "id": "q-enare-2024-036",
@@ -2220,7 +2814,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Coledocolitíase e Colangite Aguda",
     "temaSlug": "cg-biliar",
     "subtemaSlug": "cg-biliar-coledocolitiase-e-colangite-aguda",
-    "tags": ["colangite-aguda","criterios-de-toquio","ictericia","colelitiase"],
+    "tags": [
+      "colangite-aguda",
+      "criterios-de-toquio",
+      "ictericia",
+      "colelitiase"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -2265,13 +2864,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **A** está correta conforme o gabarito definitivo (FGV/ENARE) e as **Diretrizes de Tóquio (TG18)**. A paciente apresenta **colangite aguda leve (Grau I)** — tríade de Charcot (dor em HCD, icterícia e febre), porém sem disfunção orgânica (Grau III) e sem critérios de colangite moderada (Grau II: idade ≥ 75 anos, febre ≥ 39 °C, BT ≥ 5 mg/dL, leucócitos > 12.000 ou < 4.000). Na colangite **Grau I**, o tratamento inicial consiste em **antibioticoterapia venosa, hidratação e medidas de suporte**, reservando a drenagem biliar (CPRE) para falha de resposta clínica nas primeiras 24h ou eletivamente após controle da infecção.\n- **B) Incorreta:** Papilotomia/CPRE de urgência imediata é indicada na colangite grave (Grau III) ou precoce na moderada (Grau II) ou na falha terapêutica da Grau I.\n- **C) Incorreta:** Exploração cirúrgica aberta com dreno de Kehr tem maior morbimortalidade e só é usada quando a via endoscópica/percutânea falha.\n- **D) Incorreta:** Colecistectomia de urgência não descomprime a via biliar principal infectada e é feita apenas após resolução da colangite.\n- **E) Incorreta:** Drenagem percutânea trans-hepática é alternativa de segunda linha quando a CPRE não é factível.",
     "perolaClinica": "conforme o gabarito definitivo (FGV/ENARE) e as **Diretrizes de Tóquio (TG18)**.",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Classificação de gravidade (TG18) e manejo inicial da colangite aguda leve (Grau I).",
+      "raciocinioChave": "A paciente preenche a tríade de Charcot (colangite aguda) sem disfunção orgânica (Grau III) e sem critérios de Grau II (febre >= 39 °C, BT >= 5 mg/dL ou idade >= 75 anos); na colangite Grau I, a conduta inicial além de antibióticos é suporte clínico e hidratação.",
+      "armadilhaBanca": "Indicar CPRE/papilotomia de urgência imediata para todo paciente com tríade de Charcot sem estratificar a gravidade pelas Diretrizes de Tóquio (TG18)."
+    },
+    "mapaDistratores": {
+      "B": "A papilotomia endoscópica (CPRE) de urgência imediata é reservada para colangite grave (Grau III), precoce na moderada (Grau II) ou falha clínica na Grau I.",
+      "C": "A drenagem cirúrgica aberta com dreno de Kehr acarreta alta morbimortalidade e só é empregada em caso de falha ou indisponibilidade da via endoscópica/percutânea.",
+      "D": "A colecistectomia de urgência não descomprime a via biliar principal infectada e deve ser postergada até a resolução do quadro infeccioso agudo.",
+      "E": "A drenagem biliar externa trans-hepática percutânea é opção de segunda linha quando a CPRE não é factível ou falha."
+    }
   },
   {
     "id": "q-enare-2024-037",
@@ -2283,7 +2894,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Trauma Abdominal e Pélvico",
     "temaSlug": "cg-trauma",
     "subtemaSlug": "cg-trauma-trauma-abdominal-e-pelvico",
-    "tags": ["trauma-abdominal","choque-hemorragico","fast","transfusao-macica"],
+    "tags": [
+      "trauma-abdominal",
+      "choque-hemorragico",
+      "fast",
+      "transfusao-macica"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -2328,13 +2944,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **B** está correta. Paciente politraumatizado com **choque hipovolêmico grau III** (hipotensão 85/60, FC 130, confusão mental, Hb 8 g/dL), abdômen tenso e **FAST positivo** tem indicação absoluta de **ressuscitação hemostática (protocolo de transfusão maciça 1:1:1 — concentrado de hemácias, plasma fresco congelado e plaquetas) + laparotomia exploradora imediata** para controle do sangramento (ATLS 10ª edição).\n- **A) Incorreta:** Apenas cristaloide e observação em paciente instável com FAST positivo agrava coagulopatia dilucional e leva ao óbito.\n- **C) Incorreta:** Vasopressores são contraindicados como tratamento primário do choque hemorrágico traumático.\n- **D) Incorreta:** Diuréticos pioram drasticamente a hipovolemia e não reduzem hemoperitônio.\n- **E) Incorreta:** Paciente hemodinamicamente instável com FAST positivo **nunca** deve ser encaminhado à sala de tomografia.",
     "perolaClinica": "Paciente politraumatizado com **choque hipovolêmico grau III** (hipotensão 85/60, FC 130, confusão mental, Hb 8 g/dL), abdômen tenso e **FAST positivo** tem indicação absoluta de **ressuscitação hemostática (protocolo de",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Ressuscitação hemostática e abordagem cirúrgica imediata no trauma abdominal instável com FAST positivo.",
+      "raciocinioChave": "Politraumatizado em choque hemorrágico grau III (PA 85/60 mmHg, FC 130 bpm, confusão mental, Hb 8 g/dL) com abdômen tenso e FAST positivo tem hemoperitônio cirúrgico, exigindo transfusão balanceada 1:1:1 e laparotomia exploradora imediata.",
+      "armadilhaBanca": "Atrasar o controle cirúrgico definitivo solicitando tomografia de abdômen em paciente hemodinamicamente instável ou infundir apenas cristaloides."
+    },
+    "mapaDistratores": {
+      "A": "Manter apenas solução salina e observação clínica em choque hemorrágico com FAST positivo agrava a tríade letal (coagulopatia dilucional, hipotermia e acidose).",
+      "C": "Vasopressores são contraindicados como terapia inicial no choque hipovolêmico hemorrágico, pois não corrigem a perda volêmica e agravam a hipoperfusão tecidual.",
+      "D": "Diuréticos não reduzem o hemoperitônio e pioram gravemente a hipovolemia e a perfusão renal no choque traumático.",
+      "E": "Pacientes hemodinamicamente instáveis com FAST positivo não devem ser levados à tomografia computadorizada pelo risco iminente de parada cardiorrespiratória."
+    }
   },
   {
     "id": "q-enare-2024-038",
@@ -2346,7 +2974,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Abdome Agudo Obstrutivo",
     "temaSlug": "cg-abdome",
     "subtemaSlug": "cg-abdome-abdome-agudo-obstrutivo",
-    "tags": ["sindrome-de-ogilvie","pseudo-obstrucao-colonica","neostigmina","distensao-abdominal"],
+    "tags": [
+      "sindrome-de-ogilvie",
+      "pseudo-obstrucao-colonica",
+      "neostigmina",
+      "distensao-abdominal"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -2391,13 +3024,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **A** está correta. Idoso acamado com comorbidades clínicas graves (DPOC, ICC, pneumonia) que desenvolve **dilatação maciça e seletiva do cólon (especialmente ceco e cólon ascendente) sem obstrução mecânica e sem peritonite** apresenta o quadro clássico de **síndrome de Ogilvie (pseudo-obstrução colônica aguda)**. Além das medidas de suporte iniciais, o tratamento farmacológico de escolha é a **neostigmina** (anticolinesterásico que restaura o tônus parassimpático colônico, com resposta em > 80% dos casos; diretriz ASGE / Sabiston).\n- **B) Incorreta:** Colite pseudomembranosa cursa classicamente com diarreia aquosa fétida, febre e leucocitose acentuada (e a primeira escolha atual é vancomicina oral ou fidaxomicina).\n- **C) Incorreta:** Não há evidência de obstrução mecânica nem histórico de cirurgia abdominal prévia.\n- **D) Incorreta:** Volvo de sigmoide apresenta imagem clássica em \"grão de café\" ou \"U invertido\" no sigmoide, não dilatação predominante de ceco/ascendente sem obstrução mecânica.\n- **E) Incorreta:** Íleo paralítico acomete difusamente tanto intestino delgado quanto cólon, e não seletivamente ceco e cólon ascendente como na síndrome de Ogilvie.",
     "perolaClinica": "Idoso acamado com comorbidades clínicas graves (DPOC, ICC, pneumonia) que desenvolve **dilatação maciça e seletiva do cólon (especialmente ceco e cólon ascendente) sem obstrução mecânica e sem peritonite** apresenta o qu",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Diagnóstico e tratamento farmacológico da síndrome de Ogilvie (pseudo-obstrução colônica aguda).",
+      "raciocinioChave": "Idoso acamado com comorbidades graves (DPOC, ICC, pneumonia) que desenvolve dilatação seletiva e acentuada de ceco e cólon ascendente sem fator mecânico ou peritonite apresenta síndrome de Ogilvie, cujo tratamento medicamentoso de escolha é a neostigmina.",
+      "armadilhaBanca": "Confundir pseudo-obstrução colônica aguda com íleo paralítico difuso ou volvo de sigmoide, deixando de reconhecer a neostigmina como terapia específica após exclusão de obstrução mecânica."
+    },
+    "mapaDistratores": {
+      "B": "A colite pseudomembranosa manifesta-se com diarreia aquosa fétida, febre e leucocitose acentuada, além de ser tratada preferencialmente com vancomicina oral ou fidaxomicina.",
+      "C": "Não há sinais clínicos ou radiológicos de obstrução mecânica nem antecedente cirúrgico que justifiquem laparotomia exploradora imediata.",
+      "D": "O volvo de sigmoide produz imagem radiológica típica em grão de café ou U invertido centrada no sigmoide, caracterizando obstrução mecânica em alça fechada.",
+      "E": "O íleo paralítico acomete difusamente tanto o intestino delgado quanto o cólon, não se restringindo de forma predominante ao ceco e ao cólon ascendente."
+    }
   },
   {
     "id": "q-enare-2024-039",
@@ -2409,7 +3054,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Hérnia Inguinal e Femoral",
     "temaSlug": "cg-hernias",
     "subtemaSlug": "cg-hernias-hernia-inguinal-e-femoral",
-    "tags": ["hernia-inguinoescrotal","hernia-inguinal","tecnica-de-lichtenstein","herniorrafia"],
+    "tags": [
+      "hernia-inguinoescrotal",
+      "hernia-inguinal",
+      "tecnica-de-lichtenstein",
+      "herniorrafia"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -2454,13 +3104,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **D** está correta. Para **hérnia inguinoescrotal unilateral primária** em homem adulto, as diretrizes internacionais da **HerniaSurge (2018/2023)** recomendam preferencialmente o reparo aberto anterior com tela livre de tensão pela **técnica de Lichtenstein**, pois grandes hérnias inguinoescrotais apresentam maior dificuldade técnica e risco de seroma/complicações na abordagem laparoscópica (TAPP/TEP) e taxas de recidiva muito inferiores às técnicas sem tela.\n- **A) Incorreta:** Shouldice é a melhor técnica *sem tela*, mas possui maior recidiva e exige curva de aprendizado específica, sendo reservada a casos em que não se pode usar prótese.\n- **B) Incorreta:** Hérnia sintomática inguinoescrotal tem indicação cirúrgica; o uso de funda é proscrito.\n- **C) Incorreta:** TAPP/TEP são excelentes em hérnias bilaterais ou recidivadas pós-via anterior, mas em hérnias inguinoescrotais volumosas a técnica aberta de Lichtenstein é preferida.\n- **E) Incorreta:** A técnica de Bassini (sem tela, sob tensão) apresenta elevadas taxas de recidiva e foi substituída pelo reparo livre de tensão.",
     "perolaClinica": "Para **hérnia inguinoescrotal unilateral primária** em homem adulto, as diretrizes internacionais da **HerniaSurge (2018/2023)** recomendam preferencialmente o reparo aberto anterior com tela livre de tensão pela **técni",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Escolha da técnica cirúrgica ideal para hérnia inguinoescrotal unilateral primária redutível.",
+      "raciocinioChave": "Em hérnia inguinoescrotal unilateral primária e redutível em homem adulto, o reparo aberto anterior com tela livre de tensão pela técnica de Lichtenstein é a conduta preferencial por associar baixíssima recidiva e menor complexidade técnica.",
+      "armadilhaBanca": "Indicar abordagem videolaparoscópica (TAPP) ou reparos sem tela (Shouldice/Bassini) como primeira escolha em hérnia inguinoescrotal volumosa unilateral e primária."
+    },
+    "mapaDistratores": {
+      "A": "A técnica de Shouldice é a melhor opção sem tela, porém tem maior complexidade técnica e é reservada aos casos com contraindicação ao uso de prótese.",
+      "B": "Hérnia inguinoescrotal sintomática tem indicação formal de correção cirúrgica eletiva, sendo o uso de funda proscrito.",
+      "C": "As técnicas laparoscópicas (TAPP/TEP) são preferidas em hérnias bilaterais ou recidivadas após via anterior, apresentando maior dificuldade técnica e risco de seroma nas inguinoescrotais volumosas.",
+      "E": "A técnica de Bassini realiza sutura tecidual sob tensão sem tela, resultando em taxas inaceitáveis de recidiva herniária."
+    }
   },
   {
     "id": "q-enare-2024-040",
@@ -2472,7 +3134,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Anestesiologia Básica e Anestésicos Locais",
     "temaSlug": "cg-periop",
     "subtemaSlug": "cg-periop-anestesiologia-basica-e-anestesicos-locais",
-    "tags": ["pneumoperitonio","videolaparoscopia","bradicardia","alteracoes-hemodinamicas"],
+    "tags": [
+      "pneumoperitonio",
+      "videolaparoscopia",
+      "bradicardia",
+      "alteracoes-hemodinamicas"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -2517,13 +3184,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **D** está correta. A insuflação rápida de CO₂ e o estiramento peritoneal durante a criação do pneumoperitônio podem desencadear **reflexo vagal (estímulo vasovagal)** com **bradicardia** súbita e até assistolia transitória, revertida pela desinsuflação abdominal e atropina (Sabiston / Miller's Anesthesia).\n- **A) Incorreta:** O aumento da pressão intra-abdominal comprime a veia cava inferior, **diminuindo** (e não aumentando) o retorno venoso e, consequentemente, o débito cardíaco.\n- **B) Incorreta:** A compressão arterial aumenta a resistência vascular sistêmica (pós-carga), tendendo inicialmente à **hipertensão** (ou manutenção da PAM), não hipotensão por compressão aórtica.\n- **C) Incorreta:** A oligúria decorre da compressão direta do parênquima e das veias renais + redução do fluxo sanguíneo renal e ativação do SRAA/ADH, não de retenção de bicarbonato.\n- **E) Incorreta:** Arritmias (bradicardia sinusal, extrassístoles por hipercapnia/descarga simpática) são relativamente comuns durante o pneumoperitônio.",
     "perolaClinica": "A insuflação rápida de CO₂ e o estiramento peritoneal durante a criação do pneumoperitônio podem desencadear **reflexo vagal (estímulo vasovagal)** com **bradicardia** súbita e até assistolia transitória, revertida pela ",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Repercussões hemodinâmicas e reflexos autonômicos induzidos pelo pneumoperitônio na videolaparoscopia.",
+      "raciocinioChave": "O estiramento peritoneal abrupto durante a insuflação de CO2 no pneumoperitônio pode desencadear reflexo vasovagal intenso, causando bradicardia súbita e eventual assistolia transitória.",
+      "armadilhaBanca": "Inverter os efeitos fisiológicos clássicos do pneumoperitônio (como afirmar aumento do retorno venoso ou hipotensão por compressão aórtica direta)."
+    },
+    "mapaDistratores": {
+      "A": "A elevação da pressão intra-abdominal comprime a veia cava inferior, reduzindo — e não aumentando — o retorno venoso e o débito cardíaco.",
+      "B": "O aumento da pós-carga pela compressão arterial esplâncnica e aórtica eleva a resistência vascular sistêmica, tendendo inicialmente à elevação ou manutenção da pressão arterial.",
+      "C": "A oligúria resulta da compressão direta do parênquima e das veias renais com redução do fluxo sanguíneo renal e ativação do SRAA/ADH, não da retenção de bicarbonato.",
+      "E": "Distúrbios do ritmo cardíaco, como bradicardia sinusal vagal e extrassístoles por hipercapnia e descarga simpática, são relativamente frequentes na laparoscopia."
+    }
   },
   {
     "id": "q-enare-2024-041",
@@ -2535,7 +3214,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Puberdade Normal, Precoce e Atrasada",
     "temaSlug": "ped-puericultura",
     "subtemaSlug": "ped-puericultura-puberdade-normal-precoce-e-atrasada",
-    "tags": ["estadiamento-puberal","critarios-de-tanner","desenvolvimento-puberal","puericultura"],
+    "tags": [
+      "estadiamento-puberal",
+      "critarios-de-tanner",
+      "desenvolvimento-puberal",
+      "puericultura"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -2580,13 +3264,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "E",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **E** está correta conforme o gabarito definitivo (alterado pós-recurso pela FGV/ENARE). Embora a descrição sugira estágios compatíveis com M3 e P2–P3 de Tanner em uma menina de 12 anos, a banca acolheu recurso argumentando que a avaliação rigorosa do desenvolvimento puberal exige dados complementares (idade de início da telarca/pubarca, velocidade de crescimento, menarca e comparação longitudinal nos gráficos de crescimento e estágios completos de Tanner, segundo o Tratado de Pediatria da SBP).\n- **A) Incorreta:** A banca alterou o gabarito preliminar de A para E por considerar os dados transversais isolados insuficientes para afirmar adequação puberal completa.\n- **B) Incorreta:** Aos 12 anos com mamas e pelos já presentes, não há atraso puberal (definido em meninas pela ausência de telarca aos 13 anos).\n- **C) Incorreta:** Pubarca precoce é definida antes dos 8 anos em meninas.\n- **D) Incorreta:** Telarca precoce é definida antes dos 8 anos em meninas.",
     "perolaClinica": "conforme o gabarito definitivo (alterado pós-recurso pela FGV/ENARE).",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Critérios necessários para avaliação completa do desenvolvimento puberal segundo os estágios de Tanner.",
+      "raciocinioChave": "Apesar da presença de mamas e pelos compatíveis com a faixa etária de 12 anos, uma descrição transversal isolada sem idade de início da telarca/pubarca, velocidade de crescimento e comparação longitudinal não permite concluir com rigor sobre adequação puberal.",
+      "armadilhaBanca": "Aceitar automaticamente como desenvolvimento puberal adequado apenas uma fotografia estática dos caracteres sexuais aos 12 anos sem dados longitudinais (anulação/alteração pós-recurso clássica da banca)."
+    },
+    "mapaDistratores": {
+      "A": "Dados transversais isolados sem idade de início dos marcos puberais e sem velocidade de crescimento são insuficientes para afirmar adequação puberal completa.",
+      "B": "Aos 12 anos já há telarca e pubarca evidentes, afastando atraso puberal (definido em meninas pela ausência de mamas aos 13 anos).",
+      "C": "Pubarca precoce é caracterizada pelo surgimento de pelos pubianos antes dos 8 anos no sexo feminino, o que não se aplica aos 12 anos.",
+      "D": "Telarca precoce corresponde ao desenvolvimento mamário isolado antes dos 8 anos em meninas, incompatível com a idade da paciente."
+    }
   },
   {
     "id": "q-enare-2024-043",
@@ -2598,7 +3294,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Doenças Exantemáticas",
     "temaSlug": "ped-infecto-ped",
     "subtemaSlug": "ped-infecto-ped-doencas-exantematicas",
-    "tags": ["exantema-subito","roseola-infantum","doencas-exantematicas","lactente"],
+    "tags": [
+      "exantema-subito",
+      "roseola-infantum",
+      "doencas-exantematicas",
+      "lactente"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -2643,13 +3344,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "E",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alternativa **E** está correta. Lactente (6 meses a 2 anos) com **febre alta por 3 dias que cede em crise** seguida pelo **surgimento do exantema maculopapular no tronco com disseminação centrífuga após o desaparecimento da febre** constitui a apresentação clássica do **exantema súbito (roséola infantum)**, causado pelo herpesvírus humano tipo 6 (HHV-6), conforme a SBP.\n- **A) Incorreta:** Escarlatina é bacteriana (*Streptococcus pyogenes*), acomete mais escolares com faringoamigdalite exsudativa, exantema micropapular em \"lixa\", sinal de Filatov e linhas de Pastia.\n- **B) Incorreta:** No sarampo, o exantema surge no auge da febre, inicia-se na região retroauricular/face (craniocaudal) e acompanha tosse intensa, conjuntivite e manchas de Koplik.\n- **C) Incorreta:** Varicela caracteriza-se por exantema vesicular polimórfico pruriginoso (máculas, pápulas, vesículas e crostas simultaneamente).\n- **D) Incorreta:** Rubéola cursa com febre baixa, linfadenopatia retroauricular/occipital dolorosa e exantema craniocaudal concomitante ao quadro febril.",
     "perolaClinica": "Lactente (6 meses a 2 anos) com **febre alta por 3 dias que cede em crise** seguida pelo **surgimento do exantema maculopapular no tronco com disseminação centrífuga após o desaparecimento da febre** constitui a apresent",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Diagnóstico clínico das doenças exantemáticas: exantema súbito (roséola infantum) em lactente.",
+      "raciocinioChave": "Lactente de 10 meses com febre alta por 3 dias que desaparece em crise antes do surgimento de exantema maculopapular no tronco com progressão centrífuga para membros descreve o quadro clássico do exantema súbito (HHV-6).",
+      "armadilhaBanca": "Confundir exantema súbito com sarampo ou rubéola ignorando a relação temporal crucial em que a febre cessa justamente quando o exantema surge no tronco."
+    },
+    "mapaDistratores": {
+      "A": "A escarlatina cursa com faringoamigdalite bacteriana estreptocócica e exantema micropapular áspero em lixa concomitante à febre, com palidez perioral (Filatov) e linhas de Pastia.",
+      "B": "No sarampo, o exantema craniocaudal surge no auge da febre, acompanhado de tosse intensa, coriza purulenta, conjuntivite e manchas de Koplik.",
+      "C": "A varicela apresenta exantema vesicular pruriginoso polimórfico, com lesões simultâneas em estágios de mácula, pápula, vesícula e crosta.",
+      "D": "A rubéola manifesta-se com febre baixa, linfadenopatia retroauricular/occipital dolorosa e exantema craniocaudal concomitante à fase febril."
+    }
   },
   {
     "id": "q-enare-2024-044",
@@ -2661,7 +3374,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Calendário Nacional de Vacinação - PNI",
     "temaSlug": "ped-vacinas",
     "subtemaSlug": "ped-vacinas-calendario-nacional-de-vacinacao-pni",
-    "tags": ["vacina-hpv","falsas-contraindicacoes","corticoide-nasal","pni"],
+    "tags": [
+      "vacina-hpv",
+      "falsas-contraindicacoes",
+      "corticoide-nasal",
+      "pni"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -2706,13 +3424,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alternativa **C** está correta. De acordo com o **Manual de Normas e Procedimentos para Vacinação do PNI (Ministério da Saúde)**, o uso de **corticosteroides tópicos, inalatórios ou nasais** não causa imunossupressão sistêmica e constitui uma **falsa contraindicação** vacinal — além disso, a vacina HPV é recombinante (não viva), podendo ser aplicada normalmente com as orientações habituais.\n- **A) Incorreta:** Adiar a vacinação configura oportunidade perdida de imunização sem justificativa técnica.\n- **B) Incorreta:** Não há necessidade de suspender o corticoide nasal.\n- **D) Incorreta:** A dose da vacina HPV não é dobrada em pacientes usando corticoide nasal.\n- **E) Incorreta:** Corticoide nasal não aumenta a incidência nem a gravidade de eventos supostamente atribuíveis à vacinação.",
     "perolaClinica": "De acordo com o **Manual de Normas e Procedimentos para Vacinação do PNI (Ministério da Saúde)**, o uso de **corticosteroides tópicos, inalatórios ou nasais** não causa imunossupressão sistêmica e constitui uma **falsa c",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Falsas contraindicações vacinais no PNI frente ao uso de corticoide tópico nasal.",
+      "raciocinioChave": "Corticoides tópicos, inalatórios ou nasais não promovem imunossupressão sistêmica e não contraindicam nenhuma vacina (além de a HPV ser recombinante não viva), devendo-se aplicar a vacina normalmente.",
+      "armadilhaBanca": "Adiar ou suspender o corticoide tópico por confundir seu efeito local com corticoterapia sistêmica em dose imunossupressora (>= 2 mg/kg/dia ou >= 20 mg/dia de prednisona por >= 14 dias)."
+    },
+    "mapaDistratores": {
+      "A": "Adiar a vacinação pelo uso de corticoide nasal gera oportunidade perdida de imunização sem qualquer respaldo técnico no PNI.",
+      "B": "Não há indicação de interromper ou suspender o corticoide nasal antes ou após a administração da vacina HPV.",
+      "D": "A posologia da vacina HPV não sofre alteração nem dobramento de dose em usuários de corticoterapia tópica nasal.",
+      "E": "O uso de corticoide nasal não aumenta a frequência nem a gravidade de eventos supostamente atribuíveis à vacinação."
+    }
   },
   {
     "id": "q-enare-2024-045",
@@ -2724,7 +3454,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Icterícia Neonatal",
     "temaSlug": "ped-neo",
     "subtemaSlug": "ped-neo-ictericia-neonatal",
-    "tags": ["ictericia-neonatal","ictericia-patologica","hiperbilirrubinemia-direta","neonatologia"],
+    "tags": [
+      "ictericia-neonatal",
+      "ictericia-patologica",
+      "hiperbilirrubinemia-direta",
+      "neonatologia"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -2769,13 +3504,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **C** está correta. O recém-nascido apresenta **dois critérios clássicos de icterícia patológica** (SBP / Ministério da Saúde): (1) **início precoce nas primeiras 24 horas de vida** (desde 12h) e (2) **colestase / hiperbilirrubinemia direta significativa**, pois BD = BT − BI = 2,0 − 0,8 = **1,2 mg/dL** (que corresponde a **60% da BT**, ultrapassando tanto > 1 mg/dL quanto > 20% da BT).\n- **A) Incorreta:** Início após 24h (37h), BT 4 mg/dL e BD = 0,9 mg/dL (apenas 1 critério limítrofe de BD > 20%, mas sem início precoce).\n- **B) Incorreta:** No 6º dia de vida em prematuro, BT 3 mg/dL e BD 0,8 mg/dL não somam dois critérios patológicos clássicos.\n- **D) Incorreta:** Início > 24h (39h) e velocidade de elevação de 0,1 mg/dL/h (patológica seria > 0,2–0,5 mg/dL/h).\n- **E) Incorreta:** RN O+ com mãe A+ não apresenta incompatibilidade ABO (que ocorre em mãe O com RN A ou B), e icterícia até 14 dias em prematuro ainda pode ser fisiológica.",
     "perolaClinica": "O recém-nascido apresenta **dois critérios clássicos de icterícia patológica** (SBP / Ministério da Saúde): (1) **início precoce nas primeiras 24 horas de vida** (desde 12h) e (2) **colestase / hiperbilirrubinemia direta",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Critérios laboratoriais e cronológicos que definem icterícia neonatal patológica.",
+      "raciocinioChave": "Na alternativa C, o RN a termo reúne dois critérios inequívocos de icterícia patológica: início precoce antes de 24 horas de vida (12 horas) e colestase neonatal (BD = 2,0 - 0,8 = 1,2 mg/dL, correspondendo a 60% da BT).",
+      "armadilhaBanca": "Deixar de calcular a bilirrubina direta subtraindo a indireta da total (BD = BT - BI) para identificar colestase (BD > 1 mg/dL ou > 20% da BT) mesmo com BT baixa."
+    },
+    "mapaDistratores": {
+      "A": "O início após 24 horas (37h) e BT de 4 mg/dL com BD de 0,9 mg/dL (limítrofe) não configuram dois critérios claros de icterícia patológica.",
+      "B": "No 6º dia de vida de um RN prematuro, BT de 3 mg/dL e BD de 0,8 mg/dL não preenchem dois critérios de icterícia patológica.",
+      "D": "O início após 24 horas (39h) e velocidade de elevação de 0,1 mg/dL/hora (patológica seria > 0,2 a 0,5 mg/dL/hora) não configuram critérios patológicos.",
+      "E": "RN O+ filho de mãe A+ não apresenta incompatibilidade ABO (que ocorre em mãe O com RN A ou B), e icterícia até o 14º dia no prematuro pode ser fisiológica."
+    }
   },
   {
     "id": "q-enare-2024-046",
@@ -2787,7 +3534,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "DRGE e Constipação na Infância",
     "temaSlug": "ped-gastro-nefro-ped",
     "subtemaSlug": "ped-gastro-nefro-ped-drge-e-constipacao-na-infancia",
-    "tags": ["sindrome-do-intestino-irritavel","criterios-de-roma-iv","dor-abdominal-funcional","gastroenterologia-pediatrica"],
+    "tags": [
+      "sindrome-do-intestino-irritavel",
+      "criterios-de-roma-iv",
+      "dor-abdominal-funcional",
+      "gastroenterologia-pediatrica"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -2832,13 +3584,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **C** está correta. Pelos **Critérios de Roma IV para Pediatria** (4 a 18 anos), o diagnóstico de síndrome do intestino irritável (SII) requer dor abdominal por pelo menos 4 dias/mês durante **≥ 2 meses**, associada a um ou mais dos seguintes: relação com a defecação, **mudança na frequência das evacuações** ou mudança na forma/aparência das fezes — sem que a dor se resolva apenas com o tratamento da constipação (diferenciando-a da constipação funcional).\n- **A) Incorreta:** Perda ponderal é sinal de alarme que afasta distúrbio funcional e exige investigação de doença orgânica (ex.: DII, doença celíaca).\n- **B) Incorreta:** Se a dor abdominal desaparece após a resolução da constipação, o diagnóstico pelos critérios de Roma IV é **constipação funcional**, não SII.\n- **D) Incorreta:** Esse padrão específico de Bristol não compõe os critérios diagnósticos de Roma IV.\n- **E) Incorreta:** A duração mínima exigida pelos critérios de Roma IV em pediatria é de **2 meses**, não 1 mês.",
     "perolaClinica": "Pelos **Critérios de Roma IV para Pediatria** (4 a 18 anos), o diagnóstico de síndrome do intestino irritável (SII) requer dor abdominal por pelo menos 4 dias/mês durante **≥ 2 meses**, associada a um ou mais dos seguint",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Critérios diagnósticos de Roma IV para síndrome do intestino irritável em pediatria.",
+      "raciocinioChave": "Pelos critérios de Roma IV pediátricos, a síndrome do intestino irritável exige dor abdominal por >= 2 meses associada à defecação ou à alteração da frequência ou forma das fezes, sem alívio exclusivo após resolução da constipação.",
+      "armadilhaBanca": "Confundir SII com constipação funcional (em que a dor desaparece ao resolver a constipação) ou errar o tempo mínimo exigido de 2 meses de sintomas."
+    },
+    "mapaDistratores": {
+      "A": "Perda ponderal constitui sinal de alarme que afasta distúrbio funcional intestinal e obriga investigar doença orgânica, como doença inflamatória intestinal ou celíaca.",
+      "B": "Quando a dor abdominal cessa após o tratamento da constipação, o diagnóstico pelos critérios de Roma IV é constipação funcional, e não SII.",
+      "D": "Alternância fixa entre Bristol 6 na primeira evacuação e Bristol 1 nas subsequentes não faz parte dos critérios diagnósticos de Roma IV.",
+      "E": "O critério temporal mínimo exigido por Roma IV na faixa pediátrica é de pelo menos 2 meses de sintomas, e não 1 mês."
+    }
   },
   {
     "id": "q-enare-2024-047",
@@ -2850,7 +3614,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Desenvolvimento Neuropsicomotor e Autismo",
     "temaSlug": "ped-puericultura",
     "subtemaSlug": "ped-puericultura-desenvolvimento-neuropsicomotor-e-autismo",
-    "tags": ["m-chat-r","transtorno-do-espectro-autista","triagem-precoce","puericultura"],
+    "tags": [
+      "m-chat-r",
+      "transtorno-do-espectro-autista",
+      "triagem-precoce",
+      "puericultura"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -2895,13 +3664,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alternativa **B** está correta. O **M-CHAT-R/F** (*Modified Checklist for Autism in Toddlers, Revised with Follow-Up*) é um instrumento validado de **triagem (rastreamento) de sinais precoces de Transtorno do Espectro Autista (TEA)**, aplicado obrigatoriamente nas consultas de puericultura entre **16 e 30 meses** de idade (especialmente aos 18 e 24 meses), conforme a SBP e a Lei nº 13.438/2017 (Ministério da Saúde).\n- **A) Incorreta:** M-CHAT-R é teste de triagem, não instrumento diagnóstico definitivo (além de o DSM-5 ter unificado a síndrome de Asperger no espectro do TEA).\n- **C) Incorreta:** Não é uma escala longitudinal geral de acompanhamento do neurodesenvolvimento (como Denver II ou marcos da Caderneta da Criança).\n- **D) Incorreta:** A faixa etária validada do M-CHAT-R é de **16 a 30 meses**, não 9 a 15 meses.\n- **E) Incorreta:** Não serve para estadiar o nível de suporte/gravidade do TEA.",
     "perolaClinica": "O **M-CHAT-R/F** (*Modified Checklist for Autism in Toddlers, Revised with Follow-Up*) é um instrumento validado de **triagem (rastreamento) de sinais precoces de Transtorno do Espectro Autista (TEA)**, aplicado obrigato",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Finalidade e faixa etária de aplicação do questionário M-CHAT-R no transtorno do espectro autista.",
+      "raciocinioChave": "O M-CHAT-R/F é um instrumento padronizado de triagem precoce de sinais de risco para transtorno do espectro autista, aplicado na puericultura entre 16 e 30 meses de idade.",
+      "armadilhaBanca": "Confundir ferramenta de rastreamento/triagem (M-CHAT-R) com instrumento diagnóstico definitivo ou com escala geral de marcos do neurodesenvolvimento."
+    },
+    "mapaDistratores": {
+      "A": "O M-CHAT-R atua como ferramenta de triagem, não estabelece diagnóstico definitivo, além de o termo síndrome de Asperger ter sido unificado ao TEA pelo DSM-5.",
+      "C": "Não é um instrumento longitudinal abrangente de vigilância global do desenvolvimento neuropsicomotor como a Caderneta da Criança ou o teste de Denver II.",
+      "D": "A faixa etária validada para aplicação do M-CHAT-R é de 16 a 30 meses, e não de 9 a 15 meses.",
+      "E": "O questionário identifica risco para TEA, mas não se destina a estadiar o nível de suporte ou gravidade do transtorno."
+    }
   },
   {
     "id": "q-enare-2024-048",
@@ -2913,7 +3694,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Aleitamento Materno e Fórmulas Infantis",
     "temaSlug": "ped-puericultura",
     "subtemaSlug": "ped-puericultura-aleitamento-materno-e-formulas-infantis",
-    "tags": ["aleitamento-materno","puericultura","amamentacao-exclusiva","aconselhamento"],
+    "tags": [
+      "aleitamento-materno",
+      "puericultura",
+      "amamentacao-exclusiva",
+      "aconselhamento"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -2958,13 +3744,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "E",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **E** está correta (gabarito definitivo alterado pós-recurso pela FGV/ENARE). Nas técnicas de **aconselhamento em amamentação** (OMS / Caderno de Atenção Básica nº 23 — Ministério da Saúde), a escuta ativa e empática exige **evitar subestimar os sentimentos da mãe**, acolhendo suas angústias para demonstrar que são compreendidos e valorizados.\n- **A) Incorreta:** Perguntas abertas devem ser **estimuladas**, não evitadas, no aconselhamento em aleitamento.\n- **B) Incorreta:** A comunicação não verbal acolhedora (contato visual, postura aberta, aceno) é ferramenta essencial do aconselhamento, não deve ser evitada.\n- **C) Incorreta:** No aconselhamento empático, deve-se aceitar o que a mãe pensa e sente sem confrontá-la de forma incisiva.\n- **D) Incorreta:** Palavras de julgamento devem ser sempre evitadas, sem a exceção contraditória citada na alternativa.",
     "perolaClinica": "(gabarito definitivo alterado pós-recurso pela FGV/ENARE).",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Técnicas de aconselhamento empático em aleitamento materno segundo a OMS e Ministério da Saúde.",
+      "raciocinioChave": "No aconselhamento em amamentação, uma escuta empática exige aceitar as opiniões da mãe sem julgamento e evitar subestimar seus sentimentos, validando suas angústias para manter a confiança e apoiar o aleitamento.",
+      "armadilhaBanca": "Atenção à leitura negativa do comando ('evitando'): alternativas com boas práticas devem ser descartadas, marcando-se justamente a atitude inadequada que deve ser evitada (subestimar os sentimentos maternos)."
+    },
+    "mapaDistratores": {
+      "A": "Fazer perguntas abertas deve ser incentivado no aconselhamento, e não evitado, para permitir que a mãe expresse suas dúvidas e dificuldades.",
+      "B": "A comunicação não verbal acolhedora (contato visual, postura receptiva, atenção) é recomendada como recurso fundamental do aconselhamento empático.",
+      "C": "Aceitar as opiniões da mãe é correto, mas o erro da alternativa está em propor confrontação incisiva de que ela está equivocada, o que bloqueia o vínculo.",
+      "D": "Palavras que soem como julgamento devem ser sempre evitadas no aconselhamento, sem a exceção contraditória descrita na alternativa."
+    }
   },
   {
     "id": "q-enare-2024-049",
@@ -2976,7 +3774,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Acidentes, Intoxicações e Maus-Tratos na Infância",
     "temaSlug": "ped-emerg-ped",
     "subtemaSlug": "ped-emerg-ped-acidentes-intoxicacoes-e-maus-tratos-na-infancia",
-    "tags": ["maus-tratos-na-infancia","violencia-psicologica","notificacao-compulsoria","protecao-infantil"],
+    "tags": [
+      "maus-tratos-na-infancia",
+      "violencia-psicologica",
+      "notificacao-compulsoria",
+      "protecao-infantil"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -3021,13 +3824,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alternativa **A** está correta. O relato evidencia **violência psicológica e abandono/negligência** (a avó imputa seu sofrimento depressivo à neta e desvaloriza constantemente os genitores após abandono materno). Conforme o **Estatuto da Criança e do Adolescente (ECA, art. 13 e art. 245)** e a Portaria de Notificação Compulsória do Ministério da Saúde, a **suspeita** ou confirmação de violência contra crianças e adolescentes exige **notificação compulsória imediata** (SINAN e Conselho Tutelar) por parte do profissional de saúde.\n- **B) Incorreta:** A notificação não depende da localização ou autorização dos responsáveis legais.\n- **C) Incorreta:** Não requer concordância da vítima nem do responsável/agressor.\n- **D) Incorreta:** A lei determina notificação diante de **suspeita**, não exigindo comprovação prévia (cuja investigação cabe aos órgãos competentes).\n- **E) Incorreta:** A notificação é compulsória e independe de desejo ou pedido de denúncia pela adolescente.",
     "perolaClinica": "O relato evidencia **violência psicológica e abandono/negligência** (a avó imputa seu sofrimento depressivo à neta e desvaloriza constantemente os genitores após abandono materno).",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Obrigatoriedade legal da notificação diante de suspeita de violência contra criança ou adolescente.",
+      "raciocinioChave": "A culpabilização da neta pelo sofrimento depressivo e a desvalorização constante após abandono materno configuram suspeita de violência psicológica e negligência, exigindo notificação compulsória imediata ao Conselho Tutelar conforme o ECA.",
+      "armadilhaBanca": "Condicionar a notificação compulsória à existência de provas concretas, autorização dos responsáveis legais ou desejo expresso da vítima."
+    },
+    "mapaDistratores": {
+      "B": "A notificação compulsória não depende da localização nem da anuência da genitora ou de detentor formal de guarda.",
+      "C": "Não se exige concordância da vítima nem do responsável ou potencial agressor para cumprir o dever legal de notificar.",
+      "D": "O ECA determina a notificação diante da simples suspeita de maus-tratos ou violência, não sendo exigida comprovação prévia.",
+      "E": "A notificação é obrigatória por força de lei (arts. 13 e 245 do ECA) e independe de pedido ou desejo de denúncia pela adolescente."
+    }
   },
   {
     "id": "q-enare-2024-050",
@@ -3039,7 +3854,13 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Calendário Nacional de Vacinação - PNI",
     "temaSlug": "ped-vacinas",
     "subtemaSlug": "ped-vacinas-calendario-nacional-de-vacinacao-pni",
-    "tags": ["calendario-vacinal","pni","vacinacao-do-adolescente","vacina-hpv","vacina-meningococica"],
+    "tags": [
+      "calendario-vacinal",
+      "pni",
+      "vacinacao-do-adolescente",
+      "vacina-hpv",
+      "vacina-meningococica"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -3084,13 +3905,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **C** está correta. Analisando cada vacina pelo **Calendário Nacional de Vacinação do Adolescente (PNI/MS 2024)**:\n- **Hepatite B (HB):** tem 2 doses → falta **1 dose** para completar o esquema de 3 doses.\n- **dT/DTP:** tem 2 DTP na infância + 1 dT há 2 meses = 3 doses completas → esquema completo (próximo reforço em 10 anos).\n- **Febre amarela (VFA):** recebeu 1 dose antes dos 5 anos (no 1º ano de vida) → necessita **1 dose de reforço**.\n- **Tríplice viral:** tem 1 dose → para menores de 30 anos são 2 doses → falta **1 dose**.\n- **HPV:** em 2024 o PNI adotou esquema de **dose única** (com resgate para adolescentes de 15 a 19 anos não vacinados) → **1 dose**.\n- **Meningocócica ACWY:** indicada para adolescentes (11 a 14 anos, com resgate/ampliação) → **1 dose**.\n- **A) Incorreta:** Não precisa de 2 doses de VFA, nem 2 de dT (já completou 3 doses), nem 2 de tríplice viral, nem 2 de HPV.\n- **B) Incorreta:** Faltam apenas 1 dose de HB, 1 de VFA e 1 de Meningo ACWY.\n- **D) Incorreta:** DTP não se aplica em adolescentes (limite < 7 anos), e tríplice viral/HPV requerem apenas 1 dose cada.\n- **E) Incorreta:** Faltou completar a Hepatite B, dT já está completa e Meningo ACWY é dose única.",
     "perolaClinica": "Analisando cada vacina pelo **Calendário Nacional de Vacinação do Adolescente (PNI/MS 2024)**:\n- **Hepatite B (HB):** tem 2 doses → falta **1 dose** para completar o esquema de 3 doses.",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Atualização da caderneta vacinal do adolescente no Calendário Nacional do PNI/MS.",
+      "raciocinioChave": "Aos 16 anos, com 2 doses prévias de HB e 1 de VFA no 1º ano de vida, 2 de DTP e 1 dT recente (completando 3 doses antitetânicas/diftéricas), faltam apenas 1 dose de HB, 1 reforço de VFA, 1 dose de tríplice viral (completando 2 doses), 1 dose única de HPV e 1 de Meningo ACWY.",
+      "armadilhaBanca": "Errar a contagem cumulativa entre DTP infantil e dT recente (já soma 3 doses completas), esquecer a dose única de HPV vigente no PNI ou prescrever DTP após os 7 anos."
+    },
+    "mapaDistratores": {
+      "A": "O adolescente já completou o esquema de 3 doses contra difteria e tétano (2 DTP + 1 dT), além de necessitar apenas 1 dose de VFA, 1 de tríplice viral e dose única de HPV.",
+      "B": "Faltam apenas 1 dose de hepatite B, 1 reforço de febre amarela e 1 dose de meningocócica ACWY, e não duas doses de cada.",
+      "D": "A vacina DTP é contraindicada a partir dos 7 anos de idade pelo componente pertússis de células inteiras, além de tríplice viral e HPV exigirem apenas 1 dose nesse caso.",
+      "E": "Essa opção omite a 3ª dose pendente de hepatite B, prescreve dose desnecessária de dT e indica duas doses de meningocócica ACWY quando o PNI preconiza dose única."
+    }
   },
   {
     "id": "q-enare-2024-051",
@@ -3102,7 +3935,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Diarreia Aguda e Desidratação",
     "temaSlug": "ped-gastro-nefro-ped",
     "subtemaSlug": "ped-gastro-nefro-ped-diarreia-aguda-e-desidratacao",
-    "tags": ["diarreia-aguda","desidratacao","plano-b","reidratacao-oral"],
+    "tags": [
+      "diarreia-aguda",
+      "desidratacao",
+      "plano-b",
+      "reidratacao-oral"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -3147,13 +3985,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **A** está correta. A criança apresenta sinais clássicos de **desidratação (algum grau / moderada)** — irritada/intranquila, ausência de lágrimas e mucosa oral/língua seca — sem sinais de gravidade (letargia, incapacidade de beber ou pulso fraco). Segundo o **Manual de Manejo do Paciente com Diarreia do Ministério da Saúde (2023)** e a SBP, aplica-se o **Plano B**: **terapia de reidratação oral (TRO) na unidade de saúde** com **50 a 100 mL/kg (média 75 mL/kg) de SRO em 4 a 6 horas**, sem antieméticos de rotina (teve apenas 1 vômito há 12h), mantendo observação local até reidratação completa.\n- **B) Incorreta:** Hidratação venosa (Plano C) reserva-se para desidratação grave ou falha/contraindicação da TRO.\n- **C) Incorreta:** Alta imediata (Plano A) é apenas para pacientes **sem desidratação**.\n- **D) Incorreta:** Não há indicação de hidratação venosa nem de antiemético.\n- **E) Incorreta:** O volume de 20 mL/kg é insuficiente e o Plano B deve ser supervisionado na unidade de saúde antes da alta.",
     "perolaClinica": "A criança apresenta sinais clássicos de **desidratação (algum grau / moderada)** — irritada/intranquila, ausência de lágrimas e mucosa oral/língua seca — sem sinais de gravidade (letargia, incapacidade de beber ou pulso ",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Classificação do estado de hidratação e prescrição do Plano B na diarreia aguda pediátrica.",
+      "raciocinioChave": "Criança intranquila, chorando sem lágrimas e com língua seca apresenta desidratação sem gravidade (Plano B), devendo receber 50 a 100 mL/kg (75 mL/kg) de sais de reidratação oral em 4 horas sob observação na unidade, sem medicação rotineira.",
+      "armadilhaBanca": "Indicar hidratação venosa (Plano C) ou antieméticos de rotina diante de apenas um episódio isolado de vômito em paciente com desidratação leve a moderada apto à via oral."
+    },
+    "mapaDistratores": {
+      "B": "A hidratação venosa (Plano C) reserva-se para desidratação grave, choque ou falha/contraindicação da terapia de reidratação oral.",
+      "C": "A alta imediata com orientações domiciliares (Plano A) aplica-se apenas a crianças sem sinais de desidratação.",
+      "D": "Não há indicação de hidratação venosa rápida nem de uso rotineiro de antieméticos diante de um único episódio de vômito sem intolerância oral.",
+      "E": "O volume de 20 mL/kg de SRO é insuficiente para corrigir o déficit da desidratação e o Plano B deve ser supervisionado na unidade de saúde antes da alta."
+    }
   },
   {
     "id": "q-enare-2024-052",
@@ -3165,7 +4015,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "DRGE e Constipação na Infância",
     "temaSlug": "ped-gastro-nefro-ped",
     "subtemaSlug": "ped-gastro-nefro-ped-drge-e-constipacao-na-infancia",
-    "tags": ["doenca-de-hirschsprung","megacolon-congenito","constipacao-intestinal","toque-retal"],
+    "tags": [
+      "doenca-de-hirschsprung",
+      "megacolon-congenito",
+      "constipacao-intestinal",
+      "toque-retal"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -3210,13 +4065,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **C** está correta. O atraso na eliminação de mecônio (> 48 horas após o nascimento), constipação refratária desde o 1º ano, déficit ponderal, distensão abdominal e **saída explosiva de fezes ao toque retal** (sinal clássico de ampola retal vazia com estase a montante) fecham o diagnóstico de **doença de Hirschsprung (megacólon congênito)**. No clister opaco, observa-se uma **zona estreitada distal** (iniciando no reto e estendendo-se proximalmente em extensão variável) que corresponde ao **segmento agangliônico** espástico, seguida de uma zona de transição (em cone) e dilatação proximal (segmento normal com gânglios), conforme Nelson/SBP.\n- **A) Incorreta:** A região **dilatada** é o intestino normal com gânglios a montante da obstrução funcional, não a região agangliônica.\n- **B) Incorreta:** A doença de Hirschsprung **sempre** inicia no reto distal (não poupa as porções distais) e a zona estreitada é agangliônica.\n- **D) Incorreta:** A porção distal é estreitada (agangliônica), não dilatada.\n- **E) Incorreta:** A área estreitada tem início distal (reto) e corresponde à ausência de gânglios.",
     "perolaClinica": "O atraso na eliminação de mecônio (> 48 horas após o nascimento), constipação refratária desde o 1º ano, déficit ponderal, distensão abdominal e **saída explosiva de fezes ao toque retal** (sinal clássico de ampola retal",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Fisiopatologia e achado ao clister opaco na doença de Hirschsprung (megacólon congênito).",
+      "raciocinioChave": "Atraso na eliminação de mecônio, constipação grave desde o nascimento, déficit ponderal e fezes explosivas ao toque retal fecham doença de Hirschsprung; o clister opaco evidencia zona estreitada distal (iniciando no reto e estendendo-se proximalmente) correspondente ao segmento agangliônico.",
+      "armadilhaBanca": "Inverter no exame contrastado qual segmento é agangliônico: a alça dilatada é o cólon proximal normal com gânglios, enquanto a zona estreitada distal é a região agangliônica."
+    },
+    "mapaDistratores": {
+      "A": "A porção dilatada no clister opaco corresponde ao cólon proximal normal (com células ganglionares) a montante da obstrução funcional, e não à zona agangliônica.",
+      "B": "A doença de Hirschsprung acomete obrigatoriamente o reto desde a porção mais distal (nunca poupa o reto) e o segmento estreitado é desprovido de gânglios.",
+      "D": "O segmento distal agangliônico apresenta-se contraído e estreitado por ausência do plexo mioentérico, e não dilatado.",
+      "E": "A zona estreitada inicia-se distalmente no reto com extensão proximal variável e traduz ausência de células ganglionares, não presença delas."
+    }
   },
   {
     "id": "q-enare-2024-053",
@@ -3228,7 +4095,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Ortopedia e Traumatologia Básica",
     "temaSlug": "cg-espec",
     "subtemaSlug": "cg-espec-ortopedia-e-traumatologia-basica",
-    "tags": ["doenca-de-osgood-schlatter","apofisite-de-tracao","tuberosidade-anterior-da-tibia","joelho-no-escolar"],
+    "tags": [
+      "doenca-de-osgood-schlatter",
+      "apofisite-de-tracao",
+      "tuberosidade-anterior-da-tibia",
+      "joelho-no-escolar"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -3273,13 +4145,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alternativa **C** está correta. Criança/pré-adolescente praticante de esporte de salto/impacto (basquete) com **dor e edema localizados na inserção distal do tendão patelar e proeminência firme e dolorosa na tuberosidade anterior da tíbia** (com radiografia frequentemente normal ou com fragmentação da apófise) caracteriza a **doença de Osgood-Schlatter** (apofisite por tração do tubérculo tibial), de manejo conservador (SBP / SBOT).\n- **A) Incorreta:** Síndrome de Sinding-Larsen-Johansson acomete o **polo inferior da patela**, não o tubérculo tibial.\n- **B) Incorreta:** Síndrome da dor patelofemoral causa dor peripatelar difusa sem proeminência fixa no tubérculo tibial.\n- **D) Incorreta:** Doença de Legg-Calvé-Perthes é necrose avascular da cabeça femoral (quadril), causando claudicação e dor no quadril/coxa.\n- **E) Incorreta:** Rotura de LCA ocorre após trauma torsional agudo com hemartrose e instabilidade articular (gaveta anterior/Lachman positivos).",
     "perolaClinica": "Criança/pré-adolescente praticante de esporte de salto/impacto (basquete) com **dor e edema localizados na inserção distal do tendão patelar e proeminência firme e dolorosa na tuberosidade anterior da tíbia** (com radiog",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Diagnóstico clínico da apofisite de tração do tubérculo tibial (doença de Osgood-Schlatter).",
+      "raciocinioChave": "Escolar praticante de basquete com dor localizada na inserção distal do tendão patelar e proeminência firme e dolorosa na tuberosidade anterior da tíbia, com radiografia normal, apresenta quadro clássico de doença de Osgood-Schlatter.",
+      "armadilhaBanca": "Confundir Osgood-Schlatter (tuberosidade anterior da tíbia) com Sinding-Larsen-Johansson (polo inferior da patela) ou solicitar exames invasivos diante de radiografia normal."
+    },
+    "mapaDistratores": {
+      "A": "A síndrome de Sinding-Larsen-Johansson é uma apofisite de tração localizada no polo inferior da patela, e não na tuberosidade tibial.",
+      "B": "A síndrome da dor patelofemoral gera dor retropatelar ou peripatelar difusa sem proeminência óssea fixa sobre o tubérculo tibial.",
+      "D": "A doença de Legg-Calvé-Perthes é a necrose avascular da cabeça femoral, manifestando-se com claudicação e dor referida no quadril ou coxa.",
+      "E": "A rotura do ligamento cruzado anterior decorre de trauma torsional agudo com hemartrose e instabilidade articular aos testes de Lachman e gaveta anterior."
+    }
   },
   {
     "id": "q-enare-2024-054",
@@ -3291,7 +4175,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Parasitoses Intestinais",
     "temaSlug": "ped-infecto-ped",
     "subtemaSlug": "ped-infecto-ped-parasitoses-intestinais",
-    "tags": ["esquistossomose","schistosoma-mansoni","parasitoses-intestinais","transmissibilidade"],
+    "tags": [
+      "esquistossomose",
+      "schistosoma-mansoni",
+      "parasitoses-intestinais",
+      "transmissibilidade"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -3336,13 +4225,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **A** está correta. Segundo o **Guia de Vigilância em Saúde (Ministério da Saúde)**, a pessoa infectada pelo *Schistosoma mansoni* começa a eliminar ovos viáveis nas fezes **a partir de 5 semanas** após a penetração das cercárias, mantendo a eliminação por **6 a 10 anos** (podendo ultrapassar 20 anos na ausência de tratamento).\n- **B) Incorreta:** Os conceitos estão invertidos: os caramujos (*Biomphalaria*) infectam-se por **miracídios** e passam a eliminar **cercárias** após 4 a 7 semanas.\n- **C) Incorreta:** A expectativa de vida dos caramujos infectados é de semanas a poucos meses (em geral até ~1 ano em condições ideais), não 3 anos.\n- **D) Incorreta:** 1 semana é insuficiente para maturação dos vermes adultos (período pré-patente é de ~5 semanas) e a eliminação dura anos, não meses.\n- **E) Incorreta:** Reservatórios permissivos (como roedores silvestres *Nectomys*) podem eliminar ovos viáveis nas fezes, embora seu papel epidemiológico seja secundário ao do homem.",
     "perolaClinica": "Segundo o **Guia de Vigilância em Saúde (Ministério da Saúde)**, a pessoa infectada pelo *Schistosoma mansoni* começa a eliminar ovos viáveis nas fezes **a partir de 5 semanas** após a penetração das cercárias, mantendo ",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Ciclo biológico e período de eliminação de ovos de Schistosoma mansoni pelo hospedeiro.",
+      "raciocinioChave": "Após a penetração das cercárias, o período pré-patente até a maturação sexual e início da eliminação fecal de ovos viáveis de Schistosoma mansoni no homem é de cerca de 5 semanas, persistindo por 6 a 10 anos (podendo ultrapassar 20 anos).",
+      "armadilhaBanca": "Inverter as formas evolutivas infectantes e eliminadas entre homem e caramujo (miracídio vs. cercária) ou subestimar o período pré-patente e a longevidade dos vermes adultos."
+    },
+    "mapaDistratores": {
+      "B": "Os caramujos Biomphalaria infectam-se pelos miracídios e passam a eliminar cercárias na água após 4 a 7 semanas, e não o inverso.",
+      "C": "Os caramujos infectados têm sobrevida reduzida de semanas a poucos meses (em geral até cerca de 1 ano), não vivendo 3 anos eliminando cercárias.",
+      "D": "Uma semana é tempo insuficiente para maturação dos esquistossômulos em vermes adultos (período pré-patente de ~5 semanas), e a eliminação de ovos perdura por anos.",
+      "E": "Reservatórios permissivos silvestres, como roedores do gênero Nectomys, podem eliminar ovos viáveis nas fezes, ainda que com menor relevância epidemiológica que o ser humano."
+    }
   },
   {
     "id": "q-enare-2024-055",
@@ -3354,7 +4255,13 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "ISTs e Sífilis no Adulto",
     "temaSlug": "cm-infecto",
     "subtemaSlug": "cm-infecto-ists-e-sifilis-no-adulto",
-    "tags": ["uretrite-gonococica","ceftriaxona","azitromicina","ists","pcdt-ist"],
+    "tags": [
+      "uretrite-gonococica",
+      "ceftriaxona",
+      "azitromicina",
+      "ists",
+      "pcdt-ist"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -3399,13 +4306,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **C** está correta. No manejo da **infecção gonocócica anogenital/uretrite recorrente ou resistente** (ou no esquema de segunda linha/retratamento quando há falha ou reinfecção com suspeita de resistência, bem como no tratamento de cobertura dupla para gonococo + clamídia/micoplasma), o **PCDT de Atenção Integral às Pessoas com IST (Ministério da Saúde)** prevê **ceftriaxona 500 mg IM dose única associada a azitromicina** (na dose padrão de 1 g VO dose única ou **2 g VO — 4 comprimidos de 500 mg** em situações de suspeita de falha terapêutica/recorrência).\n- **A) Incorreta:** Doxiciclina não cobre adequadamente *Neisseria gonorrhoeae* (e 30 dias é esquema excessivo).\n- **B) Incorreta:** Ceftriaxona isolada não cobre coinfecção por *Chlamydia trachomatis* (frequente nas uretrites) e a dose padrão no Brasil é 500 mg IM.\n- **D) Incorreta:** Quinolonas (ciprofloxacino) não são recomendadas para gonorreia no Brasil devido à elevada resistência bacteriana.\n- **E) Incorreta:** Azitromicina isolada por 10 dias não é esquema preconizado para uretrite gonocócica.",
     "perolaClinica": "No manejo da **infecção gonocócica anogenital/uretrite recorrente ou resistente** (ou no esquema de segunda linha/retratamento quando há falha ou reinfecção com suspeita de resistência, bem como no tratamento de cobertur",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Esquema antimicrobiano de cobertura dupla para uretrite gonocócica recorrente no PCDT/MS.",
+      "raciocinioChave": "Diante de uretrite gonocócica recorrente (reinfecção/falha ou cobertura sindrômica ampliada para gonococo e clamídia), o PCDT de IST do Ministério da Saúde associa ceftriaxona 500 mg IM em dose única à azitromicina oral em dose única.",
+      "armadilhaBanca": "Prescrever quinolonas (ciprofloxacino) em um cenário de altíssima resistência gonocócica no Brasil ou usar monoterapia com doxiciclina/azitromicina."
+    },
+    "mapaDistratores": {
+      "A": "A doxiciclina não possui eficácia adequada contra Neisseria gonorrhoeae resistente, além de 30 dias não ser esquema preconizado para uretrite.",
+      "B": "A monoterapia com ceftriaxona não cobre a frequente coinfecção por Chlamydia trachomatis (e a dose padrão nacional é 500 mg IM).",
+      "D": "O ciprofloxacino é contraindicado para tratamento empírico da gonorreia no Brasil em razão da elevada resistência bacteriana às fluoroquinolonas.",
+      "E": "Azitromicina isolada por 10 dias não é esquema recomendado nem eficaz como monoterapia para uretrite gonocócica."
+    }
   },
   {
     "id": "q-enare-2024-057",
@@ -3417,7 +4336,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Síndrome Nefrítica e Nefrótica Pediátrica",
     "temaSlug": "ped-gastro-nefro-ped",
     "subtemaSlug": "ped-gastro-nefro-ped-sindrome-nefritica-e-nefrotica-pediatrica",
-    "tags": ["sindrome-hemolitico-uremica","stec","escherichia-coli","anemia-hemolitica"],
+    "tags": [
+      "sindrome-hemolitico-uremica",
+      "stec",
+      "escherichia-coli",
+      "anemia-hemolitica"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -3462,13 +4386,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **B** está correta. Na infecção intestinal por *E. coli* produtora de toxina Shiga (STEC), a **antibioticoterapia é contraindicada** pois a lise bacteriana e indução de profagos aumentam a liberação de toxina Shiga e **elevam significativamente o risco de desenvolvimento de SHU** (diretrizes IDSA / SBP / Nelson). Em casos graves com acometimento neurológico ou sistêmico refratário, terapias adjuvantes como a plasmaférese podem ser consideradas além do suporte intensivo.\n- **A) Incorreta:** Fluoroquinolonas (ciprofloxacino) aumentam a expressão da toxina Shiga e o risco de SHU.\n- **C) Incorreta:** Antibióticos são contraindicados na diarreia hemorrágica por STEC.\n- **D) Incorreta:** Vancomicina oral e fidaxomicina são tratamentos para *Clostridioides difficile*, não para STEC/SHU.\n- **E) Incorreta:** SMX-TMP também é contraindicado na suspeita de STEC por elevar o risco de SHU.",
     "perolaClinica": "Na infecção intestinal por *E.",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Contraindicação de antibióticos e manejo na infecção por E. coli produtora de toxina Shiga (SHU).",
+      "raciocinioChave": "Na diarreia hemorrágica por STEC, antibióticos induzem lise bacteriana e liberação maciça de toxina Shiga, aumentando o risco de síndrome hemolítico-urêmica (SHU); o tratamento é de suporte, podendo a plasmaférese auxiliar em formas graves selecionadas.",
+      "armadilhaBanca": "Prescrever antibióticos empíricos (especialmente quinolonas ou SMX-TMP) diante de diarreia sanguinolenta por STEC, precipitando a evolução para SHU."
+    },
+    "mapaDistratores": {
+      "A": "Fluoroquinolonas como o ciprofloxacino aumentam a expressão fágica da toxina Shiga e elevam significativamente o risco de SHU.",
+      "C": "A administração imediata de rifaximina com fluoroquinolona agrava a liberação de toxina Shiga e é contraindicada na infecção por STEC.",
+      "D": "Vancomicina oral associada a fidaxomicina é o esquema terapêutico para colite por Clostridioides difficile, sem indicação na SHU por STEC.",
+      "E": "Sulfametoxazol-trimetoprima também induz liberação de toxina Shiga e aumenta a incidência de SHU, sendo contraindicado."
+    }
   },
   {
     "id": "q-enare-2024-058",
@@ -3480,7 +4416,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Bronquiolite Viral Aguda e Coqueluche",
     "temaSlug": "ped-pneumo-ped",
     "subtemaSlug": "ped-pneumo-ped-bronquiolite-viral-aguda-e-coqueluche",
-    "tags": ["coqueluche","bordetella-pertussis","macrolideos","tratamento-antibiotico"],
+    "tags": [
+      "coqueluche",
+      "bordetella-pertussis",
+      "macrolideos",
+      "tratamento-antibiotico"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -3525,13 +4466,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "E",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alternativa **E** está correta. Segundo o **Guia de Vigilância em Saúde (Ministério da Saúde)** e a SBP, os **macrolídeos** — especialmente **azitromicina** (primeira escolha em todas as faixas etárias, inclusive neonatos) ou claritromicina/eritromicina — são a classe de escolha tanto para o tratamento quanto para a quimioprofilaxia da coqueluche (*Bordetella pertussis*), reduzindo a transmissibilidade (alternativa em alergia: SMX-TMP).\n- **A) Incorreta:** Fosfomicina não tem atividade clínica preconizada contra *B. pertussis*.\n- **B) Incorreta:** Quinolonas não são primeira linha em pediatria nem para coqueluche.\n- **C) Incorreta:** Tetraciclinas são contraindicadas em menores de 8 anos e não são droga de escolha.\n- **D) Incorreta:** Beta-lactâmicos (como amoxicilina) não erradicam *B. pertussis* da nasofaringe.",
     "perolaClinica": "Segundo o **Guia de Vigilância em Saúde (Ministério da Saúde)** e a SBP, os **macrolídeos** — especialmente **azitromicina** (primeira escolha em todas as faixas etárias, inclusive neonatos) ou claritromicina/eritromicin",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Antibioticoterapia de primeira linha para tratamento e profilaxia da coqueluche (Bordetella pertussis).",
+      "raciocinioChave": "Os macrolídeos (especialmente azitromicina, ou claritromicina/eritromicina) constituem a classe de primeira escolha para erradicação nasofaríngea de Bordetella pertussis e interrupção da transmissão da coqueluche.",
+      "armadilhaBanca": "Indicar beta-lactâmicos comuns de infecções respiratórias ou quinolonas/tetraciclinas contraindicadas na faixa pediátrica."
+    },
+    "mapaDistratores": {
+      "A": "A fosfomicina é utilizada principalmente em infecções urinárias não complicadas e não tem indicação contra Bordetella pertussis.",
+      "B": "Quinolonas não são drogas de primeira escolha para coqueluche e seu uso rotineiro é evitado em pediatria.",
+      "C": "Tetraciclinas são contraindicadas em menores de 8 anos pelo risco de deposição óssea e dentária e não são terapia padrão na coqueluche.",
+      "D": "Beta-lactâmicos como a amoxicilina não atingem erradicação eficaz de Bordetella pertussis na nasofaringe."
+    }
   },
   {
     "id": "q-enare-2024-059",
@@ -3543,7 +4496,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Cardiopatias Congênitas",
     "temaSlug": "ped-cardio-hemato-ped",
     "subtemaSlug": "ped-cardio-hemato-ped-cardiopatias-congenitas",
-    "tags": ["sopro-cardiaco","sopro-inocente","cardiopatia-congenita","ausculta-cardiaca"],
+    "tags": [
+      "sopro-cardiaco",
+      "sopro-inocente",
+      "cardiopatia-congenita",
+      "ausculta-cardiaca"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -3588,13 +4546,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **B** está correta. Apesar de a ausculta isolada lembrar um sopro inocente (sopro de Still: sistólico 2+/6+ em BEE baixa, sem irradiação, diminui sentado, B2 com desdobramento fisiológico), a presença de **fácies sindrômica** (ex.: síndrome de Down, Noonan, Williams, DiGeorge) é um **sinal de alerta formal** devido à altíssima prevalência de cardiopatias congênitas associadas, tornando obrigatório o **encaminhamento para avaliação do cardiopediatra** (com ecocardiograma), conforme diretrizes da SBP.\n- **A) Incorreta:** O lactente está assintomático e hemodinamicamente estável, não havendo necessidade de internação hospitalar.\n- **C) Incorreta:** Não há sinais de insuficiência cardíaca que justifiquem iniciar furosemida ou captopril empiricamente.\n- **D) Incorreta:** O teste do coraçãozinho (oximetria de pulso) é exame de triagem neonatal (24–48h de vida) para cardiopatias críticas, não substitui avaliação cardiopediátrica em lactente de 9 meses com fácies sindrômica.\n- **E) Incorreta:** Nunca se deve rotular um sopro como inocente sem investigação ecocardiográfica em criança com fácies sindrômica.",
     "perolaClinica": "Apesar de a ausculta isolada lembrar um sopro inocente (sopro de Still: sistólico 2+/6+ em BEE baixa, sem irradiação, diminui sentado, B2 com desdobramento fisiológico), a presença de **fácies sindrômica** (ex.: síndrome",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Conduta frente a sopro cardíaco aparentemente inocente em lactente com fácies sindrômica.",
+      "raciocinioChave": "Embora a semiologia auscultatória lembre sopro inocente de Still, a presença de fácies sindrômica é sinal de alerta formal devido à alta associação com cardiopatias congênitas estruturais, exigindo encaminhamento ao cardiopediatra.",
+      "armadilhaBanca": "Rotular o sopro como funcional/inocente apenas pelas características auscultatórias, ignorando o estigma sindrômico como critério obrigatório de investigação especializada."
+    },
+    "mapaDistratores": {
+      "A": "O lactente encontra-se assintomático e hemodinamicamente compensado, não havendo critério para internação hospitalar imediata.",
+      "C": "Não existem sinais clínicos de insuficiência cardíaca congestiva que justifiquem iniciar furosemida e captopril empiricamente.",
+      "D": "O teste do coraçãozinho (oximetria de pulso) é exame de triagem neonatal entre 24 e 48 horas de vida, insuficiente para afastar cardiopatia em lactente sindrômico de 9 meses.",
+      "E": "Fácies sindrômica contraindica assumir o sopro como inocente sem avaliação cardiopediátrica e ecocardiográfica."
+    }
   },
   {
     "id": "q-enare-2024-060",
@@ -3606,7 +4576,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Neoplasias Pediátricas",
     "temaSlug": "ped-cardio-hemato-ped",
     "subtemaSlug": "ped-cardio-hemato-ped-neoplasias-pediatricas",
-    "tags": ["leucemia","neoplasia-pediatrica","dor-ossea","bancitopenia"],
+    "tags": [
+      "leucemia",
+      "neoplasia-pediatrica",
+      "dor-ossea",
+      "bancitopenia"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -3651,13 +4626,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alternativa **B** está correta. A combinação de **sinais de falência medular** (anemia sintomática com palidez 3+/4+, taquicardia e sopro anêmico + plaquetopenia manifesta por **petéquias**), **sintomas B** (emagrecimento, astenia), **hepatoesplenomegalia** e **dor óssea noturna com dor à palpação de metáfises tibiais** (infiltração leucêmica periosteal) é altamente sugestiva de **leucemia aguda** (principalmente LLA, neoplasia mais comum da infância; SBP / INCA).\n- **A) Incorreta:** Anemia falciforme tem início precoce na infância, cursa com hemólise crônica e crises vaso-oclusivas, não com emagrecimento subagudo + petéquias (plaquetopenia) + dor metafisária bilateral de início aos 10 anos.\n- **C) Incorreta:** Zika vírus é doença viral aguda autolimitada (exantema pruriginoso, conjuntivite, artralgia), não provoca anemia grave, emagrecimento e hepatoesplenomegalia subagudos.\n- **D) Incorreta:** Endocardite infecciosa cursa com febre persistente e sopro regurgitativo novo em cardiopata, sem dor metafisária tibial bilateral típica de infiltração medular.\n- **E) Incorreta:** Toxoplasmose adquirida em imunocompetente é geralmente assintomática ou causa linfadenopatia cervical autolimitada.",
     "perolaClinica": "A combinação de **sinais de falência medular** (anemia sintomática com palidez 3+/4+, taquicardia e sopro anêmico + plaquetopenia manifesta por **petéquias**), **sintomas B** (emagrecimento, astenia), **hepatoesplenomega",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Reconhecimento clínico da síndrome de falência medular e infiltração na leucemia aguda infantil.",
+      "raciocinioChave": "A associação de anemia sintomática (palidez 3+/4+, taquicardia, sopro), plaquetopenia (petéquias), perda ponderal, hepatoesplenomegalia e dor óssea noturna em metáfises tibiais caracteriza infiltração medular e periosteal por leucemia aguda.",
+      "armadilhaBanca": "Atribuir dor óssea em membros inferiores a dor do crescimento ou doença reumatológica/infecciosa, deixando de correlacionar a bicitopenia com a dor metafisária noturna e organomegalias."
+    },
+    "mapaDistratores": {
+      "A": "A anemia falciforme manifesta-se precocemente na infância com crises álgicas vaso-oclusivas e hemólise crônica, sem plaquetopenia com petéquias nem dor metafisária infiltrativa subaguda.",
+      "C": "Infecção por zika vírus é quadro viral agudo autolimitado com exantema pruriginoso e artralgia, incapaz de causar pancitopenia subaguda e hepatoesplenomegalia.",
+      "D": "A endocardite infecciosa cursa com febre persistente e sopro regurgitativo novo geralmente em cardiopata prévio, sem dor óssea metafisária bilateral.",
+      "E": "A toxoplasmose adquirida em imunocompetente é habitualmente assintomática ou causa linfadenopatia cervical autolimitada, sem falência medular."
+    }
   },
   {
     "id": "q-enare-2024-061",
@@ -3669,7 +4656,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Câncer de Ovário e Massas Anexiais",
     "temaSlug": "go-onco-go",
     "subtemaSlug": "go-onco-go-cancer-de-ovario-e-massas-anexiais",
-    "tags": ["torcao-anexial","torcao-de-ovario","abdome-agudo-ginecologico","ultrassonografia-doppler"],
+    "tags": [
+      "torcao-anexial",
+      "torcao-de-ovario",
+      "abdome-agudo-ginecologico",
+      "ultrassonografia-doppler"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -3714,13 +4706,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **C** está correta. Mulher jovem com **dor aguda intensa em fossa ilíaca direita associada a náuseas e vômitos**, afebril, sem atraso menstrual (DUM há 10 dias, uso de DIU + preservativo) e **USTV com aumento unilateral do ovário direito e comprometimento do fluxo sanguíneo ao Doppler** fecha o diagnóstico clássico de **torção anexial (ovário e tuba uterina)**, emergência cirúrgica (FEBRASGO).\n- **A) Incorreta:** Menstruação há 10 dias, sem sangramento vaginal, e USTV mostrando especificamente aumento ovariano com redução do fluxo vascular (sem massa anexial extraovariana/saco gestacional).\n- **B) Incorreta:** Abscesso tubo-ovariano cursa com febre, leucocitose, corrimento purulento e dor subaguda, não instalação súbita em 2 horas afebril.\n- **D) Incorreta:** Apendicite aguda não causa aumento ovariano com comprometimento de fluxo vascular anexial ao Doppler.\n- **E) Incorreta:** Pielonefrite cursa com febre, disúria/polaciúria e dor lombar (sinal de Giordano), ausentes no caso.",
     "perolaClinica": "Mulher jovem com **dor aguda intensa em fossa ilíaca direita associada a náuseas e vômitos**, afebril, sem atraso menstrual (DUM há 10 dias, uso de DIU + preservativo) e **USTV com aumento unilateral do ovário direito e ",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Diagnóstico clínico e ultrassonográfico da torção anexial aguda em mulher jovem.",
+      "raciocinioChave": "Dor pélvica súbita e intensa em fossa ilíaca direita com náuseas e vômitos, afebril, sem atraso menstrual (DUM há 10 dias, DIU + preservativo) e USTV com aumento ovariano unilateral e comprometimento do fluxo vascular confirmam torção anexial.",
+      "armadilhaBanca": "Suspeitar de gestação ectópica ou apendicite diante de dor em FID, ignorando a ausência de atraso menstrual e o achado direto de aumento ovariano com redução do fluxo Doppler."
+    },
+    "mapaDistratores": {
+      "A": "A menstruação recente há 10 dias com dupla proteção contraceptiva e a USTV evidenciando especificamente aumento ovariano com hipofluxo anexial afastam gestação ectópica como hipótese principal.",
+      "B": "O abscesso tubo-ovariano apresenta evolução subaguda acompanhada de febre, corrimento purulento e sinais infecciosos sistêmicos, ausentes neste caso.",
+      "D": "A apendicite aguda não provoca aumento volumétrico do ovário nem comprometimento do fluxo sanguíneo anexial ao Doppler.",
+      "E": "A pielonefrite aguda cursa com febre, sintomas urinários irritativos e dor lombar com sinal de Giordano positivo, achados ausentes na paciente."
+    }
   },
   {
     "id": "q-enare-2024-062",
@@ -3732,7 +4736,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Violência Sexual e Aborto Previsto em Lei",
     "temaSlug": "go-gineco-geral",
     "subtemaSlug": "go-gineco-geral-violencia-sexual-e-aborto-previsto-em-lei",
-    "tags": ["violencia-sexual","profilaxia-pos-exposicao","contracepcao-de-emergencia","atendimento-inicial"],
+    "tags": [
+      "violencia-sexual",
+      "profilaxia-pos-exposicao",
+      "contracepcao-de-emergencia",
+      "atendimento-inicial"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -3777,13 +4786,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "E",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alternativa **E** está correta. Segundo a **Lei nº 12.845/2013 (Lei do Minuto Seguinte)** e a **Norma Técnica do Ministério da Saúde** para atenção às pessoas em situação de violência sexual, o atendimento no SUS é imediato, obrigatório e multidisciplinar, devendo incluir: acolhimento e avaliação clínica geral, **profilaxias contra ISTs não virais, HIV (PEP em até 72h) e hepatite B**, **anticoncepção de emergência** e **coleta/preservação de vestígios biológicos** (com consentimento da vítima) na própria unidade de saúde.\n- **A) Incorreta:** O atendimento deve ser realizado por equipe multiprofissional (enfermagem, psicologia, serviço social e medicina), não exclusivamente por médico.\n- **B) Incorreta:** Nunca se deve condicionar ou atrasar o atendimento médico encaminhando primeiro ao IML.\n- **C) Incorreta:** O Boletim de Ocorrência **não é obrigatório** nem pré-requisito para atendimento ou profilaxias no SUS.\n- **D) Incorreta:** A profilaxia pós-exposição ao HIV (PEP) deve ser iniciada **o mais rápido possível, em até 72 horas (3 dias)** — não 5 dias.",
     "perolaClinica": "Segundo a **Lei nº 12.845/2013 (Lei do Minuto Seguinte)** e a **Norma Técnica do Ministério da Saúde** para atenção às pessoas em situação de violência sexual, o atendimento no SUS é imediato, obrigatório e multidiscipli",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Protocolo de acolhimento imediato, profilaxias e coleta de vestígios na violência sexual (Lei 12.845/2013).",
+      "raciocinioChave": "Pela Lei do Minuto Seguinte e normas do Ministério da Saúde, o atendimento à vítima de violência sexual no hospital é imediato, multiprofissional e incondicional, devendo realizar avaliação clínica, profilaxias de IST/HIV/gestação e coleta de vestígios biológicos.",
+      "armadilhaBanca": "Condicionar o atendimento médico à lavratura prévia de Boletim de Ocorrência ou exame no IML, ou errar o prazo máximo de 72 horas para início da PEP ao HIV."
+    },
+    "mapaDistratores": {
+      "A": "O atendimento inicial é obrigatoriamente multiprofissional (enfermagem, psicologia, serviço social e medicina), nunca restrito exclusivamente ao médico.",
+      "B": "Não se deve atrasar nem condicionar a assistência médica de urgência ao encaminhamento prévio da vítima ao Instituto Médico Legal.",
+      "C": "O registro de Boletim de Ocorrência policial não é obrigatório nem pré-requisito para o atendimento médico ou dispensação de profilaxias no SUS.",
+      "D": "Embora a contracepção de emergência possa ocorrer em até 5 dias, a profilaxia pós-exposição ao HIV (PEP) deve ser iniciada idealmente nas primeiras horas e no máximo em até 72 horas (3 dias)."
+    }
   },
   {
     "id": "q-enare-2024-063",
@@ -3795,7 +4816,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Síndrome dos Ovários Policísticos",
     "temaSlug": "go-gineco-endocrino",
     "subtemaSlug": "go-gineco-endocrino-sindrome-dos-ovarios-policisticos",
-    "tags": ["sindrome-dos-ovarios-policisticos","sop","oligoamenorreia","hiperandrogenismo"],
+    "tags": [
+      "sindrome-dos-ovarios-policisticos",
+      "sop",
+      "oligoamenorreia",
+      "hiperandrogenismo"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -3840,13 +4866,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alternativa **A** está correta. Mulher jovem com **oligo/amenorreia desde a menarca** (ciclos de 50–60 dias), **hiperandrogenismo clínico** (acne em face e dorso), obesidade (IMC 31 kg/m²) e **acantose nigricans** (escurecimento de dobras — marcador de resistência insulínica) já preenche 2 dos 3 **critérios de Rotterdam** (disfunção ovulatória + hiperandrogenismo) para **síndrome dos ovários policísticos (SOP)** (FEBRASGO / Consenso Internacional de SOP 2023).\n- **B) Incorreta:** O IMC é 31 kg/m² (obesidade grau I, não sobrepeso) e não explica isoladamente a irregularidade menstrual desde a menarca e o hiperandrogenismo.\n- **C) Incorreta:** Hiperplasia adrenal congênita forma não clássica (21-hidroxilase) é diagnóstico diferencial a ser excluído (dosando 17-OH-progesterona), mas é muito menos prevalente que a SOP.\n- **D) Incorreta:** Síndrome de Cushing apresenta estrias violáceas largas, fácies em lua cheia, giba dorsal, fraqueza proximal e HAS, ausentes no relato.\n- **E) Incorreta:** Hipotireoidismo é diagnóstico diferencial de irregularidade menstrual, mas não explica acne androgênica e acantose nigricans como causa principal.",
     "perolaClinica": "Mulher jovem com **oligo/amenorreia desde a menarca** (ciclos de 50–60 dias), **hiperandrogenismo clínico** (acne em face e dorso), obesidade (IMC 31 kg/m²) e **acantose nigricans** (escurecimento de dobras — marcador de",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Diagnóstico clínico de síndrome dos ovários policísticos (SOP) pelos critérios de Rotterdam em mulher jovem.",
+      "raciocinioChave": "A presença de oligomenorreia desde a menarca associada a hiperandrogenismo clínico (acne) já preenche dois dos três critérios de Rotterdam para SOP. O IMC de 31 kg/m² e a acantose nigricans reforçam a resistência insulínica típica da síndrome.",
+      "armadilhaBanca": "Confundir diagnósticos diferenciais de exclusão obrigatória, como HAC forma não clássica ou hipotireoidismo, com a etiologia mais prevalente diante de critérios de Rotterdam já preenchidos."
+    },
+    "mapaDistratores": {
+      "B": "O IMC de 31 kg/m² define obesidade grau I (não sobrepeso) e o ganho ponderal recente não explica a irregularidade menstrual presente desde a menarca.",
+      "C": "A deficiência de 21-hidroxilase na forma não clássica é diagnóstico diferencial de exclusão na SOP, mas tem prevalência muito menor na prática clínica.",
+      "D": "A síndrome de Cushing cursa tipicamente com estrias violáceas largas, fácies em lua cheia, fraqueza muscular proximal e hipertensão, ausentes no quadro.",
+      "E": "O hipotireoidismo pode causar irregularidade menstrual, porém não justifica o hiperandrogenismo clínico (acne) e a acantose nigricans como causa primária."
+    }
   },
   {
     "id": "q-enare-2024-064",
@@ -3858,7 +4896,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Climatério e Terapia Hormonal",
     "temaSlug": "go-gineco-endocrino",
     "subtemaSlug": "go-gineco-endocrino-climaterio-e-terapia-hormonal",
-    "tags": ["menopausa-precoce","sintomas-vasomotores","cancer-de-mama","tratamento-nao-hormonal"],
+    "tags": [
+      "menopausa-precoce",
+      "sintomas-vasomotores",
+      "cancer-de-mama",
+      "tratamento-nao-hormonal"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -3903,13 +4946,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **B** está correta. Mulher < 40 anos com 12 meses consecutivos de amenorreia pós-quimioterapia e sintomas vasomotores intensos apresenta **menopausa precoce (insuficiência ovariana prematura iatrogênica)**. Como há histórico de **câncer de mama**, a terapia hormonal sistêmica é formalmente **contraindicada** (FEBRASGO / NAMS / ASCO); o manejo de primeira linha dos fogachos é não hormonal com **ISRS/IRSN** (como **escitalopram** ou venlafaxina — evitando paroxetina/fluoxetina se em uso de tamoxifeno por inibição da CYP2D6) associado a **hidratantes e lubrificantes vaginais não hormonais** para a síndrome geniturinária da menopausa.\n- **A) Incorreta:** Terapia hormonal sistêmica com estrogênio e progesterona é contraindicada absoluta em pacientes com histórico de câncer de mama.\n- **C) Incorreta:** Estriol vaginal não trata fogachos sistêmicos e só é considerado em casos refratários de atrofia após discussão com o oncologista.\n- **D) Incorreta:** 12 meses de amenorreia aos 38 anos configura menopausa precoce, não mera \"cessação temporária\".\n- **E) Incorreta:** A paciente já completou 12 meses sem menstruar (pós-menopausa precoce, não transição menopausal) e estrogênio transdérmico é contraindicado.",
     "perolaClinica": "Mulher < 40 anos com 12 meses consecutivos de amenorreia pós-quimioterapia e sintomas vasomotores intensos apresenta **menopausa precoce (insuficiência ovariana prematura iatrogênica)**.",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Manejo não hormonal da insuficiência ovariana prematura pós-quimioterapia em paciente com câncer de mama prévio.",
+      "raciocinioChave": "Amenorreia por 12 meses consecutivos antes dos 40 anos após quimioterapia define menopausa precoce iatrogênica. Pelo histórico de câncer de mama, a terapia hormonal é contraindicada, devendo-se usar antidepressivos (como escitalopram) para sintomas vasomotores e hidratantes vaginais para a atrofia.",
+      "armadilhaBanca": "Indicar terapia hormonal sistêmica ou estrogênio transdérmico para alívio de fogachos em paciente com antecedente de câncer de mama, onde o estrogênio é formalmente contraindicado."
+    },
+    "mapaDistratores": {
+      "A": "A terapia hormonal sistêmica combinada com estrogênio e progestagênio é formalmente contraindicada em mulheres com história pessoal de câncer de mama.",
+      "C": "O estriol vaginal não trata fogachos sistêmicos e só é cogitado em atrofia refratária após discussão oncológica, não sendo conduta de primeira linha.",
+      "D": "Doze meses de amenorreia aos 38 anos após quimioterapia configuram menopausa precoce instalada, e não mera cessação menstrual temporária.",
+      "E": "A paciente já preenche critério de pós-menopausa precoce (12 meses em amenorreia) e o uso de estrogênio sistêmico por via transdérmica também é contraindicado."
+    }
   },
   {
     "id": "q-enare-2024-065",
@@ -3921,7 +4976,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Neoplasias Pediátricas",
     "temaSlug": "ped-cardio-hemato-ped",
     "subtemaSlug": "ped-cardio-hemato-ped-neoplasias-pediatricas",
-    "tags": ["sarcoma-botrioide","rabdomiossarcoma","neoplasia-pediatrica","tumores-ginecologicos-infantis"],
+    "tags": [
+      "sarcoma-botrioide",
+      "rabdomiossarcoma",
+      "neoplasia-pediatrica",
+      "tumores-ginecologicos-infantis"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -3966,13 +5026,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alternativa **B** está correta. Menina pequena (< 5 anos, pico em torno de 2 anos) apresentando **corrimento vaginal sanguinolento/aquoso e massa polipoide gelatinosa exteriorizando-se pelo introito vaginal com aspecto clássico em \"cachos de uva\"** é a apresentação patognomônica do **sarcoma botrioide** (rabdomiossarcoma embrionário de vagina), neoplasia maligna mais comum do trato genital inferior na infância (FEBRASGO / Nelson).\n- **A) Incorreta:** Má higiene causa vulvovaginite inespecífica, nunca massa gelatinosa em cachos de uva.\n- **C) Incorreta:** Corpo estranho vaginal provoca corrimento purulento/sanguinolento fétido, sem lesão tumoral em cachos de uva.\n- **D) Incorreta:** Exposição exógena a estrogênio pode causar telarca/sangramento, não massa polipoide gelatinosa.\n- **E) Incorreta:** Estímulo estrogênico materno residual ocorre apenas nas primeiras semanas de vida (período neonatal), nunca aos 2 anos.",
     "perolaClinica": "Menina pequena (< 5 anos, pico em torno de 2 anos) apresentando **corrimento vaginal sanguinolento/aquoso e massa polipoide gelatinosa exteriorizando-se pelo introito vaginal com aspecto clássico em \"cachos de uva\"** é a",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Reconhecimento clínico do sarcoma botrioide (rabdomiossarcoma embrionário) em lactente/pré-escolar.",
+      "raciocinioChave": "A associação de corrimento vaginal sanguinolento ou aquoso em criança pequena com massa polipoide gelatinosa em aspecto de \"cachos de uva\" no introito vaginal é patognomônica do sarcoma botrioide. Trata-se da neoplasia maligna mais frequente do trato genital inferior na infância.",
+      "armadilhaBanca": "Atribuir sangramento vaginal na primeira infância a causas comuns como corpo estranho ou vulvovaginite, ignorando a descrição clássica da massa em \"cachos de uva\"."
+    },
+    "mapaDistratores": {
+      "A": "A má higiene provoca vulvovaginite inespecífica com hiperemia e prurido, sem formação de massa polipoide gelatinosa.",
+      "C": "O corpo estranho vaginal cursa com corrimento purulento ou sanguinolento de odor fétido, mas não forma lesão tumoral em cachos de uva.",
+      "D": "A contaminação exógena por estrogênio transdérmico materno pode induzir telarca ou sangramento por privação, sem originar massa tumoral gelatinosa.",
+      "E": "O estímulo estrogênico materno residual restringe-se às primeiras semanas do período neonatal, sendo incompatível com uma criança de 2 anos."
+    }
   },
   {
     "id": "q-enare-2024-066",
@@ -3984,7 +5056,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Rastreamento e Lesões Precursoras do Colo Uterino",
     "temaSlug": "go-onco-go",
     "subtemaSlug": "go-onco-go-rastreamento-e-lesoes-precursoras-do-colo-uterino",
-    "tags": ["hsil","hpv-16","colposcopia","prevencao-colo-uterino"],
+    "tags": [
+      "hsil",
+      "hpv-16",
+      "colposcopia",
+      "prevencao-colo-uterino"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -4029,13 +5106,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **C** está correta. O achado citológico descreve **lesão intraepitelial escamosa de alto grau (HSIL)** associada ao **HPV 16** (subtipo de **alto risco oncogênico**, responsável por ~50–60% dos cânceres cervicais). Segundo as **Diretrizes Brasileiras para o Rastreamento do Câncer do Colo do Útero (INCA/MS)** e a FEBRASGO, toda paciente com citologia HSIL deve ser encaminhada imediatamente para **colposcopia** (para localizar a lesão, avaliar a junção escamocolunar e decidir entre biópsia ou \"ver e tratar\" — EZT).\n- **A) Incorreta:** O exame é claramente alterado (HSIL + HPV 16), jamais normal.\n- **B) Incorreta:** HPV 16 é o principal subtipo de **alto risco** e a citologia já é de alto grau (HSIL).\n- **D) Incorreta:** HPV 16 é de alto risco (baixo risco são 6 e 11) e não se faz apenas seguimento semestral diante de HSIL.\n- **E) Incorreta:** A EZT (\"ver e tratar\") só é realizada **sob visão colposcópica** quando a colposcopia é satisfatória (ZT tipo 1 ou 2) e confirma lesão maior compatível — nunca \"sem necessidade de colposcopia\".",
     "perolaClinica": "O achado citológico descreve **lesão intraepitelial escamosa de alto grau (HSIL)** associada ao **HPV 16** (subtipo de **alto risco oncogênico**, responsável por ~50–60% dos cânceres cervicais).",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Interpretação de citologia HSIL associada a HPV 16 e conduta de encaminhamento para colposcopia.",
+      "raciocinioChave": "A citologia descreve lesão intraepitelial escamosa de alto grau (HSIL) acompanhada de positividade para o HPV 16, subtipo de alto risco oncogênico. Conforme as diretrizes do INCA/MS, toda paciente com resultado citológico de HSIL deve ser encaminhada para colposcopia.",
+      "armadilhaBanca": "Pular a colposcopia indicando EZT/LEEP imediata (\"ver e tratar\" cego) ou subestimar o risco oncogênico do HPV 16 tratando a lesão como de baixo grau."
+    },
+    "mapaDistratores": {
+      "A": "Os achados citológicos de atipia nuclear intensa e o HPV 16 positivo configuram exame alterado de alto risco, contraindicando seguimento rotineiro em 3 anos.",
+      "B": "O HPV 16 é o principal subtipo de alto risco oncogênico e as alterações citológicas descritas correspondem a lesão de alto grau (HSIL), não de baixo grau.",
+      "D": "Infecção por HPV 16 é de alto risco oncogênico (baixo risco são 6 e 11) e o achado de HSIL exige investigação colposcópica imediata, não seguimento semestral.",
+      "E": "Mesmo na modalidade \"ver e tratar\", a exérese da zona de transformação depende da visualização e caracterização prévia por colposcopia, nunca sendo feita sem ela."
+    }
   },
   {
     "id": "q-enare-2024-067",
@@ -4047,7 +5136,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Rastreamento e Câncer de Mama",
     "temaSlug": "go-onco-go",
     "subtemaSlug": "go-onco-go-rastreamento-e-cancer-de-mama",
-    "tags": ["cancer-de-mama","niveis-de-berg","peitoral-menor","esvaziamento-axilar"],
+    "tags": [
+      "cancer-de-mama",
+      "niveis-de-berg",
+      "peitoral-menor",
+      "esvaziamento-axilar"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -4092,13 +5186,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alternativa **C** está correta. Os **3 níveis de Berg** dos linfonodos axilares são definidos anatomicamente em relação ao **músculo peitoral menor**: **Nível I** (lateral/inferior à borda lateral do peitoral menor), **Nível II** (posterior/sob o peitoral menor) e **Nível III** (medial/apical à borda medial do peitoral menor), conforme SBM/FEBRASGO e Sabiston.\n- **A) Incorreta:** A artéria/veia axilar serve como limite superior anatômico da dissecção axilar, mas não define os níveis I, II e III de Berg.\n- **B) Incorreta:** O músculo peitoral maior é superficial ao peitoral menor e não é o marco dos níveis de Berg.\n- **D) Incorreta:** A cadeia mamária interna é drenagem paraesternal independente dos níveis axilares.\n- **E) Incorreta:** O nervo intercostobraquial cruza a axila (sensibilidade da face medial do braço) e deve ser preservado quando possível, mas não define os níveis linfonodais.",
     "perolaClinica": "Os **3 níveis de Berg** dos linfonodos axilares são definidos anatomicamente em relação ao **músculo peitoral menor**: **Nível I** (lateral/inferior à borda lateral do peitoral menor), **Nível II** (posterior/sob o peito",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Referência anatômica dos três níveis linfonodais axilares (níveis de Berg) na cirurgia do câncer de mama.",
+      "raciocinioChave": "Os níveis linfonodais axilares de Berg são definidos pela sua posição em relação ao músculo peitoral menor. O nível I situa-se lateralmente a ele, o nível II posteriormente (sob o músculo) e o nível III medialmente até o ápice axilar.",
+      "armadilhaBanca": "Confundir o músculo peitoral menor com o peitoral maior ou com os vasos axilares, que são apenas limites ou estruturas vizinhas da dissecção axilar."
+    },
+    "mapaDistratores": {
+      "A": "A veia e a artéria axilares delimitam o teto/limite superior da dissecção axilar, mas não estabelecem a divisão entre os níveis I, II e III.",
+      "B": "O músculo peitoral maior recobre superficialmente a região, porém não é o marco anatômico utilizado para classificar os níveis linfonodais axilares.",
+      "D": "A artéria mamária interna acompanha a cadeia linfonodal torácica interna (paraesternal), distinta da drenagem linfática axilar.",
+      "E": "O nervo intercostobraquial atravessa o espaço axilar conferindo sensibilidade à face medial do braço, sem servir de referência para os níveis de Berg."
+    }
   },
   {
     "id": "q-enare-2024-068",
@@ -4110,7 +5216,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Puberdade Normal, Precoce e Atrasada",
     "temaSlug": "ped-puericultura",
     "subtemaSlug": "ped-puericultura-puberdade-normal-precoce-e-atrasada",
-    "tags": ["puberdade-precoce","puberdade-precoce-central","telarca","estagios-de-tanner"],
+    "tags": [
+      "puberdade-precoce",
+      "puberdade-precoce-central",
+      "telarca",
+      "estagios-de-tanner"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -4155,13 +5266,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **D** está correta. Apesar de a velocidade de crescimento (4 cm/ano) e a idade óssea (6a 2m) ainda não estarem acentuadamente avançadas (início recente há apenas 4 meses), o dado decisivo no enunciado é o **LH basal = 1,2 UI/L** — valor **puberal** (pelo PCDT de Puberdade Precoce Central do Ministério da Saúde e SBP/FEBRASGO, LH basal > 0,3 a 0,6 UI/L por ensaio ultrassensível já confirma ativação do eixo hipotálamo-hipófise-gonadal), definindo **puberdade precoce central (GnRH-dependente)** em menina < 8 anos.\n- **A) Incorreta:** Na telarca precoce isolada, o eixo HHG permanece inativo e os níveis basais de LH são pré-puberais (indetectáveis / < 0,3 UI/L).\n- **B) Incorreta:** A paciente está em P1 de Tanner (ausência de pelos pubianos).\n- **C) Incorreta:** Não há relato de sangramento vaginal (menarca).\n- **E) Incorreta:** Na puberdade precoce periférica (GnRH-independente), a produção autônoma de esteroides suprime o eixo HHG, cursando com LH suprimido/indetectável.",
     "perolaClinica": "Apesar de a velocidade de crescimento (4 cm/ano) e a idade óssea (6a 2m) ainda não estarem acentuadamente avançadas (início recente há apenas 4 meses), o dado decisivo no enunciado é o **LH basal = 1,2 UI/L** — valor **p",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Diagnóstico de puberdade precoce central por LH basal puberal mesmo antes de avanço ósseo expressivo.",
+      "raciocinioChave": "Embora o desenvolvimento mamário seja recente (4 meses) sem aceleração franca da idade óssea ou da velocidade de crescimento, o valor de LH basal de 1,2 UI/L já confirma ativação do eixo hipotálamo-hipófise-gonadal. Portanto, trata-se de puberdade precoce central dependente de GnRH.",
+      "armadilhaBanca": "Descartar puberdade precoce central porque a velocidade de crescimento e a idade óssea ainda não estão avançadas, ignorando o LH basal em faixa puberal."
+    },
+    "mapaDistratores": {
+      "A": "Na telarca precoce isolada não há ativação do eixo gonadotrófico, mantendo-se os níveis basais de LH na faixa pré-puberal (geralmente abaixo de 0,3 UI/L).",
+      "B": "A paciente encontra-se em estágio P1 de Tanner, o que indica ausência completa de pelos pubianos e afasta pubarca precoce.",
+      "C": "Não há qualquer relato de sangramento vaginal na história clínica para caracterizar menarca precoce.",
+      "E": "Na puberdade precoce periférica (independente de GnRH), a produção autônoma de esteroides sexuais exerce retroalimentação negativa e suprime o LH basal."
+    }
   },
   {
     "id": "q-enare-2024-069",
@@ -4173,7 +5296,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Úlceras Genitais e ISTs em Ginecologia",
     "temaSlug": "go-gineco-geral",
     "subtemaSlug": "go-gineco-geral-ulceras-genitais-e-ists-em-ginecologia",
-    "tags": ["herpes-genital","aciclovir","ulceras-genitais","ist"],
+    "tags": [
+      "herpes-genital",
+      "aciclovir",
+      "ulceras-genitais",
+      "ist"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -4218,13 +5346,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **A** está correta. O quadro de **pródromo sensitivo local** (aumento de sensibilidade/parestesia) seguido de **múltiplas pequenas úlceras (< 0,5 cm) dolorosas coalescentes** em vulva e linfadenopatia inguinal bilateral é clássico de **herpes genital (primeiro episódio)**. Conforme o **PCDT-IST do Ministério da Saúde**, o tratamento de escolha é **aciclovir 400 mg VO de 8/8h (3x/dia) por 7 a 10 dias** (ou até 14 dias se cicatrização incompleta).\n- **B) Incorreta:** Ceftriaxona por 8–10 dias não trata herpes genital nem é esquema de úlcera genital primária.\n- **C) Incorreta:** Doxiciclina 100 mg 12/12h é tratamento de linfogranuloma venéreo (21 dias) ou alternativa para sífilis/clamídia, não de herpes.\n- **D) Incorreta:** Corticoterapia sistêmica é contraindicada em infecção herpética ativa.\n- **E) Incorreta:** Penicilina G benzatina trata sífilis primária (cancro duro: úlcera única, indolor, de base endurecida e fundo limpo), diferente das múltiplas úlceras dolorosas coalescentes.",
     "perolaClinica": "O quadro de **pródromo sensitivo local** (aumento de sensibilidade/parestesia) seguido de **múltiplas pequenas úlceras (< 0,5 cm) dolorosas coalescentes** em vulva e linfadenopatia inguinal bilateral é clássico de **herp",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Diagnóstico clínico e tratamento de escolha do primeiro episódio de herpes genital (PCDT-IST).",
+      "raciocinioChave": "Pródromo de sensibilidade local seguido de múltiplas pequenas úlceras dolorosas coalescentes e adenopatia inguinal bilateral caracteriza o primeiro episódio de herpes genital. O tratamento preconizado pelo Ministério da Saúde é aciclovir 400 mg VO de 8/8 horas por 7 a 14 dias.",
+      "armadilhaBanca": "Confundir herpes genital primário com sífilis primária (penicilina benzatina) ou cancroide/LGV, ignorando o pródromo sensitivo e as pequenas úlceras coalescentes."
+    },
+    "mapaDistratores": {
+      "B": "Ceftriaxona por 8 a 10 dias não tem ação antiviral contra o vírus herpes simples nem integra o tratamento sindrômico de úlceras genitais.",
+      "C": "Doxiciclina 100 mg duas vezes ao dia é utilizada para linfogranuloma venéreo (por 21 dias) ou como alternativa em sífilis, sendo ineficaz para herpes genital.",
+      "D": "Corticoterapia sistêmica com prednisona prejudica a resposta imune local e favorece a replicação viral em infecção herpética ativa.",
+      "E": "Penicilina G benzatina em dose única trata sífilis primária, cuja lesão típica é úlcera única, indolor, de fundo limpo e bordas endurecidas, distinta do quadro."
+    }
   },
   {
     "id": "q-enare-2024-070",
@@ -4236,7 +5376,11 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Miomatose Uterina e Pólipos",
     "temaSlug": "go-gineco-geral",
     "subtemaSlug": "go-gineco-geral-miomatose-uterina-e-polipos",
-    "tags": ["polipo-endometrial","sangramento-pos-menopausa","ultrassonografia-transvaginal"],
+    "tags": [
+      "polipo-endometrial",
+      "sangramento-pos-menopausa",
+      "ultrassonografia-transvaginal"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -4281,13 +5425,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **B** está correta. Na pós-menopausa sem terapia hormonal, o **endométrio fino (3 mm, ≤ 4–5 mm)** torna improvável hiperplasia ou adenocarcinoma difuso; a presença de uma **imagem ecogênica focal bem delimitada ocupando a cavidade/interface entre os folhetos endometriais** à USTV é o achado clássico de **pólipo endometrial** (FEBRASGO — indica-se histeroscopia com polipectomia para confirmação histológica).\n- **A) Incorreta:** Adenomiose regride na pós-menopausa (hipoestrogenismo) e manifesta-se como miométrio heterogêneo/assimétrico, não imagem ecogênica focal intracavitária.\n- **C) Incorreta:** Miomas costumam ser hipoecoicos/heterogêneos com sombra acústica no miométrio e tendem a regredir após 10 anos de menopausa.\n- **D) Incorreta:** Hiperplasia endometrial cursa tipicamente com espessamento endometrial difuso (> 4–5 mm).\n- **E) Incorreta:** Embora deva ser excluído na histologia do pólipo, um endométrio de 3 mm com lesão ecogênica focal bem delimitada tem como causa mais provável o pólipo endometrial.",
     "perolaClinica": "Na pós-menopausa sem terapia hormonal, o **endométrio fino (3 mm, ≤ 4–5 mm)** torna improvável hiperplasia ou adenocarcinoma difuso; a presença de uma **imagem ecogênica focal bem delimitada ocupando a cavidade/interface",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Diagnóstico ultrassonográfico de pólipo endometrial em mulher pós-menopausa com endométrio fino.",
+      "raciocinioChave": "Na pós-menopausa, uma espessura endometrial global de 3 mm afasta processo difuso como hiperplasia extensa, enquanto a imagem ecogênica focal na interface entre os folhetos endometriais é típica de pólipo endometrial. O achado justifica o sangramento e indica avaliação histeroscópica para ressecção e biópsia.",
+      "armadilhaBanca": "Atribuir sangramento pós-menopausa diretamente a adenocarcinoma ou hiperplasia endometrial mesmo diante de endométrio fino (3 mm) com lesão focal delimitada."
+    },
+    "mapaDistratores": {
+      "A": "A adenomiose depende de estímulo estrogênico, regredindo na pós-menopausa, e apresenta miométrio heterogêneo em vez de lesão intracavitária focal.",
+      "C": "Os miomas uterinos costumam ser nódulos miometriais hipoecoicos/heterogêneos que frequentemente regridem após anos de hipoestrogenismo pós-menopausal.",
+      "D": "A hiperplasia endometrial cursa habitualmente com espessamento endometrial difuso acima de 4–5 mm na pós-menopausa, e não com endométrio de 3 mm.",
+      "E": "Embora a malignidade deva ser descartada pela histologia após polipectomia, o padrão focal bem delimitado com endométrio adjacente de 3 mm aponta primariamente para pólipo."
+    }
   },
   {
     "id": "q-enare-2024-071",
@@ -4299,7 +5455,11 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Câncer de Ovário e Massas Anexiais",
     "temaSlug": "go-onco-go",
     "subtemaSlug": "go-onco-go-cancer-de-ovario-e-massas-anexiais",
-    "tags": ["teratoma-maduro","cisto-dermoide","massa-anexial"],
+    "tags": [
+      "teratoma-maduro",
+      "cisto-dermoide",
+      "massa-anexial"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -4344,13 +5504,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **A** está correta. Mulher jovem (25 anos) com massa anexial móvel, indolor, de aspecto **ultrassonográfico misto com áreas hiperecogênicas e sombra acústica posterior** (calcificações/dentes, gordura, pelos — sinal de Rokitansky) tem como principal diagnóstico **teratoma cístico maduro (cisto dermoide)**, o tumor germinativo benigno mais comum em jovens. Ele é **bilateral em cerca de 10% a 15% dos casos** (FEBRASGO / Berek & Novak).\n- **B) Incorreta:** CA-125 geralmente é normal no teratoma maduro benigno.\n- **C) Incorreta:** A taxa de transformação maligna do teratoma maduro é muito baixa (< 1–2%, geralmente em mulheres pós-menopausa).\n- **D) Incorreta:** Cistoadenocarcinoma seroso é o principal tumor epitelial maligno do ovário, não germinativo benigno.\n- **E) Incorreta:** O tratamento de eleição em mulher jovem é a **ooforoplastia (cistectomia) videolaparoscópica** preservando parênquima ovariano e fertilidade, jamais histerectomia com ooforectomia bilateral.",
     "perolaClinica": "Mulher jovem (25 anos) com massa anexial móvel, indolor, de aspecto **ultrassonográfico misto com áreas hiperecogênicas e sombra acústica posterior** (calcificações/dentes, gordura, pelos — sinal de Rokitansky) tem como ",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Características epidemiológicas e ultrassonográficas do teratoma cístico maduro (cisto dermoide) ovariano.",
+      "raciocinioChave": "Mulher jovem com massa anexial móvel, mista, com áreas hiperecogênicas e sombra acústica posterior apresenta achado clássico de teratoma cístico maduro. Esse tumor germinativo benigno é bilateral em cerca de 10% dos casos, justificando avaliação cuidadosa do ovário contralateral.",
+      "armadilhaBanca": "Confundir teratoma cístico maduro benigno em paciente jovem com neoplasias epiteliais malignas do ovário que exigem cirurgia radical e cursam com CA-125 elevado."
+    },
+    "mapaDistratores": {
+      "B": "O marcador CA-125 encontra-se habitualmente normal no teratoma cístico maduro, elevando-se principalmente em carcinomas epiteliais ovarianos.",
+      "C": "O teratoma maduro é uma neoplasia benigna cujo risco de transformação maligna é muito baixo (inferior a 2%), ocorrendo sobretudo na pós-menopausa.",
+      "D": "O cistoadenocarcinoma seroso é um tumor epitelial maligno típico de mulheres mais velhas, enquanto o teratoma é um tumor de células germinativas.",
+      "E": "Em mulheres jovens com teratoma maduro, o tratamento de eleição é a ooforoplastia (cistectomia) preservadora da fertilidade, e não cirurgia radical."
+    }
   },
   {
     "id": "q-enare-2024-072",
@@ -4362,7 +5534,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Vulvovaginites e Corrimentos Genitais",
     "temaSlug": "go-gineco-geral",
     "subtemaSlug": "go-gineco-geral-vulvovaginites-e-corrimentos-genitais",
-    "tags": ["vaginose-bacteriana","metronidazol","criterios-de-amsel","clue-cells"],
+    "tags": [
+      "vaginose-bacteriana",
+      "metronidazol",
+      "criterios-de-amsel",
+      "clue-cells"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -4407,13 +5584,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **D** está correta. A paciente preenche todos os **4 Critérios de Amsel** para **vaginose bacteriana**: (1) corrimento homogêneo branco-acinzentado, (2) pH vaginal > 4,5 (5,2), (3) teste das aminas (*Whiff test*) com KOH 10% positivo (exacerbação do odor de peixe) e (4) presença de ***clue cells*** (células epiteliais recobertas por cocobacilos Gram-variáveis, como *Gardnerella vaginalis*). Conforme o **PCDT-IST do Ministério da Saúde**, o tratamento de primeira escolha é **metronidazol 500 mg VO de 12/12h por 7 dias** (ou metronidazol gel vaginal 0,75% por 5 dias).\n- **A) Incorreta:** Fluconazol é antifúngico usado para candidíase vulvovaginal (pH < 4,5, corrimento grumoso sem odor).\n- **B) Incorreta:** Duchas vaginais são contraindicadas pois pioram a disbiose vaginal.\n- **C) Incorreta:** Fenticonazol é antifúngico tópico (candidíase), sem ação contra vaginose bacteriana.\n- **E) Incorreta:** Clindamicina creme vaginal 2% é usada por 7 dias (não 14 dias) e não se associa hidrocortisona 10% de rotina.",
     "perolaClinica": "A paciente preenche todos os **4 Critérios de Amsel** para **vaginose bacteriana**: (1) corrimento homogêneo branco-acinzentado, (2) pH vaginal > 4,5 (5,2), (3) teste das aminas (*Whiff test*) com KOH 10% positivo (exace",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Diagnóstico pelos critérios de Amsel e tratamento de primeira escolha da vaginose bacteriana.",
+      "raciocinioChave": "A presença de corrimento branco-acinzentado, pH vaginal de 5,2 (> 4,5), teste das aminas positivo com KOH 10% e clue cells na bacterioscopia preenche todos os quatro critérios de Amsel para vaginose bacteriana. O tratamento de escolha é metronidazol 500 mg por via oral, duas vezes ao dia, por 7 dias.",
+      "armadilhaBanca": "Indicar antifúngico para corrimento por má interpretação da mácula rubra ou confundir o tempo/associação do creme de clindamicina na vaginose bacteriana."
+    },
+    "mapaDistratores": {
+      "A": "O fluconazol 150 mg em dose única é antifúngico indicado para candidíase vulvovaginal, que cursa com pH ácido (< 4,5) e corrimento grumoso sem odor fétido.",
+      "B": "Duchas vaginais alcalinizantes ou com bicarbonato são contraindicadas, pois agravam o desequilíbrio da microbiota vaginal e favorecem recidivas.",
+      "C": "O fenticonazol tópico é um imidazólico voltado ao tratamento de candidíase, não possuindo atividade contra os anaeróbios da vaginose bacteriana.",
+      "E": "A clindamicina creme vaginal 2% é usada isoladamente por 7 dias na vaginose bacteriana, sem associação rotineira a hidrocortisona 10% ou extensão para 14 dias."
+    }
   },
   {
     "id": "q-enare-2024-073",
@@ -4425,7 +5614,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Hemorragia Pós-Parto",
     "temaSlug": "go-parto",
     "subtemaSlug": "go-parto-hemorragia-pos-parto",
-    "tags": ["sindrome-de-sheehan","descolamento-prematuro-de-placenta","hemorragia-pos-parto","hipopituitarismo"],
+    "tags": [
+      "sindrome-de-sheehan",
+      "descolamento-prematuro-de-placenta",
+      "hemorragia-pos-parto",
+      "hipopituitarismo"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -4470,13 +5664,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **B** está correta. A **síndrome de Sheehan** consiste em **pan-hipopituitarismo pós-parto decorrente de necrose isquêmica da adeno-hipófise** (que está fisiologicamente hipertrofiada na gestação) após episódio de **hemorragia obstétrica grave com choque hipovolêmico**. Entre as opções listadas, o **descolamento prematuro da placenta (DPP)** é a clássica causa de hemorragia grave, coagulopatia de consumo (CIVD), útero de Couvelaire/atonia uterina e choque hemorrágico no parto (FEBRASGO / Williams Obstetrics).\n- **A) Incorreta:** Diabetes gestacional não causa choque hemorrágico obstétrico nem necrose hipofisária.\n- **C) Incorreta:** RPMO associa-se a corioamnionite e prematuridade, não hemorragia maciça.\n- **D) Incorreta:** Gemelaridade monocoriônica associa-se a STFF e RCIU seletiva, não sendo causa direta principal comparada ao DPP.\n- **E) Incorreta:** RCIU é complicação fetal de insuficiência placentária crônica, não evento hemorrágico materno agudo.",
     "perolaClinica": "A **síndrome de Sheehan** consiste em **pan-hipopituitarismo pós-parto decorrente de necrose isquêmica da adeno-hipófise** (que está fisiologicamente hipertrofiada na gestação) após episódio de **hemorragia obstétrica gr",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Etiopatogenia obstétrica da síndrome de Sheehan (necrose hipofisária isquêmica pós-hemorrágica).",
+      "raciocinioChave": "A síndrome de Sheehan decorre de necrose isquêmica da adeno-hipófise hipertrofiada durante a gestação após hemorragia obstétrica grave com choque hipovolêmico. Entre as alternativas, o descolamento prematuro da placenta é a causa clássica de sangramento maciço, choque e CIVD no parto.",
+      "armadilhaBanca": "Associar síndrome de Sheehan a outras complicações obstétricas graves (como gemelaridade ou RPMO) sem focar no evento causal indispensável: hemorragia maciça e choque."
+    },
+    "mapaDistratores": {
+      "A": "O diabetes gestacional em uso de insulina pode causar distúrbios metabólicos ou macrossomia, mas não provoca choque hemorrágico obstétrico ou necrose hipofisária.",
+      "C": "A rotura prematura de membranas ovulares predispõe a prematuridade e infecção intra-amniótica (corioamnionite), sem causar hemorragia grave por si só.",
+      "D": "A gestação gemelar monocoriônica relaciona-se a complicações vasculares placentárias fetais (como STFF), não sendo a causa hemorrágica materna direta típica frente ao DPP.",
+      "E": "A restrição de crescimento intrauterino reflete insuficiência placentária crônica fetal, não um evento hemorrágico materno agudo capaz de gerar necrose hipofisária."
+    }
   },
   {
     "id": "q-enare-2024-074",
@@ -4488,7 +5694,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Pré-Eclâmpsia, Eclâmpsia e Síndrome HELLP",
     "temaSlug": "go-shg",
     "subtemaSlug": "go-shg-pre-eclampsia-eclampsia-e-sindrome-hellp",
-    "tags": ["sindrome-hellp","pre-eclampsia","hemolise","trombocitopenia"],
+    "tags": [
+      "sindrome-hellp",
+      "pre-eclampsia",
+      "hemolise",
+      "trombocitopenia"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -4533,13 +5744,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alternativa **C** está correta. O acrônimo **HELLP** define a tríade laboratorial dessa complicação grave da pré-eclâmpsia (FEBRASGO / Manual de Gestação de Alto Risco — Ministério da Saúde): **H** (*Hemolysis* — hemólise microangiopática: esquizócitos, DHL ≥ 600 UI/L, BT ≥ 1,2 mg/dL), **EL** (*Elevated Liver enzymes* — disfunção hepática: TGO/AST ≥ 70 UI/L) e **LP** (*Low Platelets* — trombocitopenia: plaquetas < 100.000/mm³).\n- **A) Incorreta:** Convulsões maternas caracterizam **eclâmpsia**, não a definição da síndrome HELLP.\n- **B) Incorreta:** Hiperglicemia não faz parte da síndrome HELLP (na esteatose hepática aguda da gestação ocorre inclusive hipoglicemia).\n- **D) Incorreta:** Convulsões e hiperglicemia não compõem o acrônimo HELLP.\n- **E) Incorreta:** Diminuição de reflexos profundos é sinal de intoxicação por sulfato de magnésio (na iminência de eclâmpsia ocorre hiperreflexia).",
     "perolaClinica": "O acrônimo **HELLP** define a tríade laboratorial dessa complicação grave da pré-eclâmpsia (FEBRASGO / Manual de Gestação de Alto Risco — Ministério da Saúde): **H** (*Hemolysis* — hemólise microangiopática: esquizócitos",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Definição da tríade laboratorial diagnóstica da síndrome HELLP na pré-eclâmpsia grave.",
+      "raciocinioChave": "O acrônimo HELLP resume os três pilares laboratoriais dessa complicação grave da pré-eclâmpsia: hemólise microangiopática (H), elevação de enzimas hepáticas indicando disfunção hepática (EL) e plaquetopenia/trombocitopenia (LP).",
+      "armadilhaBanca": "Incluir convulsões (que definem eclâmpsia) ou alterações glicêmicas e de reflexos (típicas de esteatose hepática aguda ou intoxicação por sulfato de magnésio) nos critérios da síndrome HELLP."
+    },
+    "mapaDistratores": {
+      "A": "As convulsões tônico-clônicas maternas definem o diagnóstico de eclâmpsia, podendo ocorrer independentemente da presença de síndrome HELLP.",
+      "B": "A elevação da glicemia não compõe a síndrome HELLP; inclusive, hipoglicemia grave é característica da esteatose hepática aguda da gestação.",
+      "D": "Nem convulsões maternas nem hiperglicemia fazem parte dos critérios laboratoriais diagnósticos da síndrome HELLP.",
+      "E": "A redução dos reflexos tendinosos profundos é sinal clínico de toxicidade pelo sulfato de magnésio, enquanto na iminência de eclâmpsia observa-se hiperreflexia."
+    }
   },
   {
     "id": "q-enare-2024-075",
@@ -4551,7 +5774,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Infecções Congênitas na Gestação",
     "temaSlug": "go-intercorrencias",
     "subtemaSlug": "go-intercorrencias-infeccoes-congenitas-na-gestacao",
-    "tags": ["parvovirus-b19","anemia-fetal","doppler-arteria-cerebral-media","hidropsia-fetal"],
+    "tags": [
+      "parvovirus-b19",
+      "anemia-fetal",
+      "doppler-arteria-cerebral-media",
+      "hidropsia-fetal"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -4596,13 +5824,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **A** está correta. O **parvovírus B19** tem tropismo pelos precursores eritroides da medula óssea fetal, podendo causar **anemia fetal grave (aplasia eritroide)** e consequente **hidropsia fetal não imune**. Conforme a FEBRASGO e o ACOG, o método padrão-ouro não invasivo para rastrear e monitorar anemia fetal semanalmente (por 8–12 semanas após infecção materna) é o **Doppler da artéria cerebral média (ACM)** medindo o pico de velocidade sistólica (PVS-ACM > 1,5 MoM indica anemia moderada/grave e necessidade de cordocentese/transfusão intrauterina).\n- **B) Incorreta:** A movimentação fetal altera-se apenas tardiamente quando o feto já está em sofrimento/hidropsia avançada.\n- **C) Incorreta:** DNA fetal livre (NIPT) rastreia aneuploidias/tipagem RhD, não anemia fetal por parvovírus.\n- **D) Incorreta:** Altura uterina não diagnostica anemia fetal (na hidropsia/polidrâmnio pode até estar aumentada).\n- **E) Incorreta:** Coombs direto avalia hemólise imune (aloimunização), enquanto o parvovírus causa anemia não imune; além disso, Coombs indireto é que se faz no sangue materno.",
     "perolaClinica": "O **parvovírus B19** tem tropismo pelos precursores eritroides da medula óssea fetal, podendo causar **anemia fetal grave (aplasia eritroide)** e consequente **hidropsia fetal não imune**.",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Rastreamento não invasivo de anemia e hidropsia fetal por parvovírus B19 via Doppler da artéria cerebral média.",
+      "raciocinioChave": "O parvovírus B19 infecta precursores eritroides fetais, podendo desencadear anemia fetal grave e hidropsia não imune. A aferição seriada do pico de velocidade sistólica no Doppler da artéria cerebral média é o método não invasivo padrão-ouro para detectar essa anemia precocemente.",
+      "armadilhaBanca": "Indicar testes genéticos maternos, Coombs direto no sangue materno ou aguardar alteração de altura uterina/movimentação fetal, atrasando o rastreio de anemia fetal."
+    },
+    "mapaDistratores": {
+      "B": "A redução da movimentação fetal é um achado tardio de comprometimento e hipoxemia fetal, inadequado para o rastreamento precoce da anemia.",
+      "C": "A pesquisa de DNA fetal livre no sangue materno rastreia aneuploidias e tipagem RhD, não servindo para diagnosticar aplasia eritroide ou anemia por parvovírus.",
+      "D": "A medida da altura uterina não detecta anemia fetal isolada e, na presença de hidropsia com polidrâmnio secundário, pode até encontrar-se aumentada.",
+      "E": "O teste de Coombs direto avalia anticorpos aderidos às hemácias do recém-nascido/feto em hemólise imune, enquanto o parvovírus causa anemia aplásica não imune."
+    }
   },
   {
     "id": "q-enare-2024-076",
@@ -4614,7 +5854,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Gestação Gemelar e Restrição de Crescimento Fetal",
     "temaSlug": "go-intercorrencias",
     "subtemaSlug": "go-intercorrencias-gestacao-gemelar-e-restricao-de-crescimento-fetal",
-    "tags": ["gestacao-gemelar","monocorionica","restricao-de-crescimento-fetal","siugr"],
+    "tags": [
+      "gestacao-gemelar",
+      "monocorionica",
+      "restricao-de-crescimento-fetal",
+      "siugr"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -4659,13 +5904,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **D** está correta. Em gestação gemelar **monocoriônica diamniótica**, a presença de um feto com **peso estimado < percentil 10 (percentil 3)** associada à **discordância de peso ≥ 25% (28%)**, com **líquido amniótico normal** (afastando STFF) e **Doppler da ACM normal** (afastando TAPS), fecha os critérios da ISUOG/FEBRASGO para **restrição de crescimento intrauterino seletiva (RCIUs / CIUR seletivo)** — neste caso Tipo I (Doppler de artéria umbilical normal).\n- **A) Incorreta:** Gemelidade imperfeita refere-se a gêmeos conjugados (siameses), ocorrendo em gestações monocoriônicas monoamnióticas.\n- **B) Incorreta:** A síndrome de transfusão feto-fetal (STFF) exige obrigatoriamente a sequência **polidrâmnio/oligodrâmnio** (MBV > 8 cm em um saco e < 2 cm no outro), ausente no caso.\n- **C) Incorreta:** Sequência anemia/policitemia (TAPS) diagnostica-se pela discordância de PVS da **artéria cerebral média** (> 1,5 MoM no doador e < 1,0 MoM no receptor), que aqui está normal.\n- **E) Incorreta:** Sequência TRAP caracteriza-se por um gêmeo acárdico perfundido de forma retrógrada pelo gêmeo bomba.",
     "perolaClinica": "Em gestação gemelar **monocoriônica diamniótica**, a presença de um feto com **peso estimado < percentil 10 (percentil 3)** associada à **discordância de peso ≥ 25% (28%)**, com **líquido amniótico normal** (afastando ST",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Critérios diagnósticos ultrassonográficos da restrição de crescimento intrauterino seletiva em gemelar monocoriônica.",
+      "raciocinioChave": "Em gestação monocoriônica diamniótica, a presença de um feto abaixo do percentil 10 (percentil 3) com discordância ponderal ≥ 25% (28%), associada a líquido amniótico e Doppler da ACM normais, estabelece o diagnóstico de RCIU seletiva. A normalidade do líquido e do Doppler da ACM exclui STFF e TAPS, respectivamente.",
+      "armadilhaBanca": "Confundir RCIU seletiva com síndrome de transfusão feto-fetal ou sequência anemia-policitemia em gestação monocoriônica sem alterações de líquido amniótico ou de Doppler da ACM."
+    },
+    "mapaDistratores": {
+      "A": "A gemelidade imperfeita corresponde a gêmeos conjugados (siameses), condição anatômica exclusiva de gestações monocoriônicas monoamnióticas.",
+      "B": "A síndrome de transfusão feto-fetal exige obrigatoriamente a sequência oligodrâmnio em um saco e polidrâmnio no outro, ausente no exame descrito.",
+      "C": "A sequência anemia-policitemia (TAPS) é diagnosticada pela discordância do pico de velocidade sistólica na artéria cerebral média, que aqui encontra-se normal.",
+      "E": "A sequência TRAP (perfusão arterial reversa) caracteriza-se pela presença de um gêmeo acárdico malformado perfundido de modo retrógrado pelo gêmeo bomba."
+    }
   },
   {
     "id": "q-enare-2024-077",
@@ -4677,7 +5934,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Avaliação da Vitalidade Fetal",
     "temaSlug": "go-prenatal",
     "subtemaSlug": "go-prenatal-avaliacao-da-vitalidade-fetal",
-    "tags": ["polidramnio","liquido-amniotico","maior-bolsao","malformacao-fetal"],
+    "tags": [
+      "polidramnio",
+      "liquido-amniotico",
+      "maior-bolsao",
+      "malformacao-fetal"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -4722,13 +5984,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **B** está correta. Um **maior bolsão vertical (MBV) = 12 cm** (≥ 8 cm define polidrâmnio; 12–15 cm corresponde a polidrâmnio moderado) indica **polidrâmnio**. Entre as causas fetais de polidrâmnio estão malformações que dificultam a deglutição fetal ou comprimem o esôfago/tórax, como as **displasias esqueléticas letais (displasia tanatofórica)**, atresias gastrointestinais, defeitos do tubo neural e diabetes materno (FEBRASGO / Williams Obstetrics).\n- **A) Incorreta:** Insuficiência uteroplacentária associa-se a **oligodrâmnio** (centralização hemodinâmica com redução da perfusão renal fetal).\n- **C) Incorreta:** Agenesia renal bilateral (sequência de Potter) causa **anidrâmnio/oligodrâmnio** grave por ausência de diurese fetal.\n- **D) Incorreta:** Restrição de crescimento fetal por insuficiência placentária cursa tipicamente com oligodrâmnio.\n- **E) Incorreta:** Pós-datismo (gestação prolongada) associa-se à redução fisiológica/patológica do líquido amniótico (**oligodrâmnio**).",
     "perolaClinica": "Um **maior bolsão vertical (MBV) = 12 cm** (≥ 8 cm define polidrâmnio; 12–15 cm corresponde a polidrâmnio moderado) indica **polidrâmnio**.",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Identificação de polidrâmnio pelo maior bolsão vertical (≥ 8 cm) e sua correlação com displasias esqueléticas fetais.",
+      "raciocinioChave": "Um maior bolsão vertical de 12 cm caracteriza polidrâmnio (definido por MBV ≥ 8 cm). Entre as etiologias fetais, a displasia tanatofórica (displasia esquelética letal com hipoplasia torácica acentuada) prejudica a deglutição e o retorno venoso, levando frequentemente a polidrâmnio.",
+      "armadilhaBanca": "Inverter a fisiopatologia do volume do líquido amniótico, associando polidrâmnio (MBV = 12 cm) a causas clássicas de oligodrâmnio como insuficiência placentária ou agenesia renal."
+    },
+    "mapaDistratores": {
+      "A": "A insuficiência uteroplacentária reduz o débito urinário fetal por centralização hemodinâmica, cursando caracteristicamente com oligodrâmnio.",
+      "C": "A agenesia renal bilateral fetal impede a produção de urina fetal e determina oligodrâmnio extremo ou anidrâmnio (sequência de Potter).",
+      "D": "A restrição de crescimento fetal decorrente de insuficiência placentária associa-se tipicamente à diminuição do volume de líquido amniótico (oligodrâmnio).",
+      "E": "A gestação prolongada (pós-datismo) cursa fisiológica e patologicamente com redução progressiva do líquido amniótico, e não com polidrâmnio."
+    }
   },
   {
     "id": "q-enare-2024-078",
@@ -4740,7 +6014,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Diagnóstico de Gravidez e Modificações Fisiológicas",
     "temaSlug": "go-prenatal",
     "subtemaSlug": "go-prenatal-diagnostico-de-gravidez-e-modificacoes-fisiologicas",
-    "tags": ["sinal-de-hegar","diagnostico-de-gravidez","sinais-de-probabilidade","modificacoes-fisiologicas"],
+    "tags": [
+      "sinal-de-hegar",
+      "diagnostico-de-gravidez",
+      "sinais-de-probabilidade",
+      "modificacoes-fisiologicas"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -4785,13 +6064,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alternativa **A** está correta. O **sinal de Hegar** (sinal de probabilidade de gravidez, presente entre a 6ª e a 8ª semana) corresponde ao **amolecimento acentuado do istmo uterino** ao toque bimanual, permitindo a aproximação dos dedos vaginais e abdominais (Rezende / FEBRASGO).\n- **B) Incorreta:** Sinal de Piskacek é a **assimetria uterina** temporária no local de implantação do ovo.\n- **C) Incorreta:** Sinal de Osiander é a percepção da **pulsação da artéria vaginal** nos fundos de saco laterais.\n- **D) Incorreta:** Sinal de Nobile-Budin é o **preenchimento dos fundos de saco vaginais laterais** pelo corpo uterino globoso ao toque.\n- **E) Incorreta:** Sinal de Puzos é o **rechaço fetal intrauterino** ao toque vaginal (sinal de certeza, mais tardio, a partir de 14 semanas).",
     "perolaClinica": "O **sinal de Hegar** (sinal de probabilidade de gravidez, presente entre a 6ª e a 8ª semana) corresponde ao **amolecimento acentuado do istmo uterino** ao toque bimanual, permitindo a aproximação dos dedos vaginais e abd",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Semiologia obstétrica do primeiro trimestre: identificação do sinal de Hegar.",
+      "raciocinioChave": "O amolecimento acentuado da região ístmica uterina percebido ao toque bimanual por volta da 6ª à 8ª semana de gestação corresponde classicamente ao sinal de Hegar. É um dos principais sinais clínicos de probabilidade de gravidez.",
+      "armadilhaBanca": "Confundir os epônimos dos sinais semiológicos de probabilidade de gravidez ao toque bimanual (Hegar, Piskacek, Nobile-Budin, Osiander e Puzos)."
+    },
+    "mapaDistratores": {
+      "B": "O sinal de Piskacek corresponde à assimetria uterina temporária notada à palpação no local de nidação do saco gestacional.",
+      "C": "O sinal de Osiander refere-se à percepção da pulsação da artéria vaginal aumentada nos fundos de saco vaginais laterais.",
+      "D": "O sinal de Nobile-Budin traduz o preenchimento dos fundos de saco vaginais laterais pelo corpo uterino globoso ao toque.",
+      "E": "O sinal de Puzos é o rechaço fetal intrauterino ao toque vaginal, sendo um sinal de certeza observado mais tardiamente (após 14 semanas)."
+    }
   },
   {
     "id": "q-enare-2024-079",
@@ -4803,7 +6094,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Abortamento e Incompetência Istmocervical",
     "temaSlug": "go-sangramento",
     "subtemaSlug": "go-sangramento-abortamento-e-incompetencia-istmocervical",
-    "tags": ["abortamento-incompleto","esvaziamento-uterino","amiu","curetagem-uterina"],
+    "tags": [
+      "abortamento-incompleto",
+      "esvaziamento-uterino",
+      "amiu",
+      "curetagem-uterina"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -4848,13 +6144,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **A** está correta. O quadro de gestante com 9 semanas e 3 dias apresentando **sangramento vaginal em grande quantidade**, cólicas intensas, **colo uterino entreaberto** com saída de material ovular e **restos ovulares abundantes à USTV** define **abortamento incompleto com sangramento volumoso** (em paciente cardiopata, com menor reserva hemodinâmica). Conforme a FEBRASGO e o Manual Técnico de Atenção Humanizada ao Abortamento (Ministério da Saúde), impõe-se **esvaziamento uterino imediato**, preferencialmente por **aspiração manual intrauterina (AMIU / aspiração a vácuo)** ou curetagem uterina.\n- **B) Incorreta:** Ocitocina isolada no 1º trimestre tem pouca eficácia (poucos receptores uterinos) e não substitui o esvaziamento mecânico diante de sangramento intenso.\n- **C) Incorreta:** Conduta expectante é contraindicada quando há sangramento volumoso e restos ovulares em grande quantidade, especialmente em cardiopata.\n- **D) Incorreta:** Misoprostol não é a conduta de escolha em paciente com sangramento ativo abundante e colo já entreaberto (e a dose padrão para abortamento incompleto é sublingual/oral, não retal 800 mcg — dose usada para HPP).\n- **E) Incorreta:** Retardar o esvaziamento por 12 horas expõe a paciente a choque hemorrágico e descompensação cardíaca.",
     "perolaClinica": "O quadro de gestante com 9 semanas e 3 dias apresentando **sangramento vaginal em grande quantidade**, cólicas intensas, **colo uterino entreaberto** com saída de material ovular e **restos ovulares abundantes à USTV** d",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Conduta imediata no abortamento incompleto com sangramento abundante e colo aberto.",
+      "raciocinioChave": "Sangramento vivo em grande quantidade, colo uterino entreaberto com eliminação de material ovular e restos abundantes à ultrassonografia definem abortamento incompleto hemorrágico. Em paciente cardiopata, impõe-se o esvaziamento uterino imediato por aspiração a vácuo (preferencial) ou curetagem para estabilização hemodinâmica.",
+      "armadilhaBanca": "Adotar conduta expectante, repetir ultrassonografia ou tentar apenas uterotônicos diante de abortamento incompleto com hemorragia volumosa, especialmente em paciente cardiopata."
+    },
+    "mapaDistratores": {
+      "B": "A ocitocina isolada no primeiro trimestre tem baixa eficácia pela escassez de receptores miometriais e não substitui o esvaziamento uterino na hemorragia ativa.",
+      "C": "A conduta expectante é formalmente contraindicada na presença de sangramento intenso e restos ovulares volumosos pelo risco de choque hipovolêmico.",
+      "D": "O misoprostol retal na dose de 800 mcg é esquema de hemorragia pós-parto, não sendo escolha diante de abortamento incompleto com sangramento volumoso em cardiopata.",
+      "E": "Adiar a intervenção por 12 horas para repetir ultrassonografia retarda o controle do foco hemorrágico e favorece descompensação cardiovascular grave."
+    }
   },
   {
     "id": "q-enare-2024-080",
@@ -4866,7 +6174,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "ITU, Tromboembolismo e Intercorrências Clínicas",
     "temaSlug": "go-intercorrencias",
     "subtemaSlug": "go-intercorrencias-itu-tromboembolismo-e-intercorrencias-clinicas",
-    "tags": ["dengue-na-gestacao","sinais-de-alarme","hipotensao-postural","intercorrencias-clinicas"],
+    "tags": [
+      "dengue-na-gestacao",
+      "sinais-de-alarme",
+      "hipotensao-postural",
+      "intercorrencias-clinicas"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -4911,13 +6224,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alternativa **C** está correta. De acordo com o **Manual de Diagnóstico e Manejo Clínico da Dengue (Ministério da Saúde, 6ª ed. 2024)**, os sinais de alarme da dengue (Grupo C — indicação formal de internação e hidratação venosa imediata) são: dor abdominal intensa e contínua, vômitos persistentes, acúmulo de líquidos (ascite, derrame pleural/pericárdico), **hipotensão postural e/ou lipotimia**, hepatomegalia > 2 cm abaixo do RCD, sangramento de mucosa, letargia/irritabilidade e **aumento** progressivo do hematócrito.\n- **A) Incorreta:** O sinal de alarme são vômitos **persistentes**, não esporádicos.\n- **B) Incorreta:** O sinal de alarme é dor abdominal **intensa (referida ou à palpação) e contínua**, não moderada.\n- **D) Incorreta:** O sinal de alarme é o **aumento** progressivo do hematócrito (hemoconcentração por extravasamento plasmático), não diminuição.\n- **E) Incorreta:** O sinal de alarme é **hepatomegalia > 2 cm** abaixo do rebordo costal, não esplenomegalia de 1 cm.",
     "perolaClinica": "De acordo com o **Manual de Diagnóstico e Manejo Clínico da Dengue (Ministério da Saúde, 6ª ed.",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Reconhecimento dos sinais de alarme da dengue (Grupo C) segundo o protocolo do Ministério da Saúde.",
+      "raciocinioChave": "A hipotensão postural e/ou lipotimia é um dos sinais clínicos clássicos de alarme na dengue (Grupo C), refletindo instabilidade hemodinâmica incipiente por extravasamento plasmático. Sua identificação exige internação hospitalar imediata e hidratação venosa vigorosa, especialmente em gestante.",
+      "armadilhaBanca": "Confundir critérios de alarme na dengue trocando intensidade/persistência (vômitos persistentes vs. esporádicos) ou invertendo achados (aumento vs. queda do hematócrito; hepatomegalia vs. esplenomegalia)."
+    },
+    "mapaDistratores": {
+      "A": "Na classificação de risco da dengue, apenas vômitos persistentes constituem sinal de alarme, não vômitos esporádicos.",
+      "B": "O sinal de alarme abdominal exige dor intensa (referida ou à palpação) e contínua, e não desconforto ou dor moderada.",
+      "D": "O extravasamento plasmático na dengue provoca hemoconcentração com aumento progressivo do hematócrito, e não sua redução.",
+      "E": "O sinal de alarme visceral característico da dengue é hepatomegalia maior que 2 cm abaixo do rebordo costal, não esplenomegalia discreta."
+    }
   },
   {
     "id": "q-enare-2024-081",
@@ -4929,7 +6254,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Asma no Adulto",
     "temaSlug": "cm-pneumo",
     "subtemaSlug": "cm-pneumo-asma-no-adulto",
-    "tags": ["asma","quadro-clinico","diagnostico","broncoespasmo"],
+    "tags": [
+      "asma",
+      "quadro-clinico",
+      "diagnostico",
+      "broncoespasmo"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -4974,13 +6304,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alternativa **A** está correta. Mulher jovem (30 anos) com **tosse seca, sibilos difusos expiratórios, chiado no peito e dispneia aos esforços**, com **piora noturna e desencadeada por irritantes** (fumaça de cigarro), afebril e sem perda ponderal, apresenta o quadro clínico clássico de **asma** na Atenção Primária à Saúde (GINA 2024 / Caderno de Atenção Básica nº 25 — Ministério da Saúde).\n- **B) Incorreta:** Mucosa nasal sem alterações e ausência de secreção purulenta/dor facial afastam rinossinusite como causa dos sibilos difusos.\n- **C) Incorreta:** DPOC acomete tipicamente maiores de 40 anos com carga tabágica ativa prolongada e dispneia progressiva persistente.\n- **D) Incorreta:** Ausência de febre vespertina, emagrecimento e tosse produtiva torna tuberculose pouco provável.\n- **E) Incorreta:** PAC cursa com quadro agudo febril, tosse produtiva, taquipneia/taquicardia e estertores localizados, ausentes no caso.",
     "perolaClinica": "Mulher jovem (30 anos) com **tosse seca, sibilos difusos expiratórios, chiado no peito e dispneia aos esforços**, com **piora noturna e desencadeada por irritantes** (fumaça de cigarro), afebril e sem perda ponderal, apr",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Diagnóstico clínico de asma na Atenção Primária em adulto jovem sintomático.",
+      "raciocinioChave": "Paciente jovem com tosse seca, dispneia aos grandes esforços e chiado no peito com piora noturna e desencadeamento por fumaça de cigarro, somados a sibilos difusos na expiração forçada e ausência de febre, configura o quadro típico de asma. O exame físico normal fora do componente sibilante reforça a hipótese.",
+      "armadilhaBanca": "Confundir asma em adulto jovem não tabagista com DPOC ou pneumonia apesar de ausência de febre, início noturno e desencadeamento por irritante ambiental."
+    },
+    "mapaDistratores": {
+      "B": "A mucosa nasal sem alterações e a ausência de secreção purulenta ou dor facial afastam rinossinusite como explicação para sibilos difusos expiratórios.",
+      "C": "A DPOC acomete tipicamente indivíduos acima de 40 anos com tabagismo ativo prolongado e dispneia progressiva persistente, incompatível com o perfil descrito.",
+      "D": "A ausência de febre vespertina, sudorese noturna, perda ponderal e tosse produtiva crônica torna improvável o diagnóstico de tuberculose pulmonar.",
+      "E": "A pneumonia adquirida na comunidade manifesta-se com quadro infeccioso agudo febril, tosse produtiva e estertores localizados, ausentes nesta paciente."
+    }
   },
   {
     "id": "q-enare-2024-082",
@@ -4992,7 +6334,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Vigilância Epidemiológica e Notificação Compulsória",
     "temaSlug": "mp-vigilancia",
     "subtemaSlug": "mp-vigilancia-vigilancia-epidemiologica-e-notificacao-compulsoria",
-    "tags": ["rubeola","sorologia-igm-igg","vigilancia-epidemiologica","diagnostico-laboratorial"],
+    "tags": [
+      "rubeola",
+      "sorologia-igm-igg",
+      "vigilancia-epidemiologica",
+      "diagnostico-laboratorial"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -5037,13 +6384,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **B** está correta. Em cenário de eliminação da rubéola (ou surto encerrado há 4 meses, sem vínculo epidemiológico direto referido), o **Guia de Vigilância em Saúde (Ministério da Saúde)** determina que todo caso suspeito de doença exantemática febril (sarampo/rubéola) deve ser **notificado imediatamente e confirmado laboratorialmente** mediante coleta de sangue para **sorologia (anticorpos IgM e IgG específicos)** no primeiro contato com o serviço de saúde (e coleta de swab para RT-PCR quando indicado).\n- **A) Incorreta:** O paciente nega contato com casos confirmados e o surto ocorreu há 4 meses (acima do período de incubação/transmissibilidade), impedindo confirmação por vínculo epidemiológico.\n- **C) Incorreta:** Não há registro de vacinação recente no prontuário.\n- **D) Incorreta:** Critério clínico isolado nunca é suficiente para confirmar rubéola, dado o diagnóstico diferencial com sarampo, dengue, Zika, parvovírus e sífilis secundária.\n- **E) Incorreta:** Aguardar 48 horas sem coleta laboratorial atrasa as medidas de bloqueio vacinal e vigilância.",
     "perolaClinica": "Em cenário de eliminação da rubéola (ou surto encerrado há 4 meses, sem vínculo epidemiológico direto referido), o **Guia de Vigilância em Saúde (Ministério da Saúde)** determina que todo caso suspeito de doença exantemá",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Confirmação laboratorial obrigatória (IgM/IgG) de caso suspeito de rubéola na vigilância epidemiológica.",
+      "raciocinioChave": "Na vigilância de doenças exantemáticas em fase de eliminação, todo caso suspeito de rubéola sem contato direto recente com caso confirmado exige confirmação laboratorial por sorologia (IgM e IgG específicos). Um surto ocorrido há 4 meses ultrapassa o período de incubação e transmissibilidade para estabelecer vínculo epidemiológico.",
+      "armadilhaBanca": "Aceitar confirmação apenas clínica ou por vínculo epidemiológico tardio (surto de 4 meses atrás) em doença exantemática de notificação compulsória imediata."
+    },
+    "mapaDistratores": {
+      "A": "O paciente nega contato com casos confirmados e o surto regional ocorreu há 4 meses, tempo superior ao necessário para caracterizar vínculo epidemiológico ativo.",
+      "C": "Não há registro de vacinação recente no prontuário que justifique atribuir o exantema a evento pós-vacinal temporalmente associado.",
+      "D": "Os critérios clínicos isolados são insuficientes para confirmar rubéola devido à sobreposição sintomática com sarampo, dengue, Zika, parvovirose e sífilis secundária.",
+      "E": "Aguardar 48 horas sem coleta de amostra atrasa o diagnóstico laboratorial, a investigação epidemiológica e as medidas oportunas de bloqueio vacinal."
+    }
   },
   {
     "id": "q-enare-2024-083",
@@ -5055,7 +6414,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Imunização na Gestação",
     "temaSlug": "go-prenatal",
     "subtemaSlug": "go-prenatal-imunizacao-na-gestacao",
-    "tags": ["imunizacao-na-gestacao","vacina-influenza","pre-natal","pni"],
+    "tags": [
+      "imunizacao-na-gestacao",
+      "vacina-influenza",
+      "pre-natal",
+      "pni"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -5100,13 +6464,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alternativa **D** está correta. A vacina contra **influenza** é **inativada** (segura em **qualquer idade gestacional**, inclusive no 1º trimestre) e deve ser aplicada **anualmente** (pois as cepas circulantes mudam a cada temporada e a imunidade declina). Gestantes constituem grupo prioritário do **PNI (Ministério da Saúde)** devido ao maior risco de SRAG e mortalidade materna, além da proteção passiva conferida ao recém-nascido; portanto, Letícia deve ser **revacinada imediatamente**.\n- **A) Incorreta:** A vacina é recomendada em qualquer idade gestacional, inclusive com 10 semanas.\n- **B) Incorreta:** A vacina influenza requer dose anual, não confere imunidade por 10 anos.\n- **C) Incorreta:** Gestantes são grupo de indicação formal prioritária (não contraindicação).\n- **E) Incorreta:** Não há necessidade de aguardar 12 semanas de gestação para aplicar vacina inativada contra influenza.",
     "perolaClinica": "A vacina contra **influenza** é **inativada** (segura em **qualquer idade gestacional**, inclusive no 1º trimestre) e deve ser aplicada **anualmente** (pois as cepas circulantes mudam a cada temporada e a imunidade decli",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Indicação da vacinação anual contra influenza para gestantes em qualquer idade gestacional.",
+      "raciocinioChave": "A vacina contra influenza é inativada, sendo segura e formalmente indicada para gestantes em qualquer idade gestacional, inclusive na 10ª semana. Como a imunidade declina e as cepas circulantes são atualizadas anualmente, a paciente vacinada no ano anterior deve ser revacinada na campanha vigente.",
+      "armadilhaBanca": "Restringir erroneamente a vacina inativada contra influenza após o primeiro trimestre ou dispensar a dose anual com base em vacinação no ano anterior."
+    },
+    "mapaDistratores": {
+      "A": "Por ser uma vacina de vírus inativado, a imunização contra influenza é recomendada e segura inclusive durante o primeiro trimestre da gestação.",
+      "B": "A vacina contra influenza exige administração anual devido à variação antigênica das cepas circulantes e à queda dos títulos protetores, não durando 10 anos.",
+      "C": "Gestantes constituem grupo prioritário do PNI para a vacina influenza pelo maior risco de síndrome respiratória aguda grave, sem qualquer contraindicação.",
+      "E": "Não existe exigência de aguardar a 12ª semana gestacional para vacinar contra influenza; a proteção materna e neonatal deve ser garantida o quanto antes."
+    }
   },
   {
     "id": "q-enare-2024-085",
@@ -5118,7 +6494,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Vigilância Epidemiológica e Notificação Compulsória",
     "temaSlug": "mp-vigilancia",
     "subtemaSlug": "mp-vigilancia-vigilancia-epidemiologica-e-notificacao-compulsoria",
-    "tags": ["mpox","monkeypox","vigilancia-epidemiologica","monitoramento-clinico"],
+    "tags": [
+      "mpox",
+      "monkeypox",
+      "vigilancia-epidemiologica",
+      "monitoramento-clinico"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -5163,13 +6544,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "E",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **E** está correta. Conforme o **Plano de Contingência Nacional / Nota Técnica de Manejo Clínico da Mpox (Ministério da Saúde)**, pacientes confirmados que pertencem a **grupos de alto risco para evolução grave** (imunossuprimidos, PVHIV com CD4 < 200, gestantes, crianças < 8 anos, doenças cutâneas extensas) em acompanhamento ambulatorial/domiciliar devem receber **monitoramento clínico diário** (telemonitoramento ou presencial) para detecção precoce de sinais de gravidade e indicação de internação.\n- **A) Incorreta:** Intervalo de 2 dias é insuficiente para grupo de alto risco de agravamento.\n- **B) Incorreta:** Monitoramento a cada 48–72h pode ser adotado em casos leves de risco habitual, não em alto risco.\n- **C) Incorreta:** Intervalo semanal é inadequado para doença aguda em paciente de alto risco.\n- **D) Incorreta:** Intervalo quinzenal não permite identificar complicações agudas.",
     "perolaClinica": "Conforme o **Plano de Contingência Nacional / Nota Técnica de Manejo Clínico da Mpox (Ministério da Saúde)**, pacientes confirmados que pertencem a **grupos de alto risco para evolução grave** (imunossuprimidos, PVHIV co",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Periodicidade do monitoramento clínico de casos confirmados de mpox em grupos de alto risco.",
+      "raciocinioChave": "Segundo as notas técnicas de manejo clínico da mpox do Ministério da Saúde, pacientes confirmados pertencentes a grupos de alto risco para evolução grave (imunossuprimidos, gestantes, crianças pequenas) demandam vigilância clínica diária. O acompanhamento diário permite identificar precocemente sinais de agravamento e necessidade de internação.",
+      "armadilhaBanca": "Aplicar ao grupo de alto risco a frequência de seguimento de casos leves sem fatores de risco (48–72 horas ou semanal), retardando a detecção de complicações."
+    },
+    "mapaDistratores": {
+      "A": "O intervalo de 2 dias aplica-se a casos de risco habitual sem sinais de gravidade, sendo insuficiente para pacientes classificados como alto risco.",
+      "B": "A reavaliação a cada 3 dias (72 horas) não oferece margem de segurança adequada para detectar descompensação rápida em paciente de alto risco.",
+      "C": "O monitoramento semanal deixa janelas extensas sem avaliação médica durante a fase aguda de potencial complicação infecciosa ou sistêmica.",
+      "D": "Acompanhamento quinzenal é incompatível com a evolução clínica aguda da mpox e inviabiliza qualquer intervenção precoce em grupos vulneráveis."
+    }
   },
   {
     "id": "q-enare-2024-086",
@@ -5181,7 +6574,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Método Clínico Centrado na Pessoa e Comunicação",
     "temaSlug": "mp-mfc",
     "subtemaSlug": "mp-mfc-metodo-clinico-centrado-na-pessoa-e-comunicacao",
-    "tags": ["metodo-clinico-centrado-na-pessoa","entrevista-motivacional","sintomas-psicoticos","acolhimento-aps"],
+    "tags": [
+      "metodo-clinico-centrado-na-pessoa",
+      "entrevista-motivacional",
+      "sintomas-psicoticos",
+      "acolhimento-aps"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -5226,13 +6624,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **D** está correta. Diante de paciente com sintomas psicóticos **sem risco iminente de auto ou heteroagressão**, o manejo centrado na pessoa na APS (Caderno de Atenção Básica nº 34 — Saúde Mental / Ministério da Saúde; Tratado de MFC — Gusso) prioriza **acolhimento qualificado, construção de vínculo, avaliação clínica integral e pactuação de um Projeto Terapêutico Singular (PTS) dentro das possibilidades aceitas pelo paciente**, utilizando técnicas de **entrevista motivacional** e matriciamento com o CAPS, evitando posturas coercitivas que rompem o vínculo.\n- **A) Incorreta:** Encaminhamento burocrático contra a vontade do paciente gera evasão e quebra a coordenação do cuidado pela APS.\n- **B) Incorreta:** Insistir de forma impositiva na medicação em paciente com delírio persecutório agrava a desconfiança e rompe o vínculo terapêutico.\n- **C) Incorreta:** Tentar \"convencer\" racionalmente alguém em delírio persecutório é ineficaz e contraproducente.\n- **E) Incorreta:** Internação involuntária/compulsória (Lei nº 10.216/2001) só se justifica quando esgotados os recursos extra-hospitalares e diante de risco grave iminente à vida/integridade física.",
     "perolaClinica": "Diante de paciente com sintomas psicóticos **sem risco iminente de auto ou heteroagressão**, o manejo centrado na pessoa na APS (Caderno de Atenção Básica nº 34 — Saúde Mental / Ministério da Saúde; Tratado de MFC — Guss",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Manejo centrado na pessoa na APS diante de paciente psicótico sem risco iminente que recusa medicação e CAPS.",
+      "raciocinioChave": "Sem risco agudo de auto ou heteroagressão, a APS deve priorizar o acolhimento empático, a avaliação clínica geral e a pactuação de um plano terapêutico possível dentro das limitações do paciente. O uso da entrevista motivacional e a construção de vínculo sustentam a coordenação do cuidado sem romper a relação terapêutica.",
+      "armadilhaBanca": "Optar por encaminhamento burocrático contra a vontade do paciente, tentativa de convencimento racional de um delírio ou internação compulsória sem risco iminente."
+    },
+    "mapaDistratores": {
+      "A": "Encaminhar compulsoriamente ao CAPS sem adesão rompe o vínculo com a equipe de referência e geralmente resulta em abandono do cuidado.",
+      "B": "Insistir de modo impositivo na medicação em vigência de delírio persecutório acentua a desconfiança do paciente e inviabiliza o seguimento.",
+      "C": "Tentar persuadir racionalmente um paciente psicótico a aceitar o tratamento durante um delírio persecutório é clinicamente ineficaz e contraproducente.",
+      "E": "A internação involuntária ou compulsória (Lei nº 10.216/2001) reserva-se exclusivamente a situações com risco grave iminente à vida após esgotamento dos recursos extra-hospitalares."
+    }
   },
   {
     "id": "q-enare-2024-087",
@@ -5244,7 +6654,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Cuidados Paliativos",
     "temaSlug": "cm-uti",
     "subtemaSlug": "cm-uti-cuidados-paliativos",
-    "tags": ["cuidados-paliativos","alzheimer-avancado","geriatria","conduta-terapeutica"],
+    "tags": [
+      "cuidados-paliativos",
+      "alzheimer-avancado",
+      "geriatria",
+      "conduta-terapeutica"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -5289,13 +6704,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "E",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alternativa **E** está correta. Idoso longevo (86 anos) com **demência de Alzheimer em estágio avançado**, **síndrome de imobilidade grau IV** e **perfil 3 de funcionalidade** (dependência total/fragilidade avançada) apresenta doença crônica progressiva e ameaçadora à vida sem perspectiva curativa, enquadrando-se em **cuidados paliativos prolongados / fase final de vida**, cujo foco é conforto, controle de sintomas, suporte familiar e desprescrição de terapias fúteis (Manual de Cuidados Paliativos — Ministério da Saúde / ANCP).\n- **A) Incorreta:** Controle rigoroso de PA e glicemia em idoso frágil terminal aumenta risco de hipotensão ortostática, quedas e hipoglicemia grave sem benefício de sobrevida.\n- **B) Incorreta:** Polifarmácia deve ser ativamente revista (prevenção quaternária / desprescrição de medicações preventivas de longo prazo sem benefício em fase avançada).\n- **C) Incorreta:** Alzheimer avançado + imobilidade grau IV configura **dependência total** para ABVDs, não parcial.\n- **D) Incorreta:** O objetivo da equipe multiprofissional nesse estágio é cuidado paliativo e conforto, não reabilitação funcional.",
     "perolaClinica": "Idoso longevo (86 anos) com **demência de Alzheimer em estágio avançado**, **síndrome de imobilidade grau IV** e **perfil 3 de funcionalidade** (dependência total/fragilidade avançada) apresenta doença crônica progressiv",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Reconhecimento de fase final de vida e indicação de cuidados paliativos prolongados em idoso com demência avançada.",
+      "raciocinioChave": "Idoso longevo com Alzheimer avançado, síndrome de imobilidade grau IV e perfil 3 de funcionalidade apresenta doença crônica progressiva ameaçadora à vida sem perspectiva de recuperação funcional. O cuidado deve ser direcionado aos cuidados paliativos prolongados, priorizando conforto, controle de sintomas e desprescrição.",
+      "armadilhaBanca": "Indicar controle metabólico/pressórico estrito, manutenção acrítica de polifarmácia ou reabilitação funcional em idoso com demência avançada e imobilidade grau IV."
+    },
+    "mapaDistratores": {
+      "A": "O controle rigoroso de pressão arterial e glicemia em idoso frágil terminal aumenta o risco de hipotensão, quedas e hipoglicemia sem benefício de sobrevida.",
+      "B": "Manter todas as medicações preventivas de longo prazo agrava a polifarmácia iatrogênica, sendo recomendada revisão e desprescrição nesse estágio clínico.",
+      "C": "A associação de demência de Alzheimer avançada e síndrome de imobilidade grau IV caracteriza dependência total para atividades básicas da vida diária, não parcial.",
+      "D": "Nessa fase avançada e irreversível de fragilidade, a atuação multiprofissional volta-se para conforto e suporte familiar paliativo, e não para reabilitação curativa."
+    }
   },
   {
     "id": "q-enare-2024-088",
@@ -5307,7 +6734,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Método Clínico Centrado na Pessoa e Comunicação",
     "temaSlug": "mp-mfc",
     "subtemaSlug": "mp-mfc-metodo-clinico-centrado-na-pessoa-e-comunicacao",
-    "tags": ["tabagismo","entrevista-motivacional","estagios-de-mudanca","cessacao-do-tabagismo"],
+    "tags": [
+      "tabagismo",
+      "entrevista-motivacional",
+      "estagios-de-mudanca",
+      "cessacao-do-tabagismo"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -5352,13 +6784,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **D** está correta. Mylena possui **dependência nicotínica muito elevada (Fagerström = 10; 50 cigarros/dia)** e encontra-se no estágio de **pré-contemplação** (não consegue imaginar parar), apesar do diagnóstico recente de câncer de pulmão. Conforme o **PCDT do Tabagismo (INCA/Ministério da Saúde)**, a abordagem eficaz combina **entrevista motivacional** (para trabalhar ambivalência e avançar nos estágios de mudança) associada a **abordagem cognitivo-comportamental e suporte farmacoterápico** adequado (reposição de nicotina combinada e/ou bupropiona) assim que pactuada a cessação.\n- **A) Incorreta:** Dispositivos eletrônicos para fumar (*vapes*) são proibidos pela ANVISA e contraindicados como ferramenta de cessação do tabagismo.\n- **B) Incorreta:** Com Fagerström 10 (dependência muito elevada), o suporte farmacoterápico é formalmente indicado junto à terapia comportamental.\n- **C) Incorreta:** Terapia farmacológica isolada sem entrevista motivacional e suporte comportamental apresenta taxas de sucesso muito menores, especialmente em paciente em pré-contemplação.\n- **E) Incorreta:** Prescrever bupropiona isoladamente sem trabalhar motivação e abordagem comportamental é insuficiente (além de ser incompleta frente à D).",
     "perolaClinica": "Mylena possui **dependência nicotínica muito elevada (Fagerström = 10; 50 cigarros/dia)** e encontra-se no estágio de **pré-contemplação** (não consegue imaginar parar), apesar do diagnóstico recente de câncer de pulmão.",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Abordagem do tabagismo de alta dependência (Fagerström 10) em estágio de pré-contemplação.",
+      "raciocinioChave": "A paciente apresenta dependência nicotínica muito elevada (50 cigarros/dia; Fagerström 10) e encontra-se em pré-contemplação, apesar do câncer de pulmão recente. A abordagem eficaz integra entrevista motivacional para trabalhar a ambivalência com suporte comportamental e farmacoterápico adequado.",
+      "armadilhaBanca": "Prescrever farmacoterapia isolada sem abordagem comportamental/motivacional para paciente em pré-contemplação, ou sugerir vapers como estratégia de redução de danos."
+    },
+    "mapaDistratores": {
+      "A": "Dispositivos eletrônicos para fumar (vapers) têm comercialização proibida pela ANVISA e não são recomendados como método de cessação do tabagismo.",
+      "B": "Um escore de Fagerström de 10 traduz dependência muito elevada, na qual a tentativa sem suporte farmacológico apresenta baixíssima taxa de sucesso.",
+      "C": "A reposição isolada de nicotina sem abordagem comportamental nem entrevista motivacional negligencia o estágio de pré-contemplação e a ambivalência da paciente.",
+      "E": "Prescrever bupropiona de forma isolada, sem suporte comportamental nem trabalho motivacional prévio, é insuficiente frente à dependência grave em pré-contemplação."
+    }
   },
   {
     "id": "q-enare-2024-089",
@@ -5370,7 +6814,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Hipertensão Arterial Sistêmica",
     "temaSlug": "cm-cardio",
     "subtemaSlug": "cm-cardio-hipertensao-arterial-sistemica",
-    "tags": ["hipertensao-arterial-sistemica","diagnostico","criterios-diagnosticos","atencao-primaria"],
+    "tags": [
+      "hipertensao-arterial-sistemica",
+      "diagnostico",
+      "criterios-diagnosticos",
+      "atencao-primaria"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -5415,13 +6864,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alternativa **D** está correta. Segundo a **Diretriz Brasileira de Hipertensão Arterial (SBC)** e o Caderno de Atenção Básica nº 37 (Ministério da Saúde), o diagnóstico de HAS em consultório é estabelecido pela **persistência de níveis pressóricos ≥ 140 x 90 mmHg em pelo menos duas consultas/ocasiões distintas** — Rodrigo apresenta 5 registros consecutivos acima de 140 x 90 mmHg no último ano, além da aferição atual (165 x 90 mmHg).\n- **A) Incorreta:** Uma única aferição isolada em pronto atendimento (sob dor/estresse agudo) não fecha diagnóstico de HAS.\n- **B) Incorreta:** Sedentarismo é fator de risco cardiovascular, não critério diagnóstico de HAS.\n- **C) Incorreta:** História familiar aumenta o risco, mas não define o diagnóstico.\n- **E) Incorreta:** Idade de 48 anos não é critério diagnóstico de hipertensão.",
     "perolaClinica": "Segundo a **Diretriz Brasileira de Hipertensão Arterial (SBC)** e o Caderno de Atenção Básica nº 37 (Ministério da Saúde), o diagnóstico de HAS em consultório é estabelecido pela **persistência de níveis pressóricos ≥ 14",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Critério diagnóstico de hipertensão arterial sistêmica pela persistência de níveis ≥ 140 x 90 mmHg em múltiplas aferições.",
+      "raciocinioChave": "O diagnóstico ambulatorial de HAS exige confirmação de pressão arterial ≥ 140 x 90 mmHg em pelo menos duas ocasiões distintas. O paciente apresenta cinco registros consecutivos acima desse limiar ao longo do último ano, além da aferição atual elevada, firmando o diagnóstico.",
+      "armadilhaBanca": "Aceitar medida isolada em pronto atendimento ou fatores de risco isolados (sedentarismo, história familiar) como critério diagnóstico definitivo de HAS."
+    },
+    "mapaDistratores": {
+      "A": "Uma única aferição elevada em pronto atendimento, frequentemente influenciada por dor ou estresse agudo, não é suficiente para diagnosticar hipertensão crônica.",
+      "B": "O sedentarismo representa um fator de risco modificável importante para doenças cardiovasculares, mas não constitui critério diagnóstico de HAS.",
+      "C": "A história familiar positiva eleva a probabilidade clínica e o risco basal do paciente, porém não define o diagnóstico de hipertensão arterial.",
+      "E": "A idade de 48 anos aumenta a prevalência populacional da doença, sem configurar critério diagnóstico isolado na ausência de elevação pressórica sustentada."
+    }
   },
   {
     "id": "q-enare-2024-090",
@@ -5433,7 +6894,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Diabetes Mellitus - Diagnóstico e Tratamento",
     "temaSlug": "cm-endocrino",
     "subtemaSlug": "cm-endocrino-diabetes-mellitus-diagnostico-e-tratamento",
-    "tags": ["diabetes-mellitus","glicemia-de-jejum","criterios-diagnosticos","atencao-primaria"],
+    "tags": [
+      "diabetes-mellitus",
+      "glicemia-de-jejum",
+      "criterios-diagnosticos",
+      "atencao-primaria"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -5478,13 +6944,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **C** está correta. Segundo a **Diretriz da Sociedade Brasileira de Diabetes (SBD 2024)** e a ADA, em pacientes assintomáticos, o diagnóstico de diabetes mellitus exige **dois exames alterados** (em ocasiões distintas ou dois métodos diferentes na mesma coleta), considerando: glicemia de jejum **≥ 126 mg/dL**, HbA1c **≥ 6,5%** ou TOTG 2h **≥ 200 mg/dL**. Maria Lina apresenta **duas glicemias de jejum ≥ 126 mg/dL** em datas distintas (136 e 152 mg/dL), confirmando o diagnóstico.\n- **A) Incorreta:** Glicemia capilar não é exame diagnóstico (e mesmo venosa casual exigiria ≥ 200 mg/dL com sintomas clássicos).\n- **B) Incorreta:** HbA1c de 5,6% é normal e 6,1% configura **pré-diabetes** (5,7% a 6,4%).\n- **D) Incorreta:** Uma **única** glicemia de jejum de 126 mg/dL em paciente assintomática exige repetição/confirmação com segundo exame para firmar o diagnóstico.\n- **E) Incorreta:** HbA1c de 4,5% é completamente normal.",
     "perolaClinica": "Segundo a **Diretriz da Sociedade Brasileira de Diabetes (SBD 2024)** e a ADA, em pacientes assintomáticos, o diagnóstico de diabetes mellitus exige **dois exames alterados** (em ocasiões distintas ou dois métodos difere",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Critérios laboratoriais confirmatórios de diabetes mellitus em pacientes assintomáticos (SBD/ADA).",
+      "raciocinioChave": "Em pacientes assintomáticos, o diagnóstico de diabetes mellitus exige dois exames alterados em ocasiões distintas ou dois testes distintos alterados na mesma coleta (glicemia de jejum ≥ 126 mg/dL, HbA1c ≥ 6,5% ou TOTG 2h ≥ 200 mg/dL). Maria Lina preenche o critério com duas glicemias de jejum ≥ 126 mg/dL em datas diferentes.",
+      "armadilhaBanca": "Validar glicemia capilar aleatória ou única glicemia de jejum ≥ 126 mg/dL sem confirmação em paciente assintomático, ou confundir HbA1c de pré-diabetes (6,1%) com diabetes."
+    },
+    "mapaDistratores": {
+      "A": "A glicemia capilar não serve para diagnóstico definitivo de diabetes, e mesmo uma glicemia plasmática casual exigiria valor ≥ 200 mg/dL com sintomas clássicos.",
+      "B": "Valores de hemoglobina glicada de 5,6% estão na faixa de normalidade e 6,1% enquadra-se em pré-diabetes (5,7% a 6,4%), não fechando diagnóstico de diabetes.",
+      "D": "Uma única glicemia de jejum igual a 126 mg/dL em paciente assintomática exige repetição confirmatória com segundo exame alterado antes de firmar o diagnóstico.",
+      "E": "O resultado isolado de hemoglobina glicada de 4,5% encontra-se completamente dentro dos limites da normalidade, afastando diabetes mellitus."
+    }
   },
   {
     "id": "q-enare-2024-091",
@@ -5496,7 +6974,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Hipertensão Arterial Sistêmica",
     "temaSlug": "cm-cardio",
     "subtemaSlug": "cm-cardio-hipertensao-arterial-sistemica",
-    "tags": ["hipertensao-arterial-sistemica","meta-pressorica","mudanca-de-estilo-de-vida","seguimento-aps"],
+    "tags": [
+      "hipertensao-arterial-sistemica",
+      "meta-pressorica",
+      "mudanca-de-estilo-de-vida",
+      "seguimento-aps"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -5541,13 +7024,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alternativa **A** está correta. Para hipertensos de **baixo ou moderado risco cardiovascular**, a meta pressórica recomendada pela **Diretriz Brasileira de Hipertensão Arterial (SBC)** é **< 140 x 90 mmHg** (idealmente em torno de 130 x 80 mmHg se bem tolerada). Com PA controlada em 130 x 80 mmHg em uso regular, a conduta é **manter o esquema anti-hipertensivo atual e reforçar continuamente as medidas não farmacológicas (MEV)**.\n- **B) Incorreta:** Retirar a medicação de um paciente hipertenso controlado leva à recidiva da elevação pressórica.\n- **C) Incorreta:** Não existe indicação de rodízio de anti-hipertensivos para evitar \"tolerância\".\n- **D) Incorreta:** A PA de 130 x 80 mmHg está dentro da meta preconizada.\n- **E) Incorreta:** A PA está controlada dentro da meta, não requerendo troca ou intensificação medicamentosa.",
     "perolaClinica": "Para hipertensos de **baixo ou moderado risco cardiovascular**, a meta pressórica recomendada pela **Diretriz Brasileira de Hipertensão Arterial (SBC)** é **< 140 x 90 mmHg** (idealmente em torno de 130 x 80 mmHg se bem ",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Meta pressórica (< 140 x 90 mmHg) e conduta de manutenção terapêutica em hipertenso de baixo risco cardiovascular.",
+      "raciocinioChave": "Em pacientes hipertensos de baixo ou moderado risco cardiovascular, a meta pressórica pela Diretriz Brasileira de Hipertensão Arterial é < 140 x 90 mmHg (idealmente ~130 x 80 mmHg). Estando o paciente bem controlado com 130 x 80 mmHg, deve-se manter a medicação regular e reforçar as mudanças de estilo de vida.",
+      "armadilhaBanca": "Suspender ou trocar anti-hipertensivos bem tolerados em paciente controlado sob a falsa ideia de \"cura\" ou \"tolerância\" farmacológica."
+    },
+    "mapaDistratores": {
+      "B": "A suspensão dos anti-hipertensivos após obtenção de controle pressórico leva habitualmente ao retorno dos níveis elevados de pressão arterial.",
+      "C": "Não há base farmacológica que justifique rodízio ou substituição de anti-hipertensivos eficazes por suposto desenvolvimento de tolerância.",
+      "D": "A pressão arterial de 130 x 80 mmHg encontra-se plenamente dentro da meta preconizada para hipertensos de baixo risco cardiovascular.",
+      "E": "Não há indicação de modificar ou intensificar a prescrição anti-hipertensiva quando a pressão arterial já está controlada dentro da meta terapêutica."
+    }
   },
   {
     "id": "q-enare-2024-092",
@@ -5559,7 +7054,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Complicações Crônicas do Diabetes",
     "temaSlug": "cm-endocrino",
     "subtemaSlug": "cm-endocrino-complicacoes-cronicas-do-diabetes",
-    "tags": ["pe-diabetico","rastreamento","classificacao-de-risco","iwgdf"],
+    "tags": [
+      "pe-diabetico",
+      "rastreamento",
+      "classificacao-de-risco",
+      "iwgdf"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -5604,13 +7104,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **A** está correta. Conforme o **Manual do Pé Diabético do Ministério da Saúde** e as diretrizes do **IWGDF / SBD**, a ausência de neuropatia (sensibilidade protetora plantar preservada), ausência de doença arterial periférica, ausência de deformidades e sem história de úlcera/amputação classifica o paciente como **Risco Grau 0 (muito baixo risco)**, indicando **exame clínico dos pés com reavaliação anual** na APS e educação em autocuidado.\n- **B) Incorreta:** Grau 1 corresponde à presença de neuropatia sensitiva (perda da sensibilidade protetora) ou DAP isolada (reavaliação semestral).\n- **C) Incorreta:** Grau 2 envolve neuropatia + DAP e/ou deformidade nos pés (reavaliação a cada 3–6 meses).\n- **D) Incorreta:** Grau 3 corresponde a histórico prévio de úlcera ou amputação (reavaliação a cada 1–3 meses).\n- **E) Incorreta:** Não corresponde à classificação de risco 0–3 do IWGDF/MS.",
     "perolaClinica": "Conforme o **Manual do Pé Diabético do Ministério da Saúde** e as diretrizes do **IWGDF / SBD**, a ausência de neuropatia (sensibilidade protetora plantar preservada), ausência de doença arterial periférica, ausência de ",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Classificação de risco grau 0 do pé diabético (IWGDF/MS) e intervalo de reavaliação anual.",
+      "raciocinioChave": "Paciente diabética com sensibilidade protetora preservada, ausência de deformidades nos pés e sem histórico de úlceras ou amputação classifica-se no grau 0 de risco pelo protocolo do Ministério da Saúde e IWGDF. Essa categoria de muito baixo risco demanda reavaliação clínica anual na APS.",
+      "armadilhaBanca": "Confundir os graus de risco 0 a 3 do pé diabético e seus respectivos intervalos de reavaliação periódica na Atenção Primária."
+    },
+    "mapaDistratores": {
+      "B": "O grau 1 caracteriza-se pela presença de neuropatia sensitiva (perda da sensibilidade protetora) ou doença arterial periférica isolada, com seguimento semestral.",
+      "C": "O grau 2 corresponde à associação de neuropatia com doença arterial periférica e/ou deformidades estruturais nos pés, requerendo reavaliação a cada 3 a 6 meses.",
+      "D": "O grau 3 engloba pacientes com antecedente de ulceração plantar ou amputação prévia, exigindo acompanhamento frequente a cada 1 a 3 meses.",
+      "E": "A subdivisão \"grau IIIa\" não faz parte da estratificação oficial de risco de 0 a 3 preconizada pelo IWGDF e pelo Ministério da Saúde."
+    }
   },
   {
     "id": "q-enare-2024-093",
@@ -5622,7 +7134,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Ferramentas de Abordagem Familiar e Comunitária",
     "temaSlug": "mp-mfc",
     "subtemaSlug": "mp-mfc-ferramentas-de-abordagem-familiar-e-comunitaria",
-    "tags": ["abordagem-familiar","sobrecarga-do-cuidador","plano-terapeutico-singular","atencao-domiciliar"],
+    "tags": [
+      "abordagem-familiar",
+      "sobrecarga-do-cuidador",
+      "plano-terapeutico-singular",
+      "atencao-domiciliar"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -5667,13 +7184,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **A** está correta. Vanda está clínica e funcionalmente **estável** (sem lesões por pressão, sem internações, cuidados bem executados pela filha). Por outro lado, Joana é uma **cuidadora idosa (68 anos)** assumindo integralmente cuidados de alta demanda (banho no leito, dieta enteral, mudança de decúbito). Segundo os **Cadernos de Atenção Domiciliar e Envelhecimento (Ministério da Saúde)**, a conduta essencial da equipe da APS (Modalidade AD1) é **manter o acompanhamento longitudinal de Vanda na APS** e **cuidar ativamente da cuidadora**, rastreando precocemente estresse e **sobrecarga do cuidador** (ex.: escala de Zarit).\n- **B) Incorreta:** Paciente estável com Alzheimer há 16 anos não precisa ser encaminhada ao geriatra nem sobrecarregar a família com deslocamentos ambulatoriais de reabilitação sem indicação.\n- **C) Incorreta:** Não há perspectiva de reabilitação de deglutição em CER numa paciente de 92 anos com 16 anos de Alzheimer em dieta enteral.\n- **D) Incorreta:** AD2/atenção secundária domiciliar é indicada para casos agudizados/instáveis ou procedimentos complexos, não para paciente estável acompanhável em AD1.\n- **E) Incorreta:** A equipe da APS tem atribuição de prover cuidados paliativos primários sem necessidade de transferir o cuidado estável para serviço especializado, além de omitir o suporte à cuidadora.",
     "perolaClinica": "Vanda está clínica e funcionalmente **estável** (sem lesões por pressão, sem internações, cuidados bem executados pela filha).",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Atenção domiciliar (AD1) na APS e prevenção da sobrecarga do cuidador no Projeto Terapêutico Singular.",
+      "raciocinioChave": "A paciente apresenta estabilidade clínica e cuidados domiciliares efetivos em demência avançada, permanecendo sob acompanhamento da equipe da APS (AD1) sem indicação de encaminhamento especializado. O foco do PTS deve incluir suporte contínuo e rastreio de sobrecarga da cuidadora idosa de 68 anos.",
+      "armadilhaBanca": "Encaminhar paciente acamada estável em atenção domiciliar básica (AD1) para serviços especializados ou reabilitação inapropriada, negligenciando o suporte à cuidadora idosa."
+    },
+    "mapaDistratores": {
+      "B": "Paciente estável com Alzheimer há 16 anos bem assistida na APS não necessita de encaminhamento rotineiro ao geriatra nem de deslocamentos desnecessários.",
+      "C": "Não há perspectiva clínica de reabilitação da deglutição em centro especializado (CER) para paciente nonagenária com demência terminal em dieta enteral.",
+      "D": "Serviços de atenção domiciliar secundária (AD2) destinam-se a casos instáveis ou procedimentos complexos, não a pacientes estáveis manejáveis em AD1 pela APS.",
+      "E": "A equipe da APS tem competência para prover cuidados paliativos primários sem transferir o caso estável, além de essa opção omitir o cuidado à cuidadora."
+    }
   },
   {
     "id": "q-enare-2024-094",
@@ -5685,7 +7214,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Ferramentas de Abordagem Familiar e Comunitária",
     "temaSlug": "mp-mfc",
     "subtemaSlug": "mp-mfc-ferramentas-de-abordagem-familiar-e-comunitaria",
-    "tags": ["ciclo-de-vida-familiar","crises-familiares","crise-acidental","medicina-de-familia-e-comunidade"],
+    "tags": [
+      "ciclo-de-vida-familiar",
+      "crises-familiares",
+      "crise-acidental",
+      "medicina-de-familia-e-comunidade"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -5730,13 +7264,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alternativa **C** está correta. Na **Abordagem Familiar em Medicina de Família e Comunidade** (Carter & McGoldrick / Tratado de MFC — Gusso), distinguem-se **crises evolutivas (previsíveis/normativas)** — transições esperadas do ciclo de vida (nascimento de filhos, escola, adolescência, saída de casa, envelhecimento) — de **crises acidentais (imprevisíveis/paranormativas)**, eventos inesperados que desestruturam a homeostase familiar, como **desemprego**, doença grave súbita, morte prematura ou despejo/perda da moradia.\n- **A) Incorreta:** Família com filho pequeno é estágio normativo/evolutivo do ciclo de vida familiar.\n- **B) Incorreta:** Família em estágio tardio é fase evolutiva esperada (e nem corresponde ao momento atual de Jéssica).\n- **D) Incorreta:** Família com criança em idade escolar é transição evolutiva previsível.\n- **E) Incorreta:** Família com adolescente é fase evolutiva previsível do ciclo de vida familiar.",
     "perolaClinica": "Na **Abordagem Familiar em Medicina de Família e Comunidade** (Carter & McGoldrick / Tratado de MFC — Gusso), distinguem-se **crises evolutivas (previsíveis/normativas)** — transições esperadas do ciclo de vida (nascimen",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Diferenciação entre crises evolutivas (normativas) e acidentais (paranormativas) no ciclo de vida familiar.",
+      "raciocinioChave": "Segundo Carter e McGoldrick, crises acidentais são eventos imprevisíveis que desestruturam a homeostase familiar, como o desemprego do provedor e a perda da moradia. Já a presença de filhos pequenos, escolares ou adolescentes representa transições esperadas do ciclo vital.",
+      "armadilhaBanca": "Confundir fases normativas atuais da família descrita no enunciado (filhos de 4, 6 e 14 anos) com crise acidental."
+    },
+    "mapaDistratores": {
+      "A": "Família com filho pequeno corresponde a um estágio evolutivo previsível e normativo do ciclo de vida familiar, não a uma crise acidental.",
+      "B": "Família em estágio tardio designa uma etapa normativa esperada do ciclo vital e tampouco corresponde ao momento familiar atual descrito.",
+      "D": "Família com criança em idade escolar constitui uma transição normativa prevista no desenvolvimento familiar, e não um evento inesperado.",
+      "E": "Família com adolescente representa um estágio evolutivo esperado no ciclo vital familiar, distinto de eventos disruptivos imprevisíveis."
+    }
   },
   {
     "id": "q-enare-2024-095",
@@ -5748,7 +7294,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Ferramentas de Abordagem Familiar e Comunitária",
     "temaSlug": "mp-mfc",
     "subtemaSlug": "mp-mfc-ferramentas-de-abordagem-familiar-e-comunitaria",
-    "tags": ["genograma","abordagem-familiar","medicina-de-familia-e-comunidade","padroes-transgeracionais"],
+    "tags": [
+      "genograma",
+      "abordagem-familiar",
+      "medicina-de-familia-e-comunidade",
+      "padroes-transgeracionais"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -5793,13 +7344,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **A** está correta. [REVISAR: questão possui figura de genograma na página 19 do PDF original que pode ser anexada como clinicalImage]. Pela leitura do genograma apresentado na prova (Mário: falecido [X] aos 53 anos com etilismo, HAS e tabagismo; Mário Luís: 43 anos com etilismo, HAS e tabagismo), evidencia-se claramente um **padrão transgeracional repetitivo de comportamento e saúde** (etilismo, tabagismo e hipertensão arterial) entre pai (Mário) e filho (Mário Luís), conforme a interpretação clássica de genogramas em MFC (McGoldrick / Gusso).\n- **B) Incorreta:** Não há linha em zigue-zague (símbolo de relação conflituosa) conectando Mônica e Maria no genograma.\n- **C) Incorreta:** Não há linha em zigue-zague indicando relação conflituosa entre Mônica e Mário Luís no desenho.\n- **D) Incorreta:** Não há duas barras transversais na linha conjugal de Maria e Mário (símbolo de divórcio); Mário está marcado com \"X\" (falecido).\n- **E) Incorreta:** O indivíduo índice (representado por **círculo duplo**) no genograma é **Mônica** (29 anos), não Mário Luís.",
     "perolaClinica": "[REVISAR: questão possui figura de genograma na página 19 do PDF original que pode ser anexada como clinicalImage].",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Interpretação de simbologia e padrões transgeracionais em genograma na Medicina de Família.",
+      "raciocinioChave": "O genograma evidencia repetição transgeracional de comportamentos e agravos entre Mário (falecido aos 53 anos com etilismo, HAS e tabagismo) e seu filho Mário Luís (43 anos, também etilista, hipertenso e tabagista). Os demais símbolos descritos nas alternativas incorretas não estão presentes no traçado.",
+      "armadilhaBanca": "Trocar a representação simbólica de óbito, divórcio, relação conflituosa e indivíduo índice (círculo duplo) durante a leitura visual do genograma."
+    },
+    "mapaDistratores": {
+      "B": "A ausência de linha em zigue-zague entre Mônica e Maria no genograma descarta a representação gráfica de relação conflituosa entre ambas.",
+      "C": "Não há traçado em zigue-zague ligando Mônica e Mário Luís, o que inviabiliza inferir relação conflituosa pela simbologia do genograma.",
+      "D": "A linha conjugal entre Maria e Mário não exibe duas barras transversais de divórcio, e Mário encontra-se marcado com X indicando óbito.",
+      "E": "O indivíduo índice é identificado por contorno duplo no genograma, correspondendo a Mônica (29 anos) e não a Mário Luís."
+    }
   },
   {
     "id": "q-enare-2024-096",
@@ -5811,7 +7374,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Atenção Primária à Saúde e ESF",
     "temaSlug": "mp-sus",
     "subtemaSlug": "mp-sus-atencao-primaria-a-saude-e-esf",
-    "tags": ["rcop","metodo-soap","registro-clinico","atencao-primaria-a-saude"],
+    "tags": [
+      "rcop",
+      "metodo-soap",
+      "registro-clinico",
+      "atencao-primaria-a-saude"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -5856,13 +7424,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alternativa **B** está correta. No método **SOAP** do **Registro Clínico Orientado por Problemas (RCOP)** (Weed / Tratado de MFC — Gusso): **S (Subjetivo)** registra queixas, sintomas, sentimentos, medos e expectativas relatados pela pessoa; **O (Objetivo)** registra dados mensuráveis e observáveis do exame físico e exames complementares (**PA 120 x 65 mmHg, FC, peso, altura, FR**); **A (Avaliação)** registra hipóteses diagnósticas/problemas (CIAP-2/CID); e **P (Plano)** registra condutas terapêuticas, diagnósticas e seguimento.\n- **A) Incorreta:** Sinais vitais e antropometria são achados mensuráveis pertencentes ao campo **Objetivo (O)**, não Subjetivo.\n- **C) Incorreta:** O campo Avaliação (A) contém síntese clínica e diagnósticos, não sinais vitais brutos.\n- **D) Incorreta:** Sentimentos, medos e insônia relatados por Tatiana pertencem ao campo **Subjetivo (S)** (experiência da doença — MCCP).\n- **E) Incorreta:** Medos e preocupações são altamente relevantes no Método Clínico Centrado na Pessoa e devem constar no campo Subjetivo.",
     "perolaClinica": "No método **SOAP** do **Registro Clínico Orientado por Problemas (RCOP)** (Weed / Tratado de MFC — Gusso): **S (Subjetivo)** registra queixas, sintomas, sentimentos, medos e expectativas relatados pela pessoa; **O (Objet",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Alocação de dados clínicos nos campos do método SOAP no Registro Clínico Orientado por Problemas (RCOP).",
+      "raciocinioChave": "No modelo SOAP, o campo Objetivo (O) reúne dados mensuráveis e observáveis do exame físico e exames complementares, como pressão arterial, frequências cardíaca e respiratória, peso e altura. Queixas, medos e percepções da paciente pertencem ao campo Subjetivo (S).",
+      "armadilhaBanca": "Inserir sinais vitais no campo Subjetivo ou Avaliação, ou classificar sentimentos e medos da paciente como irrelevantes ou pertencentes à Avaliação."
+    },
+    "mapaDistratores": {
+      "A": "Sinais vitais e dados antropométricos mensuráveis integram o campo Objetivo (O) do SOAP, e não o campo Subjetivo (S).",
+      "C": "O campo Avaliação (A) destina-se à síntese diagnóstica e lista de problemas clínicos, não ao registro bruto de sinais vitais.",
+      "D": "Relatos de astenia, medo de doença grave e insônia por preocupação expressam a vivência do adoecimento e pertencem ao campo Subjetivo (S).",
+      "E": "A experiência subjetiva do paciente, incluindo medos e preocupações, é componente central do Método Clínico Centrado na Pessoa e deve constar no Subjetivo."
+    }
   },
   {
     "id": "q-enare-2024-097",
@@ -5874,7 +7454,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Vasculites Sistêmicas",
     "temaSlug": "cm-reumato",
     "subtemaSlug": "cm-reumato-vasculites-sistemicas",
-    "tags": ["arterite-de-celulas-gigantes","arterite-temporal","vasculites-sistemicas","vhs"],
+    "tags": [
+      "arterite-de-celulas-gigantes",
+      "arterite-temporal",
+      "vasculites-sistemicas",
+      "vhs"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -5919,13 +7504,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **B** está correta. Em idoso (> 50 anos) com cefaleia nova e **espessamento/anormalidade da artéria temporal**, a suspeita clínica é de **arterite de células gigantes (arterite temporal)**. Segundo revisões sistemáticas de acurácia diagnóstica (JAMA Rational Clinical Examination — *Does This Patient Have Temporal Arteritis?* / Gusso), **VHS > 100 mm/h** apresenta razão de verossimilhança positiva (LR+) relevante (~3,1), aumentando significativamente a probabilidade pós-teste da doença (enquanto PCR elevada isolada tem LR+ próximo de 1,0–1,4, baixa especificidade, servindo mais para reduzir probabilidade quando normal).\n- **A) Incorreta:** Em idosos, PCR elevada isoladamente tem baixíssima especificidade (LR+ muito baixo); seu maior valor está no alto valor preditivo negativo quando normal.\n- **C) Incorreta:** TC de crânio não é pré-requisito para pensar em arterite de células gigantes nem deve atrasar a corticoterapia diante de alta suspeita (risco de amaurose irreversível).\n- **D) Incorreta:** Radiografia de crânio não tem papel na investigação de cefaleia ou arterite temporal.\n- **E) Incorreta:** RNM craniana não é essencial antes de considerar o diagnóstico clínico-laboratorial de arterite de células gigantes.",
     "perolaClinica": "Em idoso (> 50 anos) com cefaleia nova e **espessamento/anormalidade da artéria temporal**, a suspeita clínica é de **arterite de células gigantes (arterite temporal)**.",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Acurácia diagnóstica de marcadores inflamatórios e exames de imagem na suspeita de arterite de células gigantes.",
+      "raciocinioChave": "Em idoso acima de 50 anos com cefaleia recente e espessamento de artéria temporal, o diagnóstico suspeito é arterite de células gigantes, no qual VHS > 100 mm/h confere razão de verossimilhança positiva relevante para aumentar a probabilidade diagnóstica. Exames de neuroimagem não são pré-requisito para levantar a suspeita nem devem postergar o tratamento.",
+      "armadilhaBanca": "Exigir neuroimagem prévia antes de suspeitar de arterite temporal ou supervalorizar a especificidade isolada da PCR elevada em idosos."
+    },
+    "mapaDistratores": {
+      "A": "Em idosos, a elevação isolada da PCR tem baixa especificidade e razão de verossimilhança positiva discreta, sendo mais útil seu alto valor preditivo negativo quando normal.",
+      "C": "A tomografia craniana não é pré-requisito para suspeitar de arterite de células gigantes e não deve atrasar o início de corticoterapia diante do risco de amaurose.",
+      "D": "A radiografia simples de crânio não possui utilidade diagnóstica na avaliação de cefaleia nova ou arterite temporal.",
+      "E": "A ressonância magnética craniana não é exigida antes de formular a hipótese clínica de arterite de células gigantes ou iniciar manejo imediato."
+    }
   },
   {
     "id": "q-enare-2024-098",
@@ -5937,7 +7534,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Tuberculose Pulmonar e Extrapulmonar",
     "temaSlug": "cm-infecto",
     "subtemaSlug": "cm-infecto-tuberculose-pulmonar-e-extrapulmonar",
-    "tags": ["tuberculose","populacoes-vulneraveis","populacao-em-situacao-de-rua","epidemiologia-da-tuberculose"],
+    "tags": [
+      "tuberculose",
+      "populacoes-vulneraveis",
+      "populacao-em-situacao-de-rua",
+      "epidemiologia-da-tuberculose"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -5982,13 +7584,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "E",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **E** está correta. De acordo com o **Manual de Recomendações para o Controle da Tuberculose no Brasil (2ª ed. atualizada — Ministério da Saúde)**, a tabela oficial de risco relativo de adoecimento por TB em comparação à população geral aponta:\n- **Pessoas em situação de rua:** **56 vezes** maior risco (o mais elevado de todos os grupos);\n- **Pessoas privadas de liberdade:** **28 vezes** maior;\n- **Pessoas vivendo com HIV (PVHIV):** **28 vezes** maior;\n- **Indígenas:** **3 vezes** maior.\n- **A) Incorreta:** População indígena tem risco ~3x maior que a população geral.\n- **B) Incorreta:** Profissionais de saúde possuem risco ocupacional aumentado, mas muito inferior ao de pessoas em situação de rua.\n- **C) Incorreta:** PVHIV têm risco ~28x maior — metade do risco observado em pessoas em situação de rua (56x).\n- **D) Incorreta:** Pessoas privadas de liberdade têm risco ~28x maior — também inferior ao de pessoas em situação de rua (56x).",
     "perolaClinica": "De acordo com o **Manual de Recomendações para o Controle da Tuberculose no Brasil (2ª ed.",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Populações mais vulneráveis e risco relativo de adoecimento por tuberculose segundo o Ministério da Saúde.",
+      "raciocinioChave": "Conforme o Manual de Recomendações para o Controle da Tuberculose no Brasil, pessoas vivendo em situação de rua apresentam o maior risco relativo de adoecimento por TB (56 vezes maior que o da população geral). Esse índice supera o de pessoas privadas de liberdade e PVHIV (ambos ~28 vezes).",
+      "armadilhaBanca": "Assinalar pessoas vivendo com HIV ou privadas de liberdade por terem risco elevado (~28x), esquecendo que a situação de rua lidera com 56x."
+    },
+    "mapaDistratores": {
+      "A": "A população indígena apresenta risco cerca de 3 vezes superior ao da população geral, muito abaixo do grupo de maior vulnerabilidade.",
+      "B": "Profissionais de saúde possuem risco ocupacional aumentado de tuberculose, porém substancialmente inferior ao de pessoas em situação de rua.",
+      "C": "Pessoas vivendo com HIV têm risco relativo aproximado de 28 vezes, correspondente à metade do observado na população em situação de rua.",
+      "D": "Pessoas privadas de liberdade apresentam risco relativo de cerca de 28 vezes, também superado pelo risco de 56 vezes em pessoas em situação de rua."
+    }
   },
   {
     "id": "q-enare-2024-099",
@@ -6000,7 +7614,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Vigilância Epidemiológica e Notificação Compulsória",
     "temaSlug": "mp-vigilancia",
     "subtemaSlug": "mp-vigilancia-vigilancia-epidemiologica-e-notificacao-compulsoria",
-    "tags": ["srag","sindrome-gripal","definicao-de-caso","vigilancia-epidemiologica"],
+    "tags": [
+      "srag",
+      "sindrome-gripal",
+      "definicao-de-caso",
+      "vigilancia-epidemiologica"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -6045,13 +7664,25 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "E",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **E** está correta (gabarito definitivo alterado pós-recurso pela FGV/ENARE). Conforme o **Guia de Vigilância Epidemiológica — Covid-19 e Influenza (Ministério da Saúde)**, define-se **SRAG** como **indivíduo com Síndrome Gripal (SG) que apresente dispneia/desconforto respiratório OU pressão/dor persistente no tórax OU saturação de O₂ menor que 95% (≤ 94%) em ar ambiente OU coloração azulada (cianose) dos lábios ou rosto**.\n- **A) Incorreta:** Descreve a definição antiga de Síndrome Gripal (pré-pandemia de Covid-19), sem sinais de gravidade.\n- **B) Incorreta:** Descreve a definição atual de **Síndrome Gripal (SG)**, não de SRAG.\n- **C) Incorreta:** Descreve critério adicional de **Síndrome Gripal** em crianças.\n- **D) Incorreta:** Descreve critérios específicos de agravamento considerados na definição de **Síndrome Gripal** em idosos (na suspeita de SG), não a definição geral de SRAG.",
     "perolaClinica": "(gabarito definitivo alterado pós-recurso pela FGV/ENARE).",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Critérios oficiais do Ministério da Saúde para definição de Síndrome Respiratória Aguda Grave (SRAG).",
+      "raciocinioChave": "Na vigilância de influenza e covid-19, SRAG é definida como caso de Síndrome Gripal que evolui com sinais de gravidade: dispneia/desconforto respiratório, pressão persistente no tórax, SpO2 ≤ 94% em ar ambiente ou cianose de lábios/rosto. As demais opções reproduzem definições ou particularidades da Síndrome Gripal sem gravidade.",
+      "armadilhaBanca": "Confundir a definição de Síndrome Gripal (inclusive suas adaptações em crianças e idosos) com os critérios de gravidade que caracterizam SRAG."
+    },
+    "mapaDistratores": {
+      "A": "Descreve a definição clássica antiga de Síndrome Gripal (febre com tosse ou dor de garganta), sem incluir critérios de gravidade respiratória.",
+      "B": "Reproduz a definição vigente de Síndrome Gripal (SG) na população geral, que não contempla sinais de disfunção respiratória aguda grave.",
+      "C": "Refere-se ao critério adicional específico para definição de Síndrome Gripal em crianças (inclusão de obstrução nasal), não de SRAG.",
+      "D": "Trata dos critérios específicos considerados na suspeita de Síndrome Gripal em idosos (síncope, confusão mental, inapetência), e não da definição de SRAG."
+    }
   },
   {
     "id": "q-enare-2024-100",
@@ -6063,7 +7694,12 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     "subtema": "Infecções de Vias Aéreas Superiores",
     "temaSlug": "ped-pneumo-ped",
     "subtemaSlug": "ped-pneumo-ped-infeccoes-de-vias-aereas-superiores",
-    "tags": ["difteria","pseudomembranas","corynebacterium-diphtheriae","doencas-imunopreveniveis"],
+    "tags": [
+      "difteria",
+      "pseudomembranas",
+      "corynebacterium-diphtheriae",
+      "doencas-imunopreveniveis"
+    ],
     "taxonomyVersion": "medr1_taxonomy_v1",
     "banca": "ENARE",
     "instituicao": "ENARE",
@@ -6108,12 +7744,24 @@ export const ENARE_2024_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alternativa **B** está correta. O texto transcreve fielmente o capítulo de **difteria** (*Corynebacterium diphtheriae*) do **Guia de Vigilância em Saúde (Ministério da Saúde)**: **placas pseudomembranosas branco-acinzentadas fortemente aderentes** em amígdalas/faringe/laringe, febre baixa com **prostração desproporcional**, **pescoço taurino** (linfadenopatia cervical volumosa + edema periganglionar) e risco de **obstrução aguda de vias aéreas** (além de miocardite e neurite pela exotoxina), sendo prevenível pelas vacinas pentavalente/DTP/dT.\n- **A) Incorreta:** VSR causa bronquiolite viral aguda e IVAS em lactentes, sem pseudomembranas aderentes nem pescoço taurino.\n- **C) Incorreta:** Faringoamigdalite estreptocócica cursa com odinofagia intensa, febre alta e exsudato purulento facilmente removível sem sangramento ou pescoço taurino.\n- **D) Incorreta:** Sífilis não é imunoprevenível por vacina e não cursa com placas pseudomembranosas faríngeas obstrutivas.\n- **E) Incorreta:** Sarampo cursa com febre alta, tosse, coriza, conjuntivite, manchas de Koplik e exantema maculopapular craniocaudal, não pescoço taurino com pseudomembranas.",
     "perolaClinica": "O texto transcreve fielmente o capítulo de **difteria** (*Corynebacterium diphtheriae*) do **Guia de Vigilância em Saúde (Ministério da Saúde)**: **placas pseudomembranosas branco-acinzentadas fortemente aderentes** em a",
     "referencias": [
       "ENARE 2024/2025 — Acesso Direto Tipo 1 Outubro/2024 (FGV Conhecimento / EBSERH — Gabarito Definitivo Oficial)"
     ],
-    "sourceBatch": "enare-2024-tipo-1"
+    "sourceBatch": "enare-2024-tipo-1",
+    "analiseBanca": {
+      "conceitoCentral": "Reconhecimento clínico da difteria pelas placas pseudomembranosas aderentes e prostração desproporcional.",
+      "raciocinioChave": "Placas pseudomembranosas branco-acinzentadas fortemente aderentes em amígdalas e vias aéreas superiores, em doença imunoprevenível com comprometimento do estado geral, caracterizam a difteria (Corynebacterium diphtheriae). A invasão local pode levar a edema cervical importante (pescoço taurino) e obstrução respiratória.",
+      "armadilhaBanca": "Confundir faringite estreptocócica com exsudato purulento destacável ou outra infecção respiratória com as pseudomembranas aderentes da difteria."
+    },
+    "mapaDistratores": {
+      "A": "O vírus sincicial respiratório provoca IVAS e bronquiolite em lactentes, sem formação de pseudomembranas branco-acinzentadas aderentes.",
+      "C": "A faringoamigdalite estreptocócica cursa com exsudato purulento facilmente removível sem sangramento e não é doença imunoprevenível por vacina.",
+      "D": "A sífilis não dispõe de vacina preventiva e não se manifesta tipicamente por placas pseudomembranosas obstrutivas em faringe e laringe.",
+      "E": "O sarampo apresenta pródromo catarral, manchas de Koplik e exantema maculopapular craniocaudal, sem pseudomembranas aderentes tonsilares."
+    }
   }
 ];

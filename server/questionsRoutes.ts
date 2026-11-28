@@ -2,9 +2,11 @@ import type { Express, Request, Response } from 'express';
 import {
   getQuestionById,
   queryPaginatedQuestions,
+  registerFirstAttemptStats,
   type QuestionsQueryParams,
   type QuestionsServiceDeps,
 } from './questionsService.ts';
+import { isValidUuid } from './syncService.ts';
 
 function readQueryString(value: unknown, maxLen = 120): string | undefined {
   if (typeof value !== 'string') return undefined;
@@ -75,6 +77,66 @@ export function registerQuestionsRoutes(
     } catch (err) {
       console.error('[MedR1 Question Detail Error]', err);
       res.status(500).json({ error: 'Falha ao carregar detalhes da questão.' });
+    }
+  });
+
+  app.post('/api/questions/:id/first-attempt', async (req: Request, res: Response) => {
+    try {
+      const body = (req.body ?? {}) as {
+        studentId?: unknown;
+        isCorrect?: unknown;
+        priorWeight?: unknown;
+      };
+
+      if (!isValidUuid(body.studentId) || typeof body.isCorrect !== 'boolean') {
+        res.status(400).json({
+          error: 'Informe studentId (UUID válido) e isCorrect (booleano).',
+        });
+        return;
+      }
+
+      let priorWeight: number | undefined;
+      if (body.priorWeight !== undefined) {
+        if (
+          typeof body.priorWeight !== 'number' ||
+          !Number.isInteger(body.priorWeight) ||
+          body.priorWeight < 1
+        ) {
+          res.status(400).json({
+            error: 'priorWeight deve ser um número inteiro maior ou igual a 1.',
+          });
+          return;
+        }
+        priorWeight = body.priorWeight;
+      }
+
+      const result = await registerFirstAttemptStats(
+        {
+          questionId: String(req.params.id || ''),
+          studentId: body.studentId,
+          isCorrect: body.isCorrect,
+          priorWeight,
+        },
+        deps
+      );
+
+      if (result === null) {
+        res.status(503).json({
+          mode: 'local-fallback',
+          error: 'DATABASE_URL not configured',
+        });
+        return;
+      }
+
+      if (!result.found || !result.stats) {
+        res.status(404).json({ error: 'Questão não encontrada.' });
+        return;
+      }
+
+      res.json({ mode: 'postgres', ...result.stats });
+    } catch (err) {
+      console.error('[MedR1 First Attempt Stats Error]', err);
+      res.status(500).json({ error: 'Falha ao registrar estatística de 1ª tentativa.' });
     }
   });
 }

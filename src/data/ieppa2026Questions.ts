@@ -66,24 +66,36 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **B** está correta (I e III). Conforme os critérios classificatórios EULAR/ACR e diretrizes da SBR para Lúpus Eritematoso Sistêmico (LES), o anti-dsDNA é altamente específico e acompanha atividade da doença (especialmente renal), e o consumo de complemento (C3 e C4 baixos) reflete formação/deposição de imunocomplexos e atividade inflamatória.\n- **A) Incorreta:** O FAN positivo (mesmo padrão nuclear homogêneo) não é patognomônico nem fecha diagnóstico isoladamente sem critérios clínicos.\n- **C) Incorreta:** O anti-Sm tem altíssima especificidade (~99%), porém baixa sensibilidade (presente em apenas ~20–30% dos pacientes), não servindo para triagem inicial (que é papel do FAN).\n- **D) Incorreta:** As proposições II e IV estão falsas pelos motivos acima.\n- **E) Incorreta:** A proposição I é verdadeira e a IV é falsa.",
     "perolaClinica": "A alternativa **B** está correta (I e III).",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Valor diagnóstico, especificidade e correlação de atividade dos autoanticorpos e complemento no LES.",
+      "raciocinioChave": "No lúpus eritematoso sistêmico, o anti-dsDNA apresenta alta especificidade e correlaciona-se com atividade de doença (especialmente nefrite lúpica), enquanto a hipocomplementemia (C3 e C4 baixos) reflete consumo por imunocomplexos em atividade (I e III corretas). O FAN isolado não fecha diagnóstico e o anti-Sm tem baixa sensibilidade para triagem.",
+      "armadilhaBanca": "Assumir que o anti-Sm serve para triagem inicial devido à sua alta especificidade ou que FAN em título alto é patognomônico sem critérios clínicos."
+    },
+    "mapaDistratores": {
+      "A": "Inclui a afirmativa IV falsa, pois o FAN positivo em padrão homogêneo não é patognomônico nem estabelece diagnóstico isolado de LES, e omite a III.",
+      "C": "Inclui a afirmativa II incorreta, já que o anti-Sm possui alta especificidade (~99%) mas baixa sensibilidade (~20–30%), sendo inadequado para triagem inicial.",
+      "D": "Considera corretas as afirmativas II e IV, ignorando a baixa sensibilidade do anti-Sm para triagem e a ausência de caráter patognomônico do FAN.",
+      "E": "Inclui a afirmativa IV falsa sobre o valor diagnóstico isolado do FAN e omite a afirmativa I correta sobre o anti-dsDNA."
+    }
   },
   {
     "id": "q-ieppa-2026-002",
     "code": "Q-IEPPA26-0002",
     "numeroOriginal": 2,
-    "grandeAreaId": "clinica_medica",
-    "grandeArea": "Clínica Médica",
-    "tema": "Pneumologia",
-    "subtema": "Tromboembolismo Pulmonar e TVP",
-    "temaSlug": "cm-pneumo",
-    "subtemaSlug": "cm-pneumo-tromboembolismo-pulmonar-e-tvp",
+    "grandeAreaId": "ginecologia_obstetricia",
+    "grandeArea": "Ginecologia e Obstetrícia",
+    "tema": "Intercorrências Clínicas e Infecciosas na Gestação",
+    "subtema": "ITU, Tromboembolismo e Intercorrências Clínicas",
+    "temaSlug": "go-intercorrencias",
+    "subtemaSlug": "go-intercorrencias-itu-tromboembolismo-e-intercorrencias-clinicas",
     "tags": [
       "tep",
       "escore-de-wells",
@@ -135,13 +147,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **D** está correta (I, II, III e IV). Segundo a Diretriz de Embolia Pulmonar da ESC/SBPT, em pacientes com alta probabilidade pré-teste pelo Escore de Wells, o D-dímero negativo não exclui TEP, indicando-se diretamente angiotomografia computadorizada de artérias pulmonares. No TEP de alto risco (maciço com instabilidade hemodinâmica), a trombólise sistêmica (ex.: alteplase) é indicada na ausência de contraindicações absolutas. No ECG, taquicardia sinusal é o achado mais comum e o padrão S1Q3T3 tem baixa sensibilidade e especificidade.\n- **A) Incorreta:** Omite as proposições I e IV, que também são verdadeiras.\n- **B) Incorreta:** Omite a proposição I, igualmente verdadeira.\n- **C) Incorreta:** Omite as proposições III e IV, que também estão corretas.\n- **E) Incorreta:** Omite as proposições I e II, igualmente corretas.",
     "perolaClinica": "A alternativa **D** está correta (I, II, III e IV).",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Algoritmo diagnóstico e estratificação terapêutica no tromboembolismo pulmonar (TEP) de alta probabilidade.",
+      "raciocinioChave": "Diante de alta probabilidade clínica pelo Escore de Wells, o D-dímero não deve ser usado para exclusão, devendo-se prosseguir diretamente para imagem confirmatória (angiotomografia pulmonar). As demais afirmativas contemplam corretamente os achados ao ecocardiograma e o manejo conforme estabilidade hemodinâmica (I, II, III e IV).",
+      "armadilhaBanca": "Descartar alguma proposição correta por hesitação em solicitar D-dímero no puerpério ou nas indicações específicas de trombólise e anticoagulação."
+    },
+    "mapaDistratores": {
+      "A": "Omite as proposições I e IV, ignorando que a alta probabilidade no Escore de Wells contraindica usar o D-dímero como teste de exclusão.",
+      "B": "Deixa de incluir a proposição I verdadeira sobre a indicação direta de angiotomografia em pacientes com alta probabilidade pré-teste.",
+      "C": "Omite as proposições III e IV, que também estão de acordo com as diretrizes de diagnóstico e manejo do TEP.",
+      "E": "Omite as proposições I e II, igualmente corretas quanto à investigação por imagem na alta probabilidade clínica e conduta terapêutica."
+    }
   },
   {
     "id": "q-ieppa-2026-003",
@@ -203,13 +227,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **A** está correta. Sopro mesossistólico em crescendo-decrescendo no foco aórtico com irradiação para carótidas, pulso *parvus et tardus* e síncope de esforço compõem o quadro clássico da estenose aórtica valvar importante (Diretriz Brasileira de Valvopatias — SBC). Manobras que aumentam a pré-carga e o volume sistólico (agachamento) intensificam o sopro, enquanto a manobra de Valsalva reduz o retorno venoso e diminui o sopro.\n- **B) Incorreta:** Na cardiomiopatia hipertrófica obstrutiva, o sopro reduz com o agachamento e aumenta com Valsalva, além de gerar pulso bisfériens (não *parvus et tardus*).\n- **C) Incorreta:** Insuficiência mitral produz sopro holossistólico em foco mitral irradiado para axila, sem pulso *parvus et tardus* nem irradiação carotídea.\n- **D) Incorreta:** Durante a manobra de Valsalva, há redução do retorno venoso e do fluxo transvalvar aórtico, diminuindo o sopro da estenose aórtica.\n- **E) Incorreta:** Estenose pulmonar é audível em foco pulmonar e não causa pulso *parvus et tardus* carotídeo nem irradiação típica às carótidas.",
     "perolaClinica": "A alternativa **A** está correta.",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Semiologia da estenose aórtica e resposta do sopro às manobras de agachamento e Valsalva.",
+      "raciocinioChave": "Sopro sistólico ejetivo em crescendo-decrescendo no foco aórtico irradiado para carótidas, pulso parvus et tardus e síncope aos esforços caracterizam estenose aórtica importante. O agachamento aumenta o retorno venoso e o volume sistólico (intensificando o sopro), enquanto a manobra de Valsalva reduz a pré-carga e diminui o sopro.",
+      "armadilhaBanca": "Inverter o efeito da manobra de Valsalva e do agachamento, comportamento característico da cardiomiopatia hipertrófica obstrutiva."
+    },
+    "mapaDistratores": {
+      "B": "Na cardiomiopatia hipertrófica obstrutiva, o sopro reduz com o agachamento e aumenta com Valsalva, além de cursar com pulso bisfériens em vez de parvus et tardus.",
+      "C": "A insuficiência mitral gera sopro holossistólico em foco mitral irradiado para axila, sem pulso parvus et tardus nem irradiação carotídea típica.",
+      "D": "Embora o diagnóstico seja estenose aórtica, a manobra de Valsalva reduz o retorno venoso e o fluxo transvalvar, diminuindo a intensidade do sopro.",
+      "E": "A estenose pulmonar é máxima em foco pulmonar com aumento inspiratório (Rivero-Carvalho) e não produz pulso parvus et tardus nem irradiação para carótidas."
+    }
   },
   {
     "id": "q-ieppa-2026-004",
@@ -272,13 +308,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **C** está correta (`V, V, F, F`). Pelas diretrizes da GINA (2023–2025), o uso isolado de SABA é proscrito pelo maior risco de exacerbações graves/morte, sendo recomendada a via preferencial com CI-formoterol em baixa dose sob demanda (Step 1–2) ou CI diário fixo + SABA como alternativa. A paciente tem sintomas diurnos > 2x/semana, uso de alívio > 2x/semana e despertar noturno pela asma, configurando **asma não controlada** (terceira assertiva falsa). Corticoide inalatório é seguro e constitui a base do tratamento controlador (quarta assertiva falsa).\n- **A) Incorreta:** A primeira assertiva é verdadeira e a terceira é falsa.\n- **B) Incorreta:** Classifica erroneamente como asma controlada.\n- **D) Incorreta:** Inverte todas as assertivas.\n- **E) Incorreta:** A segunda assertiva é verdadeira e a quarta é falsa.",
     "perolaClinica": "A alternativa **C** está correta (`V, V, F, F`).",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Classificação de controle da asma e proscrição do SABA isolado segundo diretrizes da GINA.",
+      "raciocinioChave": "Pela GINA, o uso isolado de SABA sem corticoide inalatório não é mais recomendado devido ao maior risco de exacerbações graves (1ª V), devendo-se preferir CI-formoterol sob demanda ou CI de manutenção (2ª V). Sintomas diurnos 4x/semana, despertares noturnos e uso quase diário de resgate configuram asma não controlada (3ª e 4ª F).",
+      "armadilhaBanca": "Classificar como asma controlada ou parcialmente controlada apesar de sintomas diurnos > 2x/semana, despertar noturno e uso frequente de alívio."
+    },
+    "mapaDistratores": {
+      "A": "Erra a primeira assertiva ao negar a contraindicação atual ao SABA isolado e erra a terceira ao validar classificação inadequada de controle.",
+      "B": "Classifica equivocadamente a paciente como portadora de asma controlada na terceira assertiva, apesar de múltiplos critérios de descontrole.",
+      "D": "Inverte todas as assertivas verdadeiras e falsas sobre a proscrição do SABA isolado e o controle clínico pela GINA.",
+      "E": "Erra a segunda assertiva sobre a terapia recomendada pela GINA e valida incorretamente a quarta assertiva falsa."
+    }
   },
   {
     "id": "q-ieppa-2026-006",
@@ -341,13 +389,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **C** está correta (apenas I). Conforme a diretriz da AHA/ASA e o PCDT de AVC Isquêmico Agudo (Ministério da Saúde), a paciente está dentro da janela de 4,5 horas (2h30), com déficit incapacitante (NIHSS 14), TC sem hemorragia (ASPECTS 10), PA < 185/110 mmHg (160/90 mmHg — não necessita redução antes da trombólise) e coagulograma/glicemia adequados, sendo elegível para alteplase (rt-PA). Antiagregantes (AAS) só devem ser iniciados após 24 horas e TC de controle pós-trombólise; e a trombectomia mecânica complementa — não substitui — a trombólise endovenosa em pacientes elegíveis.\n- **A) Incorreta:** A assertiva II está errada; a meta pré-trombólise é PA < 185/110 mmHg e reduções bruscas para < 120/80 mmHg reduzem a perfusão da zona de penumbra.\n- **B) Incorreta:** A assertiva IV está errada; pacientes elegíveis devem receber alteplase antes/junto à terapia endovascular.\n- **D) Incorreta:** Tanto II quanto III são condutas contraindicadas.\n- **E) Incorreta:** II e III são incorretas.",
     "perolaClinica": "A alternativa **C** está correta (apenas I).",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Critérios de elegibilidade e manejo pressórico pré-trombólise no AVC isquêmico agudo.",
+      "raciocinioChave": "Com 2h30 de evolução (janela ≤ 4,5h), déficit incapacitante (NIHSS 14), TC sem hemorragia (ASPECTS 10) e PA 160/90 mmHg (< 185/110 mmHg), a paciente é elegível para trombólise venosa com alteplase sem necessidade de anti-hipertensivo prévio (apenas I). Redução pressórica agressiva, AAS imediato e suspensão da trombólise antes de trombectomia são condutas incorretas.",
+      "armadilhaBanca": "Reduzir agressivamente a pressão arterial quando já está abaixo de 185/110 mmHg ou iniciar AAS antes de completar 24 horas pós-trombólise."
+    },
+    "mapaDistratores": {
+      "A": "Inclui a afirmativa II falsa, pois a meta pressórica pré-trombólise é < 185/110 mmHg e reduções bruscas para < 120/80 mmHg comprometem a zona de penumbra.",
+      "B": "Inclui a afirmativa IV falsa, já que pacientes elegíveis devem receber alteplase intravenosa mesmo quando candidatos à trombectomia mecânica.",
+      "D": "Considera válidas as afirmativas II e III, ambas contraindicadas (redução pressórica agressiva e antiagregação precoce antes de excluir hemorragia pós-rt-PA).",
+      "E": "Mantém as afirmativas II e III incorretas sobre controle pressórico excessivo e uso precoce de AAS no AVC agudo trombolisável."
+    }
   },
   {
     "id": "q-ieppa-2026-007",
@@ -410,13 +470,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **A** está correta (`V, V, F, F`). Conforme o Manual de Hemovigilância da ANVISA (2022), a TRALI caracteriza-se por edema pulmonar não cardiogênico agudo (até 6h pós-transfusão), hipoxemia, febre e frequentemente hipotensão, mediada por anticorpos anti-HLA/anti-HNA ou mediadores lipídicos. A TACO é o principal diferencial e cursa com hipertensão, turgência jugular, BNP elevado e melhora com diuréticos. RFNH não causa edema pulmonar nem hipoxemia grave, e manter a transfusão é contraindicado; na TRALI não há hemólise imune nem positividade do Coombs direto.\n- **B) Incorreta:** Erra a segunda (TACO cursa com hipertensão/resposta a diuréticos) e a quarta (não há hemólise na TRALI).\n- **C) Incorreta:** Erra a primeira (TRALI é verdadeira) e a terceira (RFNH é falsa).\n- **D) Incorreta:** Sequência incorreta para diagnóstico e fisiopatologia da TRALI.\n- **E) Incorreta:** A terceira assertiva é falsa (RFNH não explica infiltrado pulmonar difuso e hipoxemia).",
     "perolaClinica": "A alternativa **A** está correta (`V, V, F, F`).",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Diagnóstico e fisiopatologia da TRALI em contraposição à TACO e outras reações transfusionais.",
+      "raciocinioChave": "Dispneia súbita, hipoxemia, febre, hipotensão e infiltrado pulmonar bilateral pós-transfusão sem sobrecarga volêmica caracterizam TRALI, mediada por anticorpos do doador contra antígenos HLA/HNA do receptor (1ª V). A TACO é o principal diferencial por cursar com hipertensão e resposta a diuréticos (2ª V), enquanto RFNH e hemólise não explicam o quadro (3ª e 4ª F).",
+      "armadilhaBanca": "Confundir TRALI (hipotensão, edema não cardiogênico, sem resposta a diurético) com TACO (hipertensão, sobrecarga volêmica) ou RFNH."
+    },
+    "mapaDistratores": {
+      "B": "Erra a segunda assertiva sobre o perfil hemodinâmico da TACO e atribui erroneamente mecanismo hemolítico ao quadro na quarta assertiva.",
+      "C": "Nega equivocadamente o diagnóstico de TRALI na primeira assertiva e valida a terceira assertiva que atribui edema pulmonar à reação febril não hemolítica.",
+      "D": "Inverte a fisiopatologia da TRALI e da TACO, atribuindo o quadro pulmonar grave a reação febril benigna ou hemólise transfusional.",
+      "E": "Valida incorretamente a terceira assertiva, pois a reação febril não hemolítica cursa apenas com febre/calafrios sem infiltrado pulmonar ou hipoxemia."
+    }
   },
   {
     "id": "q-ieppa-2026-008",
@@ -480,13 +552,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **B** está correta (I e III). Pelas diretrizes do KDIGO para DRC, IECA ou BRA em dose máxima tolerada são primeira linha em pacientes com hipertensão, diabetes e albuminúria A3 pelo benefício antiproteinúrico e nefroprotetor (vasodilatação preferencial da arteríola eferente). A redução da pressão intraglomerular pode gerar aumento discreto e estabilizado de até 30% na creatinina sérica sem necessidade de suspensão. O duplo bloqueio (IECA + BRA) é contraindicado pelo risco elevado de lesão renal aguda e hipercalemia (II falsa).\n- **A) Incorreta:** A proposição II é falsa (duplo bloqueio contraindicado) e falta a I.\n- **C) Incorreta:** A proposição II é falsa.\n- **D) Incorreta:** Inclui a proposição II incorreta.\n- **E) Incorreta:** Omite a proposição III verdadeira.",
     "perolaClinica": "A alternativa **B** está correta (I e III).",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Nefroproteção com IECA/BRA na DRC albuminúrica e tolerância à elevação discreta de creatinina.",
+      "raciocinioChave": "Em diabéticos hipertensos com DRC e macroalbuminúria (A3), IECA ou BRA são primeira escolha pelo efeito antiproteinúrico e nefroprotetor (I), aceitando-se elevação discreta e estabilizada da creatinina de até 30% após o início da droga (III). O duplo bloqueio (IECA + BRA) é contraindicado por aumentar risco de hipercalemia e lesão renal aguda (II falsa).",
+      "armadilhaBanca": "Indicar associação de IECA com BRA (duplo bloqueio) para potencializar redução da proteinúria ou suspender a droga diante de discreta elevação de creatinina."
+    },
+    "mapaDistratores": {
+      "A": "Inclui a proposição II incorreta, pois o duplo bloqueio do sistema renina-angiotensina (IECA + BRA) é contraindicado, além de omitir a proposição I.",
+      "C": "Inclui a proposição II falsa ao defender a combinação simultânea de IECA e BRA e deixa de contemplar a proposição III verdadeira.",
+      "D": "Considera todas verdadeiras, falhando ao não excluir a proposição II sobre a contraindicação formal ao duplo bloqueio do SRAA.",
+      "E": "Embora a proposição I esteja correta, omite a proposição III sobre a tolerância fisiológica de aumento de até 30% na creatinina sérica."
+    }
   },
   {
     "id": "q-ieppa-2026-009",
@@ -549,13 +633,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **D** está correta. De acordo com o KDIGO Anemia in CKD, antes de iniciar agentes estimuladores da eritropoiese (alfaepoetina), é mandatório corrigir a deficiência de ferro (na DRC não dialítica: ferritina ≤ 100 ng/mL e/ou IST ≤ 20%). O paciente apresenta ferritina de 40 ng/mL e IST de 12%, exigindo reposição de ferro prévia.\n- **A) Incorreta:** Transfusão é evitada em DRC não crítica pelo risco de alossensibilização (prejudicial a futuro transplante renal) e sobrecarga volêmica.\n- **B) Incorreta:** Alvo de hemoglobina > 13 g/dL com EPO aumenta eventos cardiovasculares, trombose e mortalidade.\n- **C) Incorreta:** Anemia com Hb 9,2 g/dL e ferropenia tem indicação clara de investigação/reposição de ferro.\n- **E) Incorreta:** O estoque de ferro está reduzido (IST 12%, ferritina 40 ng/mL), e iniciar EPO sem ferro é ineficaz e inadequado segundo o KDIGO.",
     "perolaClinica": "A alternativa **D** está correta.",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Reposição de ferro antes da eritropoetina na anemia ferropriva associada à Doença Renal Crônica.",
+      "raciocinioChave": "Segundo o KDIGO para DRC não dialítica, valores de ferritina < 100 ng/mL (40 ng/mL) e IST < 20% (12%) caracterizam deficiência de ferro absoluta, exigindo reposição de ferro antes de iniciar agentes estimuladores da eritropoiese (alfaepoetina). Transfusão ou metas de hemoglobina > 13 g/dL devem ser evitadas.",
+      "armadilhaBanca": "Iniciar alfaepoetina imediatamente assumindo reservas normais de ferro com ferritina de 40 ng/mL, ou buscar alvo de Hb > 13 g/dL."
+    },
+    "mapaDistratores": {
+      "A": "A transfusão de hemácias deve ser evitada na DRC estável não crítica devido ao risco de alossensibilização para futuro transplante e sobrecarga volêmica.",
+      "B": "Metas de hemoglobina acima de 13 g/dL com agentes eritropoiéticos elevam o risco de eventos cardiovasculares, trombose e mortalidade.",
+      "C": "Anemia com Hb 9,2 g/dL e ferropenia documentada demanda tratamento específico com reposição de ferro, não sendo aceitável conduta expectante.",
+      "E": "Na DRC, ferritina de 40 ng/mL e IST de 12% indicam ferropenia franca, tornando ineficaz e inadequado iniciar alfaepoetina sem corrigir antes o estoque de ferro."
+    }
   },
   {
     "id": "q-ieppa-2026-010",
@@ -618,13 +714,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **B** está correta (`V, F, F, F`). Pelas diretrizes da SBC e ESC/AHA de ICFER, os inibidores de SGLT2 (dapagliflozina ou empagliflozina) compõem os 4 pilares modificadores de prognóstico desde a classe funcional II, independentemente de diabetes. A troca de IECA por sacubitril/valsartana (INRA) é recomendada já a partir de NYHA II–III (segunda falsa). A ivabradina só é indicada em ritmo sinusal com FC ≥ 70 bpm apesar de dose máxima tolerada de betabloqueador (aqui FC é 68 bpm — terceira falsa). A digoxina reduz hospitalizações e melhora sintomas, sem reduzir mortalidade (quarta falsa).\n- **A) Incorreta:** Inverte a primeira (verdadeira) e a quarta (falsa).\n- **C) Incorreta:** A segunda assertiva é falsa (sacubitril/valsartana aplica-se à classe II).\n- **D) Incorreta:** As assertivas III e IV são falsas.\n- **E) Incorreta:** Apenas a primeira assertiva é verdadeira.",
     "perolaClinica": "A alternativa **B** está correta (`V, F, F, F`).",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Pilares farmacológicos modificadores de prognóstico na insuficiência cardíaca com FE reduzida (ICFER).",
+      "raciocinioChave": "Na ICFER sintomática (FEVE 32%, NYHA II), a inclusão de inibidor de SGLT2 completa os quatro pilares terapêuticos independentemente da presença de diabetes (1ª V). A troca de IECA por sacubitril/valsartana já se indica a partir de NYHA II, e a ivabradina exige ritmo sinusal com FC ≥ 70 bpm apesar de betabloqueador otimizado (2ª, 3ª e 4ª F).",
+      "armadilhaBanca": "Restringir o uso de iSGLT2 apenas a diabéticos ou reservar sacubitril/valsartana somente para classes funcionais III–IV."
+    },
+    "mapaDistratores": {
+      "A": "Inverte a primeira afirmativa verdadeira sobre os inibidores de SGLT2 na ICFER e valida incorretamente a quarta afirmativa falsa.",
+      "C": "Considera verdadeira a segunda assertiva, restringindo erroneamente o uso de sacubitril/valsartana a classes funcionais mais avançadas que NYHA II.",
+      "D": "Valida as assertivas III e IV falsas, ignorando os critérios específicos de FC ≥ 70 bpm em ritmo sinusal para ivabradina e as indicações corretas de otimização.",
+      "E": "Erra ao negar o papel dos iSGLT2 na primeira assertiva e ao validar as assertivas II e III incorretas sobre INRA e ivabradina."
+    }
   },
   {
     "id": "q-ieppa-2026-011",
@@ -686,13 +794,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **D** está correta (I, II e IV). Conforme Sabiston/Schwartz e diretrizes da SVS, a correção eletiva do AAA é indicada em homens a partir de 5,5 cm, ou em aneurismas sintomáticos (dor abdominal/lombar atribuída ao aneurisma indica reparo de urgência, tornando III falsa), ou em crescimento rápido (> 0,5 cm em 6 meses ou > 1 cm em 1 ano — IV verdadeira). Com colo favorável (≥ 15 mm, angulação < 60°), o EVAR reduz morbimortalidade perioperatória em paciente com DPOC, exigindo vigilância de *endoleaks*.\n- **A) Incorreta:** Omite a proposição IV verdadeira.\n- **B) Incorreta:** Omite a proposição I verdadeira.\n- **C) Incorreta:** A proposição III é falsa (AAA sintomático não se conduz de forma expectante).\n- **E) Incorreta:** Inclui a proposição III falsa e omite a IV.",
     "perolaClinica": "A alternativa **D** está correta (I, II e IV).",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Indicações de correção eletiva ou de urgência e escolha entre EVAR e cirurgia aberta no AAA infrarrenal.",
+      "raciocinioChave": "Em homens, o aneurisma de aorta abdominal infrarrenal ≥ 5,5 cm (5,6 cm no caso) ou com crescimento rápido (> 0,5 cm em 6 meses ou > 1 cm/ano) tem indicação de reparo (I e IV), sendo o EVAR vantajoso em anatomia favorável pela menor morbimortalidade perioperatória (II). Aneurisma sintomático nunca deve ter conduta expectante devido ao alto risco de rotura (III falsa).",
+      "armadilhaBanca": "Considerar conduta expectante para aneurismas sintomáticos ou deixar de reconhecer o critério de crescimento rápido como indicação cirúrgica."
+    },
+    "mapaDistratores": {
+      "A": "Omite a proposição IV verdadeira sobre a indicação cirúrgica diante de taxa de crescimento acelerado do aneurisma.",
+      "B": "Deixa de incluir a proposição I verdadeira referente ao limiar de diâmetro ≥ 5,5 cm em homens para correção do AAA.",
+      "C": "Inclui a proposição III falsa, pois um aneurisma de aorta abdominal sintomático exige reparo de urgência e jamais conduta expectante.",
+      "E": "Inclui erroneamente a proposição III falsa sobre manejo expectante no AAA sintomático e omite a proposição IV correta."
+    }
   },
   {
     "id": "q-ieppa-2026-012",
@@ -755,13 +875,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "E",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **E** está correta (I, II e III). Aderências pós-operatórias são a etiologia mais comum de obstrução de delgado (~60–70%), seguidas por hérnias e neoplasias (Sabiston). Sinais sistêmicos (febre, taquicardia, leucocitose, dor contínua/peritonite) alertam para estrangulamento/isquemia. A tríade de Rigler (obstrução de delgado, pneumobilia e cálculo ectópico) caracteriza o íleo biliar. Na obstrução parcial por bridas sem sinais de isquemia ou peritonite, a conduta inicial é conservadora (jejum, SNG, hidratação e observação), tornando IV falsa.\n- **A) Incorreta:** Omite a assertiva III verdadeira.\n- **B) Incorreta:** Inclui a assertiva IV falsa e omite a I.\n- **C) Incorreta:** Inclui a assertiva IV falsa.\n- **D) Incorreta:** Inclui a assertiva IV falsa e omite II e III.",
     "perolaClinica": "A alternativa **E** está correta (I, II e III).",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Etiologia, sinais de estrangulamento e tríade de Rigler na obstrução do intestino delgado.",
+      "raciocinioChave": "Aderências pós-operatórias são a principal causa de obstrução de delgado em países industrializados (I), febre, taquicardia, leucocitose e dor contínua apontam para estrangulamento (II) e pneumobilia associada à obstrução sugere íleo biliar (III). A assertiva IV erra ao contrapor o manejo conservador inicial na obstrução parcial simples por bridas.",
+      "armadilhaBanca": "Indicar cirurgia de emergência imediata para toda obstrução adesiva parcial sem sinais de isquemia ou estrangulamento."
+    },
+    "mapaDistratores": {
+      "A": "Omite a assertiva III verdadeira, que correlaciona corretamente a presença de pneumobilia com obstrução por íleo biliar.",
+      "B": "Inclui a assertiva IV incorreta e omite a assertiva I sobre aderências como causa mais comum de obstrução de intestino delgado.",
+      "C": "Mantém a assertiva IV falsa ao desconsiderar a possibilidade de tratamento conservador inicial na obstrução parcial por bridas sem sinais de isquemia.",
+      "D": "Inclui a assertiva IV incorreta e exclui as assertivas II e III verdadeiras sobre sinais de estrangulamento e íleo biliar."
+    }
   },
   {
     "id": "q-ieppa-2026-013",
@@ -823,13 +955,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alternativa **C** está correta. Parestesias periorais/acrais e hiperexcitabilidade neuromuscular (sinal de Chvostek e Trousseau) após tireoidectomia total são manifestações clássicas de hipocalcemia por hipoparatireoidismo pós-operatório (isquemia ou remoção acidental das paratireoides — Sabiston). O manejo envolve cálcio oral + calcitriol nos casos leves e gluconato de cálcio EV nos casos graves/tetania.\n- **A) Incorreta:** Lesão bilateral do laríngeo recorrente causa estridor e insuficiência respiratória aguda, não parestesias ou Chvostek positivo.\n- **B) Incorreta:** Lesão do laríngeo superior afeta o músculo cricotireóideo (fadiga vocal/agudos), sem hipocalcemia.\n- **D) Incorreta:** Hematoma cervical cursa com abaulamento cervical tenso e dispneia compressiva de via aérea.\n- **E) Incorreta:** Tempestade tireoidiana provoca taquicardia, hipertermia e agitação, não hipocalcemia.",
     "perolaClinica": "A alternativa **C** está correta.",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Reconhecimento e manejo da hipocalcemia pós-tireoidectomia por hipoparatireoidismo.",
+      "raciocinioChave": "Parestesias periorais/acrais e sinal de Chvostek positivo no 1º PO de tireoidectomia total traduzem hipocalcemia aguda secundária a isquemia ou remoção inadvertida das paratireoides. Quadros leves são manejados com cálcio oral e calcitriol, enquanto manifestações graves ou tetania requerem gluconato de cálcio intravenoso.",
+      "armadilhaBanca": "Confundir complicações metabólicas pós-tireoidectomia (hipocalcemia) com emergências compressivas ou lesões nervosas laríngeas."
+    },
+    "mapaDistratores": {
+      "A": "A lesão bilateral do nervo laríngeo recorrente manifesta-se por estridor e insuficiência respiratória obstrutiva aguda, não por parestesias ou sinal de Chvostek.",
+      "B": "A lesão do ramo externo do nervo laríngeo superior causa fadiga vocal e perda dos sons agudos por paralisia do músculo cricotireóideo, sem alterar a calcemia.",
+      "D": "O hematoma cervical compressivo apresenta abaulamento cervical tenso e dispneia por compressão traqueal, exigindo abertura imediata da ferida operatória.",
+      "E": "A tempestade tireoidiana cursa com hipertermia, taquicardia acentuada e agitação psicomotora, quadro distinto da excitabilidade neuromuscular hipocalcêmica."
+    }
   },
   {
     "id": "q-ieppa-2026-014",
@@ -892,13 +1036,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **B** está correta (`V, F, V, V`). A fórmula de Parkland clássica (Sabiston/ATLS 10ª ed.) utiliza 4 mL × peso × %SCQ de Ringer Lactato nas primeiras 24h (a 10ª ed. do ATLS usa 2 mL/kg/%SCQ para queimaduras térmicas como ponto de partida, mas o enunciado especifica expressamente a fórmula de Parkland clássica). As primeiras 8 horas são contadas **a partir do momento da queimadura**, descontando eventual volume já infundido no pré-hospitalar (segunda assertiva falsa). O débito urinário alvo no adulto é ~0,5 mL/kg/h, elevando-se para 1,0–1,5 mL/kg/h (ou ≥ 100 mL/h) em queimadura elétrica com mioglobinúria para prevenir necrose tubular aguda.\n- **A) Incorreta:** As assertivas I e IV são verdadeiras.\n- **C) Incorreta:** A contagem das 8h iniciais parte do horário da queimadura, não da admissão hospitalar, e IV é verdadeira.\n- **D) Incorreta:** A terceira assertiva é verdadeira.\n- **E) Incorreta:** Inverte os três primeiros itens.",
     "perolaClinica": "A alternativa **B** está correta (`V, F, V, V`).",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Cálculo, cronologia a partir do trauma e monitorização pela diurese na fórmula de Parkland.",
+      "raciocinioChave": "A fórmula de Parkland clássica utiliza 4 mL × peso × %SCQ de Ringer Lactato em 24h (I V), com a primeira metade infundida nas primeiras 8 horas contadas a partir do momento da queimadura, e não da admissão hospitalar (II F). A diurese é o principal guia clínico de ajuste volêmico e existem riscos de fluid creep na reposição excessiva (III e IV V).",
+      "armadilhaBanca": "Contar as primeiras 8 horas da fórmula de Parkland a partir da admissão hospitalar em vez do horário exato do acidente térmico."
+    },
+    "mapaDistratores": {
+      "A": "Erra as assertivas I e IV ao negar a definição clássica da fórmula de Parkland e o papel/complicações descritos no atendimento ao grande queimado.",
+      "C": "Erra ao considerar verdadeira a segunda assertiva sobre o início da contagem das 8h na admissão hospitalar e ao negar a quarta assertiva verdadeira.",
+      "D": "Falha na terceira assertiva ao negar que o débito urinário é o principal parâmetro clínico para guiar a reposição volêmica no grande queimado.",
+      "E": "Inverte o julgamento das três primeiras assertivas, aceitando a contagem incorreta a partir da admissão e rejeitando a fórmula e a monitorização urinária."
+    }
   },
   {
     "id": "q-ieppa-2026-015",
@@ -960,13 +1116,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **D** está correta. O triângulo hepatocístico (Trígono de Calot moderno, conforme Zollinger/Sabiston) é delimitado superiormente pela borda inferior do fígado, medialmente pelo ducto hepático comum e lateralmente/inferiormente pelo ducto cístico. Os três critérios de Strasberg para a Visão Crítica de Segurança são: (1) limpar o triângulo hepatocístico de gordura e tecido fibroso; (2) dissecar o terço inferior da vesícula da placa cística do leito hepático; e (3) visualizar **apenas duas estruturas** (ducto cístico e artéria cística) entrando na vesícula biliar antes da clipagem.\n- **A) Incorreta:** Mistura a definição histórica (com a artéria cística) com termos errôneos de tríade portal e *elephant trunk*.\n- **B) Incorreta:** A artéria hepática direita nunca deve ser ligada rotineiramente (causa isquemia hepática) e os limites do triângulo estão incorretos.\n- **C) Incorreta:** Colangiografia rotineira não faz parte da definição dos critérios de Strasberg e a veia porta não delimita o triângulo.\n- **E) Incorreta:** Dissecar até a confluência dos hepáticos direito/esquerdo e colédoco aumenta o risco de lesão iatrogênica e não integra a Visão Crítica de Segurança.",
     "perolaClinica": "A alternativa **D** está correta.",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Limites do Trígono de Calot e critérios de Strasberg para Visão Crítica de Segurança.",
+      "raciocinioChave": "O triângulo hepatocístico (Trígono de Calot moderno) é limitado superiormente pela borda inferior do fígado, medialmente pelo ducto hepático comum e lateralmente pelo ducto cístico. A Visão Crítica de Segurança exige limpar o triângulo, dissecar o terço inferior da vesícula da placa cística e visualizar apenas duas estruturas entrando na vesícula antes de qualquer clipagem.",
+      "armadilhaBanca": "Exigir dissecção até a confluência dos ductos hepáticos, colangiografia universal ou ligadura da artéria hepática direita como etapas da Visão Crítica."
+    },
+    "mapaDistratores": {
+      "A": "Mistura a definição anatômica histórica com termos imprecisos como elephant trunk e exposição da tríade portal completa antes da ligadura do cístico.",
+      "B": "Atribui limites anatômicos incorretos ao trígono e propõe a ligadura da artéria hepática direita, conduta iatrogênica associada a necrose hepática.",
+      "C": "Inclui erroneamente a veia porta como limite do triângulo e exige colangiografia intraoperatória rotineira, que não compõe os critérios de Strasberg.",
+      "E": "Dissecar até a confluência dos ductos hepáticos direito e esquerdo e o colédoco aumenta o risco de lesão térmica/mecânica da via biliar principal."
+    }
   },
   {
     "id": "q-ieppa-2026-016",
@@ -1028,13 +1196,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alternativa **A** está correta (`V, V, F, V`). A hérnia inguinal direta resulta de fraqueza da fáscia transversalis no Triângulo de Hesselbach (medial aos vasos epigástricos inferiores); a indireta emerge pelo anel inguinal interno/profundo, lateral aos vasos epigástricos inferiores, acompanhando o funículo espermático (Sabiston). A hérnia femoral é mais frequente em **mulheres** (terceira falsa). Na classificação de Nyhus, Tipo III corresponde aos defeitos da parede posterior: IIIA direta, IIIB indireta grande/escroto-inguinal e IIIC femoral.\n- **B) Incorreta:** Erra a segunda e a terceira afirmativas.\n- **C) Incorreta:** Primeira e quarta afirmativas são verdadeiras.\n- **D) Incorreta:** Terceira é falsa e quarta é verdadeira.\n- **E) Incorreta:** Sequência incompatível com a anatomia inguinal e Nyhus.",
     "perolaClinica": "A alternativa **A** está correta (`V, V, F, V`).",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Anatomia topográfica das hérnias inguinais direta, indireta e femoral e classificação de Nyhus.",
+      "raciocinioChave": "Hérnias diretas projetam-se pelo Triângulo de Hesselbach medialmente aos vasos epigástricos inferiores (1ª V), enquanto indiretas atravessam o anel inguinal profundo lateralmente a esses vasos (2ª V). A hérnia femoral predomina em mulheres, tornando a 3ª falsa, e a classificação de Nyhus contempla corretamente a 4ª assertiva.",
+      "armadilhaBanca": "Inverter a relação anatômica com os vasos epigástricos inferiores ou afirmar que a hérnia femoral é mais comum no sexo masculino."
+    },
+    "mapaDistratores": {
+      "B": "Erra a segunda e a terceira afirmativas ao negar o trajeto lateral da hérnia indireta e ao atribuir maior prevalência da hérnia femoral em homens.",
+      "C": "Erra ao considerar falsa a anatomia da hérnia inguinal direta no Triângulo de Hesselbach e ao rejeitar a quarta assertiva verdadeira.",
+      "D": "Valida incorretamente a terceira afirmativa sobre a prevalência masculina da hérnia femoral e nega a quarta assertiva verdadeira.",
+      "E": "Apresenta sequência incompatível com a topografia dos vasos epigástricos inferiores, o predomínio feminino da hérnia femoral e a classificação de Nyhus."
+    }
   },
   {
     "id": "q-ieppa-2026-017",
@@ -1096,13 +1276,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "E",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **E** está correta (I e II). Na fase inflamatória (Sabiston), após hemostasia plaquetária, os neutrófilos são os primeiros leucócitos a migrar (24–48h) seguidos pelos macrófagos, maestros da transição para a fase proliferativa. Na fase proliferativa há angiogênese, tecido de granulação, reepitelização e síntese inicial de colágeno tipo III por fibroblastos. A cicatriz madura atinge no máximo **~80%** da força tênsil da pele íntegra, nunca 100% (III falsa); e nas primeiras 24h predominam neutrófilos (IV falsa).\n- **A) Incorreta:** A força tênsil máxima cicatricial não alcança 100% (~80%).\n- **B) Incorreta:** III e IV estão falsas.\n- **C) Incorreta:** IV é falsa e omite I.\n- **D) Incorreta:** III e IV estão falsas.",
     "perolaClinica": "A alternativa **E** está correta (I e II).",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Fisiologia celular das fases inflamatória, proliferativa e de remodelamento na cicatrização.",
+      "raciocinioChave": "Na fase inflamatória, neutrófilos são seguidos por macrófagos, que coordenam o reparo tecidual (I V), e na fase proliferativa ocorrem angiogênese, tecido de granulação, epitelização e depósito inicial de colágeno tipo III (II V). A força tênsil da cicatriz madura atinge cerca de 80% da pele íntegra, jamais 100% (III e IV incorretas).",
+      "armadilhaBanca": "Acreditar que a fase de remodelamento restaura 100% da força tênsil original da pele íntegra."
+    },
+    "mapaDistratores": {
+      "A": "Inclui a assertiva III falsa, uma vez que a cicatriz madura alcança no máximo cerca de 80% da resistência tênsil da pele íntegra, nunca 100%.",
+      "B": "Valida erroneamente as assertivas III e IV e omite a assertiva II verdadeira sobre angiogênese e colágeno tipo III na fase proliferativa.",
+      "C": "Inclui a assertiva IV falsa e deixa de contemplar a assertiva I verdadeira sobre o papel central dos neutrófilos e macrófagos na fase inflamatória.",
+      "D": "Inclui as assertivas III e IV falsas e exclui a assertiva I verdadeira referente aos eventos celulares iniciais da cicatrização."
+    }
   },
   {
     "id": "q-ieppa-2026-018",
@@ -1164,13 +1356,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "E",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **E** está correta (I, II e IV). No choque hipovolêmico há redução de pré-carga (PVC/POAP baixas), baixo débito cardíaco e vasoconstrição compensatória (RVS elevada). No choque neurogênico (lesão medular alta), a perda do tônus simpático causa vasodilatação periférica (pele quente/seca) e ausência de resposta cronotrópica/bradicardia. No choque séptico hiperdinâmico há vasoplegia (RVS baixa) e débito cardíaco aumentado. No choque cardiogênico a RVS encontra-se **elevada** por vasoconstrição compensatória (III falsa).\n- **A) Incorreta:** Omite a proposição I verdadeira.\n- **B) Incorreta:** Inclui a proposição III falsa e omite a I.\n- **C) Incorreta:** A proposição III é falsa (RVS é alta no choque cardiogênico).\n- **D) Incorreta:** Inclui a proposição III falsa.",
     "perolaClinica": "A alternativa **E** está correta (I, II e IV).",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Perfis hemodinâmicos diferenciais dos choques hipovolêmico, cardiogênico, neurogênico e séptico.",
+      "raciocinioChave": "O choque hipovolêmico cursa com PVC baixa, baixo débito cardíaco e RVS alta (I); o neurogênico apresenta vasodilatação periférica com pele quente e bradicardia/ausência de taquicardia reflexa (II); e o séptico hiperdinâmico exibe RVS baixa com débito elevado (IV). No choque cardiogênico a RVS encontra-se elevada por vasoconstrição compensatória, invalidando III.",
+      "armadilhaBanca": "Assumir que o choque cardiogênico cursa com resistência vascular sistêmica reduzida, confundindo-o com o perfil distributivo."
+    },
+    "mapaDistratores": {
+      "A": "Omite a proposição I verdadeira, que descreve corretamente o perfil hemodinâmico clássico do choque hipovolêmico.",
+      "B": "Inclui a proposição III falsa sobre baixa resistência vascular no choque cardiogênico e deixa de assinalar a proposição I verdadeira.",
+      "C": "Inclui a proposição III falsa (no choque cardiogênico a RVS está aumentada por resposta adrenérgica) e omite II e IV verdadeiras.",
+      "D": "Mantém a proposição III incorreta sobre a resistência vascular sistêmica no choque cardiogênico no lugar da proposição II verdadeira."
+    }
   },
   {
     "id": "q-ieppa-2026-019",
@@ -1232,24 +1436,36 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **B** está correta (`V, V, F, V`). O triângulo hepatocístico (Trígono de Calot na prática cirúrgica) é limitado pelo ducto cístico, ducto hepático comum e borda inferior do fígado; a artéria cística origina-se habitualmente da artéria hepática direita e cruza esse trígono. Na Visão Crítica de Segurança de Strasberg, disseca-se apenas o **terço inferior** da vesícula da placa cística — o fundo permanece fixo ao leito hepático para manter a tração (terceira assertiva falsa). Inserções baixas, paralelas ou nos hepáticos direito/esquerdo aumentam o risco de lesão biliar iatrogênica (quarta verdadeira).\n- **A) Incorreta:** A segunda assertiva é verdadeira.\n- **C) Incorreta:** Primeira, segunda e terceira estão invertidas.\n- **D) Incorreta:** Erra a primeira, terceira e quarta.\n- **E) Incorreta:** A técnica exige dissecção do terço inferior, não do fundo vesicular.",
     "perolaClinica": "A alternativa **B** está correta (`V, V, F, V`).",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Anatomia do Trígono de Calot, artéria cística e técnica de dissecção da Visão Crítica.",
+      "raciocinioChave": "O triângulo hepatocístico é limitado pelo ducto cístico, ducto hepático comum e borda inferior do fígado (1ª V), sendo cruzado pela artéria cística geralmente oriunda da artéria hepática direita (2ª V). Na Visão Crítica de Segurança disseca-se o terço inferior da vesícula, mantendo o fundo aderido ao leito hepático para tração (3ª F, 4ª V).",
+      "armadilhaBanca": "Descolar completamente o fundo vesicular do leito hepático antes de definir as estruturas do pedículo cístico."
+    },
+    "mapaDistratores": {
+      "A": "Nega erroneamente a segunda assertiva verdadeira sobre a origem habitual da artéria cística na artéria hepática direita e seu trajeto pelo trígono.",
+      "C": "Inverte as três primeiras assertivas sobre os limites do triângulo hepatocístico, o trajeto da artéria cística e a manutenção do fundo vesicular fixo.",
+      "D": "Erra a primeira, terceira e quarta assertivas ao rejeitar a anatomia do Trígono de Calot e validar o descolamento precoce do fundo da vesícula.",
+      "E": "Valida a terceira assertiva falsa, pois a Visão Crítica exige dissecção apenas do terço inferior da vesícula, preservando a fixação do fundo."
+    }
   },
   {
     "id": "q-ieppa-2026-020",
     "code": "Q-IEPPA26-0020",
     "numeroOriginal": 20,
-    "grandeAreaId": "clinica_medica",
-    "grandeArea": "Clínica Médica",
-    "tema": "Hematologia",
-    "subtema": "Hemoterapia e Reações Transfusionais",
-    "temaSlug": "cm-hemato",
-    "subtemaSlug": "cm-hemato-hemoterapia-e-reacoes-transfusionais",
+    "grandeAreaId": "cirurgia_geral",
+    "grandeArea": "Cirurgia Geral",
+    "tema": "Perioperatório, Cicatrização e Anestesiologia",
+    "subtema": "Hemoterapia, Transfusão Maciça e Reposição Volêmica",
+    "temaSlug": "cg-periop",
+    "subtemaSlug": "cg-periop-hemoterapia-transfusao-macica-e-reposicao-volemica",
     "tags": [
       "taco",
       "trali",
@@ -1301,13 +1517,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **C** está correta (`V, F, V, F`). Segundo o Manual de Hemovigilância da ANVISA (2022), paciente idosa com ICC/DRC apresentando hipertensão (170/100 mmHg), turgência jugular, cardiomegalia e cefalização da trama vascular pós-transfusão tem diagnóstico compatível com **TACO** (com elevação de BNP pós/pré > 1,5). Infiltrado bilateral até 6h após transfusão não é patognomônico de TRALI (segunda falsa), pois ocorre tanto em TRALI quanto em TACO. Choque hipotensivo sem resposta a diuréticos com PVC baixa favorece edema pulmonar não cardiogênico/TRALI (terceira verdadeira). O manejo diverge radicalmente: TACO exige diuréticos e redução volêmica, enquanto TRALI requer suporte ventilatório e frequentemente suporte vasopressor/hemodinâmico, sem indicação de corticoide em altas doses (quarta falsa).\n- **A) Incorreta:** Erra a primeira, segunda e quarta afirmativas.\n- **B) Incorreta:** Erra a terceira e a quarta afirmativas.\n- **D) Incorreta:** Erra a segunda e a terceira afirmativas.\n- **E) Incorreta:** Sequência incompatível com os critérios da ANVISA.",
     "perolaClinica": "A alternativa **C** está correta (`V, F, V, F`).",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Critérios diagnósticos de sobrecarga circulatória associada à transfusão (TACO) versus TRALI.",
+      "raciocinioChave": "Idosa com ICC e DRC que evolui após transfusão com dispneia, hipertensão (170/100 mmHg), turgência jugular, cardiomegalia e cefalização vascular apresenta TACO, confirmada com apoio de elevação de BNP > 1,5x (1ª e 3ª V). Infiltrado bilateral em 6h não é patognomônico de TRALI, ocorrendo também na TACO, e o manejo da TACO baseia-se em diuréticos (2ª e 4ª F).",
+      "armadilhaBanca": "Considerar o infiltrado pulmonar bilateral pós-transfusional exclusivo de TRALI ou ignorar o papel da hipertensão e turgência jugular na TACO."
+    },
+    "mapaDistratores": {
+      "A": "Erra a primeira, segunda e quarta afirmativas ao negar o diagnóstico evidente de TACO e aceitar infiltrado bilateral como patognomônico de TRALI.",
+      "B": "Rejeita a terceira afirmativa verdadeira sobre o aumento do BNP na TACO e valida a quarta afirmativa falsa.",
+      "D": "Considera incorretamente o infiltrado pulmonar bilateral exclusivo de TRALI na segunda afirmativa e nega a elevação de BNP na terceira.",
+      "E": "Nega o diagnóstico de TACO e a utilidade do BNP, validando apenas a quarta afirmativa incorreta sobre o manejo da reação."
+    }
   },
   {
     "id": "q-ieppa-2026-021",
@@ -1369,13 +1597,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **D** está correta. Pré-escolar de 6 anos com anasarca, proteinúria maciça (++++), hipoalbuminemia (2,1 g/dL), hipercolesterolemia (380 mg/dL), PA normal, sedimento urinário sem hematúria e complemento (C3/C4) normal configura **Síndrome Nefrótica Idiopática**, cuja etiologia em ~85–90% dos casos nesta faixa etária é a Doença por Lesões Mínimas (SBP / KDIGO). O tratamento empírico inicial dispensa biópsia renal e consiste em prednisona diária (60 mg/m²/dia ou 2 mg/kg/dia) por 4 a 6 semanas, seguida de esquema em dias alternados.\n- **A) Incorreta:** Complemento normal e ausência de hematúria/manifestações sistêmicas afastam nefrite lúpica.\n- **B) Incorreta:** Lesão mínima é muito mais frequente que GESF aos 6 anos; ciclosporina reserva-se a casos córtico-resistentes/dependentes.\n- **C) Incorreta:** Anticoagulação profilática e albumina IV não são conduta inicial de rotina na DLM não complicada.\n- **E) Incorreta:** GNDA cursa com hematúria dismórfica, hipertensão arterial e consumo de C3.",
     "perolaClinica": "A alternativa **D** está correta.",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Diagnóstico clínico e corticoterapia empírica na Síndrome Nefrótica por Lesão Mínima infantil.",
+      "raciocinioChave": "Criança de 6 anos com edema generalizado, proteinúria maciça (++++), hipoalbuminemia, hipercolesterolemia, normotensão, sedimento sem hematúria e complemento normal apresenta Síndrome Nefrótica Idiopática, causada em ~85–90% pela Doença por Lesões Mínimas. Nessa faixa etária sem atipias, dispensa-se biópsia inicial e institui-se prednisona oral diária por 4 a 6 semanas seguida de dias alternados.",
+      "armadilhaBanca": "Indicar biópsia renal imediata, imunossupressores de segunda linha ou confundir síndrome nefrótica pura com síndrome nefrítica pós-estreptocócica."
+    },
+    "mapaDistratores": {
+      "A": "Complemento C3 e C4 normais, ausência de hematúria e ausência de manifestações sistêmicas afastam nefrite lúpica e dispensam biópsia inicial.",
+      "B": "A GESF é menos comum que a lesão mínima aos 6 anos, e a ciclosporina fica reservada a casos córtico-resistentes ou córtico-dependentes.",
+      "C": "Anticoagulação plena profilática e infusão rotineira de albumina humana não constituem o tratamento inicial padrão da doença por lesões mínimas não complicada.",
+      "E": "A glomerulonefrite pós-estreptocócica cursa tipicamente com hematúria dismórfica, hipertensão arterial e consumo de C3, achados ausentes no caso."
+    }
   },
   {
     "id": "q-ieppa-2026-022",
@@ -1437,13 +1677,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **A** está correta (`V, F, V, F`). Crise febril simples (SBP/AAP) é generalizada, dura < 15 minutos e não recorre em 24h em criança de 6 meses a 5 anos sem infecção do SNC. Aos 18 meses, com foco definido (otite média aguda), bom estado após período pós-ictal e ausência de sinais meníngeos, não há indicação rotineira de TC nem punção lombar. Menor idade (< 12–18 meses) e história familiar aumentam o risco de recorrência de novas crises febris, mas não se recomenda profilaxia anticonvulsivante contínua pelo perfil de efeitos adversos e ausência de prevenção de epilepsia futura.\n- **B) Incorreta:** Erra os itens III e IV.\n- **C) Incorreta:** A punção lombar e a TC não são mandatórias na crise febril simples aos 18 meses sem sinais de alerta.\n- **D) Incorreta:** Inverte todas as assertivas.\n- **E) Incorreta:** Erra os itens I e IV.",
     "perolaClinica": "A alternativa **A** está correta (`V, F, V, F`).",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Critérios de crise febril simples na infância e dispensa de punção lombar ou neuroimagem.",
+      "raciocinioChave": "Crise tônico-clônica generalizada de 2 minutos em lactente de 18 meses febril com otite média aguda, sem sinais meníngeos e em boa recuperação pós-ictal, preenche critérios de Crise Febril Simples (1ª V). Nessa faixa etária com foco definido e exame neurológico normal, não há indicação rotineira de punção lombar ou TC (2ª F, 3ª V, 4ª F).",
+      "armadilhaBanca": "Solicitar punção lombar ou tomografia de crânio de rotina em lactente maior de 12 meses com foco infeccioso claro e sem sinais de alerta."
+    },
+    "mapaDistratores": {
+      "B": "Erra as assertivas III e IV ao não reconhecer os fatores de risco de recorrência e ao validar conduta desnecessária.",
+      "C": "Considera verdadeira a segunda assertiva, indicando erroneamente punção lombar ou TC de rotina em crise febril simples aos 18 meses com foco definido.",
+      "D": "Inverte todas as proposições verdadeiras e falsas sobre a definição de crise febril simples, necessidade de exames invasivos e prognóstico.",
+      "E": "Nega incorretamente a classificação de crise febril simples na primeira assertiva e valida erroneamente a quarta assertiva."
+    }
   },
   {
     "id": "q-ieppa-2026-023",
@@ -1505,13 +1757,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **C** está correta (I e II). Na doença hemolítica por incompatibilidade ABO, mães grupo O possuem anticorpos naturais IgG anti-A/anti-B que cruzam a barreira placentária já na primeira gestação (acometendo primogênitos — SBP/AAP). Icterícia com Coombs direto positivo e bilirrubina total de 10 mg/dL às 36h de vida é icterícia patológica/hemolítica, exigindo avaliação nas curvas de Bhutani/SBP com risco elevado e potencial indicação de fototerapia (III falsa).\n- **A) Incorreta:** A proposição III é falsa e falta a I.\n- **B) Incorreta:** A proposição III é falsa.\n- **D) Incorreta:** Omite a proposição I verdadeira.\n- **E) Incorreta:** Inclui a proposição III falsa.",
     "perolaClinica": "A alternativa **C** está correta (I e II).",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Fisiopatologia da incompatibilidade ABO em primogênitos e avaliação de risco de icterícia neonatal.",
+      "raciocinioChave": "Mães do grupo O possuem anticorpos naturais IgG anti-A/anti-B capazes de atravessar a placenta já na primeira gestação, causando doença hemolítica por incompatibilidade ABO em RN A ou B (I e II corretas). Com 36 horas de vida, Coombs direto positivo e BT de 10 mg/dL, trata-se de icterícia hemolítica com indicação de vigilância/fototerapia pelas curvas de risco, invalidando III.",
+      "armadilhaBanca": "Assumir que a incompatibilidade ABO exige sensibilização prévia como ocorre no fator Rh ou julgar benigna uma BT de 10 mg/dL às 36h com Coombs positivo."
+    },
+    "mapaDistratores": {
+      "A": "Inclui a proposição III falsa ao minimizar o risco da icterícia hemolítica com Coombs positivo às 36 horas e omite a proposição I verdadeira.",
+      "B": "Mantém a proposição III incorreta ao desconsiderar o caráter patológico da hemólise e a necessidade de avaliação nas curvas para fototerapia.",
+      "D": "Omite a proposição I verdadeira sobre a passagem transplacentária de anticorpos naturais IgG anti-A/anti-B em gestantes do grupo O.",
+      "E": "Inclui a proposição III falsa ao afirmar conduta inadequada diante de doença hemolítica neonatal com bilirrubina elevada precocemente."
+    }
   },
   {
     "id": "q-ieppa-2026-024",
@@ -1574,13 +1838,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "E",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **E** está correta (I e III). Pelas diretrizes vigentes da SBP (Reanimação do RN ≥ 34 semanas, 2022), não se recomenda mais intubação rotineira para aspiração traqueal imediata no RN não vigoroso com líquido meconial (II falsa); realizam-se os passos iniciais e, persistindo apneia/respiração irregular ou FC < 100 bpm nos primeiros 60s (\"Minuto de Ouro\"), inicia-se VPP com máscara facial e ar ambiente. Se após 30s de VPP efetiva (com IOT e técnica corrigida) a FC permanecer < 60 bpm, indica-se massagem cardíaca coordenada 3:1 com O₂ a 100%.\n- **A) Incorreta:** A proposição I também está correta.\n- **B) Incorreta:** A proposição III também está correta.\n- **C) Incorreta:** A proposição II refere-se a conduta abandonada pelas diretrizes atuais.\n- **D) Incorreta:** Inclui II incorreta e omite I.",
     "perolaClinica": "A alternativa **E** está correta (I e III).",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Conduta atual da SBP na reanimação do RN não vigoroso com líquido amniótico meconial.",
+      "raciocinioChave": "Pelas diretrizes vigentes da SBP, RN a termo não vigoroso com líquido meconial não deve ser submetido à intubação imediata de rotina para aspiração traqueal (II falsa). Realizam-se os passos iniciais e, mantendo apneia ou FC < 100 bpm (60 bpm aos 30s), inicia-se VPP com máscara facial e ar ambiente dentro do Minuto de Ouro, progredindo conforme resposta (I e III corretas).",
+      "armadilhaBanca": "Manter a recomendação histórica obsoleta de laringoscopia e aspiração traqueal direta imediata antes da VPP no RN meconial hipotônico."
+    },
+    "mapaDistratores": {
+      "A": "Omite a proposição I verdadeira sobre a indicação imediata de VPP com máscara facial diante de apneia e FC < 100 bpm após os passos iniciais.",
+      "B": "Omite a proposição III verdadeira referente às etapas subsequentes de avaliação e ajuste da reanimação neonatal.",
+      "C": "Inclui a proposição II obsoleta, pois a intubação imediata rotineira para aspiração traqueal em RN não vigoroso com mecônio foi abandonada pela SBP.",
+      "D": "Mantém a proposição II incorreta sobre aspiração traqueal imediata de rotina e exclui a proposição I essencial do protocolo."
+    }
   },
   {
     "id": "q-ieppa-2026-025",
@@ -1642,13 +1918,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alternativa **D** está correta (`V, F, V, F`). Pelas diretrizes da AAP/SBP para Bronquiolite Viral Aguda, o tratamento baseia-se em hidratação, higiene nasal e oxigenoterapia suplementar se SpO₂ persistentemente < 90–92%. Não há indicação rotineira de beta-2 agonistas (salbutamol — segunda falsa), corticosteroides sistêmicos (terceira verdadeira) ou fisioterapia respiratória com tapotagem/vibração convencional (quarta falsa).\n- **A) Incorreta:** Erra os itens I, II e III.\n- **B) Incorreta:** Recomenda broncodilatador e tapotagem, ambos contraindicados por evidências.\n- **C) Incorreta:** Recomenda teste rotineiro com salbutamol.\n- **E) Incorreta:** Erra I e IV.",
     "perolaClinica": "A alternativa **D** está correta (`V, F, V, F`).",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Manejo baseado em evidências da Bronquiolite Viral Aguda em lactentes (suporte clínico vs. terapias contraindicadas).",
+      "raciocinioChave": "O tratamento da bronquiolite viral aguda baseia-se em suporte clínico com hidratação, higiene nasal e oxigenoterapia se SpO₂ < 90–92%. Beta-2 agonistas rotineiros, corticosteroides sistêmicos e fisioterapia com tapotagem não trazem benefício comprovado, configurando a sequência V, F, V, F.",
+      "armadilhaBanca": "Explora a tentação de prescrever broncodilatadores e fisioterapia com tapotagem diante de sibilância e tiragem, condutas contraindicadas pelas diretrizes atuais."
+    },
+    "mapaDistratores": {
+      "A": "Atribui valor falso ao suporte clínico como base do tratamento e erra a avaliação sobre broncodilatadores e corticosteroides.",
+      "B": "Considera verdadeiras as indicações rotineiras de broncodilatador e de fisioterapia com tapotagem, ambas contraindicadas pelas evidências da AAP/SBP.",
+      "C": "Valida o uso ou teste rotineiro de beta-2 agonista (salbutamol) como medida indicada na bronquiolite viral aguda.",
+      "E": "Nega o suporte clínico como base terapêutica e aprova a fisioterapia respiratória convencional com tapotagem."
+    }
   },
   {
     "id": "q-ieppa-2026-026",
@@ -1710,13 +1998,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "E",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alternativa **E** está correta. Na laringotraqueobronquite aguda (crupe viral) moderada a grave — caracterizada por estridor em repouso e tiragem — a conduta imediata segundo a SBP é **nebulização com epinefrina (adrenalina)** para vasoconstrição rápida do edema subglótico, associada a **corticosteroide sistêmico** (dexametasona dose única 0,15–0,6 mg/kg VO/IM/EV) para efeito anti-inflamatório sustentado.\n- **A) Incorreta:** O diagnóstico do crupe é clínico e não se deve atrasar o tratamento nem agitar a criança para radiografia cervical.\n- **B) Incorreta:** Beta-2 agonista não atua na mucosa subglótica da laringe.\n- **C) Incorreta:** Etiologia é viral (parainfluenza) e ausência de sialorreia/disfagia afasta epiglotite aguda.\n- **D) Incorreta:** Anti-histamínicos sedativos são contraindicados em desconforto respiratório alto.",
     "perolaClinica": "A alternativa **E** está correta.",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Conduta farmacológica imediata na laringotraqueobronquite aguda (crupe viral) moderada a grave.",
+      "raciocinioChave": "Criança com tosse ladrante, estridor em repouso e tiragem supraesternal sem sialorreia apresenta crupe viral moderado a grave. A conduta imediata visa vasoconstrição rápida do edema subglótico com nebulização de adrenalina associada a dexametasona sistêmica.",
+      "armadilhaBanca": "Confundir obstrução subglótica do crupe viral com broncoespasmo ou epiglotite aguda, ou atrasar o tratamento para solicitar radiografia cervical."
+    },
+    "mapaDistratores": {
+      "A": "O diagnóstico do crupe é clínico, e encaminhar a criança com estridor em repouso para radiografia gera agitação perigosa e atrasa a intervenção imediata.",
+      "B": "Os beta-2 agonistas relaxam a musculatura lisa brônquica e não atuam no edema inflamatório da mucosa subglótica da laringe.",
+      "C": "A etiologia do crupe é viral (parainfluenza) e a ausência de disfagia e sialorreia afasta epiglotite aguda, tornando desnecessários ceftriaxona e intubação preventiva.",
+      "D": "Anti-histamínicos sedativos são contraindicados no desconforto respiratório alto, e nebulização com soro frio não substitui adrenalina e corticoide sistêmico."
+    }
   },
   {
     "id": "q-ieppa-2026-027",
@@ -1778,24 +2078,36 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "E",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **E** está correta (I e II). Conforme critérios da AHA/SBP para Doença de Kawasaki clássica, exige-se febre ≥ 5 dias e ≥ 4 de 5 critérios mucocutâneos/ganglionares. O principal risco é a arterite coronariana com formação de aneurismas, indicando ecocardiograma ao diagnóstico, em 1–2 semanas e 4–6 semanas. O tratamento padrão-ouro é **Imunoglobulina Intravenosa (IGIV 2 g/kg) + AAS**, que deve ser iniciado idealmente **antes do 10º dia** de febre (logo que firmado o diagnóstico) para reduzir de ~25% para < 5% o risco de aneurisma coronariano (III falsa).\n- **A) Incorreta:** A proposição III é falsa (atrasar IGIV após o 10º dia eleva o risco de sequelas coronarianas).\n- **B) Incorreta:** Omite a proposição II verdadeira.\n- **C) Incorreta:** Inclui III falsa.\n- **D) Incorreta:** Inclui III falsa e omite I.",
     "perolaClinica": "A alternativa **E** está correta (I e II).",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Critérios diagnósticos, complicações coronarianas e janela terapêutica da Doença de Kawasaki.",
+      "raciocinioChave": "A Doença de Kawasaki clássica exige febre ≥ 5 dias e pelo menos 4 de 5 critérios mucocutâneos/ganglionares, tendo como principal complicação a arterite com aneurismas coronarianos. O tratamento padrão com IGIV e AAS deve ser iniciado idealmente antes do 10º dia de doença, validando apenas I e II.",
+      "armadilhaBanca": "Induzir a aceitação do início tardio da imunoglobulina intravenosa após o 10º dia de febre, conduta que eleva o risco de aneurismas coronarianos."
+    },
+    "mapaDistratores": {
+      "A": "Inclui a proposição III como verdadeira, embora postergar a imunoglobulina intravenosa após o 10º dia aumente significativamente as sequelas coronarianas.",
+      "B": "Omite a proposição II verdadeira sobre o risco de aneurismas coronarianos e a indicação de acompanhamento ecocardiográfico.",
+      "C": "Incorpora a proposição III incorreta sobre o atraso da imunoglobulina e omite a proposição II verdadeira.",
+      "D": "Omite a proposição I correta sobre os critérios diagnósticos clássicos e inclui a proposição III falsa."
+    }
   },
   {
     "id": "q-ieppa-2026-028",
     "code": "Q-IEPPA26-0028",
     "numeroOriginal": 28,
-    "grandeAreaId": "clinica_medica",
-    "grandeArea": "Clínica Médica",
-    "tema": "Endocrinologia e Metabologia",
-    "subtema": "Complicações Agudas do Diabetes",
-    "temaSlug": "cm-endocrino",
-    "subtemaSlug": "cm-endocrino-complicacoes-agudas-do-diabetes",
+    "grandeAreaId": "pediatria",
+    "grandeArea": "Pediatria",
+    "tema": "Puericultura, Crescimento e Nutrição",
+    "subtema": "Endocrinologia Pediátrica e Diabetes na Infância",
+    "temaSlug": "ped-puericultura",
+    "subtemaSlug": "ped-puericultura-endocrinologia-pediatrica-e-diabetes-na-infancia",
     "tags": [
       "cetoacidose-diabetica",
       "expansao-volemica",
@@ -1846,13 +2158,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **C** está correta (`V, F, V, F`). Segundo as diretrizes da ISPAD/SBD/SBP para CAD pediátrica, a hidratação inicial utiliza SF 0,9% 10–20 mL/kg em 1 hora, evitando sobrecarga pelo risco de edema cerebral. A infusão de insulina regular (0,05–0,1 UI/kg/h) só deve ser iniciada **após** a 1ª hora de reposição volêmica (e verificando potássio sérico > 3,3 mEq/L — segunda falsa). A reposição de potássio inicia-se logo após diurese presente e exclusão de hipercalemia grave. Bicarbonato de sódio não é indicado rotineiramente com pH 7,15 (apenas considerado se pH < 6,9 com disfunção miocárdica/hipercalemia ameaçadora — quarta falsa).\n- **A) Incorreta:** Erra I, II, III e IV.\n- **B) Incorreta:** Insulina não é iniciada simultaneamente ao bolus inicial na primeira hora na CAD pediátrica.\n- **D) Incorreta:** Erra I e IV.\n- **E) Incorreta:** Erra III e IV.",
     "perolaClinica": "A alternativa **C** está correta (`V, F, V, F`).",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Sequência terapêutica segura (hidratação, insulina e potássio) na cetoacidose diabética pediátrica.",
+      "raciocinioChave": "Na CAD pediátrica, realiza-se expansão inicial cautelosa com SF 0,9% (10–20 mL/kg em 1 hora) pelo risco de edema cerebral, iniciando-se a insulina contínua apenas após a primeira hora e com potássio > 3,3 mEq/L. A reposição de potássio começa após confirmação de diurese, resultando em V, F, V, F.",
+      "armadilhaBanca": "Induzir o erro iatrogênico de iniciar insulina regular já na primeira hora simultaneamente à expansão volêmica, elevando o risco de edema cerebral e hipocalemia."
+    },
+    "mapaDistratores": {
+      "A": "Inverte todas as assertivas ao rejeitar a hidratação cautelosa inicial e validar a insulinoterapia imediata na primeira hora e o quarto item incorreto.",
+      "B": "Considera verdadeira a administração de insulina regular simultaneamente ao bolus volêmico inicial na primeira hora da CAD pediátrica.",
+      "D": "Rejeita a recomendação de expansão volêmica cautelosa na primeira hora e valida a quarta assertiva falsa.",
+      "E": "Nega a assertiva correta sobre o manejo hidroeletrolítico e valida a quarta assertiva incorreta."
+    }
   },
   {
     "id": "q-ieppa-2026-029",
@@ -1914,13 +2238,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alternativa **C** está correta. Lactente com 3 dias de febre alta que desaparece em crise (lise súbita), seguida imediatamente pelo surgimento de exantema maculopapular róseo centrífugo (iniciando no tronco) em criança afebril e em bom estado geral, é o quadro clássico de **Exantema Súbito (Roséola Infantil)** causado pelo **HHV-6** (SBP).\n- **A) Incorreta:** Não houve faringoamigdalite nem uso de amoxicilina.\n- **B) Incorreta:** O enunciado relata explicitamente ausência de adenomegalias retroauriculares.\n- **D) Incorreta:** Eritema infeccioso (Parvovírus B19) cursa com eritema malar em \"face esbofeteada\" e exantema rendilhado em membros.\n- **E) Incorreta:** Sarampo apresenta pródromos catarrais intensos (tosse, coriza, conjuntivite), manchas de Koplik e febre persistente durante a progressão craniocaudal do exantema.",
     "perolaClinica": "A alternativa **C** está correta.",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Diagnóstico diferencial das doenças exantemáticas febris pela cronologia febre-exantema.",
+      "raciocinioChave": "Lactente com 3 dias de febre alta sem sintomas catarrais que cessa em lise súbita imediatamente antes do surgimento de exantema maculopapular róseo a partir do tronco, em bom estado geral, caracteriza o Exantema Súbito (Roséola Infantil). Seu agente etiológico clássico é o Herpesvírus Humano tipo 6 (HHV-6).",
+      "armadilhaBanca": "Confundir doenças exantemáticas apenas pelo aspecto das lesões sem valorizar a cronologia patognomônica entre desaparecimento da febre e surgimento do exantema."
+    },
+    "mapaDistratores": {
+      "A": "A mononucleose infecciosa pelo EBV cursa tipicamente com faringoamigdalite e exantema após uso de amoxicilina, ambos ausentes no relato.",
+      "B": "A rubéola caracteriza-se por adenomegalia retroauricular e suboccipital dolorosa, explicitamente negada pelo exame físico descrito.",
+      "D": "O eritema infeccioso pelo Parvovírus B19 apresenta fácies esbofeteada e exantema rendilhado em membros, sem lise súbita de febre alta prévia.",
+      "E": "O sarampo cursa com pródromos catarrais intensos, manchas de Koplik e febre que persiste durante a progressão craniocaudal do exantema."
+    }
   },
   {
     "id": "q-ieppa-2026-030",
@@ -1982,13 +2318,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **A** está correta. Adolescente com velocidade de crescimento normal para a fase pré-puberal (≥ 5 cm/ano), estatura no P3, pais de estatura normal, puberdade atrasada (G1P1 aos 14 anos) e idade óssea atrasada (11 anos) compatível com a estatura apresenta **Retardo Constitucional do Crescimento e Puberdade (RCCP)** — uma variante benigna da normalidade (SBP). Como as epífises ainda estão abertas (IO atrasada), o estirão ocorrerá mais tarde, atingindo o canal alvo familiar.\n- **B) Incorreta:** Hipotireoidismo cursa com desaceleração da velocidade de crescimento (< 4 cm/ano), o que não ocorre aqui (5 cm/ano).\n- **C) Incorreta:** Na baixa estatura familiar os pais têm baixa estatura e a idade óssea é compatível com a idade cronológica.\n- **D) Incorreta:** Deficiência de GH provoca queda na velocidade de crescimento, e idade óssea atrasada isolada com VC normal não confirma deficiência de GH.\n- **E) Incorreta:** Síndrome de Klinefelter (47,XXY) cursa tipicamente com estatura alta e membros longos, não baixa estatura.",
     "perolaClinica": "A alternativa **A** está correta.",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Diferenciação entre Retardo Constitucional do Crescimento e Puberdade (RCCP) e baixa estatura patológica.",
+      "raciocinioChave": "Adolescente com velocidade de crescimento normal para a fase pré-puberal (5 cm/ano), estatura no percentil 3, pais de estatura normal, puberdade atrasada e idade óssea atrasada (11 anos) apresenta Retardo Constitucional do Crescimento e Puberdade. Como variante benigna com epífises abertas, atingirá a estatura-alvo familiar mais tardiamente.",
+      "armadilhaBanca": "Interpretar idade óssea atrasada e Tanner G1P1 aos 14 anos como doença endócrina patológica, ignorando a velocidade de crescimento normal (5 cm/ano)."
+    },
+    "mapaDistratores": {
+      "B": "O hipotireoidismo primário provoca desaceleração marcante da velocidade de crescimento (< 4 cm/ano), incompatível com a taxa normal de 5 cm/ano observada.",
+      "C": "Na baixa estatura familiar os pais também têm estatura baixa e a idade óssea é compatível com a idade cronológica, diferindo do caso.",
+      "D": "A deficiência de GH cursa com queda da velocidade de crescimento, e idade óssea atrasada isolada com crescimento normal não confirma deficiência hormonal.",
+      "E": "A síndrome de Klinefelter (47,XXY) manifesta-se tipicamente com alta estatura e membros longos, e não com baixa estatura."
+    }
   },
   {
     "id": "q-ieppa-2026-031",
@@ -2050,13 +2398,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **C** está correta (I, II e IV). Sangramento pós-menopausa em mulher obesa, diabética e hipertensa exige descartar neoplasia endometrial (FEBRASGO). Na pós-menopausa sem terapia hormonal e com sangramento, o ponto de corte normal do eco endometrial é ≤ 4–5 mm; portanto, 12 mm heterogêneo é francamente alterado (III falsa), indicando investigação histopatológica com histeroscopia e biópsia dirigida. Hiperplasia atípica/carcinoma inicial têm na histerectomia total com salpingo-ooforectomia bilateral a base terapêutica.\n- **A) Incorreta:** III é falsa e omite I e IV.\n- **B) Incorreta:** Inclui III falsa e omite II.\n- **D) Incorreta:** Inclui III falsa.\n- **E) Incorreta:** Inclui III falsa.",
     "perolaClinica": "A alternativa **C** está correta (I, II e IV).",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Investigação do sangramento pós-menopausa e valor de corte endometrial na suspeita de câncer de endométrio.",
+      "raciocinioChave": "Sangramento uterino na pós-menopausa em mulher obesa, diabética e hipertensa sem terapia hormonal impõe afastar adenocarcinoma de endométrio. Como o limite normal do eco endometrial nessas condições é ≤ 4–5 mm, uma espessura de 12 mm heterogênea é francamente alterada e indica biópsia dirigida por histeroscopia (I, II e IV).",
+      "armadilhaBanca": "Validar na proposição III uma espessura endometrial de 12 mm como normal ou expectante em mulher pós-menopáusica sem terapia hormonal e com sangramento."
+    },
+    "mapaDistratores": {
+      "A": "Inclui a proposição III falsa sobre a espessura endometrial e omite as proposições corretas I e IV.",
+      "B": "Inclui a proposição III incorreta e deixa de contemplar a proposição II verdadeira.",
+      "D": "Inclui a proposição III falsa e omite as proposições corretas II e IV.",
+      "E": "Inclui a proposição III falsa e omite a proposição I correta sobre a hipótese principal e seus fatores de risco."
+    }
   },
   {
     "id": "q-ieppa-2026-032",
@@ -2119,13 +2479,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **D** está correta (`V, F, F, V`). Lesão BI-RADS 4 indica suspeita de malignidade e requer estudo histopatológico (não controle semestral, reservado ao BI-RADS 3 — segunda falsa). Como se trata de microcalcificações agrupadas sem nódulo visível, o método de escolha para guiar a biópsia a vácuo/core é a **estereotaxia** (mamografia), pois a ultrassonografia é inferior na visualização de microcalcificações (terceira falsa). Confirmado CDIS tratado com cirurgia conservadora, indica-se radioterapia adjuvante para reduzir recidiva local (SBM / FEBRASGO).\n- **A) Incorreta:** Erra todas as assertivas.\n- **B) Incorreta:** BI-RADS 4 não vai para controle em 6 meses.\n- **C) Incorreta:** Erra I, II e III.\n- **E) Incorreta:** O ultrassom não é superior à mamografia para microcalcificações.",
     "perolaClinica": "A alternativa **D** está correta (`V, F, F, V`).",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Conduta diagnóstica frente a microcalcificações pleomórficas agrupadas BI-RADS 4 na mamografia.",
+      "raciocinioChave": "Achados mamográficos BI-RADS 4 indicam suspeita de malignidade e exigem avaliação histopatológica imediata em vez de seguimento em 6 meses. Como microcalcificações agrupadas sem nódulo são mal visualizadas à ultrassonografia, a biópsia deve ser guiada por estereotaxia mamográfica, resultando em V, F, F, V.",
+      "armadilhaBanca": "Confundir a conduta de controle semestral do BI-RADS 3 com a do BI-RADS 4 e sugerir ultrassonografia para guiar biópsia de microcalcificações isoladas."
+    },
+    "mapaDistratores": {
+      "A": "Inverte todas as afirmativas ao negar a necessidade de biópsia no BI-RADS 4 e aceitar controle semestral e biópsia guiada por ultrassonografia.",
+      "B": "Valida o controle mamográfico em 6 meses para lesão BI-RADS 4 (conduta restrita ao BI-RADS 3) e erra a quarta assertiva.",
+      "C": "Nega a obrigatoriedade de investigação histológica no BI-RADS 4 e atribui à ultrassonografia indicação adequada para microcalcificações agrupadas.",
+      "E": "Considera verdadeira a superioridade ou indicação da ultrassonografia em relação à estereotaxia para microcalcificações isoladas."
+    }
   },
   {
     "id": "q-ieppa-2026-033",
@@ -2187,13 +2559,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **C** está correta (I, II e III). Na pré-eclâmpsia com sinais de gravidade (PA ≥ 160/110, cefaleia, epigastralgia/hipocôndrio D) a 36 semanas (FEBRASGO / Ministério da Saúde), inicia-se sulfato de magnésio (Pritchard ou Zuspan) mantido por 24h pós-parto, realiza-se terapia anti-hipertensiva de urgência (hidralazina EV ou nifedipina VO) com alvo de 140–150/90–100 mmHg e programa-se interrupção da gestação (preferencialmente parto vaginal induzido se condições favoráveis). Diuréticos agravam a hemoconcentração e hipoperfusão uteroplacentária, sendo contraindicados rotineiramente (exceto em edema agudo de pulmão — IV falsa).\n- **A) Incorreta:** Omite a proposição III verdadeira.\n- **B) Incorreta:** Furosemida não é primeira linha na pré-eclâmpsia.\n- **D) Incorreta:** Omite a proposição I verdadeira.\n- **E) Incorreta:** Inclui IV falsa e omite II e III.",
     "perolaClinica": "A alternativa **C** está correta (I, II e III).",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Manejo imediato da pré-eclâmpsia com sinais de gravidade às 36 semanas (neuroproteção, anti-hipertensivo e parto).",
+      "raciocinioChave": "Gestante com 36 semanas, PA 160/110 mmHg, cefaleia refratária e dor em hipocôndrio direito apresenta iminência de eclâmpsia. O manejo imediato requer sulfato de magnésio (Pritchard ou Zuspan), anti-hipertensivo de urgência (hidralazina EV ou nifedipina VO) e interrupção da gestação após estabilização (I, II e III).",
+      "armadilhaBanca": "Incluir diurético de alça (furosemida) como anti-hipertensivo de primeira linha na pré-eclâmpsia, conduta que agrava a hipovolemia relativa e a perfusão placentária."
+    },
+    "mapaDistratores": {
+      "A": "Omite a proposição III correta sobre a programação de resolução da gestação na pré-eclâmpsia grave com 36 semanas.",
+      "B": "Omite a proposição II verdadeira e valida o uso de furosemida como primeira linha anti-hipertensiva na pré-eclâmpsia.",
+      "D": "Omite a proposição I essencial sobre a administração imediata de sulfato de magnésio para prevenção de convulsões.",
+      "E": "Inclui a proposição IV falsa sobre furosemida na pré-eclâmpsia e omite as proposições II e III corretas."
+    }
   },
   {
     "id": "q-ieppa-2026-034",
@@ -2255,13 +2639,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alternativa **C** está correta. Desacelerações periódicas simétricas e graduais cujo início e nadir ocorrem **após** o pico (acme) da contração uterina definem **Desacelerações Tardias (DIP II)**, causadas por **insuficiência uteroplacentária** e hipóxia fetal durante a contração (ACOG / FEBRASGO). Exigem medidas imediatas de reanimação intrauterina (decúbito lateral esquerdo, oxigênio, correção de hipotensão/taquissistolia) e resolução do parto se persistirem em > 50% das contrações (Categoria II/III).\n- **A) Incorreta:** DIP I é espelho exato da contração (nadir coincide com o acme).\n- **B) Incorreta:** DIP III tem queda abrupta (< 30s) e relação temporal variável com a contração.\n- **D) Incorreta:** Padrão sinusoidal apresenta ondas regulares suaves sem variabilidade nem acelerações.\n- **E) Incorreta:** Categoria I exige ausência de desacelerações tardias ou variáveis.",
     "perolaClinica": "A alternativa **C** está correta.",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Interpretação cardiotocográfica das desacelerações tardias (DIP II) e sua fisiopatologia hipóxica.",
+      "raciocinioChave": "Desacelerações periódicas graduais em > 50% das contrações com início e nadir após o acme contrátil definem desacelerações tardias (DIP II). Esse achado sinaliza insuficiência uteroplacentária com hipóxia fetal, exigindo medidas de reanimação intrauterina e avaliação de interrupção do parto se persistente.",
+      "armadilhaBanca": "Classificar o traçado como Categoria I apenas pela variabilidade moderada e acelerações, ignorando que desacelerações tardias recorrentes excluem a normalidade."
+    },
+    "mapaDistratores": {
+      "A": "A desaceleração precoce (DIP I) coincide em espelho exato com a contração uterina (nadir no acme), diferindo do atraso temporal descrito.",
+      "B": "A desaceleração variável (DIP III) apresenta queda abrupta por compressão funicular e relação temporal variável com as contrações.",
+      "D": "O padrão sinusoidal caracteriza-se por ondas regulares suaves com ausência de variabilidade e de acelerações, incompatível com o traçado apresentado.",
+      "E": "A Categoria I do ACOG exige ausência total de desacelerações tardias ou variáveis, independentemente de a variabilidade ser moderada."
+    }
   },
   {
     "id": "q-ieppa-2026-035",
@@ -2323,13 +2719,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **A** está correta. Qualquer Coombs Indireto positivo sem administração recente de imunoglobulina anti-D (que ocorreu há anos, no parto anterior) indica **aloimunização/sensibilização materna** (FEBRASGO / Ministério da Saúde). Enquanto títulos estiverem abaixo do nível crítico (< 1:16), monitora-se mensalmente; ao atingir ou ultrapassar 1:16, inicia-se rastreamento não invasivo de anemia fetal pelo pico de velocidade sistólica da Artéria Cerebral Média (PVS-ACM > 1,5 MoM).\n- **B) Incorreta:** Imunoglobulina anti-D profilática é ineficaz em gestante já sensibilizada.\n- **C) Incorreta:** Cordocentese é exame invasivo reservado a casos com anemia fetal suspeita no Doppler (PVS-ACM > 1,5 MoM), não para título 1:4.\n- **D) Incorreta:** A meia-vida da anti-D administrada no parto anterior já se esgotou há muito tempo; trata-se de sensibilização real.\n- **E) Incorreta:** Título 1:4 está abaixo do limiar crítico e a espectrofotometria na Curva de Liley foi substituída pelo Doppler da ACM.",
     "perolaClinica": "A alternativa **A** está correta.",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Seguimento da gestante Rh negativo com Coombs indireto positivo abaixo do título crítico (1:4).",
+      "raciocinioChave": "Coombs indireto positivo (1:4) no primeiro trimestre sem administração recente de imunoglobulina anti-D confirma sensibilização materna prévia. Com título abaixo do limiar crítico (≥ 1:16), realiza-se Coombs mensal e indica-se Doppler da artéria cerebral média somente se o título atingir o nível crítico.",
+      "armadilhaBanca": "Confundir gestante já aloimunizada (Coombs 1:4 sem anti-D recente) com candidata à profilaxia na 28ª semana ou indicar cordocentese prematura em título baixo."
+    },
+    "mapaDistratores": {
+      "B": "A imunoglobulina anti-D profilática às 28 semanas é ineficaz e não deve ser usada quando a gestante já está sensibilizada.",
+      "C": "A cordocentese é exame invasivo indicado apenas diante de suspeita de anemia fetal ao Doppler da ACM (PVS > 1,5 MoM), não para título inicial de 1:4.",
+      "D": "A meia-vida da imunoglobulina aplicada no parto anterior já se esgotou há muito tempo, tratando-se de aloimunização real que exige seguimento de alto risco.",
+      "E": "O título de 1:4 é inferior ao nível crítico de anemia fetal e a espectrofotometria pela Curva de Liley foi substituída pelo Doppler da ACM."
+    }
   },
   {
     "id": "q-ieppa-2026-036",
@@ -2392,13 +2800,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alternativa **D** está correta. Segundo o PCDT de ISTs (Ministério da Saúde) e FEBRASGO, a primoinfecção por herpes genital (vesículas agrupadas que evoluem para úlceras rasas dolorosas com adenopatia inguinal bilateral e sintomas sistêmicos) deve ser tratada de imediato por via **oral/sistêmica** (Aciclovir 400 mg 8/8h ou Valaciclovir/Fanciclovir por 7–10 dias), reduzindo dor, duração das lesões e excreção viral, sem eliminar a latência ganglionar.\n- **A) Incorreta:** Cesariana só é indicada se houver lesões ativas ou pródromos no momento do trabalho de parto.\n- **B) Incorreta:** Aciclovir tópico tem eficácia clínica desprezível no herpes genital.\n- **C) Incorreta:** Terapia supressiva contínua é indicada em recorrências frequentes (≥ 6 episódios/ano).\n- **E) Incorreta:** O diagnóstico é essencialmente clínico e o tratamento deve ser iniciado precocemente sem aguardar sorologia.",
     "perolaClinica": "A alternativa **D** está correta.",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Diagnóstico clínico e tratamento antiviral sistêmico do primeiro episódio de herpes genital.",
+      "raciocinioChave": "Múltiplas úlceras vulvares dolorosas rasas associadas a vesículas agrupadas, disúria, febre baixa e linfadenopatia inguinal bilateral dolorosa configuram primoinfecção herpética clínica. O tratamento de escolha é antiviral sistêmico oral (aciclovir, valaciclovir ou fanciclovir) por 7 a 10 dias iniciado prontamente.",
+      "armadilhaBanca": "Exigir sorologia prévia antes de tratar, indicar terapia supressiva contínua após o primeiro episódio ou prescrever apenas aciclovir tópico."
+    },
+    "mapaDistratores": {
+      "A": "A cesariana só é indicada se houver lesões herpéticas ativas ou pródromos no início do trabalho de parto, não de modo permanente para futuras gestações.",
+      "B": "O aciclovir tópico possui eficácia clínica desprezível no herpes genital, sendo indispensável a via sistêmica oral.",
+      "C": "A terapia supressiva contínua diária é indicada apenas para recorrências frequentes (≥ 6 surtos ao ano), não após o primeiro episódio isolado.",
+      "E": "O diagnóstico do herpes genital é clínico e o tratamento antiviral deve ser iniciado imediatamente sem aguardar sorologias."
+    }
   },
   {
     "id": "q-ieppa-2026-037",
@@ -2461,13 +2881,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **D** está correta (`V, V, F, V`). Pelas recomendações da FEBRASGO/ACOG para tocólise aguda visando corticoterapia antenatal, a **nifedipina** é primeira linha pela boa eficácia e segurança materna. Betamiméticos (terbutalina/salbutamol) têm importante toxicidade cardiovascular/metabólica (taquicardia, hiperglicemia, hipocalemia, edema agudo de pulmão). A **indometacina** é **contraindicada após 32 semanas** pelo risco de fechamento precoce do ducto arterioso fetal e oligoâmnio (terceira falsa). O atosibano é seguro e seletivo para receptores de ocitocina, limitado pelo custo.\n- **A) Incorreta:** Indometacina não deve ser usada após 32 semanas.\n- **B) Incorreta:** Nifedipina é verdadeira como primeira escolha.\n- **C) Incorreta:** Erra II, III e IV.\n- **E) Incorreta:** Erra I, II e III.",
     "perolaClinica": "A alternativa **D** está correta (`V, V, F, V`).",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Escolha dos agentes tocolíticos e contraindicação da indometacina após 32 semanas no parto prematuro.",
+      "raciocinioChave": "Às 33 semanas de gestação, a nifedipina é o tocolítico de primeira linha para possibilitar corticoterapia antenatal, enquanto os betamiméticos apresentam maior toxicidade cardiovascular e metabólica. A indometacina é contraindicada após 32 semanas pelo risco de fechamento do canal arterial fetal, resultando em V, V, F, V.",
+      "armadilhaBanca": "Desconsiderar a idade gestacional de corte de 32 semanas que contraindica o uso de indometacina pelo risco de constrição precoce do canal arterial fetal."
+    },
+    "mapaDistratores": {
+      "A": "Considera verdadeira a indicação de indometacina às 33 semanas (após 32 semanas) e erra a quarta afirmativa.",
+      "B": "Rejeita incorretamente a nifedipina como droga tocolítica de primeira linha na prática obstétrica atual.",
+      "C": "Nega os efeitos adversos relevantes dos betamiméticos, valida a indometacina após 32 semanas e rejeita a quarta afirmativa verdadeira.",
+      "E": "Inverte os três primeiros itens ao negar a nifedipina como primeira linha e os efeitos dos betamiméticos, além de aprovar a indometacina após 32 semanas."
+    }
   },
   {
     "id": "q-ieppa-2026-038",
@@ -2529,13 +2961,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **C** está correta (`V, V, F, V`). Macrossomia + polidrâmnio (ILA > 24–25 cm) é combinação típica do diabetes materno (diurese osmótica fetal pela hiperglicemia — FEBRASGO). Entre as causas fetais estruturais de polidrâmnio destacam-se obstruções do TGI alto (atresia esofágica/duodenal) e anomalias do SNC (anencefalia). A indometacina **não pode ser usada após 32 semanas** pelo risco de constrição do canal arterial fetal (terceira falsa). A sobredistensão uterina eleva risco de RPMO, trabalho de parto prematuro, prolapso de cordão e DPP pós-rotura brusca das membranas.\n- **A) Incorreta:** Erra III e IV.\n- **B) Incorreta:** Erra II, III e IV.\n- **D) Incorreta:** A primeira assertiva é verdadeira.\n- **E) Incorreta:** Erra I, II e III.",
     "perolaClinica": "A alternativa **C** está correta (`V, V, F, V`).",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Etiologia do polidrâmnio associado à macrossomia fetal e restrição da indometacina após 32 semanas.",
+      "raciocinioChave": "A combinação de polidrâmnio (ILA 26 cm) e macrossomia às 32 semanas sugere fortemente diabetes materno com hiperglicemia tardia levando a poliúria osmótica fetal, além de requerer investigação de anomalias do TGI alto e SNC. A indometacina não deve ser usada após 32 semanas pelo risco ductal fetal, gerando V, V, F, V.",
+      "armadilhaBanca": "Propor indometacina terapêutica no polidrâmnio após 32 semanas ou excluir diabetes materno com base apenas em TOTG normal prévio às 26 semanas."
+    },
+    "mapaDistratores": {
+      "A": "Valida o uso de indometacina após 32 semanas na terceira assertiva e nega a quarta assertiva verdadeira.",
+      "B": "Rejeita as malformações estruturais fetais como causa de polidrâmnio, aprova a indometacina após 32 semanas e erra a quarta assertiva.",
+      "D": "Nega a forte associação entre polidrâmnio e macrossomia fetal com o diabetes mellitus materno.",
+      "E": "Rejeita as duas afirmativas iniciais verdadeiras sobre diabetes e causas fetais e aprova a indometacina após 32 semanas."
+    }
   },
   {
     "id": "q-ieppa-2026-039",
@@ -2597,13 +3041,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **C** está correta (I e II). Conforme diretrizes da FEBRASGO e ESHRE, na endometriose profunda sintomática com desejo reprodutivo, a videolaparoscopia com exérese completa das lesões melhora dor e fertilidade espontânea em pacientes com trompas pérvias e boa reserva; contudo, em reserva ovariana reduzida ou prioridade reprodutiva imediata, a FIV direta evita dano adicional ao parênquima ovariano pela cistectomia do endometrioma. Terapia hormonal (análogos de GnRH) não erradica lesões fibróticas profundas nem melhora fertilidade (III falsa), e punção/aspiração isolada de endometrioma tem altíssima taxa de recidiva, não sendo padrão-ouro (IV falsa).\n- **A) Incorreta:** III é falsa e falta I.\n- **B) Incorreta:** IV é falsa.\n- **D) Incorreta:** III e IV são falsas.\n- **E) Incorreta:** III é falsa e falta II.",
     "perolaClinica": "A alternativa **C** está correta (I e II).",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Abordagem da endometriose profunda infiltrativa com endometrioma e infertilidade primária.",
+      "raciocinioChave": "Na endometriose profunda com dor intensa, trompas pérvias e espermograma normal, a videolaparoscopia com exérese das lesões reduz a dor e favorece a fertilidade natural em boa reserva ovariana (I), devendo-se considerar FIV direta se houver risco de comprometer a reserva ovariana na cistectomia (II). Assim, I e II estão corretas.",
+      "armadilhaBanca": "Atribuir melhora da fertilidade à supressão hormonal medicamentosa isolada na endometriose, quando o bloqueio ovulatório apenas posterga a concepção."
+    },
+    "mapaDistratores": {
+      "A": "Inclui a proposição III falsa e omite a proposição I verdadeira sobre a abordagem videolaparoscópica.",
+      "B": "Acrescenta a proposição IV incorreta às proposições corretas I e II.",
+      "D": "Seleciona apenas as duas proposições falsas (III e IV) sobre o manejo da endometriose associada à infertilidade.",
+      "E": "Inclui a proposição III incorreta e omite a proposição II verdadeira sobre preservação da reserva ovariana e FIV."
+    }
   },
   {
     "id": "q-ieppa-2026-040",
@@ -2665,13 +3121,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **B** está correta (`V, V, F, F`). Na RPMO pré-termo entre 24 e 34 semanas sem corioamnionite ou sofrimento fetal (FEBRASGO / MS / ACOG), preconiza-se conduta conservadora hospitalar com vigilância infecciosa e fetal, **antibioticoterapia de latência** (esquema de Mercer: ampicilina + eritromicina/azitromicina por 7 dias) e **corticoterapia antenatal** (betametasona ou dexametasona para maturação pulmonar — terceira falsa). Tocólise prolongada até 37 semanas é contraindicada na RPMO (quarta falsa).\n- **A) Incorreta:** Corticoterapia é recomendada (não contraindicada) abaixo de 34 semanas na RPMO sem infecção.\n- **C) Incorreta:** Erra II e III.\n- **D) Incorreta:** Erra I e IV.\n- **E) Incorreta:** Inverte todas as assertivas.",
     "perolaClinica": "A alternativa **B** está correta (`V, V, F, F`).",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Conduta conservadora na rotura prematura de membranas ovulares às 32 semanas sem corioamnionite.",
+      "raciocinioChave": "Na RPMO pré-termo às 32 semanas sem sinais de infecção ou sofrimento fetal, adota-se conduta conservadora hospitalar com vigilância rigorosa e antibioticoterapia de latência para prolongar a gestação. A corticoterapia antenatal é recomendada abaixo de 34 semanas (logo a III é falsa), resultando em V, V, F, F.",
+      "armadilhaBanca": "Sugerir que a corticoterapia antenatal seria contraindicada na RPMO sem infecção abaixo de 34 semanas por receio infeccioso."
+    },
+    "mapaDistratores": {
+      "A": "Valida incorretamente a contraindicação da corticoterapia antenatal abaixo de 34 semanas na RPMO sem corioamnionite.",
+      "C": "Rejeita a antibioticoterapia de latência e afirma erroneamente que o corticoide antenatal é contraindicado na RPMO pré-termo.",
+      "D": "Nega a conduta conservadora hospitalar às 32 semanas sem infecção e valida a quarta assertiva falsa.",
+      "E": "Inverte todas as assertivas ao negar o manejo conservador e a antibioticoterapia de latência e validar as duas proposições falsas."
+    }
   },
   {
     "id": "q-ieppa-2026-041",
@@ -2734,13 +3202,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **C** está correta (`V, F, V, F`). Pela Portaria GM/MS nº 635/2023 (e-Multi) e pelos Cadernos de Atenção Básica do Ministério da Saúde, o apoio matricial combina dimensões assistencial e técnico-pedagógica em relação horizontal com a eSF/eAP, contemplando discussões de casos, atendimentos compartilhados, ações coletivas no território, telessaúde e construção do Projeto Terapêutico Singular (PTS) com participação do usuário/família. Portanto, são falsas a restrição exclusiva a consultas individuais (segunda) e a atuação exclusivamente remota (quarta).\n- **A) Incorreta:** Erra I e IV.\n- **B) Incorreta:** Erra III e IV.\n- **D) Incorreta:** Erra II e III.\n- **E) Incorreta:** Erra I e II.",
     "perolaClinica": "A alternativa **C** está correta (`V, F, V, F`).",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Diretrizes do apoio matricial e processo de trabalho das equipes multiprofissionais (e-Multi) na APS.",
+      "raciocinioChave": "Pela Portaria GM/MS nº 635/2023 e Cadernos de Atenção Básica, o apoio matricial articula dimensões assistencial e técnico-pedagógica em relação horizontal com a eSF, utilizando discussão de casos, atendimentos compartilhados e PTS. Não opera por encaminhamento fragmentado isolado, definindo a sequência V, F, V, F.",
+      "armadilhaBanca": "Reduzir a atuação da equipe multiprofissional (e-Multi) a um ambulatório de encaminhamentos isolados ou relação hierárquica superior à eSF."
+    },
+    "mapaDistratores": {
+      "A": "Nega a dimensão assistencial e técnico-pedagógica do apoio matricial e valida a quarta assertiva falsa.",
+      "B": "Rejeita a assertiva verdadeira sobre as ferramentas compartilhadas do matriciamento (como o PTS) e aprova a quarta assertiva falsa.",
+      "D": "Valida o modelo fragmentado de atendimento ambulatorial isolado na segunda assertiva e rejeita a terceira assertiva correta.",
+      "E": "Nega a primeira assertiva verdadeira sobre o apoio matricial e valida a segunda assertiva incorreta."
+    }
   },
   {
     "id": "q-ieppa-2026-042",
@@ -2803,13 +3283,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **A** está correta (I e III). Conforme a Bioética principialista (Beauchamp & Childress), o Código de Ética Médica (art. 22 e 24) e a Resolução CFM nº 2.232/2019 (recusa terapêutica), paciente maior, lúcida e capaz tem direito à recusa de tratamento após esclarecimento pleno dos riscos (desde que não haja risco à saúde pública), devendo a decisão ser respeitada e registrada em prontuário, oferecendo cuidados paliativos/conforto. Beneficência ou Justiça não autorizam sedação e cirurgia compulsórias contra a vontade de paciente capaz (II e IV falsas).\n- **B) Incorreta:** A proposição IV é falsa.\n- **C) Incorreta:** A proposição IV é falsa.\n- **D) Incorreta:** II e IV são falsas.\n- **E) Incorreta:** A proposição II viola o princípio da autonomia e a Resolução CFM nº 2.232/2019.",
     "perolaClinica": "A alternativa **A** está correta (I e III).",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Prevalência da autonomia e direito à recusa terapêutica de paciente maior, lúcida e capaz na Bioética.",
+      "raciocinioChave": "Paciente maior, lúcida e devidamente esclarecida tem o direito ético e legal (Código de Ética Médica e Resolução CFM nº 2.232/2019) de recusar tratamento cirúrgico, prevalecendo a autonomia sobre a beneficência paternalista. A conduta exige respeitar a decisão, registrar em prontuário e oferecer cuidados paliativos (I e III).",
+      "armadilhaBanca": "Invocar o princípio da beneficência ou a pressão dos familiares para justificar sedação e cirurgia forçada contra a vontade de paciente lúcida e capaz."
+    },
+    "mapaDistratores": {
+      "B": "Inclui a proposição IV falsa e omite a proposição I central sobre a prevalência do princípio da autonomia.",
+      "C": "Omite a proposição III correta e inclui a proposição IV falsa sobre a recusa terapêutica.",
+      "D": "Valida a proposição II paternalista (que viola a autonomia) e a proposição IV incorreta.",
+      "E": "Inclui a proposição II, que contraria o princípio da autonomia e a Resolução CFM nº 2.232/2019 ao impor tratamento contra a vontade da paciente capaz."
+    }
   },
   {
     "id": "q-ieppa-2026-043",
@@ -2872,13 +3364,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "B",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **B** está correta (I e II). Na Lista Nacional de Notificação Compulsória (Ministério da Saúde), **Botulismo** e **Paralisia Flácida Aguda / Poliomielite** exigem notificação compulsória **imediata (< 24h)** às três esferas de gestão (MS, SES, SMS), enquanto **Hanseníase** e **Esquistossomose** têm periodicidade **semanal**. Óbito por agravo de notificação compulsória requer comunicação imediata quando especificado na lista/vigilância de óbitos (III falsa na formulação da banca — e IV é falsa porque a notificação negativa semanal permanece obrigatória para agravos prioritários, como PFA/sarampo/arboviroses em unidades sentinelas).\n- **A) Incorreta:** III e IV estão incorretas.\n- **C) Incorreta:** III é falsa e falta I.\n- **D) Incorreta:** III e IV estão falsas.\n- **E) Incorreta:** A notificação negativa continua prevista nas normas de vigilância epidemiológica.",
     "perolaClinica": "A alternativa **B** está correta (I e II).",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Periodicidade da Lista Nacional de Notificação Compulsória (imediata em 24h vs. semanal).",
+      "raciocinioChave": "Na Lista Nacional de Notificação Compulsória, botulismo e paralisia flácida aguda exigem notificação imediata em até 24 horas às três esferas de gestão, enquanto hanseníase e esquistossomose têm notificação semanal. A notificação negativa segue vigente na vigilância epidemiológica, tornando corretas apenas I e II.",
+      "armadilhaBanca": "Confundir agravos endêmicos de notificação semanal (hanseníase e esquistossomose) com notificação imediata ou afirmar o fim da notificação negativa."
+    },
+    "mapaDistratores": {
+      "A": "Assume como verdadeiras as proposições III e IV incorretas sobre prazos de notificação e notificação negativa.",
+      "C": "Omite a proposição I correta sobre notificação imediata de botulismo e PFA e valida a proposição III falsa.",
+      "D": "Seleciona exclusivamente as duas proposições falsas (III e IV) sobre as regras do SINAN e da Lista Nacional.",
+      "E": "Inclui a proposição IV falsa ao negar a obrigatoriedade da notificação negativa na vigilância epidemiológica."
+    }
   },
   {
     "id": "q-ieppa-2026-044",
@@ -2941,13 +3445,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **D** está correta (`V, V, F, F`). Pela Portaria nº 3.088/2011 (RAPS) e Lei nº 10.216/2001 (Reforma Psiquiátrica), o CAPS AD III funciona 24h com leitos de acolhimento noturno (até 14 dias no mês) para crise e desintoxicação em base comunitária; leitos de atenção integral em Hospital Geral dão retaguarda hospitalar de curta permanência quando necessário. A RAPS **substitui** o modelo manicomial centrado em hospitais psiquiátricos de longa permanência (terceira falsa), e o Consultório na Rua integra a Atenção Básica articulando cuidado longitudinal em saúde mental (quarta falsa).\n- **A) Incorreta:** A RAPS não prioriza hospitais monovalentes/manicômios.\n- **B) Incorreta:** Erra todas as assertivas.\n- **C) Incorreta:** Erra II e IV.\n- **E) Incorreta:** Erra I e III.",
     "perolaClinica": "A alternativa **D** está correta (`V, V, F, F`).",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Papel do CAPS AD III e substituição do modelo manicomial na Rede de Atenção Psicossocial (RAPS).",
+      "raciocinioChave": "Pela Portaria nº 3.088/2011 e Lei nº 10.216/2001, o CAPS AD III dispõe de funcionamento 24h e leitos de acolhimento noturno para crise e desintoxicação em base comunitária, apoiado por leitos em hospital geral quando necessário. A RAPS substitui o modelo asilar em manicômios, fechando V, V, F, F.",
+      "armadilhaBanca": "Endossar a internação prolongada em hospital psiquiátrico monovalente (manicômio) como eixo prioritário da RAPS diante da insistência familiar."
+    },
+    "mapaDistratores": {
+      "A": "Valida a terceira assertiva falsa ao atribuir à RAPS priorização de hospitais psiquiátricos monovalentes de longa permanência.",
+      "B": "Inverte todas as afirmativas ao negar o funcionamento do CAPS AD III e da RAPS e aprovar o modelo manicomial.",
+      "C": "Nega a segunda afirmativa correta sobre os dispositivos da RAPS e valida a quarta assertiva falsa.",
+      "E": "Nega o acolhimento noturno do CAPS AD III na primeira assertiva e aprova a terceira assertiva contrária à Reforma Psiquiátrica."
+    }
   },
   {
     "id": "q-ieppa-2026-045",
@@ -3009,13 +3525,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **A** está correta (I e II). Na tipologia clássica de Marina Peduzzi (Saúde Coletiva), distingue-se a **equipe agrupamento** (justaposição de ações, fragmentação e comunicação puramente instrumental) da **equipe integração** (articulação das ações, agir comunicativo, interdependência dos trabalhos especializados e construção de projeto assistencial comum). Autonomia absoluta isolada e ausência de comunicação caracterizam justamente a fragmentação indesejada (III e IV falsas).\n- **B) Incorreta:** A proposição IV é falsa.\n- **C) Incorreta:** A proposição III é falsa.\n- **D) Incorreta:** III e IV são falsas.\n- **E) Incorreta:** A proposição III é falsa e falta I.",
     "perolaClinica": "A alternativa **A** está correta (I e II).",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Tipologia do trabalho em equipe de Marina Peduzzi (equipe agrupamento vs. equipe integração).",
+      "raciocinioChave": "Na tipologia de Marina Peduzzi, a Unidade A caracteriza a equipe agrupamento pela justaposição de ações fragmentadas e comunicação meramente instrumental. A Unidade B ilustra a equipe integração pela articulação de saberes, agir comunicativo e construção de projeto assistencial comum, validando I e II.",
+      "armadilhaBanca": "Confundir autonomia técnica isolada sem comunicação interprofissional com o conceito de equipe integração."
+    },
+    "mapaDistratores": {
+      "B": "Inclui a proposição IV falsa em desacordo com a tipologia de trabalho em equipe de Marina Peduzzi.",
+      "C": "Inclui a proposição III falsa e omite a proposição II que caracteriza corretamente a equipe integração.",
+      "D": "Seleciona exclusivamente as duas proposições falsas (III e IV) sobre os modelos de equipe.",
+      "E": "Omite a proposição I correta sobre a equipe agrupamento e inclui a proposição III falsa."
+    }
   },
   {
     "id": "q-ieppa-2026-046",
@@ -3078,13 +3606,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 36.8,
+    "taxaAcertoGlobal": 36.8,
     "comentarioGeral": "A alternativa **D** está correta (`F, V, F, V`). Pela RDC ANVISA nº 36/2013 e Portaria MS nº 529/2013 (PNSP), os protocolos de segurança do paciente aplicam-se a todos os serviços de saúde públicos e privados (não apenas hospitais de grande porte — primeira falsa), e a **notificação mensal de eventos adversos ao Sistema Nacional de Vigilância Sanitária (Notivisa/ANVISA) é obrigatória** pelo NSP (terceira falsa). A Cultura Justa estimula a notificação de erros e *near misses* diferenciando falha sistêmica de imprudência/negligência deliberada (segunda verdadeira), e a higienização das mãos compõe as 6 Metas Internacionais de Segurança do Paciente (quarta verdadeira).\n- **A) Incorreta:** Erra III e IV.\n- **B) Incorreta:** Erra I e II.\n- **C) Incorreta:** Erra II e III.\n- **E) Incorreta:** A primeira assertiva é falsa.",
     "perolaClinica": "A alternativa **D** está correta (`F, V, F, V`).",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Obrigatoriedade e diretrizes do Programa Nacional de Segurança do Paciente (PNSP / RDC 36/2013).",
+      "raciocinioChave": "Pela RDC ANVISA nº 36/2013 e Portaria nº 529/2013, os protocolos de segurança aplicam-se a todos os serviços de saúde (públicos e privados), com notificação mensal obrigatória de eventos adversos ao Notivisa/ANVISA. A cultura justa promove aprendizado institucional em lugar de punição individual, gerando F, V, F, V.",
+      "armadilhaBanca": "Restringir a obrigatoriedade do PNSP apenas a hospitais de grande porte ou negar a notificação mensal compulsória de eventos adversos à ANVISA."
+    },
+    "mapaDistratores": {
+      "A": "Considera verdadeira a terceira assertiva falsa sobre notificação de eventos adversos e nega a quarta assertiva verdadeira.",
+      "B": "Restringe erroneamente os protocolos de segurança a hospitais de grande porte e rejeita a segunda assertiva verdadeira sobre cultura de segurança.",
+      "C": "Rejeita a segunda assertiva correta sobre cultura justa e aprova a terceira assertiva falsa sobre notificação à ANVISA.",
+      "E": "Assume como verdadeira na primeira assertiva a restrição dos protocolos do PNSP apenas a hospitais de grande porte."
+    }
   },
   {
     "id": "q-ieppa-2026-047",
@@ -3147,13 +3687,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "E",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alternativa **E** está correta. Conforme a Política Nacional de Atenção Básica (PNAB — Portaria GM/MS nº 2.436/2017), são atribuições **comuns a todos os membros das equipes** que atuam na Atenção Básica participar do cadastramento/territorialização, manter dados das famílias atualizados, identificar grupos/situações de risco e vulnerabilidade e desenvolver ações de educação em saúde.\n- **A) Incorreta:** Atestar óbito e emitir Declaração de Óbito é ato privativo do médico.\n- **B) Incorreta:** Remoção de escombros e máquinas pesadas compete à Defesa Civil, não à equipe de saúde da AB.\n- **C) Incorreta:** Sutura não é competência de ACS ou técnicos de enfermagem.\n- **D) Incorreta:** Prescrição medicamentosa não é atribuição comum a toda a equipe (ACS, técnicos).",
     "perolaClinica": "A alternativa **E** está correta.",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Atribuições comuns a todos os profissionais da equipe de Atenção Básica segundo a PNAB 2017.",
+      "raciocinioChave": "Conforme a PNAB 2017, todos os membros da equipe de Atenção Básica compartilham a competência de participar do cadastramento e atualização familiar, identificar situações de risco e vulnerabilidade no território e realizar educação em saúde. Atos privativos de categorias específicas ou da Defesa Civil não cabem a toda a equipe.",
+      "armadilhaBanca": "Apresentar atos privativos médicos ou de enfermagem (Declaração de Óbito, sutura, prescrição) como atribuições comuns de toda a equipe da UBS."
+    },
+    "mapaDistratores": {
+      "A": "A constatação de óbito e emissão da Declaração de Óbito constituem ato privativo do médico, não sendo atribuição comum a toda a equipe.",
+      "B": "A remoção de escombros e coordenação de máquinas pesadas compete à Defesa Civil e equipes de resgate, não à equipe de saúde da Atenção Básica.",
+      "C": "A execução de suturas não integra as competências legais de agentes comunitários de saúde e técnicos de enfermagem.",
+      "D": "A prescrição medicamentosa de doxiciclina profilática não pode ser exigida como atribuição comum de ACS e técnicos de enfermagem."
+    }
   },
   {
     "id": "q-ieppa-2026-048",
@@ -3216,13 +3768,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "C",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alternativa **C** está correta. O rastreamento populacional de câncer de tireoide por ultrassonografia em assintomáticos é classicamente contraindicado (INCA / USPSTF / Caderno de Rastreamento MS) porque detecta um grande reservatório de microcarcinomas papilíferos indolentes que nunca causariam morbimortalidade, gerando **sobrediagnóstico e sobretratamento** (tireoidectomias desnecessárias, hipoparatireoidismo, lesão de nervo laríngeo, levotiroxina vitalícia) sem reduzir a mortalidade pela doença.\n- **A) Incorreta:** O câncer de tireoide possui tratamento cirúrgico e seguimento bem estabelecidos.\n- **B) Incorreta:** Rastreamentos clássicos em saúde pública abrangem DCNT (câncer de colo uterino, mama, colorretal).\n- **D) Incorreta:** A glândula tireoide é superficial e facilmente acessível tanto ao exame físico quanto ao ultrassom.\n- **E) Incorreta:** Não há benefício clínico comprovado para rastreamento de todos os tipos de câncer.",
     "perolaClinica": "A alternativa **C** está correta.",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Critérios de Wilson e Jungner e risco de sobrediagnóstico no rastreamento do câncer de tireoide.",
+      "raciocinioChave": "O rastreamento populacional do câncer de tireoide em adultos assintomáticos é contraindicado porque detecta grande reserva de microcarcinomas papilíferos indolentes que nunca causariam sintomas ou morte. Isso gera sobrediagnóstico e sobretratamento com morbidade cirúrgica e hormonal superior a qualquer benefício.",
+      "armadilhaBanca": "Alegar que todo rastreamento precoce de câncer traz benefício ou atribuir a contraindicação à falta de tratamento ou inacessibilidade da tireoide."
+    },
+    "mapaDistratores": {
+      "A": "O câncer de tireoide possui tratamento cirúrgico e seguimento bem estabelecidos, não sendo a ausência de terapia o motivo contra o rastreamento.",
+      "B": "Programas de rastreamento em saúde pública são classicamente voltados a doenças crônicas não transmissíveis, como neoplasias de mama, colo uterino e cólon.",
+      "D": "A tireoide é superficial e de fácil acesso tanto ao exame físico quanto à ultrassonografia cervical.",
+      "E": "Não existe benefício clínico comprovado para rastreamento indiscriminado de todos os cânceres; em tumores indolentes há dano líquido por sobrediagnóstico."
+    }
   },
   {
     "id": "q-ieppa-2026-049",
@@ -3284,13 +3848,25 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "A",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 76.5,
+    "taxaAcertoGlobal": 76.5,
     "comentarioGeral": "A alternativa **A** está correta. Surto de doença diarreica aguda ou suspeita de intoxicação coletiva de veiculação hídrica exige **notificação imediata de surto** à Vigilância Epidemiológica/Sanitária municipal, **interrupção preventiva do consumo** da fonte suspeita, assistência clínica às crianças afetadas e acionamento do **VIGIAGUA** (Programa Nacional de Vigilância da Qualidade da Água para Consumo Humano) para inspeção e coleta laboratorial (Ministério da Saúde).\n- **B) Incorreta:** Manter fonte suspeita em uso aguardando relatório anual expõe a comunidade a dano contínuo.\n- **C) Incorreta:** A fervura inativa micro-organismos biológicos, mas **não elimina agrotóxicos/contaminantes químicos** (podendo até concentrá-los) e não dispensa notificação.\n- **D) Incorreta:** Odor alterado na água do poço + vômitos e diarreia agudos pós-ingestão configuram surto hídrico/exposição química, não alergia alimentar à soja.\n- **E) Incorreta:** A vigilância da qualidade da água para consumo humano é competência direta do setor Saúde (SUS / VIGIAGUA).",
     "perolaClinica": "A alternativa **A** está correta.",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Atuação da Atenção Básica e do VIGIAGUA diante de surto de veiculação hídrica escolar.",
+      "raciocinioChave": "Várias crianças com vômitos e diarreia após ingestão de água de poço com odor alterado próximo a lavoura configuram surto hídrico com possível contaminação química ou biológica. A conduta exige assistência clínica, suspensão imediata do consumo da fonte, notificação do surto e acionamento do VIGIAGUA para análise da água.",
+      "armadilhaBanca": "Sugerir que a fervura da água elimina agrotóxicos ou atribuir a vigilância da qualidade da água exclusivamente ao Ministério do Meio Ambiente."
+    },
+    "mapaDistratores": {
+      "B": "Manter o consumo da água suspeita aguardando relatório anual de potabilidade expõe continuamente os escolares a risco tóxico ou infeccioso.",
+      "C": "A fervura elimina patógenos biológicos, mas não remove contaminantes químicos como agrotóxicos (podendo até concentrá-los), nem dispensa a notificação do surto.",
+      "D": "Sintomas gastrointestinais agudos coletivos após água de poço com odor alterado indicam surto hídrico/exposição química, não reação alérgica coletiva à soja.",
+      "E": "A vigilância da qualidade da água para consumo humano é competência direta do SUS por meio do programa VIGIAGUA, não exclusiva do Ministério do Meio Ambiente."
+    }
   },
   {
     "id": "q-ieppa-2026-050",
@@ -3353,12 +3929,24 @@ export const IEPPA_2026_QUESTIONS: MedicalQuestion[] = [
     ],
     "gabaritoOficial": "D",
     "totalRespostasComunidade": 1000,
-    "taxaAcertoGlobal": 64.0,
+    "taxaAcertoBase": 58.4,
+    "taxaAcertoGlobal": 58.4,
     "comentarioGeral": "A alternativa **D** está correta (`V, V, F, F`). Pelo Guia de Vigilância Epidemiológica da COVID-19 (Ministério da Saúde, 2020/2021), o Paciente A tem quadro respiratório agudo leve com febre, tosse e anosmia, enquadrando-se em **Síndrome Gripal (SG)** — notificado no **e-SUS Notifica**. A Paciente B apresenta SG associada a sinais de gravidade (SpO₂ < 95% em ar ambiente e desconforto respiratório/tiragem), definindo **SRAG** — notificada no **SIVEP-Gripe** com internação. Desde as revisões de 2020 do Guia do MS, distúrbios olfativos (anosmia) e gustativos (ageusia) passaram a integrar expressamente a definição de caso suspeito de SG (terceira falsa), e a notificação de SRAG no SIVEP-Gripe ocorre imediatamente na **suspeita clínica**, antes do resultado de RT-PCR (quarta falsa).\n- **A) Incorreta:** Anosmia e ageusia passaram sim a compor a definição oficial de SG pelo MS.\n- **B) Incorreta:** Erra II, III e IV.\n- **C) Incorreta:** Erra a primeira assertiva.\n- **E) Incorreta:** Erra todas as assertivas.",
     "perolaClinica": "A alternativa **D** está correta (`V, V, F, F`).",
     "referencias": [
       "IEPPA 2026 — Edital 2026/001 (COREME/IEPPA — Belém/PA — Gabarito Oficial Definitivo)"
     ],
-    "sourceBatch": "ieppa-2026-edital-001"
+    "sourceBatch": "ieppa-2026-edital-001",
+    "analiseBanca": {
+      "conceitoCentral": "Definições de caso e sistemas de notificação de Síndrome Gripal (SG) e SRAG na COVID-19.",
+      "raciocinioChave": "Pelo Guia de Vigilância Epidemiológica da COVID-19 (MS), o Paciente A com febre, tosse e anosmia sem desconforto respiratório caracteriza Síndrome Gripal (notificação no e-SUS Notifica), enquanto a Paciente B com SpO₂ 88% e tiragem intercostal define SRAG (notificação no SIVEP-Gripe). Assim, apenas as duas primeiras assertivas são verdadeiras (V, V, F, F).",
+      "armadilhaBanca": "Trocar os sistemas de notificação (e-SUS Notifica vs. SIVEP-Gripe) ou afirmar que anosmia e ageusia não integram os critérios de Síndrome Gripal."
+    },
+    "mapaDistratores": {
+      "A": "Valida a terceira afirmativa falsa ao desconsiderar que anosmia e ageusia passaram a compor os critérios oficiais de Síndrome Gripal pelo Ministério da Saúde.",
+      "B": "Rejeita a segunda assertiva correta sobre a classificação e notificação de SRAG e valida as duas assertivas finais incorretas.",
+      "C": "Nega a primeira assertiva correta ao não reconhecer o Paciente A como caso clássico de Síndrome Gripal.",
+      "E": "Inverte todas as quatro afirmativas ao negar os enquadramentos corretos de SG e SRAG e validar as duas proposições falsas."
+    }
   }
 ];

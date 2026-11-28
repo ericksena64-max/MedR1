@@ -154,8 +154,34 @@ def build_medr1_question(
     raw_alts = q.get("alternativas") or {}
     explicacoes = q.get("explicacoesPorAlternativa") or {}
     gabarito_raw = (q.get("gabaritoOficial") or "").strip().upper()
-    valid_letters = [lt for lt in ("A", "B", "C", "D", "E") if lt in raw_alts]
-    if not valid_letters:
+    if isinstance(raw_alts, list):
+        raw_letters = [
+            str(item.get("letter", "")).strip().upper()
+            for item in raw_alts
+            if isinstance(item, dict)
+        ]
+        expected = ["A", "B", "C", "D", "E"][: len(raw_letters)]
+        min_len = 2 if anulada else 4
+        if len(raw_letters) < min_len or len(raw_letters) > 5 or raw_letters != expected:
+            raise ValueError(
+                f"Q{num}: ordem oficial das alternativas violada: {raw_letters}"
+            )
+        raw_alts = {
+            str(item.get("letter", "")).strip().upper(): item.get("text", "")
+            for item in raw_alts
+            if isinstance(item, dict)
+        }
+        valid_letters = raw_letters
+    elif isinstance(raw_alts, dict) and raw_alts:
+        present_letters = [str(k).strip().upper() for k in raw_alts.keys()]
+        expected = ["A", "B", "C", "D", "E"][: len(present_letters)]
+        min_len = 2 if anulada else 4
+        if len(present_letters) < min_len or len(present_letters) > 5 or sorted(present_letters) != expected:
+            raise ValueError(
+                f"Q{num}: alternativas incompletas ou fora da ordem oficial: {present_letters}"
+            )
+        valid_letters = expected
+    else:
         valid_letters = ["A", "B", "C", "D"]
 
     gabarito_oficial = gabarito_raw if gabarito_raw in valid_letters else valid_letters[0]
@@ -240,6 +266,35 @@ def build_medr1_question(
             "caption": f"Imagem clínica da questão {num} ({instituicao} {ano}).",
             "aspectRatio": "16:9",
         }
+
+    if not bool(q.get("anulada")):
+        raw_analise = q.get("analiseBanca")
+        if isinstance(raw_analise, dict):
+            conceito = str(raw_analise.get("conceitoCentral") or "").strip()
+            raciocinio = str(raw_analise.get("raciocinioChave") or "").strip()
+            if conceito and raciocinio:
+                analise_obj = {
+                    "conceitoCentral": conceito,
+                    "raciocinioChave": raciocinio,
+                }
+                armadilha = str(raw_analise.get("armadilhaBanca") or "").strip()
+                if armadilha:
+                    analise_obj["armadilhaBanca"] = armadilha
+                record["analiseBanca"] = analise_obj
+
+        raw_mapa = q.get("mapaDistratores")
+        if isinstance(raw_mapa, dict):
+            gab_upper = (q.get("gabaritoOficial") or "").strip().upper()
+            mapa_clean = {
+                str(k).strip().upper(): str(v).strip()
+                for k, v in raw_mapa.items()
+                if str(k).strip().upper() in valid_letters
+                and str(k).strip().upper() != gab_upper
+                and isinstance(v, str)
+                and v.strip()
+            }
+            if mapa_clean:
+                record["mapaDistratores"] = mapa_clean
 
     return record
 

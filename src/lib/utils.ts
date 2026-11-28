@@ -1,12 +1,29 @@
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 import type { DifficultyLevel, PerformanceStatus } from '../types/medical';
+import {
+  BAYESIAN_PRIOR_WEIGHT_DEFAULT,
+  CLINICAL_DIFFICULTY_PRIORS,
+  computeBayesianAccuracy,
+  type BayesianAccuracyInput,
+} from './difficultyCalibration';
+
+export {
+  BAYESIAN_PRIOR_WEIGHT_DEFAULT,
+  CLINICAL_DIFFICULTY_PRIORS,
+  computeBayesianAccuracy,
+  type BayesianAccuracyInput,
+};
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export function computeDifficulty(globalAccuracyPct: number): DifficultyLevel {
+export function computeDifficulty(
+  globalAccuracyPct: number,
+  anulada = false
+): DifficultyLevel {
+  if (anulada) return 'Anulada';
   if (globalAccuracyPct > 70) return 'Fácil';
   if (globalAccuracyPct >= 40) return 'Médio';
   return 'Difícil';

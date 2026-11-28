@@ -70,6 +70,17 @@ export const MEDICAL_QUESTIONS: MedicalQuestion[] = [
     gabaritoOficial: 'A',
     totalRespostasComunidade: 4820,
     taxaAcertoGlobal: 68.4,
+    analiseBanca: {
+      "conceitoCentral": "Regra dos 120 minutos para escolha de fibrinólise imediata versus angioplastia primária no IAMCSST e dupla antiagregação associada.",
+      "raciocinioChave": "Com IAMCSST anterior dentro de 12 horas e tempo de transferência estimado de 150 minutos (> 120 min), a terapia de reperfusão imediata indicada é a fibrinólise (estratégia fármaco-invasiva). O esquema antitrombótico seguro com trombolítico associa AAS, clopidogrel e enoxaparina.",
+      "armadilhaBanca": "Optar por transferência para angioplastia primária além de 120 minutos ou associar ticagrelor/prasugrel ao fibrinolítico, contraindicados nessa estratégia."
+    },
+    mapaDistratores: {
+      "B": "Transferir para angioplastia primária com tempo previsto de 150 minutos excede o limite de 120 minutos, atrasando a reperfusão; ademais, ticagrelor não é o P2Y12 de escolha na fibrinólise inicial.",
+      "C": "No IAM com supradesnivelamento de ST, a decisão de reperfundir é clínico-eletrocardiográfica e nunca deve aguardar nova curva de troponina.",
+      "D": "O prasugrel é contraindicado em associação a fibrinolíticos devido ao alto risco de hemorragia maior, devendo-se utilizar clopidogrel.",
+      "E": "Oxigenoterapia suplementar é desnecessária com SpO₂ de 97% e diurético de alça não tem indicação em paciente Killip I sem congestão pulmonar."
+    },
     comentarioGeral:
       'Questão clássica da USP-SP cobrando o algoritmo de reperfusão no IAMCSST em serviços sem hemodinâmica. O ponto decisivo é a regra dos 120 minutos: se o tempo previsto desde o diagnóstico de IAMCSST até a abertura da artéria (fio-guia) ultrapassar 120 minutos e o paciente estiver dentro da janela de 12 horas do início dos sintomas sem contraindicações absolutas, a fibrinólise imediata seguida de estratégia fármaco-invasiva salva mais miocárdio e reduz mortalidade.',
     perolaClinica:
@@ -143,6 +154,17 @@ export const MEDICAL_QUESTIONS: MedicalQuestion[] = [
     gabaritoOficial: 'A',
     totalRespostasComunidade: 5390,
     taxaAcertoGlobal: 54.6,
+    analiseBanca: {
+      "conceitoCentral": "Sítio anatômico atualizado na 10ª edição do ATLS para toracocentese de alívio no pneumotórax hipertensivo em adultos.",
+      "raciocinioChave": "Choque obstrutivo, turgência jugular, hipertimpanismo e abolição do murmúrio vesicular à direita fecham o diagnóstico clínico de pneumotórax hipertensivo. Em adultos, a 10ª edição do ATLS preconiza descompressão imediata com agulha calibrosa no 4º ou 5º espaço intercostal anterior à linha axilar média, seguida de drenagem pleural.",
+      "armadilhaBanca": "Manter o antigo sítio anatômico do 2º espaço intercostal hemiclavicular para adultos em vez da atualização do ATLS 10ª edição (4º/5º EIC axilar)."
+    },
+    mapaDistratores: {
+      "B": "Na 10ª edição do ATLS, o 2º espaço intercostal na linha hemiclavicular deixou de ser o sítio preferencial em adultos, permanecendo preferencial em crianças.",
+      "C": "O diagnóstico de pneumotórax hipertensivo é estritamente clínico e exige descompressão imediata antes de qualquer exame radiológico ou ultrassonográfico.",
+      "D": "Instituir ventilação com pressão positiva antes de descomprimir o tórax agrava o colapso hemodinâmico e precipita parada cardíaca em AESP.",
+      "E": "O tamponamento cardíaco também causa turgência jugular e choque, mas não produz hipertimpanismo nem abolição unilateral do murmúrio vesicular."
+    },
     comentarioGeral:
       'A atualização do sítio anatômico da toracocentese de alívio em adultos na 10ª edição do ATLS é um dos temas mais prevalentes nas provas de Cirurgia Geral de São Paulo (UNICAMP, USP e SUS-SP). O quadro clínico de choque obstrutivo associado a hipertimpanismo e abolição do MV à direita fecha o diagnóstico clínico de pneumotórax hipertensivo.',
     perolaClinica:
@@ -208,6 +230,16 @@ export const MEDICAL_QUESTIONS: MedicalQuestion[] = [
     gabaritoOficial: 'B',
     totalRespostasComunidade: 3910,
     taxaAcertoGlobal: 76.2,
+    analiseBanca: {
+      "conceitoCentral": "Diagnóstico clínico-radiológico e etiologia vascular do hematoma epidural agudo pós-traumatismo cranioencefálico.",
+      "raciocinioChave": "Impacto temporal seguido de perda breve da consciência, intervalo lúcido e deterioração rápida com midríase ipsilateral e hemiparesia contralateral indica herniação uncal. A coleção hiperdensa biconvexa limitada pelas suturas na TC confirma hematoma epidural agudo por ruptura da artéria meníngea média.",
+      "armadilhaBanca": "Confundir hematoma epidural agudo (lente biconvexa arterial pós-intervalo lúcido) com hematoma subdural agudo (crescente venoso)."
+    },
+    mapaDistratores: {
+      "A": "O hematoma subdural agudo decorre de ruptura de veias-ponte e apresenta formato côncavo-convexo (em crescente) que cruza linhas de sutura.",
+      "C": "A hemorragia subaracnoidea preenche sulcos corticais e cisternas da base na TC, sem formar coleção extra-axial biconvexa localizada.",
+      "D": "A lesão axonal difusa provoca coma imediato desde o trauma, sem intervalo lúcido, e cursa com TC normal ou micro-hemorragias subcorticais."
+    },
     comentarioGeral:
       'Questão de neurotrauma de alta incidência no PSU-MG e ENARE. Na convenção radiológica da TC axial, o lado direito da imagem corresponde ao hemisfério esquerdo do paciente. A coleção hiperdensa biconvexa limitada pelas inserções durais nas suturas cranianas, somada ao intervalo lúcido e à anisocoria ipsilateral (herniação do uncus comprimindo o nervo oculomotor), fecha o diagnóstico de hematoma epidural agudo — emergência neurocirúrgica com indicação de craniotomia descompressiva.',
     perolaClinica:
@@ -282,6 +314,17 @@ export const MEDICAL_QUESTIONS: MedicalQuestion[] = [
     gabaritoOficial: 'B',
     totalRespostasComunidade: 6120,
     taxaAcertoGlobal: 64.8,
+    analiseBanca: {
+      "conceitoCentral": "Prioridade imediata de estabilização da membrana cardíaca na hipercalemia grave com alterações eletrocardiográficas.",
+      "raciocinioChave": "Paciente com DRC e uso de AINE apresenta ondas T apiculadas, alargamento de PR e de QRS (138 ms), indicando toxicidade miocárdica iminente por hipercalemia. A primeira medida farmacológica obrigatória é administrar gluconato de cálcio 10% IV para estabilizar o potencial de membrana em minutos antes de redistribuir o potássio.",
+      "armadilhaBanca": "Iniciar solução polarizante antes de proteger o miocárdio com cálcio intravenoso em paciente com alargamento de QRS na hipercalemia grave."
+    },
+    mapaDistratores: {
+      "A": "A solução polarizante reduz o potássio sérico por influxo celular em 15–30 minutos, mas não protege imediatamente a membrana miocárdica contra arritmias malignas.",
+      "C": "Resinas de troca têm início de ação lento ao longo de horas e não servem como intervenção imediata em emergência hipercalêmica.",
+      "D": "O bicarbonato de sódio isolado tem efeito tardio e restrito na calemia, não substituindo o cálcio na reversão elétrica imediata do QRS alargado.",
+      "E": "Beta-2 agonistas inalatórios apenas auxiliam no desvio intracelular de potássio e são insuficientes isoladamente diante de alargamento do QRS."
+    },
     comentarioGeral:
       'Na emergência nefrológica, o manejo da **hipercalemia grave** ($K^+ \\ge 6{,}5\\text{ mEq/L}$ ou alterações no ECG) segue **3 pilares sequenciais**:\n\n1. **Estabilizar a membrana cardíaca:** Gluconato de cálcio 10% (10 mL IV em 2–5 min) — *não reduz* o $K^+$ sérico, mas eleva o potencial de limiar em 1–3 minutos.\n2. **Redistribuir $K^+$ para o intracelular:** Solução polarizante (insulina regular + glicose), $\\beta_2$-agonista inalatório e bicarbonato de sódio (se acidose metabólica).\n3. **Eliminar $K^+$ do organismo:** Furosemida IV (se diurese preservada), resinas de troca iônica ou hemodiálise de urgência.',
     perolaClinica:
@@ -346,6 +389,16 @@ export const MEDICAL_QUESTIONS: MedicalQuestion[] = [
     gabaritoOficial: 'B',
     totalRespostasComunidade: 4415,
     taxaAcertoGlobal: 58.3,
+    analiseBanca: {
+      "conceitoCentral": "Critérios diagnósticos atuais da IADPSG/FEBRASGO no TOTG-75g e tratamento inicial do diabetes mellitus gestacional.",
+      "raciocinioChave": "Os pontos de corte do TOTG-75g são jejum ≥ 92, 1h ≥ 180 e 2h ≥ 153 mg/dL, bastando um único valor alterado (1h = 184 mg/dL) para diagnosticar DMG. A abordagem inicial baseia-se em terapia nutricional, atividade física e automonitorização glicêmica antes de indicar insulinoterapia.",
+      "armadilhaBanca": "Exigir dois valores alterados no TOTG-75g (critério antigo de 100g) ou prescrever fármacos de imediato antes da tentativa de mudança de estilo de vida."
+    },
+    mapaDistratores: {
+      "A": "A exigência de dois pontos alterados aplicava-se ao antigo TOTG de 100 g; no TOTG-75g atual, apenas um valor alterado já confirma DMG.",
+      "C": "O diabetes prévio (Overt Diabetes) exige jejum ≥ 126 mg/dL, 2h ≥ 200 mg/dL, HbA1c ≥ 6,5% ou glicemia casual ≥ 200 mg/dL com sintomas.",
+      "D": "A terapia não farmacológica precede a medicação no DMG leve, e a droga de primeira escolha no Brasil quando necessária é a insulina, não a metformina."
+    },
     comentarioGeral:
       'A tabela diagnóstica de DMG da OPAS/FEBRASGO/MS é campeã absoluta de cobrança em GO. Memorizar os cortes exatos — 92 / 180 / 153 mg/dL — e lembrar que basta UM valor alterado no TOTG-75g evita cair no distrator clássico dos "dois pontos alterados".',
     perolaClinica:
@@ -412,6 +465,17 @@ export const MEDICAL_QUESTIONS: MedicalQuestion[] = [
     gabaritoOficial: 'A',
     totalRespostasComunidade: 5280,
     taxaAcertoGlobal: 71.9,
+    analiseBanca: {
+      "conceitoCentral": "Indicação e parâmetros iniciais da ventilação com pressão positiva na reanimação do recém-nascido ≥ 34 semanas (SBP 2022).",
+      "raciocinioChave": "Após os passos iniciais, o RN a termo persiste em apneia e com FC de 76 bpm (< 100 bpm), exigindo VPP imediata dentro do Minuto de Ouro. Em neonatos ≥ 34 semanas, inicia-se a VPP com máscara facial em ar ambiente (FiO₂ 21%) na frequência de 40–60/min, acoplando monitor cardíaco e oxímetro pré-ductal.",
+      "armadilhaBanca": "Iniciar VPP com FiO₂ 30% (protocolo de prematuros < 34 semanas), indicar massagem cardíaca precoce ou protelar a VPP além do Minuto de Ouro."
+    },
+    mapaDistratores: {
+      "B": "A FiO₂ inicial de 30% aplica-se a prematuros < 34 semanas, e a massagem cardíaca só é indicada se a FC seguir < 60 bpm após 30 segundos de VPP efetiva intubada.",
+      "C": "A intubação traqueal e a adrenalina não precedem a VPP com máscara facial, que resolve a maioria dos casos quando bem executada.",
+      "D": "Oxigênio inalatório livre é ineficaz diante de apneia ou bradicardia < 100 bpm e atrasa a ventilação alveolar no primeiro minuto de vida.",
+      "E": "O estímulo tátil repetido além dos passos iniciais retarda o início da VPP e agrava a hipóxia neonatal."
+    },
     comentarioGeral:
       'A Reanimação Neonatal (SBP 2022) é o assunto mais cobrado em Pediatria nas provas de residência do Brasil. O "Minuto de Ouro" determina que, se o RN não respirar ou mantiver FC < 100 bpm após os passos iniciais, a VPP deve começar até os 60 segundos de vida: em ≥ 34 semanas começa-se em ar ambiente (21%); em < 34 semanas inicia-se com FiO₂ 30%.',
     perolaClinica:
@@ -478,6 +542,17 @@ export const MEDICAL_QUESTIONS: MedicalQuestion[] = [
     gabaritoOficial: 'B',
     totalRespostasComunidade: 4980,
     taxaAcertoGlobal: 47.6,
+    analiseBanca: {
+      "conceitoCentral": "Impacto da redução da prevalência sobre valores preditivos versus invariabilidade das propriedades intrínsecas do teste diagnóstico.",
+      "raciocinioChave": "Ao aplicar um teste com S = 90% e E = 90% em uma população com prevalência de 1%, o número absoluto de falsos-positivos (990) supera em muito os verdadeiros-positivos (90). Isso derruba o VPP para cerca de 8,3% (90/1.080), mantendo o VPN muito alto (> 99%), sem alterar sensibilidade ou especificidade.",
+      "armadilhaBanca": "Acreditar que sensibilidade, especificidade ou razão de verossimilhança se alteram quando a prevalência muda em cenários de rastreamento."
+    },
+    mapaDistratores: {
+      "A": "Sensibilidade e especificidade são propriedades intrínsecas do método diagnóstico e permanecem estáveis independentemente da prevalência populacional.",
+      "C": "A razão de verossimilhança positiva depende apenas da sensibilidade e especificidade (0,90 / 0,10 = 9,0), não variando com a prevalência.",
+      "D": "O valor preditivo positivo varia diretamente com a probabilidade pré-teste (prevalência), caindo acentuadamente em populações de baixo risco.",
+      "E": "Testes aplicados em série elevam a especificidade às custas de redução da sensibilidade; para aumentar a sensibilidade, usam-se testes em paralelo."
+    },
     comentarioGeral:
       'Questão clássica da **FGV/ENARE** que exige distinguir **propriedades intrínsecas** do teste ($S$, $E$, $LR^+$ e $LR^-$ — *independentes* da prevalência) das **propriedades pós-teste** ($VPP$ e $VPN$ — diretamente moduladas pela prevalência).\n\nVeja a **tabela $2 \\times 2$** no **Cenário 2** ($N = 10.000$ indivíduos, prevalência $= 1\\%$):\n\n| Teste Rápido | Doentes ($100$) | Sadios ($9.900$) | Total |\n| :--- | :---: | :---: | :---: |\n| **Positivo ($+$)** | $VP = 90$ | $FP = 990$ | $1.080$ |\n| **Negativo ($-$)** | $FN = 10$ | $VN = 8.910$ | $8.920$ |\n| **Total** | $100$ | $9.900$ | $10.000$ |\n\n$$VPP = \\frac{VP}{VP + FP} = \\frac{90}{1.080} \\approx 8{,}3\\% \\qquad\\text{e}\\qquad LR^+ = \\frac{S}{1 - E} = \\frac{0{,}90}{0{,}10} = 9{,}0$$\n\n> Mesmo um teste com $S = 90\\%$ e $E = 90\\%$ gera mais de **$91\\%$ de falsos-positivos** quando aplicado indiscriminadamente em populações de baixíssima prevalência.',
     perolaClinica:
@@ -545,6 +620,16 @@ export const MEDICAL_QUESTIONS: MedicalQuestion[] = [
     gabaritoOficial: 'B',
     totalRespostasComunidade: 4230,
     taxaAcertoGlobal: 62.1,
+    analiseBanca: {
+      "conceitoCentral": "Conduta de segurança diante de hipocalemia prévia ao início da insulinoterapia na cetoacidose diabética.",
+      "raciocinioChave": "Na CAD, embora haja depleção corporal de potássio, a insulina promove influxo celular desse íon e pode desencadear arritmias fatais se o K⁺ sérico inicial for < 3,3–3,5 mEq/L. Portanto, deve-se adiar a insulina e repor potássio (20–30 mEq/h) junto à hidratação até normalizar o limiar de segurança.",
+      "armadilhaBanca": "Iniciar insulina venosa imediata diante de hipocalemia inicial (< 3,3–3,5 mEq/L) ou prescrever bicarbonato com pH > 6,9."
+    },
+    mapaDistratores: {
+      "A": "Iniciar insulina com potássio abaixo de 3,3–3,5 mEq/L precipita hipocalemia grave e risco iminente de parada cardiorrespiratória.",
+      "C": "O bicarbonato na CAD só é cogitado se pH < 6,9, e insulina em bolus com hipocalemia não corrigida aumenta o risco arrítmico.",
+      "D": "O tratamento da CAD exige insulina regular EV contínua após ajuste do potássio, e glicose só é adicionada quando a glicemia cai abaixo de 200–250 mg/dL."
+    },
     comentarioGeral:
       'A principal pegadinha na **Cetoacidose Diabética (CAD)** é o manejo do potássio ($K^+$). Apesar de todo paciente em CAD ter déficit corporal total de $K^+$, a conduta depende da calemia inicial:\n\n- **$K^+ < 3{,}3\\text{ mEq/L}$** *(ADA 2024: $< 3{,}5\\text{ mEq/L}$)*: **adiar insulina** e repor $20\\text{–}30\\text{ mEq/h}$ de $K^+$ até atingir valor seguro.\n- **$K^+$ entre $3{,}3$ e $5{,}2\\text{ mEq/L}$**: iniciar insulina venosa **e** adicionar $K^+$ na hidratação.\n- **$K^+ > 5{,}2\\text{ mEq/L}$**: iniciar insulina *sem* repor $K^+$ e reavaliar em 2 horas.\n\nAlém disso, lembre-se de calcular o **Sódio Corrigido** pela hiperglicemia (neste caso, $Na^+ = 132\\text{ mEq/L}$ é pseudo-hiponatremia translocacional):\n\n$$\\text{Na}^+_{\\text{corr}} = \\text{Na}^+_{\\text{medido}} + 1{,}6 \\times \\frac{\\text{Glicemia} - 100}{100} = 132 + 1{,}6 \\times \\frac{468 - 100}{100} \\approx 137{,}9\\text{ mEq/L}$$',
     perolaClinica:
@@ -611,6 +696,16 @@ export const MEDICAL_QUESTIONS: MedicalQuestion[] = [
     gabaritoOficial: 'A',
     totalRespostasComunidade: 5110,
     taxaAcertoGlobal: 74.5,
+    analiseBanca: {
+      "conceitoCentral": "Estabilização materna prioritária com sulfato de magnésio e anti-hipertensivo na iminência de eclâmpsia com síndrome HELLP.",
+      "raciocinioChave": "Gestante com PA grave, sintomas neurológicos/epigástricos (iminência de eclâmpsia) e alteração laboratorial compatível com HELLP exige prevenção imediata de convulsões com sulfato de magnésio. Concomitantemente, controla-se a crise hipertensiva com hidralazina IV ou nifedipino VO para posterior resolução da gestação após estabilização.",
+      "armadilhaBanca": "Tentar conduta expectante prolongada para maturação pulmonar fetal ou transfundir plaquetas profilaticamente acima dos limiares cirúrgicos na síndrome HELLP."
+    },
+    mapaDistratores: {
+      "B": "A iminência de eclâmpsia associada à síndrome HELLP contraindica conduta expectante prolongada, e metildopa oral não trata emergência hipertensiva aguda.",
+      "C": "O sulfato de magnésio é superior à fenitoína na eclâmpsia, o nitroprussiato oferece risco de toxicidade fetal por cianeto e a estabilização precede o parto.",
+      "D": "Transfusão profilática de plaquetas na síndrome HELLP só é indicada geralmente se < 50.000/mm³ para cesariana ou < 20.000/mm³ para parto vaginal, jamais omitindo o sulfato de magnésio."
+    },
     comentarioGeral:
       'Tríade clássica de prova em Obstetrícia: PA ≥ 160/110 + sintomas de iminência de eclâmpsia (cefaleia, escotomas, epigastralgia) + síndrome HELLP. Lembre-se de monitorar a intoxicação pelo sulfato de magnésio avaliando reflexo patelar, frequência respiratória (≥ 16 irpm) e diurese (≥ 25–30 mL/h), mantendo gluconato de cálcio 10% como antídoto à beira-leito.',
     perolaClinica:
@@ -677,6 +772,17 @@ export const MEDICAL_QUESTIONS: MedicalQuestion[] = [
     gabaritoOficial: 'B',
     totalRespostasComunidade: 5890,
     taxaAcertoGlobal: 51.4,
+    analiseBanca: {
+      "conceitoCentral": "Classificação de risco (Grupo C) e hidratação parenteral padronizada na dengue segundo o Manual do Ministério da Saúde (2024).",
+      "raciocinioChave": "Dor abdominal contínua, vômitos persistentes, hipotensão postural, hepatomegalia > 2 cm e hemoconcentração caracterizam sinais de alarme sem choque instalado, definindo o Grupo C. Pelo protocolo MS 2024, esse grupo recebe internação e hidratação imediata com SF 0,9% 10 mL/kg na primeira hora com reavaliação clínica e de hematócrito.",
+      "armadilhaBanca": "Classificar erroneamente paciente com sinais de alarme e sem choque no Grupo D (choque) ou no Grupo B, e indicar transfusão desnecessária de plaquetas."
+    },
+    mapaDistratores: {
+      "A": "Sinais de alarme como dor abdominal intensa, vômitos persistentes e hemoconcentração excluem manejo ambulatorial de Grupo B e exigem hidratação venosa no Grupo C.",
+      "C": "O volume de 20 mL/kg em 20 minutos pertence ao Grupo D (choque franco ou sangramento grave), e plaquetas em 58.000/mm³ sem hemorragia ativa não requerem transfusão.",
+      "D": "Coloides como albumina são reservados ao choque refratário do Grupo D sem resposta a cristaloides, não sendo terapia inicial do Grupo C.",
+      "E": "O quadro preenche critérios de Grupo C e a transfusão profilática de plaquetas é contraindicada pelo risco de sobrecarga volêmica sem benefício clínico."
+    },
     comentarioGeral:
       'A edição de 2024 do Manual de Dengue do Ministério da Saúde unificou e refinou o protocolo de hidratação do Grupo C: reposição inicial de 10 mL/kg na 1ª hora (antes era 20 mL/kg em 2 horas — o que equivalia à mesma taxa horária, mas agora padronizado como 10 mL/kg/h!). Diferenciar Grupo C (sinais de alarme, hemodinamicamente estável sem choque) de Grupo D (choque / sangramento grave / disfunção orgânica) é crucial.',
     perolaClinica:
@@ -735,6 +841,16 @@ export const MEDICAL_QUESTIONS: MedicalQuestion[] = [
     gabaritoOficial: 'B',
     totalRespostasComunidade: 3420,
     taxaAcertoGlobal: 58.7,
+    analiseBanca: {
+      "conceitoCentral": "Estratificação de gravidade da colecistite aguda calculosa pelos Critérios de Tóquio 2018 (TG18).",
+      "raciocinioChave": "A paciente não apresenta disfunções orgânicas (que definiriam Grau III), mas reúne dois critérios clássicos de inflamação acentuada: sintomas há mais de 72 horas (84h) e leucocitose superior a 18.000/mm³ (19.600/mm³). Pelos Critérios de Tóquio (TG18), a presença de qualquer um desses marcadores classifica o quadro como Grau II (Moderada).",
+      "armadilhaBanca": "Classificar como Grau I pela ausência de disfunção orgânica sistêmica, ignorando os critérios específicos de gravidade local/temporal do Grau II."
+    },
+    mapaDistratores: {
+      "A": "A ausência de disfunção orgânica apenas afasta Grau III, mas a duração superior a 72 horas e leucocitose > 18.000/mm³ definem Grau II (Moderada).",
+      "C": "O Grau III exige falência ou disfunção orgânica (cardiovascular, neurológica, respiratória, renal, hepática ou hematológica), ausentes na paciente.",
+      "D": "Sinal de Murphy positivo, febre/leucocitose e cálculo impactado com espessamento vesicular à US já fecham o diagnóstico definitivo pelos Critérios de Tóquio."
+    },
     comentarioGeral:
       'Os Critérios de Tóquio 2018 (TG18) são cobrados tanto no Acesso Direto quanto no R+ de Cirurgia Geral. Para classificar rapidamente: primeiro procure disfunção orgânica (Grau III); se ausente, procure sinais de gravidade local/temporal (Leuco > 18.000, > 72h, massa palpável, gangrena/abscesso = Grau II); se nenhum estiver presente, é Grau I (Leve).',
     perolaClinica:
@@ -794,6 +910,16 @@ export const MEDICAL_QUESTIONS: MedicalQuestion[] = [
     gabaritoOficial: 'B',
     totalRespostasComunidade: 4650,
     taxaAcertoGlobal: 41.2,
+    analiseBanca: {
+      "conceitoCentral": "Conduta estratificada por faixa etária diante de citologia cervical ASC-US nas diretrizes brasileiras do INCA/MS.",
+      "raciocinioChave": "Em mulheres imunocompetentes com resultado de ASC-US, a probabilidade de clareamento espontâneo do HPV varia conforme a idade, dispensando colposcopia imediata. Na faixa entre 25 e 29 anos, a diretriz do INCA/MS preconiza repetir o exame citopatológico em 12 meses.",
+      "armadilhaBanca": "Indicar colposcopia imediata em ASC-US ou confundir o intervalo de repetição entre < 25 anos (3 anos), 25–29 anos (12 meses) e ≥ 30 anos (6 meses)."
+    },
+    mapaDistratores: {
+      "A": "A colposcopia imediata é indicada para ASC-H, HSIL, AGC ou em imunossuprimidas, mas não para o primeiro resultado de ASC-US em imunocompetente.",
+      "C": "O intervalo de repetição em 6 meses para ASC-US aplica-se apenas a mulheres com 30 anos ou mais.",
+      "D": "O método \"ver e tratar\" por EZT é restrito a casos selecionados de HSIL com colposcopia satisfatória e achados maiores em ≥ 25 anos, sendo contraindicado no ASC-US."
+    },
     comentarioGeral:
       'Esta é uma das pegadinhas de faixa etária mais tradicionais das bancas brasileiras (especialmente AMRIGS, USP e ENARE). Em ASC-US (imunocompetente), a conduta é estratificada exatamente nos cortes de 25 e 30 anos devido à alta taxa de clareamento espontâneo do HPV em mulheres jovens.',
     perolaClinica:
@@ -853,6 +979,16 @@ export const MEDICAL_QUESTIONS: MedicalQuestion[] = [
     gabaritoOficial: 'B',
     totalRespostasComunidade: 3780,
     taxaAcertoGlobal: 70.3,
+    analiseBanca: {
+      "conceitoCentral": "Manejo baseado em evidências (somente suporte) na bronquiolite viral aguda leve a moderada sem hipoxemia grave.",
+      "raciocinioChave": "Lactente de 5 meses em primeiro episódio de sibilância após pródromo catarral, mantendo boa hidratação e SpO₂ de 94%, apresenta bronquiolite viral aguda típica. As diretrizes da SBP/AAP recomendam apenas medidas de suporte (higiene nasal, hidratação e vigilância de alarme), sem corticoides ou broncodilatadores de rotina.",
+      "armadilhaBanca": "Prescrever broncodilatadores, corticoides sistêmicos ou antibióticos de rotina diante de crepitações finas e sibilos da bronquiolite viral."
+    },
+    mapaDistratores: {
+      "A": "Corticosteroides sistêmicos e beta-2 agonistas de rotina não reduzem internação nem tempo de doença na bronquiolite viral aguda típica.",
+      "C": "Crepitações finas difusas associadas a sibilos fazem parte do quadro viral habitual da bronquiolite e não indicam infecção bacteriana nem amoxicilina.",
+      "D": "Oxigenoterapia só é indicada abaixo de SpO₂ 90–92%, e manobras convencionais de fisioterapia como tapotagem são desaconselhadas na fase aguda."
+    },
     comentarioGeral:
       'Na Bronquiolite Viral Aguda, a prova avalia se o candidato sabe "o que NÃO fazer". Evitar prescrições desnecessárias (corticoide, beta-2 agonista de rotina, antibiótico, radiografia de tórax em casos típicos leves) é o foco central das diretrizes da SBP e da Academia Americana de Pediatria.',
     perolaClinica:
@@ -912,6 +1048,16 @@ export const MEDICAL_QUESTIONS: MedicalQuestion[] = [
     gabaritoOficial: 'B',
     totalRespostasComunidade: 4120,
     taxaAcertoGlobal: 63.5,
+    analiseBanca: {
+      "conceitoCentral": "Conduta vacinal pós-Episódio Hipotônico-Hiporresponsivo (EHH) associado à vacina pentavalente no calendário do PNI/CRIE.",
+      "raciocinioChave": "Palidez, hipotonia e hiporresponsividade transitórias com recuperação espontânea 18 horas após a pentavalente configuram Episódio Hipotônico-Hiporresponsivo, atribuído ao componente pertussis de células inteiras. Conforme o PNI/MS, deve-se substituir a DTP de células inteiras pela DTP acelular (DTPa) via CRIE, mantendo Hib e Hepatite B.",
+      "armadilhaBanca": "Confundir Episódio Hipotônico-Hiporresponsivo (que indica DTP acelular via CRIE) com encefalopatia pós-vacinal (que contraindica pertussis e exige DT)."
+    },
+    mapaDistratores: {
+      "A": "O EHH é evento autolimitado sem sequelas que não configura encefalopatia e não contraindica os componentes diftérico, tetânico ou pertussis acelular.",
+      "C": "Após EHH ou convulsão pós-DTP de células inteiras, é formalmente indicada a substituição para DTPa no CRIE, não bastando antitérmico profilático.",
+      "D": "A dupla infantil (DT), sem componente pertussis, é reservada aos casos de encefalopatia aguda pós-vacinal em até 7 dias, não se aplicando ao EHH."
+    },
     comentarioGeral:
       'Tema clássico e recorrente tanto no Revalida INEP quanto no ENARE e SUS-SP. Saber diferenciar quando trocar DTP por DTPa (acelular) versus quando trocar por DT (sem pertussis) garante acertos certos em imunizações.',
     perolaClinica:
@@ -971,6 +1117,16 @@ export const MEDICAL_QUESTIONS: MedicalQuestion[] = [
     gabaritoOficial: 'B',
     totalRespostasComunidade: 5640,
     taxaAcertoGlobal: 78.6,
+    analiseBanca: {
+      "conceitoCentral": "Articulação prática entre princípios do SUS e atributos da Atenção Primária à Saúde na reorganização do cuidado na ESF.",
+      "raciocinioChave": "A criação de turno estendido noturno para trabalhadores rurais vulneráveis concretiza a equidade e amplia o acesso de primeiro contato. O acompanhamento contínuo na UBS integrado ao encaminhamento regulado para cardiologia expressa a longitudinalidade, a coordenação do cuidado, a integralidade e a hierarquização.",
+      "armadilhaBanca": "Confundir equidade com igualdade estrita ou misturar os princípios doutrinários e organizativos do SUS com os atributos essenciais e derivados de Starfield."
+    },
+    mapaDistratores: {
+      "A": "A universalidade é princípio doutrinário do SUS (não organizativo) e focalização seletiva não compõe os atributos essenciais da APS descritos por Starfield.",
+      "C": "A Atenção Primária opõe-se ao modelo hospitalocêntrico, e os atributos derivados são orientação familiar, comunitária e competência cultural.",
+      "D": "Aplicar oferta uniforme ignorando barreiras de horário viola a equidade, enquanto perder o vínculo após o encaminhamento rompe longitudinalidade e coordenação."
+    },
     comentarioGeral:
       'Os atributos da Atenção Primária descritos por Bárbara Starfield (4 essenciais: Acesso de primeiro contato, Longitudinalidade, Integralidade, Coordenação do cuidado; 3 derivados: Orientação familiar, Orientação comunitária, Competência cultural) integrados aos princípios da Lei 8.080/90 são presença garantida em praticamente todas as provas de Medicina Preventiva.',
     perolaClinica:
@@ -1030,6 +1186,16 @@ export const MEDICAL_QUESTIONS: MedicalQuestion[] = [
     gabaritoOficial: 'A',
     totalRespostasComunidade: 3890,
     taxaAcertoGlobal: 66.9,
+    analiseBanca: {
+      "conceitoCentral": "Distinção entre agravos de notificação compulsória imediata (≤ 24h) e semanal na Lista Nacional do Ministério da Saúde.",
+      "raciocinioChave": "Doenças exantemáticas em plano de eliminação (sarampo) e síndromes com alto risco de surto ou letalidade rápida (meningite meningocócica) requerem notificação imediata em até 24 horas já na suspeita clínica. Já a tuberculose pulmonar e a sífilis adquirida integram o rol de notificação semanal no SINAN.",
+      "armadilhaBanca": "Incluir tuberculose ou sífilis adquirida na lista de notificação imediata ou esperar confirmação laboratorial antes de notificar casos suspeitos graves."
+    },
+    mapaDistratores: {
+      "B": "Apesar da elevada relevância epidemiológica, a tuberculose pulmonar possui periodicidade de notificação semanal, não imediata.",
+      "C": "Tanto a tuberculose quanto a sífilis adquirida têm prazo semanal na Lista Nacional de Notificação Compulsória.",
+      "D": "A notificação imediata de doenças como sarampo e doença meningocócica é obrigatória na suspeita clínica, sem aguardar confirmação laboratorial."
+    },
     comentarioGeral:
       'A Lista Nacional de Notificação Compulsória (Portaria de Consolidação GM/MS nº 4 e atualizações) é um clássico da Saúde Coletiva. Lembre-se da regra mnemônica: notificações imediatas (≤ 24h) envolvem doenças com alto potencial epidêmico, gravidade/mortalidade rápida, doenças preveníveis em erradicação/eliminação (sarampo, rubéola, poliomielite), acidentes por animais peçonhentos, raiva humana, violência sexual/tentativa de suicídio e óbitos por dengue/chikungunya/zika.',
     perolaClinica:
@@ -1085,6 +1251,16 @@ export const MEDICAL_QUESTIONS: MedicalQuestion[] = [
     gabaritoOficial: 'C',
     totalRespostasComunidade: 2140,
     taxaAcertoGlobal: 37.8,
+    analiseBanca: {
+      "conceitoCentral": "Evolução histórica dos pilares modificadores de mortalidade na ICFER (inclusão dos iSGLT2 para não diabéticos após 2021).",
+      "raciocinioChave": "Até meados de 2021, a base obrigatória para pacientes com ICFER sem diabetes restringia-se ao triplo bloqueio neuro-hormonal (IECA/BRA/INRA, betabloqueador e antagonista mineralocorticoide). Os inibidores de SGLT2 (dapagliflozina/empagliflozina) só se consolidaram posteriormente como o quarto pilar universal da terapia quádrupla.",
+      "armadilhaBanca": "Aplicar as diretrizes atuais (que exigem iSGLT2 na terapia quádrupla inicial) ignorando o recorte histórico de 2021 explicitado no enunciado da questão."
+    },
+    mapaDistratores: {
+      "A": "Os betabloqueadores cardiosseletivos já eram pilar consolidado de redução de mortalidade na ICFER antes mesmo de 2021.",
+      "B": "A espironolactona já integrava a terapia padrão obrigatória para ICFER sintomática com FEVE ≤ 35% nas diretrizes anteriores a 2021.",
+      "D": "Os inibidores da enzima conversora de angiotensina compõem a base histórica de redução de mortalidade na ICFER desde a década de 1990."
+    },
     comentarioGeral:
       'Atenção: questão mantida no banco com a marcação de DESATUALIZADA. Atualmente, os quatro pilares fundamentais da ICFER (independentemente de diabetes) são: INRA (ou IECA), Betabloqueador, Antagonista Mineralocorticoide e iSGLT2.',
     perolaClinica:
@@ -1142,7 +1318,8 @@ export const MEDICAL_QUESTIONS: MedicalQuestion[] = [
     ],
     gabaritoOficial: 'A',
     totalRespostasComunidade: 1950,
-    taxaAcertoGlobal: 39.5,
+    taxaAcertoBase: 0,
+    taxaAcertoGlobal: 0,
     comentarioGeral:
       'Questão oficialmente anulada pela banca organizadora por imprecisão na pontuação do desvio à esquerda no escore MANTRELS. Utilize o filtro "Excluir anuladas/desatualizadas" no painel superior quando desejar treinar apenas questões válidas.',
     perolaClinica:

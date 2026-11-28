@@ -276,6 +276,25 @@ def load_existing_hashes(path: Optional[Path]) -> Dict[str, str]:
     return {}
 
 
+def validate_alternative_order(alternativas: object, anulada: bool = False) -> List[str]:
+    """Garante ordem oficial contígua (A, B, C, D[, E]) sem lacunas ou inversões."""
+    letters: List[str] = []
+    if isinstance(alternativas, list):
+        for item in alternativas:
+            if isinstance(item, dict):
+                letters.append(str(item.get("letter") or "").strip().upper())
+    elif isinstance(alternativas, dict):
+        letters = [str(k).strip().upper() for k in alternativas.keys()]
+    else:
+        return ["ORDEM_ALTERNATIVAS_INVALIDA(formato)"]
+
+    expected = ["A", "B", "C", "D", "E"][: len(letters)]
+    min_len = 2 if anulada else 4
+    if len(letters) < min_len or len(letters) > 5 or letters != expected:
+        return [f"ORDEM_ALTERNATIVAS_INVALIDA({','.join(letters)})"]
+    return []
+
+
 def check_gabarito_consistency(
     gabarito: Optional[str],
     anulada: bool,
@@ -283,6 +302,7 @@ def check_gabarito_consistency(
     explicacoes: Dict[str, str],
 ) -> List[str]:
     issues: List[str] = []
+    issues.extend(validate_alternative_order(alternativas, anulada=anulada))
     if anulada:
         return issues
     if not gabarito:
@@ -409,8 +429,24 @@ def run_audit_jsonl(target_path: Path, taxonomy_validator: TaxonomyValidator) ->
 
             rec_copy = dict(rec)
             tax_issues = taxonomy_validator.validate(rec_copy)
-            if tax_issues:
-                errors.append((qid, tax_issues))
+            alt_issues = validate_alternative_order(
+                rec.get("alternativas"),
+                anulada=bool(rec.get("anulada")),
+            )
+            q_errors = list(tax_issues) + list(alt_issues)
+            if not rec.get("anulada"):
+                gab = str(rec.get("gabaritoOficial") or "").strip().upper()
+                alts = rec.get("alternativas") or []
+                alt_letters = (
+                    {str(a.get("letter") or "").strip().upper() for a in alts if isinstance(a, dict)}
+                    if isinstance(alts, list)
+                    else {str(k).strip().upper() for k in alts.keys()} if isinstance(alts, dict) else set()
+                )
+                if not gab or gab not in alt_letters:
+                    q_errors.append(f"GABARITO_FORA_DAS_ALTERNATIVAS({gab})")
+
+            if q_errors:
+                errors.append((qid, q_errors))
             else:
                 valid_tax += 1
 
@@ -545,6 +581,8 @@ def main() -> None:
                 "motivoDivergencia": enr.get("error") if enr else "Ausente no enriched.jsonl",
                 "comentarioGeral": "",
                 "explicacoesPorAlternativa": {},
+                "analiseBanca": None,
+                "mapaDistratores": {},
                 "referencias": [],
                 "modeloUtilizado": enr.get("_meta", {}).get("model") if enr else None,
             }
@@ -597,6 +635,8 @@ def main() -> None:
                 "motivoDivergencia": enr.get("motivoDivergencia"),
                 "comentarioGeral": enr.get("comentarioGeral", ""),
                 "explicacoesPorAlternativa": enr.get("explicacoesPorAlternativa", {}),
+                "analiseBanca": enr.get("analiseBanca"),
+                "mapaDistratores": enr.get("mapaDistratores") or {},
                 "referencias": enr.get("referencias", []),
                 "modeloUtilizado": enr.get("_meta", {}).get("model"),
             }

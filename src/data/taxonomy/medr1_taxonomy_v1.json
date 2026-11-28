@@ -17,8 +17,8 @@
   "stats": {
     "totalGrandeAreas": 5,
     "totalTemas": 44,
-    "totalSubtemas": 260,
-    "totalAliases": 985,
+    "totalSubtemas": 262,
+    "totalAliases": 999,
     "breakdown": {
       "Clínica Médica": {
         "temas": 13,
@@ -26,7 +26,7 @@
       },
       "Cirurgia Geral": {
         "temas": 9,
-        "subtemas": 41
+        "subtemas": 42
       },
       "Ginecologia e Obstetrícia": {
         "temas": 8,
@@ -34,7 +34,7 @@
       },
       "Pediatria": {
         "temas": 8,
-        "subtemas": 35
+        "subtemas": 36
       },
       "Medicina Preventiva": {
         "temas": 6,
@@ -1540,6 +1540,19 @@
                 "lidocaina",
                 "raquianestesia"
               ]
+            },
+            {
+              "slug": "cg-periop-hemoterapia-transfusao-macica-e-reposicao-volemica",
+              "label": "Hemoterapia, Transfusão Maciça e Reposição Volêmica",
+              "aliases": [
+                "hemoterapia cirurgica",
+                "transfusao macica",
+                "protocolo de transfusao macica",
+                "choque hemorragico reposicao volemica",
+                "hemocomponentes perioperatorio",
+                "concentrado de hemacias trauma",
+                "acido tranexamico trauma"
+              ]
             }
           ]
         },
@@ -2296,6 +2309,19 @@
                 "marasmo",
                 "obesidade pediatrica",
                 "sindrome de realimentacao"
+              ]
+            },
+            {
+              "slug": "ped-puericultura-endocrinologia-pediatrica-e-diabetes-na-infancia",
+              "label": "Endocrinologia Pediátrica e Diabetes na Infância",
+              "aliases": [
+                "cetoacidose diabetica na infancia",
+                "cetoacidose diabetica pediatrica",
+                "diabetes mellitus tipo 1 na infancia",
+                "dm1 pediatria",
+                "endocrinologia pediatrica",
+                "hipotireoidismo congenito",
+                "hiperplasia adrenal congenita"
               ]
             }
           ]

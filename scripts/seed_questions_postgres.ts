@@ -6,10 +6,14 @@ import type { MedicalQuestion } from '../src/types/medical.ts';
 
 const BATCH_SIZE = 100;
 
-function mapDifficulty(taxaAcertoGlobal: number): 'easy' | 'medium' | 'hard' {
-  if (taxaAcertoGlobal >= 70) return 'easy';
-  if (taxaAcertoGlobal <= 45) return 'hard';
-  return 'medium';
+function mapDifficulty(
+  taxaAcertoGlobal: number,
+  isAnnulled = false
+): 'easy' | 'medium' | 'hard' | 'annulled' {
+  if (isAnnulled) return 'annulled';
+  if (taxaAcertoGlobal > 70) return 'easy';
+  if (taxaAcertoGlobal >= 40) return 'medium';
+  return 'hard';
 }
 
 async function collectAllCatalogQuestions(): Promise<MedicalQuestion[]> {
@@ -42,14 +46,14 @@ const UPSERT_SQL = `
     exam_year, exam_type, grande_area_id, specialty, topic, subtopic,
     statement, options, correct_option, explanation, clinical_pearl,
     reference_source, clinical_image, lab_table, difficulty_level,
-    is_annulled, is_outdated, is_active
+    is_annulled, is_outdated, taxa_acerto_base, taxa_acerto_global, is_active
   )
   VALUES (
     $1, $2, $3, $4, $5, $6,
     $7, $8, $9, $10, $11, $12,
     $13, $14::JSONB, $15, $16, $17,
     $18, $19::JSONB, $20::JSONB, $21,
-    $22, $23, TRUE
+    $22, $23, $24, $25, TRUE
   )
   ON CONFLICT (id) DO UPDATE SET
     external_code = EXCLUDED.external_code,
@@ -71,9 +75,41 @@ const UPSERT_SQL = `
     reference_source = EXCLUDED.reference_source,
     clinical_image = EXCLUDED.clinical_image,
     lab_table = EXCLUDED.lab_table,
-    difficulty_level = EXCLUDED.difficulty_level,
     is_annulled = EXCLUDED.is_annulled,
     is_outdated = EXCLUDED.is_outdated,
+    taxa_acerto_base = CASE
+      WHEN EXCLUDED.is_annulled THEN 0.00
+      ELSE EXCLUDED.taxa_acerto_base
+    END,
+    taxa_acerto_global = CASE
+      WHEN EXCLUDED.is_annulled THEN 0.00
+      WHEN questions.tentativas_unicas > 0 THEN ROUND(
+        ((EXCLUDED.taxa_acerto_base * GREATEST(1, questions.prior_weight))
+          + (questions.acertos_primeira_tentativa * 100.0))
+        / (GREATEST(1, questions.prior_weight) + questions.tentativas_unicas),
+        1
+      )
+      ELSE EXCLUDED.taxa_acerto_base
+    END,
+    difficulty_level = CASE
+      WHEN EXCLUDED.is_annulled THEN 'annulled'
+      WHEN questions.tentativas_unicas > 0 THEN CASE
+        WHEN ROUND(
+          ((EXCLUDED.taxa_acerto_base * GREATEST(1, questions.prior_weight))
+            + (questions.acertos_primeira_tentativa * 100.0))
+          / (GREATEST(1, questions.prior_weight) + questions.tentativas_unicas),
+          1
+        ) > 70 THEN 'easy'
+        WHEN ROUND(
+          ((EXCLUDED.taxa_acerto_base * GREATEST(1, questions.prior_weight))
+            + (questions.acertos_primeira_tentativa * 100.0))
+          / (GREATEST(1, questions.prior_weight) + questions.tentativas_unicas),
+          1
+        ) >= 40 THEN 'medium'
+        ELSE 'hard'
+      END
+      ELSE EXCLUDED.difficulty_level
+    END,
     updated_at = NOW();
 `;
 
@@ -117,6 +153,10 @@ async function main() {
       await client.query('BEGIN');
       for (const q of batch) {
         const uf = (q.estado || 'BR').trim().slice(0, 2).toUpperCase().padEnd(2, ' ');
+        const isAnnulled = Boolean(q.anulada);
+        const baseAccuracy = isAnnulled
+          ? 0
+          : Number((q.taxaAcertoBase ?? q.taxaAcertoGlobal ?? 58.4).toFixed(2));
         const params = [
           q.id,
           q.code ? q.code.slice(0, 80) : null,
@@ -138,9 +178,11 @@ async function main() {
           q.referencias.length > 0 ? q.referencias.join('; ') : null,
           q.clinicalImage ? JSON.stringify(q.clinicalImage) : null,
           q.labTable ? JSON.stringify(q.labTable) : null,
-          mapDifficulty(q.taxaAcertoGlobal),
-          Boolean(q.anulada),
+          mapDifficulty(baseAccuracy, isAnnulled),
+          isAnnulled,
           Boolean(q.desatualizada),
+          baseAccuracy,
+          baseAccuracy,
         ];
         await client.query(UPSERT_SQL, params);
         upserted += 1;

@@ -52,6 +52,10 @@ function makeDbRow(id: string, examYear = 2025) {
     lab_table: null,
     is_annulled: false,
     is_outdated: false,
+    taxa_acerto_base: '76.50',
+    tentativas_unicas: '4',
+    acertos_primeira_tentativa: '3',
+    taxa_acerto_global: '76.30',
   };
 }
 
@@ -166,12 +170,131 @@ describe('P2 Escala — /api/questions (Paginação por cursor + FTS PostgreSQL)
 
     const okRes = await fetch(`${srv.baseUrl}/api/questions/q-uepa-2026-01`);
     expect(okRes.status).toBe(200);
-    expect((await okRes.json()) as { item: { id: string } }).toMatchObject({
+    expect(
+      (await okRes.json()) as {
+        item: {
+          id: string;
+          taxaAcertoBase: number;
+          tentativasGlobais: number;
+          acertosGlobais: number;
+          taxaAcertoGlobal: number;
+        };
+      }
+    ).toMatchObject({
       mode: 'postgres',
-      item: { id: 'q-uepa-2026-01' },
+      item: {
+        id: 'q-uepa-2026-01',
+        taxaAcertoBase: 76.5,
+        tentativasGlobais: 4,
+        acertosGlobais: 3,
+        taxaAcertoGlobal: 76.3,
+      },
     });
 
     const missingRes = await fetch(`${srv.baseUrl}/api/questions/q-inexistente`);
     expect(missingRes.status).toBe(404);
+  });
+
+  it('POST /api/questions/:id/first-attempt valida entrada, retorna 503 sem DB e chama register_first_attempt_stats', async () => {
+    const validStudentId = '11111111-1111-4111-8111-111111111111';
+    const prevDbUrl = process.env.DATABASE_URL;
+    delete process.env.DATABASE_URL;
+    try {
+      const noDbSrv = await startTestServer();
+      closers.push(noDbSrv.close);
+
+      const badRes = await fetch(
+        `${noDbSrv.baseUrl}/api/questions/q-uepa-2026-01/first-attempt`,
+        {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ studentId: 'invalid', isCorrect: true }),
+        }
+      );
+      expect(badRes.status).toBe(400);
+
+      const fallbackRes = await fetch(
+        `${noDbSrv.baseUrl}/api/questions/q-uepa-2026-01/first-attempt`,
+        {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ studentId: validStudentId, isCorrect: false }),
+        }
+      );
+      expect(fallbackRes.status).toBe(503);
+      expect(await fallbackRes.json()).toMatchObject({ mode: 'local-fallback' });
+    } finally {
+      if (prevDbUrl !== undefined) process.env.DATABASE_URL = prevDbUrl;
+    }
+
+    const calls: Array<{ sql: string; params: unknown[] }> = [];
+    const mockQuery = vi.fn(
+      async <T extends QueryResultRow = QueryResultRow>(
+        sql: string,
+        params: unknown[] = []
+      ): Promise<QueryResult<T>> => {
+        calls.push({ sql, params });
+        const rows =
+          params[0] === 'q-uepa-2026-01'
+            ? [
+                {
+                  question_id: 'q-uepa-2026-01',
+                  was_first_attempt: true,
+                  taxa_acerto_base: '76.50',
+                  tentativas_unicas: '1',
+                  acertos_primeira_tentativa: '0',
+                  taxa_acerto_global: '73.60',
+                  difficulty_level: 'easy',
+                },
+              ]
+            : [];
+        return {
+          rows: rows as unknown as T[],
+          rowCount: rows.length,
+          command: 'SELECT',
+          oid: 0,
+          fields: [],
+        };
+      }
+    );
+
+    const dbSrv = await startTestServer({
+      questionsDepsOverride: {
+        query: mockQuery as unknown as QuestionsServiceDeps['query'],
+      },
+    });
+    closers.push(dbSrv.close);
+
+    const okRes = await fetch(
+      `${dbSrv.baseUrl}/api/questions/q-uepa-2026-01/first-attempt`,
+      {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ studentId: validStudentId, isCorrect: false }),
+      }
+    );
+    expect(okRes.status).toBe(200);
+    expect(await okRes.json()).toEqual({
+      mode: 'postgres',
+      questionId: 'q-uepa-2026-01',
+      wasFirstAttempt: true,
+      taxaAcertoBase: 76.5,
+      tentativasGlobais: 1,
+      acertosGlobais: 0,
+      taxaAcertoGlobal: 73.6,
+      difficultyLevel: 'easy',
+    });
+    expect(calls[0].sql).toContain('register_first_attempt_stats($1, $2::UUID, $3, $4)');
+    expect(calls[0].params).toEqual(['q-uepa-2026-01', validStudentId, false, 25]);
+
+    const notFoundRes = await fetch(
+      `${dbSrv.baseUrl}/api/questions/q-missing/first-attempt`,
+      {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ studentId: validStudentId, isCorrect: true }),
+      }
+    );
+    expect(notFoundRes.status).toBe(404);
   });
 });

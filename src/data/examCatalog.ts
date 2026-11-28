@@ -35,10 +35,10 @@ export const OFFICIAL_EXAM_CATALOG: ExamCatalogEntry[] = [
     questionCount: 100,
     activeCount: 91,
     areaCounts: {
-      clinica_medica: 24,
+      clinica_medica: 23,
       cirurgia_geral: 20,
       ginecologia_obstetricia: 22,
-      pediatria: 19,
+      pediatria: 20,
       medicina_preventiva: 15,
     },
     loader: () =>
@@ -57,10 +57,10 @@ export const OFFICIAL_EXAM_CATALOG: ExamCatalogEntry[] = [
     questionCount: 100,
     activeCount: 97,
     areaCounts: {
-      clinica_medica: 27,
+      clinica_medica: 25,
       cirurgia_geral: 23,
       ginecologia_obstetricia: 20,
-      pediatria: 20,
+      pediatria: 22,
       medicina_preventiva: 10,
     },
     loader: () =>
@@ -79,10 +79,10 @@ export const OFFICIAL_EXAM_CATALOG: ExamCatalogEntry[] = [
     questionCount: 100,
     activeCount: 98,
     areaCounts: {
-      clinica_medica: 29,
+      clinica_medica: 28,
       cirurgia_geral: 15,
       ginecologia_obstetricia: 18,
-      pediatria: 21,
+      pediatria: 22,
       medicina_preventiva: 17,
     },
     loader: () =>
@@ -123,10 +123,10 @@ export const OFFICIAL_EXAM_CATALOG: ExamCatalogEntry[] = [
     questionCount: 100,
     activeCount: 96,
     areaCounts: {
-      clinica_medica: 31,
-      cirurgia_geral: 16,
-      ginecologia_obstetricia: 20,
-      pediatria: 18,
+      clinica_medica: 26,
+      cirurgia_geral: 18,
+      ginecologia_obstetricia: 21,
+      pediatria: 20,
       medicina_preventiva: 15,
     },
     loader: () =>
@@ -146,10 +146,10 @@ export const OFFICIAL_EXAM_CATALOG: ExamCatalogEntry[] = [
     questionCount: 100,
     activeCount: 99,
     areaCounts: {
-      clinica_medica: 34,
-      cirurgia_geral: 17,
+      clinica_medica: 30,
+      cirurgia_geral: 18,
       ginecologia_obstetricia: 20,
-      pediatria: 21,
+      pediatria: 24,
       medicina_preventiva: 8,
     },
     loader: () =>
@@ -168,10 +168,10 @@ export const OFFICIAL_EXAM_CATALOG: ExamCatalogEntry[] = [
     questionCount: 120,
     activeCount: 120,
     areaCounts: {
-      clinica_medica: 24,
+      clinica_medica: 22,
       cirurgia_geral: 24,
-      ginecologia_obstetricia: 27,
-      pediatria: 23,
+      ginecologia_obstetricia: 28,
+      pediatria: 24,
       medicina_preventiva: 22,
     },
     loader: () =>
@@ -190,10 +190,10 @@ export const OFFICIAL_EXAM_CATALOG: ExamCatalogEntry[] = [
     questionCount: 100,
     activeCount: 91,
     areaCounts: {
-      clinica_medica: 28,
+      clinica_medica: 27,
       cirurgia_geral: 17,
       ginecologia_obstetricia: 18,
-      pediatria: 19,
+      pediatria: 20,
       medicina_preventiva: 18,
     },
     loader: () =>
@@ -234,10 +234,10 @@ export const OFFICIAL_EXAM_CATALOG: ExamCatalogEntry[] = [
     questionCount: 90,
     activeCount: 90,
     areaCounts: {
-      clinica_medica: 34,
-      cirurgia_geral: 11,
+      clinica_medica: 31,
+      cirurgia_geral: 12,
       ginecologia_obstetricia: 16,
-      pediatria: 15,
+      pediatria: 17,
       medicina_preventiva: 14,
     },
     loader: () =>
@@ -278,10 +278,10 @@ export const OFFICIAL_EXAM_CATALOG: ExamCatalogEntry[] = [
     questionCount: 49,
     activeCount: 49,
     areaCounts: {
-      clinica_medica: 12,
-      cirurgia_geral: 8,
-      ginecologia_obstetricia: 10,
-      pediatria: 9,
+      clinica_medica: 9,
+      cirurgia_geral: 9,
+      ginecologia_obstetricia: 11,
+      pediatria: 10,
       medicina_preventiva: 10,
     },
     loader: () =>

@@ -26,6 +26,7 @@ import {
   SlidersHorizontal,
   Sparkles,
   Loader2,
+  Shuffle,
 } from 'lucide-react';
 import type {
   AlternativeLetter,
@@ -34,6 +35,7 @@ import type {
   UserAnswerRecord,
 } from '../../types/medical';
 import { computeDifficulty, cn } from '../../lib/utils';
+import { getDisplayedAlternatives } from '../../lib/alternativeShuffle';
 import { ClinicalImageViewer } from './ClinicalImageViewer';
 import {
   StudentVsMedianBar,
@@ -81,6 +83,9 @@ interface QuestionCardProps {
   onOpenFlashcards?: () => void;
   readingComfort?: boolean;
   seamless?: boolean;
+  shuffleAlternatives?: boolean;
+  onToggleShuffleAlternatives?: () => void;
+  shuffleSeed?: string;
   onGenerateAiCommentary?: (question: MedicalQuestion) => Promise<MedicalQuestion>;
 }
 
@@ -113,6 +118,9 @@ export function QuestionCard({
   onOpenFlashcards,
   readingComfort = false,
   seamless = false,
+  shuffleAlternatives = false,
+  onToggleShuffleAlternatives,
+  shuffleSeed = 'default',
   onGenerateAiCommentary,
 }: QuestionCardProps) {
   const [selectedPending, setSelectedPending] = useState<AlternativeLetter | null>(null);
@@ -124,6 +132,7 @@ export function QuestionCard({
   const [expandedComments, setExpandedComments] = useState<AlternativeLetter[]>([]);
   const [commentTab, setCommentTab] = useState<CommentaryTab>('alternativas');
   const [showCommunityStats, setShowCommunityStats] = useState(false);
+  const [showDistractorMap, setShowDistractorMap] = useState(false);
   const [isGeneratingComment, setIsGeneratingComment] = useState(false);
   const [commentError, setCommentError] = useState<string | null>(null);
 
@@ -138,6 +147,7 @@ export function QuestionCard({
     setExpandedComments([]);
     setCommentTab('alternativas');
     setShowCommunityStats(false);
+    setShowDistractorMap(false);
     setIsGeneratingComment(false);
     setCommentError(null);
   }, [question.id]);
@@ -151,7 +161,16 @@ export function QuestionCard({
       ? simuladoDraft ?? null
       : existingAnswer?.selectedLetter ?? selectedPending;
 
-  const difficulty = computeDifficulty(question.taxaAcertoGlobal);
+  const difficulty = computeDifficulty(question.taxaAcertoGlobal, question.anulada);
+
+  const displayedAlternatives = useMemo(
+    () =>
+      getDisplayedAlternatives(question.alternativas, {
+        enabled: Boolean(shuffleAlternatives),
+        seed: `${shuffleSeed}::${question.id}`,
+      }),
+    [question.alternativas, question.id, shuffleAlternatives, shuffleSeed]
+  );
 
   const sessionCorrectCount = useMemo(
     () => sessionQuestions.filter((q) => q.status === 'correct').length,
@@ -244,13 +263,15 @@ export function QuestionCard({
 
       if (!isRevealed) {
         const upper = e.key.toUpperCase() as AlternativeLetter;
-        const validLetters = question.alternativas.map((a) => a.letter);
-        if (validLetters.includes(upper) && !eliminated.includes(upper)) {
+        const matched = displayedAlternatives.find(
+          (item) => item.displayLetter === upper
+        );
+        if (matched && !eliminated.includes(matched.officialLetter)) {
           e.preventDefault();
           if (mode === 'simulado') {
-            onSelectSimuladoDraft(upper);
+            onSelectSimuladoDraft(matched.officialLetter);
           } else {
-            setSelectedPending(upper);
+            setSelectedPending(matched.officialLetter);
           }
           return;
         }
@@ -269,7 +290,7 @@ export function QuestionCard({
     onPrev,
     onNext,
     isRevealed,
-    question.alternativas,
+    displayedAlternatives,
     eliminated,
     mode,
     onSelectSimuladoDraft,
@@ -281,7 +302,9 @@ export function QuestionCard({
     isRevealed && activeChoice === question.gabaritoOficial;
 
   const difficultyLabel =
-    difficulty === 'Difícil'
+    difficulty === 'Anulada'
+      ? 'Questão Anulada'
+      : difficulty === 'Difícil'
       ? 'Dificuldade: Difícil'
       : difficulty === 'Médio'
       ? 'Dificuldade: Moderada'
@@ -493,7 +516,8 @@ export function QuestionCard({
               'font-medium',
               difficulty === 'Fácil' && 'text-emerald-700 dark:text-emerald-400',
               difficulty === 'Médio' && 'text-amber-700 dark:text-amber-400',
-              difficulty === 'Difícil' && 'text-slate-600 dark:text-slate-300'
+              difficulty === 'Difícil' && 'text-slate-600 dark:text-slate-300',
+              difficulty === 'Anulada' && 'text-[#D70015] dark:text-rose-400'
             )}
           >
             {difficultyLabel}
@@ -506,7 +530,7 @@ export function QuestionCard({
           </span>
         </div>
 
-        {/* 3 Circular Study Tool Buttons (Riscar, Dica, Atalhos) */}
+        {/* Circular Study Tool Buttons (Riscar, Embaralhar, Dica, Atalhos) */}
         <div className="flex items-center gap-2 shrink-0">
           {!isRevealed && (
             <button
@@ -526,6 +550,28 @@ export function QuestionCard({
               )}
             >
               <Strikethrough className="h-4 w-4" />
+            </button>
+          )}
+
+          {onToggleShuffleAlternatives && (
+            <button
+              type="button"
+              onClick={onToggleShuffleAlternatives}
+              aria-pressed={shuffleAlternatives}
+              aria-label="Embaralhar alternativas"
+              title={
+                shuffleAlternatives
+                  ? 'Desativar embaralhamento visual das alternativas'
+                  : 'Embaralhar alternativas (apenas visual — mantém gabarito oficial)'
+              }
+              className={cn(
+                'flex h-9 w-9 items-center justify-center rounded-full border transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#007AFF]',
+                shuffleAlternatives
+                  ? 'border-[#007AFF] bg-[#007AFF]/10 text-[#007AFF] dark:border-sky-400 dark:bg-sky-950/60 dark:text-sky-300'
+                  : 'border-slate-200 bg-white text-slate-500 hover:border-slate-300 hover:bg-slate-50 hover:text-slate-800 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200'
+              )}
+            >
+              <Shuffle size={16} strokeWidth={1.5} />
             </button>
           )}
 
@@ -579,11 +625,19 @@ export function QuestionCard({
             <p className="font-semibold">Foco Clínico (sem revelar o gabarito)</p>
             <p className="text-amber-900/90 dark:text-amber-200/90">
               {question.grandeArea} / {question.tema} /{' '}
-              <strong>{question.subtema}</strong> · {question.tipoProva} · Taxa
-              média da comunidade:{' '}
-              <span className="font-mono font-semibold tabular-nums">
-                {question.taxaAcertoGlobal.toFixed(1)}%
-              </span>
+              <strong>{question.subtema}</strong> · {question.tipoProva} ·{' '}
+              {question.anulada ? (
+                <span className="font-semibold text-[#D70015] dark:text-rose-400">
+                  Questão Anulada
+                </span>
+              ) : (
+                <>
+                  Taxa média da comunidade:{' '}
+                  <span className="font-mono font-semibold tabular-nums">
+                    {question.taxaAcertoGlobal.toFixed(1)}%
+                  </span>
+                </>
+              )}
             </p>
           </div>
           <button
@@ -759,25 +813,25 @@ export function QuestionCard({
           role="radiogroup"
           aria-label="Alternativas da questão"
         >
-          {question.alternativas.map((alt) => {
-            const isEliminated = eliminated.includes(alt.letter);
-            const isSelected = activeChoice === alt.letter;
-            const isOfficial = alt.letter === question.gabaritoOficial;
+          {displayedAlternatives.map(({ alternative: alt, displayLetter, officialLetter }) => {
+            const isEliminated = eliminated.includes(officialLetter);
+            const isSelected = activeChoice === officialLetter;
+            const isOfficial = officialLetter === question.gabaritoOficial;
             const isWrongChosen = isRevealed && isSelected && !isOfficial;
             const isPrincipalDistractor =
               isRevealed &&
               !isOfficial &&
-              principalDistractor?.letter === alt.letter;
-            const isCommentExpanded = expandedComments.includes(alt.letter);
+              principalDistractor?.letter === officialLetter;
+            const isCommentExpanded = expandedComments.includes(officialLetter);
 
             const showInlineConfirm =
               mode === 'estudo' && isSelected && !isRevealed && !isEliminated;
 
             return (
               <div
-                key={alt.letter}
+                key={officialLetter}
                 data-option-card="true"
-                onClick={() => handleOptionClick(alt.letter)}
+                onClick={() => handleOptionClick(officialLetter)}
                 role="button"
                 aria-pressed={isSelected}
                 tabIndex={isRevealed ? -1 : 0}
@@ -788,7 +842,7 @@ export function QuestionCard({
                     if (e.key === 'Enter' && showInlineConfirm) {
                       handleConfirmStudy();
                     } else {
-                      handleOptionClick(alt.letter);
+                      handleOptionClick(officialLetter);
                     }
                     return;
                   }
@@ -887,11 +941,11 @@ export function QuestionCard({
                       )}
                     >
                       {isRevealed && isOfficial ? (
-                        <Check size={14} strokeWidth={2} aria-label={`Correta (${alt.letter})`} />
+                        <Check size={14} strokeWidth={2} aria-label={`Correta (${displayLetter})`} />
                       ) : isRevealed && isWrongChosen ? (
-                        <X size={14} strokeWidth={2} aria-label={`Incorreta (${alt.letter})`} />
+                        <X size={14} strokeWidth={2} aria-label={`Incorreta (${displayLetter})`} />
                       ) : (
-                        alt.letter
+                        displayLetter
                       )}
                     </span>
                   </div>
@@ -915,11 +969,21 @@ export function QuestionCard({
                     {/* Post-answer inline controls: "Ver comentário" + Community % */}
                     {isRevealed && (
                       <div className="space-y-2.5 pt-0.5">
+                        {isWrongChosen &&
+                          !question.anulada &&
+                          question.mapaDistratores?.[officialLetter] && (
+                            <div className="rounded-lg border border-[#FF3B30]/20 bg-[#FF3B30]/10 dark:bg-[#FF3B30]/15 dark:border-[#FF3B30]/30 px-3 py-2 text-xs leading-relaxed text-[#D70015] dark:text-[#FF6961]">
+                              <span className="font-semibold">
+                                Por que esta alternativa é um distrator:{' '}
+                              </span>
+                              {question.mapaDistratores[officialLetter]}
+                            </div>
+                          )}
                         <div className="flex flex-wrap items-center justify-between gap-2 text-xs">
                           <div className="flex flex-wrap items-center gap-3">
                             <button
                               type="button"
-                              onClick={(e) => handleToggleInlineComment(alt.letter, e)}
+                              onClick={(e) => handleToggleInlineComment(officialLetter, e)}
                               aria-expanded={isCommentExpanded}
                               className="inline-flex items-center gap-1 font-medium text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100 transition-colors cursor-pointer"
                             >
@@ -934,6 +998,12 @@ export function QuestionCard({
                                   : 'Ver comentário'}
                               </span>
                             </button>
+
+                            {shuffleAlternatives && displayLetter !== officialLetter && (
+                              <span className="font-mono text-[11px] tabular-nums text-[#86868B] dark:text-slate-400">
+                                (Oficial: {officialLetter})
+                              </span>
+                            )}
 
                             {isOfficial && (
                               <span className="inline-flex items-center gap-1 font-semibold text-emerald-700 dark:text-emerald-400">
@@ -1251,6 +1321,89 @@ export function QuestionCard({
                   readingComfort ? 'max-w-[68ch]' : 'max-w-[75ch]'
                 )}
               >
+                {!question.anulada && question.analiseBanca && (
+                  <div className="rounded-2xl bg-white dark:bg-slate-900 border border-black/5 dark:border-slate-800 shadow-[0_2px_10px_rgba(0,0,0,0.03)] p-4 sm:p-5 space-y-3.5">
+                    <div className="flex flex-wrap items-center justify-between gap-2">
+                      <div className="flex items-center gap-2">
+                        <Target size={16} strokeWidth={1.5} className="text-[#007AFF]" />
+                        <h4 className="text-xs font-semibold uppercase tracking-wider text-[#86868B] dark:text-slate-400">
+                          Análise da Banca
+                        </h4>
+                      </div>
+                      {question.mapaDistratores &&
+                        Object.keys(question.mapaDistratores).length > 0 && (
+                          <button
+                            type="button"
+                            onClick={() => setShowDistractorMap((v) => !v)}
+                            className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium text-[#007AFF] hover:bg-[#007AFF]/10 transition cursor-pointer"
+                          >
+                            {showDistractorMap
+                              ? 'Ocultar mapa de distratores'
+                              : `Ver mapa de distratores (${Object.keys(question.mapaDistratores).length})`}
+                          </button>
+                        )}
+                    </div>
+
+                    <div className="space-y-2.5 text-sm leading-relaxed text-[#1D1D1F] dark:text-slate-200">
+                      <div>
+                        <span className="text-xs font-medium text-[#86868B] dark:text-slate-400 block mb-0.5">
+                          Conceito Central
+                        </span>
+                        <p className="font-medium text-[#1D1D1F] dark:text-slate-100">
+                          {question.analiseBanca.conceitoCentral}
+                        </p>
+                      </div>
+
+                      <div>
+                        <span className="text-xs font-medium text-[#86868B] dark:text-slate-400 block mb-0.5">
+                          Raciocínio-Chave
+                        </span>
+                        <p className="text-[#1D1D1F] dark:text-slate-200">
+                          {question.analiseBanca.raciocinioChave}
+                        </p>
+                      </div>
+
+                      {question.analiseBanca.armadilhaBanca && (
+                        <div className="rounded-xl border border-[#FF3B30]/15 bg-[#FF3B30]/10 dark:bg-[#FF3B30]/15 dark:border-[#FF3B30]/25 px-3.5 py-2.5 text-xs sm:text-[13px] leading-relaxed text-[#D70015] dark:text-[#FF6961] flex items-start gap-2">
+                          <AlertTriangle size={16} strokeWidth={1.5} className="shrink-0 mt-0.5" />
+                          <div>
+                            <span className="font-semibold">Armadilha da Banca: </span>
+                            {question.analiseBanca.armadilhaBanca}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+
+                    {showDistractorMap &&
+                      question.mapaDistratores &&
+                      Object.keys(question.mapaDistratores).length > 0 && (
+                        <div className="pt-2 border-t border-black/5 dark:border-slate-800 space-y-2">
+                          <p className="text-xs font-semibold uppercase tracking-wider text-[#86868B] dark:text-slate-400">
+                            Mapa dos Distratores (Ordem Oficial)
+                          </p>
+                          <div className="space-y-1.5">
+                            {question.alternativas
+                              .filter(
+                                (alt) =>
+                                  alt.letter !== question.gabaritoOficial &&
+                                  Boolean(question.mapaDistratores?.[alt.letter])
+                              )
+                              .map((alt) => (
+                                <div
+                                  key={alt.letter}
+                                  className="flex items-start gap-2.5 rounded-lg bg-[#F5F5F7] dark:bg-slate-800/70 px-3 py-2 text-xs leading-relaxed text-[#1D1D1F] dark:text-slate-200"
+                                >
+                                  <span className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-md bg-white dark:bg-slate-900 border border-black/10 dark:border-slate-700 font-semibold text-[#86868B] dark:text-slate-300 tabular-nums">
+                                    {alt.letter}
+                                  </span>
+                                  <span>{question.mapaDistratores![alt.letter]}</span>
+                                </div>
+                              ))}
+                          </div>
+                        </div>
+                      )}
+                  </div>
+                )}
                 {(question.needsAiCommentary || !question.comentarioGeral) &&
                   onGenerateAiCommentary && (
                     <div className="rounded-xl border border-black/5 bg-white p-4 dark:border-white/[0.08] dark:bg-slate-900/70 space-y-2.5">
@@ -1379,9 +1532,15 @@ export function QuestionCard({
               className="flex w-full flex-wrap items-center justify-between gap-2 rounded-lg px-2 py-1.5 text-left text-xs text-[#86868B] hover:bg-black/[0.03] hover:text-[#1D1D1F] dark:text-slate-400 dark:hover:bg-white/[0.04] dark:hover:text-slate-200 transition-colors cursor-pointer"
             >
               <span className="inline-flex flex-wrap items-center gap-x-2 gap-y-1 font-mono tabular-nums">
-                <span className="text-emerald-700 dark:text-emerald-400">
-                  {question.taxaAcertoGlobal.toFixed(1)}% acertaram
-                </span>
+                {question.anulada ? (
+                  <span className="font-semibold text-[#D70015] dark:text-rose-400">
+                    Questão Anulada
+                  </span>
+                ) : (
+                  <span className="text-emerald-700 dark:text-emerald-400">
+                    {question.taxaAcertoGlobal.toFixed(1)}% acertaram
+                  </span>
+                )}
                 <span aria-hidden="true">·</span>
                 <span>
                   Distrator {principalDistractor?.letter ?? '—'} (
@@ -1406,8 +1565,17 @@ export function QuestionCard({
                     <p className="text-xs text-[#86868B] dark:text-slate-400">
                       Taxa global de acertos
                     </p>
-                    <p className="mt-1 font-mono text-lg font-semibold tabular-nums text-emerald-700 dark:text-emerald-400">
-                      {question.taxaAcertoGlobal.toFixed(1)}%
+                    <p
+                      className={cn(
+                        'mt-1 font-mono text-lg font-semibold tabular-nums',
+                        question.anulada
+                          ? 'text-[#D70015] dark:text-rose-400'
+                          : 'text-emerald-700 dark:text-emerald-400'
+                      )}
+                    >
+                      {question.anulada
+                        ? 'Anulada'
+                        : `${question.taxaAcertoGlobal.toFixed(1)}%`}
                     </p>
                   </div>
                   <div>
@@ -1439,6 +1607,17 @@ export function QuestionCard({
                     </p>
                   </div>
                 </div>
+
+                {!question.anulada && (question.tentativasGlobais ?? 0) > 0 && (
+                  <p className="text-[11px] text-[#86868B] dark:text-slate-400 font-mono tabular-nums">
+                    Calibração Bayesiana: prior clínico{' '}
+                    {(question.taxaAcertoBase ?? question.taxaAcertoGlobal).toFixed(1)}% ·{' '}
+                    {question.tentativasGlobais}{' '}
+                    {question.tentativasGlobais === 1
+                      ? '1ª tentativa real'
+                      : '1ªs tentativas reais'}
+                  </p>
+                )}
 
                 {mode === 'estudo' && benchmarks && (
                   <StudentVsMedianBar

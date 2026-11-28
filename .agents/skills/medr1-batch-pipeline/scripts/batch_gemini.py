@@ -25,7 +25,7 @@ SYSTEM_INSTRUCTION = """Você é um médico preceptor especialista em provas de 
 Sua tarefa é classificar e comentar questões de residência para o banco MedR1 seguindo estritamente estas regras:
 
 1. Classifique `grandeAreaId`, `tema`, `subtema` e `tags` usando EXCLUSIVAMENTE a taxonomia canônica fornecida no contexto.
-2. NÃO reescreva o enunciado nem as alternativas.
+2. NÃO reescreva, NÃO reordene e NÃO embaralhe o enunciado nem as alternativas: preserve rigorosamente a ordem oficial (A, B, C, D, E) idêntica ao caderno original da prova.
 3. Escreva `comentarioGeral` direto (máx. 3 frases) com o raciocínio clínico central.
 4. Em `explicacoesPorAlternativa`, explique objetivamente por que cada letra está correta ou incorreta (1 a 2 frases por letra).
 5. REGRA ANTI-ALUCINAÇÃO:

@@ -9,7 +9,7 @@ export type AlternativeLetter = 'A' | 'B' | 'C' | 'D' | 'E';
 
 export type ExamType = 'Acesso Direto' | 'R+' | 'Revalida';
 
-export type DifficultyLevel = 'Fácil' | 'Médio' | 'Difícil';
+export type DifficultyLevel = 'Fácil' | 'Médio' | 'Difícil' | 'Anulada';
 
 export type StudyMode = 'estudo' | 'simulado';
 
@@ -102,6 +102,15 @@ export interface MedicalQuestion {
   gabaritoOficial: AlternativeLetter;
   totalRespostasComunidade: number;
   taxaAcertoGlobal: number; // 0-100
+  taxaAcertoBase?: number; // Prior clínico calibrado original (0-100)
+  tentativasGlobais?: number; // Total de 1ªs tentativas únicas computadas
+  acertosGlobais?: number; // Total de acertos na 1ª tentativa
+  analiseBanca?: {
+    conceitoCentral: string;
+    raciocinioChave: string;
+    armadilhaBanca?: string;
+  };
+  mapaDistratores?: Record<string, string>;
   comentarioGeral: string;
   perolaClinica: string;
   referencias: string[];

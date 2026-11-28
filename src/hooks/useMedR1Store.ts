@@ -30,10 +30,18 @@ import {
 import { DEFAULT_USER_PROFILE, INITIAL_LIVE_PEERS } from '../data/rankingSeed';
 import { GRANDES_AREAS, MEDICAL_CODENAMES } from '../data/taxonomy';
 import {
+  computeBayesianAccuracy,
   computeDifficulty,
   computePerformanceStatus,
   computeWeightedScore,
 } from '../lib/utils';
+import {
+  EMPTY_FIRST_ATTEMPT_TRACKER,
+  applyGlobalStatsToQuestion,
+  registerBatchFirstAttemptsInTracker,
+  registerFirstAttemptInTracker,
+  type FirstAttemptTrackerState,
+} from '../lib/difficultyCalibration';
 import {
   buildFlashcardFromQuestion,
   computeNextFsrsState,
@@ -116,6 +124,8 @@ const STORAGE_KEY_SIMULADO_HISTORY = 'medr1_simulado_history_v1';
 const STORAGE_KEY_CUTOFF_TARGET = 'medr1_cutoff_target_v1';
 const STORAGE_KEY_DEMO_BASELINE = 'medr1_include_demo_baseline_v1';
 const STORAGE_KEY_SEEN_ACHIEVEMENTS = 'medr1_gamification_seen_badges_v1';
+const STORAGE_KEY_QUESTION_STATS = 'medr1_question_global_stats_v1';
+const STORAGE_KEY_SHUFFLE_ALTERNATIVES = 'medr1_shuffle_alternatives_v1';
 
 export interface GamificationSummary {
   core: GamificationCoreState;
@@ -429,6 +439,10 @@ export function useMedR1Store(options?: {
     safeReadStorage<boolean>(STORAGE_KEY_READING_COMFORT, false)
   );
 
+  const [shuffleAlternatives, setShuffleAlternatives] = useState<boolean>(() =>
+    safeReadStorage<boolean>(STORAGE_KEY_SHUFFLE_ALTERNATIVES, false)
+  );
+
   const [systemPrefersDark, setSystemPrefersDark] = useState<boolean>(() =>
     getBrowserPrefersDark()
   );
@@ -473,6 +487,13 @@ export function useMedR1Store(options?: {
   const [answers, setAnswers] = useState<Record<string, UserAnswerRecord>>(() =>
     safeReadStorage(STORAGE_KEY_ANSWERS, {})
   );
+  const answersRef = useRef(answers);
+  answersRef.current = answers;
+
+  const [questionStatsTracker, setQuestionStatsTracker] =
+    useState<FirstAttemptTrackerState>(() =>
+      safeReadStorage(STORAGE_KEY_QUESTION_STATS, EMPTY_FIRST_ATTEMPT_TRACKER)
+    );
 
   const [bookmarks, setBookmarks] = useState<string[]>(() =>
     safeReadStorage(STORAGE_KEY_BOOKMARKS, ['q-usp-2025-cardio-01', 'q-enare-2025-epi-07'])
@@ -777,31 +798,40 @@ export function useMedR1Store(options?: {
   }, []);
 
   const allQuestions = useMemo(() => {
-    if (importedQuestions.length === 0 && officialCatalogQuestions.length === 0) {
-      return MEDICAL_QUESTIONS;
-    }
-    const seen = new Set<string>();
-    const merged: MedicalQuestion[] = [];
-    for (const q of importedQuestions) {
-      if (!seen.has(q.id)) {
-        seen.add(q.id);
-        merged.push(q);
-      }
-    }
-    for (const q of officialCatalogQuestions) {
-      if (!seen.has(q.id)) {
-        seen.add(q.id);
-        merged.push(q);
-      }
-    }
-    for (const q of MEDICAL_QUESTIONS) {
-      if (!seen.has(q.id)) {
-        seen.add(q.id);
-        merged.push(q);
-      }
-    }
-    return merged;
-  }, [importedQuestions, officialCatalogQuestions]);
+    const rawList: MedicalQuestion[] =
+      importedQuestions.length === 0 && officialCatalogQuestions.length === 0
+        ? MEDICAL_QUESTIONS
+        : (() => {
+            const seen = new Set<string>();
+            const merged: MedicalQuestion[] = [];
+            for (const q of importedQuestions) {
+              if (!seen.has(q.id)) {
+                seen.add(q.id);
+                merged.push(q);
+              }
+            }
+            for (const q of officialCatalogQuestions) {
+              if (!seen.has(q.id)) {
+                seen.add(q.id);
+                merged.push(q);
+              }
+            }
+            for (const q of MEDICAL_QUESTIONS) {
+              if (!seen.has(q.id)) {
+                seen.add(q.id);
+                merged.push(q);
+              }
+            }
+            return merged;
+          })();
+
+    return rawList.map((q) =>
+      applyGlobalStatsToQuestion(
+        q,
+        questionStatsTracker.statsByQuestionId[q.id]
+      )
+    );
+  }, [importedQuestions, officialCatalogQuestions, questionStatsTracker]);
 
   const importQuestions = useCallback(async (newQuestions: MedicalQuestion[]) => {
     if (newQuestions.length === 0) return 0;
@@ -835,6 +865,21 @@ export function useMedR1Store(options?: {
         throw new Error(data.error || `Falha ao gerar comentário (HTTP ${res.status}).`);
       }
 
+      const nextBaseAccuracy = question.anulada
+        ? 0
+        : data.taxaAcertoGlobal ?? question.taxaAcertoBase ?? question.taxaAcertoGlobal;
+      const existingAttempts = question.tentativasGlobais ?? 0;
+      const existingHits = question.acertosGlobais ?? 0;
+      const nextGlobalAccuracy =
+        existingAttempts > 0
+          ? computeBayesianAccuracy({
+              baseAccuracy: nextBaseAccuracy,
+              realAttempts: existingAttempts,
+              realHits: existingHits,
+              anulada: question.anulada,
+            })
+          : nextBaseAccuracy;
+
       const enriched: MedicalQuestion = {
         ...question,
         grandeAreaId: data.grandeAreaId ?? question.grandeAreaId,
@@ -850,7 +895,8 @@ export function useMedR1Store(options?: {
                 communityPct: data.alternativas![idx]?.communityPct ?? orig.communityPct,
               }))
             : question.alternativas,
-        taxaAcertoGlobal: data.taxaAcertoGlobal ?? question.taxaAcertoGlobal,
+        taxaAcertoBase: nextBaseAccuracy,
+        taxaAcertoGlobal: nextGlobalAccuracy,
         referencias:
           Array.isArray(data.referencias) && data.referencias.length > 0
             ? data.referencias
@@ -917,6 +963,14 @@ export function useMedR1Store(options?: {
   useEffect(() => {
     safeWriteStorage(STORAGE_KEY_ANSWERS, answers);
   }, [answers, safeWriteStorage]);
+
+  useEffect(() => {
+    safeWriteStorage(STORAGE_KEY_QUESTION_STATS, questionStatsTracker);
+  }, [questionStatsTracker, safeWriteStorage]);
+
+  useEffect(() => {
+    safeWriteStorage(STORAGE_KEY_SHUFFLE_ALTERNATIVES, shuffleAlternatives);
+  }, [shuffleAlternatives, safeWriteStorage]);
 
   useEffect(() => {
     safeWriteStorage(STORAGE_KEY_BOOKMARKS, bookmarks);
@@ -1017,6 +1071,7 @@ export function useMedR1Store(options?: {
       timeSpentSec = 45
     ) => {
       const isCorrect = selectedLetter === question.gabaritoOficial;
+      const alreadyAnswered = Boolean(answersRef.current[question.id]);
       const record: UserAnswerRecord = {
         questionId: question.id,
         selectedLetter,
@@ -1029,6 +1084,14 @@ export function useMedR1Store(options?: {
         ...prev,
         [question.id]: record,
       }));
+      setQuestionStatsTracker((prev) =>
+        registerFirstAttemptInTracker(prev, {
+          studentId: profile.id,
+          question,
+          isCorrect,
+          alreadyAnsweredByStudent: alreadyAnswered,
+        })
+      );
       void syncEngine.enqueueEvents([
         {
           eventId: generateClientUuid(),
@@ -1048,7 +1111,7 @@ export function useMedR1Store(options?: {
         createFlashcardFromQuestion(question, 'caderno_erros');
       }
     },
-    [autoCreateFlashcardsOnError, createFlashcardFromQuestion, syncEngine]
+    [autoCreateFlashcardsOnError, createFlashcardFromQuestion, profile.id, syncEngine]
   );
 
   const recordBatchAnswers = useCallback(
@@ -1060,6 +1123,7 @@ export function useMedR1Store(options?: {
       }>
     ) => {
       const answeredAt = new Date().toISOString();
+      const priorAnswers = answersRef.current;
       const batchEvents: SyncOutboxEvent[] = [];
       setAnswers((prev) => {
         const next = { ...prev };
@@ -1089,6 +1153,17 @@ export function useMedR1Store(options?: {
         }
         return next;
       });
+      setQuestionStatsTracker((prev) =>
+        registerBatchFirstAttemptsInTracker(
+          prev,
+          items.map((item) => ({
+            studentId: profile.id,
+            question: item.question,
+            isCorrect: item.selectedLetter === item.question.gabaritoOficial,
+            alreadyAnsweredByStudent: Boolean(priorAnswers[item.question.id]),
+          }))
+        )
+      );
       if (batchEvents.length > 0) {
         void syncEngine.enqueueEvents(batchEvents);
       }
@@ -1712,7 +1787,7 @@ export function useMedR1Store(options?: {
           return false;
         }
         if (filters.dificuldade) {
-          const diff = computeDifficulty(item.taxaAcertoGlobal);
+          const diff = computeDifficulty(item.taxaAcertoGlobal, item.anulada);
           if (diff !== filters.dificuldade) return false;
         }
 
@@ -2292,6 +2367,8 @@ export function useMedR1Store(options?: {
     setThemeSchedule,
     readingComfort,
     setReadingComfort,
+    shuffleAlternatives,
+    setShuffleAlternatives,
     dailyGoal,
     setDailyGoalTarget,
     answers,
@@ -2315,7 +2392,9 @@ export function useMedR1Store(options?: {
     autoCreateFlashcardsOnError,
     setAutoCreateFlashcardsOnError,
     recordAnswer,
+    answerQuestion: recordAnswer,
     recordBatchAnswers,
+    questionStatsTracker,
     toggleBookmark,
     updateProfile,
     generateRandomPseudonym,

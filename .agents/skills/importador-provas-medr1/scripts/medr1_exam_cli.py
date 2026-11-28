@@ -160,6 +160,13 @@ def cmd_validate(args: argparse.Namespace) -> int:
                     "error": f"Alternativas incompletas ou fora de ordem: {letters}",
                 }
             )
+        elif not is_annulled and q["gabarito"] not in letters:
+            errors.append(
+                {
+                    "questao": num,
+                    "error": f"Gabarito '{q['gabarito']}' não pertence às alternativas {letters}",
+                }
+            )
 
         norm_stem = normalize_text(q["enunciado"])
         if norm_stem:

@@ -496,11 +496,11 @@
   "confidence": "alta"
  },
  "q-enamed-2025-037": {
-  "grandeAreaId": "clinica_medica",
-  "tema": "Cardiologia",
-  "temaSlug": "cm-cardio",
-  "subtema": "Febre Reumática",
-  "subtemaSlug": "cm-cardio-febre-reumatica",
+  "grandeAreaId": "pediatria",
+  "tema": "Pneumologia Pediátrica",
+  "temaSlug": "ped-pneumo-ped",
+  "subtema": "Infecções de Vias Aéreas Superiores",
+  "subtemaSlug": "ped-pneumo-ped-infeccoes-de-vias-aereas-superiores",
   "tags": [
    "febre-reumatica",
    "artrite-migratoria",
@@ -929,11 +929,11 @@
   "confidence": "alta"
  },
  "q-enamed-2025-066": {
-  "grandeAreaId": "clinica_medica",
-  "tema": "Endocrinologia e Metabologia",
-  "temaSlug": "cm-endocrino",
-  "subtema": "Complicações Agudas do Diabetes",
-  "subtemaSlug": "cm-endocrino-complicacoes-agudas-do-diabetes",
+  "grandeAreaId": "pediatria",
+  "tema": "Puericultura, Crescimento e Nutrição",
+  "temaSlug": "ped-puericultura",
+  "subtema": "Endocrinologia Pediátrica e Diabetes na Infância",
+  "subtemaSlug": "ped-puericultura-endocrinologia-pediatrica-e-diabetes-na-infancia",
   "tags": [
    "cetoacidose-diabetica",
    "reposicao-de-potassio",
@@ -1057,11 +1057,11 @@
   "confidence": "alta"
  },
  "q-enamed-2025-074": {
-  "grandeAreaId": "clinica_medica",
-  "tema": "Endocrinologia e Metabologia",
-  "temaSlug": "cm-endocrino",
-  "subtema": "Nódulos e Câncer de Tireoide",
-  "subtemaSlug": "cm-endocrino-nodulos-e-cancer-de-tireoide",
+  "grandeAreaId": "cirurgia_geral",
+  "tema": "Cirurgia Pediátrica e Especialidades Cirúrgicas",
+  "temaSlug": "cg-espec",
+  "subtema": "Otorrinolaringologia e Cabeça e Pescoço",
+  "subtemaSlug": "cg-espec-otorrinolaringologia-e-cabeca-e-pescoco",
   "tags": [
    "tireoidectomia",
    "nervo-laringeo-recorrente",
@@ -3009,11 +3009,11 @@
   "confidence": "alta"
  },
  "q-ieppa-2026-002": {
-  "grandeAreaId": "clinica_medica",
-  "tema": "Pneumologia",
-  "temaSlug": "cm-pneumo",
-  "subtema": "Tromboembolismo Pulmonar e TVP",
-  "subtemaSlug": "cm-pneumo-tromboembolismo-pulmonar-e-tvp",
+  "grandeAreaId": "ginecologia_obstetricia",
+  "tema": "Intercorrências Clínicas e Infecciosas na Gestação",
+  "temaSlug": "go-intercorrencias",
+  "subtema": "ITU, Tromboembolismo e Intercorrências Clínicas",
+  "subtemaSlug": "go-intercorrencias-itu-tromboembolismo-e-intercorrencias-clinicas",
   "tags": [
    "tep",
    "escore-de-wells",
@@ -3291,11 +3291,11 @@
   "confidence": "alta"
  },
  "q-ieppa-2026-020": {
-  "grandeAreaId": "clinica_medica",
-  "tema": "Hematologia",
-  "temaSlug": "cm-hemato",
-  "subtema": "Hemoterapia e Reações Transfusionais",
-  "subtemaSlug": "cm-hemato-hemoterapia-e-reacoes-transfusionais",
+  "grandeAreaId": "cirurgia_geral",
+  "tema": "Perioperatório, Cicatrização e Anestesiologia",
+  "temaSlug": "cg-periop",
+  "subtema": "Hemoterapia, Transfusão Maciça e Reposição Volêmica",
+  "subtemaSlug": "cg-periop-hemoterapia-transfusao-macica-e-reposicao-volemica",
   "tags": [
    "taco",
    "trali",
@@ -3421,11 +3421,11 @@
   "confidence": "alta"
  },
  "q-ieppa-2026-028": {
-  "grandeAreaId": "clinica_medica",
-  "tema": "Endocrinologia e Metabologia",
-  "temaSlug": "cm-endocrino",
-  "subtema": "Complicações Agudas do Diabetes",
-  "subtemaSlug": "cm-endocrino-complicacoes-agudas-do-diabetes",
+  "grandeAreaId": "pediatria",
+  "tema": "Puericultura, Crescimento e Nutrição",
+  "temaSlug": "ped-puericultura",
+  "subtema": "Endocrinologia Pediátrica e Diabetes na Infância",
+  "subtemaSlug": "ped-puericultura-endocrinologia-pediatrica-e-diabetes-na-infancia",
   "tags": [
    "cetoacidose-diabetica",
    "expansao-volemica",
@@ -4137,11 +4137,11 @@
   "confidence": "alta"
  },
  "q-sus-sp-2023-022": {
-  "grandeAreaId": "clinica_medica",
-  "tema": "Dermatologia",
-  "temaSlug": "cm-dermato",
-  "subtema": "Dermatoses Eczematosas e Psoríase",
-  "subtemaSlug": "cm-dermato-dermatoses-eczematosas-e-psoriase",
+  "grandeAreaId": "pediatria",
+  "tema": "Puericultura, Crescimento e Nutrição",
+  "temaSlug": "ped-puericultura",
+  "subtema": "Avaliação do Crescimento e Baixa Estatura",
+  "subtemaSlug": "ped-puericultura-avaliacao-do-crescimento-e-baixa-estatura",
   "tags": [
    "dermatite-atopica",
    "prurido",
@@ -5750,11 +5750,11 @@
   "confidence": "alta"
  },
  "q-uepa-2022-023": {
-  "grandeAreaId": "clinica_medica",
-  "tema": "Pneumologia",
-  "temaSlug": "cm-pneumo",
-  "subtema": "Asma no Adulto",
-  "subtemaSlug": "cm-pneumo-asma-no-adulto",
+  "grandeAreaId": "pediatria",
+  "tema": "Pneumologia Pediátrica",
+  "temaSlug": "ped-pneumo-ped",
+  "subtema": "Asma na Infância e Fibrose Cística",
+  "subtemaSlug": "ped-pneumo-ped-asma-na-infancia-e-fibrose-cistica",
   "tags": [
    "asma",
    "crise-asmatica",
@@ -6192,11 +6192,11 @@
   "confidence": "alta"
  },
  "q-uepa-2022-050": {
-  "grandeAreaId": "clinica_medica",
-  "tema": "Pneumologia",
-  "temaSlug": "cm-pneumo",
-  "subtema": "Tromboembolismo Pulmonar e TVP",
-  "subtemaSlug": "cm-pneumo-tromboembolismo-pulmonar-e-tvp",
+  "grandeAreaId": "cirurgia_geral",
+  "tema": "Perioperatório, Cicatrização e Anestesiologia",
+  "temaSlug": "cg-periop",
+  "subtema": "Complicações Pós-Operatórias e Infecção de Sítio Cirúrgico",
+  "subtemaSlug": "cg-periop-complicacoes-pos-operatorias-e-infeccao-de-sitio-cirurgico",
   "tags": [
    "tvp",
    "filtro-de-veia-cava",
@@ -6255,11 +6255,11 @@
   "confidence": "alta"
  },
  "q-uepa-2022-054": {
-  "grandeAreaId": "clinica_medica",
-  "tema": "Hematologia",
-  "temaSlug": "cm-hemato",
-  "subtema": "Distúrbios da Coagulação e Anticoagulação",
-  "subtemaSlug": "cm-hemato-disturbios-da-coagulacao-e-anticoagulacao",
+  "grandeAreaId": "cirurgia_geral",
+  "tema": "Perioperatório, Cicatrização e Anestesiologia",
+  "temaSlug": "cg-periop",
+  "subtema": "Complicações Pós-Operatórias e Infecção de Sítio Cirúrgico",
+  "subtemaSlug": "cg-periop-complicacoes-pos-operatorias-e-infeccao-de-sitio-cirurgico",
   "tags": [
    "enoxaparina",
    "protamina",
@@ -6555,11 +6555,11 @@
   "confidence": "alta"
  },
  "q-uepa-2022-073": {
-  "grandeAreaId": "clinica_medica",
-  "tema": "Cardiologia",
-  "temaSlug": "cm-cardio",
-  "subtema": "Parada Cardiorrespiratória e ACLS",
-  "subtemaSlug": "cm-cardio-parada-cardiorrespiratoria-e-acls",
+  "grandeAreaId": "ginecologia_obstetricia",
+  "tema": "Síndromes Hipertensivas e Metabólicas na Gestação",
+  "temaSlug": "go-shg",
+  "subtema": "Pré-Eclâmpsia, Eclâmpsia e Síndrome HELLP",
+  "subtemaSlug": "go-shg-pre-eclampsia-eclampsia-e-sindrome-hellp",
   "tags": [
    "pcr-na-gestante",
    "assistolia",
@@ -6840,11 +6840,11 @@
   "confidence": "alta"
  },
  "q-uepa-2022-091": {
-  "grandeAreaId": "clinica_medica",
-  "tema": "Psiquiatria",
-  "temaSlug": "cm-psiq",
-  "subtema": "Transtornos Alimentares e de Personalidade",
-  "subtemaSlug": "cm-psiq-transtornos-alimentares-e-de-personalidade",
+  "grandeAreaId": "pediatria",
+  "tema": "Puericultura, Crescimento e Nutrição",
+  "temaSlug": "ped-puericultura",
+  "subtema": "Obesidade Infantil e Desnutrição Grave",
+  "subtemaSlug": "ped-puericultura-obesidade-infantil-e-desnutricao-grave",
   "tags": [
    "transtornos-alimentares",
    "adolescencia",
@@ -10030,11 +10030,11 @@
   "confidence": "alta"
  },
  "q-uepa-2024-094": {
-  "grandeAreaId": "clinica_medica",
-  "tema": "Medicina Intensiva e Toxicologia",
-  "temaSlug": "cm-uti",
-  "subtema": "Cuidados Paliativos",
-  "subtemaSlug": "cm-uti-cuidados-paliativos",
+  "grandeAreaId": "pediatria",
+  "tema": "Cardiologia, Hematologia e Oncologia Pediátrica",
+  "temaSlug": "ped-cardio-hemato-ped",
+  "subtema": "Neoplasias Pediátricas",
+  "subtemaSlug": "ped-cardio-hemato-ped-neoplasias-pediatricas",
   "tags": [
    "cuidados-paliativos-pediatricos",
    "oms",
@@ -11424,11 +11424,11 @@
   "confidence": "alta"
  },
  "q-uepa-2025-084": {
-  "grandeAreaId": "clinica_medica",
-  "tema": "Cardiologia",
-  "temaSlug": "cm-cardio",
-  "subtema": "Febre Reumática",
-  "subtemaSlug": "cm-cardio-febre-reumatica",
+  "grandeAreaId": "pediatria",
+  "tema": "Cardiologia, Hematologia e Oncologia Pediátrica",
+  "temaSlug": "ped-cardio-hemato-ped",
+  "subtema": "Doença de Kawasaki e Vasculite por IgA",
+  "subtemaSlug": "ped-cardio-hemato-ped-doenca-de-kawasaki-e-vasculite-por-iga",
   "tags": [
    "febre-reumatica",
    "criterios-de-jones",
@@ -11456,11 +11456,11 @@
   "confidence": "alta"
  },
  "q-uepa-2025-086": {
-  "grandeAreaId": "clinica_medica",
-  "tema": "Dermatologia",
-  "temaSlug": "cm-dermato",
-  "subtema": "Micoses Superficiais e Infestações Cutâneas",
-  "subtemaSlug": "cm-dermato-micoses-superficiais-e-infestacoes-cutaneas",
+  "grandeAreaId": "pediatria",
+  "tema": "Infectologia Pediátrica e Exantemáticas",
+  "temaSlug": "ped-infecto-ped",
+  "subtema": "Doenças Exantemáticas",
+  "subtemaSlug": "ped-infecto-ped-doencas-exantematicas",
   "tags": [
    "escabiose",
    "permetrina",
@@ -13122,11 +13122,11 @@
   "confidence": "alta"
  },
  "q-uepa-2026-094": {
-  "grandeAreaId": "clinica_medica",
-  "tema": "Medicina Intensiva e Toxicologia",
-  "temaSlug": "cm-uti",
-  "subtema": "Cuidados Paliativos",
-  "subtemaSlug": "cm-uti-cuidados-paliativos",
+  "grandeAreaId": "pediatria",
+  "tema": "Emergências Pediátricas e Proteção Infantil",
+  "temaSlug": "ped-emerg-ped",
+  "subtema": "Suporte Avançado de Vida em Pediatria - PALS",
+  "subtemaSlug": "ped-emerg-ped-suporte-avancado-de-vida-em-pediatria-pals",
   "tags": [
    "manejo-da-dor",
    "dor-pediatrica",
@@ -14864,11 +14864,11 @@
   "confidence": "alta"
  },
  "q-usp-rp-2023-008": {
-  "grandeAreaId": "clinica_medica",
-  "tema": "Hematologia",
-  "temaSlug": "cm-hemato",
-  "subtema": "Distúrbios da Coagulação e Anticoagulação",
-  "subtemaSlug": "cm-hemato-disturbios-da-coagulacao-e-anticoagulacao",
+  "grandeAreaId": "pediatria",
+  "tema": "Cardiologia, Hematologia e Oncologia Pediátrica",
+  "temaSlug": "ped-cardio-hemato-ped",
+  "subtema": "Anemias e Doença Falciforme na Infância",
+  "subtemaSlug": "ped-cardio-hemato-ped-anemias-e-doenca-falciforme-na-infancia",
   "tags": [
    "deficiencia-de-fator-vii",
    "coagulopatia",
@@ -14879,11 +14879,11 @@
   "confidence": "alta"
  },
  "q-usp-rp-2023-009": {
-  "grandeAreaId": "clinica_medica",
-  "tema": "Nefrologia",
-  "temaSlug": "cm-nefro",
-  "subtema": "Distúrbios Ácido-Básicos",
-  "subtemaSlug": "cm-nefro-disturbios-acido-basicos",
+  "grandeAreaId": "pediatria",
+  "tema": "Emergências Pediátricas e Proteção Infantil",
+  "temaSlug": "ped-emerg-ped",
+  "subtema": "Suporte Avançado de Vida em Pediatria - PALS",
+  "subtemaSlug": "ped-emerg-ped-suporte-avancado-de-vida-em-pediatria-pals",
   "tags": [
    "acidose-metabolica",
    "anion-gap-aumentado",
@@ -15048,11 +15048,11 @@
   "confidence": "alta"
  },
  "q-usp-rp-2023-020": {
-  "grandeAreaId": "clinica_medica",
-  "tema": "Medicina Intensiva e Toxicologia",
-  "temaSlug": "cm-uti",
-  "subtema": "Intoxicações Exógenas e Síndromes Toxicológicas",
-  "subtemaSlug": "cm-uti-intoxicacoes-exogenas-e-sindromes-toxicologicas",
+  "grandeAreaId": "pediatria",
+  "tema": "Emergências Pediátricas e Proteção Infantil",
+  "temaSlug": "ped-emerg-ped",
+  "subtema": "Acidentes, Intoxicações e Maus-Tratos na Infância",
+  "subtemaSlug": "ped-emerg-ped-acidentes-intoxicacoes-e-maus-tratos-na-infancia",
   "tags": [
    "intoxicacao-por-opioides",
    "fentanil",
@@ -16178,11 +16178,11 @@
   "confidence": "alta"
  },
  "q-usp-rp-2023-093": {
-  "grandeAreaId": "clinica_medica",
-  "tema": "Dermatologia",
-  "temaSlug": "cm-dermato",
-  "subtema": "Câncer de Pele",
-  "subtemaSlug": "cm-dermato-cancer-de-pele",
+  "grandeAreaId": "cirurgia_geral",
+  "tema": "Perioperatório, Cicatrização e Anestesiologia",
+  "temaSlug": "cg-periop",
+  "subtema": "Cicatrização de Feridas e Cirurgia Plástica Básica",
+  "subtemaSlug": "cg-periop-cicatrizacao-de-feridas-e-cirurgia-plastica-basica",
   "tags": [
    "lesao-pigmentada",
    "exerese",
@@ -17801,11 +17801,11 @@
   "confidence": "alta"
  },
  "q-usp-sp-2023-098": {
-  "grandeAreaId": "clinica_medica",
-  "tema": "Infectologia",
-  "temaSlug": "cm-infecto",
-  "subtema": "Infecções de Pele e Partes Moles",
-  "subtemaSlug": "cm-infecto-infeccoes-de-pele-e-partes-moles",
+  "grandeAreaId": "pediatria",
+  "tema": "Infectologia Pediátrica e Exantemáticas",
+  "temaSlug": "ped-infecto-ped",
+  "subtema": "Doenças Exantemáticas",
+  "subtemaSlug": "ped-infecto-ped-doencas-exantematicas",
   "tags": [
    "impetigo-bolhoso",
    "staphylococcus-aureus",
@@ -17895,11 +17895,11 @@
   "confidence": "alta"
  },
  "q-usp-sp-2023-104": {
-  "grandeAreaId": "clinica_medica",
-  "tema": "Pneumologia",
-  "temaSlug": "cm-pneumo",
-  "subtema": "Insuficiência Respiratória e Ventilação Mecânica",
-  "subtemaSlug": "cm-pneumo-insuficiencia-respiratoria-e-ventilacao-mecanica",
+  "grandeAreaId": "ginecologia_obstetricia",
+  "tema": "Intercorrências Clínicas e Infecciosas na Gestação",
+  "temaSlug": "go-intercorrencias",
+  "subtema": "ITU, Tromboembolismo e Intercorrências Clínicas",
+  "subtemaSlug": "go-intercorrencias-itu-tromboembolismo-e-intercorrencias-clinicas",
   "tags": [
    "ventilacao-mecanica",
    "modo-vcv",

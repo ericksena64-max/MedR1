@@ -67,6 +67,39 @@ interface QuestionDbRow extends QueryResultRow {
   lab_table: unknown;
   is_annulled: boolean;
   is_outdated: boolean;
+  taxa_acerto_base?: number | string | null;
+  tentativas_unicas?: number | string | null;
+  acertos_primeira_tentativa?: number | string | null;
+  taxa_acerto_global?: number | string | null;
+  analise_banca?: unknown;
+  mapa_distratores?: unknown;
+}
+
+export interface FirstAttemptStatsInput {
+  questionId: string;
+  studentId: string;
+  isCorrect: boolean;
+  priorWeight?: number;
+}
+
+export interface FirstAttemptStatsResult {
+  questionId: string;
+  wasFirstAttempt: boolean;
+  taxaAcertoBase: number;
+  tentativasGlobais: number;
+  acertosGlobais: number;
+  taxaAcertoGlobal: number;
+  difficultyLevel: string;
+}
+
+interface FirstAttemptRpcRow extends QueryResultRow {
+  question_id: string;
+  was_first_attempt: boolean;
+  taxa_acerto_base: number | string;
+  tentativas_unicas: number | string;
+  acertos_primeira_tentativa: number | string;
+  taxa_acerto_global: number | string;
+  difficulty_level: string;
 }
 
 export function encodeQuestionCursor(cursor: QuestionCursor): string {
@@ -93,6 +126,44 @@ export function decodeQuestionCursor(raw?: string): QuestionCursor | null {
   }
 }
 
+function toFiniteNumber(value: unknown, fallback: number): number {
+  if (typeof value === 'number' && Number.isFinite(value)) return value;
+  if (typeof value === 'string' && value.trim() !== '') {
+    const parsed = Number(value);
+    if (Number.isFinite(parsed)) return parsed;
+  }
+  return fallback;
+}
+
+function parseAnaliseBanca(raw: unknown): MedicalQuestion['analiseBanca'] {
+  if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return undefined;
+  const obj = raw as Record<string, unknown>;
+  const conceitoCentral =
+    typeof obj.conceitoCentral === 'string' ? obj.conceitoCentral.trim() : '';
+  const raciocinioChave =
+    typeof obj.raciocinioChave === 'string' ? obj.raciocinioChave.trim() : '';
+  if (!conceitoCentral || !raciocinioChave) return undefined;
+  const armadilhaBanca =
+    typeof obj.armadilhaBanca === 'string' ? obj.armadilhaBanca.trim() : '';
+  return {
+    conceitoCentral,
+    raciocinioChave,
+    ...(armadilhaBanca ? { armadilhaBanca } : {}),
+  };
+}
+
+function parseMapaDistratores(raw: unknown): Record<string, string> | undefined {
+  if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return undefined;
+  const result: Record<string, string> = {};
+  for (const [key, val] of Object.entries(raw as Record<string, unknown>)) {
+    const letter = key.trim().toUpperCase();
+    if (/^[A-E]$/.test(letter) && typeof val === 'string' && val.trim().length > 0) {
+      result[letter] = val.trim();
+    }
+  }
+  return Object.keys(result).length > 0 ? result : undefined;
+}
+
 function mapDbRowToMedicalQuestion(row: QuestionDbRow): MedicalQuestion {
   const rawOptions = Array.isArray(row.options) ? row.options : [];
   const alternativas: QuestionAlternative[] = rawOptions.map((opt) => {
@@ -115,6 +186,29 @@ function mapDbRowToMedicalQuestion(row: QuestionDbRow): MedicalQuestion {
         .filter(Boolean)
     : [];
 
+  const isAnnulled = Boolean(row.is_annulled);
+  const defaultAccuracy = isAnnulled ? 0 : 58.4;
+  const taxaAcertoBase = isAnnulled
+    ? 0
+    : toFiniteNumber(row.taxa_acerto_base, defaultAccuracy);
+  const tentativasGlobais = Math.max(
+    0,
+    Math.trunc(toFiniteNumber(row.tentativas_unicas, 0))
+  );
+  const acertosGlobais = Math.max(
+    0,
+    Math.min(
+      tentativasGlobais,
+      Math.trunc(toFiniteNumber(row.acertos_primeira_tentativa, 0))
+    )
+  );
+  const taxaAcertoGlobal = isAnnulled
+    ? 0
+    : toFiniteNumber(row.taxa_acerto_global, taxaAcertoBase);
+
+  const analiseBanca = isAnnulled ? undefined : parseAnaliseBanca(row.analise_banca);
+  const mapaDistratores = isAnnulled ? undefined : parseMapaDistratores(row.mapa_distratores);
+
   return {
     id: row.id,
     code: row.external_code || row.id,
@@ -128,7 +222,7 @@ function mapDbRowToMedicalQuestion(row: QuestionDbRow): MedicalQuestion {
     regiao: row.region || 'Nacional',
     ano: row.exam_year ?? new Date().getFullYear(),
     tipoProva: (row.exam_type as ExamType) || 'Acesso Direto',
-    anulada: Boolean(row.is_annulled),
+    anulada: isAnnulled,
     desatualizada: Boolean(row.is_outdated),
     enunciado: row.statement,
     labTable: Array.isArray(row.lab_table) ? (row.lab_table as LabRow[]) : undefined,
@@ -138,8 +232,13 @@ function mapDbRowToMedicalQuestion(row: QuestionDbRow): MedicalQuestion {
         : undefined,
     alternativas,
     gabaritoOficial: (String(row.correct_option || 'A').toUpperCase() as AlternativeLetter),
-    totalRespostasComunidade: 0,
-    taxaAcertoGlobal: 60,
+    totalRespostasComunidade: tentativasGlobais,
+    taxaAcertoGlobal,
+    taxaAcertoBase,
+    tentativasGlobais,
+    acertosGlobais,
+    ...(analiseBanca ? { analiseBanca } : {}),
+    ...(mapaDistratores ? { mapaDistratores } : {}),
     comentarioGeral: row.explanation || '',
     perolaClinica: row.clinical_pearl || '',
     referencias,
@@ -225,7 +324,9 @@ export async function queryPaginatedQuestions(
       id, external_code, exam_board, institution, state_uf, region,
       exam_year, exam_type, grande_area_id, specialty, topic, subtopic,
       statement, options, correct_option, explanation, clinical_pearl,
-      reference_source, clinical_image, lab_table, is_annulled, is_outdated
+      reference_source, clinical_image, lab_table, is_annulled, is_outdated,
+      taxa_acerto_base, tentativas_unicas, acertos_primeira_tentativa, taxa_acerto_global,
+      analise_banca, mapa_distratores
     FROM questions
     WHERE ${conditions.join(' AND ')}
     ORDER BY COALESCE(exam_year, 0) DESC, id ASC
@@ -273,7 +374,9 @@ export async function getQuestionById(
         id, external_code, exam_board, institution, state_uf, region,
         exam_year, exam_type, grande_area_id, specialty, topic, subtopic,
         statement, options, correct_option, explanation, clinical_pearl,
-        reference_source, clinical_image, lab_table, is_annulled, is_outdated
+        reference_source, clinical_image, lab_table, is_annulled, is_outdated,
+        taxa_acerto_base, tentativas_unicas, acertos_primeira_tentativa, taxa_acerto_global,
+        analise_banca, mapa_distratores
       FROM questions
       WHERE id = $1 AND is_active = TRUE
       LIMIT 1
@@ -284,4 +387,61 @@ export async function getQuestionById(
   const row = result.rows?.[0];
   if (!row) return { found: false, item: null };
   return { found: true, item: mapDbRowToMedicalQuestion(row) };
+}
+
+/**
+ * Atomically registers a student's first attempt for a question in PostgreSQL via
+ * the `register_first_attempt_stats` RPC function (Bayesian smoothing).
+ * Returns `null` when PostgreSQL is not configured.
+ */
+export async function registerFirstAttemptStats(
+  input: FirstAttemptStatsInput,
+  deps: QuestionsServiceDeps = {}
+): Promise<{ found: boolean; stats: FirstAttemptStatsResult | null } | null> {
+  const queryFn = resolveQueryFn(deps);
+  if (!queryFn) return null;
+
+  const cleanId = input.questionId.trim().slice(0, 120);
+  if (!cleanId) return { found: false, stats: null };
+
+  const priorWeight =
+    typeof input.priorWeight === 'number' &&
+    Number.isInteger(input.priorWeight) &&
+    input.priorWeight >= 1
+      ? input.priorWeight
+      : 25;
+
+  const result = await queryFn<FirstAttemptRpcRow>(
+    `
+      SELECT
+        question_id,
+        was_first_attempt,
+        taxa_acerto_base,
+        tentativas_unicas,
+        acertos_primeira_tentativa,
+        taxa_acerto_global,
+        difficulty_level
+      FROM register_first_attempt_stats($1, $2::UUID, $3, $4)
+    `,
+    [cleanId, input.studentId.trim(), Boolean(input.isCorrect), priorWeight]
+  );
+
+  const row = result.rows?.[0];
+  if (!row) return { found: false, stats: null };
+
+  return {
+    found: true,
+    stats: {
+      questionId: row.question_id,
+      wasFirstAttempt: Boolean(row.was_first_attempt),
+      taxaAcertoBase: toFiniteNumber(row.taxa_acerto_base, 58.4),
+      tentativasGlobais: Math.max(0, Math.trunc(toFiniteNumber(row.tentativas_unicas, 0))),
+      acertosGlobais: Math.max(
+        0,
+        Math.trunc(toFiniteNumber(row.acertos_primeira_tentativa, 0))
+      ),
+      taxaAcertoGlobal: toFiniteNumber(row.taxa_acerto_global, 58.4),
+      difficultyLevel: String(row.difficulty_level || 'medium'),
+    },
+  };
 }

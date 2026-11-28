@@ -17,6 +17,7 @@ import { pathToFileURL } from 'node:url';
 import { GoogleGenAI, Type } from '@google/genai';
 import {
   TAXONOMY_VERSION,
+  TAXONOMY_ENTRIES,
   buildTaxonomyPromptGuide,
   TAXONOMY_PROMPT_RULES,
   normalizeAiClassification,
@@ -313,7 +314,7 @@ async function runAudit() {
     if (c) bySub.set(c.subtemaSlug, (bySub.get(c.subtemaSlug) ?? 0) + 1);
   }
   console.log(`Total ${all.length} | classificadas ${all.length - missing.length} | sem classificação ${missing.length} | baixa confiança/revisão ${review.length}`);
-  console.log(`Subtemas distintos usados: ${bySub.size}/260`);
+  console.log(`Subtemas distintos usados: ${bySub.size}/${TAXONOMY_ENTRIES.length}`);
   console.log('Top 15:', [...bySub].sort((a, b) => b[1] - a[1]).slice(0, 15).map(([s, n]) => `${s}:${n}`).join(', '));
   if (review.length) console.log('Revisar:', review.slice(0, 30).map((q) => q.id).join(', '));
 }

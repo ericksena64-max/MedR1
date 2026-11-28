@@ -233,7 +233,10 @@ export function matchesNonTaxonomyFilters(
     return false;
   }
   if (filters.dificuldade) {
-    if (computeDifficulty(question.taxaAcertoGlobal) !== filters.dificuldade) {
+    if (
+      computeDifficulty(question.taxaAcertoGlobal, question.anulada) !==
+      filters.dificuldade
+    ) {
       return false;
     }
   }

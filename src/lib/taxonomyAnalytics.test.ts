@@ -11,7 +11,12 @@ import {
   filterQuestionsByExamScope,
   matchesTaxonomySearch,
 } from './taxonomyAnalytics';
-import { TAXONOMY_ENTRIES, resolveSubtema } from './taxonomyClassifier';
+import {
+  TAXONOMY_ENTRIES,
+  TAXONOMY_PROMPT_RULES,
+  classifyByAliases,
+  resolveSubtema,
+} from './taxonomyClassifier';
 
 const BASE_FILTERS: QuestionFilters = {
   search: '',
@@ -144,15 +149,51 @@ const SAMPLE_BANK: MedicalQuestion[] = [
 ];
 
 describe('medr1_taxonomy_v1 integrity', () => {
-  it('loads all 5 grandes areas, 44 temas, and 260 subtemas from canonical v1 JSON', () => {
+  it('loads all 5 grandes areas, 44 temas, and 262 subtemas from canonical v1 JSON', () => {
     const areas = new Set(TAXONOMY_ENTRIES.map((e) => e.grandeAreaId));
     const temas = new Set(TAXONOMY_ENTRIES.map((e) => e.temaSlug));
     const subtemas = new Set(TAXONOMY_ENTRIES.map((e) => e.subtemaSlug));
 
     expect(areas.size).toBe(5);
     expect(temas.size).toBe(44);
-    expect(subtemas.size).toBe(260);
-    expect(TAXONOMY_ENTRIES.length).toBe(260);
+    expect(subtemas.size).toBe(262);
+    expect(TAXONOMY_ENTRIES.length).toBe(262);
+
+    expect(
+      subtemas.has('cg-periop-hemoterapia-transfusao-macica-e-reposicao-volemica')
+    ).toBe(true);
+    expect(
+      subtemas.has('ped-puericultura-endocrinologia-pediatrica-e-diabetes-na-infancia')
+    ).toBe(true);
+    expect(TAXONOMY_PROMPT_RULES).toContain('Pediatria > Clínica Médica');
+    expect(TAXONOMY_PROMPT_RULES).toContain('Cirurgia Geral > Clínica Médica');
+    expect(TAXONOMY_PROMPT_RULES).toContain('Ginecologia e Obstetrícia > Clínica Médica');
+  });
+
+  it('applies clinical precedence rules in classifyByAliases for Ped, Cirurgia and GO boundaries', () => {
+    const cadPed = classifyByAliases(
+      'Menina de 11 anos chega à emergência com cetoacidose diabética e glicemia 480 mg/dL.'
+    );
+    expect(cadPed?.grandeAreaId).toBe('pediatria');
+    expect(cadPed?.subtemaSlug).toBe(
+      'ped-puericultura-endocrinologia-pediatrica-e-diabetes-na-infancia'
+    );
+
+    const traumaTransf = classifyByAliases(
+      'Politraumatizado em choque hemorrágico após laparotomia precisa de protocolo de transfusão maciça com concentrado de hemácias e plasma fresco.'
+    );
+    expect(traumaTransf?.grandeAreaId).toBe('cirurgia_geral');
+    expect(traumaTransf?.subtemaSlug).toBe(
+      'cg-periop-hemoterapia-transfusao-macica-e-reposicao-volemica'
+    );
+
+    const gestanteTep = classifyByAliases(
+      'Gestante com 28 semanas de gestação apresenta dispneia súbita e diagnóstico de tromboembolismo pulmonar (TEP).'
+    );
+    expect(gestanteTep?.grandeAreaId).toBe('ginecologia_obstetricia');
+    expect(gestanteTep?.subtemaSlug).toBe(
+      'go-intercorrencias-itu-tromboembolismo-e-intercorrencias-clinicas'
+    );
   });
 
   it('resolves both unaccented and accented PT-BR taxonomy labels cleanly', () => {
